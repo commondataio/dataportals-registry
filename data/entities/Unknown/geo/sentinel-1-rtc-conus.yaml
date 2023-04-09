@@ -1,0 +1,23 @@
+access_mode:
+- public
+api: true
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+description: Sentinel1 radiometric terrain corrected backscatter (RTC) over CONUS
+  since 2017. These radar data have been processed from original GRD scenes into a
+  Radiometrically Terrain Corrected, tiled product suitable for analysis.
+endpoints:
+- type: stacserverapi
+  url: https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json
+export_standard: STAC specification
+id: sentinel-1-rtc-conus
+langs:
+- EN
+link: https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json
+name: Sentinel-1 RTC CONUS
+software: Stac-server
+tags:
+- geospatial
+- has_api

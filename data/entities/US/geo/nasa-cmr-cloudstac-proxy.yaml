@@ -1,0 +1,32 @@
+access_mode:
+- public
+api: true
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+countries:
+- United States
+description: 'SpatioTemporal Asset Catalog API on top of [NASA''s Common Metadata
+  Repository](https://cmr.earthdata.nasa.gov/search/). The Common Metadata Repository
+  (CMR) is a high-performance, high-quality, continuously evolving metadata system
+  that catalogs Earth Science data and associated service metadata records.
+
+
+  This API only contains STAC Collections where the Item Assets are available "in
+  the cloud" (i.e., on s3).'
+endpoints:
+- type: stacserverapi
+  url: https://cmr.earthdata.nasa.gov/cloudstac/
+export_standard: STAC specification
+id: nasa-cmr-cloudstac-proxy
+langs:
+- EN
+link: https://cmr.earthdata.nasa.gov/cloudstac/
+name: NASA CMR CLOUDSTAC Proxy
+owner_type: Government
+software: Stac-server
+tags:
+- geospatial
+- government
+- has_api
