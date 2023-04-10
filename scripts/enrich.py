@@ -100,9 +100,5 @@ def enrich_topics(dryrun=False):
                         f.close()
                         print('updated %s' % (filename))
 
-
-
-
-
 if __name__ == "__main__":
     app()
