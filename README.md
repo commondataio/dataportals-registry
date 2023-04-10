@@ -10,6 +10,7 @@ This is the first pillar of the open search engine project. Other pillars includ
 * unified dataset search index and search engine
 * datasets backup and file cache
 
+Please take a look at [project mindmap](/assets/commondataindex.png) to see it's goals and structure.
 
 ## What kind of data catalogs collected?
 
@@ -24,6 +25,7 @@ This registry includes description of the following data catalogs:
 * API Catalogs
 * Data marketplaces
 * Other 
+
 
 
 ## Inspiration
