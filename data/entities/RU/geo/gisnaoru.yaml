@@ -1,11 +1,17 @@
 access_mode:
 - open
+api: true
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- Russian Federation
+- id: RU
+  name: Russian Federation
+endpoints:
+- type: arcgisrest
+  url: https://gisnao.ru/arcgis/rest/services/
 export_standard: ArcGIS REST Services
 id: gisnaoru
 langs:
@@ -14,6 +20,7 @@ link: https://gisnao.ru/
 name: Единая геоинформационная система Ненецкого автономного округа
 owner_type: Government
 software: ArcGIS Server
+status: active
 tags:
 - geospatial
 - government

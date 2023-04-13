@@ -1,11 +1,17 @@
 access_mode:
 - open
+api: true
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- Russian Federation
+- id: RU
+  name: Russian Federation
+endpoints:
+- type: arcgisrest
+  url: https://meteo-dv.ru/arcgis/rest/services/
 export_standard: ArcGIS REST Services
 id: meteodvru
 langs:
@@ -14,6 +20,7 @@ link: https://meteo-dv.ru/
 name: Геоинформационный портал Дальневосточного региона РФ
 owner_type: Government
 software: ArcGIS Server
+status: active
 tags:
 - geospatial
 - government

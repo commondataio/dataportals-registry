@@ -1,19 +1,26 @@
 access_mode:
 - open
+api: true
+api_status: deprecated
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- Russian Federation
+- id: RU
+  name: Russian Federation
+endpoints:
+- type: arcgisrest
+  url: http://map.govvrn.ru/arcgis/rest/services
 export_standard: ArcGIS REST Services
 id: mapgovvrnru
 langs:
 - RU
-link: http://map.govvrn.ru
+link: http://map.govvrn.ru/arcgis/rest/services
 name: Геопортал Воронежской области
 owner_type: Government
 software: ArcGIS Server
+status: deprecated
 tags:
 - geospatial
 - government

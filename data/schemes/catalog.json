@@ -1,33 +1,43 @@
 {
   "access_mode": {
-        "type": "list",
-        "schema": {
+    "type": "list",
+    "schema": {
             "type": "string"
-        }
+    }  
+  },
+  "api_status": {
+    "type": "string"
   },
   "catalog_type": {
     "type": "string"
   },
   "content_types": {
-        "type": "list",
-        "schema": {
+    "type": "list",
+    "schema": {
             "type": "string"
-        }
+    }  
   },
   "countries": {
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
+    "type": "list",
+    "schema": {
+      "type" : "dict", "schema" : {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      }
+     }
+    }
   },
   "id": {
     "type": "string"
   },
   "langs": {
-        "type": "list",
-        "schema": {
+    "type": "list",
+    "schema": {
             "type": "string"
-        }
+    }  
   },
   "link": {
     "type": "string"
@@ -41,23 +51,28 @@
   "software": {
     "type": "string"
   },
+  "status": {
+    "type": "string"
+  },
+  "tags": {
+    "type": "list",
+    "schema": {
+            "type": "string"
+        }  },
   "api": {
     "type": "boolean"
   },
   "endpoints": {
-        "required": false,
-        "type": "list",
-        "schema": {
-            "type" : "dict",
-            "schema" : {
-                "type": {"type": "string",
-                    "required" :  false
-                },
-                "url": {"type": "string",
-                "required" :  false
-                }
-            }
-        }
+    "type": "list",
+    "schema": {
+      "type" : "dict", "schema" : {
+      "type": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      }
+    }}
   },
   "export_standard": {
     "type": "string"

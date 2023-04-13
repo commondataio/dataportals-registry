@@ -96,6 +96,7 @@ def validate():
     v = Validator(schema)
     for d in records:
         if d:
+            r = v.validate(d, schema)
             try:
                 r = v.validate(d, schema)
                 if not r:
@@ -116,6 +117,7 @@ def statusreport(updatedata=False):
     typer.echo('Loaded %d data catalog records' % (len(records)))
     out = open('statusreport.jsonl', 'w', encoding='utf8')    
     for item in records:
+        if 'status' in item.keys(): continue
 
         report = {'id' : item['id'], 'name' : item['name'] if 'name' in item.keys() else '', 'link' : item['link'], 'date_verified' : datetime.datetime.now().isoformat(), 'software' : item['software'] if 'software' in item.keys() else ''}
         report['api_status'] = 'uncertain'
@@ -195,8 +197,12 @@ def statusreport(updatedata=False):
                     report['api_status'] = 'deprecated'
                 else:
                     if response.headers['content-type'].split(';',1)[0].lower() == 'application/json':
-                        report['api_status'] = 'active'
-
+                        report['api_status'] = 'active'        
+        item['status'] = report['status']
+        f = open(filepath, 'w', encoding='utf8')
+        f.write(yaml.safe_dump(data, allow_unicode=True))
+        f.close()
+        print('updated %s' % (filename))
         print(report)
         out.write(json.dumps(report) + '\n')
 

@@ -1,12 +1,14 @@
 access_mode:
 - public
 api: true
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- United States
+- id: US
+  name: United States
 description: List of all rasters and vectors present in the [Google Earth Engine Catalog](https://developers.google.com/earth-engine/datasets/).
 endpoints:
 - type: stacserverapi
@@ -19,6 +21,7 @@ link: https://earthengine-stac.storage.googleapis.com/catalog/catalog.json
 name: Google Earth Engine
 owner_type: Business
 software: Stac-server
+status: active
 tags:
 - geospatial
 - has_api

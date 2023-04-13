@@ -1,11 +1,17 @@
 access_mode:
 - open
+api: true
+api_status: deprecated
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- Russian Federation
+- id: RU
+  name: Russian Federation
+endpoints:
+- type: arcgisrest
+  url: https://karta.yanao.ru/arcgisserver/rest/services
 export_standard: ArcGIS REST Services
 id: kartayanaoru
 langs:
@@ -14,6 +20,7 @@ link: https://karta.yanao.ru
 name: Единая картографическая система Ямало-Ненецкого автономного округа
 owner_type: Government
 software: ArcGIS Server
+status: deprecated
 tags:
 - geospatial
 - government

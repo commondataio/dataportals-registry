@@ -1,18 +1,25 @@
 access_mode:
 - open
+api: true
+api_status: deprecated
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 countries:
-- Russian Federation
+- id: RU
+  name: Russian Federation
+endpoints:
+- type: arcgisrest
+  url: https://lgtgis.aari.ru/arcgis/rest/services
 export_standard: ArcGIS REST Services
 id: lgtgisaariru
 langs:
 - RU
-link: https://lgtgis.aari.ru/arcgis/rest/
+link: https://lgtgis.aari.ru/arcgis/rest/services
 name: ArcGIS геосервер Арктического и антарктического научно-исследовательского института
 owner_type: Academy
 software: ArcGIS Server
+status: deprecated
 tags:
 - geospatial
