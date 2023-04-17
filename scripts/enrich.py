@@ -26,7 +26,7 @@ ROOT_DIR = '../data/entities'
 app = typer.Typer()
 
 DATA_NAMES = ['data', 'dati', 'datos', 'dados', 'podatki', 'datosabiertos', 'opendata', 'data', 'dados abertos', 'daten', 'offendaten']
-GOV_NAMES = ['gov', 'gob', 'gouv', 'egov', 'e-gov', 'go']
+GOV_NAMES = ['gov', 'gob', 'gouv', 'egov', 'e-gov', 'go', 'govt']
 
 
 @app.command()
