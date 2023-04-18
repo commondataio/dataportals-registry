@@ -39,20 +39,16 @@ def build():
     """Build datasets as JSONL from entities as YAML"""
     dirs = os.listdir(ROOT_DIR)
     out = open(os.path.join(DATASETS_DIR, 'catalogs.jsonl'), 'w', encoding='utf8')
-    for adir in dirs:
-        subdirs = os.listdir(os.path.join(ROOT_DIR, adir))
-        for subdir in subdirs:
-            print('Processing %s' % (subdir))
-            files = os.listdir(os.path.join(ROOT_DIR, adir, subdir))
-            for filename in files:                
-                print('- adding %s' % (filename.split('.', 1)[0]))
-                filepath = os.path.join(ROOT_DIR, adir, subdir, filename)
-                if os.path.isdir(filepath): continue
-                f = open(filepath, 'r', encoding='utf8')
-                data = yaml.load(f, Loader=Loader)            
-                f.close()
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            print('- adding %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            data = yaml.load(f, Loader=Loader)            
+            f.close()
                 
-                out.write(json.dumps(data, ensure_ascii=False) + '\n')
+            out.write(json.dumps(data, ensure_ascii=False) + '\n')
     out.close()    
     print('Finished building catalogs dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'catalogs.jsonl')))
 
