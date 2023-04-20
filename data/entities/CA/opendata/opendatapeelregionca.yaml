@@ -1,19 +1,32 @@
 access_mode:
 - open
-api_status: deprecated
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
 countries:
 - id: CA
   name: Canada
-id: opendatapeelregionca
+endpoints:
+- type: dcatap201
+  url: https://data-regionofpeel.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-regionofpeel.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-regionofpeel.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-regionofpeel.hub.arcgis.com/api/search/v1
+export_standard: DCAT AP 2.0.1,OGC Records API,DCAT US 1.1
+id: datapeelregionca
 langs:
 - EN
-link: https://opendata.peelregion.ca/data-categories.aspx
-name: Peel
-owner_name: Peel
-owner_type: Government
-status: deprecated
+link: https://data.peelregion.ca
+name: Data Portal Region of Peel
+owner_name: Region of Peel
+owner_link: https://peelregion.ca
+software: ArcGIS Hub
+owner_type: Local government
+status: active
 tags:
 - government

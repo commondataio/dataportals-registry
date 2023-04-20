@@ -46,7 +46,9 @@
 <tr>
 <td>Countries</td>
 <td>
-{{ object.countries}}
+{% for d in object.countries %}
+ {{d.name}}
+{% endfor %}
 </td>
 </tr>
 {% endif %}
@@ -59,7 +61,7 @@
 </tr>
 {% endif %}
 <tr>
-<td>Has AP?I</td><td>{{object.api}}</td>
+<td>Has AP?</td><td>{{object.api}}</td>
 </tr>
 <tr>
 </table>

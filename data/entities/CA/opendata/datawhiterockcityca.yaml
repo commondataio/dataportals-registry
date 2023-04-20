@@ -1,22 +1,34 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
+catalog_export: https://data-whiterock.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
 catalog_type: Open data portal
 content_types:
 - dataset
+- map_layer
 countries:
 - id: CA
   name: Canada
 endpoints:
-- type: ckanapi
-  url: https://data.whiterockcity.ca/data/api/3
-export_standard: CKAN API
+- type: dcatap201
+  url: https://data-whiterock.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://data-whiterock.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://data-whiterock.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://data-whiterock.opendata.arcgis.com/api/search/v1
+export_standard: DCAT AP 2.0.1,OGC Records API,DCAT US 1.1
 id: datawhiterockcityca
 langs:
 - EN
 link: https://data.whiterockcity.ca
-software: CKAN
+name: White Rock Open Data Portal
+owner_name: City of White Rock
+owner_type: Local government
+owner_link: https://whiterockcity.ca
+software: ArcGIS Hub
 status: active
 tags:
 - has_api

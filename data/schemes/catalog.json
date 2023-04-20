@@ -31,7 +31,9 @@
     }
   },
   "id": {
-    "type": "string"
+    "type": "string",
+    "empty" : false,
+    "required": true
   },
   "langs": {
     "type": "list",
@@ -40,19 +42,28 @@
     }  
   },
   "link": {
-    "type": "string"
+    "type": "string",
+    "empty" : false
+
   },
   "name": {
-    "type": "string"
+    "type": "string",
+    "empty" : false,
+    "required": true
   },
   "owner_type": {
-    "type": "string"
+    "type": "string",
+    "empty" : false,
+    "required": true
   },
   "software": {
-    "type": "string"
+    "type": "string",
+    "required": true
   },
   "status": {
-    "type": "string"
+    "type": "string",
+    "required": true
+
   },
   "tags": {
     "type": "list",
@@ -87,7 +98,8 @@
     "type": "string"
   },
   "owner_name": {
-    "type": "string"
+    "type": "string",
+    "empty" : false
   },
   "catalog_export": {
     "type": "string"
