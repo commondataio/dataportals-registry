@@ -116,6 +116,7 @@ Following data sources used:
 * ArcGIS Hub search	https://hub.arcgis.com/
 * OpenSDG installations	https://open-sdg.org/community
 * MyCore Installations	https://www.mycore.de/site/applications/list/
+* Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
 
 
 ## License

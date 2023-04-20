@@ -1,7 +1,7 @@
 access_mode:
 - open
-add_date: 26.3.2023
-api_status: deprecated
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -11,11 +11,16 @@ countries:
 id: datosabiertoslaspalmasgces
 langs:
 - ES
-link: https://datosabiertos.laspalmasgc.es
+endpoints:
+- type: ckanapi
+  url: http://apidatosabiertos.laspalmasgc.es/api/3
+export_standard: CKAN API
+link: http://datosabiertos.laspalmasgc.es
 name: Portal de Datos Abiertos Las Palmas de Gran Canaria
-owner_type: Government
-software: Custom software
-status: deprecated
+owner_name: Las Palmas de Gran Canaria
+owner_link: https://laspalmasgc.es
+owner_type: Local government
+software: CKAN
+status: active
 tags:
 - government
-update_date: 26.3.2023 00:00
