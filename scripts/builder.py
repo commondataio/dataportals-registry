@@ -77,6 +77,29 @@ def report():
             for r in irep:
                 print('- %s' % (r))
 
+@app.command()
+def export(output='export.csv'):
+    """Export to CSV"""
+    data = load_jsonl(os.path.join(DATASETS_DIR, 'catalogs.jsonl'))
+    typer.echo('')
+    items = []
+    for record in data:     
+        item = {}
+        for k in ['api_status','catalog_type', 'id', 'link', 'name', 'owner_type', 'software', 'status', 'api', 'owner_name', 'owner_link', 'catalog_export']:
+            item[k] = record[k] if k in record.keys() else ''
+    
+        for k in ['access_mode', 'content_types', 'langs', 'tags']:
+            item[k] = ','.join(record[k]) if k in record.keys() else ''
+        
+        for k in ['countries', ]:
+            item[k] = ','.join([value['name'] for value in record[k]]) if k in record.keys() else ''
+        items.append(item)
+    outfile = open(output, 'w', encoding='utf8')
+    writer = csv.DictWriter(outfile, fieldnames=['id', 'link', 'name', 'owner_name', 'catalog_type', 'owner_type', 'software', 'langs', 'content_types', 'access_mode', 'countries', 'tags', 'status', 'api', 'owner_link', 'catalog_export', 'status', 'api_status'], delimiter='\t')
+    writer.writeheader()
+    writer.writerows(items)
+    outfile.close()
+    typer.echo('Wrote %s' % (output))    
 
 @app.command()
 def validate():
