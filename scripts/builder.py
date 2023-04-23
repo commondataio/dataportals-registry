@@ -101,6 +101,46 @@ def export(output='export.csv'):
     outfile.close()
     typer.echo('Wrote %s' % (output))    
 
+
+@app.command()
+def stats(output='country_software.csv'):
+    """Generates statistics tables"""
+    data = load_jsonl(os.path.join(DATASETS_DIR, 'catalogs.jsonl'))
+    typer.echo('')
+    items = []
+    countries = []
+    software = []
+    for record in data:     
+        if 'countries' in record.keys():
+            for country in record['countries']:
+                if country['name'] not in countries:
+                    countries.append(country['name'])
+        if 'software' in record.keys():
+            if record['software'] not in software:
+                software.append(record['software'])
+    countries.sort()
+    software.sort()
+    matrix = {}
+    for country in countries:
+        matrix[country] = {'country' : country}
+        for soft in software:
+            matrix[country][soft] = 0
+    for record in data:     
+        if 'countries' in record.keys():
+            for country in record['countries']:
+                if 'software' in record.keys():
+                        matrix[country['name']][record['software']] +=1
+    results = matrix.values()
+    outfile = open(output, 'w', encoding='utf8')
+    fieldnames = ['country',]
+    fieldnames.extend(software)
+    print(fieldnames)
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames, delimiter='\t')
+    writer.writeheader()
+    writer.writerows(results)
+    outfile.close()
+    typer.echo('Wrote %s' % (output))    
+
 @app.command()
 def validate():
     """Validates YAML entities files against simple Cerberus schema"""
