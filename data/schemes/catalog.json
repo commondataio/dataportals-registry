@@ -3,13 +3,15 @@
     "type": "list",
     "schema": {
             "type": "string"
-    }  
+    },
+    "required": true
   },
   "api_status": {
     "type": "string"
   },
   "catalog_type": {
-    "type": "string"
+    "type": "string",
+    "required": true
   },
   "content_types": {
     "type": "list",
@@ -39,11 +41,13 @@
     "type": "list",
     "schema": {
             "type": "string"
-    }  
+    },
+    "required": true
   },
   "link": {
     "type": "string",
-    "empty" : false
+    "empty" : false,
+    "required": true
 
   },
   "name": {
@@ -99,12 +103,14 @@
   },
   "owner_name": {
     "type": "string",
-    "empty" : false
+    "empty" : false,
+    "required": true
   },
   "catalog_export": {
     "type": "string"
   },
   "owner_link": {
-    "type": "string"
+    "type": "string",
+    "required": true
   }
 }
