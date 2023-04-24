@@ -117,6 +117,7 @@ Following data sources used:
 * OpenSDG installations	https://open-sdg.org/community
 * MyCore Installations	https://www.mycore.de/site/applications/list/
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
+* CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates
 
 
 ## License
