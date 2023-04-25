@@ -118,6 +118,7 @@ Following data sources used:
 * MyCore Installations	https://www.mycore.de/site/applications/list/
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
 * CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates
+* GeoOrchestra installations https://www.georchestra.org/community.html
 
 
 ## License
