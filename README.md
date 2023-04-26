@@ -119,6 +119,8 @@ Following data sources used:
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
 * CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates
 * GeoOrchestra installations https://www.georchestra.org/community.html
+* Brazilian Catalogs of geodata metadata https://inde.gov.br/Estatisticas/CatalogosMetadados
+* Open Data Monitor (outdated, but useful) https://www.opendatamonitor.eu
 
 
 ## License
