@@ -100,28 +100,30 @@ Following data sources used:
 
 * EUDAT Repositories	https://b2find.eudat.eu/organization/
 * Data.Europe.eu catalogues	https://data.europa.eu/data/catalogues?locale=en
-* Stac Catalogs	https://stacindex.org/catalogs
+* Stac Catalogs	https://stacindex.org/catalogs - done
 * Re3Data	https://www.re3data.org/
 * RISources	https://risources.dfg.de
 * INSPIRE Country catalogs	https://inspire-geoportal.ec.europa.eu/overview.html?view=thematicEuOverview&theme=none
 * Dataverse Installations	https://iqss.github.io/dataverse-installations/data/data.json
 * Open Data Inception	https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/
-* CKAN Portals across the world	https://datashades.info/
-* Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv
-* PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/
-* DKAN Community	https://getdkan.org/community
+* CKAN Portals across the world	https://datashades.info/ - done
+* Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv - done
+* PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/ - done
+* DKAN Community	https://getdkan.org/community - done
 * Junar Clients	https://junar.com/customers/
-* Datashades data portals list	https://datashades.info/api/portal/list
+* Datashades data portals list	https://datashades.info/api/portal/list - done
 * Socrata OpenDataNetwork	https://www.opendatanetwork.com/search?q=
 * ArcGIS Hub search	https://hub.arcgis.com/
-* OpenSDG installations	https://open-sdg.org/community
+* OpenSDG installations	https://open-sdg.org/community - done
 * MyCore Installations	https://www.mycore.de/site/applications/list/
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
 * CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates
 * GeoOrchestra installations https://www.georchestra.org/community.html
 * Brazilian Catalogs of geodata metadata https://inde.gov.br/Estatisticas/CatalogosMetadados
 * Open Data Monitor (outdated, but useful) https://www.opendatamonitor.eu
-
+* List of French open data catalogs https://airtable.com/shrWxHPi2XjLu9xtM/tblwklJPsyayeH5lX
+* Brazilian local government (state and municipal) open data portals https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/blob/main/data/valid/brazilian-transparency-and-open-data-portals.csv
+* Russian and CIS countries data catalogs https://datacatalogs.ru
 
 ## License
 
