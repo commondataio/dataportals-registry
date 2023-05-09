@@ -95,7 +95,7 @@ def export(output='export.csv'):
             item[k] = ','.join([value['name'] for value in record[k]]) if k in record.keys() else ''
         items.append(item)
     outfile = open(output, 'w', encoding='utf8')
-    writer = csv.DictWriter(outfile, fieldnames=['id', 'link', 'name', 'owner_name', 'catalog_type', 'owner_type', 'software', 'langs', 'content_types', 'access_mode', 'countries', 'tags', 'status', 'api', 'owner_link', 'catalog_export', 'status', 'api_status'], delimiter='\t')
+    writer = csv.DictWriter(outfile, fieldnames=['id', 'link', 'name', 'owner_name', 'catalog_type', 'owner_type', 'software', 'langs', 'content_types', 'access_mode', 'countries', 'tags', 'status', 'api', 'owner_link', 'catalog_export', 'api_status'], delimiter='\t')
     writer.writeheader()
     writer.writerows(items)
     outfile.close()

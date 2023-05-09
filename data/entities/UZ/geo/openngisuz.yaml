@@ -2,9 +2,6 @@ access_mode:
 - open
 api: true
 api_status: uncertain
-endpoints:
-- type: arcgisrest
-  url: https://db.ngis.uz/db/rest/services
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -12,6 +9,9 @@ content_types:
 countries:
 - id: UZ
   name: Uzbekistan
+endpoints:
+- type: arcgisrest
+  url: https://db.ngis.uz/db/rest/services
 export_standard: ArcGIS REST Services
 id: openngisuz
 langs:
@@ -20,8 +20,8 @@ langs:
 - RU
 link: https://open.ngis.uz
 name: Общественный геопортал Кадастрового агентства Республики Узбекистан
-owner_name: Кадастровое агентство Республики Узбекистан
 owner_link: https://www.kadastr.uz
+owner_name: Кадастровое агентство Республики Узбекистан
 owner_type: Central government
 software: ArcGIS Server
 status: active

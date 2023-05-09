@@ -50,16 +50,28 @@ Data.gov YAML file
 access_mode:
 - open
 api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
 countries:
-- United States
+- id: US
+  name: United States
 endpoints:
 - type: ckanapi
   url: https://catalog.data.gov/api/3
 export_standard: CKAN API
 id: catalogdatagov
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q5227102
+  value: Q5227102
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100010078
+  value: r3d100010078
+- id: fairsharing
+  url: https://fairsharing.org/FAIRsharing.6069e1
+  valye: FAIRsharing.6069e1
 langs:
 - EN
 link: https://catalog.data.gov
@@ -67,19 +79,10 @@ name: Data.gov
 owner_name: US Government
 owner_type: Central government
 software: CKAN
+status: active
 tags:
 - government
 - has_api
-identifiers:
-- id: wikidata
-  value: Q5227102
-  url: https://www.wikidata.org/wiki/Q5227102
-- id: re3data
-  value: r3d100010078
-  url: https://www.re3data.org/repository/r3d100010078
-- id: fairsharing
-  valye: FAIRsharing.6069e1 
-  url: https://fairsharing.org/FAIRsharing.6069e1
 ```
 
 ### Datasets and code

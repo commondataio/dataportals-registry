@@ -22,6 +22,7 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 
 ROOT_DIR = '../data/entities'
+DATASETS_DIR = '../data/datasets'
 
 app = typer.Typer()
 
@@ -304,6 +305,33 @@ def setstatus(updatedata=False):
                 print('updated %s' % (filename))
 #        print(report)
 #        out.write(json.dumps(report) + '\n')
+
+
+@app.command()
+def enrich_from_csv(filename="catalogs_enrich.csv "):
+    """Build datasets as JSONL from entities as YAML"""
+    profiles = {}
+    reader = csv.DictReader(open(filename, 'r', encoding='utf8'), delimiter='\t') 
+    for row in reader:
+        profiles[row['id']] = row
+
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['id'] in profiles.keys():
+                for key in ['status', 'name', 'owner_type', 'owner_name', 'api_status', 'catalog_type', 'software']:
+                    record[key] = profiles[record['id']][key]   
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('- saved')
+
 
 
 if __name__ == "__main__":
