@@ -107,8 +107,8 @@ Following data sources used:
 * Re3Data	https://www.re3data.org/
 * RISources	https://risources.dfg.de
 * INSPIRE Country catalogs	https://inspire-geoportal.ec.europa.eu/overview.html?view=thematicEuOverview&theme=none
-* Dataverse Installations	https://iqss.github.io/dataverse-installations/data/data.json
-* Open Data Inception	https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/
+* Dataverse Installations	https://iqss.github.io/dataverse-installations/data/data.json - done
+* Open Data Inception	https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/ - done
 * CKAN Portals across the world	https://datashades.info/ - done
 * Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv - done
 * PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/ - done
