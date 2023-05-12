@@ -113,14 +113,14 @@ Following data sources used:
 * Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv - done
 * PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/ - done
 * DKAN Community	https://getdkan.org/community - done
-* Junar Clients	https://junar.com/customers/
+* Junar Clients	https://junar.com/customers/ - done
 * Datashades data portals list	https://datashades.info/api/portal/list - done
 * Socrata OpenDataNetwork	https://www.opendatanetwork.com/search?q=
 * ArcGIS Hub search	https://hub.arcgis.com/
 * OpenSDG installations	https://open-sdg.org/community - done
-* MyCore Installations	https://www.mycore.de/site/applications/list/
+* MyCore Installations	https://www.mycore.de/site/applications/list/ - done
 * Spanish opendata initiatives https://datos.gob.es/en/accessible-initiatives
-* CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates
+* CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates - done
 * GeoOrchestra installations https://www.georchestra.org/community.html
 * Brazilian Catalogs of geodata metadata https://inde.gov.br/Estatisticas/CatalogosMetadados
 * Open Data Monitor (outdated, but useful) https://www.opendatamonitor.eu
