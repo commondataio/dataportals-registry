@@ -128,6 +128,7 @@ Following data sources used:
 * Brazilian local government (state and municipal) open data portals https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/blob/main/data/valid/brazilian-transparency-and-open-data-portals.csv
 * Russian and CIS countries data catalogs https://datacatalogs.ru
 * EntryScape customers (Sweden) https://entryscape.com/en/customers/
+* Geolode, catalog of open geodata websites https://geolode.org
 
 ## License
 
