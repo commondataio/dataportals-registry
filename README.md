@@ -129,6 +129,7 @@ Following data sources used:
 * Russian and CIS countries data catalogs https://datacatalogs.ru
 * EntryScape customers (Sweden) https://entryscape.com/en/customers/
 * Geolode, catalog of open geodata websites https://geolode.org
+* WebCommons Dataset subset http://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html
 
 ## License
 
