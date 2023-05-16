@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geobretagne.fr/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - FR
 link: https://geobretagne.fr/geonetwork
 name: GeoBretagne
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

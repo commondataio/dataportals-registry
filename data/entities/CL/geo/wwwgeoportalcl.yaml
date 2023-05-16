@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CL
-  name: Chile
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
 endpoints:
 - type: arcgisrest
   url: http://www.geoportal.cl/ArcGIS/rest/
@@ -18,9 +21,15 @@ langs:
 - ES
 link: http://www.geoportal.cl
 name: Chile Geoportal
-owner_link: https://www.bienesnacionales.cl
-owner_name: Ministerio de Bienes Nacionales
-owner_type: Central government
+owner:
+  link: https://www.bienesnacionales.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
+  name: Ministerio de Bienes Nacionales
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

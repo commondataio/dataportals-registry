@@ -4,9 +4,12 @@ api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 export_standard: OAI-PMH,DSpace REST API,SWORD API
 id: fordatisfraunhoferde
 langs:
@@ -14,8 +17,14 @@ langs:
 - DE
 link: https://fordatis.fraunhofer.de
 name: Fordatis - Research Data Repository of Fraunhofer-Gesellschaft
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: ''
+  type: Academy
 software: DSpace
 status: active
 tags:

@@ -5,18 +5,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: TZ
-  name: Tanzania
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 1
 description: The catalyst for resilient urban development in Tanzania
 id: geonoderesilienceacademyactz
 langs:
 - EN
 link: https://geonode.resilienceacademy.ac.tz
 name: Resilience Academy’s Climate Risk Database (CRD) Tanzania
-owner_link: https://www.go.tz
-owner_name: Government of Tanzania
-owner_type: Central government
+owner:
+  link: https://www.go.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 1
+  name: Government of Tanzania
+  type: Central government
 software: GeoNode
 status: active
 tags:

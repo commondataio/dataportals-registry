@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CN
-  name: China
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 1
 description: Peking University Open Research Data Platform
 endpoints:
 - type: dataverseapi
@@ -18,9 +21,15 @@ langs:
 - zh_CN
 link: https://opendata.pku.edu.cn
 name: Peking University Dataverse
-owner_link: https://pku.edu.cn
-owner_name: Peking University
-owner_type: Academy
+owner:
+  link: https://pku.edu.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 1
+  name: Peking University
+  type: Academy
 software: Dataverse
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JO
-  name: Jordan
+coverage:
+- location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://memrgis.memr.gov.jo/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - AR
 link: https://memrgis.memr.gov.jo/arcgis/rest/services
 name: The Ministry of Energy and Mineral Resources Jordan geoportal
-owner_link: https://www.memr.gov.jo
-owner_name: The Ministry of Energy and Mineral Resources Jordan
-owner_type: Central government
+owner:
+  link: https://www.memr.gov.jo
+  location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
+  name: The Ministry of Energy and Mineral Resources Jordan
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

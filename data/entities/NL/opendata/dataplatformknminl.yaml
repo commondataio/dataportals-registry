@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dataplatform.knmi.nl/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://dataplatform.knmi.nl
 name: KNMI Data Platform
-owner_link: https://knmi.nl
-owner_name: The Royal Netherlands Meteorological Institute (KNMI)
-owner_type: Central government
+owner:
+  link: https://knmi.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: The Royal Netherlands Meteorological Institute (KNMI)
+  type: Central government
 software: CKAN
 status: active
 tags:

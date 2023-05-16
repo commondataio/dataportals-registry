@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://prueba2-comunidadsig.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - ES
 link: https://opendata.esri.es
 name: Portal de Datos Abiertos de Esri Espana
-owner_link: https://esri.es
-owner_name: Esri Espana
-owner_type: Business
+owner:
+  link: https://esri.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Esri Espana
+  type: Business
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 description: Observations from the Sentinel-3 satellite of the European Commission’s
   Copernicus Earth Observation Programme, available in Level 2 and 3. Hosted on AWS.
 endpoints:
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://meeo-s3.s3.amazonaws.com/catalog.json
 name: Sentinel 3 Level 2+3 on AWS
-owner_name: Meteorological Environmental Earth Observation
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Meteorological Environmental Earth Observation
+  type: Central government
 software: Stac-server
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: MR
-  name: Mauritania
+coverage:
+- location:
+    country:
+      id: MR
+      name: Mauritania
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://ons.mr/anadrim/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://ons.mr/anadrim/index.php/home
 name: Mauritania Office National de la Statistique microdata catalog
-owner_link: https://ons.mr
-owner_name: Office National de la Statistique (Mauritania)
-owner_type: Central government
+owner:
+  link: https://ons.mr
+  location:
+    country:
+      id: MR
+      name: Mauritania
+    level: 1
+  name: Office National de la Statistique (Mauritania)
+  type: Central government
 software: NADA
 status: active
 tags:

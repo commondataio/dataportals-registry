@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.gob.ec/api/3
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://datosabiertos.gob.ec
 name: datosabiertos.gob.ec
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

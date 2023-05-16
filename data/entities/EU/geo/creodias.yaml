@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 description: 'Release post: [https://creodias.eu/forum/-/message_boards/message/291442]'
 endpoints:
 - type: stacserverapi
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://datahub.creodias.eu/stac/
 name: CREODIAS
-owner_link: https://creodias.eu
-owner_name: CloudFerro Sp. z o.o.
-owner_type: Business
+owner:
+  link: https://creodias.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: CloudFerro Sp. z o.o.
+  type: Business
 software: Stac-server
 status: active
 tags:

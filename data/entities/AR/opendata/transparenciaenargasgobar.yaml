@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AR
-  name: Argentina
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://transparencia.enargas.gob.ar/api/3
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://transparencia.enargas.gob.ar
 name: Datos Abiertos del Ente Nacional Regulador del Gas
-owner_name: Ente Nacional Regulador del Gas
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+  name: Ente Nacional Regulador del Gas
+  type: Central government
 software: CKAN
 status: active
 tags:

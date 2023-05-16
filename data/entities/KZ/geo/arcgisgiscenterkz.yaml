@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://arcgis.gis-center.kz/server/rest/services
@@ -17,8 +20,14 @@ langs:
 - RU
 link: https://arcgis.gis-center.kz/server/rest/services
 name: ArcGIS server of the Kazakhstan Center for Geographic Information Systems
-owner_name: Kazakhstan Center for Geographic Information Systems
-owner_type: Business
+owner:
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: Kazakhstan Center for Geographic Information Systems
+  type: Business
 software: ArcGIS Server
 status: active
 tags:

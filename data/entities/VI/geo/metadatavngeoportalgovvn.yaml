@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: VI
-  name: Vietnam
+coverage:
+- location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadata.vngeoportal.gov.vn/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - VN
 link: https://metadata.vngeoportal.gov.vn/geonetwork
 name: Metadata VN GeoPortal
-owner_link: https://monre.gov.vn
-owner_name: Ministry of Natural Resources and Environment (MONRE) Vietnam
-owner_type: Central government
+owner:
+  link: https://monre.gov.vn
+  location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
+  name: Ministry of Natural Resources and Environment (MONRE) Vietnam
+  type: Central government
 software: Geonetwork
 status: active
 tags:

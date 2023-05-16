@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SI
-  name: Slovenia
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://prostor.celje.si/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://prostor.celje.si/geonetwork
 name: Metapodatkovni sistem Mestne občine Celje
-owner_link: https://www.celje.si
-owner_name: Mestne občine Celje
-owner_type: Regional government
+owner:
+  link: https://www.celje.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
+  name: Mestne občine Celje
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

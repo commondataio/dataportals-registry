@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://ide.cim-ttm.pt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: https://ide.cim-ttm.pt/geonetwork
 name: Catalogo Metadados CIM-TTM - Comunidade Intermunicipal das Terras de Trás-os-Montes
-owner_link: https://www.cim-ttm.pt
-owner_name: Comunidade Intermunicipal das Terras de Trás-os-Montes
-owner_type: Academy
+owner:
+  link: https://www.cim-ttm.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Comunidade Intermunicipal das Terras de Trás-os-Montes
+  type: Academy
 software: Geonetwork
 status: active
 tags:

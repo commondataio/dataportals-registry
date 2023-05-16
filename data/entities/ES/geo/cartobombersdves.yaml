@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://carto.bombersdv.es/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://carto.bombersdv.es/geonetwork
 name: Catálogo de metadatos del Consorcio Provincial de Bomberos de Valencia
-owner_link: https://bombersdv.es
-owner_name: Consorcio Provincial de Bomberos de Valencia
-owner_type: Local government
+owner:
+  link: https://bombersdv.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Consorcio Provincial de Bomberos de Valencia
+  type: Local government
 software: Geonetwork
 status: active
 tags:

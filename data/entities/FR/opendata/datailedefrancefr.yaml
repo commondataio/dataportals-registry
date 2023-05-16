@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.iledefrance.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.iledefrance.fr
 name: La plateforme open data de la Région Île-de-France
-owner_link: https://www.iledefrance.fr
-owner_name: Région Île-de-France
-owner_type: Regional government
+owner:
+  link: https://www.iledefrance.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Région Île-de-France
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

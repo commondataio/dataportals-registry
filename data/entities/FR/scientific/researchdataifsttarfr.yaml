@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 description: Ifsttar Dataverse is an institutional repository for research data of
   the French Institute of Science and Technology for Transport, Development and Networks.
   It catalogues research data in the field of transports, spatial planning and civil
@@ -21,8 +24,14 @@ langs:
 - FR
 link: https://research-data.ifsttar.fr
 name: Ifsttar Dataverse
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

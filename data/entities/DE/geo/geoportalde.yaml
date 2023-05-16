@@ -6,17 +6,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 id: geoportalde
 langs:
 - DE
 link: https://geoportal.de
 name: Geoportal Germany
-owner_link: https://gdi-de.org
-owner_name: Bundesamt für Kartographie und Geodäsie
-owner_type: Central government
+owner:
+  link: https://gdi-de.org
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Bundesamt für Kartographie und Geodäsie
+  type: Central government
 software: Custom software
 status: active
 tags:

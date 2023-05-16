@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://transparenz.karlsruhe.de/api/3
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://transparenz.karlsruhe.de
 name: Stadt Karlsruhe
-owner_link: https://karlsruhe.de
-owner_name: Stadt Karlsruhe
-owner_type: Local government
+owner:
+  link: https://karlsruhe.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Karlsruhe
+  type: Local government
 software: CKAN
 status: active
 tags:

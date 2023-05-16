@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: HR
-  name: Croatia
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geoportal.nipp.hr/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - HR
 link: https://geoportal.nipp.hr/geonetwork
 name: Geoportal NIPP-a
-owner_link: https://www.nipp.hr
-owner_name: State Geodetic Administration
-owner_type: Central government
+owner:
+  link: https://www.nipp.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
+  name: State Geodetic Administration
+  type: Central government
 software: Geonetwork
 status: active
 tags:

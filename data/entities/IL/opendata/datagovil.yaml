@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IL
-  name: Israel
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.il/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.gov.il
 name: Data Gov Il
-owner_name: Government of Israel
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 1
+  name: Government of Israel
+  type: Central government
 software: CKAN
 status: active
 tags:

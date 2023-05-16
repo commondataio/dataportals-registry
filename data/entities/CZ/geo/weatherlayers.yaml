@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 description: WeatherLayers is Weather Visualization as a Service, providing pre-processed
   weather data for visualization and a frontend weather visualization library, which
   can be used with both cloud and custom self-hosted data. See [WeatherLayers](https://weatherlayers.com/)
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://catalog.weatherlayers.com/catalog/
 name: WeatherLayers
-owner_name: Kamzek s.r.o.
-owner_type: Business
+owner:
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: Kamzek s.r.o.
+  type: Business
 software: Stac-server
 status: active
 tags:

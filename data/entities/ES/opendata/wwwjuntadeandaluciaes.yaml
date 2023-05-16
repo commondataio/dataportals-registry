@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://www.juntadeandalucia.es/datosabiertos/portal
 name: Datos Abiertos Junta de Andalucia
-owner_link: https://www.gva.es
-owner_name: Junta de Andalucia
-owner_type: Regional government
+owner:
+  link: https://www.gva.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Junta de Andalucia
+  type: Regional government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://wis.tmd.go.th/openwis-user-portal/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: http://wis.tmd.go.th/openwis-user-portal
 name: Thai meteorological department data catalogue
-owner_link: https://www.tmd.go.th
-owner_name: Thai meteorological department
-owner_type: Central government
+owner:
+  link: https://www.tmd.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Thai meteorological department
+  type: Central government
 software: Geonetwork
 status: active
 tags:

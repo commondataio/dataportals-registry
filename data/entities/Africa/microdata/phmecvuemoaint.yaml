@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: Africa
-  name: Africa
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://phmecv.uemoa.int/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://phmecv.uemoa.int/nada/index.php
 name: UEMOA Online Microdata Library
-owner_link: https://aphrc.org
-owner_name: Union Economique et Monétaire Ouest Africaine
-owner_type: International
+owner:
+  link: https://aphrc.org
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
+  name: Union Economique et Monétaire Ouest Africaine
+  type: International
 software: NADA
 status: active
 tags:

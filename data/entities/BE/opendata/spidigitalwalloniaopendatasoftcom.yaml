@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://spi-digitalwallonia.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://spi-digitalwallonia.opendatasoft.com
 name: Agence du Numérique
-owner_name: Agence du Numérique
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: Agence du Numérique
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

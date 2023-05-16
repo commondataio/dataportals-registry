@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: SV
-  name: El Salvador
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://digestyc.microdatahub.com/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - ES
 link: http://digestyc.microdatahub.com/index.php
 name: Catálogo Central de Datos El Salvador
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: PH
-  name: Phillipines
+coverage:
+- location:
+    country:
+      id: PH
+      name: Phillipines
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://psada.psa.gov.ph/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://psada.psa.gov.ph
 name: PSADA Microdata Catalog
-owner_link: http://www.psa.gov.ph
-owner_name: Philippine Statistics Authority (PSA)
-owner_type: Central government
+owner:
+  link: http://www.psa.gov.ph
+  location:
+    country:
+      id: PH
+      name: Phillipines
+    level: 1
+  name: Philippine Statistics Authority (PSA)
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: Sentinel1 radiometric terrain corrected backscatter (RTC) over CONUS
   since 2017. These radar data have been processed from original GRD scenes into a
   Radiometrically Terrain Corrected, tiled product suitable for analysis.
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json
 name: Sentinel-1 RTC CONUS
-owner_name: Indigo Ag, Inc
-owner_type: Business
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Indigo Ag, Inc
+  type: Business
 software: Stac-server
 status: active
 tags:

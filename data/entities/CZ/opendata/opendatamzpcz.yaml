@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.mzp.cz/api/3
@@ -17,9 +20,15 @@ langs:
 - CZ
 link: https://opendata.mzp.cz
 name: Otevřená data resortu životního prostředí
-owner_link: https://www.mzp.cz
-owner_name: Ministerstvo životního prostředí
-owner_type: Central government
+owner:
+  link: https://www.mzp.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: Ministerstvo životního prostředí
+  type: Central government
 software: CKAN
 status: active
 tags:

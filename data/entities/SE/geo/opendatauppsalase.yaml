@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data-uppsalakommun.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - SV
 link: https://opendata.uppsala.se
 name: Öppna geodata Uppsala kommun
-owner_link: https://www.uppsala.se
-owner_name: Uppsala kommun
-owner_type: Local government
+owner:
+  link: https://www.uppsala.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Uppsala kommun
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

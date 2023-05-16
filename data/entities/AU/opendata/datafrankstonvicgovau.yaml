@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.frankston.vic.gov.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.frankston.vic.gov.au
 name: Frankston City Council Transparency Hub
-owner_link: https://frankston.vic.gov.au
-owner_name: Frankston City Council
-owner_type: Local government
+owner:
+  link: https://frankston.vic.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Frankston City Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

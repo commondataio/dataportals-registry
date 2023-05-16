@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: SK
-  name: Slovakia
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.mzv.sk/api/3
@@ -17,8 +20,14 @@ langs:
 - SK
 link: https://opendata.mzv.sk
 name: Open Data údaje MZVEZ SR
-owner_name: Ministry of Foreign and European Affairs of the Slovak Republic.
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
+  name: Ministry of Foreign and European Affairs of the Slovak Republic.
+  type: Central government
 software: CKAN
 status: active
 tags:

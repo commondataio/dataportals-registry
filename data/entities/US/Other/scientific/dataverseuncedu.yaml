@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: Open for all researchers worldwide from all disciplines to deposit data.
   The Odum Institute also offers multiple data curation service levels.
 endpoints:
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://dataverse.unc.edu
 name: UNC Dataverse
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

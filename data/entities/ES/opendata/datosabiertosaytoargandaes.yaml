@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.ayto-arganda.es/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.ayto-arganda.es
 name: Ayuntamiento de Arganda del Rey - Portal de Datos Abiertos
-owner_link: https://ayto-arganda.es
-owner_name: Ayuntamiento de Arganda del Rey
-owner_type: Local government
+owner:
+  link: https://ayto-arganda.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayuntamiento de Arganda del Rey
+  type: Local government
 software: CKAN
 status: active
 tags:

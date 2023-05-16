@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MY
-  name: Malaysia
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
 id: mymapsmygeoportalgovmy
 langs:
 - EN
 link: https://mymaps.mygeoportal.gov.my
 name: Malaysia Geoportal
-owner_link: https://www.mygeoportal.gov.my
-owner_name: National Geospatial Centre
-owner_type: Central government
+owner:
+  link: https://www.mygeoportal.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
+  name: National Geospatial Centre
+  type: Central government
 software: GeoNode
 status: active
 tags:

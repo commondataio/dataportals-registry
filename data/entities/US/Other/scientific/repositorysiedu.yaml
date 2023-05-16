@@ -4,18 +4,27 @@ api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 export_standard: OAI-PMH,DSpace REST API
 id: repositorysiedu
 langs:
 - EN
 link: https://repository.si.edu
 name: Smithsonian Research Online repository
-owner_name: 'Smitsonian Institute'
-owner_link: https://www.si.edu
-owner_type: Academy
+owner:
+  link: https://www.si.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Smitsonian Institute
+  type: Academy
 software: DSpace
 status: active
 tags:

@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: BW
-  name: Botswana
+coverage:
+- location:
+    country:
+      id: BW
+      name: Botswana
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.statsbots.org.bw/index.php/api/catalog/search
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://microdata.statsbots.org.bw
 name: Statistics Botswana Micro Data Portal
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BW
+      name: Botswana
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

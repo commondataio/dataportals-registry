@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: HR
-  name: Croatia
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geostat.dzs.hr/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - HR
 link: https://geostat.dzs.hr/geonetwork
 name: DZS katalog metapodataka
-owner_link: https://dzs.gov.hr
-owner_name: Statistical System of the Republic of Croatia
-owner_type: Central government
+owner:
+  link: https://dzs.gov.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
+  name: Statistical System of the Republic of Croatia
+  type: Central government
 software: Geonetwork
 status: active
 tags:

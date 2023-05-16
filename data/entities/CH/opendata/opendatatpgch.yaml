@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.tpg.ch/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendata.tpg.ch
 name: Open Data Portal of Geneva Public Transport
-owner_link: https://www.tpg.ch
-owner_name: TPG
-owner_type: Regional government
+owner:
+  link: https://www.tpg.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: TPG
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: UY
-  name: Uruguay
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
 description: El Catálogo Nacional de Datos Abiertos permite acceder a datos abiertos
   de organismos públicos, academia, organizaciones de sociedad civil y empresas privadas.
   Cualquier persona puede utilizar los datos publicados libremente para contar historias,
@@ -22,8 +25,14 @@ langs:
 - ES
 link: https://catalogodatos.gub.uy
 name: ' Catálogo de Datos Abiertos de la República Oriental del Uruguay'
-owner_name: República Oriental del Uruguay
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
+  name: República Oriental del Uruguay
+  type: Central government
 software: CKAN
 status: active
 tags:

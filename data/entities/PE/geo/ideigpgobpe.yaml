@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PE
-  name: Peru
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://ide.igp.gob.pe/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://ide.igp.gob.pe/geonetwork
 name: Instituto Geofísico del Perú data catalogue
-owner_link: https://ide.igp.gob.pe
-owner_name: Instituto Geofísico del Perú
-owner_type: Academy
+owner:
+  link: https://ide.igp.gob.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 1
+  name: Instituto Geofísico del Perú
+  type: Academy
 software: Geonetwork
 status: active
 tags:

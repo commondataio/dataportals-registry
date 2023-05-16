@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: UY
-  name: Uruguay
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geo.correo.com.uy/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://geo.correo.com.uy/geonetwork
 name: Administración Nacional de Correos data catalogue
-owner_link: https://correo.com.uy
-owner_name: Administración Nacional de Correos
-owner_type: Business
+owner:
+  link: https://correo.com.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
+  name: Administración Nacional de Correos
+  type: Business
 software: Geonetwork
 status: active
 tags:

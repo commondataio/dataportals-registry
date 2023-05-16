@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IE
-  name: Ireland
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gis.epa.ie/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://gis.epa.ie/geonetwork
 name: Geodata catalogue of the Environmental Protection Agency Ireland
-owner_link: https://epa.ie
-owner_name: Environmental Protection Agency Ireland
-owner_type: Central government
+owner:
+  link: https://epa.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
+  name: Environmental Protection Agency Ireland
+  type: Central government
 software: Geonetwork
 status: active
 tags:

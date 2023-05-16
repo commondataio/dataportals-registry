@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: RO
-  name: Romania
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geocatalog.rosa.ro/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - RO
 link: http://geocatalog.rosa.ro/geonetwork
 name: Romanian space agency geocatalog
-owner_link: https://www.rosa.ro
-owner_name: Romanian space agency
-owner_type: Central government
+owner:
+  link: https://www.rosa.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+  name: Romanian space agency
+  type: Central government
 software: Geonetwork
 status: active
 tags:

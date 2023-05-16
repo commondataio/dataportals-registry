@@ -6,9 +6,14 @@ catalog_type: Open data portal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-VA
 endpoints:
 - type: dcatap201
   url: https://the-city-of-virginia-beach-open-data-vbgov.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +29,16 @@ langs:
 - EN
 link: https://data.virginiabeach.gov
 name: Virginia Beach Open Data
-owner_name: City of Virginia Beach
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-VA
+  name: City of Virginia Beach
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

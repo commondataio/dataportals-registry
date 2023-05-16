@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.camden.nsw.gov.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.camden.nsw.gov.au
 name: Camden City Council Open Data Portal
-owner_link: https://www.camden.nsw.gov.au
-owner_name: Camden City Council
-owner_type: Local government
+owner:
+  link: https://www.camden.nsw.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Camden City Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

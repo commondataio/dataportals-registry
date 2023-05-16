@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: Analysis Ready Data (ARD) hosted by USGS Astrogeology. This catalog is
   organized by planetary body (e.g., Mars or Jupiter). Within each sub-catalog, users
   will find ARD orgamized by moon and/or data type (e.g., Europa, or kaguyaTC DTMs)
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://asc-stacbrowser.s3.us-west-2.amazonaws.com/catalog.json
 name: USGS Astrogeology Provided Analysis Ready Data
-owner_name: USGS
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: USGS
+  type: Central government
 software: Stac-server
 status: active
 tags:

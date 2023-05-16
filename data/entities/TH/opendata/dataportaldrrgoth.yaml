@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://dataportal.drr.go.th/api/3
@@ -17,9 +20,15 @@ langs:
 - TH
 link: http://dataportal.drr.go.th
 name: Department of Rural Roads (Thailand) open data
-owner_link: https://www.drr.go.th
-owner_name: Department of Rural Roads (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.drr.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Department of Rural Roads (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

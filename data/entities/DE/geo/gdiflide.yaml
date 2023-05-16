@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gdi.fli.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://gdi.fli.de/geonetwork
 name: Friedrich-Loeffler-Institut geonetwork
-owner_link: https://www.fli.de
-owner_name: Friedrich-Loeffler-Institut
-owner_type: Academy
+owner:
+  link: https://www.fli.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Friedrich-Loeffler-Institut
+  type: Academy
 software: Geonetwork
 status: active
 tags:

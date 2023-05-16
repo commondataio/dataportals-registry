@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DK
-  name: Denmark
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dataportal.geofyn.dk/api/3
@@ -17,8 +20,14 @@ langs:
 - DA
 link: https://dataportal.geofyn.dk
 name: Geo Fyn
-owner_name: ''
-owner_type: Government
+owner:
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+  name: ''
+  type: Government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geonetwork.geoplatform.gov/geonetwork/srv/eng/q
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://geonetwork.geoplatform.gov/geonetwork
 name: Geoplatform.gov Data Catalogue
-owner_link: https://www.fgdc.gov
-owner_name: U.S. Federal Geographic Data Committee (FGDC)
-owner_type: Central government
+owner:
+  link: https://www.fgdc.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: U.S. Federal Geographic Data Committee (FGDC)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.agen.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.agen.fr
 name: Données d Agen
-owner_link: https://www.agen.fr
-owner_name: Ville d Agen
-owner_type: Local government
+owner:
+  link: https://www.agen.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ville d Agen
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

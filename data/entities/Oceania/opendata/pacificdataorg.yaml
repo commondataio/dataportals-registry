@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: Oceania
-  name: Oceania
+coverage:
+- location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://pacificdata.org/data/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://pacificdata.org
 name: Pacific Data Hub
-owner_link: https://spc.int
-owner_name: Pacific Community (SPC)
-owner_type: International
+owner:
+  link: https://spc.int
+  location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 1
+  name: Pacific Community (SPC)
+  type: International
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.bcb.gov.br/api/3
@@ -18,8 +21,14 @@ langs:
 - PT
 link: https://opendata.bcb.gov.br
 name: Banco Central do Brasil open data
-owner_name: Banco Central do Brasil
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: Banco Central do Brasil
+  type: Central government
 software: CKAN
 status: active
 tags:

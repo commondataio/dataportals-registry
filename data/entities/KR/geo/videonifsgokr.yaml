@@ -6,9 +6,12 @@ catalog_type: Scientific data repository
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KR
-  name: South Korea
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://video.nifs.go.kr:8443/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - KR
 link: https://video.nifs.go.kr:8443/geonetwork
 name: Korea Oceanographic data center data catalogue
-owner_link: https://nifs.go.kr
-owner_name: Korea Oceanographic data center
-owner_type: Academy
+owner:
+  link: https://nifs.go.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 1
+  name: Korea Oceanographic data center
+  type: Academy
 software: Geonetwork
 status: active
 tags:

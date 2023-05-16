@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NZ
-  name: New Zealand
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://gwrc-open-data-11-1-gwrc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://opendata.gw.govt.nz
 name: GWRC Open Data Portal
-owner_link: https://gw.govt.nz
-owner_name: Greater Wellington Regional Council
-owner_type: Local government
+owner:
+  link: https://gw.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
+  name: Greater Wellington Regional Council
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalogue.ogsl.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://catalogue.ogsl.ca
 name: OGSL/SLGO Data catalogue
-owner_link: https://ogsl.ca
-owner_name: Association régionale du Saint-Laurent
-owner_type: Academy
+owner:
+  link: https://ogsl.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Association régionale du Saint-Laurent
+  type: Academy
 software: CKAN
 status: active
 tags:

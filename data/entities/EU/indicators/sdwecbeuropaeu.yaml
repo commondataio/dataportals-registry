@@ -4,17 +4,26 @@ api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
 - indicator
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 id: sdwecbeuropaeu
 langs:
 - EN
 link: https://sdw.ecb.europa.eu
 name: Statistical data warehouse European Central Bank
-owner_link: https://ecb.europa.eu
-owner_name: European Central Bank
-owner_type: Central government
+owner:
+  link: https://ecb.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: European Central Bank
+  type: Central government
 software: Custom software
 status: active
 tags:

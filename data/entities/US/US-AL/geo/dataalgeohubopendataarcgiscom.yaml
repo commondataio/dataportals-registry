@@ -7,9 +7,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AL
 endpoints:
 - type: dcatap201
   url: https://data-algeohub.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,8 +30,16 @@ langs:
 - EN
 link: https://data-algeohub.opendata.arcgis.com
 name: Open Data Alabama
-owner_name: Alabama Geographic Information Office
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AL
+  name: Alabama Geographic Information Office
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

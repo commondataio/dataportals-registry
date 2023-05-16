@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://www.geelongdataexchange.com.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://www.geelongdataexchange.com.au
 name: City of Greater Geelong data exchange
-owner_link: https://www.geelongaustralia.com.au
-owner_name: City of Greater Geelong
-owner_type: Local government
+owner:
+  link: https://www.geelongaustralia.com.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: City of Greater Geelong
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

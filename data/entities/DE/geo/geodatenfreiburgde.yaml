@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geodaten.freiburg.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://geodaten.freiburg.de/geonetwork
 name: Geodatenkatalog der Stadt Freiburg im Breisgau
-owner_link: https://www.freiburg.de
-owner_name: Stadt Freiburg im Breisgau
-owner_type: Academy
+owner:
+  link: https://www.freiburg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Freiburg im Breisgau
+  type: Academy
 software: Geonetwork
 status: active
 tags:

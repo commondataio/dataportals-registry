@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ZM
-  name: Zambia
+coverage:
+- location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://www.map.gov.zm/arcgis/rest/
@@ -16,9 +19,15 @@ langs:
 - EN
 link: https://www.map.gov.zm
 name: Zambia national spatial data infrastructure
-owner_link: https://www.map.gov.zm
-owner_name: Government of Zambia
-owner_type: Central government
+owner:
+  link: https://www.map.gov.zm
+  location:
+    country:
+      id: ZM
+      name: Zambia
+    level: 1
+  name: Government of Zambia
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

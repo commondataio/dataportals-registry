@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.datafirst.uct.ac.za/dataportal/index.php/api/catalog/search
@@ -18,9 +21,15 @@ langs:
 - EN
 link: https://www.datafirst.uct.ac.za/dataportal/index.php
 name: Data First (University of Capetown) - South Africa
-owner_link: https://www.uct.ac.za
-owner_name: University of Capetown
-owner_type: Academy
+owner:
+  link: https://www.uct.ac.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: University of Capetown
+  type: Academy
 software: NADA
 status: active
 tags:

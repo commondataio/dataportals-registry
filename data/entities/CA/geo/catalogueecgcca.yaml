@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogue.ec.gc.ca/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://catalogue.ec.gc.ca/geonetwork
 name: ECCC Data Catalogue
-owner_link: https://www.ec.gc.ca
-owner_name: Environment and Climate Change Canada
-owner_type: Central government
+owner:
+  link: https://www.ec.gc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Environment and Climate Change Canada
+  type: Central government
 software: Geonetwork
 status: active
 tags:

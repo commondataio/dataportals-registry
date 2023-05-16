@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SV
-  name: El Salvador
+coverage:
+- location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 1
 export_standard: ArcGIS REST Services
 id: geoportalsnetgobsv
 langs:
 - ES
 link: https://geoportal.snet.gob.sv/server/rest/services
 name: Ministerio de Medio Ambiente El Salvador ArcGIS server
-owner_name: Ministerio de Medio Ambiente El Salvador
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SV
+      name: El Salvador
+    level: 1
+  name: Ministerio de Medio Ambiente El Salvador
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

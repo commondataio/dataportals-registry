@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata-reunion.edf.fr/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://opendata-reunion.edf.fr
 name: Portail d Opendata de EDF a La Reunion
-owner_name: ''
-owner_type: Business
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Business
 software: OpenDataSoft
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: udataapi
   url: https://dados.gov.pt/api/1
@@ -18,9 +21,15 @@ langs:
 - PT
 link: https://dados.gov.pt
 name: dados.gov The central catalog of open data in Portugal
-owner_link: https://www.gob.pt
-owner_name: Agência para a Modernização Administrativa
-owner_type: Central government
+owner:
+  link: https://www.gob.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Agência para a Modernização Administrativa
+  type: Central government
 software: uData
 status: active
 tags:

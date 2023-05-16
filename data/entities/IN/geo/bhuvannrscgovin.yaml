@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://bhuvan.nrsc.gov.in/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://bhuvan.nrsc.gov.in/geonetwork
 name: Bhuvan Data Discovery
-owner_link: https://www.nrsc.gov.in
-owner_name: National Remote Sensing Centre (NRSC)
-owner_type: Central government
+owner:
+  link: https://www.nrsc.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: National Remote Sensing Centre (NRSC)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

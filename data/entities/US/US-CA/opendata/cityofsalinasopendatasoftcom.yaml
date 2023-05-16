@@ -5,9 +5,14 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
 endpoints:
 - type: opendatasoftapi
   url: https://cityofsalinas.opendatasoft.com/api
@@ -18,8 +23,16 @@ langs:
 - ES
 link: https://cityofsalinas.opendatasoft.com
 name: City of Salinas
-owner_name: City of Salinas
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
+  name: City of Salinas
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

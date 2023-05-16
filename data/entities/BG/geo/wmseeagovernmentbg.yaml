@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BG
-  name: Bulgaria
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://wms.eea.government.bg/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - BG
 link: http://wms.eea.government.bg/geonetwork
 name: ExEA INSPIRE Catalog
-owner_name: Executive Environment Agency (ExEA) Bulgaria
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 1
+  name: Executive Environment Agency (ExEA) Bulgaria
+  type: Central government
 software: Geonetwork
 status: active
 tags:

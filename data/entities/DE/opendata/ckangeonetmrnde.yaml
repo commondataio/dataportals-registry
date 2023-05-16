@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://ckan.geonet-mrn.de/api/3
@@ -17,8 +20,14 @@ langs:
 - DE
 link: https://ckan.geonet-mrn.de
 name: GeoNet-MRN
-owner_name: Metropolregion Rhein-Neckar
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Metropolregion Rhein-Neckar
+  type: Local government
 software: CKAN
 status: active
 tags:

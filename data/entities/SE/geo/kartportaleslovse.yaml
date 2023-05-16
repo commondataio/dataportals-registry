@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://kartportal.eslov.se/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - SV
 link: https://kartportal.eslov.se/arcgis/rest/services
 name: ArcGIS server of the Eslov community (Sweden)
-owner_link: https://www.eslov.se
-owner_name: Eslov community
-owner_type: Local government
+owner:
+  link: https://www.eslov.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Eslov community
+  type: Local government
 software: ArcGIS Server
 status: active
 tags:

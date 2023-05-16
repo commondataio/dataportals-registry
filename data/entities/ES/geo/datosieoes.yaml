@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://datos.ieo.es/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - ES
 link: http://datos.ieo.es/geonetwork
 name: Catálogo de datos del IEO - Instituto Español de Oceanografía
-owner_link: https://ieo.es
-owner_name: Instituto Español de Oceanografía
-owner_type: Academy
+owner:
+  link: https://ieo.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Instituto Español de Oceanografía
+  type: Academy
 software: Geonetwork
 status: active
 tags:

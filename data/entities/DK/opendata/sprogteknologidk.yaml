@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DK
-  name: Denmark
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://sprogteknologi.dk/api/3
@@ -17,8 +20,14 @@ langs:
 - DA
 link: https://sprogteknologi.dk
 name: Sprogteknologi.dk
-owner_name: 'The Danish Agency for Digitalisation '
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+  name: 'The Danish Agency for Digitalisation '
+  type: Academy
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: UY
-  name: Uruguay
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadatos.igm.gub.uy/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://metadatos.igm.gub.uy/geonetwork
 name: Instituto Geographico Militar data catalogue
-owner_link: https://www.igm.gub.uy
-owner_name: Instituto Geographico Militar
-owner_type: Central government
+owner:
+  link: https://www.igm.gub.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
+  name: Instituto Geographico Militar
+  type: Central government
 software: Geonetwork
 status: active
 tags:

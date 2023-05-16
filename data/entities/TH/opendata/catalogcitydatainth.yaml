@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.citydata.in.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.citydata.in.th
 name: City Data Platform system (Thailand)
-owner_link: https://www.citydata.in.th
-owner_name: Digital Economy Promotion Agency
-owner_type: Central government
+owner:
+  link: https://www.citydata.in.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Digital Economy Promotion Agency
+  type: Central government
 software: CKAN
 status: active
 tags:

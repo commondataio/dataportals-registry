@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MD
-  name: Moldova
+coverage:
+- location:
+    country:
+      id: MD
+      name: Moldova
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geoportalinds.gov.md/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - RO
 link: http://geoportalinds.gov.md/geonetwork
 name: NSDI Republic of Moldova
-owner_link: https://www.gov.md
-owner_name: Government of Moldova
-owner_type: Central government
+owner:
+  link: https://www.gov.md
+  location:
+    country:
+      id: MD
+      name: Moldova
+    level: 1
+  name: Government of Moldova
+  type: Central government
 software: Geonetwork
 status: active
 tags:

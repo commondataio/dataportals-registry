@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.adico.fr/api/3
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://opendata.adico.fr
 name: Une plateforme. Open data. Pour vous.
-owner_link: https://adico.fr
-owner_name: Adico
-owner_type: Business
+owner:
+  link: https://adico.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Adico
+  type: Business
 software: CKAN
 status: active
 tags:

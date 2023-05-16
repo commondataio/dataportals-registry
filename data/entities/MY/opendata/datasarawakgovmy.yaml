@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MY
-  name: Malaysia
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.sarawak.gov.my/api/3
@@ -17,9 +20,15 @@ langs:
 - MS
 link: https://data.sarawak.gov.my
 name: The official portal of Sarawak data
-owner_link: https://www.sarawak.gov.my
-owner_name: Sarawak State
-owner_type: Regional government
+owner:
+  link: https://www.sarawak.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
+  name: Sarawak State
+  type: Regional government
 software: CKAN
 status: active
 tags:

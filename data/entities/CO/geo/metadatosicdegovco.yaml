@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://metadatos.icde.gov.co/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://metadatos.icde.gov.co/geonetwork
 name: Infraestructura Colombiana de Datos Espaciales metadatos
-owner_link: https://www.icde.gov.co
-owner_name: Infraestructura Colombiana de Datos Espaciales
-owner_type: Central government
+owner:
+  link: https://www.icde.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Infraestructura Colombiana de Datos Espaciales
+  type: Central government
 software: Geonetwork
 status: active
 tags:

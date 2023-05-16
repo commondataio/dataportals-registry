@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://tournai.opendatasoft.com/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://tournai.opendatasoft.com
 name: Ville de Tournai data portal
-owner_link: https://www.tournai.be
-owner_name: Ville de Tournai
-owner_type: Local government
+owner:
+  link: https://www.tournai.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: Ville de Tournai
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

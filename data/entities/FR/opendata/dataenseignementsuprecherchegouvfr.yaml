@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.enseignementsup-recherche.gouv.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.enseignementsup-recherche.gouv.fr
 name: Open data Enseignement supérieur, Recherche et Innovation
-owner_link: https://www.enseignementsup-recherche.gouv.fr
-owner_name: Ministère de Enseignement supérieur et de la Recherche
-owner_type: Central government
+owner:
+  link: https://www.enseignementsup-recherche.gouv.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ministère de Enseignement supérieur et de la Recherche
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

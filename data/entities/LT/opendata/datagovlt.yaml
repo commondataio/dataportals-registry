@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: LT
-  name: Lithuania
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.lt/api/3
@@ -17,9 +20,15 @@ langs:
 - LT
 link: https://data.gov.lt
 name: 'Lietuvos atvirų duomenų portalas '
-owner_name: IVPK Information Society Development Committee Budgetary institution
-owner_type: Central government
-owner_link: https://www.gov.lt
+owner:
+  link: https://www.gov.lt
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
+  name: IVPK Information Society Development Committee Budgetary institution
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BJ
-  name: Benin
+coverage:
+- location:
+    country:
+      id: BJ
+      name: Benin
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://www.geobenin.bj/geosource/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - FR
 link: https://www.geobenin.bj/geosource
 name: IGN du Bénin Data Portal
-owner_link: https://www.gouv.bj
-owner_name: Government of Benin
-owner_type: Central government
+owner:
+  link: https://www.gouv.bj
+  location:
+    country:
+      id: BJ
+      name: Benin
+    level: 1
+  name: Government of Benin
+  type: Central government
 software: Geonetwork
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: EG
-  name: Egypt
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://censusinfo.capmas.gov.eg/Metadata-en-v4.2/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://censusinfo.capmas.gov.eg/Metadata-en-v4.2/index.php
 name: Egypt statistics microdata catalog
-owner_link: https://www.capmas.gov.eg
-owner_name: Egypt Central Agency for Public Mobilization and Statistics
-owner_type: Central government
+owner:
+  link: https://www.capmas.gov.eg
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
+  name: Egypt Central Agency for Public Mobilization and Statistics
+  type: Central government
 software: NADA
 status: active
 tags:

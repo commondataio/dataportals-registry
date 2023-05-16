@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GT
-  name: Guatemala
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://datos.minfin.gob.gt/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datos.minfin.gob.gt
 name: Datos Abiertos  Ministerio de Finanzas Públicas  Guatemala
-owner_link: https://www.minfin.gob.gt
-owner_name: Ministerio de Finanzas Públicas
-owner_type: Central government
+owner:
+  link: https://www.minfin.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 1
+  name: Ministerio de Finanzas Públicas
+  type: Central government
 software: CKAN
 status: active
 tags:

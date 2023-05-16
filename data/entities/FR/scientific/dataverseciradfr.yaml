@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 description: Organisme français de recherche agronomique et de coopération internationale
   pour le développement durable des régions tropicales et méditerranéennes, les activités
   du CIRAD relèvent des sciences du vivant, des sciences sociales et des sciences
@@ -25,8 +28,14 @@ langs:
 - FR
 link: https://dataverse.cirad.fr
 name: CIRAD Dataverse
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

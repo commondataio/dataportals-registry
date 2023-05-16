@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.potsdam.de/api
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://opendata.potsdam.de
 name: Opendata Potsdam
-owner_link: https://potsdam.de
-owner_name: City of Potsdam
-owner_type: Local government
+owner:
+  link: https://potsdam.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: City of Potsdam
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

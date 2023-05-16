@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SR
-  name: Suriname
+coverage:
+- location:
+    country:
+      id: SR
+      name: Suriname
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data-surinameonline.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - FR
 link: https://data-surinameonline.opendata.arcgis.com
 name: Suriname Open Data
-owner_link: https://www.gissat.com
-owner_name: GisSat
-owner_type: Business
+owner:
+  link: https://www.gissat.com
+  location:
+    country:
+      id: SR
+      name: Suriname
+    level: 1
+  name: GisSat
+  type: Business
 software: ArcGIS Hub
 status: active
 tags:

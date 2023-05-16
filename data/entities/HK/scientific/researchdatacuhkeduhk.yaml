@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: HK
-  name: Hong Kong
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
 description: The CUHK Research Data Repository serves as an institutional research
   data repository for The Chinese University of Hong Kong (CUHK). It facilitates CUHK
   researchers to deposit their research data and for the worldwide to explore the
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://researchdata.cuhk.edu.hk
 name: CUHK Research Data Repository
-owner_link: https://cuhk.edu.hk
-owner_name: The Chinese University of Hong Kong
-owner_type: Academy
+owner:
+  link: https://cuhk.edu.hk
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
+  name: The Chinese University of Hong Kong
+  type: Academy
 software: Dataverse
 status: active
 tags:

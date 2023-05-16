@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: GH
-  name: Ghana
+coverage:
+- location:
+    country:
+      id: GH
+      name: Ghana
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www2.statsghana.gov.gh/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://www2.statsghana.gov.gh/nada/index.php
 name: Ghana Statistical Service Microdata Catalog
-owner_link: https://www.statsghana.gov.gh
-owner_name: Ghana Statistical Service
-owner_type: Central government
+owner:
+  link: https://www.statsghana.gov.gh
+  location:
+    country:
+      id: GH
+      name: Ghana
+    level: 1
+  name: Ghana Statistical Service
+  type: Central government
 software: NADA
 status: active
 tags:

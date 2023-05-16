@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.swiss/api/3
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://opendata.swiss
 name: opendata.swiss
-owner_link: https://admin.ch
-owner_name: Swiss Confederation Federal Administration
-owner_type: Central government
+owner:
+  link: https://admin.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Swiss Confederation Federal Administration
+  type: Central government
 software: CKAN
 status: active
 tags:

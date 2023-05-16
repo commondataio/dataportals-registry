@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NZ
-  name: New Zealand
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geodata.nz/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://geodata.nz/geonetwork
 name: GeoData.nz
-owner_name: ''
-owner_type: Business
+owner:
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
+  name: ''
+  type: Business
 software: Geonetwork
 status: active
 tags:

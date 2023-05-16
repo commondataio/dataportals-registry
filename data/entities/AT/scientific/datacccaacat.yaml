@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.ccca.ac.at/api/3
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://data.ccca.ac.at
 name: CCCA Data Server
-owner_name: The Climate Change Centre Austria – CCCA
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: The Climate Change Centre Austria – CCCA
+  type: Academy
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: MX
-  name: Mexico
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
 description: Free, open access repository of research data and software produced and
   developed by CIMMYT scientists.
 endpoints:
@@ -19,8 +22,14 @@ langs:
 - ES
 link: https://data.cimmyt.org
 name: CIMMYT Research Data
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

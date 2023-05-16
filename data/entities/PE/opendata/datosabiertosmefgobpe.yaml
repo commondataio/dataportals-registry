@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PE
-  name: Peru
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.mef.gob.pe/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.mef.gob.pe
 name: Datos Abiertos del Ministerio de Economía y Finanzas Peru
-owner_link: https://www.mef.gob.pe
-owner_name: Ministerio de Economía y Finanzas Peru
-owner_type: Central government
+owner:
+  link: https://www.mef.gob.pe
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 1
+  name: Ministerio de Economía y Finanzas Peru
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.ocean.gov.za/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.ocean.gov.za
 name: Marine Information Management System
-owner_link: http://sadco.ocean.gov.za
-owner_name: Southern African Data Centre for Oceanography (SADCO).
-owner_type: Central government
+owner:
+  link: http://sadco.ocean.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: Southern African Data Centre for Oceanography (SADCO).
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.ontario.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.ontario.ca
 name: Ontario Data Catalogue
-owner_link: https://ontario.ca
-owner_name: Government of Ontario
-owner_type: Regional government
+owner:
+  link: https://ontario.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Government of Ontario
+  type: Regional government
 software: CKAN
 status: active
 tags:

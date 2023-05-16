@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: SA
-  name: Saudi Arabia
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://od.data.gov.sa/Data/api/3
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://od.data.gov.sa
 name: Saudi Open Data
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

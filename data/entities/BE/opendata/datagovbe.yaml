@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 id: datagovbe
 langs:
 - NL
@@ -16,8 +19,14 @@ langs:
 - EN
 link: https://data.gov.be
 name: The Belgian Open Data Initiative
-owner_name: Government of Belgium
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: Government of Belgium
+  type: Central government
 software: Custom software
 status: active
 tags:

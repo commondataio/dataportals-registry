@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: SS
-  name: South Sudan
+coverage:
+- location:
+    country:
+      id: SS
+      name: South Sudan
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://ssnbs.microdatahub.com/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: http://ssnbs.microdatahub.com/index.php
 name: The Republic of South Sudan Microdata catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SS
+      name: South Sudan
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

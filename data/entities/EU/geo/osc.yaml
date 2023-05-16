@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 description: Open Science Catalog (OSC) Catalog by the European Space Agency (ESA)
 endpoints:
 - type: stacserverapi
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://EOEPCA.github.io/open-science-catalog-metadata/catalog.json
 name: Open Science Catalog
-owner_link: https://www.esa.int
-owner_name: European Space Agency (ESA)
-owner_type: Central government
+owner:
+  link: https://www.esa.int
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: European Space Agency (ESA)
+  type: Central government
 software: Stac-server
 status: active
 tags:

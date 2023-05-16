@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.city.mihara.hiroshima.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://data.city.mihara.hiroshima.jp
 name: Mihara City Open Data Portal
-owner_link: http://www.city.mihara.hiroshima.jp
-owner_name: Mihara City
-owner_type: Local government
+owner:
+  link: http://www.city.mihara.hiroshima.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Mihara City
+  type: Local government
 software: CKAN
 status: active
 tags:

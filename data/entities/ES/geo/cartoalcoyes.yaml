@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://cartoalcoy.es/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://cartoalcoy.es/geonetwork
 name: Cartografía Histórica Alcoyana
-owner_link: https://cartoalcoy.es
-owner_name: Alcoy
-owner_type: Local government
+owner:
+  link: https://cartoalcoy.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Alcoy
+  type: Local government
 software: Geonetwork
 status: active
 tags:

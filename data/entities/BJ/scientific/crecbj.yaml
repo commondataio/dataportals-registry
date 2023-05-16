@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BJ
-  name: Benin
+coverage:
+- location:
+    country:
+      id: BJ
+      name: Benin
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://crec.bj/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://crec.bj
 name: The CREC Benin research data management platform
-owner_link: https://www.crec.bj
-owner_name: CREC Centre de Recherche d'Etude et de Créativité
-owner_type: Academy
+owner:
+  link: https://www.crec.bj
+  location:
+    country:
+      id: BJ
+      name: Benin
+    level: 1
+  name: CREC Centre de Recherche d'Etude et de Créativité
+  type: Academy
 software: CKAN
 status: active
 tags:

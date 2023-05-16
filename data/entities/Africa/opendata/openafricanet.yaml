@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: Africa
-  name: Africa
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://openafrica.net/api/3
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://openafrica.net
 name: Africa's Largest Volunteer Driven Open Data Platform
-owner_name: Code for Africa
-owner_type: Civil society
+owner:
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
+  name: Code for Africa
+  type: Civil society
 software: CKAN
 status: active
 tags:

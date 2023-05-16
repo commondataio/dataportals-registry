@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://apicatalogo.santander.es/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://datos.santander.es
 name: Datos Abiertos Santander
-owner_link: https://santander.es
-owner_name: Santander
-owner_type: Local government
+owner:
+  link: https://santander.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Santander
+  type: Local government
 software: CKAN
 status: active
 tags:

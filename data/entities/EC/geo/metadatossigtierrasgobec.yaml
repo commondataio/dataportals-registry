@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://metadatos.sigtierras.gob.ec/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://metadatos.sigtierras.gob.ec/geonetwork
 name: Portal de Datos de SIGTIERRAS - MAG
-owner_link: https://www.sigtierras.gob.ec
-owner_name: Sistema Nacional de Información de Tierras (SIGTERRAS)
-owner_type: Central government
+owner:
+  link: https://www.sigtierras.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Sistema Nacional de Información de Tierras (SIGTERRAS)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

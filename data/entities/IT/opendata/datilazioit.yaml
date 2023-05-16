@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dati.lazio.it/api/3
@@ -17,9 +20,15 @@ langs:
 - IT
 link: https://dati.lazio.it
 name: Regione Lazio Open Data
-owner_link: https://www.lazio.it
-owner_name: Government of Regione Lazio
-owner_type: Regional government
+owner:
+  link: https://www.lazio.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Government of Regione Lazio
+  type: Regional government
 software: CKAN
 status: active
 tags:

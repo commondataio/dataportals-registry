@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: VI
-  name: Vietnam
+coverage:
+- location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://seaportal.vodic.vn/seaportal/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - VN
 link: http://seaportal.vodic.vn/seaportal
 name: Viet Nam Ocean Data and Information Center
-owner_link: http://vodic.vn
-owner_name: Viet Nam Ocean Administration - Ministry of Natural Resources and Environment
-owner_type: Central government
+owner:
+  link: http://vodic.vn
+  location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
+  name: Viet Nam Ocean Administration - Ministry of Natural Resources and Environment
+  type: Central government
 software: Geonetwork
 status: active
 tags:

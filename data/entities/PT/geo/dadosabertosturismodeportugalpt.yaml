@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://opendata-turismoportugal.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - PT
 link: https://dadosabertos.turismodeportugal.pt
 name: travelBI Open Data
-owner_link: http://www.turismodeportugal.pt
-owner_name: Turismo de Portugal IP
-owner_type: Central government
+owner:
+  link: http://www.turismodeportugal.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Turismo de Portugal IP
+  type: Central government
 software: ArcGIS Hub
 status: active
 tags:

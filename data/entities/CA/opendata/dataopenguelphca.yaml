@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://data.open.guelph.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.open.guelph.ca
 name: Guelph Open Data Portal
-owner_link: https://guelph.ca
-owner_name: City of Guelph
-owner_type: Local government
+owner:
+  link: https://guelph.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Guelph
+  type: Local government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.sbb.ch/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.sbb.ch
 name: Open Data - working together for an attractive public transport Switzerland
-owner_link: https://www.sbb.ch
-owner_name: SBB AG
-owner_type: Business
+owner:
+  link: https://www.sbb.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: SBB AG
+  type: Business
 software: OpenDataSoft
 status: active
 tags:

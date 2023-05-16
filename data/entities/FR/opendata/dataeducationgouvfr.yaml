@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.education.gouv.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.education.gouv.fr
 name: Plateforme ouverte des données Éducation, Sports et Jeunesse
-owner_link: https://www.education.gouv.fr
-owner_name: Ministère de Éducation Nationale
-owner_type: Central government
+owner:
+  link: https://www.education.gouv.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ministère de Éducation Nationale
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

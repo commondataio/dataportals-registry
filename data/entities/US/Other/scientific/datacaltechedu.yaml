@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 endpoints:
 - type: inveniordmapi
   url: https://data.caltech.edu/api
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://data.caltech.edu
 name: Caltech Data
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Academy
 software: InvenioRDM
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://departement-ain.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - FR
 link: https://departement-ain.opendata.arcgis.com
 name: Open Data Conseil Départemental de l'Ain (CD01)
-owner_name: Conseil Départemental de l'Ain (CD01)
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Conseil Départemental de l'Ain (CD01)
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

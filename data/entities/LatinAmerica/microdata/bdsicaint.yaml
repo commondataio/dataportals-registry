@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: LatinAmerica
-  name: Latin America
+coverage:
+- location:
+    country:
+      id: LatinAmerica
+      name: Latin America
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://bd.sica.int/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://bd.sica.int
 name: Archivo Regional de datos SICA
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: LatinAmerica
+      name: Latin America
+    level: 1
+  name: ''
+  type: International
 software: NADA
 status: active
 tags:

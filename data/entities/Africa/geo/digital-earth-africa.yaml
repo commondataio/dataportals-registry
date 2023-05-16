@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: Africa
-  name: Africa
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
 description: Digital Earth Africa is a platform that uses spatial data and images
   recorded by satellites orbiting our planet to detect physical changes across Africa
   in unprecedented detail.
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://explorer.digitalearth.africa/stac/
 name: Digital Earth Africa
-owner_name: Geoscience Australia
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
+  name: Geoscience Australia
+  type: Central government
 software: Stac-server
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.strasbourg.eu/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.strasbourg.eu
 name: Strasbourg Open Data
-owner_link: https://www.strasbourg.eu
-owner_name: Ville et Eurométropole de Strasbourg
-owner_type: Local government
+owner:
+  link: https://www.strasbourg.eu
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: Ville et Eurométropole de Strasbourg
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

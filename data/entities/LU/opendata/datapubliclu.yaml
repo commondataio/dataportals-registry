@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: LU
-  name: Luxembourg
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 1
 endpoints:
 - type: udataapi
   url: https://data.public.lu/api/1
@@ -18,8 +21,14 @@ langs:
 - FR
 link: https://data.public.lu
 name: Portail Open Data Luxemburg
-owner_name: Government of Luxemburg
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 1
+  name: Government of Luxemburg
+  type: Central government
 software: uData
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://sibhessen.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://sibhessen.de/geonetwork
 name: SIB Hessen metadaten
-owner_link: https://sibhessen.de
-owner_name: SIB Hessen
-owner_type: Regional government
+owner:
+  link: https://sibhessen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: SIB Hessen
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

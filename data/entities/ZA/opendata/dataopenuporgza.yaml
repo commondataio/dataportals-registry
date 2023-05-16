@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.openup.org.za/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.openup.org.za
 name: OpenUp Data portal
-owner_link: https://www.openup.org.za
-owner_name: OpenUp Non-profit org.
-owner_type: Civil society
+owner:
+  link: https://www.openup.org.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: OpenUp Non-profit org.
+  type: Civil society
 software: CKAN
 status: active
 tags:

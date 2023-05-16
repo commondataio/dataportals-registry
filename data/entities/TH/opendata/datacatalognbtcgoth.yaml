@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datacatalog.nbtc.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://datacatalog.nbtc.go.th
 name: The Office of the NBTC Data Catalog
-owner_link: https://www.nbtc.go.th
-owner_name: The Office of the NBTC
-owner_type: Central government
+owner:
+  link: https://www.nbtc.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: The Office of the NBTC
+  type: Central government
 software: CKAN
 status: active
 tags:

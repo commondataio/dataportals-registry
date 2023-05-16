@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NG
-  name: Nigeria
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://nigerian-geodata-centre.bgs.ac.uk/geonetwork
 name: Nigerian Geodata Centre Catalogue
-owner_link: https://ngsa.gov.ng
-owner_name: Nigerian Geological Survey Agency (NGSA)
-owner_type: Central government
+owner:
+  link: https://ngsa.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
+  name: Nigerian Geological Survey Agency (NGSA)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

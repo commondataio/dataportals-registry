@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: 'NO'
-  name: Norway
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://hub-frstadkomm.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - 'NO'
 link: https://hub-frstadkomm.opendata.arcgis.com
 name: Åpne data i Fredrikstad
-owner_name: Fredrikstad kommune
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
+  name: Fredrikstad kommune
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.nia.or.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://opendata.nia.or.th
 name: NIA National Innovation Agency's open data (Thailand)
-owner_link: https://www.nia.or.th
-owner_name: National Innovation Agency (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.nia.or.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: National Innovation Agency (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

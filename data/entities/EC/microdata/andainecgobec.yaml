@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://anda.inec.gob.ec/anda/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://anda.inec.gob.ec/anda/index.php
 name: Archivo Nacional de Datos y Metadatos Estadísticos (ANDA)
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

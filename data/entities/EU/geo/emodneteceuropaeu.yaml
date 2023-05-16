@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://emodnet.ec.europa.eu/geonetwork
 name: European Marine Observation and Data Network (EMODnet) metadata catalogue
-owner_link: https://emodnet.ec.europa.eu
-owner_name: European Marine Observation and Data Network (EMODnet)
-owner_type: Academy
+owner:
+  link: https://emodnet.ec.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: European Marine Observation and Data Network (EMODnet)
+  type: Academy
 software: Geonetwork
 status: active
 tags:

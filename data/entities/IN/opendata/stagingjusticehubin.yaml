@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://justicehub.in/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://justicehub.in
 name: Justice Hub
-owner_link: https://civicdatalab.in
-owner_name: Civic Data Lab
-owner_type: Civil society
+owner:
+  link: https://civicdatalab.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: Civic Data Lab
+  type: Civil society
 software: CKAN
 status: active
 tags:

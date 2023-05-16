@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SK
-  name: Slovakia
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://www.geoportalksk.sk/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://www.geoportalksk.sk/geonetwork
 name: Datovy Katalog Geoportal KSK
-owner_link: https://web.vucke.sk/sk/
-owner_name: Košický samosprávny kraj
-owner_type: Regional government
+owner:
+  link: https://web.vucke.sk/sk/
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
+  name: Košický samosprávny kraj
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

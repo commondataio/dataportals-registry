@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 description: openEO platform provides intuitive programming libraries to process a
   wide variety of earth observation datasets. This large-scale data access and processing
   is performed on multiple infrastructures, which all support the openEO and STAC
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://openeocloud.vito.be/openeo/1.0.0/
 name: openEO Platform
-owner_name: ''
-owner_type: Business
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: ''
+  type: Business
 software: Stac-server
 status: active
 tags:

@@ -6,17 +6,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 id: gissv03prefnagasakijp
 langs:
 - JA
 link: http://gissv03.pref.nagasaki.jp/geoserver
 name: Nagasaki Prefectural Government geoserver
-owner_link: https://www.pref.nagasaki.jp
-owner_name: Nagasaki Prefectural Government
-owner_type: Regional government
+owner:
+  link: https://www.pref.nagasaki.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Nagasaki Prefectural Government
+  type: Regional government
 software: GeoServer
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://geoweb1.digistadtdo.de/geodatenkatalog
 name: Stadt Dortmund Geodatenkatalog
-owner_link: https://www.dortmund.de
-owner_name: Stadt Dortmund
-owner_type: Regional government
+owner:
+  link: https://www.dortmund.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Dortmund
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

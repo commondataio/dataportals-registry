@@ -6,18 +6,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 id: hidrologiacediaorgec
 langs:
 - ES
 - EN
 link: https://hidrologia.cedia.org.ec
 name: CEDIA geodata
-owner_link: https://www.cedia.org.ec
-owner_name: Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia
-owner_type: Academy
+owner:
+  link: https://www.cedia.org.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia
+  type: Academy
 software: GeoNode
 status: active
 tags:

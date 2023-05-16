@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://siac-datosabiertos-mads.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - ES
 link: https://siac-datosabiertos-mads.hub.arcgis.com
 name: Sistema de Información Ambiental de Colombia Open Data
-owner_link: http://www.siac.gov.co
-owner_name: Sistema de Información Ambiental de Colombia
-owner_type: Central government
+owner:
+  link: http://www.siac.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Sistema de Información Ambiental de Colombia
+  type: Central government
 software: ArcGIS Hub
 status: active
 tags:

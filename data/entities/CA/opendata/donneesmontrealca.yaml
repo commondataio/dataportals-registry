@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://donnees.montreal.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://donnees.montreal.ca
 name: Monreal open data
-owner_link: https://www.montreal.ca
-owner_name: City of Monreal
-owner_type: Local government
+owner:
+  link: https://www.montreal.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Monreal
+  type: Local government
 software: CKAN
 status: active
 tags:

@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 id: geostatfi
 langs:
 - FI
 link: http://geo.stat.fi/geoserver
 name: Statistics Finland Geoserver
-owner_link: https://stat.fi
-owner_name: Statistics Finland
-owner_type: Central government
+owner:
+  link: https://stat.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Statistics Finland
+  type: Central government
 software: GeoServer
 status: active
 tags:

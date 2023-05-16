@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 description: Access to the mundialis Actinia service via an openEO interface.
 endpoints:
 - type: stacserverapi
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://openeo.mundialis.de/api/v1.0/
 name: mundialis Actinia (openEO)
-owner_link: https://mundialis.de
-owner_name: Mundialis
-owner_type: Business
+owner:
+  link: https://mundialis.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Mundialis
+  type: Business
 software: Stac-server
 status: active
 tags:

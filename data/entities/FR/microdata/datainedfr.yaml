@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://data.ined.fr/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.ined.fr
 name: Catalogue d'enquêtes et de données de l'Ined
-owner_link: https://www.ined.fr
-owner_name: Demostaf France
-owner_type: Central government
+owner:
+  link: https://www.ined.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Demostaf France
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.pdmo.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://ckan.pdmo.go.th
 name: PDMO data catalog  (Thailand)
-owner_link: https://www.pdmo.go.th
-owner_name: Public Debt Management Office (PDMO) (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.pdmo.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Public Debt Management Office (PDMO) (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

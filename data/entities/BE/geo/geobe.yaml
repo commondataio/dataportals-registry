@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 id: geobe
 langs:
 - EN
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://geo.be
 name: Geoportal of the Belgian federal institutions
-owner_link: https://ngi.be
-owner_name: Belgian National Geographic Institute
-owner_type: Central government
+owner:
+  link: https://ngi.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: Belgian National Geographic Institute
+  type: Central government
 software: Custom software
 status: active
 tags:

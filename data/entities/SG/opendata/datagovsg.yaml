@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: SG
-  name: Singapore
+coverage:
+- location:
+    country:
+      id: SG
+      name: Singapore
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.sg/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.gov.sg
 name: Data.gov.sg Open Data Singapore
-owner_name: Government of Singapore
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SG
+      name: Singapore
+    level: 1
+  name: Government of Singapore
+  type: Central government
 software: CKAN
 status: active
 tags:

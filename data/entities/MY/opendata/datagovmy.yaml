@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MY
-  name: Malaysia
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.my/api/3
@@ -17,9 +20,15 @@ langs:
 - MS
 link: https://data.gov.my
 name: Portal Data Terbuka Malaysia
-owner_link: https://www.gov.my
-owner_name: Government of Malaysia
-owner_type: Central government
+owner:
+  link: https://www.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
+  name: Government of Malaysia
+  type: Central government
 software: CKAN
 status: active
 tags:

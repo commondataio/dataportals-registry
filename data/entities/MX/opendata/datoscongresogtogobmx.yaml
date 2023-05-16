@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MX
-  name: Mexico
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datos.congresogto.gob.mx/api/3
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://datos.congresogto.gob.mx
 name: Datos Abiertos Congreso del Estado de Guanajuato
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
+  name: ''
+  type: Regional government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 description: This is the Google Earth Engine Driver for openEO. Google Earth Engine
   is a planetary-scale platform for Earth science data & analysis. It is powered by
   Google's cloud infrastructure and combines a multi-petabyte catalog of satellite
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://earthengine.openeo.org/v1.0/
 name: Google Earth Engine (openEO)
-owner_link: https://openeo.org
-owner_name: OpenEO
-owner_type: Community
+owner:
+  link: https://openeo.org
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: OpenEO
+  type: Community
 software: Stac-server
 status: active
 tags:

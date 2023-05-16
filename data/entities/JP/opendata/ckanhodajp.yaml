@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.hoda.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://ckan.hoda.jp
 name: Hokkaido Open Data Association open data portal
-owner_link: https://hoda.jp
-owner_name: Hokkaido Open Data Association
-owner_type: Civil society
+owner:
+  link: https://hoda.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Hokkaido Open Data Association
+  type: Civil society
 software: CKAN
 status: active
 tags:

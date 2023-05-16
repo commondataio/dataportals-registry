@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: inveniordmapi
   url: https://researchdata.tuwien.ac.at/api
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://researchdata.tuwien.ac.at
 name: TU Wien Research Data
-owner_name: TU Wien
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: TU Wien
+  type: Academy
 software: InvenioRDM
 status: active
 tags:

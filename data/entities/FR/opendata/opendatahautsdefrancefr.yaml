@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.hautsdefrance.fr/api/3
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://opendata.hautsdefrance.fr
 name: OPEN DATA Hauts-de-France
-owner_name: 'Région Hauts-de-France '
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: 'Région Hauts-de-France '
+  type: Regional government
 software: CKAN
 status: active
 tags:

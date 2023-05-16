@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: ML
-  name: Mali
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.instat-mali.org/nada/index.php/catalog
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://www.instat-mali.org/nada
 name: Institut National de la Statistique Microdata catalogue
-owner_link: https://www.instat-mail.org
-owner_name: Institut National de la Statistique
-owner_type: Central government
+owner:
+  link: https://www.instat-mail.org
+  location:
+    country:
+      id: ML
+      name: Mali
+    level: 1
+  name: Institut National de la Statistique
+  type: Central government
 software: NADA
 status: active
 tags:

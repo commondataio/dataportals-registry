@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BZ
-  name: Belize
+coverage:
+- location:
+    country:
+      id: BZ
+      name: Belize
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://gis-education-tbsl.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://gis-education-tbsl.opendata.arcgis.com
 name: Open Data for Belize
-owner_link: https://tbsl.bz
-owner_name: Total Business Solutions Ltd.
-owner_type: Business
+owner:
+  link: https://tbsl.bz
+  location:
+    country:
+      id: BZ
+      name: Belize
+    level: 1
+  name: Total Business Solutions Ltd.
+  type: Business
 software: ArcGIS Hub
 status: active
 tags:

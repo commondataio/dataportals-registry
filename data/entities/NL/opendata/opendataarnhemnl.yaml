@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://opendata-arnhem.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - NL
 link: https://opendata.arnhem.nl
 name: Open Data portaal Gemeente Arnhem
-owner_link: https://www.zoetermeer.nl
-owner_name: Gemeente Arnhem
-owner_type: Local government
+owner:
+  link: https://www.zoetermeer.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: Gemeente Arnhem
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

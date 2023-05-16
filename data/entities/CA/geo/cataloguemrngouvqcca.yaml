@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://catalogue.mrn.gouv.qc.ca/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://catalogue.mrn.gouv.qc.ca/geonetwork
 name: Quebec Ministère des Ressources naturelles et des Forêts geonetwork
-owner_link: https://www.mrn.gouv.qc.ca
-owner_name: Quebec Ministère des Ressources naturelles et des Forêts
-owner_type: Regional government
+owner:
+  link: https://www.mrn.gouv.qc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Quebec Ministère des Ressources naturelles et des Forêts
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

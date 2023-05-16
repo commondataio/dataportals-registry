@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 description: PEIGEO is a regional platform for the dissemination of data covered by
   the INSPIRE directive, a European directive aimed at facilitating the dissemination
   of geographic information.
@@ -23,9 +26,15 @@ langs:
 - FR
 link: http://peigeo.re:8080/geonetwork
 name: PEIGEO
-owner_link: https://www.regionreunion.com
-owner_name: Region Reunion
-owner_type: Regional government
+owner:
+  link: https://www.regionreunion.com
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Region Reunion
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

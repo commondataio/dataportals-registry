@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services
@@ -19,9 +22,15 @@ langs:
 link: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services
 name: ArcGIS server of the Direção-Geral de Recursos Naturais, Segurança e Serviços
   Marítimos
-owner_link: https://www.dgrm.mm.gov.pt
-owner_name: Direção-Geral de Recursos Naturais, Segurança e Serviços Marítimos
-owner_type: Central government
+owner:
+  link: https://www.dgrm.mm.gov.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Direção-Geral de Recursos Naturais, Segurança e Serviços Marítimos
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

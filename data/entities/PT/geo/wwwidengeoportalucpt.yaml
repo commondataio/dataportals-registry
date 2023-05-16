@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: http://www.iden-geoportal.uc.pt:8080/geonetwork
 name: Universidade de Coimbra geonetwork
-owner_link: https://www.uc.pt
-owner_name: Universidade de Coimbra
-owner_type: Academy
+owner:
+  link: https://www.uc.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Universidade de Coimbra
+  type: Academy
 software: Geonetwork
 status: active
 tags:

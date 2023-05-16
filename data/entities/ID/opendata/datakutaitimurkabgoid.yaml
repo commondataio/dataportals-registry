@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.kutaitimurkab.go.id/api/3
@@ -17,10 +20,15 @@ langs:
 - EN
 link: https://data.kutaitimurkab.go.id
 name: Data Kutai Timur Dalam Satu Portal
-owner_link: https://www.kutaitimurkab.go.id
-owner_name: Dinas Komunikasi Informatika Persandian dan Statistik Kabupaten Kutai
-  Timur
-owner_type: Regional government
+owner:
+  link: https://www.kutaitimurkab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: Dinas Komunikasi Informatika Persandian dan Statistik Kabupaten Kutai Timur
+  type: Regional government
 software: CKAN
 status: active
 tags:

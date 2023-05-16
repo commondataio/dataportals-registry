@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-TX
 endpoints:
 - type: ckanapi
   url: https://data.cityofdenton.com/api/3
@@ -17,8 +22,16 @@ langs:
 - EN
 link: https://data.cityofdenton.com
 name: Denton Open Data
-owner_name: City of Denton
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-TX
+  name: City of Denton
+  type: Local government
 software: CKAN
 status: active
 tags:

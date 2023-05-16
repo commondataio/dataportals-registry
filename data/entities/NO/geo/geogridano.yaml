@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NO
-  name: Norway
+coverage:
+- location:
+    country:
+      id: false
+      name: Norway
+    level: 1
 id: geogridano
 langs:
 - EN
 link: http://geo.grida.no
 name: GRID-Arendal geodata catalog
-owner_link: http://www.grida.no
-owner_name: GRID-Arendal is a non-profit environmental communications centre
-owner_type: Civil society
+owner:
+  link: http://www.grida.no
+  location:
+    country:
+      id: false
+      name: Norway
+    level: 1
+  name: GRID-Arendal is a non-profit environmental communications centre
+  type: Civil society
 software: GeoNode
 status: active
 tags:

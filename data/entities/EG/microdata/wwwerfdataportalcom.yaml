@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: EG
-  name: Egypt
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.erfdataportal.com/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://www.erfdataportal.com
 name: Economics Research Forum - Egypt microdata catalog
-owner_name: Economics Research Forum
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
+  name: Economics Research Forum
+  type: Academy
 software: NADA
 status: active
 tags:

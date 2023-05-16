@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://cybercommons-data.hpc.okstate.edu/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://cybercommons-data.hpc.okstate.edu
 name: Cybercommons Data Repository
-owner_link: https://www.okstate.edu
-owner_name: University of Oklahoma
-owner_type: Academy
+owner:
+  link: https://www.okstate.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: University of Oklahoma
+  type: Academy
 software: CKAN
 status: active
 tags:

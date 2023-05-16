@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://phenoroam.phenorob.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://phenoroam.phenorob.de/geonetwork
 name: PhenoRoam geodata catalog
-owner_link: https://www.phenorob.de
-owner_name: PhenoRob
-owner_type: Academy
+owner:
+  link: https://www.phenorob.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: PhenoRob
+  type: Academy
 software: Geonetwork
 status: active
 tags:

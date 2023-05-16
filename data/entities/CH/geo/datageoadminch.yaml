@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 description: Data Catalog of the Swiss Federal Spatial Data Infrastructure
 endpoints:
 - type: stacserverapi
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://data.geo.admin.ch/api/stac/v0.9/
 name: data.geo.admin.ch
-owner_link: https://admin.ch
-owner_name: Swiss Confederation Federal Administration
-owner_type: Central government
+owner:
+  link: https://admin.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Swiss Confederation Federal Administration
+  type: Central government
 software: Stac-server
 status: active
 tags:

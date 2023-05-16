@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
 endpoints:
 - type: opendatasoftapi
   url: https://data.townofcary.org/api
@@ -17,8 +22,16 @@ langs:
 - EN
 link: https://data.townofcary.org
 name: Cary NC Open Data Portal
-owner_name: Town of Cary, NC
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
+  name: Town of Cary, NC
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

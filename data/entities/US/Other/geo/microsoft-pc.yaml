@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: Searchable spatiotemporal metadata describing Earth science datasets
   hosted by the Microsoft Planetary Computer
 endpoints:
@@ -22,9 +25,15 @@ langs:
 - EN
 link: https://planetarycomputer.microsoft.com
 name: Microsoft Planetary Computer STAC API
-owner_name: 'Microsoft'
-owner_link: https://www.microsoft.com
-owner_type: Business
+owner:
+  link: https://www.microsoft.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Microsoft
+  type: Business
 software: Stac-server
 status: active
 tags:

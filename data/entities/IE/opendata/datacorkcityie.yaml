@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IE
-  name: Ireland
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.corkcity.ie/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.corkcity.ie
 name: The Home of Open Data in Cork
-owner_name: City of Cork
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
+  name: City of Cork
+  type: Local government
 software: CKAN
 status: active
 tags:

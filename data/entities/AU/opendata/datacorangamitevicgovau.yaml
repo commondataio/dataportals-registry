@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.corangamite.vic.gov.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.corangamite.vic.gov.au
 name: Corangamite Shire Council Data Portal
-owner_link: https://frankston.vic.gov.au
-owner_name: Corangamite Shire Council
-owner_type: Local government
+owner:
+  link: https://frankston.vic.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Corangamite Shire Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.lakemac.com.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.lakemac.com.au
 name: Lake Macquarie City Council Open Data Portal
-owner_link: https://lakemac.com.au
-owner_name: Lake Macquarie City Council
-owner_type: Local government
+owner:
+  link: https://lakemac.com.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Lake Macquarie City Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

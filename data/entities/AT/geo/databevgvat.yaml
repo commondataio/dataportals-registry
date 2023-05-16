@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://data.bev.gv.at/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://data.bev.gv.at/geonetwork
 name: Datenkatalog BEV
-owner_link: https://www.bev.gv.at
-owner_name: BEV Bundesamt für Vermessungswesen
-owner_type: Central government
+owner:
+  link: https://www.bev.gv.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: BEV Bundesamt für Vermessungswesen
+  type: Central government
 software: Geonetwork
 status: active
 tags:

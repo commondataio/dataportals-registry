@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://santegraphie.fr/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - FR
 link: https://santegraphie.fr/geonetwork
 name: Santegraphie data catalogue
-owner_link: https://santegraphie.fr
-owner_name: Ile-de-France et SESAN
-owner_type: Central government
+owner:
+  link: https://santegraphie.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ile-de-France et SESAN
+  type: Central government
 software: Geonetwork
 status: active
 tags:

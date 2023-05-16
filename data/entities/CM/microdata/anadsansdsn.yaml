@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: CM
-  name: Cameroon
+coverage:
+- location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://stat.cm/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://stat.cm/nada
 name: Institut National de la Statistique du Cameroun Microdata catalog
-owner_link: https://www.stat.cm
-owner_name: Institut National de la Statistique du Cameroun
-owner_type: Central government
+owner:
+  link: https://www.stat.cm
+  location:
+    country:
+      id: CM
+      name: Cameroon
+    level: 1
+  name: Institut National de la Statistique du Cameroun
+  type: Central government
 software: NADA
 status: active
 tags:

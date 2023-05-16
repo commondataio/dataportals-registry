@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 description: Open for researchers and organizations associated with subscribing Canadian
   universities to deposit data.
 endpoints:
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://borealisdata.ca
 name: Borealis, the Canadian Dataverse Repository
-owner_link: https://www.bci-qc.ca
-owner_name: Bureau de Coopération Interuniversitaire (BCI)
-owner_type: Academy
+owner:
+  link: https://www.bci-qc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Bureau de Coopération Interuniversitaire (BCI)
+  type: Academy
 software: Dataverse
 status: active
 tags:

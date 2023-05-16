@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 description: Edmond is a research data repository for Max Planck researchers. It is
   the place to store completed datasets of research data with open access. Edmond
   serves the publication of research data from all disciplines and offers scientists
@@ -21,8 +24,14 @@ langs:
 - DE
 link: https://edmond.mpdl.mpg.de
 name: Edmond
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

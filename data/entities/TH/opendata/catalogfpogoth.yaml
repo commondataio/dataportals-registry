@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.fpo.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.fpo.go.th
 name: Data catalog system Fiscal Policy Office
-owner_link: https://www.fpo.go.th
-owner_name: Fiscal Policy Office (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.fpo.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Fiscal Policy Office (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

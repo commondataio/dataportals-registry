@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dados.antt.gov.br/api/3
@@ -17,8 +20,14 @@ langs:
 - PT
 link: https://dados.antt.gov.br
 name: Portal de Dados Abertos ANTT
-owner_name: Agência Nacional de Transportes Terrestres - ANTT
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: Agência Nacional de Transportes Terrestres - ANTT
+  type: Central government
 software: CKAN
 status: active
 tags:

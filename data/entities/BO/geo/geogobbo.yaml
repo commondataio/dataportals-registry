@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BO
-  name: Bolivia
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geo.gob.bo/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://geo.gob.bo/geonetwork
 name: Catalogo Geobolivia
-owner_link: https://www.gob.bo
-owner_name: Government of Bolivia
-owner_type: Central government
+owner:
+  link: https://www.gob.bo
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
+  name: Government of Bolivia
+  type: Central government
 software: Geonetwork
 status: active
 tags:

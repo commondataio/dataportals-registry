@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://hri.fi/data/api/3
@@ -17,9 +20,15 @@ langs:
 - FI
 link: https://hri.fi
 name: Helsinki Region Infoshare
-owner_link: https://hel.fi
-owner_name: Helsinki Region
-owner_type: Local government
+owner:
+  link: https://hel.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Helsinki Region
+  type: Local government
 software: CKAN
 status: active
 tags:

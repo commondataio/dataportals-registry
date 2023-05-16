@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AR
-  name: Argentina
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datos.magyp.gob.ar/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datos.magyp.gob.ar
 name: Datos Agricultura, Ganaderia y Pesca
-owner_link: https://magyp.gob.ar
-owner_name: Ministerio de Agricultura, Ganadería y Pesca
-owner_type: Central government
+owner:
+  link: https://magyp.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+  name: Ministerio de Agricultura, Ganadería y Pesca
+  type: Central government
 software: CKAN
 status: active
 tags:

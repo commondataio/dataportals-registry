@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://www.opendatacorfu.gr/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: http://www.opendatacorfu.gr
 name: Open Data Corfu
-owner_link: https://corfu.gr
-owner_name: Municipality of Corfu
-owner_type: Local government
+owner:
+  link: https://corfu.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: Municipality of Corfu
+  type: Local government
 software: CKAN
 status: active
 tags:

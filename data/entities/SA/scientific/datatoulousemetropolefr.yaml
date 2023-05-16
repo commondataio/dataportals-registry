@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: SA
-  name: Saudi Arabia
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://datasource.kapsarc.org/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://datasource.kapsarc.org
 name: King Abdullah Petroleum Studies and Research Center (“KAPSARC”) data portal
-owner_link: https://www.kapsarc.org
-owner_name: King Abdullah Petroleum Studies and Research Center (“KAPSARC”)
-owner_type: Academy
+owner:
+  link: https://www.kapsarc.org
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
+  name: King Abdullah Petroleum Studies and Research Center (“KAPSARC”)
+  type: Academy
 software: OpenDataSoft
 status: active
 tags:

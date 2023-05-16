@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gdi-catalog.bmel.de/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://gdi-catalog.bmel.de
 name: GDI.BMEL Metadatenverzeichnis
-owner_link: https://www.bmel.de
-owner_name: Federal ministry of food and agriculture
-owner_type: Central government
+owner:
+  link: https://www.bmel.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Federal ministry of food and agriculture
+  type: Central government
 software: Geonetwork
 status: active
 tags:

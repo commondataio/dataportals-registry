@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.uni-hannover.de/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.uni-hannover.de
 name: Forschungsdaten - Repositorium der LUH
-owner_link: https://uni-hannover.de
-owner_name: University of Hannover
-owner_type: Academy
+owner:
+  link: https://uni-hannover.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: University of Hannover
+  type: Academy
 software: CKAN
 status: active
 tags:

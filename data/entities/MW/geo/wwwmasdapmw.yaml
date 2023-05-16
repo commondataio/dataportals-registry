@@ -5,18 +5,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MW
-  name: Malawi
+coverage:
+- location:
+    country:
+      id: MW
+      name: Malawi
+    level: 1
 description: A public platform for GIS Data to support development in Malawi
 id: wwwmasdapmw
 langs:
 - EN
 link: https://www.masdap.mw
 name: Malawi Spatial Data Platform
-owner_link: https://www.malawi.gov.mw
-owner_name: National Spatial Data Center Department of surveys
-owner_type: Central government
+owner:
+  link: https://www.malawi.gov.mw
+  location:
+    country:
+      id: MW
+      name: Malawi
+    level: 1
+  name: National Spatial Data Center Department of surveys
+  type: Central government
 software: GeoNode
 status: active
 tags:

@@ -8,9 +8,14 @@ catalog_type: Open data portal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-DC
 endpoints:
 - type: dcatap201
   url: https://datahub-dc-dcgis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -26,8 +31,16 @@ langs:
 - EN
 link: https://opendata.dc.gov
 name: Open Data DC
-owner_name: Office of the Chief Technology Officer, DC
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-DC
+  name: Office of the Chief Technology Officer, DC
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

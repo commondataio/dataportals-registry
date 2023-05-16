@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.dsd.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://opendata.dsd.go.th
 name: Department of Skill Development data catalog
-owner_link: https://www.dsd.go.th
-owner_name: Department of Skill Development (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.dsd.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Department of Skill Development (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

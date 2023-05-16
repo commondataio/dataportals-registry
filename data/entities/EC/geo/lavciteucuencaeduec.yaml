@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://lavcite.ucuenca.edu.ec/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://lavcite.ucuenca.edu.ec/geonetwork
 name: Universidad de Cuenca Geonetwork arkitectura
-owner_link: https://www.ucuenca.edu.ec
-owner_name: Universidad de Cuenca
-owner_type: Academy
+owner:
+  link: https://www.ucuenca.edu.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Universidad de Cuenca
+  type: Academy
 software: Geonetwork
 status: active
 tags:

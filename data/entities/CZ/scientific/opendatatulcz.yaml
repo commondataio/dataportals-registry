@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://opendata.tul.cz/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - CZ
 link: https://opendata.tul.cz
 name: Open data TUL (university)
-owner_link: https://www.tul.cz
-owner_name: Technical University of Liberec
-owner_type: Academy
+owner:
+  link: https://www.tul.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: Technical University of Liberec
+  type: Academy
 software: ArcGIS Hub
 status: active
 tags:

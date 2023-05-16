@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://ardennemetropole.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://ardennemetropole.opendatasoft.com
 name: Ardenne Métropole
-owner_name: Ardenne Métropole
-owner_type: Government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ardenne Métropole
+  type: Government
 software: OpenDataSoft
 status: active
 tags:

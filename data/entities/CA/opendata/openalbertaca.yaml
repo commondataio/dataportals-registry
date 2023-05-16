@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://open.alberta.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://open.alberta.ca
 name: Government of Alberta open datasets
-owner_link: https://alberta.ca
-owner_name: Government of Alberta
-owner_type: Regional government
+owner:
+  link: https://alberta.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Government of Alberta
+  type: Regional government
 software: CKAN
 status: active
 tags:

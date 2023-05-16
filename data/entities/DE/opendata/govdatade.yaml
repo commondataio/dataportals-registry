@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://govdata.de/ckan/api/3
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://govdata.de
 name: Das Datenportal für Deutschland Open Government
-owner_link: https://fitko.de
-owner_name: FITKO (Föderale IT-Kooperation)
-owner_type: Central government
+owner:
+  link: https://fitko.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: FITKO (Föderale IT-Kooperation)
+  type: Central government
 software: CKAN
 status: active
 tags:

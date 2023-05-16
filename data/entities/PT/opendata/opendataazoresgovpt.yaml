@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.azores.gov.pt/api/3
@@ -17,9 +20,15 @@ langs:
 - PT
 link: https://opendata.azores.gov.pt
 name: Dados Abertos - Governo dos Açores
-owner_link: https://www.cm-agueda.pt
-owner_name: Governo dos Açores
-owner_type: Regional government
+owner:
+  link: https://www.cm-agueda.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Governo dos Açores
+  type: Regional government
 software: CKAN
 status: active
 tags:

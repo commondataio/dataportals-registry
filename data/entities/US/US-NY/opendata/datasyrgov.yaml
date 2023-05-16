@@ -6,9 +6,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NY
 endpoints:
 - type: dcatap201
   url: https://data-syr.opendata.arcgis.com//api/feed/dcat-ap/2.0.1.json
@@ -24,8 +29,16 @@ langs:
 - EN
 link: https://data.syr.gov
 name: DataCuse
-owner_name: City of Syracuse
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NY
+  name: City of Syracuse
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

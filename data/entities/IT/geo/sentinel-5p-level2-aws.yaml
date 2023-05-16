@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 description: Observations from the Sentinel-5 Precursor (Sentinel-5P) satellite of
   the European Commission’s Copernicus Earth Observation Programme. Hosted on AWS.
 endpoints:
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://meeo-s5p.s3.amazonaws.com/catalog.json
 name: Sentinel 5P Level 2 on AWS
-owner_name: Meteorological Environmental Earth Observation
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Meteorological Environmental Earth Observation
+  type: Central government
 software: Stac-server
 status: active
 tags:

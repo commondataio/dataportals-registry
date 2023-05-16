@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: USGS authoritative source for Landsat Collection 2 data
 endpoints:
 - type: stacserverapi
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://landsatlook.usgs.gov/stac-server/
 name: USGS Landsat Collection 2 API
-owner_name: USGS
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: USGS
+  type: Central government
 software: Stac-server
 status: active
 tags:

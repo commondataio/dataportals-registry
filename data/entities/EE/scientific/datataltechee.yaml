@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: EE
-  name: Estonia
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 1
 endpoints:
 - type: inveniordmapi
   url: https://data.taltech.ee/api
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://data.taltech.ee
 name: TalTech Data Repository
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 1
+  name: ''
+  type: Academy
 software: InvenioRDM
 status: active
 tags:

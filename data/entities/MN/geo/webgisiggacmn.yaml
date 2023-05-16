@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MN
-  name: Mongolia
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://webgis.igg.ac.mn:8080/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - MN
 link: http://webgis.igg.ac.mn:8080/geonetwork
 name: Mongolian Institute of geography and geoecology
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 1
+  name: ''
+  type: Academy
 software: Geonetwork
 status: active
 tags:

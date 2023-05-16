@@ -7,9 +7,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://repository.bps.go.id/mikrodata/index.php/api/catalog/search
@@ -18,9 +21,15 @@ langs:
 - ID
 link: https://repository.bps.go.id/mikrodata
 name: Katalog Datamikro
-owner_link: http://www.bps.go.id
-owner_name: BPS Statistics Indonesia
-owner_type: Central government
+owner:
+  link: http://www.bps.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: BPS Statistics Indonesia
+  type: Central government
 software: NADA
 status: active
 tags:

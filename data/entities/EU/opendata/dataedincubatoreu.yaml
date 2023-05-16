@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.edincubator.eu/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.edincubator.eu
 name: EDI Data Catalogue
-owner_link: https://edincubator.eu
-owner_name: European Data Incubator
-owner_type: Academy
+owner:
+  link: https://edincubator.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: European Data Incubator
+  type: Academy
 software: CKAN
 status: active
 tags:

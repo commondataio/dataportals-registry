@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.ilo.org/surveyLib/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://www.ilo.org/surveyLib/index.php/catalog
 name: ILO Survey Catalogue
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: ''
+  type: International
 software: NADA
 status: active
 tags:

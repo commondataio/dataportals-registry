@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 description: The federal Belgian data archive for social sciences and the (digital)
   humanities! SODHA is the Belgian service provider in the Consortium of European
   Social Science Data Archives (CESSDA ERIC) and is hosted by the State Archives of
@@ -22,8 +25,14 @@ langs:
 - FR
 link: https://www.sodha.be
 name: SODHA
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

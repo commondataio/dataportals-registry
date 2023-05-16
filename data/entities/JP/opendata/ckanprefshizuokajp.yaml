@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.pref.shizuoka.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://ckan.pref.shizuoka.jp
 name: Open Data Catalog Shizuoka
-owner_link: https://shizuoka.jp
-owner_name: Prefectura Shizuoka
-owner_type: Regional government
+owner:
+  link: https://shizuoka.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Prefectura Shizuoka
+  type: Regional government
 software: CKAN
 status: active
 tags:

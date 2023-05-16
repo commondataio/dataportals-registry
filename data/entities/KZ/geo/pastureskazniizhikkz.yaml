@@ -5,18 +5,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 id: pastureskazniizhikkz
 langs:
 - RU
 - KZ
 link: https://pastures.kazniizhik.kz:8443/geoserver
 name: Kazakh research institute of livestock and fodder production geoserver
-owner_link: https://www.kazniizhik.kz
-owner_name: Kazakh research institute of livestock and fodder production
-owner_type: Academy
+owner:
+  link: https://www.kazniizhik.kz
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: Kazakh research institute of livestock and fodder production
+  type: Academy
 software: GeoServer
 status: active
 tags:

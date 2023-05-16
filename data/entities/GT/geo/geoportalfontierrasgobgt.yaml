@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: GT
-  name: Guatemala
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geoportal.fontierras.gob.gt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://geoportal.fontierras.gob.gt/geonetwork
 name: Fondo de Terras geonetwork
-owner_link: https://fontierras.gob.gt
-owner_name: Fondo de Terras (Guatemala)
-owner_type: Central government
+owner:
+  link: https://fontierras.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 1
+  name: Fondo de Terras (Guatemala)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

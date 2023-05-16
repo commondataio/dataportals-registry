@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: CR
-  name: Costa Rica
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://sistemas.inec.cr/pad5/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - ES
 link: http://sistemas.inec.cr/pad5/index.php
 name: Catálogo Central de Datos Costa Rica
-owner_link: https://inec.cr
-owner_name: Instituto Nacional de Estadística y Censos Costa Rica
-owner_type: Central government
+owner:
+  link: https://inec.cr
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
+  name: Instituto Nacional de Estadística y Censos Costa Rica
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.esaulet.kz/server/rest/services
@@ -17,8 +20,14 @@ langs:
 - RU
 link: https://gis.esaulet.kz
 name: Геоинформационный портал города Астана
-owner_name: ''
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: ''
+  type: Local government
 software: ArcGIS Server
 status: active
 tags:

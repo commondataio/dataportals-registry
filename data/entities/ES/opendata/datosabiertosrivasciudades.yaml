@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.rivasciudad.es/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.rivasciudad.es
 name: Ayuntamiento de Rivas Vaciamadrid - Portal de Datos Abiertos
-owner_link: https://rivasciudad.es
-owner_name: Ayuntamiento de Rivas Vaciamadrid
-owner_type: Local government
+owner:
+  link: https://rivasciudad.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayuntamiento de Rivas Vaciamadrid
+  type: Local government
 software: CKAN
 status: active
 tags:

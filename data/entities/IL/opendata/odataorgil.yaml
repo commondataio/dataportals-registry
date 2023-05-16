@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IL
-  name: Israel
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://odata.org.il/api/3
@@ -17,8 +20,14 @@ langs:
 - HE
 link: https://odata.org.il
 name: מידע לעם
-owner_name: ''
-owner_type: Civil society
+owner:
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 1
+  name: ''
+  type: Civil society
 software: CKAN
 status: active
 tags:

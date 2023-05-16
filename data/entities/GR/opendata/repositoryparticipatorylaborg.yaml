@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://repository.participatorylab.org/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: https://repository.participatorylab.org
 name: participatory LAB
-owner_link: https://participatorylab.org
-owner_name: The participatory LAB
-owner_type: Academy
+owner:
+  link: https://participatorylab.org
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: The participatory LAB
+  type: Academy
 software: CKAN
 status: active
 tags:

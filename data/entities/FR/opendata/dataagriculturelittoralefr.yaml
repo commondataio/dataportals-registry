@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://data.agriculturelittorale.fr/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.agriculturelittorale.fr
 name: data.agriculturelittorale.fr
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Academy
 software: CKAN
 status: active
 tags:

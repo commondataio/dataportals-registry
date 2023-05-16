@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AR
-  name: Argentina
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://datos.ambiente.gob.ar/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datos.ambiente.gob.ar
 name: Datos Abiertos de Ambiente y Desarrollo Sostenible
-owner_link: https://ambiente.gob.ar
-owner_name: Ministerio de Ambiente y Desarrollo Sostenible
-owner_type: Central government
+owner:
+  link: https://ambiente.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+  name: Ministerio de Ambiente y Desarrollo Sostenible
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 description: Experimental STAC catalog of ocean, weather, and climate data stored
   in Zarr format in Google Cloud Storage.
 endpoints:
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://raw.githubusercontent.com/charlesbluca/pangeo-datastore-stac/master/master/catalog.json
 name: Pangeo Cloud Data Catalog
-owner_name: Pangeo
-owner_type: Community
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: Pangeo
+  type: Community
 software: Stac-server
 status: active
 tags:

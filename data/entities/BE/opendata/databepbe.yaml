@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.bep.be/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://data.bep.be
 name: Open Data by BEP
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: ''
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

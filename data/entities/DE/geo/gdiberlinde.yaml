@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gdi.berlin.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://gdi.berlin.de/geonetwork
 name: Berlin Geodata catalogue
-owner_link: https://www.berlin.de
-owner_name: Berlin city
-owner_type: Local government
+owner:
+  link: https://www.berlin.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Berlin city
+  type: Local government
 software: Geonetwork
 status: active
 tags:

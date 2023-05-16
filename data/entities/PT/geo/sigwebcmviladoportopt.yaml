@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://sigweb.cm-viladoporto.pt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: https://sigweb.cm-viladoporto.pt/geonetwork
 name: Catálogo do GeoSantaMaria
-owner_link: https://www.cm-viladoporto.pt
-owner_name: Municipal de Vila do Porto
-owner_type: Local government
+owner:
+  link: https://www.cm-viladoporto.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Municipal de Vila do Porto
+  type: Local government
 software: Geonetwork
 status: active
 tags:

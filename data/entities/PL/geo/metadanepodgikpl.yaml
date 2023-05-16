@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PL
-  name: Poland
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadane.podgik.pl/geonetwork/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 - PL
 link: https://metadane.podgik.pl/geonetwork
 name: Geo-System metadata catalogue (Poland)
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 1
+  name: ''
+  type: Central government
 software: Geonetwork
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data-vaxjo.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - SV
 link: https://data-vaxjo.opendata.arcgis.com
 name: Öppna geografiska data
-owner_link: https://www.vaxjo.se
-owner_name: Växjökommun
-owner_type: Local government
+owner:
+  link: https://www.vaxjo.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Växjökommun
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

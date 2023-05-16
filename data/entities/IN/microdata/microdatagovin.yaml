@@ -7,9 +7,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://microdata.gov.in/nada43/index.php/api/catalog/search
@@ -18,8 +21,14 @@ langs:
 - EN
 link: http://microdata.gov.in/nada43/index.php/home
 name: Indian central data catalog (microdata)
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

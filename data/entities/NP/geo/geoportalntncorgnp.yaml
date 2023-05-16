@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NP
-  name: Nepal
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
 id: geoportalntncorgnp
 langs:
 - EN
 link: http://geoportal.ntnc.org.np
 name: NTNC geoportal
-owner_link: http://ntnc.org.np
-owner_name: National trust for nature conservation Nepal
-owner_type: Central government
+owner:
+  link: http://ntnc.org.np
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: National trust for nature conservation Nepal
+  type: Central government
 software: GeoNode
 status: active
 tags:

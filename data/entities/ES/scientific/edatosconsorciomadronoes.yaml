@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 description: e-cienciaDatos is a multidisciplinary data repository that houses the
   scientific datasets of researchers from the public universities of the Community
   of Madrid and the UNED, members of the Consorcio Madroño, in order to give visibility
@@ -28,9 +31,15 @@ langs:
 - ES
 link: https://edatos.consorciomadrono.es
 name: Dataverse e-cienciaDatos
-owner_link: https://consorciomadrono.es
-owner_name: Consorcio Madroño
-owner_type: Academy
+owner:
+  link: https://consorciomadrono.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Consorcio Madroño
+  type: Academy
 software: Dataverse
 status: active
 tags:

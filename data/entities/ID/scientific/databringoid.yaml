@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 description: Center for International Forestry Research (CIFOR) Dataverse
 endpoints:
 - type: dataverseapi
@@ -18,9 +21,15 @@ langs:
 - ID
 link: https://data.brin.go.id
 name: Repositori Ilmiah Nasional, Badan Riset dan Inovasi Nasional
-owner_link: https://brin.go.id
-owner_name: National Research and Innovation Agency
-owner_type: Academy
+owner:
+  link: https://brin.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: National Research and Innovation Agency
+  type: Academy
 software: Dataverse
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CL
-  name: Chile
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
 description: El repositorio de Datos de la Universidad de Concepción, tiene como objetivo
   conservar, visibilizar y poner a disposición los datos y/o complementos de información
   utilizada en los proyectos de investigación por nuestros académicos y/o investigadores.
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://datav.udec.cl
 name: Repositorio de datos de la Universidad de Concepción
-owner_link: https://udec.cl
-owner_name: Universidad de Concepción
-owner_type: Academy
+owner:
+  link: https://udec.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
+  name: Universidad de Concepción
+  type: Academy
 software: Dataverse
 status: active
 tags:

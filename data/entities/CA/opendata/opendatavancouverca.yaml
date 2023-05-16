@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.vancouver.ca/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendata.vancouver.ca
 name: City of Vancouver public data
-owner_link: https://vancouver.ca
-owner_name: City of Vancouver
-owner_type: Local government
+owner:
+  link: https://vancouver.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Vancouver
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

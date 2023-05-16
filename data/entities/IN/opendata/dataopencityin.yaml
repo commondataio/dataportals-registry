@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.opencity.in/api/3
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://data.opencity.in
 name: Datasets - Open City - Urban data portal
-owner_name: Open City project
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: Open City project
+  type: Local government
 software: CKAN
 status: active
 tags:

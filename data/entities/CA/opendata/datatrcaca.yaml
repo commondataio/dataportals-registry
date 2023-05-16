@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.trca.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.trca.ca
 name: Toronto and Region Conservation Authority (TRCA) open data
-owner_link: https://www.trca.ca
-owner_name: Toronto and Region Conservation Authority (TRCA)
-owner_type: Local government
+owner:
+  link: https://www.trca.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Toronto and Region Conservation Authority (TRCA)
+  type: Local government
 software: CKAN
 status: active
 tags:

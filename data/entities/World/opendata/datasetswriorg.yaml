@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datasets.wri.org/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://datasets.wri.org
 name: Data | World Resources Institute
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: ''
+  type: International
 software: CKAN
 status: active
 tags:

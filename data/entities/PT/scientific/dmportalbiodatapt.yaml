@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: dataverseapi
   url: https://dmportal.biodata.pt/api/search?q=*&type=dataset&sort=name&order=asc
@@ -18,9 +21,15 @@ langs:
 - EN
 link: https://dmportal.biodata.pt
 name: Biodata.pt
-owner_link: https://www.biodata.pt
-owner_name: Biodata.pt
-owner_type: Academy
+owner:
+  link: https://www.biodata.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Biodata.pt
+  type: Academy
 software: Dataverse
 status: active
 tags:

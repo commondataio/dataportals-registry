@@ -5,9 +5,14 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
 endpoints:
 - type: dcatap201
   url: https://data1-vta.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -23,8 +28,16 @@ langs:
 - EN
 link: https://data.vta.org
 name: Santa Clara Valley Transportation Authority Open Data Portal
-owner_name: Santa Clara Valley Transportation Authority
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
+  name: Santa Clara Valley Transportation Authority
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

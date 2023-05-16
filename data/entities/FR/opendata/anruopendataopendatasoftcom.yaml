@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://anruopendata.opendatasoft.com/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://anruopendata.opendatasoft.com
 name: ANRU - Agence Nationale pour la Rénovation Urbaine Open data
-owner_link: https://www.anru.fr
-owner_name: ANRU - Agence Nationale pour la Rénovation Urbaine
-owner_type: Central government
+owner:
+  link: https://www.anru.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ANRU - Agence Nationale pour la Rénovation Urbaine
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

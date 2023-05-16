@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: The JPL Open Repository (JOR), replaces the JPL Technical Report Server
   (TRS) in 2023, is a repository for digital copies of technical publications authored
   by JPL employees. It includes journal articles (the Final Accepted Version), meeting
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://dataverse.jpl.nasa.gov
 name: JPL Open Repository
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

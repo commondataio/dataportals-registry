@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://avoindata.fi/data/api/3
@@ -17,9 +20,15 @@ langs:
 - FI
 link: https://avoindata.fi
 name: Avoindata.fi
-owner_link: https://dvv.fi
-owner_name: Verkkopalvelun kehittämisestä vastaa
-owner_type: Central government
+owner:
+  link: https://dvv.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Verkkopalvelun kehittämisestä vastaa
+  type: Central government
 software: CKAN
 status: active
 tags:

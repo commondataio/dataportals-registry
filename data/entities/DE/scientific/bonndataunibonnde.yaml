@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 description: bonndata is a state-of-the-art, cross-disciplinary research data repository
   designed for scientists at the University of Bonn. The repository is an integral
   part of the University of Bonn's research infrastructure and it is maintained by
@@ -22,8 +25,14 @@ langs:
 - DE
 link: https://bonndata.uni-bonn.de
 name: bonndata
-owner_name: Rheinische Friedrich-Wilhelms-Universität Bonn
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Rheinische Friedrich-Wilhelms-Universität Bonn
+  type: Academy
 software: Dataverse
 status: active
 tags:

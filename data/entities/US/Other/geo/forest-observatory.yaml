@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: The Forest Observatory is a data-driven forest monitoring system that
   maps the drivers of wildfire behavior across the state with a focus on vegetation
   fuels. Data are available for non-commercial use under the Forest Observatory [terms
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://storage.googleapis.com/cfo-public/catalog.json
 name: California Forest Observatory
-owner_name: California Forest Observatory
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: California Forest Observatory
+  type: Regional government
 software: Stac-server
 status: active
 tags:

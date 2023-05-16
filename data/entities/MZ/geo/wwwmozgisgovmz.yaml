@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MZ
-  name: Mozambique
+coverage:
+- location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://www.mozgis.gov.mz/image/rest/services
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://www.mozgis.gov.mz
 name: GIS National Network for Mozambique
-owner_link: https://www.mozgis.gov.mz
-owner_name: National Geo-Spatial Development Agency
-owner_type: Central government
+owner:
+  link: https://www.mozgis.gov.mz
+  location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 1
+  name: National Geo-Spatial Development Agency
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.clermontmetropole.eu/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://opendata.clermontmetropole.eu
 name: Des données libresde la Métropole clermontoise
-owner_link: https://www.clermontmetropole.eu
-owner_name: Métropole Clermontoise
-owner_type: Central government
+owner:
+  link: https://www.clermontmetropole.eu
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Métropole Clermontoise
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

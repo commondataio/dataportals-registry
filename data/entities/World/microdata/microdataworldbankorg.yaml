@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.worldbank.org/index.php/api/catalog/search
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://microdata.worldbank.org
 name: World Bank Microdata Library
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: ''
+  type: International
 software: NADA
 status: active
 tags:

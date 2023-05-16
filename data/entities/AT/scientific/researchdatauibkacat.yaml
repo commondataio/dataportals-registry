@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: inveniordmapi
   url: https://researchdata.uibk.ac.at/api
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://researchdata.uibk.ac.at
 name: Universität Innsbruck - Data Repository
-owner_name: Universität Innsbruck
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: Universität Innsbruck
+  type: Academy
 software: InvenioRDM
 status: active
 tags:

@@ -4,9 +4,14 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-TX
 endpoints:
 - type: ckanapi
   url: https://data.houstontx/gpv/api/3
@@ -15,8 +20,16 @@ langs:
 - EN
 link: https://data.houstontx.gov
 name: Houston Data Portal
-owner_name: City of Houston
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-TX
+  name: City of Houston
+  type: Local government
 software: CKAN
 status: active
 tags:

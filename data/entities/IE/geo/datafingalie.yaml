@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IE
-  name: Ireland
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data.fingal.ie/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - EN
 link: https://data.fingal.ie/
 name: Fingal Open Data
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
+  name: ''
+  type: Regional government
 software: ArcGIS Hub
 status: active
 tags:

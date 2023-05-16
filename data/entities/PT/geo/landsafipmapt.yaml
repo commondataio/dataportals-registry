@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://landsaf.ipma.pt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: https://landsaf.ipma.pt/geonetwork
 name: LSA SAF 1 Catalogue
-owner_link: https://www.ipma.pt
-owner_name: Instituto Português do Mar e da Atmosfera (Portugal)
-owner_type: Central government
+owner:
+  link: https://www.ipma.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Instituto Português do Mar e da Atmosfera (Portugal)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

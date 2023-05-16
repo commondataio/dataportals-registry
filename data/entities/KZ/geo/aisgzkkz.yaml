@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 description: There is no full ArcGIS rest service, instead proxy used. https://aisgzk.kz/aisgzk/Proxy/aisgzkTopo2/MapServer
 export_standard: ArcGIS REST Services
 id: aisgzkkz
@@ -16,8 +19,14 @@ langs:
 link: https://aisgzk.kz/aisgzk/ru/content/maps/
 name: 'Картографическая основа Управления Земельного кадастра и Автоматизированной
   информационной системы государственного земельного кадастра '
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: ''
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

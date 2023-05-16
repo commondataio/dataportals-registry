@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.data.metro.tokyo.lg.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://portal.data.metro.tokyo.lg.jp
 name: Tokyo open data
-owner_link: https://www.metro.tokyo.lg.jp
-owner_name: Tokyo Metropolitan Government
-owner_type: Regional government
+owner:
+  link: https://www.metro.tokyo.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Tokyo Metropolitan Government
+  type: Regional government
 software: CKAN
 status: active
 tags:

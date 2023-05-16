@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: ZW
-  name: Zimbabwe
+coverage:
+- location:
+    country:
+      id: ZW
+      name: Zimbabwe
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://nada.zimstat.co.zw/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://nada.zimstat.co.zw
 name: Zimbabwe National Statistics Agency (ZIMSTAT) An Online Microdata Catalog
-owner_link: https://zimstat.co.zw
-owner_name: Zimbabwe National Statistics Agency (ZIMSTAT)
-owner_type: Central government
+owner:
+  link: https://zimstat.co.zw
+  location:
+    country:
+      id: ZW
+      name: Zimbabwe
+    level: 1
+  name: Zimbabwe National Statistics Agency (ZIMSTAT)
+  type: Central government
 software: NADA
 status: active
 tags:

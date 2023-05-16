@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://sil.loja.gob.ec/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: http://sil.loja.gob.ec
 name: Sistema de Información Local Municipal de Loja
-owner_link: https://loja.gob.ec
-owner_name: Municipal de Loja
-owner_type: Local government
+owner:
+  link: https://loja.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Municipal de Loja
+  type: Local government
 software: CKAN
 status: active
 tags:

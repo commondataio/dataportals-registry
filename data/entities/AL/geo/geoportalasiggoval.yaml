@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AL
-  name: Albania
+coverage:
+- location:
+    country:
+      id: AL
+      name: Albania
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geoportal.asig.gov.al/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - SQ
 link: https://geoportal.asig.gov.al/geonetwork
 name: ASIG Geoportal metadata catalogue
-owner_link: https://www.asig.gov.al
-owner_name: State Authority for Geospatial Information (ASIG) Albania
-owner_type: Central government
+owner:
+  link: https://www.asig.gov.al
+  location:
+    country:
+      id: AL
+      name: Albania
+    level: 1
+  name: State Authority for Geospatial Information (ASIG) Albania
+  type: Central government
 software: Geonetwork
 status: active
 tags:

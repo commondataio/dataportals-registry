@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: TG
-  name: Togo
+coverage:
+- location:
+    country:
+      id: TG
+      name: Togo
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://160.242.193.218:8082/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: http://160.242.193.218:8082/nada/
 name: Archives des Enquêtes Statistiques - TOGO
-owner_link: https://inseed.tg
-owner_name: INSEED – Institut National de la Statistique et des Etudes
-owner_type: Central government
+owner:
+  link: https://inseed.tg
+  location:
+    country:
+      id: TG
+      name: Togo
+    level: 1
+  name: INSEED – Institut National de la Statistique et des Etudes
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://docs.entsoe.eu/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://docs.entsoe.eu
 name: ENTSO-E Docs
-owner_link: https://entsoe.eu
-owner_name: ENTSO-E
-owner_type: Business
+owner:
+  link: https://entsoe.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: ENTSO-E
+  type: Business
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.city.tendo.yamagata.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://data.city.tendo.yamagata.jp
 name: Tendo City open data
-owner_link: https://www.tendo.yamagata.jp
-owner_name: Tendo City
-owner_type: Local government
+owner:
+  link: https://www.tendo.yamagata.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Tendo City
+  type: Local government
 software: CKAN
 status: active
 tags:

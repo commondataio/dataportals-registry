@@ -6,18 +6,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 id: geoportalrlpde
 langs:
 - DE
 - EN
 link: https://geoportal.rlp.de
 name: Rhineland-Palatinate geoportal
-owner_link: https://www.rlp.de
-owner_name: Rhineland-Palatinate
-owner_type: Regional government
+owner:
+  link: https://www.rlp.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Rhineland-Palatinate
+  type: Regional government
 software: GeoPortal.rlp
 status: active
 tags:

@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 id: cityimgcapetowngovza
 langs:
 - EN
 link: https://cityimg.capetown.gov.za/erdas-iws/esri/GeoSpatial%20Datasets/rest/services/
 name: City of Cape town geoportal
-owner_name: City of Cape Town
-owner_link: https://capetown.gov.za
-owner_type: Central government
+owner:
+  link: https://capetown.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: City of Cape Town
+  type: Central government
 software: ERDAS APOLLO
 status: active
 tags:

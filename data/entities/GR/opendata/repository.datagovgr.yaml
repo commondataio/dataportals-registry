@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://repository.data.gov.gr/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: https://repository.data.gov.gr
 name: Data.gov.gr
-owner_link: https://mindigital.gr
-owner_name: Greece Ministry of digital
-owner_type: Central government
+owner:
+  link: https://mindigital.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: Greece Ministry of digital
+  type: Central government
 software: CKAN
 status: active
 tags:

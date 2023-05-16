@@ -5,9 +5,14 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AL
 endpoints:
 - type: ckanapi
   url: https://data.disl.edu/api/3
@@ -17,9 +22,17 @@ langs:
 - EN
 link: https://data.disl.edu
 name: MESC Data Management Center
-owner_link: https://www.disl.edu
-owner_name: The Alabama Marine Environmental Sciences Consortium (MESC)
-owner_type: Regional government
+owner:
+  link: https://www.disl.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AL
+  name: The Alabama Marine Environmental Sciences Consortium (MESC)
+  type: Regional government
 software: CKAN
 status: active
 tags:

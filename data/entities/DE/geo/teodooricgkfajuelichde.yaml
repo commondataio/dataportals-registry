@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://teodoor.icg.kfa-juelich.de/geonetwork
 name: TERENO Geoportal
-owner_link: https://www.juelich.de
-owner_name: Stadt Juelich
-owner_type: Regional government
+owner:
+  link: https://www.juelich.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Juelich
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

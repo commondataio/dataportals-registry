@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dataportal.eu-interact.org/api/3
@@ -18,9 +21,15 @@ langs:
 link: https://dataportal.eu-interact.org
 name: International Network for Terrestrial Research and Monitoring in the Arctic
   Data Portal
-owner_link: https://eu-interact.org
-owner_name: Lund University
-owner_type: Academy
+owner:
+  link: https://eu-interact.org
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: Lund University
+  type: Academy
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://geodm.gr/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: https://geodm.gr
 name: Γεωγραφικό Σύστημα Πληροφοριών Δυτικής Μακεδονίας
-owner_link: https://pdm.gov.gr
-owner_name: Region of Western Macedonia
-owner_type: Regional government
+owner:
+  link: https://pdm.gov.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: Region of Western Macedonia
+  type: Regional government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Cambodia
+coverage:
+- location:
+    country:
+      id: TH
+      name: Cambodia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.opendevelopmentmekong.net/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.opendevelopmentmekong.net
 name: OD Mekong Datahub
-owner_link: https://opendevelopmentmekong.net
-owner_name: Open Development Mekong
-owner_type: Civil society
+owner:
+  link: https://opendevelopmentmekong.net
+  location:
+    country:
+      id: TH
+      name: Cambodia
+    level: 1
+  name: Open Development Mekong
+  type: Civil society
 software: CKAN
 status: active
 tags:

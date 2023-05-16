@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.regiondemurcia.es/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.regiondemurcia.es
 name: Región de Murcia datos abiertos
-owner_link: https://www.gva.es
-owner_name: Región de Murcia
-owner_type: Regional government
+owner:
+  link: https://www.gva.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Región de Murcia
+  type: Regional government
 software: CKAN
 status: active
 tags:

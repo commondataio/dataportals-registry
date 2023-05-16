@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: YE
-  name: Yemen
+coverage:
+- location:
+    country:
+      id: YE
+      name: Yemen
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://yemen-cso.microdatahub.com/en/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - AR
 link: http://yemen-cso.microdatahub.com
 name: Yemen Central Statistical Organization (CSO) microdata catalog
-owner_link: https://www.cso-yemen.com
-owner_name: Yemen Central Statistical Organization (CSO)
-owner_type: Central government
+owner:
+  link: https://www.cso-yemen.com
+  location:
+    country:
+      id: YE
+      name: Yemen
+    level: 1
+  name: Yemen Central Statistical Organization (CSO)
+  type: Central government
 software: NADA
 status: active
 tags:

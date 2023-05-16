@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalog.zamg.ac.at/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://catalog.zamg.ac.at/geonetwork
 name: ZAMG Metadatenkatalog
-owner_link: https://www.zamg.ac.at
-owner_name: GeoSphere Austria
-owner_type: Central government
+owner:
+  link: https://www.zamg.ac.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: GeoSphere Austria
+  type: Central government
 software: Geonetwork
 status: active
 tags:

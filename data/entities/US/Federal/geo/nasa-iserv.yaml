@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: ISS SERVIR Environmental Research and Visualization System (ISERV) Level-0
   Product. These products were created at the ISERV Science Operation Center (SOC)
   at the National Space Science and Technology Center. ISERV is an automated system
@@ -23,8 +26,14 @@ langs:
 - EN
 link: https://nasa-iserv.s3-us-west-2.amazonaws.com/catalog/catalog.json
 name: NASA ISERV
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Central government
 software: Stac-server
 status: active
 tags:

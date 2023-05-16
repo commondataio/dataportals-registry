@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KG
-  name: Kyrgyzstan
+coverage:
+- location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.water.gov.kg/arcgis/rest/services
@@ -18,10 +21,16 @@ langs:
 - RU
 link: https://gis.water.gov.kg
 name: Геоинформационный портал о воде Кыргызской республики
-owner_link: https://water.gov.kg
-owner_name: Служба водных водных ресурсов при Министерстве сельского хозяйства Кыргызской
-  Республики
-owner_type: Central government
+owner:
+  link: https://water.gov.kg
+  location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
+  name: Служба водных водных ресурсов при Министерстве сельского хозяйства Кыргызской
+    Республики
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

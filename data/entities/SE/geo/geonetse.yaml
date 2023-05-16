@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonet.se/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - SV
 link: http://geonet.se/geonetwork
 name: GEODATATORGET
-owner_link: https://geonet.se
-owner_name: Geonet AB
-owner_type: Business
+owner:
+  link: https://geonet.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Geonet AB
+  type: Business
 software: Geonetwork
 status: active
 tags:

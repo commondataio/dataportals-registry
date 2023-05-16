@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: TZ
-  name: Tanzania
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://data.ihi.or.tz/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.ihi.or.tz
 name: IHI Data Repository
-owner_link: http://www.ihi.or.tz
-owner_name: Ifakara Health Institute (Tanzania)
-owner_type: Academy
+owner:
+  link: http://www.ihi.or.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 1
+  name: Ifakara Health Institute (Tanzania)
+  type: Academy
 software: NADA
 status: active
 tags:

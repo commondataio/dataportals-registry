@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.city.tendo.yamagata.jp/api/3
@@ -18,9 +21,15 @@ langs:
 link: https://data.mdsc.hokudai.ac.jp
 name: Educational data provision system operated by the Center for Mathematics and
   Data Science, Hokkaido University
-owner_link: https://www.hokudai.ac.jp
-owner_name: Hokkaido University
-owner_type: Academy
+owner:
+  link: https://www.hokudai.ac.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Hokkaido University
+  type: Academy
 software: CKAN
 status: active
 tags:

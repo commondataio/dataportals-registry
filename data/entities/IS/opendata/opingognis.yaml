@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IS
-  name: Iceland
+coverage:
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opingogn.is/api/3
@@ -17,8 +20,14 @@ langs:
 - IS
 link: https://opingogn.is
 name: Opin gögn
-owner_name: Digital Iceland
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IS
+      name: Iceland
+    level: 1
+  name: Digital Iceland
+  type: Central government
 software: CKAN
 status: active
 tags:

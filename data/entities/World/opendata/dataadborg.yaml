@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: drupal:jsonapi
   url: https://data.adb.org/jsonapi/
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.adb.org
 name: ADB Data Library
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: ''
+  type: International
 software: DKAN
 status: active
 tags:

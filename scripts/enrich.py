@@ -333,6 +333,53 @@ def enrich_from_csv(filename="catalogs_enrich.csv "):
                 print('- saved')
 
 
+@app.command()
+def enrich_location(dryrun=False):
+    """Enrich location codes"""
+    dirs = os.listdir(ROOT_DIR)
+
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            # Create owner record
+            owner = {'name' : record['owner_name'], 'type' : record['owner_type'], 'location' : {'level' : 1, 'country' : record['countries'][0].copy()}}
+            if owner['location']['country']['id'] == 'UK':
+                owner['location']['country']['id'] = 'GB'
+            if 'owner_link' in record.keys(): 
+                owner['link'] = record['owner_link']
+            coverage = []
+            for country in record['countries']:
+                country_id = country['id']
+                if country_id == 'UK': 
+                    country_id = 'GB'
+                coverage.append({'location' : {'level' : 1, 'country' : {'id' : country_id, 'name': country['name']}}})
+            for key in ['countries', 'owner_name', 'owner_type', 'owner_link']:
+                if key in record.keys():
+                    del record[key]
+            parent_path = root.rsplit('\\', 2)[-2]
+            if parent_path.find('-') > -1:
+                owner['location']['level']  = 2
+                owner['location']['subregion']  = {'id' : parent_path}
+                coverage[0]['location']['level']  = 2
+                coverage[0]['location']['subregion']  = {'id' : parent_path}
+            record['coverage'] = coverage
+            record['owner'] = owner
+#            if owner['location']['level'] == 2:
+#              print(yaml.safe_dump(record, allow_unicode=True))
+            f = open(filepath, 'w', encoding='utf8')
+            f.write(yaml.safe_dump(record, allow_unicode=True))
+            f.close()
+
+            
+            
+
+
 
 if __name__ == "__main__":
     app()

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gdk.gdi-de.org/gdi-de/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://gdk.gdi-de.org/gdi-de
 name: The Spatial Data Infrastructure Germany (SDI Germany) geonetwork catalogue
-owner_link: https://www.gdi-de.org
-owner_name: Federal Agency for Cartography and Geodesy
-owner_type: Central government
+owner:
+  link: https://www.gdi-de.org
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Federal Agency for Cartography and Geodesy
+  type: Central government
 software: Geonetwork
 status: active
 tags:

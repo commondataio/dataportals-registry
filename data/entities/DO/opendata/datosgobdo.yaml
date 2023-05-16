@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DO
-  name: Republica Dominicana
+coverage:
+- location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datos.gob.do/api/3
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://datos.gob.do
 name: Datos Abiertos Dominicana
-owner_name: Government of Dominicana
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: DO
+      name: Republica Dominicana
+    level: 1
+  name: Government of Dominicana
+  type: Central government
 software: CKAN
 status: active
 tags:

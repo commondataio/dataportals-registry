@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://www1.city.tamba.lg.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://www1.city.tamba.lg.jp
 name: Tamba City Open Data Public Site
-owner_link: http://www.tamba.lg.jp
-owner_name: Tamba City
-owner_type: Local government
+owner:
+  link: http://www.tamba.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Tamba City
+  type: Local government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.bl.ch/api
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://data.bl.ch
 name: Datenportal Kantons Basel-Landschaft
-owner_link: https://www.bl.ch
-owner_name: Kantons Basel-Landschaft
-owner_type: Regional government
+owner:
+  link: https://www.bl.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Kantons Basel-Landschaft
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 description: Repositório de dados de pesquisa Unifesp
 endpoints:
 - type: dataverseapi
@@ -18,8 +21,14 @@ langs:
 - PT
 link: https://repositoriodedados.unifesp.br
 name: Repositório de Dados de Pesquisa
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 export_standard: GeoServer API
 id: mapgovkz
 langs:
@@ -15,8 +18,14 @@ langs:
 link: https://map.gov.kz
 name: ГИС-портал проекта Национальная инфраструктура пространственных данных Республики
   Казахстан
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: ''
+  type: Central government
 software: GeoNode
 status: active
 tags:

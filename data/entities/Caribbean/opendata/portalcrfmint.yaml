@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: Caribbean
-  name: Caribbean
+coverage:
+- location:
+    country:
+      id: Caribbean
+      name: Caribbean
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://portal.crfm.int/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://portal.crfm.int
 name: Caribbean Regional Fisheries Mechanism portal
-owner_link: https://crfm.int
-owner_name: Caribbean Regional Fisheries Mechanism.
-owner_type: Civil society
+owner:
+  link: https://crfm.int
+  location:
+    country:
+      id: Caribbean
+      name: Caribbean
+    level: 1
+  name: Caribbean Regional Fisheries Mechanism.
+  type: Civil society
 software: CKAN
 status: active
 tags:

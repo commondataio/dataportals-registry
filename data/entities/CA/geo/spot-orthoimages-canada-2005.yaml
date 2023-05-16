@@ -6,6 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 description: Canada Orthoimages 2005-2010 is the national medium-resolution imagery
   coverage of Canada. These digital raster data acquired by the Spot4 and Spot5 satellites
   comprise five spectral bands.
@@ -18,8 +24,14 @@ langs:
 - EN
 link: https://spot-canada-ortho.s3.amazonaws.com/catalog.json
 name: SPOT Orthoimages of Canada (2005-2010)
-owner_name: Natural Resources Canada
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Natural Resources Canada
+  type: Central government
 software: Stac-server
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.city.chiba.jp/data/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://opendata.city.chiba.jp
 name: Open Data Catalog Site Chiba City
-owner_link: https://city.chiba.jp
-owner_name: Chiba City
-owner_type: Local government
+owner:
+  link: https://city.chiba.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Chiba City
+  type: Local government
 software: CKAN
 status: active
 tags:

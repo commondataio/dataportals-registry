@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.dormagen.de/api
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://opendata.dormagen.de
 name: Opendata Stadt Dormagen
-owner_link: https://potsdam.de
-owner_name: Stadt Dormagen
-owner_type: Regional government
+owner:
+  link: https://potsdam.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Dormagen
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

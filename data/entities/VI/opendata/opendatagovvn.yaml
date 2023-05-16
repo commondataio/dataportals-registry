@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: VI
-  name: Vietnam
+coverage:
+- location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://open.data.gov.vn/api/3
@@ -18,8 +21,14 @@ langs:
 - VN
 link: https://open.data.gov.vn
 name: open.data.gov.vn
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: VI
+      name: Vietnam
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

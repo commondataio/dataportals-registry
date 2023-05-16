@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendatakingston.cityofkingston.ca/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendatakingston.cityofkingston.ca
 name: Open Data Kingston
-owner_link: https://cityofkingston.ca
-owner_name: City of Kingston
-owner_type: Local government
+owner:
+  link: https://cityofkingston.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Kingston
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://rdm.inesctec.pt/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://rdm.inesctec.pt
 name: INESC TEC research data repository
-owner_link: https://insectec.pt
-owner_name: INESC TEC
-owner_type: Academy
+owner:
+  link: https://insectec.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: INESC TEC
+  type: Academy
 software: CKAN
 status: active
 tags:

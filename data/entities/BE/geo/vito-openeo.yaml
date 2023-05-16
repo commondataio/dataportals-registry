@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 description: openEO API to the VITO Remote Sensing product catalog and processing
   services.
 endpoints:
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://openeo.vito.be/openeo/1.0/
 name: VITO (openEO)
-owner_name: VITO NV
-owner_type: Business
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: VITO NV
+  type: Business
 software: Stac-server
 status: active
 tags:

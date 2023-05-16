@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TW
-  name: Taiwan
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://scidm.nchc.org.tw/api/3
@@ -17,9 +20,15 @@ langs:
 - zh_TW
 link: https://scidm.nchc.org.tw
 name: 國網中心資料集平台
-owner_link: https://www.nchc.org.tw
-owner_name: National Computer Center
-owner_type: Academy
+owner:
+  link: https://www.nchc.org.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
+  name: National Computer Center
+  type: Academy
 software: CKAN
 status: active
 tags:

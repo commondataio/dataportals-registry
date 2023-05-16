@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.stat.pref.miyazaki.lg.jp/api/3
@@ -17,8 +20,14 @@ langs:
 - JA
 link: https://data.stat.pref.miyazaki.lg.jp
 name: みやざき統計BOXデータカタログ
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: ''
+  type: Regional government
 software: CKAN
 status: active
 tags:

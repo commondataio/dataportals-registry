@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CR
-  name: Costa Rica
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://visor.sanramon.go.cr/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://visor.sanramon.go.cr/geonetwork
 name: Catalogo de la Municipalidad de San Ramon
-owner_link: https://www.sanramon.go.cr
-owner_name: Municipalidad de San Ramon
-owner_type: Local government
+owner:
+  link: https://www.sanramon.go.cr
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
+  name: Municipalidad de San Ramon
+  type: Local government
 software: Geonetwork
 status: active
 tags:

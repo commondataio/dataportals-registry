@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://www.icssrdataservice.in/datarepository/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: http://www.icssrdataservice.in/datarepository/index.php
 name: 'ICSSR Data Service: Social Science Data Repository'
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: ''
+  type: Academy
 software: NADA
 status: active
 tags:

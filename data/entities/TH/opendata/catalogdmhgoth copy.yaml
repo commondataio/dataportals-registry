@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://cadckan.cad.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://cadckan.cad.go.th
 name: Cooperative Auditing Department Data catalog
-owner_link: https://www.dmh.go.th
-owner_name: Cooperative Auditing Department (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.dmh.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Cooperative Auditing Department (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

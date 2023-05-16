@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://www.pigma.org/ckan/api/3
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://www.pigma.org
 name: Data Nouvelle-Aquitaine
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Regional government
 software: CKAN
 status: active
 tags:

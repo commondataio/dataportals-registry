@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MX
-  name: Mexico
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://inai.opendatasoft.com/api
@@ -18,9 +21,15 @@ langs:
 link: https://inai.opendatasoft.com
 name: Instituto Nacional de Acceso a la Información Pública y Protección de Datos
   Personales
-owner_name: Instituto Nacional de Acceso a la Información Pública y Protección de
-  Datos Personales
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 1
+  name: Instituto Nacional de Acceso a la Información Pública y Protección de Datos
+    Personales
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

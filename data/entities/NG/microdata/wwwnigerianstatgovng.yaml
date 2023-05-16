@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: NG
-  name: Nigeria
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.nigerianstat.gov.ng/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://www.nigerianstat.gov.ng/nada/index.php
 name: Nigeria Microdata Central data catalog
-owner_link: http://www.nigerianstat.gov.ng
-owner_name: Nigerian statistics agency
-owner_type: Central government
+owner:
+  link: http://www.nigerianstat.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
+  name: Nigerian statistics agency
+  type: Central government
 software: NADA
 status: active
 tags:

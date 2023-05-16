@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: This catalog serves as the main root STAC Catalog for Planet Labs. It
   links to 3 small static catalogs of open data, including a small set of Planet Disaster
   Data, some CC-BY SkySat collects and the complete Spacenet 7 images and labels.
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://www.planet.com/data/stac/catalog.json
 name: Planet Labs STAC Catalog
-owner_name: ''
-owner_type: Business
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Business
 software: Stac-server
 status: active
 tags:

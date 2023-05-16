@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.stad.gent/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.stad.gent
 name: Gent open data portaal
-owner_link: https://stad.gent
-owner_name: Stad Gent
-owner_type: Regional government
+owner:
+  link: https://stad.gent
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: Stad Gent
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

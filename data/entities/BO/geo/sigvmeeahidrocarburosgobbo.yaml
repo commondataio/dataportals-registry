@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BO
-  name: Bolivia
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
 id: sigvmeeahidrocarburosgobbo
 langs:
 - ES
 link: http://sigvmeea.hidrocarburos.gob.bo
 name: Platforma del datos geospaciales IIGEO-UMSA
-owner_link: https://www.hidrocarburos.gob.bo
-owner_name: Ministerio de Hidrocarburos y Energías
-owner_type: Central government
+owner:
+  link: https://www.hidrocarburos.gob.bo
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
+  name: Ministerio de Hidrocarburos y Energías
+  type: Central government
 software: GeoNode
 status: active
 tags:

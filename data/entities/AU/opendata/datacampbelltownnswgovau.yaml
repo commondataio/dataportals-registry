@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.campbelltown.nsw.gov.au/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.campbelltown.nsw.gov.au
 name: Campbelltown City Council Open Data Portal
-owner_link: https://www.campbelltown.nsw.gov.au
-owner_name: Campbelltown City Council
-owner_type: Local government
+owner:
+  link: https://www.campbelltown.nsw.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Campbelltown City Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

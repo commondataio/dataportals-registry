@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: TJ
-  name: Tajikistan
+coverage:
+- location:
+    country:
+      id: TJ
+      name: Tajikistan
+    level: 1
 endpoints:
 - type: customapi
   url: https://nsdi.tj/datasets
@@ -17,9 +20,15 @@ langs:
 - RU
 link: https://nsdi.tj/datasets
 name: National Spatial Data Infrastructure of the Republic of Tajikistan
-owner_link: http://www.fazo-s.tj/
-owner_name: Design and Research Institute "FAZO"
-owner_type: Central government
+owner:
+  link: http://www.fazo-s.tj/
+  location:
+    country:
+      id: TJ
+      name: Tajikistan
+    level: 1
+  name: Design and Research Institute "FAZO"
+  type: Central government
 software: Custom software
 status: active
 tags:

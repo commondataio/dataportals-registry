@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.alcoi.org/data/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendata.alcoi.org
 name: Datos abiertos e información interesante de Alcoy
-owner_link: https://alcoi.org
-owner_name: Ayntamient d Alcoi
-owner_type: Local government
+owner:
+  link: https://alcoi.org
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayntamient d Alcoi
+  type: Local government
 software: CKAN
 status: active
 tags:

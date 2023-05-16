@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://service.gis-mannheim.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://service.gis-mannheim.de/geonetwork
 name: Geodatenkatalog Stadt Mannheim
-owner_link: https://www.mannheim.de
-owner_name: Stadt Mannheim
-owner_type: Regional government
+owner:
+  link: https://www.mannheim.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Mannheim
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

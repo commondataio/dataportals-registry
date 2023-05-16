@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
-countries:
-- id: DZ
-  name: Algeria
+coverage:
+- location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://dataportal.pauwes.dz/geonetwork/srv/eng/q
@@ -19,8 +22,14 @@ langs:
 - FR
 link: https://dataportal.pauwes.dz/geonetwork
 name: PAUWES Data Portal
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 1
+  name: ''
+  type: Academy
 software: Geonetwork
 status: active
 tags:

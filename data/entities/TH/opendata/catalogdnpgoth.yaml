@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.dnp.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.dnp.go.th
 name: Department of National Parks, Wildlife and Plant Conservation data catalog
-owner_link: https://www.dnp.go.th
-owner_name: Department of National Parks, Wildlife and Plant Conservation (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.dnp.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Department of National Parks, Wildlife and Plant Conservation (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

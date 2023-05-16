@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.city.kitamoto.saitama.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://opendata.city.kitamoto.saitama.jp
 name: Kitamoto Open Data
-owner_link: http://www.city.kitamoto.saitama.jp
-owner_name: Kitamoto City
-owner_type: Local government
+owner:
+  link: http://www.city.kitamoto.saitama.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Kitamoto City
+  type: Local government
 software: CKAN
 status: active
 tags:

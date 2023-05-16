@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: HU
-  name: Hungary
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 1
 endpoints:
 - type: dataverseapi
   url: https://science-data.hu/api/search?q=*&type=dataset&sort=name&order=asc
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://science-data.hu
 name: ARP Research Data Repository
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

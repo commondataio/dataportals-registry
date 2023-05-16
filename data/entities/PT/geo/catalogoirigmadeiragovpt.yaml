@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogo-irig.madeira.gov.pt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: https://catalogo-irig.madeira.gov.pt/geonetwork
 name: Catálogo iRIG-Madeira
-owner_link: https://www.madeira.gov.pt
-owner_name: Regiao Autonoma de Madeira
-owner_type: Regional government
+owner:
+  link: https://www.madeira.gov.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Regiao Autonoma de Madeira
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

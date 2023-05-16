@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://library.atticawetlands.eu/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: https://library.atticawetlands.eu
 name: Υγρότοποι Αττικής - Αποθετήριο Υγροτόπων
-owner_link: https://www.patt.gov.gr/en/
-owner_name: Region of Attica
-owner_type: Regional government
+owner:
+  link: https://www.patt.gov.gr/en/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: Region of Attica
+  type: Regional government
 software: CKAN
 status: active
 tags:

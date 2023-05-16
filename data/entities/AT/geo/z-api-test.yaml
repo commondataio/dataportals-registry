@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 description: "\n## STAC Catalog\n Includes elevation data and orthophotos"
 endpoints:
 - type: stacserverapi
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://gis.ktn.gv.at/osgdi/stac/
 name: z API Test
-owner_name: Land Karnten Austria
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: Land Karnten Austria
+  type: Central government
 software: Stac-server
 status: active
 tags:

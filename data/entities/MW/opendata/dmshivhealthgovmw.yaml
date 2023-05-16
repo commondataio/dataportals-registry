@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MW
-  name: Malawi
+coverage:
+- location:
+    country:
+      id: MW
+      name: Malawi
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dms.hiv.health.gov.mw/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://dms.hiv.health.gov.mw
 name: Department of HIV, AIDS & Viral Hepititis (DHA) Document Management System
-owner_link: https://www.health.gov.mw
-owner_name: HIV, AIDS & Viral Hepititis Ministry of Health, Malawi
-owner_type: Central government
+owner:
+  link: https://www.health.gov.mw
+  location:
+    country:
+      id: MW
+      name: Malawi
+    level: 1
+  name: HIV, AIDS & Viral Hepititis Ministry of Health, Malawi
+  type: Central government
 software: CKAN
 status: active
 tags:

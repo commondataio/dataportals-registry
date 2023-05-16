@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CI
-  name: Cote d Ivoire
+coverage:
+- location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 1
 endpoints:
 - type: udataapi
   url: https://data.gouv.ci/data-fair/api/1
@@ -17,9 +20,15 @@ langs:
 - SR
 link: https://data.gouv.ci
 name: Open Data Cote d Ivoire
-owner_link: https://gouv.ci
-owner_name: Cote d Ivoire Government
-owner_type: Central government
+owner:
+  link: https://gouv.ci
+  location:
+    country:
+      id: CI
+      name: Cote d Ivoire
+    level: 1
+  name: Cote d Ivoire Government
+  type: Central government
 software: uData
 status: active
 tags:

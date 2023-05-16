@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: RW
-  name: Rwanda
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.statistics.gov.rw/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://microdata.statistics.gov.rw
 name: National institute of statistics of Rwanda
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

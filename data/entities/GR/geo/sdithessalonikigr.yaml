@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://sdi.thessaloniki.gr/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EL
 link: https://sdi.thessaloniki.gr/geonetwork
 name: City of Thessaloniki SDI geodata catalog
-owner_link: https://thessaloniki.gr
-owner_name: City of Thessaloniki
-owner_type: Regional government
+owner:
+  link: https://thessaloniki.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: City of Thessaloniki
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

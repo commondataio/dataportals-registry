@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.city.yokohama.lg.jp/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://data.city.yokohama.lg.jp
 name: Yokohama City Open Data
-owner_link: https://city.yokohama.lg.jp
-owner_name: Yokohama City
-owner_type: Regional government
+owner:
+  link: https://city.yokohama.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Yokohama City
+  type: Regional government
 software: CKAN
 status: active
 tags:

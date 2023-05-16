@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.normandie.education.gouv.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.normandie.education.gouv.fr
 name: Région académique Normandie Open Data
-owner_link: https://www.education.gouv.fr
-owner_name: Région académique Normandie
-owner_type: Regional government
+owner:
+  link: https://www.education.gouv.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Région académique Normandie
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

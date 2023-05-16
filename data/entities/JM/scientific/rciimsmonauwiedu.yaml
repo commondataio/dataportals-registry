@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: JM
-  name: Jamaica
+coverage:
+- location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://rciims.mona.uwi.edu/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://rciims.mona.uwi.edu
 name: The Regional Coastal Integrated Information Management System (RCIIMS)
-owner_link: https://www.uwi.edu
-owner_name: The University of the West Indies
-owner_type: Academy
+owner:
+  link: https://www.uwi.edu
+  location:
+    country:
+      id: JM
+      name: Jamaica
+    level: 1
+  name: The University of the West Indies
+  type: Academy
 software: CKAN
 status: active
 tags:

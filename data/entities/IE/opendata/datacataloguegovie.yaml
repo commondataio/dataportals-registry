@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IE
-  name: Ireland
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datacatalogue.gov.ie/api/3
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://datacatalogue.gov.ie
 name: Irish Public Service Data Catalogue
-owner_name: Government of Ireland
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 1
+  name: Government of Ireland
+  type: Central government
 software: CKAN
 status: active
 tags:

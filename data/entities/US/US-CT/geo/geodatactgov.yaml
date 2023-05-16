@@ -7,9 +7,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CT
 endpoints:
 - type: dcatap201
   url: https://ct-geospatial-data-portal-ctmaps.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,8 +30,16 @@ langs:
 - EN
 link: https://geodata.ct.gov
 name: CT Geodata Portal
-owner_name: State of Connecticut
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CT
+  name: State of Connecticut
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

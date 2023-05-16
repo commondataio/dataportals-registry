@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NZ
-  name: New Zealand
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data.marlborough.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - EN
 link: https://data.marlborough.opendata.arcgis.com
 name: MDC Open Data
-owner_name: MDC
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
+  name: MDC
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

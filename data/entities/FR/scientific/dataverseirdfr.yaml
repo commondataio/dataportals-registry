@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 description: Hosted by IRD, a french public research institution, who defends an original
   model of equitable scientific partnership with the countries of the South and an
   interdisciplinary and citizen science, committed to the achievement of the Sustainable
@@ -21,8 +24,14 @@ langs:
 - FR
 link: https://dataverse.ird.fr
 name: Data Suds
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://library-muroran.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - JA
 link: https://library-muroran.opendata.arcgis.com
 name: むろらんオープンデータライブラリ-コピー
-owner_name: City of Muroran
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: City of Muroran
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

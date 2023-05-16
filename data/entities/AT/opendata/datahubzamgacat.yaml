@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.hub.zamg.ac.at/api/3
@@ -17,10 +20,16 @@ langs:
 - EN
 link: https://data.hub.zamg.ac.at
 name: Geosphere Austria Open Data
-owner_link: https://zamg.ac.at
-owner_name: GeoSphere Austria – Bundesanstalt für Geologie, Geophysik, Klimatologie
-  und Meteorologie
-owner_type: Academy
+owner:
+  link: https://zamg.ac.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: GeoSphere Austria – Bundesanstalt für Geologie, Geophysik, Klimatologie und
+    Meteorologie
+  type: Academy
 software: CKAN
 status: active
 tags:

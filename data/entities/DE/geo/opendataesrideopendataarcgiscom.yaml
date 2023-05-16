@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://opendata-esri-de.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - DE
 link: https://opendata-esri-de.opendata.arcgis.com
 name: Esri Deutschland Open Data Portal
-owner_name: Esri Deutschland
-owner_type: Business
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Esri Deutschland
+  type: Business
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: PS
-  name: Palestine
+coverage:
+- location:
+    country:
+      id: PS
+      name: Palestine
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.pcbs.gov.ps/PCBS-Metadata-en-v4.3/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://www.pcbs.gov.ps/PCBS-Metadata-en-v4.3/index.php
 name: Palestinian Microdata catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: PS
+      name: Palestine
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

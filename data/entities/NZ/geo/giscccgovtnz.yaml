@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NZ
-  name: New Zealand
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.ccc.govt.nz/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - EN
 link: https://gis.ccc.govt.nz/arcgis/rest/services
 name: ArcGIS server of the Christchurch City Council
-owner_link: https://ccc.govt.nz
-owner_name: Christchurch City Council
-owner_type: Local government
+owner:
+  link: https://ccc.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
+  name: Christchurch City Council
+  type: Local government
 software: ArcGIS Server
 status: active
 tags:

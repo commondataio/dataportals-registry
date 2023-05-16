@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 description: UNB Dataverse is repository for research data collected by researchers
   and organizations primarily affiliated with the University of New Brunswick.
 endpoints:
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://dataverse.lib.unb.ca
 name: UNB Libraries Dataverse
-owner_link: https://lib.unb.ca
-owner_name: UNB Libraries
-owner_type: Academy
+owner:
+  link: https://lib.unb.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: UNB Libraries
+  type: Academy
 software: Dataverse
 status: active
 tags:

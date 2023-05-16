@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - EN
 link: https://vicroadsopendata.vicroadsmaps.opendata.arcgis.com
 name: Vic Roads Open Data
-owner_name: State Government of Victoria
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: State Government of Victoria
+  type: Regional government
 software: ArcGIS Hub
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://sports-sgsocialgouv.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://sports-sgsocialgouv.opendatasoft.com
 name: Ministère des Affaires Sociales et de la Santé
-owner_name: Ministère des Affaires Sociales et de la Santé
-owner_type: Government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Ministère des Affaires Sociales et de la Santé
+  type: Government
 software: OpenDataSoft
 status: active
 tags:

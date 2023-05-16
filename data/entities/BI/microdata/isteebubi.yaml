@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: BI
-  name: Burundi
+coverage:
+- location:
+    country:
+      id: BI
+      name: Burundi
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://isteebu.bi/nada/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://isteebu.bi/nada/index.php
 name: Burundi Microdata Catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BI
+      name: Burundi
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

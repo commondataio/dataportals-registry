@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datosabiertos.bogota.gov.co/api/3
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://datosabiertos.bogota.gov.co
 name: Datos Abiertos Bogotá
-owner_name: City of Bogota
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: City of Bogota
+  type: Local government
 software: CKAN
 status: active
 tags:

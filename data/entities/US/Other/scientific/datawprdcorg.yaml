@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.wprdc.org/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.wprdc.org
 name: WPRDC
-owner_name: University Center of Social and Urban Research (UCSUR)
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: University Center of Social and Urban Research (UCSUR)
+  type: Academy
 software: CKAN
 status: active
 tags:

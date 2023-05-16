@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://eatlas.org.au/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://eatlas.org.au/geonetwork
 name: eAtlas Data Catalogue
-owner_name: Australian Institute of Marine Science
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Australian Institute of Marine Science
+  type: Academy
 software: Geonetwork
 status: active
 tags:

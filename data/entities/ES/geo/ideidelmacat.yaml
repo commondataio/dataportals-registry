@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://ide.idelma.cat/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://ide.idelma.cat/geonetwork
 name: Catàleg local de Mallorca
-owner_link: https://idelma.cat
-owner_name: Mallorca
-owner_type: Local government
+owner:
+  link: https://idelma.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Mallorca
+  type: Local government
 software: Geonetwork
 status: active
 tags:

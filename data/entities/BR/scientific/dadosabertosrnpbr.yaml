@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 endpoints:
 - type: dataverseapi
   url: https://dadosabertos.rnp.br/api/search?q=*&type=dataset&sort=name&order=asc
@@ -17,8 +20,14 @@ langs:
 - PT
 link: https://dadosabertos.rnp.br
 name: Repositórios Piloto da Rede Nacional de Ensino e Pesquisa
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

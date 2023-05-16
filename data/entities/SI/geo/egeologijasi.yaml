@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SI
-  name: Slovenia
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://egeologija.si/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://egeologija.si/geonetwork
 name: eGeologija data catalogue Slovenia
-owner_link: https://www.geo-zs.si
-owner_name: Geological survey of Slovenia
-owner_type: Central government
+owner:
+  link: https://www.geo-zs.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
+  name: Geological survey of Slovenia
+  type: Central government
 software: Geonetwork
 status: active
 tags:

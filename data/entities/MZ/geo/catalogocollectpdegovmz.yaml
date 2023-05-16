@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MZ
-  name: Mozambique
+coverage:
+- location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogo.collect.pde.gov.mz/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - FR
 link: https://catalogo.collect.pde.gov.mz/geonetwork
 name: Catalogo Nacional de Metadados de Dados Geoespaciais Mozambique
-owner_link: https://www.pde.gov.mz
-owner_name: Ministério dos Transportes e Comunicações Mozambique
-owner_type: Central government
+owner:
+  link: https://www.pde.gov.mz
+  location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 1
+  name: Ministério dos Transportes e Comunicações Mozambique
+  type: Central government
 software: Geonetwork
 status: active
 tags:

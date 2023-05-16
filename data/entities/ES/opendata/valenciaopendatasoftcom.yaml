@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://valencia.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - ES
 link: https://valencia.opendatasoft.com
 name: Open data portal of València
-owner_name: Ayuntamiento de Valencia
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayuntamiento de Valencia
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

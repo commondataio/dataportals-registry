@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.onwr.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://opendata.onwr.go.th
 name: National Water Resources Office data catalog (Thailand)
-owner_link: https://www.onwr.go.th
-owner_name: National Water Resources Office (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.onwr.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: National Water Resources Office (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

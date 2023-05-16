@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: TN
-  name: Tunis
+coverage:
+- location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://nada.ins.tn/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://nada.ins.tn
 name: Statistiques Tunisie microdata catalog
-owner_link: https://www.ins.tn
-owner_name: Statistiques Tunisie
-owner_type: Central government
+owner:
+  link: https://www.ins.tn
+  location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
+  name: Statistiques Tunisie
+  type: Central government
 software: NADA
 status: active
 tags:

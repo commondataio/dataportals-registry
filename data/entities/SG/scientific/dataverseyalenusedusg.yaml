@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: SG
-  name: Singapore
+coverage:
+- location:
+    country:
+      id: SG
+      name: Singapore
+    level: 1
 description: Yale-NUS Dataverse is the institutional research data repository of Yale-NUS
   College. The goals of Yale-NUS Dataverse are to collect, preserve and showcase the
   research output of Yale-NUS researchers and through this, increase the research
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://dataverse.yale-nus.edu.sg
 name: Yale-NUS Dataverse
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: SG
+      name: Singapore
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

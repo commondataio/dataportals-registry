@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: LU
-  name: Luxembourg
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geocatalog.geoportal.lu/geonetwork/srv/eng/q
@@ -22,8 +25,14 @@ langs:
 - EN
 link: https://geocatalog.geoportal.lu/geonetwork
 name: ' Geoportal of the Grand-Duchy of Luxembourg'
-owner_name: ''
-owner_type: Government
+owner:
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 1
+  name: ''
+  type: Government
 software: Geonetwork
 status: active
 tags:

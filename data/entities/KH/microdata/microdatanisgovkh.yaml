@@ -7,9 +7,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: KH
-  name: Cambodia
+coverage:
+- location:
+    country:
+      id: KH
+      name: Cambodia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.nis.gov.kh/index.php/api/catalog/search
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://microdata.nis.gov.kh
 name: Cambodia Microdata Catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: KH
+      name: Cambodia
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

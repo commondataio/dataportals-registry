@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://soggy2.zoology.ubc.ca/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://soggy2.zoology.ubc.ca/geonetwork
 name: Marine data BC
-owner_link: https://sogdatacentre.ca
-owner_name: The Strait of Georgia Data Centre
-owner_type: Academy
+owner:
+  link: https://sogdatacentre.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: The Strait of Georgia Data Centre
+  type: Academy
 software: Geonetwork
 status: active
 tags:

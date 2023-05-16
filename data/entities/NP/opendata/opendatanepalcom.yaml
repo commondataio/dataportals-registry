@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NP
-  name: Nepal
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://opendatanepal.com/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendatanepal.com
 name: Open Data Nepal
-owner_link: https://opendatanepal.com
-owner_name: Open Knowledge Nepal
-owner_type: Civil society
+owner:
+  link: https://opendatanepal.com
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: Open Knowledge Nepal
+  type: Civil society
 software: CKAN
 status: active
 tags:

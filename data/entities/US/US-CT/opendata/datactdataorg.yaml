@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CT
 endpoints:
 - type: ckanapi
   url: https://data.ctdata.org/api/3
@@ -17,7 +22,15 @@ langs:
 - EN
 link: http://data.ctdata.org
 name: Connecticut Data Collaborative
-owner_name: Inform CT, Inc. dba CTData Collaborative
-owner_type: Civil society
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CT
+  name: Inform CT, Inc. dba CTData Collaborative
+  type: Civil society
 software: CKAN
 status: active

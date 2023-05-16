@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MY
-  name: Malaysia
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://data.hydro.gov.my/server/rest/services
@@ -16,9 +19,15 @@ langs:
 - EN
 link: https://data.hydro.gov.my/server/rest/services
 name: National Hydrographic Centre ArcGIS server (Malaysia)
-owner_link: https://www.hydro.gov.my
-owner_name: National Hydrographic Centre (Malaysia)
-owner_type: Central government
+owner:
+  link: https://www.hydro.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
+  name: National Hydrographic Centre (Malaysia)
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

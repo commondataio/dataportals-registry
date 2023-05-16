@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.ino.nectec.or.th/api/3
@@ -18,9 +21,15 @@ langs:
 - TH
 link: https://ckan.ino.nectec.or.th
 name: The NECTEC Data HUB
-owner_link: https://www.nectec.or.th
-owner_name: National Electronics and Computer Technology Center (NECTEC)
-owner_type: Academy
+owner:
+  link: https://www.nectec.or.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: National Electronics and Computer Technology Center (NECTEC)
+  type: Academy
 software: CKAN
 status: active
 tags:

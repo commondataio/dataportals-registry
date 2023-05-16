@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 description: Brazilian Center for Research in Physics
 endpoints:
 - type: dataverseapi
@@ -18,8 +21,14 @@ langs:
 - PT
 link: https://dataverse.cbpf.br
 name: Centro Brasileiro de Pesquisas Físicas - CBPF
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

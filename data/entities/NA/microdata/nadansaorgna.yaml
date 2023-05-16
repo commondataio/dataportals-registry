@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: NA
-  name: Namibia
+coverage:
+- location:
+    country:
+      id: NA
+      name: Namibia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://nada.nsa.org.na/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://nada.nsa.org.na
 name: Namibia Statistics Agency. An online microdata catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: NA
+      name: Namibia
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

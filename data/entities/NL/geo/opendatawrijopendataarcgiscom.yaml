@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://opendata.wrij.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - NL
 link: https://opendata.wrij.opendata.arcgis.com
 name: Waterschap Rijnen I Jssel
-owner_name: Waterschap Rijnen I Jssel
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: Waterschap Rijnen I Jssel
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 description: A STAC catalog that contains all collections available on the FAIRiCUBE
   Hub and within the Sentinel Hub openEO backend.
 endpoints:
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://catalog.fairicube.eu/stac/index.json
 name: FAIRiCUBE Hub Catalog
-owner_link: https://fairicube.eu
-owner_name: The Climate and Environmental Research Institute NILU
-owner_type: Academy
+owner:
+  link: https://fairicube.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: The Climate and Environmental Research Institute NILU
+  type: Academy
 software: Stac-server
 status: active
 tags:

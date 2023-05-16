@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: LT
-  name: Lithuania
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.vilnius.lt/api/3
@@ -16,10 +19,16 @@ id: opendatavilniuslt
 langs:
 - LT
 link: https://opendata.vilnius.lt
-name: 'Vilnus Open Data Portal'
-owner_name: IVPK Information Society Development Committee Budgetary institution
-owner_type: Regional government
-owner_link: https://www.vilnus.lt
+name: Vilnus Open Data Portal
+owner:
+  link: https://www.vilnus.lt
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
+  name: IVPK Information Society Development Committee Budgetary institution
+  type: Regional government
 software: CKAN
 status: active
 tags:

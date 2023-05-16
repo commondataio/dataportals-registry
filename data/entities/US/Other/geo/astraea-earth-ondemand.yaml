@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: Astraea Earth OnDemand geospatial imagery query and analysis tool
 endpoints:
 - type: stacserverapi
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://eod-catalog-svc-prod.astraea.earth/
 name: Astraea Earth OnDemand
-owner_name: Astraea Inc.
-owner_type: Business
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Astraea Inc.
+  type: Business
 software: Stac-server
 status: active
 tags:

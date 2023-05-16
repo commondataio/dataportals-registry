@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: IN
-  name: India
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 1
 description: International Crops Research Institute for the Semi-Arid Tropics.  Free
   open data repository of ICRISAT research data including Social science, Phenotypic,
   Genotypic, Spatial and Soil & Weather data which are linked with open publications.
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://dataverse.icrisat.org
 name: ICRISAT
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: IN
+      name: India
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

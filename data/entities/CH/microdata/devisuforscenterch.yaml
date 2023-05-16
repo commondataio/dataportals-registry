@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://devisu.forscenter.ch/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://devisu.forscenter.ch/index.php
 name: FORS - De Visu
-owner_link: https://forscenter.ch
-owner_name: FORS is the Swiss Centre of Expertise in the Social Sciences. 
-owner_type: Central government
+owner:
+  link: https://forscenter.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: FORS is the Swiss Centre of Expertise in the Social Sciences.
+  type: Central government
 software: NADA
 status: active
 tags:

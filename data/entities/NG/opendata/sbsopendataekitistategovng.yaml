@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NG
-  name: Nigeria
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://sbsopendata.ekitistate.gov.ng/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://sbsopendata.ekitistate.gov.ng
 name: Ekiti State Open Data Portal
-owner_link: https://www.ekitistate.gov.ng
-owner_name: Ekiti
-owner_type: Regional government
+owner:
+  link: https://www.ekitistate.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
+  name: Ekiti
+  type: Regional government
 software: CKAN
 status: active
 tags:

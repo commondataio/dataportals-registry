@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.qsds.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.qsds.go.th
 name: Information accounting system of the Mulberry Department
-owner_link: https://www.qsds.go.th
-owner_name: Department of Mulberry Silk  (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.qsds.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Department of Mulberry Silk  (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

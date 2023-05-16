@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dados.justica.gov.pt/api/3
@@ -17,9 +20,15 @@ langs:
 - PT
 link: https://dados.justica.gov.pt
 name: Dados na Justiça
-owner_link: https://www.justica.gov.pt
-owner_name: Ministério da Justiça
-owner_type: Central government
+owner:
+  link: https://www.justica.gov.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Ministério da Justiça
+  type: Central government
 software: CKAN
 status: active
 tags:

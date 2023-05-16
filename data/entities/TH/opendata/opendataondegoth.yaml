@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.onde.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://opendata.onde.go.th
 name: Office of the National Digital Economy and Society Commission open data
-owner_link: https://www.onde.go.th
-owner_name: Office of the National Digital Economy and Society Commission
-owner_type: Central government
+owner:
+  link: https://www.onde.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Office of the National Digital Economy and Society Commission
+  type: Central government
 software: CKAN
 status: active
 tags:

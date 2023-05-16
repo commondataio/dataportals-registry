@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.ugr.es/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://opendata.ugr.es
 name: OpenData UGR
-owner_link: https://ugr.es
-owner_name: La Universidad de Granada
-owner_type: Academy
+owner:
+  link: https://ugr.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: La Universidad de Granada
+  type: Academy
 software: CKAN
 status: active
 tags:

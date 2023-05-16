@@ -5,9 +5,14 @@ api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-WA
 endpoints:
 - type: dcatap201
   url: https://data.kitcogis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -23,8 +28,16 @@ langs:
 - EN
 link: https://data.kitcogis.opendata.arcgis.com
 name: Kittitas County GIS
-owner_name: Kittitas County
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-WA
+  name: Kittitas County
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: ZW
-  name: Zimbabwe
+coverage:
+- location:
+    country:
+      id: ZW
+      name: Zimbabwe
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.ubos.org:7070/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://microdata.ubos.org:7070
 name: UBOS Microdata Archive
-owner_link: https://www.ubos.org
-owner_name: Uganda Bureau of Statistics
-owner_type: Central government
+owner:
+  link: https://www.ubos.org
+  location:
+    country:
+      id: ZW
+      name: Zimbabwe
+    level: 1
+  name: Uganda Bureau of Statistics
+  type: Central government
 software: NADA
 status: active
 tags:

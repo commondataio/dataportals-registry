@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PA
-  name: Panama
+coverage:
+- location:
+    country:
+      id: PA
+      name: Panama
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://stridata-si.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - ES
 link: https://stridata-si.opendata.arcgis.com
 name: STRI GIS Data Portal
-owner_link: http://www.si.edu
-owner_name: Smithsonian Tropical Research Institute Physical Monitoring - GIS Laboratory
-owner_type: Academy
+owner:
+  link: http://www.si.edu
+  location:
+    country:
+      id: PA
+      name: Panama
+    level: 1
+  name: Smithsonian Tropical Research Institute Physical Monitoring - GIS Laboratory
+  type: Academy
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,18 +6,27 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 id: geovisormanabigobec
 langs:
 - ES
 - EN
 link: https://geovisor.manabi.gob.ec
 name: Geovisor Manabi
-owner_link: https://www.manabi.gob.ec
-owner_name: Gobierno de Manabi
-owner_type: Regional government
+owner:
+  link: https://www.manabi.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Gobierno de Manabi
+  type: Regional government
 software: GeoNode
 status: active
 tags:

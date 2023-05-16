@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.comune.re.it/api/3
@@ -17,8 +20,14 @@ langs:
 - IT
 link: https://opendata.comune.re.it
 name: Opendata Comune di Reggio Emilia
-owner_name: Comune di Reggio Emilia
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Comune di Reggio Emilia
+  type: Local government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: SO
-  name: Somalia
+coverage:
+- location:
+    country:
+      id: SO
+      name: Somalia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.nbs.gov.so/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://microdata.nbs.gov.so
 name: Somalia Microdata catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: SO
+      name: Somalia
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

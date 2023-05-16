@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonetwork.minambiente.gov.co/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://geonetwork.minambiente.gov.co/geonetwork
 name: Catálogo de Metadatos del Ministerio de Ambiente y Desarrollo Sostenible
-owner_link: https://minambiente.gov.co
-owner_name: Ministerio de Ambiente y Desarrollo Sostenible
-owner_type: Central government
+owner:
+  link: https://minambiente.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Ministerio de Ambiente y Desarrollo Sostenible
+  type: Central government
 software: Geonetwork
 status: active
 tags:

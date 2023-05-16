@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BO
-  name: Bolivia
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://gtggeoportal.umsa.bo:8087/geonetwork
 name: GeoNetwork IIAG
-owner_link: https://www.umsa.bo
-owner_name: Universidad Mayor de San Andrés
-owner_type: Academy
+owner:
+  link: https://www.umsa.bo
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
+  name: Universidad Mayor de San Andrés
+  type: Academy
 software: Geonetwork
 status: active
 tags:

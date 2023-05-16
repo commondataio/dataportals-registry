@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://www.ide.cat/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://www.ide.cat/geonetwork
 name: Cataleg IDEC
-owner_link: https://www.ide.cat
-owner_name: Infraestructura de Dades Espacials de Catalunya
-owner_type: Central government
+owner:
+  link: https://www.ide.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Infraestructura de Dades Espacials de Catalunya
+  type: Central government
 software: Geonetwork
 status: active
 tags:

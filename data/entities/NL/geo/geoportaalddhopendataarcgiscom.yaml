@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - NL
 link: https://geoportaal.ddh.opendata.arcgis.com
 name: Open Data Den Haag GEO Portaal
-owner_name: Den Haag
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: Den Haag
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

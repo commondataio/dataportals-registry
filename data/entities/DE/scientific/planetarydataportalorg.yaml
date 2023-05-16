@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 description: The TRR170-DB was set up to manage data products of the collaborative
   research center TRR 170 'Late Accretion onto Terrestrial Planets' (https://www.trr170-lateaccretion.de/).
   The repository also stores data by other institutions and researchers. Data include
@@ -22,8 +25,14 @@ langs:
 - DE
 link: https://planetary-data-portal.org
 name: TRR170-DB
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

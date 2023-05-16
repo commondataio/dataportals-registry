@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: GR
-  name: Greece
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://geodata.gov.gr/api/3
@@ -17,9 +20,15 @@ langs:
 - EL
 link: https://geodata.gov.gr
 name: GEODATA.gov.gr
-owner_link: http://www.imis.athena-innovation.gr
-owner_name: IMIS/Athena RC
-owner_type: Central government
+owner:
+  link: http://www.imis.athena-innovation.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: IMIS/Athena RC
+  type: Central government
 software: CKAN
 status: active
 tags:

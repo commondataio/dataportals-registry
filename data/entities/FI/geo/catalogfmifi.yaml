@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://catalog.fmi.fi/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - FI
 link: http://catalog.fmi.fi/geonetwork
 name: Finnish Meteorological Institute Geocatalog
-owner_link: https://fmi.fi
-owner_name: Finnish Meteorological Institute
-owner_type: Central government
+owner:
+  link: https://fmi.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Finnish Meteorological Institute
+  type: Central government
 software: Geonetwork
 status: active
 tags:

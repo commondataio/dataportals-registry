@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 description: Digital Earth Australia (DEA) is a platform that uses spatial data and
   images recorded by satellites orbiting our planet to detect physical changes across
   Australia in unprecedented detail.
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://explorer.sandbox.dea.ga.gov.au/stac/
 name: Digital Earth Australia
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: ''
+  type: Central government
 software: Stac-server
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: RO
-  name: Romania
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
 description: Spatio-Temporal Asset Catalog containing various geospatial products
   distributed by West University of Timisoara
 endpoints:
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://stac.sage.uvt.ro
 name: UVT STAC Catalog
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+  name: ''
+  type: Academy
 software: Stac-server
 status: active
 tags:

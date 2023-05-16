@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 description: CORA. Research Data Repository (RDR) is a federated and multidisciplinary
   data repository that allows Catalan universities, CERCA research centers and other
   entities that carry out research to publish research datasets in FAIR mode and following
@@ -23,9 +26,15 @@ langs:
 - ES
 link: https://dataverse.csuc.cat
 name: CORA. Research Data Repository (RDR)
-owner_link: https://csuc.cat
-owner_name: Consorci de Serveis Universitaris de Catalunya
-owner_type: Academy
+owner:
+  link: https://csuc.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Consorci de Serveis Universitaris de Catalunya
+  type: Academy
 software: Dataverse
 status: active
 tags:

@@ -7,9 +7,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-VT
 endpoints:
 - type: dcatap201
   url: https://city-of-burlington-vt-open-data-burlingtonvt.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,8 +30,16 @@ langs:
 - EN
 link: https://data.burlingtonvt.gov
 name: City of Burlington VT Open Data
-owner_name: City of Burlington
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-VT
+  name: City of Burlington
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

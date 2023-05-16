@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://dadesobertes-situam.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - ES
 link: https://dadesobertes-situam.opendata.arcgis.com
 name: Manlleu Dades Obertes
-owner_link: https://www.manlleu.cat
-owner_name: Ajuntament Manlleu
-owner_type: Local government
+owner:
+  link: https://www.manlleu.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ajuntament Manlleu
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

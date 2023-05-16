@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalogue.cioosatlantic.ca/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://catalogue.cioosatlantic.ca
 name: The Canadian Integrated Ocean Observing System (CIOOS) data catalog
-owner_link: https://cioos.ca
-owner_name: The Canadian Integrated Ocean Observing System (CIOOS)
-owner_type: Academy
+owner:
+  link: https://cioos.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: The Canadian Integrated Ocean Observing System (CIOOS)
+  type: Academy
 software: CKAN
 status: active
 tags:

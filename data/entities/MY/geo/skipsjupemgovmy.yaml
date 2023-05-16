@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MY
-  name: Malaysia
+coverage:
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
 id: skipsjupemgovmy
 langs:
 - EN
 link: http://skips.jupem.gov.my:82/geoserver
 name: Ministry of Natural Resources, Environment and Climate Change geoserver (Malaysia)
-owner_link: https://www.jupem.gov.my
-owner_name: Ministry of Natural Resources, Environment and Climate Change (Malaysia)
-owner_type: Central government
+owner:
+  link: https://www.jupem.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 1
+  name: Ministry of Natural Resources, Environment and Climate Change (Malaysia)
+  type: Central government
 software: GeoServer
 status: active
 tags:

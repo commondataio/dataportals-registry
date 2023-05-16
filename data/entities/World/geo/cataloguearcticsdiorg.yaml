@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogue.arctic-sdi.org/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://catalogue.arctic-sdi.org/geonetwork
 name: Arctic SDI data catalogue
-owner_link: https://www.arctic-sdi.org
-owner_name: Arctic SDI
-owner_type: International
+owner:
+  link: https://www.arctic-sdi.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: Arctic SDI
+  type: International
 software: Geonetwork
 status: active
 tags:

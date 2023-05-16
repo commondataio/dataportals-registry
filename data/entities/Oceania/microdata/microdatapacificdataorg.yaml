@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: Oceania
-  name: Oceania
+coverage:
+- location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://microdata.pacificdata.org/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://microdata.pacificdata.org
 name: Pacific Data Hub Microdata Library
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: Oceania
+      name: Oceania
+    level: 1
+  name: ''
+  type: International
 software: NADA
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CR
-  name: Costa Rica
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://mapas.da.go.cr/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://mapas.da.go.cr/geonetwork
 name: Dirección de Aguas Data Portal
-owner_link: https://da.go.cr
-owner_name: Direccion de Agua
-owner_type: Central government
+owner:
+  link: https://da.go.cr
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 1
+  name: Direccion de Agua
+  type: Central government
 software: Geonetwork
 status: active
 tags:

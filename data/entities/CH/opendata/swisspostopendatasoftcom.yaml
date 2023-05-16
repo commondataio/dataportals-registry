@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://swisspost.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - DE
 link: https://swisspost.opendatasoft.com
 name: Swiss Post
-owner_name: Swiss Post
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Swiss Post
+  type: Central government
 software: OpenDataSoft
 status: active
 tags:

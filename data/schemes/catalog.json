@@ -19,16 +19,34 @@
             "type": "string"
     }  
   },
-  "countries": {
+  "coverage": {
     "type": "list",
     "schema": {
-      "type" : "dict", "schema" : {
-      "id": {
-        "type": "string"
-      },
-      "name": {
-        "type": "string"
-      }
+      "type" : "dict", 
+      "schema" : {
+        "location": {
+          "type": "dict",
+          "schema" : {
+            "country" : {"type" : "dict", "schema" : {  
+              "id": {
+              "type": "string",
+              "empty" : false
+              },
+              "name": {
+                "type": "string",
+                "empty" : false
+              }
+            }
+          },
+          "level": {"type" : "number"},
+          "subregion": {"type" : "dict", "schema" : {
+            "id" : {"type" : "string", "empty" : false}
+          }
+        
+          }
+           
+          }
+        }
      }
     }
   },
@@ -51,11 +69,6 @@
 
   },
   "name": {
-    "type": "string",
-    "empty" : false,
-    "required": true
-  },
-  "owner_type": {
     "type": "string",
     "empty" : false,
     "required": true
@@ -101,16 +114,51 @@
   "description": {
     "type": "string"
   },
-  "owner_name": {
-    "type": "string",
+
+  "owner" : {
+    "type" : "dict",
     "empty" : false,
-    "required": true
+    "required": true,
+    "schema" : {
+      "location": {
+        "type": "dict",
+        "schema" : {
+          "country" : {"type" : "dict", "schema" : {  
+            "id": {
+            "type": "string",
+            "empty" : false
+          },
+          "name": {
+            "type": "string",
+            "empty" : false
+          }
+        }
+      },
+      "level": {"type" : "number"},
+      "subregion": {"type" : "dict", "schema" : {
+        "id" : {"type" : "string", "empty" : false}
+      }
+      }
+    }
+      },
+      "name": {
+        "type": "string",
+        "empty" : false,
+        "required": true
+      },      
+      "link": {
+        "type": "string",
+        "required": true
+      },
+      "type": {
+        "type": "string",
+        "empty" : false,
+        "required": true
+      }      
+    }
   },
+
   "catalog_export": {
     "type": "string"
-  },
-  "owner_link": {
-    "type": "string",
-    "required": true
   }
 }

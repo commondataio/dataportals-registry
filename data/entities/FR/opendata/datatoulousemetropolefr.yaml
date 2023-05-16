@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.toulouse-metropole.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://data.toulouse-metropole.fr
 name: Open Data Toulouse Metropole
-owner_link: https://www.toulouse-metropole.fr
-owner_name: Toulouse Métropole
-owner_type: Regional government
+owner:
+  link: https://www.toulouse-metropole.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Toulouse Métropole
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

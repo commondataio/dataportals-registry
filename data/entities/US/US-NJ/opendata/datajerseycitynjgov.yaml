@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NJ
 endpoints:
 - type: opendatasoftapi
   url: https://data.jerseycitynj.gov/api
@@ -17,9 +22,17 @@ langs:
 - EN
 link: https://data.jerseycitynj.gov
 name: Jersey city open data
-owner_link: https://www.jerseycitynj.gov
-owner_name: Jersey city
-owner_type: Local government
+owner:
+  link: https://www.jerseycitynj.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NJ
+  name: Jersey city
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

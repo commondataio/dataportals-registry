@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://mannheim.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - DE
 link: https://mannheim.opendatasoft.com
 name: City of Mannheim
-owner_name: City of Mannheim
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: City of Mannheim
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

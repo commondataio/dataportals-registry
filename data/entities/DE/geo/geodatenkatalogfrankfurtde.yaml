@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geodatenkatalog.frankfurt.de/geonetwork/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://geodatenkatalog.frankfurt.de/geonetwork/geonetwork
 name: Geodateninfrastruktur Frankfurt am Main (GDI-FFM)
-owner_link: https://www.frankfurt.de
-owner_name: City of Frankfurt am Main
-owner_type: Local government
+owner:
+  link: https://www.frankfurt.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: City of Frankfurt am Main
+  type: Local government
 software: Geonetwork
 status: active
 tags:

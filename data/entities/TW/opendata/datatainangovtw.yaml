@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TW
-  name: Taiwan
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.tainan.gov.tw/api/3
@@ -17,8 +20,14 @@ langs:
 - zh_TW
 link: https://data.tainan.gov.tw
 name: Tainan City Government Data Open Platform
-owner_name: Tainan City Government
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
+  name: Tainan City Government
+  type: Local government
 software: CKAN
 status: active
 tags:

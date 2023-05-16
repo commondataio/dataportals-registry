@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: UY
-  name: Uruguay
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://icr.opp.gub.uy/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://icr.opp.gub.uy/geonetwork
 name: Oficina de Planeamiento y Presupuesto data catalogue
-owner_link: https://opp.gub.uy
-owner_name: Oficina de Planeamiento y Presupuesto
-owner_type: Central government
+owner:
+  link: https://opp.gub.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
+  name: Oficina de Planeamiento y Presupuesto
+  type: Central government
 software: Geonetwork
 status: active
 tags:

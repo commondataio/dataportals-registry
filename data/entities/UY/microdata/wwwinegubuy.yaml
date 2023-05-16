@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.ine.gub.uy/Anda5/index.php/api/catalog/search
@@ -16,10 +19,16 @@ id: wwwinegubuy
 langs:
 - ES
 link: https://www.ine.gub.uy/Anda5/index.php
-name: Catálogo de Metadatos y microdatos del Instituto Nacional de Estadística 
-owner_link: https://www.ine.gub.uy
-owner_name: Instituto Nacional de Estadística
-owner_type: Central government
+name: Catálogo de Metadatos y microdatos del Instituto Nacional de Estadística
+owner:
+  link: https://www.ine.gub.uy
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Instituto Nacional de Estadística
+  type: Central government
 software: NADA
 status: active
 tags:

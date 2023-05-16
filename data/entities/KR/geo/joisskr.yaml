@@ -6,9 +6,12 @@ catalog_type: Scientific data repository
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KR
-  name: South Korea
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://joiss.kr/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - KR
 link: https://joiss.kr/geonetwork
 name: JOISS Metadata catalogue
-owner_link: https://joiss.kr
-owner_name: Haebom Data Inc.
-owner_type: Academy
+owner:
+  link: https://joiss.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 1
+  name: Haebom Data Inc.
+  type: Academy
 software: Geonetwork
 status: active
 tags:

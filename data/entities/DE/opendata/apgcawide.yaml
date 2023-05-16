@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://apgc.awi.de/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://apgc.awi.de
 name: Arctic Permafrost Geospatial Centre
-owner_link: https://awi.de
-owner_name: Arctic Permafrost Geospatial Centre
-owner_type: Academy
+owner:
+  link: https://awi.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Arctic Permafrost Geospatial Centre
+  type: Academy
 software: CKAN
 status: active
 tags:

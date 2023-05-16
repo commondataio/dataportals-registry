@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadata.naturalsciences.be/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - FR
 link: https://metadata.naturalsciences.be/geonetwork
 name: RBINS Geodata Catalog
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: ''
+  type: Central government
 software: Geonetwork
 status: active
 tags:

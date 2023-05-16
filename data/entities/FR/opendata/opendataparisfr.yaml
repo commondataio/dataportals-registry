@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.paris.fr/api
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://opendata.paris.fr
 name: Paris Data
-owner_link: https://www.paris.fr
-owner_name: City of Paris
-owner_type: Regional government
+owner:
+  link: https://www.paris.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: City of Paris
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

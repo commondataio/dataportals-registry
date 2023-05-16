@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 description: Analysis Ready Data from the Finnish Meteorological Institute in the
   Finnish reference grid epsg:3067. Sentinel-1 and -2 as dekad mosaics as main items,
   but many other related data sets over Finland are included as well. For example
@@ -22,9 +25,15 @@ langs:
 - EN
 link: https://pta.data.lit.fmi.fi/stac/root.json
 name: FMI ARD Finland
-owner_link: https://fmi.fi
-owner_name: Finnish Meteorological Institute
-owner_type: Central government
+owner:
+  link: https://fmi.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Finnish Meteorological Institute
+  type: Central government
 software: Stac-server
 status: active
 tags:

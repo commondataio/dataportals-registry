@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: BD
-  name: Bangladesh
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://data.bbs.gov.bd/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://data.bbs.gov.bd/index.php
 name: Bangladesh Bureau of Statistics (BBS) Data Catalog Application
-owner_link: http://www.bbs.gov.bd
-owner_name: Bangladesh Bureau of Statistics (BBS)
-owner_type: Central government
+owner:
+  link: http://www.bbs.gov.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 1
+  name: Bangladesh Bureau of Statistics (BBS)
+  type: Central government
 software: NADA
 status: active
 tags:

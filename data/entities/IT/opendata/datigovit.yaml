@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dati.gov.it/api/3
@@ -17,9 +20,15 @@ langs:
 - IT
 link: https://dati.gov.it
 name: dati.gov.it i dati aperti della pubblica amministrazione
-owner_link: https://www.agid.gov.it
-owner_name: Agenzia per l Italia digitale
-owner_type: Central government
+owner:
+  link: https://www.agid.gov.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Agenzia per l Italia digitale
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://mav-technology-geelongvic.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://mav-technology-geelongvic.opendatasoft.com
 name: Municipal Association of Victoria
-owner_name: Municipal Association of Victoria
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Municipal Association of Victoria
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

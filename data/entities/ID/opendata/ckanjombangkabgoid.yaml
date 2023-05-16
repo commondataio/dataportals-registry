@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.jombangkab.go.id/api/3
@@ -17,9 +20,15 @@ langs:
 - ID
 link: https://ckan.jombangkab.go.id
 name: Open Data Jombang
-owner_link: http://www.jombangkab.go.id
-owner_name: Jombang Regency
-owner_type: Regional government
+owner:
+  link: http://www.jombangkab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: Jombang Regency
+  type: Regional government
 software: CKAN
 status: active
 tags:

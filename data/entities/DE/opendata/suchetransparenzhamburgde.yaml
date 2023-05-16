@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://suche.transparenz.hamburg.de/api/3
@@ -18,9 +21,15 @@ langs:
 - DE
 link: https://suche.transparenz.hamburg.de
 name: Transparenzportal Hamburg
-owner_link: https://hamburg.de
-owner_name: Hamburgischen Transparenzgesetz (HmbTG)
-owner_type: Local government
+owner:
+  link: https://hamburg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Hamburgischen Transparenzgesetz (HmbTG)
+  type: Local government
 software: CKAN
 status: active
 tags:

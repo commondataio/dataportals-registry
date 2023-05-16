@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NP
-  name: Nepal
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
 id: adminnationalgeoportalgovnp
 langs:
 - EN
 link: https://admin.nationalgeoportal.gov.np
 name: National Spatial Data Center Geoportal
-owner_link: http://nationalgeoportal.gov.np
-owner_name: Ministry of Land Management, Cooperatives and Poverty of Nepal
-owner_type: Central government
+owner:
+  link: http://nationalgeoportal.gov.np
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: Ministry of Land Management, Cooperatives and Poverty of Nepal
+  type: Central government
 software: GeoNode
 status: active
 tags:

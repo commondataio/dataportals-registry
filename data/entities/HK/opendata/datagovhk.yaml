@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: HK
-  name: Hong Kong
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.hk/en-datasets/data/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.gov.hk
 name: DATA.GOV.HK
-owner_link: https://www.ogcio.gov.hk/en/
-owner_name: Office of the Government Chief Information Officer, Hong Kong
-owner_type: Central government
+owner:
+  link: https://www.ogcio.gov.hk/en/
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
+  name: Office of the Government Chief Information Officer, Hong Kong
+  type: Central government
 software: CKAN
 status: active
 tags:

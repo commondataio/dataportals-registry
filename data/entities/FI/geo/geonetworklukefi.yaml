@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonetwork.luke.fi/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - FI
 link: http://geonetwork.luke.fi/geonetwork
 name: Forest energy atlas catalogue
-owner_link: https://luke.fi
-owner_name: Natural Resources Institute Finland
-owner_type: Academy
+owner:
+  link: https://luke.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: Natural Resources Institute Finland
+  type: Academy
 software: Geonetwork
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: UA
-  name: Ukraine
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.ua/api/3
@@ -17,8 +20,14 @@ langs:
 - UK
 link: https://data.gov.ua
 name: Портал відкритих даних
-owner_name: Government of Ukraine
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 1
+  name: Government of Ukraine
+  type: Central government
 software: CKAN
 status: active
 tags:

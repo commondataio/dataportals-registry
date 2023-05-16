@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 description: FedEO Clearinghouse provides interoperable access, following ISO/OGC
   interface guidelines, to Earth Observation metadata
 endpoints:
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://eovoc.spacebel.be/
 name: FedEO Clearinghouse
-owner_link: https://www.spacebel.com
-owner_name: SpaceBel
-owner_type: Business
+owner:
+  link: https://www.spacebel.com
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: SpaceBel
+  type: Business
 software: Stac-server
 status: active
 tags:

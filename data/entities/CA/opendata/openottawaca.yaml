@@ -6,9 +6,12 @@ catalog_export: https://od-dev2-ottawa.opendata.arcgis.com/api/feed/dcat-ap/2.0.
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://od-dev2-ottawa.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://open.ottawa.ca
 name: Open Ottawa
-owner_link: https://ottawa.ca
-owner_name: City of Ottawa
-owner_type: Local government
+owner:
+  link: https://ottawa.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Ottawa
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

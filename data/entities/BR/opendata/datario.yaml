@@ -6,9 +6,12 @@ catalog_export: https://armazem-pcrj.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data.rio/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - PT
 link: https://data.rio
 name: Data.rio
-owner_name: 'City Rio de Janeiro'
-owner_type: Business
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: City Rio de Janeiro
+  type: Business
 software: ArcGIS Hub
 status: uncertain
 tags:

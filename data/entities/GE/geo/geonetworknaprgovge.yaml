@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: GE
-  name: Georgia
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonetwork.napr.gov.ge/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - KA
 link: http://geonetwork.napr.gov.ge/geonetwork
 name: NAPR GeoNetwork Catalogue
-owner_link: https://www.napr.gov.ge
-owner_name: National agency of public registry (Georgia)
-owner_type: Central government
+owner:
+  link: https://www.napr.gov.ge
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 1
+  name: National agency of public registry (Georgia)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

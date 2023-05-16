@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://inspire.thuenen.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://inspire.thuenen.de/geonetwork
 name: Johann Heinrich von Thünen-Institut Data catalogue
-owner_link: https://www.thuenen.de
-owner_name: Johann Heinrich von Thünen-Institut
-owner_type: Academy
+owner:
+  link: https://www.thuenen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Johann Heinrich von Thünen-Institut
+  type: Academy
 software: Geonetwork
 status: active
 tags:

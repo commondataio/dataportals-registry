@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KG
-  name: Kyrgyzstan
+coverage:
+- location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://nsdi.kg:8070/geonetwork/srv/eng/q
@@ -20,10 +23,16 @@ langs:
 - RU
 link: http://nsdi.kg:8070/geonetwork
 name: Каталог метаданных на портале геоинформационных и климатических данных КР
-owner_link: https://agro.gov.kg/ru/land-resources/
-owner_name: Государственное агентство по земельным ресурсам при Правительстве Кыргызской
-  Республики (ГАЗР при ПКР)
-owner_type: Central government
+owner:
+  link: https://agro.gov.kg/ru/land-resources/
+  location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
+  name: Государственное агентство по земельным ресурсам при Правительстве Кыргызской
+    Республики (ГАЗР при ПКР)
+  type: Central government
 software: Geonetwork
 status: active
 tags:

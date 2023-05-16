@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://vogis.cnv.at/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - DE
 link: https://vogis.cnv.at/geonetwork
 name: VoGIS Metadatenkatalog
-owner_link: https://vorarlberg.at
-owner_name: Landesamt für Vermessung und Geoinformation
-owner_type: Central government
+owner:
+  link: https://vorarlberg.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: Landesamt für Vermessung und Geoinformation
+  type: Central government
 software: Geonetwork
 status: active
 tags:

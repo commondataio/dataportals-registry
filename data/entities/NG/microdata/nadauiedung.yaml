@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: NG
-  name: Nigeria
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://nada.ui.edu.ng/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://nada.ui.edu.ng/index.php
 name: University of Ibadan, Data Archive
-owner_link: http://www.ui.edu.ng
-owner_name: University of Ibadan
-owner_type: Academy
+owner:
+  link: http://www.ui.edu.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
+  name: University of Ibadan
+  type: Academy
 software: NADA
 status: active
 tags:

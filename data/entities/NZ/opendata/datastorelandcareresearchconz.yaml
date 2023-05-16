@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NZ
-  name: New Zealand
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datastore.landcareresearch.co.nz/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://datastore.landcareresearch.co.nz
 name: Manaaki Whenua - Landcare Research DataStore
-owner_link: https://www.landcareresearch.co.nz
-owner_name: Landcare Research
-owner_type: Academy
+owner:
+  link: https://www.landcareresearch.co.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 1
+  name: Landcare Research
+  type: Academy
 software: CKAN
 status: active
 tags:

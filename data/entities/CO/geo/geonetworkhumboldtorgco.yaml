@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonetwork.humboldt.org.co/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://geonetwork.humboldt.org.co/geonetwork
 name: Geonetwork I2D
-owner_link: https://humbold.org.co
-owner_name: Instituto de Investigación de Recursos Biológicos Alexander von Humboldt
-owner_type: Academy
+owner:
+  link: https://humbold.org.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Instituto de Investigación de Recursos Biológicos Alexander von Humboldt
+  type: Academy
 software: Geonetwork
 status: active
 tags:

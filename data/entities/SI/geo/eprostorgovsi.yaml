@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SI
-  name: Slovenia
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://eprostor.gov.si/imps/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://eprostor.gov.si/imps
 name: Slovenski INSPIRE metapodatkovni sistem
-owner_link: https://www.gov.si
-owner_name: GEODET5KA UPRAVA REPUBLIKE SLOVENIJE
-owner_type: Central government
+owner:
+  link: https://www.gov.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
+  name: GEODET5KA UPRAVA REPUBLIKE SLOVENIJE
+  type: Central government
 software: Geonetwork
 status: active
 tags:

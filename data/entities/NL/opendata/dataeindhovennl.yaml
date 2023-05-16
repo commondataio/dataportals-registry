@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.eindhoven.nl/api
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.eindhoven.nl
 name: Open Data portal of the municipality of Eindhoven
-owner_link: https://www.eindhoven.nl
-owner_name: Municipality of Eindhoven
-owner_type: Local government
+owner:
+  link: https://www.eindhoven.nl
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: Municipality of Eindhoven
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

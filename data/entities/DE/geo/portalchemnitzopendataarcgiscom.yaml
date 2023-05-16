@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://portal.chemnitz.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - DE
 link: https://portal.chemnitz.opendata.arcgis.com
 name: Open Data Stadt Chemnitz
-owner_name: Stadt Chemnitz
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Stadt Chemnitz
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

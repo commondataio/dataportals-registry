@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EU
-  name: European Union
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
 id: inspiregeoportaleceuropaeu
 langs:
 - EN
 link: https://inspire-geoportal.ec.europa.eu
 name: INSPIRE Geoportal
-owner_link: https://ec.europa.eu
-owner_name: Eurpean Comission
-owner_type: Central government
+owner:
+  link: https://ec.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: Eurpean Comission
+  type: Central government
 software: Custom software
 status: active
 tags:

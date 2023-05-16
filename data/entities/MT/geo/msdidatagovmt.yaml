@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MT
-  name: Malta
+coverage:
+- location:
+    country:
+      id: MT
+      name: Malta
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://msdi.data.gov.mt/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - EN
 link: https://msdi.data.gov.mt/geonetwork
 name: Malta Geoportal
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: MT
+      name: Malta
+    level: 1
+  name: ''
+  type: Central government
 software: Geonetwork
 status: active
 tags:

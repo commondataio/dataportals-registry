@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DK
-  name: Denmark
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://data.kk.dk/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.kk.dk
 name: Copenhagen Data
-owner_name: ''
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+  name: ''
+  type: Local government
 software: CKAN
 status: active
 tags:

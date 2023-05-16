@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JO
-  name: Jordan
+coverage:
+- location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://madih.hu.edu.jo/api/3
@@ -17,9 +20,15 @@ langs:
 - AR
 link: https://madih.hu.edu.jo
 name: MaDiH statistics
-owner_link: https://www.hu.edu.jo
-owner_name: The Hashemite University
-owner_type: Academy
+owner:
+  link: https://www.hu.edu.jo
+  location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
+  name: The Hashemite University
+  type: Academy
 software: CKAN
 status: active
 tags:

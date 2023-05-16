@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TR
-  name: Turkey
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://acikveri.bizizmir.com/api/3
@@ -18,8 +21,14 @@ langs:
 - TR
 link: https://acikveri.bizizmir.com
 name: Izmir Metropolitan Municipality data portal
-owner_name: 'Izmir Metropolitan Municipality '
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 1
+  name: 'Izmir Metropolitan Municipality '
+  type: Local government
 software: CKAN
 status: active
 tags:

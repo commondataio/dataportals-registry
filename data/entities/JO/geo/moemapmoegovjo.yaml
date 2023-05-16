@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JO
-  name: Jordan
+coverage:
+- location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://moemap.moe.gov.jo/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - AR
 link: https://moemap.moe.gov.jo/arcgis/rest/services
 name: Jordan Ministry of Education geo portal
-owner_link: https://www.mwi.gov.jo
-owner_name: Jordan Ministry of Education
-owner_type: Central government
+owner:
+  link: https://www.mwi.gov.jo
+  location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
+  name: Jordan Ministry of Education
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

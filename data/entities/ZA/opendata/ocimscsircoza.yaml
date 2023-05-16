@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ocims.csir.co.za/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://ocims.csir.co.za
 name: The GMES and Africa Marine and Coastal Operations (MarCOSouth) project
-owner_link: https://www.csir.co.za/
-owner_name: The Council for Scientific and Industrial Research (South Africa)
-owner_type: Academy
+owner:
+  link: https://www.csir.co.za/
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: The Council for Scientific and Industrial Research (South Africa)
+  type: Academy
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IS
-  name: Iceland
+coverage:
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geo.abds.is/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://geo.abds.is/geonetwork
 name: Arctic Biodiversity Data service
-owner_link: https://www.abds.is
-owner_name: Conservation of Arctic Flora and Fauna (CAFF)
-owner_type: Government
+owner:
+  link: https://www.abds.is
+  location:
+    country:
+      id: IS
+      name: Iceland
+    level: 1
+  name: Conservation of Arctic Flora and Fauna (CAFF)
+  type: Government
 software: Geonetwork
 status: active
 tags:

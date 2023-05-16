@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ML
-  name: Mali
+coverage:
+- location:
+    country:
+      id: ML
+      name: Mali
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data.esripressbooks.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -22,8 +25,14 @@ export_standard: DCAT AP 2.0.1,OGC Records API,DCAT US 1.1
 id: dataesripressbooksopendataarcgiscom
 link: https://data.esripressbooks.opendata.arcgis.com
 name: Esri Press - Official Book Site
-owner_name: Esri Press
-owner_type: Business
+owner:
+  location:
+    country:
+      id: ML
+      name: Mali
+    level: 1
+  name: Esri Press
+  type: Business
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://data.agincourt.co.za/index.php/api/catalog/search
@@ -18,10 +21,15 @@ langs:
 link: https://data.agincourt.co.za/index.php
 name: Agincourt - MRC/Wits Rural Public Health and Health Transitions Research Unit
   microdata catalogue
-owner_link: https://www.agincourt.co.za
-owner_name: Agincourt - MRC/Wits Rural Public Health and Health Transitions Research
-  Unit
-owner_type: Academy
+owner:
+  link: https://www.agincourt.co.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: Agincourt - MRC/Wits Rural Public Health and Health Transitions Research Unit
+  type: Academy
 software: NADA
 status: active
 tags:

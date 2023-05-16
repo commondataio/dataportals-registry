@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datos.aytolalaguna.es/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datos.aytolalaguna.es
 name: OpenData San Cristóbal de La Laguna
-owner_link: https://aytolalaguna.es
-owner_name: Ayntamiento San Cristóbal de La Laguna
-owner_type: Local government
+owner:
+  link: https://aytolalaguna.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayntamiento San Cristóbal de La Laguna
+  type: Local government
 software: CKAN
 status: active
 tags:

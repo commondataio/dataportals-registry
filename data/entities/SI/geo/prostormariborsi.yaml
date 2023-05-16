@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SI
-  name: Slovenia
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://prostor.maribor.si/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://prostor.maribor.si/geonetwork
 name: Metapodatkovni sistem Mestne občine Maribor
-owner_link: https://www.maribor.si
-owner_name: Mestne občine Maribor
-owner_type: Regional government
+owner:
+  link: https://www.maribor.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 1
+  name: Mestne občine Maribor
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

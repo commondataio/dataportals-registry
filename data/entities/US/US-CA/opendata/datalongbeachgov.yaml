@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
 endpoints:
 - type: opendatasoftapi
   url: https://data.longbeach.gov/api
@@ -17,9 +22,17 @@ langs:
 - EN
 link: https://data.longbeach.gov
 name: City of Long Beach Open Data Portal
-owner_link: https://OpenDataSoft.gov
-owner_name: City of Long Beach
-owner_type: Local government
+owner:
+  link: https://OpenDataSoft.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-CA
+  name: City of Long Beach
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

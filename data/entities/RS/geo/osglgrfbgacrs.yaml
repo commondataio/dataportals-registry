@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: RS
-  name: Serbia
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - SR
 link: http://osgl.grf.bg.ac.rs/geonetwork
 name: OSGL Belgrade catalogue
-owner_link: https://www.bg.ac.rs
-owner_name: University of Belgrade
-owner_type: Academy
+owner:
+  link: https://www.bg.ac.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 1
+  name: University of Belgrade
+  type: Academy
 software: Geonetwork
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ZA
-  name: South Africa
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.vulekamali.gov.za/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.vulekamali.gov.za
 name: vulekamali Datastore
-owner_link: https://www.treasury.gov.za
-owner_name: National Treasury Republic of South Africa
-owner_type: Central government
+owner:
+  link: https://www.treasury.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 1
+  name: National Treasury Republic of South Africa
+  type: Central government
 software: CKAN
 status: active
 tags:

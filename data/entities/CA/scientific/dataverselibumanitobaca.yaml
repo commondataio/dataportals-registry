@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: dataverseapi
   url: https://dataverse.lib.umanitoba.ca/api/search?q=*&type=dataset&sort=name&order=asc
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://dataverse.lib.umanitoba.ca
 name: University of Manitoba Dataverse
-owner_link: https://umanitoba.ca
-owner_name: University of Manitoba
-owner_type: Academy
+owner:
+  link: https://umanitoba.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: University of Manitoba
+  type: Academy
 software: Dataverse
 status: active
 tags:

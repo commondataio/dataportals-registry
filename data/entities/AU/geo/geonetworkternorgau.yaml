@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geonetwork.tern.org.au/geonetwork/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://geonetwork.tern.org.au/geonetwork
 name: Metashare PROD (Australia, Victoria)
-owner_name: State Government of Victoria
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: State Government of Victoria
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

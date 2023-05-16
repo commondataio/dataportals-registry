@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.townofmorrisville.org/api
@@ -17,9 +22,17 @@ langs:
 - EN
 link: https://opendata.townofmorrisville.org
 name: Town of Morrisville
-owner_link: https://townofmorrisville.org
-owner_name: Town of Morrisville
-owner_type: Local government
+owner:
+  link: https://townofmorrisville.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
+  name: Town of Morrisville
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BE
-  name: Belgium
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.liege.be/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://opendata.liege.be
 name: Open Data Liege
-owner_name: ''
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 1
+  name: ''
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

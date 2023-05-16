@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: DK
-  name: Denmark
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datasets.catalogue.data.gov.dk/api/3
@@ -17,8 +20,14 @@ langs:
 - DA
 link: https://datasets.catalogue.data.gov.dk
 name: Digitaliseringsstyrelsen
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

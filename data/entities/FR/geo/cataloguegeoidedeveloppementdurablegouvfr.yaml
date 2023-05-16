@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 - FR
 link: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue
 name: Catalogue interministériel de données géographiques
-owner_name: Support Policies and Information Systems Department
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Support Policies and Information Systems Department
+  type: Central government
 software: Geonetwork
 status: active
 tags:

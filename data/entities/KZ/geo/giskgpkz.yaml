@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.kgp.kz/server/rest/services
@@ -19,10 +22,16 @@ langs:
 link: https://gis.kgp.kz/server/rest/services
 name: ArcGIS server of the Committee on the legal statistics and special accounts
   of the state office of public prosecutor of Republic of Kazakhstan
-owner_link: https://www.gov.kz/memleket/entities/pravstat?lang=en
-owner_name: Committee on the legal statistics and special accounts of the state office
-  of public prosecutor of Republic of Kazakhstan
-owner_type: Central government
+owner:
+  link: https://www.gov.kz/memleket/entities/pravstat?lang=en
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: Committee on the legal statistics and special accounts of the state office
+    of public prosecutor of Republic of Kazakhstan
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

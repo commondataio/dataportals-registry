@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://observa.gijon.es/api
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://observa.gijon.es
 name: Observa Gijón
-owner_link: https://www.gijon.es
-owner_name: Ayuntamiento de Gijón
-owner_type: Local government
+owner:
+  link: https://www.gijon.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ayuntamiento de Gijón
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

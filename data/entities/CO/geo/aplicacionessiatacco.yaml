@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://aplicaciones.siatac.co/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://aplicaciones.siatac.co/geonetwork
 name: Catalogo Geonetwork - Siatac
-owner_link: https://siatac.co
-owner_name: Instituto Amazónico de Investigaciones Científicas SINCHI
-owner_type: Academy
+owner:
+  link: https://siatac.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Instituto Amazónico de Investigaciones Científicas SINCHI
+  type: Academy
 software: Geonetwork
 status: active
 tags:

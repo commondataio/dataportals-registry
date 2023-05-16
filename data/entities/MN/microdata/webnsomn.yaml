@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: MN
-  name: Mongolia
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://web.nso.mn/nada/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://web.nso.mn/nada/index.php
 name: Statistical microdata Mongolia
-owner_link: https://www.nso.mn
-owner_name: National Statistics Office of Mongolia
-owner_type: Central government
+owner:
+  link: https://www.nso.mn
+  location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 1
+  name: National Statistics Office of Mongolia
+  type: Central government
 software: NADA
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: CO
-  name: Colombia
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://anda.dnp.gov.co/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://anda.dnp.gov.co/index.php
 name: Archivo national de datos Colombia
-owner_link: https://dnp.gov.co
-owner_name: The National Planning Department
-owner_type: Central government
+owner:
+  link: https://dnp.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: The National Planning Department
+  type: Central government
 software: NADA
 status: active
 tags:

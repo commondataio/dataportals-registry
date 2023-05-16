@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CN
-  name: China
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 1
 description: Open for Fudan University affiliated researchers to deposit data.
 endpoints:
 - type: dataverseapi
@@ -18,9 +21,15 @@ langs:
 - zh_CN
 link: https://dvn.fudan.edu.cn
 name: Fudan University Dataverse
-owner_link: https://fudan.edu.cn
-owner_name: Fudan University
-owner_type: Academy
+owner:
+  link: https://fudan.edu.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 1
+  name: Fudan University
+  type: Academy
 software: Dataverse
 status: active
 tags:

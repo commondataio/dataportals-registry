@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.bs.ch/api
@@ -17,9 +20,15 @@ langs:
 - DE
 link: https://data.bs.ch
 name: Datenportal Basel-Stadt
-owner_link: https://www.bs.ch
-owner_name: Basel Stadt
-owner_type: Regional government
+owner:
+  link: https://www.bs.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Basel Stadt
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

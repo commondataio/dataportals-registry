@@ -7,9 +7,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-FL
 endpoints:
 - type: dcatap201
   url: https://geodata-fgio.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,8 +30,16 @@ langs:
 - EN
 link: https://geodata.floridagio.gov
 name: Floridas Geospatial Open Data
-owner_name: State of Florida
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-FL
+  name: State of Florida
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

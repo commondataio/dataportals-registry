@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: World
-  name: World
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.apps.fao.org/api/3
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://data.apps.fao.org
 name: data.apps.fao.org
-owner_name: ''
-owner_type: International
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: ''
+  type: International
 software: CKAN
 status: active
 tags:

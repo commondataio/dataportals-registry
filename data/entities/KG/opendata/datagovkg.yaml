@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: KG
-  name: Kyrgyzstan
+coverage:
+- location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.kg/api/3
@@ -18,8 +21,14 @@ langs:
 - KG
 link: https://data.gov.kg
 name: Kyrgyz Republic open data portal
-owner_name: Government of Kyrgyzstan
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: KG
+      name: Kyrgyzstan
+    level: 1
+  name: Government of Kyrgyzstan
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: SN
-  name: Senegal
+coverage:
+- location:
+    country:
+      id: SN
+      name: Senegal
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://anads.ansd.sn/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: http://anads.ansd.sn
 name: Archivage national des données du Sénégal (ANADS)
-owner_link: http://www.ansd.sn
-owner_name: Agence Nationale de la Statistique et de la Démographie
-owner_type: Central government
+owner:
+  link: http://www.ansd.sn
+  location:
+    country:
+      id: SN
+      name: Senegal
+    level: 1
+  name: Agence Nationale de la Statistique et de la Démographie
+  type: Central government
 software: NADA
 status: active
 tags:

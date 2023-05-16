@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JO
-  name: Jordan
+coverage:
+- location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.emrc.gov.jo/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - AR
 link: https://gis.emrc.jo/arcgis/rest/services
 name: Jordan Energy and Minerals Regulatory Commission geo portal
-owner_link: https://www.emrc.gov.jo
-owner_name: Jordan Energy and Minerals Regulatory Commission
-owner_type: Central government
+owner:
+  link: https://www.emrc.gov.jo
+  location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
+  name: Jordan Energy and Minerals Regulatory Commission
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis-services.metria.se/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - SV
 link: https://gis-services.metria.se/arcgis/rest/services
 name: ArcGIS server of the Metria AB (Sweden)
-owner_link: https://www.metria.se
-owner_name: Metria AB
-owner_type: Business
+owner:
+  link: https://www.metria.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Metria AB
+  type: Business
 software: ArcGIS Server
 status: active
 tags:

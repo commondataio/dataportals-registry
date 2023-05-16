@@ -6,9 +6,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-WI
 endpoints:
 - type: dcatap201
   url: https://data.ltsb.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +29,16 @@ langs:
 - EN
 link: https://data.ltsb.opendata.arcgis.com
 name: Wisconsin State Legislature GIS Open Data Portal
-owner_name: Wisconsin State Legislature
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-WI
+  name: Wisconsin State Legislature
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

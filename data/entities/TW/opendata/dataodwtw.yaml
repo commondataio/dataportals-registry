@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TW
-  name: Taiwan
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://data.odw.tw/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.odw.tw
 name: Open Data Web Taiwan Linked Open Data Platform
-owner_name: Institute of Information Science
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 1
+  name: Institute of Information Science
+  type: Academy
 software: CKAN
 status: active
 tags:

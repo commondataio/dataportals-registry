@@ -85,17 +85,25 @@ def export(output='export.csv'):
     items = []
     for record in data:     
         item = {}
-        for k in ['api_status','catalog_type', 'id', 'link', 'name', 'owner_type', 'software', 'status', 'api', 'owner_name', 'owner_link', 'catalog_export']:
+        for k in ['api_status','catalog_type', 'id', 'link', 'name', 'software', 'status', 'api', 'catalog_export']:
             item[k] = record[k] if k in record.keys() else ''
+        
+        for k in ['type', 'link', 'name']:
+            item['owner_' + k] = record['owner'][k] if k in record['owner'].keys() else ''
+        item['owner_country_id'] = record['owner']['location']['country']['id']
     
         for k in ['access_mode', 'content_types', 'langs', 'tags']:
             item[k] = ','.join(record[k]) if k in record.keys() else ''
         
-        for k in ['countries', ]:
-            item[k] = ','.join([value['name'] for value in record[k]]) if k in record.keys() else ''
+        countries_ids = []
+        for location in record['coverage']:            
+            cid = str(location['location']['country']['id'])
+            if cid not in countries_ids: 
+                countries_ids.append(cid)
+        item['coverage_countries'] = ','.join(countries_ids)
         items.append(item)
     outfile = open(output, 'w', encoding='utf8')
-    writer = csv.DictWriter(outfile, fieldnames=['id', 'link', 'name', 'owner_name', 'catalog_type', 'owner_type', 'software', 'langs', 'content_types', 'access_mode', 'countries', 'tags', 'status', 'api', 'owner_link', 'catalog_export', 'api_status'], delimiter='\t')
+    writer = csv.DictWriter(outfile, fieldnames=['id', 'link', 'name', 'owner_name', 'catalog_type', 'owner_type', 'software', 'langs', 'content_types', 'access_mode', 'owner_country_id', 'coverage_countries', 'tags', 'status', 'api', 'owner_link', 'catalog_export', 'api_status'], delimiter='\t')
     writer.writeheader()
     writer.writerows(items)
     outfile.close()

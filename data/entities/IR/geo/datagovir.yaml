@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IR
-  name: Iran
+coverage:
+- location:
+    country:
+      id: IR
+      name: Iran
+    level: 1
 id: datagovir
 langs:
 - FA
 link: https://data.gov.ir
 name: National data and geodata catalog
-owner_name: 'Government of Iran'
-owner_link: https://www.gov.ir
-owner_type: Central government
+owner:
+  link: https://www.gov.ir
+  location:
+    country:
+      id: IR
+      name: Iran
+    level: 1
+  name: Government of Iran
+  type: Central government
 software: Custom software
 status: active
 tags:

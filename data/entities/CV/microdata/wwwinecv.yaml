@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: CV
-  name: Cabo Verde
+coverage:
+- location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://www.ine.cv/dircv/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://www.ine.cv/dircv/index.php
 name: Instituto Nacional de Estatístic Catálogo Central de Dados
-owner_link: https://www.ine.cv
-owner_name: Instituto Nacional de Estatístic
-owner_type: Central government
+owner:
+  link: https://www.ine.cv
+  location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 1
+  name: Instituto Nacional de Estatístic
+  type: Central government
 software: NADA
 status: active
 tags:

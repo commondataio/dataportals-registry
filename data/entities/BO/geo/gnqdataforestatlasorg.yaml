@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: BO
-  name: Bolivia
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://gnq-data.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - FR
 link: https://gnq-data.forest-atlas.org
 name: 'Ministry of Agricultureand Forests: Open Data'
-owner_link: https://forest-atlas.org
-owner_name: Ministry of Agricultureand Forests (Bolivia)
-owner_type: Central government
+owner:
+  link: https://forest-atlas.org
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 1
+  name: Ministry of Agricultureand Forests (Bolivia)
+  type: Central government
 software: ArcGIS Hub
 status: active
 tags:

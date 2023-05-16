@@ -4,9 +4,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 id: datanistgov
 identifiers:
 - type: re3data
@@ -16,9 +19,15 @@ langs:
 - EN
 link: https://data.nist.gov/sdp/
 name: NIST Data Discovery
-owner_link: https://www.nist.gov
-owner_name: National Institute of Standards and Technology (NIST)
-owner_type: Central government
+owner:
+  link: https://www.nist.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: National Institute of Standards and Technology (NIST)
+  type: Central government
 software: Custom software
 status: active
 tags:

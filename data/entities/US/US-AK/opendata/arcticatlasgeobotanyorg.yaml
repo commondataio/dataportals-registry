@@ -5,9 +5,14 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AK
 endpoints:
 - type: ckanapi
   url: https://arcticatlas.geobotany.org/catalog/api/3
@@ -17,8 +22,16 @@ langs:
 - EN
 link: https://arcticatlas.geobotany.org/catalog
 name: Alaska Arctic Geoecological Atlas
-owner_name: University of Alaska
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AK
+  name: University of Alaska
+  type: Academy
 software: CKAN
 status: active
 tags:

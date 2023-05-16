@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://catalogo.idecanarias.es/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: http://catalogo.idecanarias.es/geonetwork
 name: Catálogo de Metadatos. IDECanarias Data Portal
-owner_link: http://www.idecanarias.es
-owner_name: Infraestructura de Datos Espaciales de Canarias
-owner_type: Regional government
+owner:
+  link: http://www.idecanarias.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Infraestructura de Datos Espaciales de Canarias
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

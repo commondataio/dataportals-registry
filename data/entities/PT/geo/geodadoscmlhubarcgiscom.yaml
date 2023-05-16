@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://geodados-cml.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - PT
 link: https://geodados-cml.hub.arcgis.com
 name: O Geodados é a plataforma da Câmara Municipal de Lisboa
-owner_link: http://www.cm-lisboa.pt
-owner_name: Municipal de Lisboa
-owner_type: Local government
+owner:
+  link: http://www.cm-lisboa.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Municipal de Lisboa
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

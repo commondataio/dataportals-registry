@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: IT
-  name: Italy
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dati.comune.genova.it/api/3
@@ -17,9 +20,15 @@ langs:
 - IT
 link: https://dati.comune.genova.it
 name: OpenData Comune di Genova
-owner_link: https://www.comune.genova.it
-owner_name: Comune di Genova
-owner_type: Local government
+owner:
+  link: https://www.comune.genova.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Comune di Genova
+  type: Local government
 software: CKAN
 status: active
 tags:

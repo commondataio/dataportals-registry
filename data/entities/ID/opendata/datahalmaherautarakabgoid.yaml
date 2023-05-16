@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.halmaherautarakab.go.id/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://data.halmaherautarakab.go.id
 name: SATUDATA Halmahera Utara
-owner_link: https://www.halmaherautarakab.go.id/
-owner_name: North Halmahera Regency
-owner_type: Regional government
+owner:
+  link: https://www.halmaherautarakab.go.id/
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: North Halmahera Regency
+  type: Regional government
 software: CKAN
 status: active
 tags:

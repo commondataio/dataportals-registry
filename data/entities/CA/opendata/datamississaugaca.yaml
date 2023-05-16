@@ -6,9 +6,12 @@ catalog_export: https://draft-mississauga.hub.arcgis.com/api/feed/dcat-ap/2.0.1.
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://draft-mississauga.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - EN
 link: https://data.mississauga.ca
 name: City of Mississauga  Open Data Catalogue
-owner_link: https://mississauga.ca
-owner_name: City of Mississauga
-owner_type: Local government
+owner:
+  link: https://mississauga.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: City of Mississauga
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

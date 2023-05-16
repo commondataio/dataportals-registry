@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: PT
-  name: Portugal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://opendata.gaiurb.pt/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - PT
 link: https://opendata.gaiurb.pt/geonetwork
 name: Vila Nova de Gaia City Council geonetwork
-owner_link: https://www.gaiurb.pt
-owner_name: Gaiurb (Vila Nova de Gaia City Council)
-owner_type: Local government
+owner:
+  link: https://www.gaiurb.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 1
+  name: Gaiurb (Vila Nova de Gaia City Council)
+  type: Local government
 software: Geonetwork
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: HR
-  name: Croatia
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.hr/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.gov.hr
 name: 'Croatia Open Data Portal '
-owner_name: Government of the Republic of Croatia
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 1
+  name: Government of the Republic of Croatia
+  type: Central government
 software: CKAN
 status: active
 tags:

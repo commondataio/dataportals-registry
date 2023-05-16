@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.umea.se/api
@@ -17,8 +20,14 @@ langs:
 - SV
 link: https://opendata.umea.se
 name: Open Data Umea
-owner_name: Umea Commun
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Umea Commun
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

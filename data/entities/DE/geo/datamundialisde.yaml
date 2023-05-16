@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://data.mundialis.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://data.mundialis.de/geonetwork
 name: Data mundialis
-owner_link: https://mundialis.de
-owner_name: Mundialis
-owner_type: Business
+owner:
+  link: https://mundialis.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Mundialis
+  type: Business
 software: Geonetwork
 status: active
 tags:

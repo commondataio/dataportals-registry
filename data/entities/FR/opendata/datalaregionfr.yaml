@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://data.laregion.fr/api
@@ -18,8 +21,14 @@ langs:
 - FR
 link: https://data.laregion.fr
 name: Open Data Occitanie
-owner_name: ''
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

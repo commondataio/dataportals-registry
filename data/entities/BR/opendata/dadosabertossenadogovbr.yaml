@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: BR
-  name: Brazil
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dadosabertos.senado.gov.br/data/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://dadosabertos.senado.gov.br
 name: Portal De Dados Abertos Do Senado Federal (brazil)
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

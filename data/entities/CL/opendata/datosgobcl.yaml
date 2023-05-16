@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CL
-  name: Chile
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
 description: 'Datos.gob el repositorio de datos abiertos centralizado del Estado. '
 endpoints:
 - type: ckanapi
@@ -18,9 +21,15 @@ langs:
 - ES
 link: https://datos.gob.cl
 name: Portal de Datos Abiertos Chile
-owner_link: https://digital.gob.cl
-owner_name: 'Ministerio de la Secretaría General de la Presidencia'
-owner_type: Central government
+owner:
+  link: https://digital.gob.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 1
+  name: Ministerio de la Secretaría General de la Presidencia
+  type: Central government
 software: CKAN
 status: active
 tags:

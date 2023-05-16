@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://data.nhi.nu/geonetwork/srv/eng/q
@@ -22,8 +25,14 @@ langs:
 - NL
 link: https://data.nhi.nu/geonetwork
 name: NHI Data Portaal
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: ''
+  type: Academy
 software: Geonetwork
 status: active
 tags:

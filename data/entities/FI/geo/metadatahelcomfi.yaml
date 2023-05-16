@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FI
-  name: Finland
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadata.helcom.fi/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://metadata.helcom.fi/geonetwork
 name: Helcom geodata catalog
-owner_link: https://helcom.fi
-owner_name: HELCOM
-owner_type: International
+owner:
+  link: https://helcom.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 1
+  name: HELCOM
+  type: International
 software: Geonetwork
 status: active
 tags:

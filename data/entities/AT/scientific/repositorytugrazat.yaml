@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: AT
-  name: Austria
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
 endpoints:
 - type: inveniordmapi
   url: https://repository.tugraz.at/api
@@ -19,8 +22,14 @@ langs:
 - EN
 link: https://repository.tugraz.at
 name: TU GRAZ Repository Library & Archive
-owner_name: TU Graz
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: TU Graz
+  type: Academy
 software: InvenioRDM
 status: active
 tags:

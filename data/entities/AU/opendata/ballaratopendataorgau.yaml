@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ballaratopendata.org.au/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://ballaratopendata.org.au
 name: Ballarat Open Data
-owner_name: ''
-owner_type: Community
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: ''
+  type: Community
 software: CKAN
 status: active
 tags:

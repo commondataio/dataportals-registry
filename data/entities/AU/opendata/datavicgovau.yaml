@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.vic.gov.au/data/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.vic.gov.au
 name: Victorian Government Data Directory
-owner_name: State of Victoria
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: State of Victoria
+  type: Regional government
 software: CKAN
 status: active
 tags:

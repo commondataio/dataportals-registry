@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PY
-  name: Paraguay
+coverage:
+- location:
+    country:
+      id: PY
+      name: Paraguay
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/q
@@ -19,8 +22,14 @@ langs:
 - ES
 link: https://geo-01.innovacion.gob.pa/geonetwork
 name: Catálogo Nacional de Metadatos - IPDE
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: PY
+      name: Paraguay
+    level: 1
+  name: ''
+  type: Central government
 software: Geonetwork
 status: active
 tags:

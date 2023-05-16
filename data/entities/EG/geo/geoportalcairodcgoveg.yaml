@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EG
-  name: Egypt
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
 endpoints:
 - type: api
   url: https://geoportal.cairodc.gov.eg/server/rest/
@@ -18,8 +21,14 @@ langs:
 - AR
 link: https://geoportal.cairodc.gov.eg/server/rest/
 name: Egypt Arcgis geoportal
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 1
+  name: ''
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

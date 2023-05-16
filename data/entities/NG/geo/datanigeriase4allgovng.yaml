@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: NG
-  name: Nigeria
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
 id: datanigeriase4allgovng
 langs:
 - EN
 link: https://data.nigeriase4all.gov.ng
 name: Nigeria SE4ALL geonode
-owner_link: https://www.power.gov.ng
-owner_name: Federal Ministry of Power (Nigeria)
-owner_type: Central government
+owner:
+  link: https://www.power.gov.ng
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 1
+  name: Federal Ministry of Power (Nigeria)
+  type: Central government
 software: GeoNode
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://donneesquebec.ca/recherche/fr/api/3
@@ -17,9 +20,15 @@ langs:
 - FR
 link: https://donneesquebec.ca
 name: Données Québec
-owner_link: https://quebec.ca
-owner_name: Government of Quebec
-owner_type: Regional government
+owner:
+  link: https://quebec.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Government of Quebec
+  type: Regional government
 software: CKAN
 status: active
 tags:

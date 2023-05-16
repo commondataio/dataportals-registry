@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: QA
-  name: Qatar
+coverage:
+- location:
+    country:
+      id: QA
+      name: Qatar
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.comune.bologna.it/api
@@ -18,9 +21,15 @@ langs:
 - AR
 link: https://opendata.comune.bologna.it
 name: Comune di Bologna Open Data
-owner_link: https://www.comune.bologna.it
-owner_name: Comune di Bologna
-owner_type: Local government
+owner:
+  link: https://www.comune.bologna.it
+  location:
+    country:
+      id: QA
+      name: Qatar
+    level: 1
+  name: Comune di Bologna
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

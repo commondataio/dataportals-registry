@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.travellink.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.travellink.go.th
 name: Tourism Data Catalog (Thailand)
-owner_link: https://www.travellink.go.th
-owner_name: Travel Link
-owner_type: Central government
+owner:
+  link: https://www.travellink.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Travel Link
+  type: Central government
 software: CKAN
 status: active
 tags:

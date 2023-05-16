@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.mzcr.cz/api/3
@@ -17,9 +20,15 @@ langs:
 - CZ
 link: https://opendata.mzcr.cz
 name: Katalog otevřených dat Ministerstvo zdravotnictví České republiky
-owner_link: https://mzcr.cz
-owner_name: Ministerstvo zdravotnictví České republiky
-owner_type: Central government
+owner:
+  link: https://mzcr.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: Ministerstvo zdravotnictví České republiky
+  type: Central government
 software: CKAN
 status: active
 tags:

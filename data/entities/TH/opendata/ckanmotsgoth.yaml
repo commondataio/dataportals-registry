@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://ckan.mots.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://ckan.mots.go.th
 name: inistry of Tourism and Sports data catalog (Thailand)
-owner_link: https://www.mots.go.th
-owner_name: Ministry of Tourism and Sports (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.mots.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Ministry of Tourism and Sports (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 description: El Sistema de Indicadores de Puerto Rico o Indicadores.PR es un repositorio
   de indicadores temporales o series de tiempo de datos de todo tipo. Los datos presentados
   en el Sistema son preparados por distintas entidades gubernamentales. El Instituto
@@ -22,9 +25,15 @@ langs:
 - ES
 link: https://indicadores.pr
 name: El Sistema de Indicadores de Puerto Ric
-owner_link: https://estadisticas.pr
-owner_name: Instituto de Estadísticas de Puerto Rico
-owner_type: Regional government
+owner:
+  link: https://estadisticas.pr
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Instituto de Estadísticas de Puerto Rico
+  type: Regional government
 software: CKAN
 status: active
 tags:

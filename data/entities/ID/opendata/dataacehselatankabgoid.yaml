@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ID
-  name: Indonesia
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.acehselatankab.go.id/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.acehselatankab.go.id
 name: Open Data Aceh Selatan
-owner_name: The South Aceh District Government
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 1
+  name: The South Aceh District Government
+  type: Regional government
 software: CKAN
 status: active
 tags:

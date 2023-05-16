@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: UY
-  name: Uruguay
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://sit.mvotma.gub.uy/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - ES
 link: https://sit.mvotma.gub.uy/geonetwork
 name: Portal de Datos de MVOTMA
-owner_link: https://mvotma.gub.uy
-owner_name: Ministerio de Vivienda y Ordenamiento Territorial
-owner_type: Central government
+owner:
+  link: https://mvotma.gub.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 1
+  name: Ministerio de Vivienda y Ordenamiento Territorial
+  type: Central government
 software: Geonetwork
 status: active
 tags:

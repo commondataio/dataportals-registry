@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: LT
-  name: Lithuania
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://www.inspire-geoportal.lt/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://www.inspire-geoportal.lt/geonetwork
 name: GIS-Centras metadata catalogue
-owner_link: https://www.gis-centras.lt
-owner_name: VĮ Distancinių tyrimų ir geoinformatikos centras „GIS-Centras“
-owner_type: Central government
+owner:
+  link: https://www.gis-centras.lt
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 1
+  name: VĮ Distancinių tyrimų ir geoinformatikos centras „GIS-Centras“
+  type: Central government
 software: Geonetwork
 status: active
 tags:

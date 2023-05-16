@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://ide.ambiente.gob.ec/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://ide.ambiente.gob.ec/geonetwork
 name: METADATOS DEL MINISTERIO DE AMBIENTE Y AGUA DEL ECUADOR
-owner_link: https://ambiente.gob.ec
-owner_name: MINISTERIO DE AMBIENTE Y AGUA DEL ECUADOR
-owner_type: Central government
+owner:
+  link: https://ambiente.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: MINISTERIO DE AMBIENTE Y AGUA DEL ECUADOR
+  type: Central government
 software: Geonetwork
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: JO
-  name: Jordan
+coverage:
+- location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://gis.moa.gov.jo/arcgis/rest/services
@@ -18,9 +21,15 @@ langs:
 - AR
 link: https://gis.moa.gov.jo/arcgis/rest/services
 name: Ministry of Agriculture Jordan geoportal
-owner_link: https://www.moa.gov.jo
-owner_name: Ministry of Agriculture Jordan
-owner_type: Central government
+owner:
+  link: https://www.moa.gov.jo
+  location:
+    country:
+      id: JO
+      name: Jordan
+    level: 1
+  name: Ministry of Agriculture Jordan
+  type: Central government
 software: ArcGIS Server
 status: active
 tags:

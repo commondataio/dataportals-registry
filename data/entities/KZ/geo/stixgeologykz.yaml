@@ -5,9 +5,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: KZ
-  name: Kazakhstan
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
 endpoints:
 - type: arcgisrest
   url: https://stix.geology.kz:6443/arcgis/rest/services/
@@ -18,8 +21,14 @@ langs:
 - EN
 link: https://stix.geology.kz:6443/arcgis/rest/services/
 name: ArcGIS server of the LLP "Geological platform" E-Geoprom "
-owner_name: LLP "Geological platform" E-Geoprom "
-owner_type: Business
+owner:
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 1
+  name: LLP "Geological platform" E-Geoprom "
+  type: Business
 software: ArcGIS Server
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CH
-  name: Switzerland
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://geonetwork.swissdatacube.org/geonetwork
 name: SwissEnvEO
-owner_link: https://www.swissdatacube.org
-owner_name: Swiss Data cube
-owner_type: Academy
+owner:
+  link: https://www.swissdatacube.org
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Swiss Data cube
+  type: Academy
 software: Geonetwork
 status: active
 tags:

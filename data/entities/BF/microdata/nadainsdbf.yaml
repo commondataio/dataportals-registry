@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: BF
-  name: Burkina Faso
+coverage:
+- location:
+    country:
+      id: BF
+      name: Burkina Faso
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://www.insd.bf/nada/index.ph/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - FR
 link: http://www.insd.bf/nada
 name: INSD microdata catalog
-owner_link: http://www.insd.bf
-owner_name: INSD Burkina Faso
-owner_type: Central government
+owner:
+  link: http://www.insd.bf
+  location:
+    country:
+      id: BF
+      name: Burkina Faso
+    level: 1
+  name: INSD Burkina Faso
+  type: Central government
 software: NADA
 status: active
 tags:

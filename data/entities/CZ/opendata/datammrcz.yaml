@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 endpoints:
 - type: ckanapi
   url: http://data.mmr.cz/api/3
@@ -17,9 +20,15 @@ langs:
 - CZ
 link: http://data.mmr.cz
 name: The Ministry of Regional Development of the Czech Republic open data portal
-owner_link: https://www.mmr.cz
-owner_name: The Ministry of Regional Development of the Czech Republic
-owner_type: Central government
+owner:
+  link: https://www.mmr.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: The Ministry of Regional Development of the Czech Republic
+  type: Central government
 software: CKAN
 status: active
 tags:

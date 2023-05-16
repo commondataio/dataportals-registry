@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://opendata.portdebarcelona.cat/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://opendata.portdebarcelona.cat
 name: Portal Open Data del Port de Barcelona
-owner_link: https://portdebarcelona.cat
-owner_name: Port de Barcelona
-owner_type: Central government
+owner:
+  link: https://portdebarcelona.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Port de Barcelona
+  type: Central government
 software: CKAN
 status: active
 tags:

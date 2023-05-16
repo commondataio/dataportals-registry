@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AM
-  name: Armenia
+coverage:
+- location:
+    country:
+      id: AM
+      name: Armenia
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data-download-gfw.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -23,10 +26,16 @@ id: datadownloadgfwhubarcgiscom
 langs:
 - EN
 link: https://data-download-gfw.hub.arcgis.com
-name: Global Forest Watch Open data portal of Armenia 
-owner_link: http://rec-caucasus.am
-owner_name: The Regional Environmental Centre for the Caucasus (REC Caucasus)
-owner_type: Civil society
+name: Global Forest Watch Open data portal of Armenia
+owner:
+  link: http://rec-caucasus.am
+  location:
+    country:
+      id: AM
+      name: Armenia
+    level: 1
+  name: The Regional Environmental Centre for the Caucasus (REC Caucasus)
+  type: Civil society
 software: ArcGIS Hub
 status: active
 tags:

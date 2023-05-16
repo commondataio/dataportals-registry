@@ -5,17 +5,26 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: MG
-  name: Madagascar
+coverage:
+- location:
+    country:
+      id: MG
+      name: Madagascar
+    level: 1
 id: wwwresiliencemadagovmg
 langs:
 - FR
 link: https://www.resiliencemada.gov.mg
 name: GFDRR Madagascar geonode
-owner_link: https://www.gov.mg
-owner_name: Government of Madagascar
-owner_type: Central government
+owner:
+  link: https://www.gov.mg
+  location:
+    country:
+      id: MG
+      name: Madagascar
+    level: 1
+  name: Government of Madagascar
+  type: Central government
 software: GeoNode
 status: active
 tags:

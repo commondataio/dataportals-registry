@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: CZ
-  name: Czech Republic
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://datahub.brno.cz/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - CZ
 link: https://datahub.brno.cz
 name: data.Brno
-owner_link: https://brno.cz
-owner_name: Magistrát města Brna
-owner_type: Local government
+owner:
+  link: https://brno.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 1
+  name: Magistrát města Brna
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

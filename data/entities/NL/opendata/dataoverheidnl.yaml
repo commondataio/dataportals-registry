@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: NL
-  name: Netherlands
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.overheid.nl/data/api/3
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://data.overheid.nl
 name: data.overheid.nl
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

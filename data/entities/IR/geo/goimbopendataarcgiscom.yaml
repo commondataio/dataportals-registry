@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: IR
-  name: Iran
+coverage:
+- location:
+    country:
+      id: IR
+      name: Iran
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://go.imb.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +27,15 @@ langs:
 - FA
 link: https://go-imb.opendata.arcgis.com
 name: imb Mapping
-owner_link: https://www.imb.org
-owner_name: International Mission Board
-owner_type: Civil society
+owner:
+  link: https://www.imb.org
+  location:
+    country:
+      id: IR
+      name: Iran
+    level: 1
+  name: International Mission Board
+  type: Civil society
 software: ArcGIS Hub
 status: active
 tags:

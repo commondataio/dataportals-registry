@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: AS
-  name: Samoa
+coverage:
+- location:
+    country:
+      id: AS
+      name: Samoa
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://metadata.sbs.gov.ws/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://metadata.sbs.gov.ws
 name: Samoa National Data Archive
-owner_link: http://www.sbs.gov.ws
-owner_name: Samoa Bureau of Statistics
-owner_type: Central government
+owner:
+  link: http://www.sbs.gov.ws
+  location:
+    country:
+      id: AS
+      name: Samoa
+    level: 1
+  name: Samoa Bureau of Statistics
+  type: Central government
 software: NADA
 status: active
 tags:

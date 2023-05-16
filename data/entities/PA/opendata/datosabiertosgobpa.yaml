@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: PA
-  name: Panama
+coverage:
+- location:
+    country:
+      id: PA
+      name: Panama
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://www.datosabiertos.gob.pa/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.gob.pa
 name: Datos Abiertos de Panama
-owner_link: https://www.gob.pa
-owner_name: Republica de Panama
-owner_type: Central government
+owner:
+  link: https://www.gob.pa
+  location:
+    country:
+      id: PA
+      name: Panama
+    level: 1
+  name: Republica de Panama
+  type: Central government
 software: CKAN
 status: active
 tags:

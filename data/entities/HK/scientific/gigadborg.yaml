@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: HK
-  name: Hong Kong
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
 endpoints:
 - type: oaipmh
   url: https://oai.datacite.org/oai/
@@ -16,9 +19,15 @@ langs:
 - EN
 link: https://gigadb.org
 name: GigaDB
-owner_link: https://academic.oup.com/gigascience
-owner_name: Gigascience Journal
-owner_type: Academy
+owner:
+  link: https://academic.oup.com/gigascience
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 1
+  name: Gigascience Journal
+  type: Academy
 software: Dataverse
 status: active
 tags:

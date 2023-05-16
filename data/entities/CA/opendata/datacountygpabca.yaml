@@ -6,9 +6,12 @@ catalog_export: https://county-of-grande-prairie-open-data-cogp.hub.arcgis.com/a
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://county-of-grande-prairie-open-data-cogp.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - EN
 link: https://opendata.countygp.ab.ca
 name: Open Data County Of Grande Prairie
-owner_name: County Of Grande Prairie
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: County Of Grande Prairie
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

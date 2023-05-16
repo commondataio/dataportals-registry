@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: DE
-  name: Germany
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://gdi-he.gingko.de/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: https://gdi-he.gingko.de/geonetwork
 name: Geodateninfrastructur Deuchland
-owner_link: https://www.gingko.de
-owner_name: Gingko
-owner_type: Business
+owner:
+  link: https://www.gingko.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Gingko
+  type: Business
 software: Geonetwork
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SK
-  name: Slovakia
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://geopresovregion.sk/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - EN
 link: https://geopresovregion.sk/geonetwork
 name: Geoportál Prešovského kraja data catalog
-owner_link: https://www.po-kraj.sk/sk/samosprava/urad/zamestnanci-uradu/?podla=odbor&odbor=Odbor+strategickeho+rozvoja+a+projektoveho+riadenia&oddelenie=oddelenie+in%C5%A1tit%C3%BAt+rozvoja+PSK&priezvisko=&btnSubmit=H%C4%BEada%C5%A5
-owner_name: Department of Development Institute of PSK
-owner_type: Regional government
+owner:
+  link: https://www.po-kraj.sk/sk/samosprava/urad/zamestnanci-uradu/?podla=odbor&odbor=Odbor+strategickeho+rozvoja+a+projektoveho+riadenia&oddelenie=oddelenie+in%C5%A1tit%C3%BAt+rozvoja+PSK&priezvisko=&btnSubmit=H%C4%BEada%C5%A5
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
+  name: Department of Development Institute of PSK
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

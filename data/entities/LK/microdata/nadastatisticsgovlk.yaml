@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: LK
-  name: Sri Lanka
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://nada.statistics.gov.lk/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://nada.statistics.gov.lk
 name: Lanka Datta
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

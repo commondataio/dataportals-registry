@@ -6,9 +6,14 @@ catalog_type: Open data portal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-MD
 endpoints:
 - type: dcatap201
   url: https://bmore-open-data-baltimore.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +29,16 @@ langs:
 - EN
 link: https://data.imap.maryland.gov
 name: Maryland GIS Data Catalog
-owner_name: Maryland Department of Information Technology
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-MD
+  name: Maryland Department of Information Technology
+  type: Regional government
 software: ArcGIS Hub
 status: active
 tags:

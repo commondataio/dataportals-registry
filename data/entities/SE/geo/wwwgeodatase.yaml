@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: SE
-  name: Sweden
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://www.geodata.se/geodataportalen/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - SV
 link: https://www.geodata.se/geodataportalen
 name: Geodata - Lantmäteriet
-owner_link: https://www.lantmateriet.se/
-owner_name: Ministry of Rural Affairs and Infrastructure
-owner_type: Central government
+owner:
+  link: https://www.lantmateriet.se/
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 1
+  name: Ministry of Rural Affairs and Infrastructure
+  type: Central government
 software: Geonetwork
 status: active
 tags:

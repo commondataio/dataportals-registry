@@ -6,9 +6,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-OH
 endpoints:
 - type: dcatap201
   url: https://data.columbus.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +29,16 @@ langs:
 - EN
 link: https://data.columbus.opendata.arcgis.com
 name: Columbus GIS Open Data and Map Portal
-owner_name: City of Columbus
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-OH
+  name: City of Columbus
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

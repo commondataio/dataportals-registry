@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: UA
-  name: Ukraine
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.imr.gov.ua/api/3
@@ -17,8 +20,14 @@ langs:
 - UK
 link: https://data.imr.gov.ua
 name: Портал відкритих даних Ірпінської міської ради
-owner_name: ''
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 1
+  name: ''
+  type: Local government
 software: CKAN
 status: active
 tags:

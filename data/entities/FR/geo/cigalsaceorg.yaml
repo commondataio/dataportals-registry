@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://www.cigalsace.org/geonetwork/srv/eng/q
@@ -20,8 +23,14 @@ langs:
 - FR
 link: https://www.cigalsace.org/geonetwork
 name: Catalogue GeoGrandEst
-owner_name: Prefet de la Region Grand Est
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Prefet de la Region Grand Est
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

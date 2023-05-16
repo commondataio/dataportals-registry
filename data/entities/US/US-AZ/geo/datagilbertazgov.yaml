@@ -6,9 +6,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AZ
 endpoints:
 - type: dcatap201
   url: https://data-tog.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,9 +29,17 @@ langs:
 - EN
 link: https://data.gilbertaz.gov/
 name: Gilbert, AZ - Open Data
-owner_link: https://www.gilbertaz.gov
-owner_name: City of Gilbert
-owner_type: Local government
+owner:
+  link: https://www.gilbertaz.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AZ
+  name: City of Gilbert
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

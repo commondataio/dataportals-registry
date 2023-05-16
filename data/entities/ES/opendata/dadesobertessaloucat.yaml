@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dadesobertes.salou.cat/api/3
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://dadesobertes.salou.cat
 name: Portal de la Transparència
-owner_link: https://salou.cat
-owner_name: Ajuntament de Salou
-owner_type: Local government
+owner:
+  link: https://salou.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Ajuntament de Salou
+  type: Local government
 software: CKAN
 status: active
 tags:

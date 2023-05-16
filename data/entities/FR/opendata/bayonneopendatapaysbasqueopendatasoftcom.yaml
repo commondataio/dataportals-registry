@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://bayonne-opendatapaysbasque.opendatasoft.com/api
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://bayonne-opendatapaysbasque.opendatasoft.com
 name: ANTIC Pays Basque
-owner_name: ANTIC Pays Basque
-owner_type: Government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ANTIC Pays Basque
+  type: Government
 software: OpenDataSoft
 status: active
 tags:

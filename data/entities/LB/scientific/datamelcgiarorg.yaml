@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: LB
-  name: Lebanon
+coverage:
+- location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 1
 description: The Dataverse portal of the International Center for Agricultural Research
   in Dry Ares.
 endpoints:
@@ -19,8 +22,14 @@ langs:
 - AR
 link: https://data.mel.cgiar.org
 name: MELDATA
-owner_name: ''
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: LB
+      name: Lebanon
+    level: 1
+  name: ''
+  type: Academy
 software: Dataverse
 status: active
 tags:

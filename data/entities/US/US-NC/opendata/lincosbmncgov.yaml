@@ -5,9 +5,14 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
 endpoints:
 - type: opendatasoftapi
   url: https://linc.osbm.nc.gov/api
@@ -17,9 +22,17 @@ langs:
 - EN
 link: https://linc.osbm.nc.gov
 name: NC Budget Management Open Data Portal
-owner_link: https://osbm.nc.gov
-owner_name: NC Budget Management
-owner_type: Regional government
+owner:
+  link: https://osbm.nc.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-NC
+  name: NC Budget Management
+  type: Regional government
 software: OpenDataSoft
 status: active
 tags:

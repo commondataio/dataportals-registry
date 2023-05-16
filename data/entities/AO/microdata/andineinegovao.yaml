@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: AO
-  name: Angola
+coverage:
+- location:
+    country:
+      id: AO
+      name: Angola
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://andine.ine.gov.ao/nada/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://andine.ine.gov.ao/nada/index.php
 name: National Data Archive Angola Microdata catalog
-owner_name: National Institute of Statistics (Angola)
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: AO
+      name: Angola
+    level: 1
+  name: National Institute of Statistics (Angola)
+  type: Central government
 software: NADA
 status: active
 tags:

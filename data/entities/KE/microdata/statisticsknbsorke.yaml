@@ -6,9 +6,12 @@ api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: KE
-  name: Kenya
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://statistics.knbs.or.ke/nada/index.php/api/catalog/search
@@ -17,8 +20,14 @@ langs:
 - EN
 link: https://statistics.knbs.or.ke/nada/index.php
 name: Kenya National Data Archive (KeNADA)
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 1
+  name: ''
+  type: Central government
 software: NADA
 status: active
 tags:

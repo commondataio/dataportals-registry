@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: dcatap201
   url: https://data-hawa-mayotte.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,8 +27,14 @@ langs:
 - FR
 link: https://data-hawa-mayotte.opendata.arcgis.com
 name: Hawa Mayotte Open Data
-owner_name: Mayotte
-owner_type: Local government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Mayotte
+  type: Local government
 software: ArcGIS Hub
 status: active
 tags:

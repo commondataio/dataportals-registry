@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: AR
-  name: Argentina
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://datasets.datos.mincyt.gob.ar/api/3
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datasets.datos.mincyt.gob.ar
 name: Datos de la Ciencia y la Tecnologia Argentina
-owner_link: https://mincyt.gob.ar
-owner_name: Ministerio de Ciencia, Tecnología e Innovación
-owner_type: Central government
+owner:
+  link: https://mincyt.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+  name: Ministerio de Ciencia, Tecnología e Innovación
+  type: Central government
 software: CKAN
 status: active
 tags:

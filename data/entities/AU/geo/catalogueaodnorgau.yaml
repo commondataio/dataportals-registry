@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: AU
-  name: Australia
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogue.aodn.org.au/geonetwork/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 - EN
 link: https://catalogue.aodn.org.au/geonetwork
 name: Catalogue AODN
-owner_name: University of Tasmania
-owner_type: Academy
+owner:
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 1
+  name: University of Tasmania
+  type: Academy
 software: Geonetwork
 status: active
 tags:

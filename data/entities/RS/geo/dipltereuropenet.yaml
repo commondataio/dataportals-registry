@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: RS
-  name: Serbia
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://dip.lter-europe.net/geonetwork/srv/eng/q
@@ -20,9 +23,15 @@ langs:
 - SR
 link: https://dip.lter-europe.net/geonetwork
 name: EcoSense Data catalogue
-owner_link: https://biosense.rs
-owner_name: Biosense Institute
-owner_type: Academy
+owner:
+  link: https://biosense.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 1
+  name: Biosense Institute
+  type: Academy
 software: Geonetwork
 status: active
 tags:

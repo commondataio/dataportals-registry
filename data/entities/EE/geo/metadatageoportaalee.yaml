@@ -7,9 +7,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EE
-  name: Estonia
+coverage:
+- location:
+    country:
+      id: EE
+      name: Estonia
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://metadata.geoportaal.ee/geonetwork/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 - ET
 link: https://metadata.geoportaal.ee/geonetwork
 name: Estonian National Geoportal
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: EE
+      name: Estonia
+    level: 1
+  name: ''
+  type: Central government
 software: Geonetwork
 status: active
 tags:

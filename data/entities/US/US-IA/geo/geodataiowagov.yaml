@@ -7,9 +7,14 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-IA
 endpoints:
 - type: dcatap201
   url: https://geodata-iowa.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -25,8 +30,16 @@ langs:
 - EN
 link: https://geodata.iowa.gov
 name: Iowa Geospatial Data
-owner_name: State of Iowa
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-IA
+  name: State of Iowa
+  type: Regional government
 software: ArcGIS Hub
 status: active
 tags:

@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: https://catalogue.geomartinique.fr/geonetwork/srv/eng/q
@@ -21,8 +24,14 @@ langs:
 link: https://catalogue.geomartinique.fr/geonetwork
 name: Centre de Ressource Géomatique et Infrastructure de Données Géographiques -
   GéoMartinique
-owner_name: Prefet de la Martinique
-owner_type: Regional government
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Prefet de la Martinique
+  type: Regional government
 software: Geonetwork
 status: active
 tags:

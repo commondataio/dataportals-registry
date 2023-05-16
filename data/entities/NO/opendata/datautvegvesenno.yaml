@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: 'NO'
-  name: Norway
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://dataut.vegvesen.no/api/3
@@ -17,9 +20,15 @@ langs:
 - 'NO'
 link: https://dataut.vegvesen.no
 name: Data fra Statens vegvesen
-owner_link: https://www.vegvesen.no
-owner_name: Statens vegvesen
-owner_type: Regional government
+owner:
+  link: https://www.vegvesen.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
+  name: Statens vegvesen
+  type: Regional government
 software: CKAN
 status: active
 tags:

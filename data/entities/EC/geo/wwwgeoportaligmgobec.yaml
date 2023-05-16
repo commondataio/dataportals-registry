@@ -6,9 +6,12 @@ catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
-countries:
-- id: EC
-  name: Ecuador
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
 endpoints:
 - type: geonetworkapi:query
   url: http://www.geoportaligm.gob.ec/geonetwork/srv/eng/q
@@ -21,9 +24,15 @@ langs:
 - EN
 link: http://www.geoportaligm.gob.ec/geonetwork
 name: Catálogo de Datos Geográficos del IGM Ecuador
-owner_link: https://www.gob.ec
-owner_name: Gobierno del Ecuador
-owner_type: Central government
+owner:
+  link: https://www.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 1
+  name: Gobierno del Ecuador
+  type: Central government
 software: Geonetwork
 status: active
 tags:

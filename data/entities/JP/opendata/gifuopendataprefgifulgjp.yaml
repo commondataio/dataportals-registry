@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: JP
-  name: Japan
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://gifu-opendata.pref.gifu.lg.jp/data/api/3
@@ -17,9 +20,15 @@ langs:
 - JA
 link: https://gifu-opendata.pref.gifu.lg.jp
 name: Gifu prefecture open data
-owner_link: https://www.pref.gifu.lg.jp
-owner_name: Gifu prefecture
-owner_type: Regional government
+owner:
+  link: https://www.pref.gifu.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 1
+  name: Gifu prefecture
+  type: Regional government
 software: CKAN
 status: active
 tags:

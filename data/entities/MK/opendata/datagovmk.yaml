@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: MK
-  name: Republic of North Macedonia
+coverage:
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://data.gov.mk/api/3
@@ -17,8 +20,14 @@ langs:
 - MK
 link: https://data.gov.mk
 name: datagovmk
-owner_name: ''
-owner_type: Central government
+owner:
+  location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 1
+  name: ''
+  type: Central government
 software: CKAN
 status: active
 tags:

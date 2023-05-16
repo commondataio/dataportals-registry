@@ -5,9 +5,12 @@ api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: ES
-  name: Spain
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
 endpoints:
 - type: opendatasoftapi
   url: https://datosabiertos.dipcas.es/api
@@ -17,9 +20,15 @@ langs:
 - ES
 link: https://datosabiertos.dipcas.es
 name: Open data portal Castellón Provincial Council
-owner_link: https://www.dipcas.es
-owner_name: Castellón Provincial Council
-owner_type: Local government
+owner:
+  link: https://www.dipcas.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Castellón Provincial Council
+  type: Local government
 software: OpenDataSoft
 status: active
 tags:

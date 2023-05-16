@@ -4,9 +4,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: TH
-  name: Thailand
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.customs.go.th/api/3
@@ -16,9 +19,15 @@ langs:
 - TH
 link: https://catalog.customs.go.th
 name: Customs Information Center
-owner_link: https://www.customs.go.th
-owner_name: Customs Department (Thailand)
-owner_type: Central government
+owner:
+  link: https://www.customs.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 1
+  name: Customs Department (Thailand)
+  type: Central government
 software: CKAN
 status: active
 tags:

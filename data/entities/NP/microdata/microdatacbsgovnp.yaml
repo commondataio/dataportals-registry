@@ -6,9 +6,12 @@ api_status: deprecated
 catalog_type: Microdata catalog
 content_types:
 - dataset
-countries:
-- id: NP
-  name: Nepal
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: http://microdata.cbs.gov.np/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: http://microdata.cbs.gov.np/index.php
 name: National statistics office Nepal Microdata Catalog
-owner_link: https://www.cbs.gov.np
-owner_name: National statistics office Nepal
-owner_type: Central government
+owner:
+  link: https://www.cbs.gov.np
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: National statistics office Nepal
+  type: Central government
 software: NADA
 status: active
 tags:

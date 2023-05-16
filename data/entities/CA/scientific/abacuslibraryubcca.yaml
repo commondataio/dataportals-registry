@@ -5,9 +5,12 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
-countries:
-- id: CA
-  name: Canada
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
 description: Open for researchers associated with British Columbia universities to
   deposit data.
 endpoints:
@@ -19,9 +22,15 @@ langs:
 - EN
 link: https://abacus.library.ubc.ca
 name: Abacus Data Network
-owner_link: https://library.ubc.ca
-owner_name: Libraries at Simon Fraser University
-owner_type: Academy
+owner:
+  link: https://library.ubc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Libraries at Simon Fraser University
+  type: Academy
 software: Dataverse
 status: active
 tags:

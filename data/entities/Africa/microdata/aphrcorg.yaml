@@ -6,9 +6,12 @@ api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - microdata
-countries:
-- id: Africa
-  name: Africa
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
 endpoints:
 - type: nada:catalog-search
   url: https://aphrc.org/microdataportal/index.php/api/catalog/search
@@ -17,9 +20,15 @@ langs:
 - EN
 link: https://aphrc.org/microdataportal
 name: APHRC Online Microdata Library
-owner_link: https://aphrc.org
-owner_name: African Population & Health Research Center
-owner_type: Civil society
+owner:
+  link: https://aphrc.org
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
+  name: African Population & Health Research Center
+  type: Civil society
 software: NADA
 status: active
 tags:

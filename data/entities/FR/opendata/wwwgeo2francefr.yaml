@@ -5,9 +5,12 @@ api_status: deprecated
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: FR
-  name: France
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://www.geo2france.fr/ckan/api/3
@@ -17,8 +20,14 @@ langs:
 - FR
 link: https://www.geo2france.fr
 name: Data Hauts-de-France
-owner_name: ''
-owner_type: Community
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: ''
+  type: Community
 software: CKAN
 status: active
 tags:
