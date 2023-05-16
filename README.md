@@ -54,9 +54,12 @@ api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
-countries:
-- id: US
-  name: United States
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
 endpoints:
 - type: ckanapi
   url: https://catalog.data.gov/api/3
@@ -75,9 +78,15 @@ identifiers:
 langs:
 - EN
 link: https://catalog.data.gov
-name: Data.gov
-owner_name: US Government
-owner_type: Central government
+name: NETL Energy Data eXchange
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: U.S. Department of Energy
+  type: Central government
 software: CKAN
 status: active
 tags:
