@@ -119,8 +119,8 @@ def stats(output='country_software.csv'):
     countries = []
     software = []
     for record in data:     
-        if 'countries' in record.keys():
-            for country in record['countries']:
+        if 'coverage' in record.keys():
+            for country in record['coverage']:
                 if country['name'] not in countries:
                     countries.append(country['name'])
         if 'software' in record.keys():
