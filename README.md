@@ -139,6 +139,8 @@ Following data sources used:
 * EntryScape customers (Sweden) https://entryscape.com/en/customers/
 * Geolode, catalog of open geodata websites https://geolode.org
 * WebCommons Dataset subset http://webdatacommons.org/structureddata/2022-12/stats/schema_org_subsets.html
+* Major Smart Cities with Open Data (updated 2019) https://rlist.io/l/major-smart-cities-with-open-data-portals
+* Registry of Open Access Repositories http://roar.eprints.org
 
 ## License
 
