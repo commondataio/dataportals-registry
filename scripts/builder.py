@@ -21,6 +21,7 @@ import shutil
 import pprint
 
 ROOT_DIR = '../data/entities'
+SOFTWARE_DIR = '../data/software'
 DATASETS_DIR = '../data/datasets'
 
 app = typer.Typer()
@@ -34,12 +35,9 @@ def load_jsonl(filepath):
     return data
 
 
-@app.command()
-def build():
-    """Build datasets as JSONL from entities as YAML"""
-    dirs = os.listdir(ROOT_DIR)
-    out = open(os.path.join(DATASETS_DIR, 'catalogs.jsonl'), 'w', encoding='utf8')
-    for root, dirs, files in os.walk(ROOT_DIR):
+def build_dataset(datapath, dataset_filename):
+    out = open(os.path.join(DATASETS_DIR, dataset_filename), 'w', encoding='utf8')
+    for root, dirs, files in os.walk(datapath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             print('- adding %s' % (os.path.basename(filename).split('.', 1)[0]))
@@ -50,7 +48,18 @@ def build():
                 
             out.write(json.dumps(data, ensure_ascii=False) + '\n')
     out.close()    
+
+
+@app.command()
+def build():
+    """Build datasets as JSONL from entities as YAML"""
+    print('Started building catalogs dataset')
+    build_dataset(ROOT_DIR, 'catalogs.jsonl')
     print('Finished building catalogs dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'catalogs.jsonl')))
+    print('Started building software dataset')
+    build_dataset(SOFTWARE_DIR, 'software.jsonl')
+    print('Finished building software dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'software.jsonl')))
+
 
 
 @app.command()
