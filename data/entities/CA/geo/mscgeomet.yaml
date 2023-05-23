@@ -1,0 +1,43 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+description: GeoMet-OGC-API provides public access to the Meteorological Service of
+  Canada (MSC) and Environment and Climate Change Canada (ECCC) data via interoperable
+  web services and application programming interfaces (API).
+endpoints:
+- type: stacserverapi
+  url: https://api.weather.gc.ca/stac/?f=json
+export_standard: STAC specification
+id: mscgeomet
+langs:
+- EN
+link: https://api.weather.gc.ca/stac/?f=json
+name: MSC GeoMet - GeoMet-OGC-API
+owner:
+  link: https://weather.gc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Canadian Centre for Climate Services
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- government
+- has_api

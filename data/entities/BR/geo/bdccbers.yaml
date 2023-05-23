@@ -1,0 +1,40 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+description: Catalogs of Brazil Data Cube (BDC) CBERS 4 Earth Observation data cube
+  imagery on AWS.
+endpoints:
+- type: stacserverapi
+  url: https://bdc-cbers.s3.us-west-2.amazonaws.com/catalog.json
+export_standard: STAC specification
+id: bdccbers
+langs:
+- EN
+link: https://bdc-cbers.s3.us-west-2.amazonaws.com/catalog.json
+name: EO Data Cubes for Brazil - CBERS 4
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: Brazilian Development Bank (BNDES)
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api

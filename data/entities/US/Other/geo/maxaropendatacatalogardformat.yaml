@@ -1,0 +1,40 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
+description: 'Root catalog for the [Maxar Open Data Program](https://www.maxar.com/open-data)
+  imagery generated through the Maxar ARD pipeline. '
+endpoints:
+- type: stacserverapi
+  url: https://maxar-opendata.s3.amazonaws.com/events/catalog.json
+export_standard: STAC specification
+id: maxaropendatacatalogardformat
+langs:
+- EN
+link: https://maxar-opendata.s3.amazonaws.com/events/catalog.json
+name: Maxar Open Data Catalog (ARD format)
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: ''
+  type: Business
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api

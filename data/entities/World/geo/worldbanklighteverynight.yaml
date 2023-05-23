@@ -1,0 +1,41 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
+description: Nightly visible radiance catalogues from VIIRS DNB NPP for 2012/04 through
+  2020/12.
+endpoints:
+- type: stacserverapi
+  url: https://globalnightlight.s3.amazonaws.com/VIIRS_npp_catalog.json
+export_standard: STAC specification
+id: worldbanklighteverynight
+langs:
+- EN
+link: https://globalnightlight.s3.amazonaws.com/VIIRS_npp_catalog.json
+name: World Bank - Light Every Night
+owner:
+  link: https://worldbank.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: World Bank
+  type: International
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api

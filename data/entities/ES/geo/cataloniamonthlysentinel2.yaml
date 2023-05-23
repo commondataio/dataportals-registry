@@ -1,0 +1,42 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+description: 'Monthly mosaics of sentinel-2 images over Catalonia, choosing lowest
+  cloud coverage for each timespan. Indexes several collections of different Cloud
+  Optimized Geotiffs: RGB de 8/16 bits, IRC  8/16 bits.'
+endpoints:
+- type: stacserverapi
+  url: https://datacloud.icgc.cat/stac-catalog/catalog.json
+export_standard: STAC specification
+id: cataloniamonthlysentinel2
+langs:
+- EN
+link: https://datacloud.icgc.cat/stac-catalog/catalog.json
+name: Monthly Mosaic of Sentinel 2 Images for Catalonia
+owner:
+  link: https://icgc.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 1
+  name: Institut Cartogràfic i Geològic de Catalunya
+  type: Regional government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api

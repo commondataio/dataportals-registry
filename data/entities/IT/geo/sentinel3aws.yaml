@@ -1,0 +1,40 @@
+access_mode:
+- public
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+description: Observations from the Sentinel-3 satellite of the European Commission’s
+  Copernicus Earth Observation Programme, available in Level 2 and 3. Hosted on AWS.
+endpoints:
+- type: stacserverapi
+  url: https://meeo-s3.s3.amazonaws.com/catalog.json
+export_standard: STAC specification
+id: sentinel3aws
+langs:
+- EN
+link: https://meeo-s3.s3.amazonaws.com/catalog.json
+name: Sentinel 3 Level 2+3 on AWS
+owner:
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 1
+  name: Meteorological Environmental Earth Observation
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api

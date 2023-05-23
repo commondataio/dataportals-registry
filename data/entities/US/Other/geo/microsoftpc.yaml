@@ -1,0 +1,43 @@
+access_mode:
+- public
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
+description: Searchable spatiotemporal metadata describing Earth science datasets
+  hosted by the Microsoft Planetary Computer
+endpoints:
+- type: stacserverapi
+  url: https://planetarycomputer.microsoft.com/api/stac/v1/
+- type: customapi
+  url: https://planetarycomputer.microsoft.com/api/stac/v1/collections
+export_standard: STAC specification
+id: microsoftpc
+langs:
+- EN
+link: https://planetarycomputer.microsoft.com
+name: Microsoft Planetary Computer STAC API
+owner:
+  link: https://www.microsoft.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Microsoft
+  type: Business
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
