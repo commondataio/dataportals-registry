@@ -14,8 +14,9 @@ API documentation: microdata.worldbank.org/api-documentation/
 
 ## API Endpoints
 
-NADA API endpoints:
-- /api/catalog/search - undocumented API to search datasets
+NADA API endpoints: 
+- /api/catalog/collections - list of collections
+- /api/catalog/search - API endpont to search datasets
 - /api/catalog/[dataset public id] - single dataset metadata by public dataset id
 - /api/catalog/[dataset public id]/data_files - dataset data files information
 - /api/catalog/[dataset public id]/variables - list of all dataset variables
