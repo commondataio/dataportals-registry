@@ -158,6 +158,43 @@ def stats(output='country_software.csv'):
     outfile.close()
     typer.echo('Wrote %s' % (output))    
 
+
+
+@app.command()
+def assign(dryrun=False):
+    """Assign unique identifier to each data catalog entry"""
+    max_num = 0
+
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            if 'uid' in record.keys():
+                num = int(record['uid'].split('cdi', 1)[-1])
+                if num > max_num:
+                    max_num = num
+            f.close() 
+
+
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close() 
+            if 'uid' not in record.keys():
+                max_num += 1
+                record['uid'] = f'cdi{max_num:08}'
+                print('Wrote %s uid for %s' % (record['uid'], os.path.basename(filename).split('.', 1)[0]))
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+
+
 @app.command()
 def validate():
     """Validates YAML entities files against simple Cerberus schema"""
