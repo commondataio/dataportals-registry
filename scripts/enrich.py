@@ -376,6 +376,49 @@ def enrich_location(dryrun=False):
             f.write(yaml.safe_dump(record, allow_unicode=True))
             f.close()
 
+@app.command()
+def enrich_identifiers(filepath, idtype, dryrun=False):
+    """Enrich location codes"""
+
+    
+    f = open(filepath, 'r', encoding='utf8')
+    reader = csv.DictReader(f, delimiter='\t')
+    reg_map = {}
+    for row in reader:
+        if row['registry_uid'] not in reg_map.keys():
+            reg_map[row['registry_uid']] = [{'id' : idtype, 'url' : row['dataportals_url'], 'value' : row['dataportals_name']}]
+        else:
+            reg_map[row['registry_uid']].append({'id' : idtype, 'url' : row['dataportals_url'], 'value' : row['dataportals_name']})
+
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if 'identifiers' not in record.keys():
+                if record['uid'] in reg_map.keys():
+                    record['identifiers'] = reg_map[record['uid']]
+                    changed = True
+            else:
+                if record['uid'] in reg_map.keys():
+                    ids = []
+                    for item in record['identifiers']:
+                        ids.append(item['url'])
+                    for item in reg_map[record['uid']]:
+                        if item['url'] not in ids:
+                            record['identifiers'].append(item)
+                            changed = True
+                
+            if changed: 
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+            print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
             
             
 
