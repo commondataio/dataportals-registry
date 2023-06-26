@@ -1,6 +1,5 @@
 access_mode:
 - open
-api: true
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
@@ -12,17 +11,11 @@ coverage:
       id: MN
       name: Mongolia
     level: 1
-endpoints:
-- type: geonetworkapi:query
-  url: http://portal.eic.mn:8080/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://portal.eic.mn:8080/geonetwork/srv/api
-export_standard: Geonetwork API
-id: portaleicmn
+id: eicmncbit
 langs:
 - MN
-link: http://portal.eic.mn:8080/geonetwork
-name: Mongolian Environmental Information Center meta database
+link: https://eic.mn/cbit/
+name: ETF Portal
 owner:
   link: https://www.eic.mn
   location:
@@ -33,11 +26,10 @@ owner:
   name: 'Mongolian Environmental Information Center'
   type: Central government
 software:
-  id: geonetwork
-  name: Geonetwork
+  id: geonode
+  name: GeoNode
 status: active
 tags:
 - geospatial
 - government
-- has_api
-uid: cdi00001120
+uid: cdi00001133
