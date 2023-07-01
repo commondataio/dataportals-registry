@@ -62,6 +62,13 @@ def enrich_ot(dryrun=False):
                         print('updated %s' % (filename))
 
 
+def __topic_find(topics, id, topic_type='eudatatheme'):
+    for t in topics:
+        if topic_type == topic_type and id == t['id']:
+            return True
+    return False
+
+
 @app.command()
 def enrich_topics(dryrun=False):
     """Set topics tags from catalog metadata to be improved later"""
@@ -77,28 +84,59 @@ def enrich_topics(dryrun=False):
                 f = open(filepath, 'r', encoding='utf8')
                 data = yaml.load(f, Loader=Loader)            
                 f.close()
-
-                del data['tags']
-                
-                if 'tags' in data.keys():
+                if data is None: 
+                    print('error on %s' %(filename))
+                    break
+                if 'tags' in data.keys() and data['tags'] is not None:
                     tags = set(data['tags'])
                 else:
                     tags = set([])
+                if 'topics' in data.keys():
+                    topics = data['topics']
+                else:
+                    data['topics'] = []
+                    topics = []
 
                 if data['catalog_type'] == 'Indicators catalog':
                     tags.add('statistics')
                 elif data['catalog_type'] == 'Microdata catalog':
+                    if 'properties' not in data:
+                        data['properties'] = {}
+                    data['properties']['transferable_topics'] = True
+                    found = __topic_find(topics, 'SOCI', topic_type='eudatatheme')
+                    if not found:
+                        topics.append({'id' : 'SOCI', 'name' : 'Population and society', 'type' : 'eudatatheme'})
+                    found = __topic_find(topics, 'Society', topic_type='iso19115')
+                    if not found:
+                        topics.append({'id' : 'Society', 'name' : 'Society', 'type' : 'iso19115'})
                     tags.add('microdata')
                 elif data['catalog_type'] == 'Geoportal':
                     tags.add('geospatial')
                 elif data['catalog_type'] == 'Scientific data repository':
+                    if 'properties' not in data:
+                        data['properties'] = {}
+                    data['properties']['tranferable_topics'] = True
+                    found = __topic_find(topics, 'TECH', topic_type='eudatatheme')                      
+                    if not found:
+                        print('Added', {'id' : 'TECH', 'name' : 'Science and technology', 'type' : 'eudatatheme'})
+                        topics.append({'id' : 'TECH', 'name' : 'Science and technology', 'type' : 'eudatatheme'})
                     tags.add('scientific')
-                if 'owner_type' in data.keys() and data['owner_type'] in ['Government', 'Local government', 'Central government']:
-                    tags.add('government')
+                if 'owner' in data.keys():
+                    if data['owner']['type'] in ['Regional government', 'Local government', 'Central government']:
+                        tags.add('government')
+                    if data['owner']['type']  in ['Regional government', 'Local government']:
+                        print('transferable4')
+                        if 'properties' not in data:
+                            data['properties'] = {}
+                        data['properties']['transferable_location'] = True
                 if 'api' in data.keys() and data['api'] is True:
-                    tags.add('has_api')
-                data['tags'] = list(tags)
+                    tags.add('has_api')     
+                tags = list(tags)
+                if 'tags' in data.keys() and tags != data['tags']:
+                    changed = True
+                data['topics'] = topics
                 changed = True
+                print(data)
                 if changed:
                     if dryrun is True:
                         print('Dryrun: should be updated %s' % (filename))
@@ -107,6 +145,7 @@ def enrich_topics(dryrun=False):
                         f.write(yaml.safe_dump(data, allow_unicode=True))
                         f.close()
                         print('updated %s' % (filename))
+#                        print(data)
 
 
 @app.command()
@@ -378,9 +417,7 @@ def enrich_location(dryrun=False):
 
 @app.command()
 def enrich_identifiers(filepath, idtype, dryrun=False):
-    """Enrich location codes"""
-
-    
+    """Enrich location codes"""    
     f = open(filepath, 'r', encoding='utf8')
     reader = csv.DictReader(f, delimiter='\t')
     reg_map = {}

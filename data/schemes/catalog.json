@@ -133,6 +133,21 @@
       }
     }}
   },
+  "topics": {
+    "type": "list",
+    "schema": {
+      "type" : "dict", "schema" : {
+      "type": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      }
+    }}
+  },
   "export_standard": {
     "type": "string"
   },
@@ -188,7 +203,23 @@
       }      
     }
   },
-
+  "properties" : {
+    "type" : "dict",
+    "empty" : false,
+    "required": false,
+    "schema" : {
+      "transferable_topics": {
+        "type": "string",
+        "empty" : false,
+        "required": false
+      },      
+      "transferable_location": {
+        "type": "string",
+        "empty" : false,
+        "required": false
+      } 
+    }
+  }, 
   "catalog_export": {
     "type": "string"
   }
