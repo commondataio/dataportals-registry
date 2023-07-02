@@ -10,33 +10,37 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 1
+    level: 2
+    subregion:
+      id: BE-WLG
 endpoints:
-- type: ckanapi
-  url: http://opendatastore.brussels/api/3
-export_standard: CKAN API
-id: opendatastorebrussels
+- type: opendatasoftapi
+  url: https://opendata.liege.be/api
+export_standard: OpenDataSoft API
+id: opendataliegebe
 langs:
-- EN
-link: https://opendatastore.brussels
-name: Brussels open datastore
+- FR
+link: https://opendata.liege.be
+name: Open Data Liege
 owner:
-  link: https://www.brussels.be
+  link: https://www.liege.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 1
-  name: 'City of Brussels'
+    level: 2
+    subregion:
+      id: BE-WLG
+  name: 'Ville de Liège'
   type: Local government
 properties:
   transferable_location: true
 software:
-  id: ckan
-  name: CKAN
+  id: opendatasoft
+  name: OpenDataSoft
 status: active
 tags:
 - government
 - has_api
 topics: []
-uid: cdi00000147
+uid: cdi00000146

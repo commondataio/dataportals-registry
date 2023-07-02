@@ -13,21 +13,24 @@ coverage:
     level: 1
 endpoints:
 - type: opendatasoftapi
-  url: https://ares-digitalwallonia.opendatasoft.com/api
+  url: https://opendata.infrabel.be/api
 export_standard: OpenDataSoft API
-id: aresdigitalwalloniaopendatasoftcom
+id: opendatainfrabelbe
 langs:
 - FR
-link: https://ares-digitalwallonia.opendatasoft.com
-name: Agence du Numérique
+link: https://opendata.infrabel.be
+name: Open Data Infrabel
 owner:
+  link: https://www.infrabel.be
   location:
     country:
       id: BE
       name: Belgium
     level: 1
-  name: Agence du Numérique
-  type: Central government
+  name: InfraBel
+  type: Business
+properties:
+  transferable_topics: true
 software:
   id: opendatasoft
   name: OpenDataSoft
@@ -35,5 +38,11 @@ status: active
 tags:
 - government
 - has_api
-topics: []
-uid: cdi00000140
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00002438

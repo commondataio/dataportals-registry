@@ -13,28 +13,24 @@ coverage:
     level: 1
 endpoints:
 - type: opendatasoftapi
-  url: https://data.strasbourg.eu/api
+  url: https://opendata.elia.be/api
 export_standard: OpenDataSoft API
-id: datastrasbourgeu
-identifiers:
-- id: wikidata
-  url: https://wikidata.org/wiki/Q110097438
-  value: Q110097438
+id: opendataeliabe
 langs:
 - FR
-link: https://data.strasbourg.eu
-name: Strasbourg Open Data
+link: https://opendata.elia.be
+name: Open Data Elia
 owner:
-  link: https://www.strasbourg.eu
+  link: https://www.elia.be
   location:
     country:
       id: BE
       name: Belgium
     level: 1
-  name: Ville et Eurométropole de Strasbourg
-  type: Local government
+  name: Elia Group
+  type: Business
 properties:
-  transferable_location: true
+- transferable_topics: true
 software:
   id: opendatasoft
   name: OpenDataSoft
@@ -42,5 +38,8 @@ status: active
 tags:
 - government
 - has_api
-topics: []
-uid: cdi00000145
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00002436
