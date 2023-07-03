@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: active
+api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -10,24 +10,33 @@ coverage:
     country:
       id: DK
       name: Denmark
-    level: 1
+    level: 2
+    subregion:
+      id: DK-84
 endpoints:
 - type: ckanapi
-  url: http://portal.opendata.dk/api/3
+  url: http://data.kk.dk/api/3
 export_standard: CKAN API
-id: portalopendatadk
+id: datakkdk
 langs:
-- DA
-link: https://portal.opendata.dk
-name: 'Open Data DK - '
+- EN
+link: https://data.kk.dk
+name: Copenhagen Data
 owner:
   location:
     country:
       id: DK
       name: Denmark
-    level: 1
-  name: ''
-  type: Central government
+    country:
+      id: DK
+      name: Denmark
+    level: 2
+    subregion:
+      id: DK-84
+  name: 'City of Copenhagen'
+  type: Regional government
+properties:
+  transferable_location: true
 software:
   id: ckan
   name: CKAN
@@ -36,4 +45,4 @@ tags:
 - government
 - has_api
 topics: []
-uid: cdi00000503
+uid: cdi00000500
