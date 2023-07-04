@@ -130,12 +130,13 @@ def stats(output='country_software.csv'):
     software = []
     for record in data:     
         if 'coverage' in record.keys():
-            for country in record['coverage']:
+            for loc_rec in record['coverage']:
+                country = loc_rec['location']['country']
                 if country['name'] not in countries:
                     countries.append(country['name'])
         if 'software' in record.keys():
-            if record['software'] not in software:
-                software.append(record['software'])
+            if record['software']['name'] not in software:
+                software.append(record['software']['name'])
     countries.sort()
     software.sort()
     matrix = {}
@@ -143,11 +144,12 @@ def stats(output='country_software.csv'):
         matrix[country] = {'country' : country}
         for soft in software:
             matrix[country][soft] = 0
-    for record in data:     
-        if 'countries' in record.keys():
-            for country in record['countries']:
+    for record in data:
+        if 'coverage' in record.keys():
+            for loc_rec in record['coverage']:
+                country = loc_rec['location']['country']
                 if 'software' in record.keys():
-                        matrix[country['name']][record['software']] +=1
+                    matrix[country['name']][record['software']['name']] +=1
     results = matrix.values()
     outfile = open(output, 'w', encoding='utf8')
     fieldnames = ['country',]
