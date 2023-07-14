@@ -10,6 +10,12 @@ coverage:
       id: RU
       name: Russian Federation
     level: 1
+endpoints:
+- type: ckan:package-list
+  url: http://permafrost.su/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://permafrost.su/data.json
 id: permafrostsu
 langs:
 - RU
@@ -25,6 +31,8 @@ owner:
   name: Russian Federal State Budgetary Organization “State Hydrological Institute”
     (SHI)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: dkan
   name: DKAN
@@ -38,6 +46,4 @@ topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001370

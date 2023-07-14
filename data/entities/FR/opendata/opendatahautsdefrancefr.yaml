@@ -12,8 +12,11 @@ coverage:
       name: France
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://opendata.hautsdefrance.fr/api/3
+- type: ckan:package-list
+  url: https://opendata.hautsdefrance.fr/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://opendata.hautsdefrance.fr/data.json
 export_standard: CKAN API
 id: opendatahautsdefrancefr
 identifiers:

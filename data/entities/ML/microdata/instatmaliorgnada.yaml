@@ -14,7 +14,9 @@ coverage:
     level: 1
 endpoints:
 - type: nada:catalog-search
-  url: https://www.instat-mali.org/nada/index.php/catalog
+  url: https://www.instat-mali.org/nada/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://www.instat-mali.org/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: instatmaliorgnada
 langs:
 - EN

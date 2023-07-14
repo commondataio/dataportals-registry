@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: DE-SN
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://csw-sachsen.idu.de/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://csw-sachsen.idu.de/geonetwork/srv/api
+- type: openapi
+  url: http://csw-sachsen.idu.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://csw-sachsen.idu.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://csw-sachsen.idu.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://csw-sachsen.idu.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: cswsachsenidude
 langs:

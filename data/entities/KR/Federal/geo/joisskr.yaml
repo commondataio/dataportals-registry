@@ -13,10 +13,20 @@ coverage:
       name: South Korea
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: http://joiss.kr/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://joiss.kr/geonetwork/srv/api
+- type: geonetwork:query
+  url: https://joiss.kr/geonetwork/srv/eng/q
+- type: openapi
+  url: https://joiss.kr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://joiss.kr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://joiss.kr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://joiss.kr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: joisskr
 identifiers:

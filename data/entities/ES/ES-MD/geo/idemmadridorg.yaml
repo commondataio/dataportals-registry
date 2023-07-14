@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: ES-MD
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://idem.madrid.org/catalogocartografia/srv/eng/q
-- type: geonetworkapi
-  url: https://idem.madrid.org/catalogocartografia/srv/api
+- type: openapi
+  url: https://idem.madrid.org/catalogocartografia/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://idem.madrid.org/catalogocartografia/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://idem.madrid.org/catalogocartografia/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://idem.madrid.org/catalogocartografia/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: idemmadridorg
 langs:

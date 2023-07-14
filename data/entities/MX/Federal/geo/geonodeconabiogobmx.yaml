@@ -11,6 +11,34 @@ coverage:
       id: MX
       name: Mexico
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://geonode.conabio.gob.mx/api/layers/
+- type: geonode:documents
+  url: http://geonode.conabio.gob.mx/api/documents/
+- type: dcatus11
+  url: http://geonode.conabio.gob.mx/data.json
+- type: wms
+  url: http://geonode.conabio.gob.mx/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://geonode.conabio.gob.mx/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://geonode.conabio.gob.mx/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://geonode.conabio.gob.mx/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://geonode.conabio.gob.mx/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://geonode.conabio.gob.mx/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geonode.conabio.gob.mx/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonodeconabiogobmx
 langs:
 - ES
@@ -25,6 +53,8 @@ owner:
     level: 1
   name: La Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABO)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -38,6 +68,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002135

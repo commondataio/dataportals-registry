@@ -12,8 +12,12 @@ coverage:
       name: Greece
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://geodm.gr/api/3
+- type: ckan:package-search
+  url: https://geodm.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://geodm.gr/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: geodmgr
 langs:

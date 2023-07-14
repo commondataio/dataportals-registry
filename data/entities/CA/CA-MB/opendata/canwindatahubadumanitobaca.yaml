@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: CA-MB
 endpoints:
-- type: ckanapi
-  url: https://canwin-datahub.ad.umanitoba.ca/data/api/3
+- type: ckan:package-search
+  url: https://canwin-datahub.ad.umanitoba.ca/data/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://canwin-datahub.ad.umanitoba.ca/data/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: canwindatahubadumanitobaca
 identifiers:

@@ -13,10 +13,12 @@ coverage:
       name: Slovenia
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://metadata.izrk.zrc-sazu.si/srv/eng/q
-- type: geonetworkapi
-  url: https://metadata.izrk.zrc-sazu.si/srv/api
+- type: csw
+  url: https://metadata.izrk.zrc-sazu.si/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://metadata.izrk.zrc-sazu.si/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: metadataizrkzrcsazusi
 langs:

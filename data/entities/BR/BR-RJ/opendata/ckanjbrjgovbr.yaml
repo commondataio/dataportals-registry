@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: BR-RJ
 endpoints:
-- type: ckanapi
-  url: https://ckan.jbrj.gov.br/api/3
+- type: ckan:package-search
+  url: https://ckan.jbrj.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.jbrj.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: ckanjbrjgovbr
 langs:
@@ -30,7 +34,7 @@ owner:
     level: 2
     subregion:
       id: BR-RJ
-  name: 'Instituto de Pesquisas Jardim Botânico do Rio de Janeiro'
+  name: Instituto de Pesquisas Jardim Botânico do Rio de Janeiro
   type: Central government
 software:
   id: ckan

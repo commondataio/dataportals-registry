@@ -13,10 +13,15 @@ coverage:
       name: Thailand
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: http://wis.tmd.go.th/openwis-user-portal/srv/eng/q
-- type: geonetworkapi
-  url: http://wis.tmd.go.th/openwis-user-portal/srv/api
+- type: csw
+  url: http://wis.tmd.go.th/openwis-user-portal/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://wis.tmd.go.th/openwis-user-portal/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://wis.tmd.go.th/openwis-user-portal/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: wistmdgoth
 langs:
@@ -32,6 +37,8 @@ owner:
     level: 1
   name: Thai meteorological department
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +54,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001510

@@ -12,8 +12,12 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.maintenance.org.au/api/3
+- type: ckan:package-search
+  url: https://data.maintenance.org.au/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.maintenance.org.au/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datamaintenanceorgau
 langs:
@@ -27,7 +31,7 @@ owner:
       id: AU
       name: Australia
     level: 1
-  name: 'ARC Training Centre for Transforming Maintenance through Data Science'
+  name: ARC Training Centre for Transforming Maintenance through Data Science
   type: Academy
 software:
   id: ckan

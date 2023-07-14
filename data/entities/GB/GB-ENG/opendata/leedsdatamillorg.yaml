@@ -14,8 +14,14 @@ coverage:
     subregion:
       id: GB-ENG
 endpoints:
-- type: ckanapi
-  url: https://leedsdatamill.org/api/3
+- type: ckan:package-search
+  url: https://leedsdatamill.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://leedsdatamill.org/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://leedsdatamill.org/data.json
 export_standard: CKAN API
 id: leedsdatamillorg
 identifiers:

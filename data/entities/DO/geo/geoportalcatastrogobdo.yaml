@@ -11,6 +11,31 @@ coverage:
       id: DO
       name: Republica Dominicana
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://geoportal.catastro.gob.do/api/layers/
+- type: geonode:documents
+  url: https://geoportal.catastro.gob.do/api/documents/
+- type: dcatus11
+  url: https://geoportal.catastro.gob.do/data.json
+- type: wms
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geoportal.catastro.gob.do/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geoportal.catastro.gob.do/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts
+  url: https://geoportal.catastro.gob.do/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geoportal.catastro.gob.do/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geoportalcatastrogobdo
 langs:
 - ES

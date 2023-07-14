@@ -11,6 +11,22 @@ coverage:
       id: GR
       name: Greece
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://riskdata.thessaloniki.gr/api/layers/
+- type: geonode:documents
+  url: http://riskdata.thessaloniki.gr/api/documents/
+- type: dcatus11
+  url: http://riskdata.thessaloniki.gr/data.json
+- type: csw
+  url: http://riskdata.thessaloniki.gr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://riskdata.thessaloniki.gr/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://riskdata.thessaloniki.gr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: riskdatathessalonikigr
 langs:
 - EL

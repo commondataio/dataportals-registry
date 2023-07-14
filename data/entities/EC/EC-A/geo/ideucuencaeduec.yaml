@@ -15,10 +15,12 @@ coverage:
     subregion:
       id: EC-A
 endpoints:
-- type: geonetworkapi:query
-  url: https://ide.ucuenca.edu.ec/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://ide.ucuenca.edu.ec/geonetwork/srv/api
+- type: csw
+  url: https://ide.ucuenca.edu.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://ide.ucuenca.edu.ec/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: ideucuencaeduec
 langs:

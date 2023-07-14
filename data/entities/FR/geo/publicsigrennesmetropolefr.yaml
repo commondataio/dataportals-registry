@@ -13,10 +13,22 @@ coverage:
       name: France
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/api/records
+- type: openapi
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: publicsigrennesmetropolefr
 langs:

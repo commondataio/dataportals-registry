@@ -11,10 +11,36 @@ coverage:
       id: PY
       name: Paraguay
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://pese.pti.org.py/api/layers/
+- type: geonode:documents
+  url: http://pese.pti.org.py/api/documents/
+- type: wms
+  url: http://pese.pti.org.py/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://pese.pti.org.py/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://pese.pti.org.py/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://pese.pti.org.py/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://pese.pti.org.py/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://pese.pti.org.py/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://pese.pti.org.py/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: peseptiorgpy
 langs:
 - ES
-link: https://pese.pti.org.py
+link: http://pese.pti.org.py
 name: The Mapping of the Solar and Wind Energy Potential of Paraguay (PESE_PY) geo
   data
 owner:

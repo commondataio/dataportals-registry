@@ -12,8 +12,12 @@ coverage:
       name: Denmark
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://sprogteknologi.dk/api/3
+- type: ckan:package-search
+  url: https://sprogteknologi.dk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://sprogteknologi.dk/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: sprogteknologidk
 langs:
@@ -27,7 +31,7 @@ owner:
       id: DK
       name: Denmark
     level: 1
-  name: 'The Danish Agency for Digitalisation'
+  name: The Danish Agency for Digitalisation
   type: Academy
 software:
   id: ckan

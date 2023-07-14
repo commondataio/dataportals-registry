@@ -11,6 +11,17 @@ coverage:
       id: MX
       name: Mexico
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://ide.sedatu.gob.mx/api/layers/
+- type: geonode:documents
+  url: https://ide.sedatu.gob.mx/api/documents/
+- type: csw
+  url: https://ide.sedatu.gob.mx/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ide.sedatu.gob.mx/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: idesedatugobmx
 langs:
 - ES

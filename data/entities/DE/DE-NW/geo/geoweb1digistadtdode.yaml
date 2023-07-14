@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: DE-NW
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/eng/q
-- type: geonetworkapi
-  url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/api
+- type: openapi
+  url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geoweb1.digistadtdo.de/geodatenkatalog/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geoweb1digistadtdode
 langs:

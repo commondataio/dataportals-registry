@@ -10,6 +10,18 @@ coverage:
       id: US
       name: United States
     level: 1
+endpoints:
+- type: dcatus11
+  url: https://data.medicaid.gov/data.json
+- type: dkan:search
+  url: https://data.medicaid.gov/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://data.medicaid.gov/api/1/metastore
+  version: '1'
+- type: dkan:datastore
+  url: https://data.medicaid.gov/api/1/metastore
+  version: '1'
 id: datamedicaidgov
 langs:
 - EN
@@ -24,6 +36,8 @@ owner:
     level: 1
   name: Medicaid
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: dkan
   name: DKAN
@@ -37,6 +51,4 @@ topics:
 - id: Health
   name: Health
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001625

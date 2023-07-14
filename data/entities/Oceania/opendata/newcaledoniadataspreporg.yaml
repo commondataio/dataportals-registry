@@ -10,6 +10,12 @@ coverage:
       id: NC
       name: New Caledonia
     level: 1
+endpoints:
+- type: ckan:package-list
+  url: https://newcaledonia-data.sprep.org/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://newcaledonia-data.sprep.org/data.json
 id: newcaledoniadataspreporg
 langs:
 - EN
@@ -24,6 +30,8 @@ owner:
     level: 1
   name: Pacific Regional Environment Programme
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: dkan
   name: DKAN
@@ -37,6 +45,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001252

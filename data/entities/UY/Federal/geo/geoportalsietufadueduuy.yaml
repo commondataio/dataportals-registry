@@ -11,6 +11,32 @@ coverage:
       id: UY
       name: Uruguay
     level: 1
+endpoints:
+- type: geonode:datasets
+  url: http://geoportalsietu.fadu.edu.uy/api/datasets/
+- type: geonode:documents
+  url: http://geoportalsietu.fadu.edu.uy/api/documents/
+- type: wms
+  url: http://geoportalsietu.fadu.edu.uy/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://geoportalsietu.fadu.edu.uy/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://geoportalsietu.fadu.edu.uy/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://geoportalsietu.fadu.edu.uy/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://geoportalsietu.fadu.edu.uy/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://geoportalsietu.fadu.edu.uy/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geoportalsietu.fadu.edu.uy/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geoportalsietufadueduuy
 langs:
 - ES

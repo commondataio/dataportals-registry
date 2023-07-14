@@ -12,6 +12,34 @@ coverage:
       name: Tanzania
     level: 1
 description: The catalyst for resilient urban development in Tanzania
+endpoints:
+- type: geonode:layers
+  url: https://geonode.resilienceacademy.ac.tz/api/layers/
+- type: geonode:documents
+  url: https://geonode.resilienceacademy.ac.tz/api/documents/
+- type: dcatus11
+  url: https://geonode.resilienceacademy.ac.tz/data.json
+- type: wms
+  url: https://geonode.resilienceacademy.ac.tz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geonode.resilienceacademy.ac.tz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geonode.resilienceacademy.ac.tz/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geonode.resilienceacademy.ac.tz/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geonode.resilienceacademy.ac.tz/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://geonode.resilienceacademy.ac.tz/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.resilienceacademy.ac.tz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonoderesilienceacademyactz
 langs:
 - EN
@@ -26,6 +54,9 @@ owner:
     level: 1
   name: Government of Tanzania
   type: Central government
+properties:
+  transferable_location: true
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -43,7 +74,4 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
-properties:
-  transferable_topics: true
-  transferable_location: true
 uid: cdi00001592

@@ -12,8 +12,12 @@ coverage:
       name: India
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://openbudgetsindia.org/api/3
+- type: ckan:package-search
+  url: https://openbudgetsindia.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://openbudgetsindia.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: openbudgetsindiaorg
 langs:
@@ -27,8 +31,10 @@ owner:
       id: IN
       name: India
     level: 1
-  name: 'Centre for Budget and Governance Accountability (CBGA). India'
+  name: Centre for Budget and Governance Accountability (CBGA). India
   type: Civil society
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -42,6 +48,4 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000930

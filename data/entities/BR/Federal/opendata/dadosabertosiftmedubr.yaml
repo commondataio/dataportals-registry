@@ -12,8 +12,12 @@ coverage:
       name: Brazil
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://dadosabertos.iftm.edu.br/api/3
+- type: ckan:package-search
+  url: https://dadosabertos.iftm.edu.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.iftm.edu.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosabertosiftmedubr
 langs:
@@ -27,7 +31,7 @@ owner:
       id: BR
       name: Brazil
     level: 1
-  name: 'IFTM'
+  name: IFTM
   type: Academy
 software:
   id: ckan

@@ -11,6 +11,29 @@ coverage:
       id: KZ
       name: Kazakhstan
     level: 1
+endpoints:
+- type: geonode:datasets
+  url: https://map.gov.kz/api/datasets/
+- type: geonode:documents
+  url: https://map.gov.kz/api/documents/
+- type: wms
+  url: https://map.gov.kz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://map.gov.kz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://map.gov.kz/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://map.gov.kz/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://map.gov.kz/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://map.gov.kz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 export_standard: GeoServer API
 id: mapgovkz
 langs:

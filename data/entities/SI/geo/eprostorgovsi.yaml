@@ -13,10 +13,20 @@ coverage:
       name: Slovenia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://eprostor.gov.si/imps/srv/eng/q
-- type: geonetworkapi
-  url: https://eprostor.gov.si/imps/srv/api
+- type: openapi
+  url: https://eprostor.gov.si/imps/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://eprostor.gov.si/imps/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://eprostor.gov.si/imps/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://eprostor.gov.si/imps/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: eprostorgovsi
 langs:

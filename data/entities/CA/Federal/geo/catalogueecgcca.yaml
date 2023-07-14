@@ -13,10 +13,22 @@ coverage:
       name: Canada
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://catalogue.ec.gc.ca/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://catalogue.ec.gc.ca/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://catalogue.ec.gc.ca/geonetwork/srv/api/records
+- type: openapi
+  url: https://catalogue.ec.gc.ca/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://catalogue.ec.gc.ca/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalogue.ec.gc.ca/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://catalogue.ec.gc.ca/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: catalogueecgcca
 identifiers:
@@ -36,6 +48,8 @@ owner:
     level: 1
   name: Environment and Climate Change Canada
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -54,6 +68,4 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000268

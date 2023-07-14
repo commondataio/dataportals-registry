@@ -11,6 +11,31 @@ coverage:
       id: NG
       name: Nigeria
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://data.nigeriase4all.gov.ng/api/layers/
+- type: geonode:documents
+  url: https://data.nigeriase4all.gov.ng/api/documents/
+- type: dcatus11
+  url: https://data.nigeriase4all.gov.ng/data.json
+- type: wms
+  url: https://data.nigeriase4all.gov.ng/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://data.nigeriase4all.gov.ng/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://data.nigeriase4all.gov.ng/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://data.nigeriase4all.gov.ng/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://data.nigeriase4all.gov.ng/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://data.nigeriase4all.gov.ng/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: datanigeriase4allgovng
 langs:
 - EN

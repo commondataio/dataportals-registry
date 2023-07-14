@@ -12,8 +12,11 @@ coverage:
       name: Benin
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://crec.bj/api
+- type: ckan:package-list
+  url: https://crec.bj/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://crec.bj/data.json
 export_standard: CKAN API
 id: crecbj
 langs:

@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: BO-L
 endpoints:
-- type: ckanapi
-  url: https://datosabiertos.lapaz.bo/api
+- type: ckan:package-search
+  url: https://datosabiertos.lapaz.bo/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.lapaz.bo/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datosabiertoslapazbo
 langs:

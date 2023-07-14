@@ -11,6 +11,32 @@ coverage:
       id: KG
       name: Kyrgyzstan
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://geonode.caiag.kg/api/layers/
+- type: geonode:documents
+  url: https://geonode.caiag.kg/api/documents/
+- type: wms
+  url: https://geonode.caiag.kg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geonode.caiag.kg/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geonode.caiag.kg/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geonode.caiag.kg/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geonode.caiag.kg/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://geonode.caiag.kg/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.caiag.kg/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonodecaiagkg
 langs:
 - RU

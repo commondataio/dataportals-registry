@@ -13,10 +13,20 @@ coverage:
       name: Germany
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://gdi-catalog.bmel.de/srv/eng/q
-- type: geonetworkapi
-  url: https://gdi-catalog.bmel.de/srv/api
+- type: openapi
+  url: https://gdi-catalog.bmel.de/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://gdi-catalog.bmel.de/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://gdi-catalog.bmel.de/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://gdi-catalog.bmel.de/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: gdicatalogbmelde
 langs:
@@ -33,6 +43,8 @@ owner:
     level: 1
   name: Federal ministry of food and agriculture
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +59,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000416

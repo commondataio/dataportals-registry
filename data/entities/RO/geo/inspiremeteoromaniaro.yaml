@@ -13,10 +13,22 @@ coverage:
       name: Romania
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://inspire.meteoromania.ro/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://inspire.meteoromania.ro/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://inspire.meteoromania.ro/geonetwork/srv/api/records
+- type: openapi
+  url: https://inspire.meteoromania.ro/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: inspiremeteoromaniaro
 langs:
@@ -32,6 +44,8 @@ owner:
     level: 1
   name: Administraţia Naţională de Meteorologie
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +61,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001339

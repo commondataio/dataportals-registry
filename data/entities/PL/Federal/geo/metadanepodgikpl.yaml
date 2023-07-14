@@ -14,10 +14,20 @@ coverage:
       name: Poland
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://metadane.podgik.pl/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://metadane.podgik.pl/geonetwork/srv/api
+- type: openapi
+  url: https://metadane.podgik.pl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://metadane.podgik.pl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadane.podgik.pl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://metadane.podgik.pl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: metadanepodgikpl
 langs:
@@ -31,7 +41,7 @@ owner:
       id: PL
       name: Poland
     level: 1
-  name: 'Geo-System Sp. z o.o.'
+  name: Geo-System Sp. z o.o.
   type: Business
 software:
   id: geonetwork

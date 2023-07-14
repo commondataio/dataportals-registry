@@ -14,6 +14,32 @@ coverage:
     level: 2
     subregion:
       id: EC-M
+endpoints:
+- type: geonode:layers
+  url: https://geovisor.manabi.gob.ec/api/layers/
+- type: geonode:documents
+  url: https://geovisor.manabi.gob.ec/api/documents/
+- type: wms
+  url: https://geovisor.manabi.gob.ec/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geovisor.manabi.gob.ec/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geovisor.manabi.gob.ec/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geovisor.manabi.gob.ec/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geovisor.manabi.gob.ec/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://geovisor.manabi.gob.ec/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geovisor.manabi.gob.ec/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geovisormanabigobec
 langs:
 - ES

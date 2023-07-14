@@ -12,14 +12,18 @@ coverage:
       name: Denmark
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://portal.opendata.dk/api/3
+- type: ckan:package-search
+  url: https://portal.opendata.dk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://portal.opendata.dk/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: portalopendatadk
 langs:
 - DA
 link: https://portal.opendata.dk
-name: 'Open Data DK'
+name: Open Data DK
 owner:
   link: https://www.opendata.dk
   location:
@@ -27,7 +31,7 @@ owner:
       id: DK
       name: Denmark
     level: 1
-  name: 'Open Data DK'
+  name: Open Data DK
   type: Civil society
 software:
   id: ckan

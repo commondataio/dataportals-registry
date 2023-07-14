@@ -14,6 +14,34 @@ coverage:
 description: The geoportal is a platform that facilitates the creation, sharing and
   collaborative use of biodiversity and protected area manegment geospatial data under
   Ethiopian Biodiversity and Protected Area Managment Program (ETH-BIOPAMA).
+endpoints:
+- type: geonode:layers
+  url: http://geo.portal.ebi.gov.et/api/layers/
+- type: geonode:documents
+  url: http://geo.portal.ebi.gov.et/api/documents/
+- type: dcatus11
+  url: http://geo.portal.ebi.gov.et/data.json
+- type: wms
+  url: http://geo.portal.ebi.gov.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://geo.portal.ebi.gov.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://geo.portal.ebi.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://geo.portal.ebi.gov.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://geo.portal.ebi.gov.et/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://geo.portal.ebi.gov.et/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geo.portal.ebi.gov.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geoportalebigovet
 langs:
 - EN
@@ -28,6 +56,8 @@ owner:
     level: 1
   name: Ethiopian Biodiversity Institute
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -41,6 +71,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002410

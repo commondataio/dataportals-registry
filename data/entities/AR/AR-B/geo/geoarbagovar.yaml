@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: AR-B
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geo.arba.gov.ar/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geo.arba.gov.ar/geonetwork/srv/api
+- type: openapi
+  url: https://geo.arba.gov.ar/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geo.arba.gov.ar/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geo.arba.gov.ar/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geo.arba.gov.ar/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geoarbagovar
 langs:

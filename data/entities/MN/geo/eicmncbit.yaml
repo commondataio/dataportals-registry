@@ -11,6 +11,20 @@ coverage:
       id: MN
       name: Mongolia
     level: 1
+endpoints:
+- type: geonode:datasets
+  url: https://eic.mn/cbit//api/datasets/
+- type: geonode:documents
+  url: https://eic.mn/cbit//api/documents/
+- type: csw
+  url: https://eic.mn/cbit//catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://eic.mn/cbit//catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://eic.mn/cbit//catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: eicmncbit
 langs:
 - MN
@@ -25,6 +39,8 @@ owner:
     level: 1
   name: Mongolian Environmental Information Center
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -39,6 +55,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001133

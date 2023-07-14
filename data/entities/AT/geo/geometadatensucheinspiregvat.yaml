@@ -13,10 +13,22 @@ coverage:
       name: Austria
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/eng/q
-- type: geonetworkapi
-  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/api
+- type: geonetwork:records
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/api/records
+- type: openapi
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geometadatensucheinspiregvat
 langs:
@@ -32,6 +44,8 @@ owner:
     level: 1
   name: Austrian Federal Ministry of Agriculture, Forestry, Regions and Water Management
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +61,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00002111

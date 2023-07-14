@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: ES-AN
 endpoints:
-- type: ckanapi
-  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3
+- type: ckan:package-search
+  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: wwwjuntadeandaluciaes
 identifiers:

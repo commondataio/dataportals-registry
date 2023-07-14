@@ -11,6 +11,30 @@ coverage:
       id: 'NO'
       name: Norway
     level: 1
+endpoints:
+- type: geonode:documents
+  url: http://geo.grida.no/api/documents/
+- type: wms
+  url: http://geo.grida.no/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://geo.grida.no/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://geo.grida.no/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://geo.grida.no/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://geo.grida.no/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://geo.grida.no/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geo.grida.no/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geogridano
 langs:
 - EN
@@ -25,6 +49,8 @@ owner:
     level: 1
   name: GRID-Arendal is a non-profit environmental communications centre
   type: Civil society
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -39,6 +65,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001198

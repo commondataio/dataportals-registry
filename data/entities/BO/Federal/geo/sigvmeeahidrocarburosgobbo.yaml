@@ -11,6 +11,28 @@ coverage:
       id: BO
       name: Bolivia
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://sigvmeea.hidrocarburos.gob.bo/api/layers/
+- type: geonode:documents
+  url: http://sigvmeea.hidrocarburos.gob.bo/api/documents/
+- type: dcatus11
+  url: http://sigvmeea.hidrocarburos.gob.bo/data.json
+- type: wms
+  url: http://sigvmeea.hidrocarburos.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs
+  url: http://sigvmeea.hidrocarburos.gob.bo/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://sigvmeea.hidrocarburos.gob.bo/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: sigvmeeahidrocarburosgobbo
 langs:
 - ES
@@ -25,6 +47,8 @@ owner:
     level: 1
   name: Ministerio de Hidrocarburos y Energías
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -36,6 +60,4 @@ topics:
 - id: ENER
   name: Energy
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000174

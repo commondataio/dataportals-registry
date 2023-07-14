@@ -13,10 +13,15 @@ coverage:
       name: Norway
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: http://metadata.nersc.no/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://metadata.nersc.no/geonetwork/srv/api
+- type: csw
+  url: http://metadata.nersc.no/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://metadata.nersc.no/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://metadata.nersc.no/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: metadatanerscno
 langs:
@@ -32,6 +37,8 @@ owner:
     level: 1
   name: Nansen Environmental and Remote Sensing Center
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -46,6 +53,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00002332

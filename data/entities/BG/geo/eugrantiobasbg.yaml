@@ -13,10 +13,17 @@ coverage:
       name: Bulgaria
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://eugrant.io-bas.bg:8080/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://eugrant.io-bas.bg:8080/geonetwork/srv/api
+- type: csw
+  url: http://eugrant.io-bas.bg:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://eugrant.io-bas.bg:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://eugrant.io-bas.bg:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: eugrantiobasbg
 langs:
@@ -32,6 +39,8 @@ owner:
     level: 1
   name: National Marine Research and Expert Center of Bulgraria
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +56,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000156

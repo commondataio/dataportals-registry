@@ -13,10 +13,12 @@ coverage:
       name: Belgium
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://metadata.naturalsciences.be/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://metadata.naturalsciences.be/geonetwork/srv/api
+- type: csw
+  url: https://metadata.naturalsciences.be/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://metadata.naturalsciences.be/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: metadatanaturalsciencesbe
 langs:

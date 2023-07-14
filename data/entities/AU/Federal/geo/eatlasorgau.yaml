@@ -13,10 +13,22 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://eatlas.org.au/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://eatlas.org.au/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://eatlas.org.au/geonetwork/srv/api/records
+- type: openapi
+  url: https://eatlas.org.au/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://eatlas.org.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://eatlas.org.au/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://eatlas.org.au/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: eatlasorgau
 identifiers:
@@ -35,10 +47,16 @@ owner:
     level: 1
   name: Australian Institute of Marine Science
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
 status: active
+tags:
+- geospatial
+- government
+- has_api
 topics:
 - id: Oceans
   name: Oceans
@@ -46,10 +64,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
-tags:
-- geospatial
-- government
-- has_api
 uid: cdi00000073

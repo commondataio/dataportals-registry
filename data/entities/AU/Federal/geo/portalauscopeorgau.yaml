@@ -13,10 +13,22 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://portal.auscope.org.au/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://portal.auscope.org.au/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://portal.auscope.org.au/geonetwork/srv/api/records
+- type: openapi
+  url: http://portal.auscope.org.au/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://portal.auscope.org.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://portal.auscope.org.au/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://portal.auscope.org.au/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: portalauscopeorgau
 langs:
@@ -31,6 +43,8 @@ owner:
     level: 1
   name: AuScope Limited
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -46,6 +60,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000082

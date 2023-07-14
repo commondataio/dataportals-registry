@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: BR-RS
 endpoints:
-- type: ckanapi
-  url: http://dados.tce.rs.gov.br/api/3
+- type: ckan:package-search
+  url: https://dados.tce.rs.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.tce.rs.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadostcersgovbr
 identifiers:
@@ -34,7 +38,7 @@ owner:
     level: 2
     subregion:
       id: BR-RS
-  name: 'COURT OF AUDIT OF THE STATE OF RIO GRANDE DO SUL'
+  name: COURT OF AUDIT OF THE STATE OF RIO GRANDE DO SUL
   type: Regional government
 properties:
   transferable_location: true

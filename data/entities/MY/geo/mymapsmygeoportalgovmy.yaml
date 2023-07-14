@@ -11,6 +11,29 @@ coverage:
       id: MY
       name: Malaysia
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://mymaps.mygeoportal.gov.my/api/layers/
+- type: geonode:documents
+  url: https://mymaps.mygeoportal.gov.my/api/documents/
+- type: wms
+  url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://mymaps.mygeoportal.gov.my/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://mymaps.mygeoportal.gov.my/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://mymaps.mygeoportal.gov.my/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: mymapsmygeoportalgovmy
 langs:
 - EN

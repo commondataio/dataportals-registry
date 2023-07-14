@@ -13,10 +13,20 @@ coverage:
       name: Portugal
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://radaronraia.inesctec.pt/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://radaronraia.inesctec.pt/geonetwork/srv/api
+- type: openapi
+  url: https://radaronraia.inesctec.pt/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://radaronraia.inesctec.pt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://radaronraia.inesctec.pt/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://radaronraia.inesctec.pt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: radaronraiainesctecpt
 langs:
@@ -30,7 +40,7 @@ owner:
       id: PT
       name: Portugal
     level: 1
-  name: 'INESC TEC'
+  name: INESC TEC
   type: Academy
 software:
   id: geonetwork

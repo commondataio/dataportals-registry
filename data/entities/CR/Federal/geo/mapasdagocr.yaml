@@ -13,10 +13,14 @@ coverage:
       name: Costa Rica
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://mapas.da.go.cr/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://mapas.da.go.cr/geonetwork/srv/api
+- type: csw
+  url: http://mapas.da.go.cr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://mapas.da.go.cr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: mapasdagocr
 langs:

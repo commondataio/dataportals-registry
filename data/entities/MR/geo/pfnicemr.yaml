@@ -11,6 +11,32 @@ coverage:
       id: MR
       name: Mauritania
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://pfni-ce.mr/api/layers/
+- type: geonode:documents
+  url: http://pfni-ce.mr/api/documents/
+- type: wms
+  url: http://pfni-ce.mr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://pfni-ce.mr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://pfni-ce.mr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://pfni-ce.mr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://pfni-ce.mr/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://pfni-ce.mr/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://pfni-ce.mr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: pfnicemr
 langs:
 - FR
@@ -26,10 +52,15 @@ owner:
     level: 1
   name: Commission Environnementale Mauritania
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
 status: active
+tags:
+- geospatial
+- government
 topics:
 - id: Oceans
   name: Oceans
@@ -37,9 +68,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
-tags:
-- geospatial
-- government
 uid: cdi00001128

@@ -14,8 +14,14 @@ coverage:
     subregion:
       id: AR-B
 endpoints:
-- type: ckanapi
-  url: http://datosabiertos.mercedes.gob.ar/api/3
+- type: ckan:package-search
+  url: http://datosabiertos.mercedes.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://datosabiertos.mercedes.gob.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://datosabiertos.mercedes.gob.ar/data.json
 export_standard: CKAN API
 id: datosabiertosmercedesgobar
 langs:

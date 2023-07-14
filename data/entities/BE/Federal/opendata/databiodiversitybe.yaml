@@ -12,8 +12,12 @@ coverage:
       name: Belgium
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://data.biodiversity.be/api/3
+- type: ckan:package-search
+  url: https://data.biodiversity.be/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.biodiversity.be/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: databiodiversitybe
 langs:
@@ -27,18 +31,18 @@ owner:
       id: BE
       name: Belgium
     level: 1
-  name: 'The Belgian Biodiversity Platform'
+  name: The Belgian Biodiversity Platform
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
 status: active
 tags:
 - has_api
-topics: 
+topics:
 - id: Biota
   name: Biota
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000142

@@ -13,10 +13,15 @@ coverage:
       name: Germany
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://gdi-he.gingko.de/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://gdi-he.gingko.de/geonetwork/srv/api
+- type: csw
+  url: https://gdi-he.gingko.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://gdi-he.gingko.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://gdi-he.gingko.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: gdihegingkode
 langs:

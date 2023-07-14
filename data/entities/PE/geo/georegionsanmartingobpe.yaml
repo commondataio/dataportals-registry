@@ -13,10 +13,22 @@ coverage:
       name: Peru
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/api/records
+- type: openapi
+  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://geo.regionsanmartin.gob.pe:8089/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: georegionsanmartingobpe
 langs:

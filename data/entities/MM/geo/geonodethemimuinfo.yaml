@@ -11,6 +11,34 @@ coverage:
       id: MM
       name: Myanmar
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://geonode.themimu.info/api/layers/
+- type: geonode:documents
+  url: https://geonode.themimu.info/api/documents/
+- type: dcatus11
+  url: https://geonode.themimu.info/data.json
+- type: wms
+  url: https://geonode.themimu.info/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geonode.themimu.info/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geonode.themimu.info/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geonode.themimu.info/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geonode.themimu.info/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://geonode.themimu.info/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.themimu.info/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonodethemimuinfo
 langs:
 - EN

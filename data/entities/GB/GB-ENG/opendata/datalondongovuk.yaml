@@ -14,8 +14,14 @@ coverage:
     subregion:
       id: GB-ENG
 endpoints:
-- type: ckanapi
-  url: https://data.london.gov.uk/dataset/api/3
+- type: ckan:package-search
+  url: https://data.london.gov.uk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.london.gov.uk/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.london.gov.uk/data.json
 export_standard: CKAN API
 id: datalondongovuk
 identifiers:

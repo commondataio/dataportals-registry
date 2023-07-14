@@ -13,8 +13,8 @@ coverage:
       name: Vietnam
     level: 1
 endpoints:
-- type: nada:catalog-search
-  url: http://data.huph.edu.vn/index.php/api/catalog/search
+- type: nada:csvexport
+  url: http://data.huph.edu.vn/index.php/catalog/export/csv?ps=5000&collection[]
 id: datahupheduvn
 langs:
 - EN
@@ -29,6 +29,8 @@ owner:
     level: 1
   name: Hanoi School of Public Health
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: nada
   name: NADA
@@ -50,6 +52,4 @@ topics:
 - id: Health
   name: Health
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001953

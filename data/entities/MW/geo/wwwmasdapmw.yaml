@@ -12,6 +12,29 @@ coverage:
       name: Malawi
     level: 1
 description: A public platform for GIS Data to support development in Malawi
+endpoints:
+- type: geonode:datasets
+  url: https://www.masdap.mw/api/datasets/
+- type: geonode:documents
+  url: https://www.masdap.mw/api/documents/
+- type: wms
+  url: https://www.masdap.mw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://www.masdap.mw/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://www.masdap.mw/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://www.masdap.mw/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://www.masdap.mw/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://www.masdap.mw/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: wwwmasdapmw
 langs:
 - EN

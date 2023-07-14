@@ -12,8 +12,12 @@ coverage:
       name: Finland
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://ckanmtp.ymparisto.fi/api/3
+- type: ckan:package-search
+  url: https://ckanmtp.ymparisto.fi/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckanmtp.ymparisto.fi/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: ckanmtpymparistofi
 langs:
@@ -29,6 +33,8 @@ owner:
     level: 1
   name: Finnish Environment Institute
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +49,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000630

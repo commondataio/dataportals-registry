@@ -13,10 +13,15 @@ coverage:
       name: Uruguay
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://geo.correo.com.uy/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geo.correo.com.uy/geonetwork/srv/api
+- type: csw
+  url: https://geo.correo.com.uy/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geo.correo.com.uy/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geo.correo.com.uy/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geocorreocomuy
 langs:

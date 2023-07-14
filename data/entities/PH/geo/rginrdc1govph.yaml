@@ -11,6 +11,18 @@ coverage:
       id: PH
       name: Phillipines
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://rgin.rdc1.gov.ph/api/layers/
+- type: wms
+  url: https://rgin.rdc1.gov.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://rgin.rdc1.gov.ph/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://rgin.rdc1.gov.ph/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: rginrdc1govph
 langs:
 - EN

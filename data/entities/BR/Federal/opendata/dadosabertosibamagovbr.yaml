@@ -12,8 +12,12 @@ coverage:
       name: Brazil
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://dadosabertos.ibama.gov.br/api/3
+- type: ckan:package-search
+  url: https://dadosabertos.ibama.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.ibama.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosabertosibamagovbr
 langs:
@@ -31,6 +35,8 @@ owner:
   name: The Brazilian Institute for the Environment and Renewable Natural Resources
     (Ibama)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -45,6 +51,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000191

@@ -13,8 +13,12 @@ coverage:
       name: Ireland
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://datacatalogue.gov.ie/api/3
+- type: ckan:package-search
+  url: https://datacatalogue.gov.ie/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datacatalogue.gov.ie/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datacataloguegovie
 langs:

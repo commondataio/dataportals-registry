@@ -15,10 +15,19 @@ coverage:
     subregion:
       id: RU-PRI
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://gis.satellite.dvo.ru/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://gis.satellite.dvo.ru/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://gis.satellite.dvo.ru/geonetwork/srv/api/records
+- type: openapi
+  url: http://gis.satellite.dvo.ru/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://gis.satellite.dvo.ru/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://gis.satellite.dvo.ru/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
 export_standard: Geonetwork API
 id: gissatellitedvoru
 langs:
@@ -34,8 +43,10 @@ owner:
     level: 2
     subregion:
       id: RU-PRI
-  name: 'DVO RAS'
+  name: DVO RAS
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +58,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001417

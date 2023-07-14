@@ -15,10 +15,22 @@ coverage:
     subregion:
       id: ID-KI
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://geoportal.kukarkab.go.id/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://geoportal.kukarkab.go.id/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://geoportal.kukarkab.go.id/geonetwork/srv/api/records
+- type: openapi
+  url: http://geoportal.kukarkab.go.id/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://geoportal.kukarkab.go.id/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geoportal.kukarkab.go.id/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://geoportal.kukarkab.go.id/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geoportalkukarkabgoid
 langs:
@@ -34,7 +46,7 @@ owner:
     level: 2
     subregion:
       id: ID-KI
-  name: 'Kabupaten Kutai Kartanegara'
+  name: Kabupaten Kutai Kartanegara
   type: Local government
 properties:
   transferable_location: true

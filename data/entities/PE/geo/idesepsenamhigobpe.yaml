@@ -13,10 +13,20 @@ coverage:
       name: Peru
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://idesep.senamhi.gob.pe/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://idesep.senamhi.gob.pe/geonetwork/srv/api
+- type: openapi
+  url: https://idesep.senamhi.gob.pe/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://idesep.senamhi.gob.pe/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://idesep.senamhi.gob.pe/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://idesep.senamhi.gob.pe/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: idesepsenamhigobpe
 langs:
@@ -32,6 +42,8 @@ owner:
     level: 1
   name: National Meteorology and Hydrology Service of Peru
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +59,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002130

@@ -13,8 +13,12 @@ coverage:
       name: Iran
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://iranopendata.org/api/3
+- type: ckan:package-search
+  url: https://iranopendata.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://iranopendata.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: iranopendataorg
 identifiers:

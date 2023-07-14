@@ -15,10 +15,12 @@ coverage:
     subregion:
       id: DE-BW
 endpoints:
-- type: geonetworkapi:query
-  url: https://geodaten.freiburg.de/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geodaten.freiburg.de/geonetwork/srv/api
+- type: csw
+  url: https://geodaten.freiburg.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geodaten.freiburg.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geodatenfreiburgde
 langs:

@@ -14,10 +14,17 @@ coverage:
       name: France
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/eng/q
-- type: geonetworkapi
-  url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/api
+- type: openapi
+  url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/v2/api-docs
+  version: '2'
+- type: opensearch
+  url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: cataloguegeoidedeveloppementdurablegouvfr
 langs:

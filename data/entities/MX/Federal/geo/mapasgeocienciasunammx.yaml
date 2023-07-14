@@ -13,6 +13,34 @@ coverage:
     level: 1
 description: Interactive geological and hazard maps for scientific community and civil
   protection authorities.
+endpoints:
+- type: geonode:layers
+  url: http://mapas.geociencias.unam.mx/api/layers/
+- type: geonode:documents
+  url: http://mapas.geociencias.unam.mx/api/documents/
+- type: dcatus11
+  url: http://mapas.geociencias.unam.mx/data.json
+- type: wms
+  url: http://mapas.geociencias.unam.mx/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://mapas.geociencias.unam.mx/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://mapas.geociencias.unam.mx/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://mapas.geociencias.unam.mx/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://mapas.geociencias.unam.mx/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://mapas.geociencias.unam.mx/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://mapas.geociencias.unam.mx/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: mapasgeocienciasunammx
 langs:
 - ES

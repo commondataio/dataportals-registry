@@ -15,6 +15,8 @@ coverage:
 endpoints:
 - type: nada:catalog-search
   url: https://nada.zimstat.co.zw/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://nada.zimstat.co.zw/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadazimstatcozw
 langs:
 - EN
@@ -30,13 +32,11 @@ owner:
   name: Zimbabwe National Statistics Agency (ZIMSTAT)
   type: Central government
 properties:
-  transferable_topics: true
+  transferable_location: true
 software:
   id: nada
   name: NADA
 status: active
-properties:
-  transferable_location: true
 tags:
 - government
 - has_api

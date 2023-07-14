@@ -13,10 +13,12 @@ coverage:
       name: Netherlands
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: http://geonetwork.geodeatlas.nl/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://geonetwork.geodeatlas.nl/geonetwork/srv/api
+- type: csw
+  url: http://geonetwork.geodeatlas.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://geonetwork.geodeatlas.nl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geonetworkgeodeatlasnl
 langs:

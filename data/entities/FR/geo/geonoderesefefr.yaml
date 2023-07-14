@@ -12,6 +12,29 @@ coverage:
       name: France
     level: 1
 description: The spatial data platform for French schools abroad
+endpoints:
+- type: geonode:layers
+  url: https://geonode.resefe.fr/api/layers/
+- type: geonode:documents
+  url: https://geonode.resefe.fr/api/documents/
+- type: wms
+  url: https://geonode.resefe.fr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geonode.resefe.fr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geonode.resefe.fr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geonode.resefe.fr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geonode.resefe.fr/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.resefe.fr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonoderesefefr
 langs:
 - FR

@@ -11,16 +11,21 @@ coverage:
       id: BE
       name: Belgium
     level: 1
+description: Belgium national access point for intelligent transport systems (NAP
+  ITS)
 endpoints:
-- type: ckanapi
-  url: https://transportdata.be/api/3
+- type: ckan:package-search
+  url: https://transportdata.be/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://transportdata.be/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: transportdatabe
 langs:
 - EN
 link: https://transportdata.be
 name: transportdata.be
-description: Belgium national access point for intelligent transport systems (NAP ITS)
 owner:
   link: http://www.ngi.be
   location:
@@ -28,8 +33,10 @@ owner:
       id: BE
       name: Belgium
     level: 1
-  name: 'National Geographic Institute'
+  name: National Geographic Institute
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +50,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000151

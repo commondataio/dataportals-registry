@@ -15,10 +15,15 @@ coverage:
     subregion:
       id: AR-S
 endpoints:
-- type: geonetworkapi:query
-  url: https://www.santafe.gov.ar/idesf/catalogo/srv/eng/q
-- type: geonetworkapi
-  url: https://www.santafe.gov.ar/idesf/catalogo/srv/api
+- type: csw
+  url: https://www.santafe.gov.ar/idesf/catalogo/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.santafe.gov.ar/idesf/catalogo/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://www.santafe.gov.ar/idesf/catalogo/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: wwwsantafegovar
 langs:

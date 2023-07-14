@@ -11,6 +11,34 @@ coverage:
       id: HT
       name: Haiti
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://haitidata.org/api/layers/
+- type: geonode:documents
+  url: https://haitidata.org/api/documents/
+- type: dcatus11
+  url: https://haitidata.org/data.json
+- type: wms
+  url: https://haitidata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://haitidata.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://haitidata.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://haitidata.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://haitidata.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://haitidata.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://haitidata.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: aquadroughthu
 langs:
 - EN

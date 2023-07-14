@@ -14,8 +14,14 @@ coverage:
     subregion:
       id: ES-CT
 endpoints:
-- type: ckanapi
-  url: http://dadesobertes.seu-e.cat/api/3
+- type: ckan:package-search
+  url: http://dadesobertes.seu-e.cat/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://dadesobertes.seu-e.cat/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://dadesobertes.seu-e.cat/data.json
 export_standard: CKAN API
 id: dadesobertesseuecat
 langs:

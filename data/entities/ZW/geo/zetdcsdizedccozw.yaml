@@ -11,6 +11,22 @@ coverage:
       id: ZW
       name: Zimbabwe
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://zetdcsdi.zedc.co.zw:5443//api/layers/
+- type: geonode:documents
+  url: https://zetdcsdi.zedc.co.zw:5443//api/documents/
+- type: dcatus11
+  url: https://zetdcsdi.zedc.co.zw:5443//data.json
+- type: csw
+  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://zetdcsdi.zedc.co.zw:5443//catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: zetdcsdizedccozw
 langs:
 - EN

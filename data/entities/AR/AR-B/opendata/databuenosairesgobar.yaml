@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: AR-B
 endpoints:
-- type: ckanapi
-  url: https://data.buenosaires.gob.ar/api/3
+- type: ckan:package-search
+  url: https://data.buenosaires.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.buenosaires.gob.ar/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: databuenosairesgobar
 identifiers:

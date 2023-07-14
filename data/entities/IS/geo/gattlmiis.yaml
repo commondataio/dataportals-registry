@@ -13,10 +13,22 @@ coverage:
       name: Iceland
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://gatt.lmi.is/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://gatt.lmi.is/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://gatt.lmi.is/geonetwork/srv/api/records
+- type: openapi
+  url: https://gatt.lmi.is/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://gatt.lmi.is/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://gatt.lmi.is/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://gatt.lmi.is/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: gattlmiis
 langs:

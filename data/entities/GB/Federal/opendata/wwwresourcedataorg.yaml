@@ -14,8 +14,12 @@ coverage:
 description: Helping people to realize the benefits of their countries' endowments
   of oil, gas and minerals.
 endpoints:
-- type: ckanapi
-  url: https://www.resourcedata.org/api/3
+- type: ckan:package-search
+  url: https://www.resourcedata.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.resourcedata.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: wwwresourcedataorg
 langs:

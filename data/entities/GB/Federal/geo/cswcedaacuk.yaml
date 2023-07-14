@@ -13,10 +13,22 @@ coverage:
       name: United Kingdom
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://csw.ceda.ac.uk/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://csw.ceda.ac.uk/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://csw.ceda.ac.uk/geonetwork/srv/api/records
+- type: openapi
+  url: https://csw.ceda.ac.uk/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://csw.ceda.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://csw.ceda.ac.uk/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://csw.ceda.ac.uk/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: cswcedaacuk
 langs:
@@ -31,6 +43,8 @@ owner:
     level: 1
   name: The Centre for Environmental Data Analysis (CEDA)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -45,6 +59,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000751

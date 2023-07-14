@@ -11,6 +11,22 @@ coverage:
       id: DO
       name: Republica Dominicana
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://nodosini.ministeriodeeducacion.gob.do/api/layers/
+- type: geonode:documents
+  url: https://nodosini.ministeriodeeducacion.gob.do/api/documents/
+- type: dcatus11
+  url: https://nodosini.ministeriodeeducacion.gob.do/data.json
+- type: csw
+  url: https://nodosini.ministeriodeeducacion.gob.do/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://nodosini.ministeriodeeducacion.gob.do/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://nodosini.ministeriodeeducacion.gob.do/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: nodosiniministeriodeeducaciongobdo
 langs:
 - ES
@@ -26,6 +42,8 @@ owner:
     level: 1
   name: Minsterio de Educación de la República Dominicana (MENERD)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -40,6 +58,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00002407

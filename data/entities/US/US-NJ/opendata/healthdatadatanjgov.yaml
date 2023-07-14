@@ -13,6 +13,11 @@ coverage:
     level: 2
     subregion:
       id: US-NJ
+endpoints:
+- type: dcatus11
+  url: https://healthdata.nj.gov/data.json
+- type: socrata:views
+  url: https://healthdata.nj.gov/api/views
 id: healthdatadatanjgov
 langs:
 - EN
@@ -29,6 +34,8 @@ owner:
       id: US-NJ
   name: New Jersey Department of Health
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: socrata
   name: Socrata
@@ -42,6 +49,4 @@ topics:
 - id: Health
   name: Health
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001858

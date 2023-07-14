@@ -11,6 +11,22 @@ coverage:
       id: UG
       name: Uganda
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://maps.data.ug/api/layers/
+- type: geonode:documents
+  url: http://maps.data.ug/api/documents/
+- type: dcatus11
+  url: http://maps.data.ug/data.json
+- type: csw
+  url: http://maps.data.ug/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://maps.data.ug/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://maps.data.ug/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: mapsdataug
 langs:
 - EN

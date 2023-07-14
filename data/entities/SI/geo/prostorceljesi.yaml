@@ -13,10 +13,14 @@ coverage:
       name: Slovenia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://prostor.celje.si/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://prostor.celje.si/geonetwork/srv/api
+- type: csw
+  url: https://prostor.celje.si/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://prostor.celje.si/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: prostorceljesi
 langs:

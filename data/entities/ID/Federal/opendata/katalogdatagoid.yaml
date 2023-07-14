@@ -12,8 +12,12 @@ coverage:
       name: Indonesia
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://katalog.data.go.id/api/3
+- type: ckan:package-search
+  url: https://katalog.data.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://katalog.data.go.id/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: katalogdatagoid
 langs:
@@ -27,7 +31,7 @@ owner:
       id: ID
       name: Indonesia
     level: 1
-  name: 'Government of Indonesia'
+  name: Government of Indonesia
   type: Central government
 software:
   id: ckan

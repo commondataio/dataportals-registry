@@ -15,10 +15,22 @@ coverage:
     subregion:
       id: PL-08
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geoportal.um.gorzow.pl/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geoportal.um.gorzow.pl/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/api/records
+- type: openapi
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geoportalumgorzowpl
 langs:

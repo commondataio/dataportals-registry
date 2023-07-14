@@ -13,10 +13,15 @@ coverage:
       name: Bosnia and Herzegovina
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://metapodaci.ippfbih.gov.ba/srv/eng/q
-- type: geonetworkapi
-  url: https://metapodaci.ippfbih.gov.ba/srv/api
+- type: csw
+  url: https://metapodaci.ippfbih.gov.ba/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metapodaci.ippfbih.gov.ba/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://metapodaci.ippfbih.gov.ba/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: metapodaciippfbihgovba
 langs:

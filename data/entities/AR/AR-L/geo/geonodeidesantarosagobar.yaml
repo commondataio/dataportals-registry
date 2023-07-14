@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: AR-L
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/api
+- type: openapi
+  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geonodeidesantarosagobar
 langs:

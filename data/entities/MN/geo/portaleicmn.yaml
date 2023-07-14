@@ -13,10 +13,20 @@ coverage:
       name: Mongolia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://portal.eic.mn:8080/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://portal.eic.mn:8080/geonetwork/srv/api
+- type: openapi
+  url: http://portal.eic.mn:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://portal.eic.mn:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://portal.eic.mn:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://portal.eic.mn:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: portaleicmn
 langs:
@@ -32,6 +42,8 @@ owner:
     level: 1
   name: Mongolian Environmental Information Center
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +59,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001120

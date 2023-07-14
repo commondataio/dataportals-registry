@@ -13,10 +13,20 @@ coverage:
       name: European Union
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://emodnet.ec.europa.eu/geonetwork/srv/api
+- type: openapi
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: emodneteceuropaeu
 langs:
@@ -32,6 +42,8 @@ owner:
     level: 1
   name: European Marine Observation and Data Network (EMODnet)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -46,6 +58,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000593

@@ -17,6 +17,32 @@ description: This portal, based on the GeoNode platform, aims to be an open repo
   and Geophysics Laboratory (SEISLAB) of the Portuguese Institute for the Sea and
   Atmosphere (IPMA, IP), that can be accessed by the scientific community as also
   the general public
+endpoints:
+- type: geonode:layers
+  url: https://divgmwebgis.ipma.pt/api/layers/
+- type: geonode:documents
+  url: https://divgmwebgis.ipma.pt/api/documents/
+- type: wms
+  url: https://divgmwebgis.ipma.pt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://divgmwebgis.ipma.pt/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://divgmwebgis.ipma.pt/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://divgmwebgis.ipma.pt/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://divgmwebgis.ipma.pt/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://divgmwebgis.ipma.pt/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://divgmwebgis.ipma.pt/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: divgmwebgisipmapt
 langs:
 - EN

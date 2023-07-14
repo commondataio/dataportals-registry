@@ -13,8 +13,9 @@ coverage:
       name: Austria
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.ccca.ac.at/api/3
+- type: ckan:package-search
+  url: https://data.ccca.ac.at/api/3/action/package_search
+  version: '3'
 export_standard: CKAN API
 id: datacccaacat
 identifiers:
@@ -33,6 +34,8 @@ owner:
     level: 1
   name: The Climate Change Centre Austria – CCCA
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -50,6 +53,4 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000059

@@ -13,10 +13,20 @@ coverage:
       name: Austria
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/q
-- type: geonetworkapi
-  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/api
+- type: openapi
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geometadatenlfrzat
 langs:
@@ -32,6 +42,8 @@ owner:
     level: 1
   name: The agricultural, forestry and water management data center (LFRZ)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +59,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00002110

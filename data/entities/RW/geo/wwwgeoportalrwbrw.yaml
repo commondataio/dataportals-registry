@@ -11,6 +11,34 @@ coverage:
       id: RW
       name: Rwanda
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://www.geoportal.rwb.rw/api/layers/
+- type: geonode:documents
+  url: https://www.geoportal.rwb.rw/api/documents/
+- type: dcatus11
+  url: https://www.geoportal.rwb.rw/data.json
+- type: wms
+  url: https://www.geoportal.rwb.rw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://www.geoportal.rwb.rw/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://www.geoportal.rwb.rw/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://www.geoportal.rwb.rw/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://www.geoportal.rwb.rw/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://www.geoportal.rwb.rw/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://www.geoportal.rwb.rw/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: wwwgeoportalrwbrw
 langs:
 - EN

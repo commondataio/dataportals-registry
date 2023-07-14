@@ -12,8 +12,12 @@ coverage:
       name: Brazil
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://dados.agricultura.gov.br/api/3
+- type: ckan:package-search
+  url: https://dados.agricultura.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.agricultura.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosagriculturagovbr
 langs:
@@ -27,8 +31,10 @@ owner:
       id: BR
       name: Brazil
     level: 1
-  name: 'Ministério da Agricultura, Pecuária e Abastecimento'
+  name: Ministério da Agricultura, Pecuária e Abastecimento
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +49,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000201

@@ -12,6 +12,31 @@ coverage:
       name: France
     level: 1
 description: The spatial data platform for French schools abroad
+endpoints:
+- type: geonode:layers
+  url: https://aware.cirad.fr/api/layers/
+- type: geonode:documents
+  url: https://aware.cirad.fr/api/documents/
+- type: dcatus11
+  url: https://aware.cirad.fr/data.json
+- type: wms
+  url: https://aware.cirad.fr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://aware.cirad.fr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://aware.cirad.fr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://aware.cirad.fr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts
+  url: https://aware.cirad.fr/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://aware.cirad.fr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: awareciradfr
 langs:
 - FR
@@ -27,6 +52,8 @@ owner:
   name: The French agricultural research and international cooperation organization
     (CIRAD)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonode
   name: GeoNode
@@ -41,6 +68,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00002296

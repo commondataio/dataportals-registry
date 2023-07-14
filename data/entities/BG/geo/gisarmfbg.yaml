@@ -13,10 +13,14 @@ coverage:
       name: Bulgaria
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://gis.armf.bg:8080/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://gis.armf.bg:8080/geonetwork/srv/api
+- type: csw
+  url: http://gis.armf.bg:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://gis.armf.bg:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: gisarmfbg
 langs:

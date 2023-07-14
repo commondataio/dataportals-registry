@@ -13,10 +13,12 @@ coverage:
       name: Canada
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: https://soggy2.zoology.ubc.ca/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://soggy2.zoology.ubc.ca/geonetwork/srv/api
+- type: csw
+  url: https://soggy2.zoology.ubc.ca/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://soggy2.zoology.ubc.ca/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: soggy2zoologyubcca
 identifiers:
@@ -36,6 +38,8 @@ owner:
     level: 1
   name: The Strait of Georgia Data Centre
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -51,6 +55,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000279

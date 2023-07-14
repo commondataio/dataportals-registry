@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: EC-L
 endpoints:
-- type: ckanapi
-  url: http://ambar.utpl.edu.ec/api/3
+- type: ckan:package-search
+  url: http://ambar.utpl.edu.ec/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://ambar.utpl.edu.ec/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: ambarutpleduec
 langs:

@@ -12,8 +12,12 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://data2.cerdi.edu.au/api/3
+- type: ckan:package-search
+  url: https://data2.cerdi.edu.au/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data2.cerdi.edu.au/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: data2cerdieduau
 langs:

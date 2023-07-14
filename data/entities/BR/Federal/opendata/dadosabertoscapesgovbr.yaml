@@ -12,8 +12,12 @@ coverage:
       name: Brazil
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://dadosabertos.capes.gov.br/api/3
+- type: ckan:package-search
+  url: https://dadosabertos.capes.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.capes.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosabertoscapesgovbr
 langs:
@@ -29,6 +33,8 @@ owner:
     level: 1
   name: Coordination for the Improvement of Higher Education Personnel (CAPES)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +49,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000190

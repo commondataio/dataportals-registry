@@ -14,6 +14,32 @@ coverage:
 description: This work system is designed for import and publish data for the management
   of the Department of Lands Prepared by Land Plot Map Data Center, Department of
   Lands
+endpoints:
+- type: geonode:layers
+  url: http://portal.dol.go.th/api/layers/
+- type: geonode:documents
+  url: http://portal.dol.go.th/api/documents/
+- type: wms
+  url: http://portal.dol.go.th/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://portal.dol.go.th/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://portal.dol.go.th/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://portal.dol.go.th/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://portal.dol.go.th/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://portal.dol.go.th/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://portal.dol.go.th/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: portaldolgoth
 langs:
 - TH

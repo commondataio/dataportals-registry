@@ -12,8 +12,12 @@ coverage:
       name: India
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://justicehub.in/api/3
+- type: ckan:package-search
+  url: https://justicehub.in/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://justicehub.in/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: justicehubin
 langs:
@@ -29,17 +33,16 @@ owner:
     level: 1
   name: Civic Data Lab
   type: Civil society
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
 status: active
 tags:
 - has_api
-topics: []
 topics:
 - id: JUST
   name: Justice, legal system and public safety
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000931

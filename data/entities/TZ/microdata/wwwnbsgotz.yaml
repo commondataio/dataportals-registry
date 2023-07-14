@@ -15,6 +15,8 @@ coverage:
 endpoints:
 - type: nada:catalog-search
   url: https://www.nbs.go.tz/tnada/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://www.nbs.go.tz/tnada/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwnbsgotz
 langs:
 - EN
@@ -30,8 +32,8 @@ owner:
   name: National Bureau of Statistics (Tanzania)
   type: Central government
 properties:
-  transferable_topics: true
   transferable_location: true
+  transferable_topics: true
 software:
   id: nada
   name: NADA

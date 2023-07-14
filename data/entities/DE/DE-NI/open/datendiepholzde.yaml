@@ -12,6 +12,22 @@ coverage:
     level: 2
     subregion:
       id: DE-NI
+endpoints:
+- type: ckan:package-search
+  url: https://daten.diepholz.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://daten.diepholz.de/api/3/action/package_list
+  version: '3'
+- type: dkan:search
+  url: https://daten.diepholz.de/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://daten.diepholz.de/api/1/metastore
+  version: '1'
+- type: dkan:datastore
+  url: https://daten.diepholz.de/api/1/metastore
+  version: '1'
 id: datendiepholzde
 langs:
 - NI

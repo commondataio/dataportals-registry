@@ -13,6 +13,29 @@ coverage:
     level: 2
     subregion:
       id: NZ-OTA
+endpoints:
+- type: geonode:datasets
+  url: https://data.codc.govt.nz/api/datasets/
+- type: geonode:documents
+  url: https://data.codc.govt.nz/api/documents/
+- type: wms
+  url: https://data.codc.govt.nz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://data.codc.govt.nz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://data.codc.govt.nz/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://data.codc.govt.nz/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://data.codc.govt.nz/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://data.codc.govt.nz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: datacodcgovtnz
 langs:
 - EN

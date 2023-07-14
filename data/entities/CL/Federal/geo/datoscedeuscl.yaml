@@ -11,6 +11,25 @@ coverage:
       id: CL
       name: Chile
     level: 1
+endpoints:
+- type: wms
+  url: http://datos.cedeus.cl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://datos.cedeus.cl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://datos.cedeus.cl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://datos.cedeus.cl/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://datos.cedeus.cl/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://datos.cedeus.cl/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: datoscedeuscl
 langs:
 - ES
@@ -23,7 +42,7 @@ owner:
       id: CL
       name: Chile
     level: 1
-  name: 'Centro de Desarollo Urbano Sestentable'
+  name: Centro de Desarollo Urbano Sestentable
   type: Academy
 software:
   id: geonode

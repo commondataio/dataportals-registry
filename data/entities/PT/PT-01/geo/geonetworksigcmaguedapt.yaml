@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: PT-01
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/api
+- type: openapi
+  url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://geonetwork.sig.cm-agueda.pt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geonetworksigcmaguedapt
 langs:

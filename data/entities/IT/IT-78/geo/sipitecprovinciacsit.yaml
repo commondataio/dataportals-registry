@@ -15,10 +15,15 @@ coverage:
     subregion:
       id: IT-78
 endpoints:
-- type: geonetworkapi:query
-  url: http://sipitec.provincia.cs.it:8080/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://sipitec.provincia.cs.it:8080/geonetwork/srv/api
+- type: csw
+  url: http://sipitec.provincia.cs.it:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://sipitec.provincia.cs.it:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://sipitec.provincia.cs.it:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: sipitecprovinciacsit
 langs:

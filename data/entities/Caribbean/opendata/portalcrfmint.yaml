@@ -12,8 +12,12 @@ coverage:
       name: Caribbean
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://portal.crfm.int/api/3
+- type: ckan:package-search
+  url: https://portal.crfm.int/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://portal.crfm.int/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: portalcrfmint
 langs:
@@ -29,6 +33,8 @@ owner:
     level: 1
   name: Caribbean Regional Fisheries Mechanism.
   type: Civil society
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -42,6 +48,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000334

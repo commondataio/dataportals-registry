@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: BR-MG
 endpoints:
-- type: ckanapi
-  url: http://dados.mg.gov.br/api/3
+- type: ckan:package-search
+  url: https://dados.mg.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.mg.gov.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosmggovbr
 langs:
@@ -31,7 +35,7 @@ owner:
     level: 2
     subregion:
       id: BR-MG
-  name: 'Estado de Minas Gerais'
+  name: Estado de Minas Gerais
   type: Regional government
 properties:
   transferable_location: true

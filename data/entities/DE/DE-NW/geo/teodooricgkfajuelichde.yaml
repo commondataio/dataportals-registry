@@ -15,10 +15,15 @@ coverage:
     subregion:
       id: DE-NW
 endpoints:
-- type: geonetworkapi:query
-  url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/api
+- type: csw
+  url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://teodoor.icg.kfa-juelich.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: teodooricgkfajuelichde
 langs:

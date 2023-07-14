@@ -11,6 +11,34 @@ coverage:
       id: PA
       name: Panama
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://geo-01.innovacion.gob.pa/api/layers/
+- type: geonode:documents
+  url: https://geo-01.innovacion.gob.pa/api/documents/
+- type: dcatus11
+  url: https://geo-01.innovacion.gob.pa/data.json
+- type: wms
+  url: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geo-01.innovacion.gob.pa/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geo-01.innovacion.gob.pa/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://geo-01.innovacion.gob.pa/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geo-01.innovacion.gob.pa/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geo01innovaciongobpageonode
 langs:
 - ES

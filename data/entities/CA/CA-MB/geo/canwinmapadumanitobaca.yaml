@@ -13,6 +13,29 @@ coverage:
     level: 2
     subregion:
       id: CA-MB
+endpoints:
+- type: geonode:layers
+  url: https://canwinmap.ad.umanitoba.ca/api/layers/
+- type: geonode:documents
+  url: https://canwinmap.ad.umanitoba.ca/api/documents/
+- type: wms
+  url: https://canwinmap.ad.umanitoba.ca/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://canwinmap.ad.umanitoba.ca/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://canwinmap.ad.umanitoba.ca/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://canwinmap.ad.umanitoba.ca/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://canwinmap.ad.umanitoba.ca/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://canwinmap.ad.umanitoba.ca/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: canwinmapadumanitobaca
 langs:
 - EN

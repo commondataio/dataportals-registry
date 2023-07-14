@@ -12,8 +12,12 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.aurin.org.au/api/3
+- type: ckan:package-search
+  url: https://data.aurin.org.au/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.aurin.org.au/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataaurinorgau
 langs:
@@ -27,7 +31,7 @@ owner:
       id: AU
       name: Australia
     level: 1
-  name: 'Government of Australia'
+  name: Government of Australia
   type: Academy
 software:
   id: ckan

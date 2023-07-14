@@ -15,10 +15,14 @@ coverage:
     subregion:
       id: PT-11
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://oeiras30mais.municipia.pt/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://oeiras30mais.municipia.pt/geonetwork/srv/api
+- type: csw
+  url: https://oeiras30mais.municipia.pt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://oeiras30mais.municipia.pt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: oeiras30maismunicipiapt
 langs:

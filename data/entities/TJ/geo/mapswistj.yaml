@@ -12,6 +12,31 @@ coverage:
       id: TJ
       name: Tajikistan
     level: 1
+endpoints:
+- type: geonode:layers
+  url: http://maps.wis.tj:555/api/layers/
+- type: geonode:documents
+  url: http://maps.wis.tj:555/api/documents/
+- type: dcatus11
+  url: http://maps.wis.tj:555/data.json
+- type: wms
+  url: http://maps.wis.tj:555/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://maps.wis.tj:555/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://maps.wis.tj:555/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://maps.wis.tj:555/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts
+  url: http://maps.wis.tj:555/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://maps.wis.tj:555/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: mapswistj
 langs:
 - RU

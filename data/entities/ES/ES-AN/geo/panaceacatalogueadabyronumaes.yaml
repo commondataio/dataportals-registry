@@ -15,10 +15,20 @@ coverage:
     subregion:
       id: ES-AN
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/api
+- type: openapi
+  url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://panaceacatalogue.adabyron.uma.es/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: panaceacatalogueadabyronumaes
 langs:
@@ -36,6 +46,8 @@ owner:
       id: ES-AN
   name: Universidad de Málaga
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -50,6 +62,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002328

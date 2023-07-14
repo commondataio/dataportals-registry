@@ -13,10 +13,20 @@ coverage:
       name: Hungary
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/api
+- type: openapi
+  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://geonetwork.inspire.fomi.hu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geonetworkinspirefomihu
 langs:

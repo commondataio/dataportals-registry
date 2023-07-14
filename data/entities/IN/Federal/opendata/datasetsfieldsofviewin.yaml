@@ -12,8 +12,12 @@ coverage:
       name: India
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://datasets.fieldsofview.in/api/3
+- type: ckan:package-search
+  url: https://datasets.fieldsofview.in/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datasets.fieldsofview.in/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datasetsfieldsofviewin
 langs:
@@ -27,7 +31,7 @@ owner:
       id: IN
       name: India
     level: 1
-  name: 'Fields of View Society'
+  name: Fields of View Society
   type: Civil society
 software:
   id: ckan

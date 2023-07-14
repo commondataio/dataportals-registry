@@ -13,18 +13,21 @@ coverage:
       name: Vietnam
     level: 1
 endpoints:
-- type: geonetworkapi:query
-  url: http://seaportal.vodic.vn/seaportal/srv/eng/q
-- type: geonetworkapi
-  url: http://seaportal.vodic.vn/seaportal/srv/api
+- type: csw
+  url: http://seaportal.vodic.vn/seaportal/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://seaportal.vodic.vn/seaportal/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://seaportal.vodic.vn/seaportal/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: seaportalvodicvn
 langs:
 - VN
 link: http://seaportal.vodic.vn/seaportal
 name: Viet Nam Ocean Data and Information Center
-properties:
-  transferable_topics: true
 owner:
   link: http://vodic.vn
   location:
@@ -34,6 +37,8 @@ owner:
     level: 1
   name: Viet Nam Ocean Administration - Ministry of Natural Resources and Environment
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -52,6 +57,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001950

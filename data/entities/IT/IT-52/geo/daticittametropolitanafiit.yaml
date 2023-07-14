@@ -15,10 +15,22 @@ coverage:
     subregion:
       id: IT-52
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://dati.cittametropolitana.fi.it/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/api/records
+- type: openapi
+  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://dati.cittametropolitana.fi.it/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: daticittametropolitanafiit
 langs:

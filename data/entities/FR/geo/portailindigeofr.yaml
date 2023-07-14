@@ -13,10 +13,22 @@ coverage:
       name: France
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://portail.indigeo.fr/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://portail.indigeo.fr/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://portail.indigeo.fr/geonetwork/srv/api/records
+- type: openapi
+  url: https://portail.indigeo.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://portail.indigeo.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://portail.indigeo.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://portail.indigeo.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: portailindigeofr
 langs:
@@ -32,6 +44,8 @@ owner:
     level: 1
   name: Indi Geo. Environmental data and geospatial information infrastructure
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +61,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002306

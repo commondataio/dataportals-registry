@@ -12,8 +12,14 @@ coverage:
       name: Argentina
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://datos.transporte.gob.ar/api/3
+- type: ckan:package-search
+  url: https://datos.transporte.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.transporte.gob.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://datos.transporte.gob.ar/data.json
 export_standard: CKAN API
 id: datostransportegobar
 langs:
@@ -29,6 +35,8 @@ owner:
     level: 1
   name: Ministerio de Transporte
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +51,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000040

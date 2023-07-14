@@ -13,10 +13,22 @@ coverage:
       name: Switzerland
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://geonetwork.swissdatacube.org/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://geonetwork.swissdatacube.org/geonetwork/srv/api/records
+- type: openapi
+  url: http://geonetwork.swissdatacube.org/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://geonetwork.swissdatacube.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: geonetworkswissdatacubeorg
 langs:

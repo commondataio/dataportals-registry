@@ -13,10 +13,22 @@ coverage:
       name: Bolivia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/api
+- type: geonetwork:records
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/api/records
+- type: openapi
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://gtggeoportal.umsa.bo:8087/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: gtggeoportalumsabo
 langs:

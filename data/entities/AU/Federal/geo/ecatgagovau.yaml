@@ -13,10 +13,22 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://ecat.ga.gov.au/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://ecat.ga.gov.au/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://ecat.ga.gov.au/geonetwork/srv/api/records
+- type: openapi
+  url: https://ecat.ga.gov.au/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://ecat.ga.gov.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ecat.ga.gov.au/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://ecat.ga.gov.au/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: ecatgagovau
 langs:
@@ -32,6 +44,8 @@ owner:
     level: 1
   name: Geoscience Australia
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -44,6 +58,4 @@ topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000074

@@ -15,10 +15,22 @@ coverage:
     subregion:
       id: DE-RP
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/api/records
+- type: openapi
+  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://vocabulary.geoportal.rlp.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: vocabularygeoportalrlpde
 langs:

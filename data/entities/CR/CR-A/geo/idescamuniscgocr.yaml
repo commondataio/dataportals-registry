@@ -13,6 +13,29 @@ coverage:
     level: 2
     subregion:
       id: CR-A
+endpoints:
+- type: geonode:layers
+  url: https://idesca.munisc.go.cr/api/layers/
+- type: geonode:documents
+  url: https://idesca.munisc.go.cr/api/documents/
+- type: wms
+  url: https://idesca.munisc.go.cr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://idesca.munisc.go.cr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://idesca.munisc.go.cr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://idesca.munisc.go.cr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://idesca.munisc.go.cr/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://idesca.munisc.go.cr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: idescamuniscgocr
 langs:
 - ES

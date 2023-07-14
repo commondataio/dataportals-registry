@@ -11,6 +11,18 @@ coverage:
       id: Oceania
       name: Oceania
     level: 1
+endpoints:
+- type: geonode:documents
+  url: https://nexus.pacificdata.org/api/documents/
+- type: csw
+  url: https://nexus.pacificdata.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://nexus.pacificdata.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://nexus.pacificdata.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: nexuspacificdataorg
 langs:
 - EN

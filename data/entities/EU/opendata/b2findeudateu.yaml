@@ -12,8 +12,12 @@ coverage:
       name: European Union
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://b2find.eudat.eu/api/3
+- type: ckan:package-search
+  url: https://b2find.eudat.eu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://b2find.eudat.eu/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: b2findeudateu
 identifiers:

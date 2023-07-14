@@ -13,10 +13,20 @@ coverage:
       name: Chile
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://ide.minagri.gob.cl/geonetwork/srv/eng/q
-- type: geonetworkapi
-  url: https://ide.minagri.gob.cl/geonetwork/srv/api
+- type: openapi
+  url: https://ide.minagri.gob.cl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://ide.minagri.gob.cl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ide.minagri.gob.cl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://ide.minagri.gob.cl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: ideminagrigobcl
 langs:
@@ -30,8 +40,10 @@ owner:
       id: CL
       name: Chile
     level: 1
-  name: 'Ministerio de Agricultura Chile'
+  name: Ministerio de Agricultura Chile
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +59,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000355

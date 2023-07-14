@@ -11,6 +11,32 @@ coverage:
       id: NP
       name: Nepal
     level: 1
+endpoints:
+- type: geonode:layers
+  url: https://admin.nationalgeoportal.gov.np/api/layers/
+- type: dcatus11
+  url: https://admin.nationalgeoportal.gov.np/data.json
+- type: wms
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: https://admin.nationalgeoportal.gov.np/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: adminnationalgeoportalgovnp
 langs:
 - EN

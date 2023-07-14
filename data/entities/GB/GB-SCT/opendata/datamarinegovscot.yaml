@@ -13,6 +13,12 @@ coverage:
     level: 2
     subregion:
       id: GB-SCT
+endpoints:
+- type: ckan:package-list
+  url: https://data.marine.gov.scot/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.marine.gov.scot/data.json
 id: datamarinegovscot
 identifiers:
 - id: re3data
@@ -33,10 +39,15 @@ owner:
       id: GB-SCT
   name: Scotland Government
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: dkan
   name: DKAN
 status: active
+tags:
+- government
+- has_api
 topics:
 - id: Oceans
   name: Oceans
@@ -44,9 +55,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
-tags:
-- government
-- has_api
 uid: cdi00000828

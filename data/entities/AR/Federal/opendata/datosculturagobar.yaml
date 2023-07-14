@@ -12,8 +12,14 @@ coverage:
       name: Argentina
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://datos.cultura.gob.ar/api/3
+- type: ckan:package-search
+  url: https://datos.cultura.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.cultura.gob.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://datos.cultura.gob.ar/data.json
 export_standard: CKAN API
 id: datosculturagobar
 langs:
@@ -29,6 +35,8 @@ owner:
     level: 1
   name: Ministerio de cultura Argentina
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +51,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000031

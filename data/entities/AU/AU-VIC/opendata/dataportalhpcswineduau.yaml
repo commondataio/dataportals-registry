@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: AU-VIC
 endpoints:
-- type: ckanapi
-  url: https://data-portal.hpc.swin.edu.au/api/3
+- type: ckan:package-search
+  url: https://data-portal.hpc.swin.edu.au/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data-portal.hpc.swin.edu.au/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataportalhpcswineduau
 langs:
@@ -31,7 +35,7 @@ owner:
     level: 2
     subregion:
       id: AU-VIC
-  name: 'Swinburne University of Technology'
+  name: Swinburne University of Technology
   type: Academy
 software:
   id: ckan
