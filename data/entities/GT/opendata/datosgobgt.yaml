@@ -10,10 +10,20 @@ coverage:
       id: GT
       name: Guatemala
     level: 1
+endpoints:
+- type: ckan
+  url: http://catalogo.datos.gob.gt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://catalogo.datos.gob.gt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://catalogo.datos.gob.gt/api/3/action/package_list
+  version: '3'
 id: datosgobgt
 langs:
 - ES
-link: http://datos.gob.gt
+link: http://catalogo.datos.gob.gt
 name: Portal Nacional de Datos Abiertos de Guatemala
 owner:
   link: http://www.gov.gt
@@ -25,8 +35,8 @@ owner:
   name: Government of Guatemala
   type: Central government
 software:
-  id: socrata
-  name: Socrata
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government

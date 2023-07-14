@@ -187,6 +187,40 @@ def detect(software, dryrun=False, replace_endpoints=True):
                     print('- no endpoints, not updated')
 
 @app.command()
+def detect_single(uniqid, dryrun=False, replace_endpoints=True):
+    """Enrich data catalogs with API endpoints"""
+    dirs = os.listdir(ENTRIES_DIR)
+
+    dirs = os.listdir(ENTRIES_DIR)    
+    for root, dirs, files in os.walk(ENTRIES_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['uid'] != uniqid and record ['id'] != uniqid:
+                continue
+            if record['software']['id']  in CATALOGS_URLMAP.keys():
+                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
+                    print(' - skip, we have endpoints already and no replace mode')
+                    continue
+                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']])
+                record['endpoints'] = []
+                for api in found:
+                    print('- %s %s' % (api['type'], api['url']))
+                    record['endpoints'].append(api)
+                if len(record['endpoints']) > 0:
+                    f = open(filepath, 'w', encoding='utf8')
+                    f.write(yaml.safe_dump(record, allow_unicode=True))
+                    f.close()
+                    print('- updated profile')
+                else:
+                    print('- no endpoints, not updated')
+
+
+@app.command()
 def detect_all(mode='undetected', replace_endpoints=True):
     """Detect all known API endpoints"""
     dirs = os.listdir(ENTRIES_DIR)    

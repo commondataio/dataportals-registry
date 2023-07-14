@@ -12,8 +12,15 @@ coverage:
       name: Hong Kong
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.gov.hk/en-data/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.hk/en-data/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.hk/en-data/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datagovhk
 identifiers:
@@ -25,7 +32,7 @@ identifiers:
   value: Q97033976
 langs:
 - EN
-link: https://data.gov.hk
+link: https://data.gov.hk/en-data/
 name: DATA.GOV.HK
 owner:
   link: https://www.ogcio.gov.hk/en/
