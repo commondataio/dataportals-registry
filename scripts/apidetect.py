@@ -102,20 +102,40 @@ NADA_URLMAP = [
     {'id' : 'nada:csvexport', 'url' : '/index.php/catalog/export/csv?ps=5000&collection[]', 'expected_mime' : CSV_MIMETYPES, 'is_json' : False, 'version': None}
 ]
 
+GEOSERVER_URLMAP = [
+    {'id' : 'wms', 'url' : '/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wms', 'url' : '/ows?service=WMS&version=1.3.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.3.0'},
+    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=2.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.0'},
+    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1'},
+    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=2.0.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.1'},    
+    {'id' : 'wps', 'url' : '/ows?service=WPS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'tms', 'url' : '/gwc/service/tms/1.0.0', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wms-c', 'url' : '/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wmts', 'url' : '/gwc/service/wmts?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'csw', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
+]
+
+
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
-'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP}
+'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP}
 
 
 
-def api_identifier(website_url, url_map, verify_json=False):
+def api_identifier(website_url, url_map, software_id, verify_json=False):
     results = []
     found = []
     print('-', end="")
     for item in url_map:
         print(" %s" % (item['id']), end="")
+
         request_url = website_url + item['url']        
         try:
             if 'accept' in item.keys():
@@ -173,7 +193,7 @@ def detect(software, dryrun=False, replace_endpoints=True):
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[software])
+                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[software], software)
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -206,7 +226,7 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True):
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']])
+                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -238,7 +258,7 @@ def detect_all(mode='undetected', replace_endpoints=True):
                         if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                             print(' - skip, we have endpoints already and no replace mode')
                             continue
-                        found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']])
+                        found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
                         record['endpoints'] = []
                         for api in found:
                             print('- %s %s' % (api['type'], api['url']))
