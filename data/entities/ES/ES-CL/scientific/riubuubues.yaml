@@ -9,9 +9,10 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 2
-    subregion:
-      id: ES-CL
+endpoints:
+- type: oaipmh
+  url: https://riubu.ubu.es/oai/request?verb=Identify
+  version: '2.0'
 id: riubuubues
 identifiers:
 - id: re3data
@@ -38,8 +39,8 @@ owner:
 properties:
   transferable_topics: true
 software:
-  id: eprints
-  name: EPrints
+  id: dspace
+  name: DSpace
 status: active
 tags:
 - government

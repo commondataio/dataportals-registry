@@ -27,7 +27,7 @@ app = typer.Typer()
 
 DEFAULT_TIMEOUT = 15
 
-XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml']
+XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml']
 JSON_MIMETYPES = ['text/json', 'application/json']
 CSV_MIMETYPES = ['text/csv']
 
@@ -89,7 +89,10 @@ DATAVERSE_URLMAP = [
 DSPACE_URLMAP = [
     {'id' : 'dspace:objects', 'url' : '/server/api/discover/search/objects', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '7'},
     {'id' : 'dspace:items', 'url' : '/rest/items', 'accept': 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '6'},
-    {'id' : 'oaipmh', 'url' : '/oai/request?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
+    {'id' : 'oaipmh', 'url' : '/oai/request?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'opensearch', 'url' : '/open-search/description.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+    {'id' : 'rss', 'url' : '/feed/rss_2.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
+    {'id' : 'atom', 'url' : '/feed/atom_1.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'}      
 ]
 
 ELSVIERPURE_URLMAP = [
@@ -120,12 +123,17 @@ GEOSERVER_URLMAP = [
     {'id' : 'csw', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
 ]
 
+EPRINTS_URLMAP = [
+    {'id' : 'oaipmh', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'rss', 'url' : '/cgi/latest_tool?output=RSS2', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'atom', 'url' : '/cgi/latest_tool?output=Atom', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None}      
+]
 
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
-'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP}
+'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 'eprints' :EPRINTS_URLMAP}
 
 
 
