@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: JP-28
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://www1.city.tamba.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www1.city.tamba.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www1.city.tamba.lg.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: www1citytambalgjp
 langs:

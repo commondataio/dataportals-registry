@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: MX-VER
 endpoints:
-- type: ckanapi
-  url: http://datos.veracruzmunicipio.gob.mx/api/3
+- type: ckan:package-search
+  url: http://datos.veracruzmunicipio.gob.mx/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://datos.veracruzmunicipio.gob.mx/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datosveracruzmunicipiogobmx
 identifiers:

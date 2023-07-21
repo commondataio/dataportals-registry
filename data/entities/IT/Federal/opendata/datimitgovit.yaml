@@ -12,13 +12,20 @@ coverage:
       name: Italy
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://dati.mit.gov.it/catalog/api/3
+- type: ckan
+  url: https://dati.mit.gov.it/catalog/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.mit.gov.it/catalog/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.mit.gov.it/catalog/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datimitgovit
 langs:
 - IT
-link: https://dati.mit.gov.it
+link: https://dati.mit.gov.it/catalog
 name: Open Data - Ministero delle infrastrutture e dei trasporti
 owner:
   link: https://www.mit.gov.it

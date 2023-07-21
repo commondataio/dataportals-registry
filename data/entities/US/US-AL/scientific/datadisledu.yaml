@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: US-AL
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.disl.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.disl.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.disl.edu/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datadisledu
 langs:
@@ -33,10 +40,15 @@ owner:
       id: US-AL
   name: The Alabama Marine Environmental Sciences Consortium (MESC)
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
 status: active
+tags:
+- government
+- has_api
 topics:
 - id: Oceans
   name: Oceans
@@ -44,9 +56,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
-tags:
-- government
-- has_api
 uid: cdi00001722

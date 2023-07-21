@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: PT-18
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://128.199.41.97:5000/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://128.199.41.97:5000/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://128.199.41.97:5000/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: viseudaolafoesopendata
 langs:

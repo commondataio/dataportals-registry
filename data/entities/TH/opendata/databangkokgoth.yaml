@@ -11,8 +11,15 @@ coverage:
       name: Thailand
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.bangkok.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.bangkok.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.bangkok.go.th/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: databangkokgoth
 langs:

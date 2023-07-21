@@ -12,8 +12,15 @@ coverage:
       name: Kenya
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://kilimodata.developlocal.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://kilimodata.developlocal.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://kilimodata.developlocal.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: kilimodatadeveloplocalorg
 langs:
@@ -30,6 +37,8 @@ owner:
     level: 1
   name: Ministry of Agriculture, Livestock and Fisheries in the Republic of Kenya
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -44,6 +53,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001029

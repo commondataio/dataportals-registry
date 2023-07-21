@@ -14,10 +14,11 @@ coverage:
     subregion:
       id: AU-NSW
 endpoints:
-- type: ckanapi
-  url: https://data.nsw.gov.au/data/api/3
-export_standard: CKAN API
-id: datanswgovau
+- type: magda:datasets
+  url: https://data.nsw.gov.au/search/api/v0/search/datasets
+- type: magda:organizations
+  url: https://data.nsw.gov.au/search/api/v0/search/organisations
+id: datanswgovaumagda
 identifiers:
 - id: dataportals.org
   url: http://dataportals.org/portal/nsw_gov_au
@@ -28,7 +29,7 @@ identifiers:
 langs:
 - EN
 link: https://data.nsw.gov.au
-name: Data.NSW
+name: Data.NSW (Magda)
 owner:
   link: https://www.nsw.gov.au
   location:
@@ -38,16 +39,16 @@ owner:
     level: 2
     subregion:
       id: AU-NSW
-  name: 'State of New South Wales'
+  name: State of New South Wales
   type: Regional government
 properties:
   transferable_location: true
 software:
-  id: ckan
-  name: CKAN
+  id: magda
+  name: Magda
 status: active
 tags:
 - government
 - has_api
 topics: []
-uid: cdi00000103
+uid: cdi00002473

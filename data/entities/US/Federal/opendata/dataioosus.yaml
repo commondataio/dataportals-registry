@@ -12,8 +12,15 @@ coverage:
       name: United States
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.ioos.us/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.ioos.us/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.ioos.us/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataioosus
 langs:
@@ -29,11 +36,15 @@ owner:
     level: 1
   name: U.S. Integrated Ocean Observing System Program
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
-properties:
-  transferable_topics: true
+status: active
+tags:
+- government
+- has_api
 topics:
 - id: Oceans
   name: Oceans
@@ -41,8 +52,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-status: active
-tags:
-- government
-- has_api
 uid: cdi00001623

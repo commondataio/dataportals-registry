@@ -12,8 +12,12 @@ coverage:
       name: Portugal
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://dados.justica.gov.pt/api/3
+- type: ckan:package-search
+  url: https://dados.justica.gov.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.justica.gov.pt/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosjusticagovpt
 langs:
@@ -29,6 +33,8 @@ owner:
     level: 1
   name: Ministério da Justiça
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -40,6 +46,4 @@ topics:
 - id: JUST
   name: Justice, legal system and public safety
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001318

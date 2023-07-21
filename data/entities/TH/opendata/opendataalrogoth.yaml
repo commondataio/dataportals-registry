@@ -11,8 +11,15 @@ coverage:
       name: Thailand
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://opendata.alro.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://opendata.alro.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://opendata.alro.go.th/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendataalrogoth
 langs:
@@ -28,6 +35,8 @@ owner:
     level: 1
   name: Agricultural land reform office (Thailand)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -41,6 +50,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001553

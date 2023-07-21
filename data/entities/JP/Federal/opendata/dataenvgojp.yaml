@@ -12,8 +12,15 @@ coverage:
       name: Japan
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.env.go.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.env.go.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.env.go.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataenvgojp
 langs:
@@ -27,7 +34,7 @@ owner:
       id: JP
       name: Japan
     level: 1
-  name: 'Ministry of the Environment, Japan'
+  name: Ministry of the Environment, Japan
   type: Central government
 software:
   id: ckan

@@ -12,8 +12,15 @@ coverage:
       name: United States
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://resiliencedata.nfwf.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://resiliencedata.nfwf.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://resiliencedata.nfwf.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: resiliencedatanfwforg
 langs:
@@ -29,6 +36,8 @@ owner:
     level: 1
   name: The National Fish and Wildlife Foundation (NFWF)
   type: Civil society
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -48,6 +57,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001668

@@ -12,8 +12,12 @@ coverage:
       name: South Africa
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.vulekamali.gov.za/api/3
+- type: ckan:package-search
+  url: https://data.vulekamali.gov.za/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.vulekamali.gov.za/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datavulekamaligovza
 langs:
@@ -29,16 +33,9 @@ owner:
     level: 1
   name: National Treasury Republic of South Africa
   type: Central government
-topics:
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: Economy
-  name: Economy
-  type: iso19115
 properties:
-  transferable_topics: true
   transferable_location: true
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN

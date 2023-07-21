@@ -17,8 +17,15 @@ description: El Catálogo Nacional de Datos Abiertos permite acceder a datos abi
   Cualquier persona puede utilizar los datos publicados libremente para contar historias,
   desarrollar investigaciones, visualizaciones, aplicaciones cívicas y emprendimientos.
 endpoints:
-- type: ckanapi
-  url: https://catalogodatos.gub.uy/api
+- type: ckan
+  url: https://catalogodatos.gub.uy/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogodatos.gub.uy/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogodatos.gub.uy/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: catalogodatosgubuy
 identifiers:

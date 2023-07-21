@@ -14,8 +14,12 @@ coverage:
     subregion:
       id: BR-RN
 endpoints:
-- type: ckanapi
-  url: http://dados.natal.br/api/3
+- type: ckan:package-search
+  url: http://dados.natal.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://dados.natal.br/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosnatalbr
 identifiers:
@@ -34,7 +38,7 @@ owner:
     level: 2
     subregion:
       id: BR-RN
-  name: 'Urbana de Natal'
+  name: Urbana de Natal
   type: Local government
 properties:
   transferable_location: true

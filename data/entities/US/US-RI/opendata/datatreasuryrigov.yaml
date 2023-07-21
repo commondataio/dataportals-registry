@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: US-RI
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://data.treasury.ri.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://data.treasury.ri.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://data.treasury.ri.gov/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datatreasuryrigov
 langs:
@@ -30,18 +37,11 @@ owner:
     level: 2
     subregion:
       id: US-RI
-  name: 'Office of the General Treasurer Rhode Island'
+  name: Office of the General Treasurer Rhode Island
   type: Regional government
-topics:
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: Economy
-  name: Economy
-  type: iso19115
 properties:
-  transferable_topics: true
   transferable_location: true
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -49,4 +49,11 @@ status: active
 tags:
 - government
 - has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00001885

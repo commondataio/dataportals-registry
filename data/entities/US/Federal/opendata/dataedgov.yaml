@@ -12,8 +12,17 @@ coverage:
       name: United States
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.ed.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.ed.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.ed.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.ed.gov/data.json
 export_standard: CKAN API
 id: dataedgov
 langs:
@@ -28,6 +37,8 @@ owner:
     level: 1
   name: US Department of Education
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -42,6 +53,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001621

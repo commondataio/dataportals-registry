@@ -12,8 +12,15 @@ coverage:
       name: Malawi
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://dms.hiv.health.gov.mw/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dms.hiv.health.gov.mw/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dms.hiv.health.gov.mw/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dmshivhealthgovmw
 langs:
@@ -29,6 +36,8 @@ owner:
     level: 1
   name: HIV, AIDS & Viral Hepititis Ministry of Health, Malawi
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -43,6 +52,4 @@ topics:
 - id: Health
   name: Health
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001134

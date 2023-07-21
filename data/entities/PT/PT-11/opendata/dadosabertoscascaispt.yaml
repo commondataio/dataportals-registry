@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: PT-11
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://dadosabertos.cascais.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.cascais.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.cascais.pt/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dadosabertoscascaispt
 langs:

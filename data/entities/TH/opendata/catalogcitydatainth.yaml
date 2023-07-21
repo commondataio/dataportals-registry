@@ -11,8 +11,15 @@ coverage:
       name: Thailand
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://catalog.citydata.in.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.citydata.in.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.citydata.in.th/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: catalogcitydatainth
 langs:
@@ -28,6 +35,8 @@ owner:
     level: 1
   name: Digital Economy Promotion Agency
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -41,6 +50,4 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001512

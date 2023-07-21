@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: IT-72
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://dati.arpacampania.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.arpacampania.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.arpacampania.it/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datiarpacampaniait
 langs:

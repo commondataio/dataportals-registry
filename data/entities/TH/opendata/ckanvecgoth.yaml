@@ -11,8 +11,15 @@ coverage:
       name: Thailand
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://ckan.vec.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://ckan.vec.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://ckan.vec.go.th/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: ckanvecgoth
 langs:
@@ -28,6 +35,8 @@ owner:
     level: 1
   name: Office of the Vocational Education Commission (Thailand)
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -41,6 +50,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001531

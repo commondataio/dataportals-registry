@@ -27,6 +27,8 @@ app = typer.Typer()
 
 DEFAULT_TIMEOUT = 15
 
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
+
 XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml']
 JSON_MIMETYPES = ['text/json', 'application/json']
 CSV_MIMETYPES = ['text/csv']
@@ -137,12 +139,25 @@ ALEPH_URLMAP = [
     {'id' : 'aleph:collections', 'url' : '/api/2/collections', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '2.0'}
 ]
 
+MYCORE_URLMAP = [
+    {'id' : 'mycore:objects', 'display_url' : 'api/v1/objects', 'url' : '/api/v1/objects?format=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
+]
+
+MAGDA_URLMAP = [
+    {'id' : 'magda:datasets', 'url' : '/search/api/v0/search/datasets', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'magda:organizations', 'url' : '/search/api/v0/search/organisations', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'magda:datasets', 'url' : '/api/v0/search/datasets', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'magda:organizations', 'url' : '/api/v0/search/organisations', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+
+]
+
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
 'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 
-'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP}
+'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
+'magda' : MAGDA_URLMAP}
 
 
 
@@ -156,9 +171,9 @@ def api_identifier(website_url, url_map, software_id, verify_json=False):
         request_url = website_url + item['url']        
         try:
             if 'accept' in item.keys():
-                response = requests.get(request_url, verify=False, headers={'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                response = requests.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
             else:
-                response = requests.get(request_url, verify=False, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                response = requests.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
         except requests.exceptions.Timeout:
             results.append({'url' : request_url,'error' : 'Timeout'})
             continue       
@@ -225,8 +240,7 @@ def detect(software, dryrun=False, replace_endpoints=True):
 
 @app.command()
 def detect_single(uniqid, dryrun=False, replace_endpoints=True):
-    """Enrich data catalogs with API endpoints"""
-    dirs = os.listdir(ENTRIES_DIR)
+    """Enrich single data catalog with API endpoints"""
 
     dirs = os.listdir(ENTRIES_DIR)    
     for root, dirs, files in os.walk(ENTRIES_DIR):
@@ -244,6 +258,71 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True):
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
                 found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                record['endpoints'] = []
+                for api in found:
+                    print('- %s %s' % (api['type'], api['url']))
+                    record['endpoints'].append(api)
+                if len(record['endpoints']) > 0:
+                    f = open(filepath, 'w', encoding='utf8')
+                    f.write(yaml.safe_dump(record, allow_unicode=True))
+                    f.close()
+                    print('- updated profile')
+                else:
+                    print('- no endpoints, not updated')
+
+@app.command()
+def detect_country(country, dryrun=False, replace_endpoints=True):
+    """Enrich data catalogs with API endpoints by country"""
+
+    dirs = os.listdir(ENTRIES_DIR)    
+    for root, dirs, files in os.walk(ENTRIES_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['owner']['location']['country']['id'] != country:
+                continue
+            if record['software']['id']  in CATALOGS_URLMAP.keys():
+                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
+                    print(' - skip, we have endpoints already and no replace mode')
+                    continue
+                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                record['endpoints'] = []
+                for api in found:
+                    print('- %s %s' % (api['type'], api['url']))
+                    record['endpoints'].append(api)
+                if len(record['endpoints']) > 0:
+                    f = open(filepath, 'w', encoding='utf8')
+                    f.write(yaml.safe_dump(record, allow_unicode=True))
+                    f.close()
+                    print('- updated profile')
+                else:
+                    print('- no endpoints, not updated')
+
+@app.command()
+def detect_ckan(dryrun=False, replace_endpoints=True):
+    """Enrich data catalogs with API endpoints by CKAN instance (special function to update all endpoints"""
+    dirs = os.listdir(ENTRIES_DIR)    
+    for root, dirs, files in os.walk(ENTRIES_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['software']['id'] == 'ckan':
+                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+                if 'endpoints' in record.keys() and len(record['endpoints']) > 1:
+                    print(' - skip, we have more than 2 endpoints so we skip')
+                    continue
+                if 'endpoints' and len(record['endpoints']) == 1 and record['endpoints'][0]['type'] == 'ckanapi':
+                    base_url = record['endpoints'][0]['url'][0:-6]
+                else:
+                    base_url = record['link'].rstrip('/')
+                found = api_identifier(base_url, CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))

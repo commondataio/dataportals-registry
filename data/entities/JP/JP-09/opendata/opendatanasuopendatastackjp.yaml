@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: JP-09
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://opendata-nasu.opendatastack.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://opendata-nasu.opendatastack.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://opendata-nasu.opendatastack.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendatanasuopendatastackjp
 langs:

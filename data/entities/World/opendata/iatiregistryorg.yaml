@@ -12,8 +12,15 @@ coverage:
       name: World
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://iatiregistry.org/api/3
+- type: ckan
+  url: https://iatiregistry.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://iatiregistry.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://iatiregistry.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: iatiregistryorg
 identifiers:

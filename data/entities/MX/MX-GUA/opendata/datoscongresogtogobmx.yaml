@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: MX-GUA
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://datos.congresogto.gob.mx/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.congresogto.gob.mx/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.congresogto.gob.mx/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datoscongresogtogobmx
 langs:
@@ -31,7 +38,7 @@ owner:
     level: 2
     subregion:
       id: MX-GUA
-  name: 'Congreso del Estado de Guanajuato'
+  name: Congreso del Estado de Guanajuato
   type: Regional government
 properties:
   transferable_location: true

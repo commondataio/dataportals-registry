@@ -12,8 +12,15 @@ coverage:
       name: Kyrgyzstan
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.gov.kg/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.kg/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.kg/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datagovkg
 langs:

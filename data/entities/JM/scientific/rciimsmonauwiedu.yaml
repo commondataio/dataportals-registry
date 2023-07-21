@@ -12,8 +12,15 @@ coverage:
       name: Jamaica
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://rciims.mona.uwi.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://rciims.mona.uwi.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://rciims.mona.uwi.edu/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: rciimsmonauwiedu
 langs:
@@ -29,6 +36,8 @@ owner:
     level: 1
   name: The University of the West Indies
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -46,6 +55,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00000971

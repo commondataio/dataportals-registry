@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: JP-07
 endpoints:
-- type: ckanapi
-  url: http://opendata.city.higashihiroshima.lg.jp/data/api/3
+- type: ckan
+  url: http://opendata.city.higashihiroshima.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://opendata.city.higashihiroshima.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://opendata.city.higashihiroshima.lg.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendatacityhigashihiroshimalgjp
 langs:

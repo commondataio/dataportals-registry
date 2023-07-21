@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: JP-45
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.stat.pref.miyazaki.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.stat.pref.miyazaki.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.stat.pref.miyazaki.lg.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datastatprefmiyazakilgjp
 langs:
@@ -31,7 +38,7 @@ owner:
     level: 2
     subregion:
       id: JP-45
-  name: 'Prefecture Miyazaki'
+  name: Prefecture Miyazaki
   type: Regional government
 properties:
   transferable_location: true

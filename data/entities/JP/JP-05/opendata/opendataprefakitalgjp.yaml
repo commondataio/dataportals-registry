@@ -14,13 +14,20 @@ coverage:
     subregion:
       id: JP-05
 endpoints:
-- type: ckanapi
-  url: https://ckan.pref.akita.lg.jp/data/api/3
+- type: ckan
+  url: https://ckan.pref.akita.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.pref.akita.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.pref.akita.lg.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendataprefakitalgjp
 langs:
 - JA
-link: https://opendata.pref.akita.lg.jp
+link: https://ckan.pref.akita.lg.jp
 name: Akita prefecture open data
 owner:
   link: https://www.pref.akita.lg.jp
@@ -30,7 +37,7 @@ owner:
       name: Japan
     level: 2
     subregion:
-      id: JP-05
+      id: JP-054
   name: Akita prefecture
   type: Regional government
 properties:

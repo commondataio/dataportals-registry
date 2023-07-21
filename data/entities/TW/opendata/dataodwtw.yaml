@@ -12,8 +12,12 @@ coverage:
       name: Taiwan
     level: 1
 endpoints:
-- type: ckanapi
-  url: http://data.odw.tw/api/3
+- type: ckan
+  url: https://data.odw.tw/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.odw.tw/api/3/action/package_search
+  version: '3'
 export_standard: CKAN API
 id: dataodwtw
 identifiers:

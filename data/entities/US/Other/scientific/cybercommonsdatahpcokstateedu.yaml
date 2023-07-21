@@ -12,8 +12,15 @@ coverage:
       name: United States
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://cybercommons-data.hpc.okstate.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://cybercommons-data.hpc.okstate.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://cybercommons-data.hpc.okstate.edu/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: cybercommonsdatahpcokstateedu
 langs:

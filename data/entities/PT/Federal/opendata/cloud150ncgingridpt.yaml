@@ -12,16 +12,21 @@ coverage:
       name: Portugal
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://cloud150.ncg.ingrid.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://cloud150.ncg.ingrid.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://cloud150.ncg.ingrid.pt/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: cloud150ncgingridpt
 langs:
 - EN
 link: http://cloud150.ncg.ingrid.pt
 name: MELOA (Multi-purpose/Multi-sensor Extra Light Oceanography Apparatus)
-properties:
-  transferable_topics: true
 owner:
   link: https://ingrid.pt
   location:
@@ -31,6 +36,8 @@ owner:
     level: 1
   name: Instrumentation and Experimental Particle Physics Laboratory
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN

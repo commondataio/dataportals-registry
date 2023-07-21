@@ -14,8 +14,11 @@ coverage:
     subregion:
       id: IT-45
 endpoints:
-- type: ckanapi
-  url: https://opendata.comune.parma.it/api/3
+- type: ckan:package-list
+  url: https://opendata.comune.parma.it/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://opendata.comune.parma.it/data.json
 export_standard: CKAN API
 id: opendatacomuneparmait
 langs:

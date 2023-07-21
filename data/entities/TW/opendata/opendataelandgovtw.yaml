@@ -12,8 +12,15 @@ coverage:
       name: Taiwan
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://opendata.e-land.gov.tw/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.e-land.gov.tw/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.e-land.gov.tw/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendataelandgovtw
 langs:

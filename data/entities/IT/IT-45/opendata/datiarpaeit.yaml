@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: IT-75
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://dati.arpae.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.arpae.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.arpae.it/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datiarpaeit
 langs:
@@ -34,7 +41,7 @@ owner:
   name: The regional agency for prevention, the environment and energy of Emilia-Romagna
   type: Regional government
 properties:
-  transferable_location: true
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -49,6 +56,4 @@ topics:
 - id: Environment
   name: Environment
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000949

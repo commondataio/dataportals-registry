@@ -13,8 +13,15 @@ coverage:
       name: Moldova
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.gov.md/ckan/api/3
+- type: ckan
+  url: https://data.gov.md/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.md/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.md/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: datagovmd
 identifiers:

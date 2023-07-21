@@ -12,8 +12,15 @@ coverage:
       name: United States
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://catalog.data.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.data.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.data.gov/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: catalogdatagov
 identifiers:
@@ -31,13 +38,13 @@ langs:
 link: https://catalog.data.gov
 name: The Home of the U.S. Government Open Data
 owner:
+  link: https://www.gsa.gov
   location:
     country:
       id: US
       name: United States
     level: 1
   name: GSA Technology Transformation Services
-  link: https://www.gsa.gov
   type: Central government
 software:
   id: ckan

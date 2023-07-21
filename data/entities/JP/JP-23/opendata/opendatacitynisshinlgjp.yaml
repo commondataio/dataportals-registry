@@ -14,8 +14,15 @@ coverage:
     subregion:
       id: JP-23
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://opendata.city.nisshin.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.city.nisshin.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.city.nisshin.lg.jp/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendatacitynisshinlgjp
 langs:

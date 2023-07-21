@@ -12,8 +12,15 @@ coverage:
       name: France
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: http://data.agriculturelittorale.fr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://data.agriculturelittorale.fr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://data.agriculturelittorale.fr/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataagriculturelittoralefr
 langs:
@@ -28,6 +35,8 @@ owner:
     level: 1
   name: ''
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -41,6 +50,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000682

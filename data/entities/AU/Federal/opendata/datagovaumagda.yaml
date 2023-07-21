@@ -12,14 +12,11 @@ coverage:
       name: Australia
     level: 1
 endpoints:
-- type: ckan:package-search
-  url: https://data.gov.au/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://data.gov.au/api/3/action/package_list
-  version: '3'
-export_standard: CKAN API
-id: datagovau
+- type: magda:datasets
+  url: https://data.gov.au/api/v0/search/datasets
+- type: magda:organizations
+  url: https://data.gov.au/api/v0/search/organisations
+id: datagovaumagda
 identifiers:
 - id: re3data
   url: https://www.re3data.org/repository/r3d100010868
@@ -36,7 +33,7 @@ identifiers:
 langs:
 - EN
 link: https://data.gov.au
-name: Australia data portal
+name: Australia data portal (Magda)
 owner:
   link: https://www.gov.au
   location:
@@ -47,11 +44,11 @@ owner:
   name: Government of Australia
   type: Central government
 software:
-  id: ckan
-  name: CKAN
+  id: magda
+  name: Magda
 status: active
 tags:
 - government
 - has_api
 topics: []
-uid: cdi00000098
+uid: cdi00002472

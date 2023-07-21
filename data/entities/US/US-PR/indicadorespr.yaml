@@ -17,8 +17,12 @@ description: El Sistema de Indicadores de Puerto Rico o Indicadores.PR es un rep
   de Estadísticas desarrolló el Sistema para facilitar el acceso publico y la entrega
   rápida de los datos preparados por las distintas entidades gubernamentales.
 endpoints:
-- type: ckanapi
-  url: https://indicadores.pr/api/3
+- type: ckan:package-search
+  url: https://indicadores.pr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://indicadores.pr/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: indicadorespr
 langs:

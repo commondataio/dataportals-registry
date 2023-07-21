@@ -12,8 +12,12 @@ coverage:
       name: World
     level: 1
 endpoints:
-- type: ckanapi
-  url: https://data.iita.org/api/3
+- type: ckan:package-search
+  url: https://data.iita.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.iita.org/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: dataiitaorg
 identifiers:
@@ -33,6 +37,8 @@ owner:
     level: 1
   name: The International Institute of Tropical Agriculture (IITA)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
@@ -47,6 +53,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001998
