@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: https://geo.gualeguaychu.gov.ar/api/layers/
+- type: geonode:documents
+  url: https://geo.gualeguaychu.gov.ar/api/documents/
+- type: wms
+  url: https://geo.gualeguaychu.gov.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geo.gualeguaychu.gov.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geo.gualeguaychu.gov.ar/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geo.gualeguaychu.gov.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts
+  url: https://geo.gualeguaychu.gov.ar/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geo.gualeguaychu.gov.ar/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geogualeguaychugovar
+langs:
+- ES
+link: https://geo.gualeguaychu.gov.ar
+name: geo.gualeguaychu.gov.ar
+owner:
+  link: null
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 1
+  name: ''
+  type: Unknown
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags: []
+topics: []
+uid: temp00000014

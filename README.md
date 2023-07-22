@@ -143,7 +143,7 @@ Following data sources used:
 * Major Smart Cities with Open Data (updated 2019) https://rlist.io/l/major-smart-cities-with-open-data-portals
 * Registry of Open Access Repositories http://roar.eprints.org
 * IPT: Integrated Publishing Toolkit installations - https://www.gbif.org/ipt
-* Geoblacklight showcase - https://geoblacklight.org/showcase/
+* Geoblacklight showcase - https://geoblacklight.org/showcase/ - done
 
 ## License
 

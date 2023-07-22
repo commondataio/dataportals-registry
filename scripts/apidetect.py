@@ -23,6 +23,7 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 
 ENTRIES_DIR = '../data/entities'
+SCHEDULED_DIR = '../data/scheduled'
 app = typer.Typer()
 
 DEFAULT_TIMEOUT = 15
@@ -159,12 +160,18 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
 'magda' : MAGDA_URLMAP}
 
+def geoserver_url_cleanup_func(url):
+    return url.rstrip('/').rstrip('/web')
 
+URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func}
 
 def api_identifier(website_url, url_map, software_id, verify_json=False):
     results = []
     found = []
     print('-', end="")
+    # 
+    if software_id in URL_CLEANUP_MAP:
+        website_url = URL_CLEANUP_MAP[software_id](website_url)
     for item in url_map:
         print(" %s" % (item['id']), end="")
 
@@ -208,12 +215,14 @@ def api_identifier(website_url, url_map, software_id, verify_json=False):
 
 
 @app.command()
-def detect(software, dryrun=False, replace_endpoints=True):
-    """Enrich data catalogs with API endpoints"""
-    dirs = os.listdir(ENTRIES_DIR)
-
-    dirs = os.listdir(ENTRIES_DIR)    
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+def detect_software(software, dryrun=False, replace_endpoints=True, mode='entries'):
+    """Enrich data catalogs with API endpoints by software"""
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR
+    dirs = os.listdir(root_dir)    
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -239,11 +248,13 @@ def detect(software, dryrun=False, replace_endpoints=True):
                     print('- no endpoints, not updated')
 
 @app.command()
-def detect_single(uniqid, dryrun=False, replace_endpoints=True):
+def detect_single(uniqid, dryrun=False, replace_endpoints=True, mode='entries'):
     """Enrich single data catalog with API endpoints"""
-
-    dirs = os.listdir(ENTRIES_DIR)    
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -271,11 +282,13 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True):
                     print('- no endpoints, not updated')
 
 @app.command()
-def detect_country(country, dryrun=False, replace_endpoints=True):
+def detect_country(country, dryrun=False, replace_endpoints=True, mode='entries'):
     """Enrich data catalogs with API endpoints by country"""
-
-    dirs = os.listdir(ENTRIES_DIR)    
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR    
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -303,10 +316,14 @@ def detect_country(country, dryrun=False, replace_endpoints=True):
                     print('- no endpoints, not updated')
 
 @app.command()
-def detect_ckan(dryrun=False, replace_endpoints=True):
+def detect_ckan(dryrun=False, replace_endpoints=True, mode='entries'):
     """Enrich data catalogs with API endpoints by CKAN instance (special function to update all endpoints"""
-    dirs = os.listdir(ENTRIES_DIR)    
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+    """Enrich data catalogs with API endpoints by country"""
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR   
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -337,10 +354,13 @@ def detect_ckan(dryrun=False, replace_endpoints=True):
 
 
 @app.command()
-def detect_all(mode='undetected', replace_endpoints=True):
+def detect_all(status='undetected', replace_endpoints=True, mode='entries'):
     """Detect all known API endpoints"""
-    dirs = os.listdir(ENTRIES_DIR)    
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR   
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -349,7 +369,7 @@ def detect_all(mode='undetected', replace_endpoints=True):
             f.close()
             if record['software']['id'] in CATALOGS_URLMAP.keys():                
                 if 'endpoints' not in record.keys() or len(record['endpoints']) == 0:
-                    if mode == 'undetected':
+                    if status == 'undetected':
                         print('Processing catalog %s, software %s' % (os.path.basename(filename).split('.', 1)[0], record['software']['id']))
                         if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                             print(' - skip, we have endpoints already and no replace mode')
@@ -369,13 +389,18 @@ def detect_all(mode='undetected', replace_endpoints=True):
 
 
 @app.command()
-def report(mode='undetected', filename=None):
+def report(status='undetected', filename=None, mode='entries'):
     """Report data catalogs with undetected API endpoints"""
     out = sys.stdout if filename is None else open(filename, 'w', encoding='utf8')
-    dirs = os.listdir(ENTRIES_DIR)    
-    if mode == 'undetected':
+
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR   
+
+    if status == 'undetected':
         out.write(','.join(['uid', 'link', 'software_id' 'status']) + '\n')
-    for root, dirs, files in os.walk(ENTRIES_DIR):
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -384,7 +409,7 @@ def report(mode='undetected', filename=None):
             f.close()
             if record['software']['id'] in CATALOGS_URLMAP.keys():                
                 if 'endpoints' not in record.keys() or len(record['endpoints']) == 0:
-                    if mode == 'undetected':
+                    if status == 'undetected':
                         out.write(','.join([record['uid'], record['link'], record['software']['id'], 'undetected']) + '\n')
     if filename is not None:
         out.close()

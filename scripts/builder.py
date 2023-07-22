@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # This script intended to enrich data of catalogs entries 
 
+import copy
 import typer
 import datetime
+from urllib.parse import urlparse
 import requests
 from requests.exceptions import ConnectionError
 from urllib3.exceptions import InsecureRequestWarning
@@ -20,9 +22,14 @@ import os
 import shutil
 import pprint
 
+from constants import ENTRY_TEMPLATE, CUSTOM_SOFTWARE_KEYS, MAP_SOFTWARE_OWNER_CATALOG_TYPE, DOMAIN_LOCATIONS, DEFAULT_LOCATION, COUNTRIES_LANGS, MAP_CATALOG_TYPE_SUBDIR
+
+
 ROOT_DIR = '../data/entities'
+SCHEDULED_DIR = '../data/scheduled'
 SOFTWARE_DIR = '../data/software'
 DATASETS_DIR = '../data/datasets'
+UNPROCESSED_DIR = '../data/_unprocessed'
 
 app = typer.Typer()
 
@@ -49,16 +56,32 @@ def build_dataset(datapath, dataset_filename):
             out.write(json.dumps(data, ensure_ascii=False) + '\n')
     out.close()    
 
+def merge_datasets(list_datasets, result_file):
+    out = open(os.path.join(DATASETS_DIR, result_file), 'w', encoding='utf8')
+    for filename in list_datasets:                
+        print('- adding %s' % (os.path.basename(filename).split('.', 1)[0]))
+        filepath = filename
+        f = open(os.path.join(DATASETS_DIR, filepath), 'r', encoding='utf8')
+        for line in f:
+            out.write(line.rstrip() + '\n')
+        f.close()
+    out.close()    
+
 
 @app.command()
 def build():
     """Build datasets as JSONL from entities as YAML"""
-    print('Started building catalogs dataset')
-    build_dataset(ROOT_DIR, 'catalogs.jsonl')
-    print('Finished building catalogs dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'catalogs.jsonl')))
     print('Started building software dataset')
     build_dataset(SOFTWARE_DIR, 'software.jsonl')
     print('Finished building software dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'software.jsonl')))
+    print('Started building catalogs dataset')
+    build_dataset(ROOT_DIR, 'catalogs.jsonl')
+    print('Finished building catalogs dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'catalogs.jsonl')))
+    print('Started building scheduled dataset')
+    build_dataset(SCHEDULED_DIR, 'scheduled.jsonl')
+    print('Finished building scheduled dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'scheduled.jsonl')))
+    merge_datasets(['catalogs.jsonl', 'scheduled.jsonl'], 'full.jsonl')
+    print('Merged datasets %s as %s' % (','.join(['catalogs.jsonl', 'scheduled.jsonl']), 'full.jsonl'))
 
 
 
@@ -162,13 +185,10 @@ def stats(output='country_software.csv'):
     typer.echo('Wrote %s' % (output))    
 
 
-
-@app.command()
-def assign(dryrun=False):
-    """Assign unique identifier to each data catalog entry"""
+def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
     max_num = 0
 
-    for root, dirs, files in os.walk(ROOT_DIR):
+    for root, dirs, files in os.walk(dirpath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
@@ -176,13 +196,13 @@ def assign(dryrun=False):
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)            
             if 'uid' in record.keys():
-                num = int(record['uid'].split('cdi', 1)[-1])
+                num = int(record['uid'].split(prefix, 1)[-1])
                 if num > max_num:
                     max_num = num
             f.close() 
 
 
-    for root, dirs, files in os.walk(ROOT_DIR):
+    for root, dirs, files in os.walk(dirpath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
@@ -191,12 +211,19 @@ def assign(dryrun=False):
             f.close() 
             if 'uid' not in record.keys():
                 max_num += 1
-                record['uid'] = f'cdi{max_num:08}'
+                record['uid'] = f'{prefix}{max_num:08}'
                 print('Wrote %s uid for %s' % (record['uid'], os.path.basename(filename).split('.', 1)[0]))
                 f = open(filepath, 'w', encoding='utf8')
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
 
+@app.command()
+def assign(dryrun=False, mode='entries'):
+    """Assign unique identifier to each data catalog entry"""
+    if mode == 'entries':
+        assign_by_dir('cdi', ROOT_DIR)
+    else:
+        assign_by_dir('temp', SCHEDULED_DIR)
 
 @app.command()
 def validate():
@@ -220,8 +247,90 @@ def validate():
             except Exception as e:
                 print('%s error %s' % (d['id'], str(e)))
 
+@app.command()
+def add_legacy():
+    """Adds all legacy catalogs"""
 
-            
+    scheduled_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    scheduled_list = []
+    for row in scheduled_data:
+        scheduled_list.append(row['id'])
+
+    files = os.listdir(UNPROCESSED_DIR)
+    for filename in files:
+        if filename[-4:] != '.txt': continue
+        software = filename[0:-4]
+        f = open(os.path.join(UNPROCESSED_DIR, filename), 'r', encoding='utf8')
+        for l in f:
+            url = l.rstrip()
+            _add_single_entry(url, software, preloaded=scheduled_list)
+        f.close()
+
+def _add_single_entry(url, software, preloaded=None):
+    domain = urlparse(url).netloc.lower()
+    record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
+
+    if record_id in preloaded:
+        print('URL %s already scheduled to be added' % (record_id))
+        return
+
+    software_data = load_jsonl(os.path.join(DATASETS_DIR, 'software.jsonl'))
+    software_map = {}
+    for row in software_data:
+        software_map[row['id']] = row['name']
+
+    record = copy.deepcopy(ENTRY_TEMPLATE)
+    record['id']  = record_id
+
+    postfix = domain.rsplit('.', 1)[-1].split(':', 1)[0]
+    if postfix in DOMAIN_LOCATIONS.keys():
+        location = DOMAIN_LOCATIONS[postfix]
+    else:
+        location = DEFAULT_LOCATION
+    
+    record['langs'] = []
+    if postfix in COUNTRIES_LANGS.keys():
+        record['langs'].append(COUNTRIES_LANGS[postfix])
+
+    record['link'] = url
+    record['name'] = domain
+    record['coverage'].append(location)
+    record['owner'].update(location)
+
+    if software in MAP_SOFTWARE_OWNER_CATALOG_TYPE.keys():
+        record['catalog_type'] = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software]
+    if record['catalog_type'] == 'Geoportal':
+        record['content_types'].append('map_layer')
+    if software in CUSTOM_SOFTWARE_KEYS:
+        record['software'] = {'id' : 'custom', 'name' : 'Custom software'}
+    elif software in software_map.keys():
+        record['software'] = {'id' : software, 'name' : software_map[software]}
+    else:
+        record['software'] = {'id' : software, 'name' : software.title()}
+    country_dir = os.path.join(SCHEDULED_DIR, location['location']['country']['id'])
+    if not os.path.exists(country_dir):
+        os.mkdir(country_dir)
+    subdir_name = MAP_CATALOG_TYPE_SUBDIR[record['catalog_type']] if record['catalog_type'] in MAP_CATALOG_TYPE_SUBDIR.keys() else 'opendata'
+    subdir_dir = os.path.join(country_dir, subdir_name)
+    if not os.path.exists(subdir_dir):
+        os.mkdir(subdir_dir)    
+    filename = os.path.join(subdir_dir, record_id + '.yaml')
+    f = open(filename, 'w', encoding='utf8')
+    f.write(json.dumps(record, indent=4))
+    f.close()
+    print('%s saved' % (record_id))
+
+@app.command()
+def add_single(url, software):
+    """Adds data catalog to the scheduled list"""
+
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    full_list = []
+    for row in scheduled_data:
+        scheduled_list.append(row['id'])
+    _add_single_entry(url, software, preloaded=full_list)
+
+
 
 if __name__ == "__main__":    
     app()
