@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,6 +14,24 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonode:documents
+  url: https://infomapnode.info-rac.org/api/documents/
+- type: wfs
+  url: https://infomapnode.info-rac.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://infomapnode.info-rac.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://infomapnode.info-rac.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://infomapnode.info-rac.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://infomapnode.info-rac.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: infomapnodeinforacorg
 langs:
 - EN

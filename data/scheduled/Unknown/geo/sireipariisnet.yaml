@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,6 +14,32 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: http://sirei.pariis.net:8000/api/layers/
+- type: geonode:documents
+  url: http://sirei.pariis.net:8000/api/documents/
+- type: wms
+  url: http://sirei.pariis.net:8000/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://sirei.pariis.net:8000/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://sirei.pariis.net:8000/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://sirei.pariis.net:8000/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://sirei.pariis.net:8000/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://sirei.pariis.net:8000/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://sirei.pariis.net:8000/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: sireipariisnet
 langs:
 - EN

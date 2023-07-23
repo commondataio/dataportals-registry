@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,6 +14,29 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: http://www.africabees.com/api/layers/
+- type: geonode:documents
+  url: http://www.africabees.com/api/documents/
+- type: wms
+  url: http://www.africabees.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://www.africabees.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://www.africabees.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://www.africabees.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts
+  url: http://www.africabees.com/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://www.africabees.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: wwwafricabeescom
 langs:
 - EN

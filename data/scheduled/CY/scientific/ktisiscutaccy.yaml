@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -13,10 +13,23 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: dspace:items
+  url: https://ktisis.cut.ac.cy/rest/items
+  version: '6'
+- type: oaipmh
+  url: https://ktisis.cut.ac.cy/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://ktisis.cut.ac.cy/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://ktisis.cut.ac.cy/feed/atom_1.0/site
+  version: '1.0'
 id: ktisiscutaccy
 langs:
 - EL
-link: https://ktisis.cut.ac.cy/browse?type=type&order=ASC&rpp=20&value=Data
+link: https://ktisis.cut.ac.cy
 name: ktisis.cut.ac.cy
 owner:
   link: null

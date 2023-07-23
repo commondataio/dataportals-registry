@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,17 @@ coverage:
       id: ES-CT
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.dipta.cat/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.dipta.cat/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: http://www.dipta.cat/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www.dipta.cat/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://www.dipta.cat/arcgis/rest/services?f=kmz
 id: wwwdiptacat
 langs:
 - ES

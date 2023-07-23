@@ -13,10 +13,20 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: ckan
+  url: http://62.103.213.231:8080/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://62.103.213.231:8080/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://62.103.213.231:8080/api/3/action/package_list
+  version: '3'
 id: datamalevizigovgr
 langs:
 - EL
-link: http://data.malevizi.gov.gr/
+link: http://62.103.213.231:8080
 name: data.malevizi.gov.gr
 owner:
   link: null

@@ -14,6 +14,15 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: http://metacatalog.rcmrd.org:8081/geonetwork/srv/eng/q
+- type: csw
+  url: http://metacatalog.rcmrd.org:8081/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://metacatalog.rcmrd.org:8081/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: metacatalogrcmrdorg
 langs:
 - EN

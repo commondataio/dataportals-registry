@@ -14,6 +14,15 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/q
+- type: opensearch
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: '1302063023'
 langs: []
 link: http://130.206.30.23:8080/geonetwork/srv/eng/catalog.search#/home

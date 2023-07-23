@@ -14,10 +14,33 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.senasa.gob.ar/api/datasets/
+- type: geonode:documents
+  url: https://geonode.senasa.gob.ar/api/documents/
+- type: wms
+  url: https://geonode.senasa.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: https://geonode.senasa.gob.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: https://geonode.senasa.gob.ar/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: https://geonode.senasa.gob.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://geonode.senasa.gob.ar/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.senasa.gob.ar/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: geonodesenasagobar
 langs:
 - ES
-link: https://geonode.senasa.gob.ar/#/
+link: https://geonode.senasa.gob.ar
 name: geonode.senasa.gob.ar
 owner:
   link: null

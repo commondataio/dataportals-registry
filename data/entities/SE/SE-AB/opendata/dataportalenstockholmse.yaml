@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -12,6 +13,9 @@ coverage:
     level: 2
     subregion:
       id: SE-AB
+endpoints:
+- type: metagis:layers
+  url: https://dataportalen.stockholm.se/dataportalen/ResultJSONGNServlet
 id: dataportalenstockholmse
 identifiers:
 - id: wikidata
@@ -19,7 +23,7 @@ identifiers:
   value: Q107620482
 langs:
 - SV
-link: https://dataportalen.stockholm.se
+link: https://dataportalen.stockholm.se/dataportalen/
 name: Stokholms stad Dataportalen
 owner:
   link: https://www.stockholm.se
@@ -35,8 +39,8 @@ owner:
 properties:
   transferable_location: true
 software:
-  id: custom
-  name: Custom software
+  id: metagis
+  name: Metagis
 status: active
 tags:
 - government

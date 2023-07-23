@@ -14,6 +14,21 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/q
+- type: openapi
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: catalogogeoidepgobpe
 langs:
 - ES

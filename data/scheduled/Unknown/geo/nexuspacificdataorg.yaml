@@ -14,10 +14,22 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonode:documents
+  url: https://nexus.pacificdata.org/api/documents/
+- type: csw
+  url: https://nexus.pacificdata.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: https://nexus.pacificdata.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://nexus.pacificdata.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: nexuspacificdataorg
 langs:
 - EN
-link: https://nexus.pacificdata.org/catalogue/#/search/?f=dataset
+link: https://nexus.pacificdata.org
 name: nexus.pacificdata.org
 owner:
   link: null

@@ -321,13 +321,13 @@ def _add_single_entry(url, software, preloaded=None):
     print('%s saved' % (record_id))
 
 @app.command()
-def add_single(url, software):
+def add_single(url, software='custom'):
     """Adds data catalog to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
     full_list = []
-    for row in scheduled_data:
-        scheduled_list.append(row['id'])
+    for row in full_data:
+        full_list.append(row['id'])
     _add_single_entry(url, software, preloaded=full_list)
 
 

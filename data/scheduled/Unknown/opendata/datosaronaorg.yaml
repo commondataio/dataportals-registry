@@ -13,10 +13,20 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: ckan
+  url: http://datos.arona.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://datos.arona.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://datos.arona.org/api/3/action/package_list
+  version: '3'
 id: datosaronaorg
 langs:
 - EN
-link: http://datos.arona.org/dataset
+link: http://datos.arona.org
 name: datos.arona.org
 owner:
   link: null

@@ -13,10 +13,17 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: ckan:package-search
+  url: https://ckan.cabi.org/data/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.cabi.org/data/api/3/action/package_list
+  version: '3'
 id: ckancabiorg
 langs:
 - EN
-link: https://ckan.cabi.org
+link: https://ckan.cabi.org/data
 name: ckan.cabi.org
 owner:
   link: null

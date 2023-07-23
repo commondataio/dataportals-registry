@@ -16,6 +16,7 @@ import os
 from  urllib.parse import urlparse
 import shutil
 import pprint
+from urllib.parse import urlparse
 from requests.exceptions import ConnectionError, TooManyRedirects
 from urllib3.exceptions import InsecureRequestWarning#, ConnectionError
 # Suppress only the single warning from urllib3 needed.
@@ -31,8 +32,12 @@ DEFAULT_TIMEOUT = 15
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
 XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml']
-JSON_MIMETYPES = ['text/json', 'application/json']
+JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json']
 CSV_MIMETYPES = ['text/csv']
+ZIP_MIMETYPES = ['application/zip']
+
+PLAIN_MIMETYPES = ['text/plain']
+KMZ_MIMETYPES = ['application/vnd.google-earth.kmz .kmz']
 
 GEONODE_URLMAP = [
     {'id' : 'geonode:layers', 'url' : '/api/layers/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -89,7 +94,8 @@ DATAVERSE_URLMAP = [
     {'id' : 'oaipmh', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
 ]
 
-DSPACE_URLMAP = [
+DSPACE_URLMAP = [                               
+    {'id' : 'dspace', 'url' : '/server/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '7'},
     {'id' : 'dspace:objects', 'url' : '/server/api/discover/search/objects', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '7'},
     {'id' : 'dspace:items', 'url' : '/rest/items', 'accept': 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '6'},
     {'id' : 'oaipmh', 'url' : '/oai/request?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
@@ -144,43 +150,107 @@ MYCORE_URLMAP = [
     {'id' : 'mycore:objects', 'display_url' : 'api/v1/objects', 'url' : '/api/v1/objects?format=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
 ]
 
+OPENDATASOFT_URLMAP = [
+    {'id' : 'opendatasoft', 'display_url' : '/api', 'url' : '/api/v2/catalog/datasets/', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+]
+
 MAGDA_URLMAP = [
     {'id' : 'magda:datasets', 'url' : '/search/api/v0/search/datasets', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'magda:organizations', 'url' : '/search/api/v0/search/organisations', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'magda:datasets', 'url' : '/api/v0/search/datasets', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'magda:organizations', 'url' : '/api/v0/search/organisations', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
-
 ]
 
+ARCGISHUB_URLMAP = [
+    {'id' : 'dcatap201',  'url' : '/api/feed/dcat-ap/2.0.1.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'dcatus11',  'url' : '/api/feed/dcat-us/1.1.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'rss',  'url' : '/api/feed/rss/2.0', 'accept' : 'application/json', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'ogcrecordsapi',  'url' : '/api/search/v1', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+]
+
+ARCGISSERVER_URLMAP = [
+    {'id' : 'arcgis:portals:self',  'url' : '/portal/sharing/rest/portals/self?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES, 'is_json' : True, 'version': None},
+
+    {'id' : 'arcgis:rest:info',  'url' : '/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:rest:services',  'url' : '/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:soap',  'url' : '/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:sitemap',  'url' : '/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:geositemap',  'url' : '/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:kmz',  'url' : '/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
+
+    {'id' : 'arcgis:rest:info',  'url' : '/server/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:rest:services',  'url' : '/server/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:soap',  'url' : '/server/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:sitemap',  'url' : '/server/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:geositemap',  'url' : '/server/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:kmz',  'url' : '/server/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
+
+    {'id' : 'arcgis:rest:info',  'url' : '/arcgis/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:rest:services',  'url' : '/arcgis/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:soap',  'url' : '/arcgis/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:sitemap',  'url' : '/arcgis/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:geositemap',  'url' : '/arcgis/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:kmz',  'url' : '/arcgis/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
+]
+
+OSKARI_URLMAP = [
+    {'id' : 'oskari:getmaplayers',  'url' : '/action?action_route=GetMapLayers&lang=en&epsg=EPSG%3A3067', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'oskari:gethiermaplayers',  'url' : '/action?action_route=GetHierarchicalMapLayerGroups', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+]
+
+METAGIS_URLMAP = [
+    {'id' : 'metagis:layers',  'url' : '/ResultJSONGNServlet', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : True},    
+]
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
 'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 
 'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
-'magda' : MAGDA_URLMAP}
+'magda' : MAGDA_URLMAP, 'opendatasoft' : OPENDATASOFT_URLMAP, 'arcgishub' : ARCGISHUB_URLMAP, 
+'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP}
 
 def geoserver_url_cleanup_func(url):
-    return url.rstrip('/').rstrip('/web')
+    url = url.rstrip('/')
+    if url[-3:] == 'web':        
+        url = url[:-4]
+    return url
 
-URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func}
+def arcgisserver_url_cleanup_func(url):
+    domain = urlparse(url).netloc
+    if domain.find('443') > -1 or url[0:5] == 'https':
+        prefix = 'https://'
+    else:
+        prefix = 'http://'
+    return prefix + domain
+
+def geonetwork_url_cleanup_func(url):
+    return url.split('/srv')[0]
+
+
+URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func}
 
 def api_identifier(website_url, url_map, software_id, verify_json=False):
     results = []
     found = []
+    s = requests.Session()
     print('-', end="")
     # 
     if software_id in URL_CLEANUP_MAP:
         website_url = URL_CLEANUP_MAP[software_id](website_url)
+    else:
+        website_url = website_url.rstrip('/')
     for item in url_map:
         print(" %s" % (item['id']), end="")
 
-        request_url = website_url + item['url']        
+        if 'prefetch' in item and item['prefetch']:
+            prefeteched_data = s.get(website_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+        request_url = website_url + item['url']
         try:
             if 'accept' in item.keys():
-                response = requests.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
             else:
-                response = requests.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
         except requests.exceptions.Timeout:
             results.append({'url' : request_url,'error' : 'Timeout'})
             continue       
@@ -238,8 +308,10 @@ def detect_software(software, dryrun=False, replace_endpoints=True, mode='entrie
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
-                    record['endpoints'].append(api)
+                    record['endpoints'].append(api)                
                 if len(record['endpoints']) > 0:
+                    record['api'] = True
+                    record['api_status'] = 'active'
                     f = open(filepath, 'w', encoding='utf8')
                     f.write(yaml.safe_dump(record, allow_unicode=True))
                     f.close()
@@ -261,7 +333,11 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True, mode='entries'):
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)            
             f.close()
-            if record['uid'] != uniqid and record ['id'] != uniqid:
+            idkeys = []
+            for k in ['uid', 'id', 'link']:
+                if k in record.keys():
+                    idkeys.append(record[k])
+            if uniqid not in idkeys:
                 continue
             if record['software']['id']  in CATALOGS_URLMAP.keys():
                 print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
@@ -399,7 +475,7 @@ def report(status='undetected', filename=None, mode='entries'):
         root_dir = SCHEDULED_DIR   
 
     if status == 'undetected':
-        out.write(','.join(['uid', 'link', 'software_id' 'status']) + '\n')
+        out.write(','.join(['id','uid', 'link', 'software_id' 'status']) + '\n')
     for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
@@ -410,7 +486,7 @@ def report(status='undetected', filename=None, mode='entries'):
             if record['software']['id'] in CATALOGS_URLMAP.keys():                
                 if 'endpoints' not in record.keys() or len(record['endpoints']) == 0:
                     if status == 'undetected':
-                        out.write(','.join([record['uid'], record['link'], record['software']['id'], 'undetected']) + '\n')
+                        out.write(','.join([record['id'], record['uid'], record['link'], record['software']['id'], 'undetected']) + '\n')
     if filename is not None:
         out.close()
                     

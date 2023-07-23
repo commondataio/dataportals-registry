@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,6 +14,23 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: https://data.opendatascience.eu/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://data.opendatascience.eu/geonetwork/srv/api/records
+- type: openapi
+  url: https://data.opendatascience.eu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw
+  url: https://data.opendatascience.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://data.opendatascience.eu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh
+  url: https://data.opendatascience.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: dataopendatascienceeu
 langs:
 - EN

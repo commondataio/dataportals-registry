@@ -13,10 +13,20 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: ckan
+  url: https://ckan.sena-opendata.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.sena-opendata.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.sena-opendata.jp/api/3/action/package_list
+  version: '3'
 id: senaopendatajp
 langs:
 - JP
-link: https://sena-opendata.jp/
+link: https://ckan.sena-opendata.jp
 name: sena-opendata.jp
 owner:
   link: null
