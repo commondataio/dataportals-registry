@@ -31,11 +31,13 @@ DEFAULT_TIMEOUT = 15
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
-XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml']
+KML_MIMETYPES = ['application/vnd.google-earth.kml+xml']
+XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml'] + KML_MIMETYPES
 JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json']
-CSV_MIMETYPES = ['text/csv']
 ZIP_MIMETYPES = ['application/zip']
 
+
+CSV_MIMETYPES = ['text/csv']
 PLAIN_MIMETYPES = ['text/plain']
 KMZ_MIMETYPES = ['application/vnd.google-earth.kmz .kmz']
 
@@ -202,13 +204,28 @@ METAGIS_URLMAP = [
     {'id' : 'metagis:layers',  'url' : '/ResultJSONGNServlet', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : True},    
 ]
 
+ESRIGEO_URLMAP = [
+    {'id' : 'esrigeo:geoportal', 'url' : '/rest/geoportal', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'esrigeo:metadata:search', 'url' : '/rest/metadata/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'csw', 'url' : '/csw', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': "3.0.0"},      
+    {'id' : 'atom', 'url' : '/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'esrigeo:json', 'url' : '/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'rss', 'url' : '/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},      
+    {'id' : 'dcatus11', 'url' : '/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},      
+    {'id' : 'esrigeo:csv', 'url' : '/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : CSV_MIMETYPES, 'is_json' : False, 'version': None},      
+    {'id' : 'esrigeo:kml', 'url' : '/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : KML_MIMETYPES, 'is_json' : False, 'version': None},      
+]
+
+
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
 'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 
 'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
 'magda' : MAGDA_URLMAP, 'opendatasoft' : OPENDATASOFT_URLMAP, 'arcgishub' : ARCGISHUB_URLMAP, 
-'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP}
+'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP,
+'esrigeo' : ESRIGEO_URLMAP
+}
 
 def geoserver_url_cleanup_func(url):
     url = url.rstrip('/')

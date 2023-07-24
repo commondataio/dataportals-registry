@@ -267,6 +267,7 @@ def add_legacy():
         f.close()
 
 def _add_single_entry(url, software, preloaded=None):
+    from apidetect import detect_single
     domain = urlparse(url).netloc.lower()
     record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
 
@@ -319,6 +320,7 @@ def _add_single_entry(url, software, preloaded=None):
     f.write(json.dumps(record, indent=4))
     f.close()
     print('%s saved' % (record_id))
+    detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
 
 @app.command()
 def add_single(url, software='custom'):
