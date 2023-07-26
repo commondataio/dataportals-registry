@@ -23,6 +23,7 @@ requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 ROOT_DIR = '../data/entities'
 DATASETS_DIR = '../data/datasets'
+SCHEDULED_DIR = '../data/scheduled'
 
 app = typer.Typer()
 
@@ -417,7 +418,7 @@ def enrich_location(dryrun=False):
 
 @app.command()
 def enrich_identifiers(filepath, idtype, dryrun=False):
-    """Enrich location codes"""    
+    """Enrich identifiers"""    
     f = open(filepath, 'r', encoding='utf8')
     reader = csv.DictReader(f, delimiter='\t')
     reg_map = {}
@@ -456,6 +457,38 @@ def enrich_identifiers(filepath, idtype, dryrun=False):
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
             print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+            
+
+@app.command()
+def fix_api(dryrun=False, mode='entities'):
+    """Fix API"""    
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if record['software']['id'] == 'geonode':                   
+                if 'endpoints' in record.keys():
+                    endpoints = []
+                    for endp in record['endpoints']:
+                        print(endp)
+                        if endp['type'] == 'dcatus11':
+                            endp['type'] = 'geonode:dcatus11'   
+                            print('Fixed endpoint')
+                            changed = True
+                        endpoints.append(endp)
+            if changed is True:
+                record['endpoints'] = endpoints
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
             
             
 
