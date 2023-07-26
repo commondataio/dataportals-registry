@@ -13,9 +13,9 @@ coverage:
       name: Mozambique
     level: 1
 endpoints:
-- type: geonetworkapi:query
+- type: geonetwork:query
   url: https://catalogo.collect.pde.gov.mz/geonetwork/srv/eng/q
-- type: geonetworkapi
+- type: geonetwork
   url: https://catalogo.collect.pde.gov.mz/geonetwork/srv/api
 export_standard: Geonetwork API
 id: catalogocollectpdegovmz
@@ -32,6 +32,8 @@ owner:
     level: 1
   name: Ministério dos Transportes e Comunicações Mozambique
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -47,6 +49,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001153

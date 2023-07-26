@@ -12,7 +12,7 @@ coverage:
       name: South Africa
     level: 1
 endpoints:
-- type: ckanapi
+- type: ckan
   url: https://data.ocean.gov.za/api/3
 export_standard: CKAN API
 id: dataoceangovza
@@ -29,12 +29,15 @@ owner:
     level: 1
   name: Southern African Data Centre for Oceanography (SADCO).
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: ckan
   name: CKAN
 status: active
-properties:
-  transferable_topics: true
+tags:
+- government
+- has_api
 topics:
 - id: Oceans
   name: Oceans
@@ -42,7 +45,4 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-tags:
-- government
-- has_api
 uid: cdi00002018

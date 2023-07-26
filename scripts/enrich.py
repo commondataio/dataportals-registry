@@ -481,8 +481,29 @@ def fix_api(dryrun=False, mode='entities'):
                         if endp['type'] == 'dcatus11':
                             endp['type'] = 'geonode:dcatus11'   
                             print('Fixed endpoint')
-                            changed = True
+                            changed = True         
                         endpoints.append(endp)
+            if 'endpoints' in record.keys():
+                endpoints = []
+                for endp in record['endpoints']:
+                    if endp['type'] in ['wfs', 'wcs', 'tms', 'wms-c', 'wms', 'csw', 'wmts', 'wps', 'oaipmh']:
+                        if 'version' in endp.keys():
+                            endp['type'] = endp['type'] + endp['version'].replace('.', '')
+                            print('Fixed endpoint')
+                            changed = True         
+                    if endp['type'] == 'ckanapi':
+                        endp['type'] = 'ckan'
+                        print('Fixed endpoint')
+                        changed = True         
+                    if endp['type'] == 'geonetworkapi':
+                        endp['type'] = 'geonetwork'
+                        print('Fixed endpoint')
+                        changed = True         
+                    if endp['type'] == 'geonetworkapi:query':
+                        endp['type'] = 'geonetwork:query'
+                        print('Fixed endpoint')
+                        changed = True         
+                    endpoints.append(endp)                        
             if changed is True:
                 record['endpoints'] = endpoints
                 f = open(filepath, 'w', encoding='utf8')

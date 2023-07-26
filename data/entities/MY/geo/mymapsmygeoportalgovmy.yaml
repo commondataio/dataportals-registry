@@ -16,19 +16,19 @@ endpoints:
   url: https://mymaps.mygeoportal.gov.my/api/layers/
 - type: geonode:documents
   url: https://mymaps.mygeoportal.gov.my/api/documents/
-- type: wms
+- type: wms111
   url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: wfs
+- type: wfs110
   url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
-- type: wcs
+- type: wcs111
   url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: csw
+- type: csw202
   url: https://mymaps.mygeoportal.gov.my/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
-- type: oaipmh
+- type: oaipmh20
   url: https://mymaps.mygeoportal.gov.my/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
 - type: opensearch

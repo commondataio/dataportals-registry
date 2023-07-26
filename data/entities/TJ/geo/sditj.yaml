@@ -17,22 +17,22 @@ endpoints:
   url: https://sdi.tj/api/layers/
 - type: geonode:documents
   url: https://sdi.tj/api/documents/
-- type: wms
+- type: wms111
   url: https://sdi.tj/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: wfs
+- type: wfs110
   url: https://sdi.tj/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
-- type: wcs
+- type: wcs111
   url: https://sdi.tj/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: csw
+- type: csw202
   url: https://sdi.tj/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
-- type: oaipmh
+- type: oaipmh20
   url: https://sdi.tj/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
-- type: wmts
+- type: wmts100
   url: https://sdi.tj/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
 - type: opensearch

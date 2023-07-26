@@ -21,16 +21,16 @@ endpoints:
   url: https://geodata.nina.no/api/documents/
 - type: geonode:dcatus11
   url: https://geodata.nina.no/data.json
-- type: wfs
+- type: wfs110
   url: https://geodata.nina.no/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
-- type: wcs
+- type: wcs111
   url: https://geodata.nina.no/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
-- type: csw
+- type: csw202
   url: https://geodata.nina.no/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
-- type: oaipmh
+- type: oaipmh20
   url: https://geodata.nina.no/catalogue/csw?mode=oaipmh&verb=Identify
   version: '2.0'
 - type: opensearch

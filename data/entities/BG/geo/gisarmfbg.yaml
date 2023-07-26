@@ -15,10 +15,10 @@ coverage:
 endpoints:
 - type: geonetwork:query
   url: http://gis.armf.bg:8080/geonetwork/srv/eng/q
-- type: csw
+- type: csw202
   url: http://gis.armf.bg:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
-- type: oaipmh
+- type: oaipmh20
   url: http://gis.armf.bg:8080/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 export_standard: Geonetwork API
@@ -36,6 +36,8 @@ owner:
     level: 1
   name: Bulgarian military geographic service
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geonetwork
   name: Geonetwork
@@ -44,8 +46,6 @@ tags:
 - geospatial
 - government
 - has_api
-properties:
-  transferable_topics: true
 topics:
 - id: Intelligence / Military
   name: Intelligence / Military
