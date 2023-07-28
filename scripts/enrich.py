@@ -507,6 +507,11 @@ def fix_api(dryrun=False, mode='entities'):
                         endp['type'] = 'opendatasoftapi'
                         print('Fixed endpoint')
                         changed = True         
+                    if endp['type'] == 'arcgisrest':
+                        endp['type'] = 'arcgis:rest:services'
+                        endp['url'] = endp['url'] + '?f=pjson'
+                        print('Fixed endpoint')
+                        changed = True         
                     endpoints.append(endp)                        
             if changed is True:
                 record['endpoints'] = endpoints

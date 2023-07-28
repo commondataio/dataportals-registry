@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,20 @@ coverage:
     subregion:
       id: RU-NIZ
 endpoints:
-- type: arcgisrest
-  url: https://3d-gorod.ru/server/rest/services/
+- type: arcgis:portals:self
+  url: https://3d-gorod.ru/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://3d-gorod.ru/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://3d-gorod.ru/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://3d-gorod.ru/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://3d-gorod.ru/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://3d-gorod.ru/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://3d-gorod.ru/server/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: 3dgorodru
 langs:

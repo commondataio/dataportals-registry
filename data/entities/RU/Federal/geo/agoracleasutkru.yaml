@@ -13,8 +13,8 @@ coverage:
       name: Russian Federation
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://agoracle.asutk.ru/arcgis/rest/services
+- type: arcgis:rest:services
+  url: https://agoracle.asutk.ru/arcgis/rest/services?f=pjson
 export_standard: ArcGIS REST Services
 id: agoracleasutkru
 langs:
@@ -29,6 +29,8 @@ owner:
     level: 1
   name: Ministry of Transport of Russia
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -43,6 +45,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001345

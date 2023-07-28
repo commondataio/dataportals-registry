@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -12,8 +13,20 @@ coverage:
       name: Kazakhstan
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://gis.kgp.kz/server/rest/services
+- type: arcgis:portals:self
+  url: https://gis.kgp.kz/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.kgp.kz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.kgp.kz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.kgp.kz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.kgp.kz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.kgp.kz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.kgp.kz/server/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: giskgpkz
 langs:
@@ -32,6 +45,8 @@ owner:
   name: Committee on the legal statistics and special accounts of the state office
     of public prosecutor of Republic of Kazakhstan
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -43,6 +58,4 @@ topics:
 - id: JUST
   name: Justice, legal system and public safety
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001078

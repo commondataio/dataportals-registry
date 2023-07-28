@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -12,8 +13,18 @@ coverage:
       name: Malaysia
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://data.hydro.gov.my/server/rest/services
+- type: arcgis:rest:info
+  url: https://data.hydro.gov.my/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://data.hydro.gov.my/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://data.hydro.gov.my/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://data.hydro.gov.my/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://data.hydro.gov.my/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://data.hydro.gov.my/server/rest/services?f=kmz
 id: datahydrogovmy
 langs:
 - EN

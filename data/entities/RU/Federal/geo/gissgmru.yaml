@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,6 +12,31 @@ coverage:
       id: RU
       name: Russian Federation
     level: 1
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.sgm.ru/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.sgm.ru/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.sgm.ru/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.sgm.ru/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.sgm.ru/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.sgm.ru/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://gis.sgm.ru/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.sgm.ru/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.sgm.ru/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.sgm.ru/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.sgm.ru/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.sgm.ru/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: gissgmru
 langs:

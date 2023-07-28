@@ -13,8 +13,32 @@ coverage:
       name: Norway
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://portal.fiskeridir.no/arcgis/rest/services
+- type: arcgis:portals:self
+  url: https://portal.fiskeridir.no/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://portal.fiskeridir.no/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.fiskeridir.no/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.fiskeridir.no/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.fiskeridir.no/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.fiskeridir.no/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portal.fiskeridir.no/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://portal.fiskeridir.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.fiskeridir.no/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.fiskeridir.no/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.fiskeridir.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.fiskeridir.no/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portal.fiskeridir.no/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: portalfiskeridirno
 langs:
@@ -30,6 +54,8 @@ owner:
     level: 1
   name: Directorate of Fisheries Norway
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -43,6 +69,4 @@ topics:
 - id: Farming
   name: Farming
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001200

@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,8 +13,20 @@ coverage:
       name: Jordan
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://moemap.moe.gov.jo/arcgis/rest/services
+- type: arcgis:portals:self
+  url: https://moemap.moe.gov.jo/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://moemap.moe.gov.jo/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://moemap.moe.gov.jo/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://moemap.moe.gov.jo/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://moemap.moe.gov.jo/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://moemap.moe.gov.jo/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://moemap.moe.gov.jo/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: moemapmoegovjo
 langs:
@@ -30,6 +42,8 @@ owner:
     level: 1
   name: Jordan Ministry of Education
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -44,6 +58,4 @@ topics:
 - id: Society
   name: Society
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000977

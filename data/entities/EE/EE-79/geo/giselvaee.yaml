@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,20 @@ coverage:
     subregion:
       id: EE-79
 endpoints:
-- type: api
-  url: https://gis.elva.ee/arcgis/rest/services
+- type: arcgis:portals:self
+  url: https://gis.elva.ee/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gis.elva.ee/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.elva.ee/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.elva.ee/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.elva.ee/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.elva.ee/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.elva.ee/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: giselvaee
 langs:

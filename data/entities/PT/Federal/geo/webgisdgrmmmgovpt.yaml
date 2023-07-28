@@ -13,8 +13,20 @@ coverage:
       name: Portugal
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services
+- type: arcgis:portals:self
+  url: https://webgis.dgrm.mm.gov.pt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://webgis.dgrm.mm.gov.pt/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: webgisdgrmmmgovpt
 langs:

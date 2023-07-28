@@ -18,7 +18,19 @@ description: This is a temporary record with some data collected but it should b
   updated befor adding to the index
 endpoints:
 - type: arcgis:portals:self
-  url: http://agportal.sig.gencat.cat/portal/sharing/rest/portals/self?f=pjson
+  url: https://agportal.sig.gencat.cat/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://agportal.sig.gencat.cat/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agportal.sig.gencat.cat/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agportal.sig.gencat.cat/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://agportal.sig.gencat.cat/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://agportal.sig.gencat.cat/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://agportal.sig.gencat.cat/server/rest/services?f=kmz
 id: agportalsiggencatcat
 langs:
 - ES

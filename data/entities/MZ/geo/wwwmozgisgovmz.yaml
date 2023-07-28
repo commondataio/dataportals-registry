@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,8 +13,20 @@ coverage:
       name: Mozambique
     level: 1
 endpoints:
-- type: arcgisrest
-  url: https://www.mozgis.gov.mz/image/rest/services
+- type: arcgis:portals:self
+  url: https://www.mozgis.gov.mz/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://www.mozgis.gov.mz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.mozgis.gov.mz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.mozgis.gov.mz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.mozgis.gov.mz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.mozgis.gov.mz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.mozgis.gov.mz/server/rest/services?f=kmz
 id: wwwmozgisgovmz
 langs:
 - PT

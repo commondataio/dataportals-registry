@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -13,8 +13,18 @@ coverage:
       name: Estonia
     level: 1
 endpoints:
-- type: api
-  url: https://gis.vta.ee/arcgis/rest/services
+- type: arcgis:rest:info
+  url: https://gis.vta.ee/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.vta.ee/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.vta.ee/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.vta.ee/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.vta.ee/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.vta.ee/arcgis/rest/services?f=kmz
 export_standard: ArcGIS REST Services
 id: gisvtaee
 langs:
@@ -30,6 +40,8 @@ owner:
     level: 1
   name: Republic of Estonia Transport Administration
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -45,6 +57,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00002363

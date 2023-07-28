@@ -16,13 +16,19 @@ description: This is a temporary record with some data collected but it should b
   updated befor adding to the index
 endpoints:
 - type: arcgis:portals:self
-  url: http://maps.helcom.fi/portal/sharing/rest/portals/self?f=pjson
+  url: https://maps.helcom.fi/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://maps.helcom.fi/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: http://maps.helcom.fi/arcgis/rest/services?f=pjson
+  url: https://maps.helcom.fi/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.helcom.fi/arcgis/services?wsdl
 - type: arcgis:sitemap
-  url: http://maps.helcom.fi/arcgis/rest/services?f=sitemap
+  url: https://maps.helcom.fi/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.helcom.fi/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
-  url: http://maps.helcom.fi/arcgis/rest/services?f=kmz
+  url: https://maps.helcom.fi/arcgis/rest/services?f=kmz
 id: mapshelcomfi
 langs:
 - FI
