@@ -190,10 +190,12 @@ DOMAIN_LOCATIONS = {
     'is' : {'location' : {'country' : {'id' : "IS", 'name' : "Iceland"}, 'level' : 1}},
     'ua' : {'location' : {'country' : {'id' : "UA", 'name' : "Ukraine"}, 'level' : 1}},
     'ee' : {'location' : {'country' : {'id' : "EE", 'name' : "Estonia"}, 'level' : 1}},
-    'scot' : {'location' : {'country' : {'id' : "UK", 'name' : "United Kingdom"}, 'level' : 2, 'subregion' : {'id' : 'GB-SCT'}}},
+    'scot' : {'location' : {'country' : {'id' : "GB", 'name' : "United Kingdom"}, 'level' : 2, 'subregion' : {'id' : 'GB-SCT'}}},
     'gl' : {'location' : {'country' : {'id' : "GL", 'name' : "Greenland"}, 'level' : 1}},
     'science' : {'location' : {'country' : {'id' : "Unknown", 'name' : "Unknown"}, 'level' : 1}},
     'ng' : {'location' : {'country' : {'id' : "NG", 'name' : "Nigeria"}, 'level' : 1}},
+    'dz' : {'location' : {'country' : {'id' : "DZ", 'name' : "Algeria"}, 'level' : 1}},
+    'cv' : {'location' : {'country' : {'id' : "CV", 'name' : "Cabo Verde"}, 'level' : 1}},
 }
 
 

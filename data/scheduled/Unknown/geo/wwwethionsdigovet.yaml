@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 1
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: http://www.ethionsdi.gov.et/api/layers/
+- type: geonode:documents
+  url: http://www.ethionsdi.gov.et/api/documents/
+- type: wms
+  url: http://www.ethionsdi.gov.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs
+  url: http://www.ethionsdi.gov.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs
+  url: http://www.ethionsdi.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw
+  url: http://www.ethionsdi.gov.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh
+  url: http://www.ethionsdi.gov.et/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts
+  url: http://www.ethionsdi.gov.et/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://www.ethionsdi.gov.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: wwwethionsdigovet
+langs: []
+link: http://www.ethionsdi.gov.et
+name: www.ethionsdi.gov.et
+owner:
+  link: null
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 1
+  name: ''
+  type: Unknown
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags: []
+topics: []
