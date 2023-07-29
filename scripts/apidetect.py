@@ -193,6 +193,14 @@ ARCGISSERVER_URLMAP = [
     {'id' : 'arcgis:sitemap',  'url' : '/arcgis/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'arcgis:geositemap',  'url' : '/arcgis/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'arcgis:kmz',  'url' : '/arcgis/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
+
+    {'id' : 'arcgis:rest:info',  'url' : '/arcgisserver/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:rest:services',  'url' : '/arcgisserver/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'arcgis:soap',  'url' : '/arcgisserver/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:sitemap',  'url' : '/arcgisserver/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:geositemap',  'url' : '/arcgisserver/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'arcgis:kmz',  'url' : '/arcgisserver/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
+
 ]
 
 OSKARI_URLMAP = [
