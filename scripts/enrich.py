@@ -513,6 +513,16 @@ def fix_api(dryrun=False, mode='entities'):
                         print('Fixed endpoint')
                         changed = True         
                     endpoints.append(endp)                        
+            else:
+                if record['software']['id'] == 'arcgisserver':
+                    endpoints = []
+                    endp = {}
+                    endp['type'] = 'arcgis:rest:services'
+                    endp['url'] = record['link'] + '?f=pjson'
+                    endp['version'] = None
+                    print('Fixed endpoint')
+                    changed = True         
+                    endpoints.append(endp)                       
             if changed is True:
                 record['endpoints'] = endpoints
                 f = open(filepath, 'w', encoding='utf8')

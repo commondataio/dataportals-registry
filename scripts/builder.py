@@ -333,6 +333,21 @@ def add_single(url, software='custom'):
     _add_single_entry(url, software, preloaded=full_list)
 
 
+@app.command()
+def add_list(filename, software='custom'):
+    """Adds data catalog one by one from list to the scheduled list"""
+
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    full_list = []
+    for row in full_data:
+        full_list.append(row['id'])
+    f = open(filename, 'r', encoding='utf8')
+    for line in f:
+        line = line.strip()
+        _add_single_entry(line, software, preloaded=full_list)
+    f.close()
+
+
 
 if __name__ == "__main__":    
     app()

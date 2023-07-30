@@ -197,6 +197,8 @@ DOMAIN_LOCATIONS = {
     'dz' : {'location' : {'country' : {'id' : "DZ", 'name' : "Algeria"}, 'level' : 1}},
     'cv' : {'location' : {'country' : {'id' : "CV", 'name' : "Cabo Verde"}, 'level' : 1}},
     'et' : {'location' : {'country' : {'id' : "ET", 'name' : "Ethiopia"}, 'level' : 1}},
+    'bd' : {'location' : {'country' : {'id' : "BD", 'name' : "Bangladesh"}, 'level' : 1}},
+    'ml' : {'location' : {'country' : {'id' : "ML", 'name' : "Mali"}, 'level' : 1}},
 }
 
 
