@@ -348,6 +348,50 @@ def add_list(filename, software='custom'):
     f.close()
 
 
+SOFTWARE_MD_TEMPLATE = """---
+sidebar_position: 1
+position: 1
+---
+# %s
+
+
+Type: %s
+Website: %s
+
+## Schema types
+
+## API Endpoints
+
+## Notes
+"""
+
+SOFTWARE_DOCS_PATH = '../../cdi-docs/docs/kb/software'
+
+SOFTWARE_PATH_MAP = {
+'Open data portal' : 'opendata',
+'Geoportal' : 'geo',
+'Indicators catalog' : 'indicators',
+'Metadata catalog' : 'metadata',
+'Microdata catalog' : 'microdata',
+'Scientific data repository' : 'scientific'
+}
+
+@app.command()
+def build_docs(rewrite=True):
+    """Generates docs stubs"""
+    software_data = load_jsonl(os.path.join(DATASETS_DIR, 'software.jsonl'))
+    for row in software_data:
+        category = SOFTWARE_PATH_MAP[row['category']]
+        filename = os.path.join(SOFTWARE_DOCS_PATH, category, row['id'] + '.md')        
+        if os.path.exists(filename) and rewrite is False:
+            print('Already exists %s' % row['id'])
+        else:
+            text = SOFTWARE_MD_TEMPLATE % (row['name'], row['category'], row['website'])
+            f = open(filename, 'w', encoding='utf8')
+            f.write(text)
+            f.close()
+            print('Wrote %s' % (row['id']))
+        
 
 if __name__ == "__main__":    
     app()

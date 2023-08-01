@@ -46,12 +46,12 @@ GEONODE_URLMAP = [
     {'id' : 'geonode:datasets', 'url' : '/api/datasets/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'geonode:documents', 'url' : '/api/documents/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'wms', 'url' : '/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'wfs', 'url' : '/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
-    {'id' : 'wcs', 'url' : '/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'csw', 'url' : '/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
-    {'id' : 'oaipmh', 'url' : '/catalogue/csw?mode=oaipmh&verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
-    {'id' : 'wmts', 'url' : '/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wms111', 'url' : '/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wfs110', 'url' : '/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wcs111', 'url' : '/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'csw202', 'url' : '/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
+    {'id' : 'oaipmh20', 'url' : '/catalogue/csw?mode=oaipmh&verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'wmts100', 'url' : '/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
     {'id' : 'opensearch', 'url' : '/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
 ]
 
@@ -77,9 +77,9 @@ GEONETWORK_URLMAP = [
     {'id' : 'geonetwork:records', 'url' : '/srv/api/records', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'openapi', 'url' : '/srv/v2/api-docs', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '2'},
-    {'id' : 'csw', 'url' : '/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
+    {'id' : 'csw202', 'url' : '/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
     {'id' : 'opensearch', 'url' : '/srv/eng/portal.opensearch', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
-    {'id' : 'oaipmh', 'url' : '/srv/eng/oaipmh?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},    
+    {'id' : 'oaipmh20', 'url' : '/srv/eng/oaipmh?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},    
 ]
 
 SOCRATA_URLMAP = [
@@ -93,7 +93,7 @@ PXWEB_URLMAP = [
 
 DATAVERSE_URLMAP = [
     {'id' : 'dataverseapi', 'display_url' : '/api/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'oaipmh', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
+    {'id' : 'oaipmh20', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
 ]
 
 DSPACE_URLMAP = [                               
@@ -107,7 +107,7 @@ DSPACE_URLMAP = [
 ]
 
 ELSVIERPURE_URLMAP = [
-    {'id' : 'oaipmh', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/en/datasets/?search=&isCopyPasteSearch=false&format=rss', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
 ]
 
@@ -117,25 +117,25 @@ NADA_URLMAP = [
 ]
 
 GEOSERVER_URLMAP = [
-    {'id' : 'wms', 'url' : '/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'wms', 'url' : '/ows?service=WMS&version=1.3.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.3.0'},
-    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
-    {'id' : 'wfs', 'url' : '/ows?service=WFS&version=2.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.0'},
-    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
-    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1'},
-    {'id' : 'wcs', 'url' : '/ows?service=WCS&version=2.0.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.1'},    
-    {'id' : 'wps', 'url' : '/ows?service=WPS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'tms', 'url' : '/gwc/service/tms/1.0.0', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'wms-c', 'url' : '/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'wmts', 'url' : '/gwc/service/wmts?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'csw', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
+    {'id' : 'wms111', 'url' : '/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wms130', 'url' : '/ows?service=WMS&version=1.3.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.3.0'},
+    {'id' : 'wfs100', 'url' : '/ows?service=WFS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wfs110', 'url' : '/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wfs200', 'url' : '/ows?service=WFS&version=2.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.0'},
+    {'id' : 'wcs100', 'url' : '/ows?service=WCS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wcs110', 'url' : '/ows?service=WCS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wcs111', 'url' : '/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wcs11', 'url' : '/ows?service=WCS&version=1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1'},
+    {'id' : 'wcs201', 'url' : '/ows?service=WCS&version=2.0.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.1'},    
+    {'id' : 'wps100', 'url' : '/ows?service=WPS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'tms100', 'url' : '/gwc/service/tms/1.0.0', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wms-c111', 'url' : '/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wmts100', 'url' : '/gwc/service/wmts?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'csw202', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
 ]
 
 EPRINTS_URLMAP = [
-    {'id' : 'oaipmh', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'oaipmh20', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/cgi/latest_tool?output=RSS2', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'atom', 'url' : '/cgi/latest_tool?output=Atom', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None}      
 ]
@@ -215,7 +215,7 @@ METAGIS_URLMAP = [
 ESRIGEO_URLMAP = [
     {'id' : 'esrigeo:geoportal', 'url' : '/rest/geoportal', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'esrigeo:metadata:search', 'url' : '/rest/metadata/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'csw', 'url' : '/csw', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': "3.0.0"},      
+    {'id' : 'csw202', 'url' : '/csw', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': "3.0.0"},      
     {'id' : 'atom', 'url' : '/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'esrigeo:json', 'url' : '/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'rss', 'url' : '/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},      
