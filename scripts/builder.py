@@ -247,6 +247,24 @@ def validate():
             except Exception as e:
                 print('%s error %s' % (d['id'], str(e)))
 
+
+@app.command()
+def validate_typing():
+    """Validates YAML entities files against pydantic model"""
+    from cerberus import Validator
+    records = load_jsonl(os.path.join(DATASETS_DIR, 'catalogs.jsonl'))
+    typer.echo('Loaded %d data catalog records' % (len(records)))
+    from cdiapi.data.datacatalog import DataCatalog
+ 
+
+    for d in records:
+        print('Validating %s' % (d['id']))
+        try:
+            entry = DataCatalog.parse_obj(d)
+        except Exception as e:
+            print('%s error %s' % (d['id'], str(e)))
+
+
 @app.command()
 def add_legacy():
     """Adds all legacy catalogs"""
