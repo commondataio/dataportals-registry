@@ -44,9 +44,9 @@ class Software(BaseModel):
 
 class Organization(BaseModel):
     name: str = Field(..., examples=["USA Government"])
-    link: str = Field(..., examples=["https://www.whitehouse.gov"])
+    link: Optional[str] = Field(None, examples=["https://www.whitehouse.gov"])
     type: str = Field(..., examples=["Federal government"])
-    location: Location = Field(..., examples=[])
+    location: LocationBase = Field(..., examples=[])
     
 
 class DataCatalog(BaseModel):
@@ -65,6 +65,7 @@ class DataCatalog(BaseModel):
     coverage: List[Location] = Field(..., examples=[{"location" : ["value"]}])
     endpoints: Optional[List[Endpoint]] = Field([], examples=[])
     identifiers: List[Identifier] = Field([], examples=[])
+    owner: Organization = Field(..., examples=[])
     software: Software = Field(..., examples=[{"id" : "ckan", "name" : "CKAN"}])
     status: str = Field(..., examples=["uncertain"])
     topics: Optional[List[Topic]] = Field([], examples=[])
