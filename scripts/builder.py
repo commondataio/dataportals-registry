@@ -284,7 +284,7 @@ def add_legacy():
             _add_single_entry(url, software, preloaded=scheduled_list)
         f.close()
 
-def _add_single_entry(url, software, preloaded=None):
+def _add_single_entry(url, software, catalog_type="Open data portal", preloaded=None):
     from apidetect import detect_single
     domain = urlparse(url).netloc.lower()
     record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
@@ -318,6 +318,8 @@ def _add_single_entry(url, software, preloaded=None):
 
     if software in MAP_SOFTWARE_OWNER_CATALOG_TYPE.keys():
         record['catalog_type'] = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software]
+    else:
+        record['catalog_type'] = catalog_type
     if record['catalog_type'] == 'Geoportal':
         record['content_types'].append('map_layer')
     if software in CUSTOM_SOFTWARE_KEYS:
@@ -341,7 +343,7 @@ def _add_single_entry(url, software, preloaded=None):
     detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
 
 @app.command()
-def add_single(url, software='custom'):
+def add_single(url, software='custom', catalog_type="Open data portal"):
     """Adds data catalog to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
@@ -352,7 +354,7 @@ def add_single(url, software='custom'):
 
 
 @app.command()
-def add_list(filename, software='custom'):
+def add_list(filename, software='custom', catalog_type="Open data portal"):
     """Adds data catalog one by one from list to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
@@ -362,7 +364,7 @@ def add_list(filename, software='custom'):
     f = open(filename, 'r', encoding='utf8')
     for line in f:
         line = line.strip()
-        _add_single_entry(line, software, preloaded=full_list)
+        _add_single_entry(line, software, catalog_type, preloaded=full_list)
     f.close()
 
 
