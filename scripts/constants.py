@@ -259,6 +259,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "socrata" : "Open data portal",
     "wordpress" : "Open data portal",
     "searchengines" : "Data search engines",
+    "mapproxy" : "Geoportal"
 }
 
 CUSTOM_SOFTWARE_KEYS = ['searchengines', 'ml', 'opendata', 'indicators', 'scientific', 'metadataregistries', 'api']
