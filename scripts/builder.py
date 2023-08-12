@@ -22,7 +22,7 @@ import os
 import shutil
 import pprint
 
-from constants import ENTRY_TEMPLATE, CUSTOM_SOFTWARE_KEYS, MAP_SOFTWARE_OWNER_CATALOG_TYPE, DOMAIN_LOCATIONS, DEFAULT_LOCATION, COUNTRIES_LANGS, MAP_CATALOG_TYPE_SUBDIR
+from constants import ENTRY_TEMPLATE, CUSTOM_SOFTWARE_KEYS, MAP_SOFTWARE_OWNER_CATALOG_TYPE, DOMAIN_LOCATIONS, DEFAULT_LOCATION, COUNTRIES_LANGS, MAP_CATALOG_TYPE_SUBDIR, COUNTRIES
 
 
 ROOT_DIR = '../data/entities'
@@ -284,7 +284,7 @@ def add_legacy():
             _add_single_entry(url, software, preloaded=scheduled_list)
         f.close()
 
-def _add_single_entry(url, software, catalog_type="Open data portal", preloaded=None):
+def _add_single_entry(url, software, catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, preloaded=None):
     from apidetect import detect_single
     domain = urlparse(url).netloc.lower()
     record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
@@ -301,20 +301,36 @@ def _add_single_entry(url, software, catalog_type="Open data portal", preloaded=
     record = copy.deepcopy(ENTRY_TEMPLATE)
     record['id']  = record_id
 
-    postfix = domain.rsplit('.', 1)[-1].split(':', 1)[0]
-    if postfix in DOMAIN_LOCATIONS.keys():
-        location = DOMAIN_LOCATIONS[postfix]
-    else:
-        location = DEFAULT_LOCATION
+    has_location = False
+    if country is not None:
+        if country in COUNTRIES.keys():
+            location = {'location' : {'country' : {'id' : country, 'name' : COUNTRIES[country]}}}
+            has_location = True
+        
+    if not has_location:
+        postfix = domain.rsplit('.', 1)[-1].split(':', 1)[0]
+        if postfix in DOMAIN_LOCATIONS.keys():
+            location = DOMAIN_LOCATIONS[postfix]
+        else:
+            location = DEFAULT_LOCATION
     
     record['langs'] = []
+    if lang:
+        record['langs'].append(lang)
     if postfix in COUNTRIES_LANGS.keys():
         record['langs'].append(COUNTRIES_LANGS[postfix])
 
     record['link'] = url
-    record['name'] = domain
+    record['name'] = domain if name is None else name
+    if description is not None:
+        record['description'] = description
+
     record['coverage'].append(location)
     record['owner'].update(location)
+    if owner_name is not None:
+        record['owner']['name'] = owner_name
+    if owner_link is not None:
+        record['owner']['link'] = owner_link
 
     if software in MAP_SOFTWARE_OWNER_CATALOG_TYPE.keys():
         record['catalog_type'] = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software]
@@ -343,7 +359,7 @@ def _add_single_entry(url, software, catalog_type="Open data portal", preloaded=
     detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
 
 @app.command()
-def add_single(url, software='custom', catalog_type="Open data portal"):
+def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None):
     """Adds data catalog to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
@@ -354,7 +370,7 @@ def add_single(url, software='custom', catalog_type="Open data portal"):
 
 
 @app.command()
-def add_list(filename, software='custom', catalog_type="Open data portal"):
+def add_list(filename, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None):
     """Adds data catalog one by one from list to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
@@ -364,8 +380,23 @@ def add_list(filename, software='custom', catalog_type="Open data portal"):
     f = open(filename, 'r', encoding='utf8')
     for line in f:
         line = line.strip()
-        _add_single_entry(line, software, catalog_type, preloaded=full_list)
+        _add_single_entry(line, software, catalog_type, name, description, lang, country, owner_name, owner_link, preloaded=full_list)
     f.close()
+
+@app.command()
+def add_opendatasoft_catalog(filename):
+    """Adds OpenDataSoft prepared data catalogs list"""
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    full_list = []
+    for row in full_data:
+        full_list.append(row['id'])
+    ods_data = load_jsonl(filename)
+    for item in ods_data:
+        lang = item['lang'].rsplit('/', 1)[-1].upper()
+        _add_single_entry(item['website'], software="opendatasoft", name=item['title'], description=item['description'], lang=lang, preloaded=full_list)
+    f.close()
+
+
 
 
 SOFTWARE_MD_TEMPLATE = """---
@@ -412,6 +443,26 @@ def build_docs(rewrite=True):
             f.close()
             print('Wrote %s' % (row['id']))
         
+
+
+@app.command()
+def get_countries():
+    """Generate countries code list"""
+    ids = []
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    text = "COUNTRIES = { "
+    for row in full_data:
+        for loc in row['coverage']:
+            id = loc['location']['country']['id']
+            name= loc['location']['country']['name']
+            if id not in ids: 
+                ids.append(id)
+                text += '"%s" : "%s",\n' % (id, name)
+            else:
+                continue
+    text += "}"
+    print(text)
+   
 
 if __name__ == "__main__":    
     app()
