@@ -44,16 +44,20 @@ def load_jsonl(filepath):
 
 def build_dataset(datapath, dataset_filename):
     out = open(os.path.join(DATASETS_DIR, dataset_filename), 'w', encoding='utf8')
-    for root, dirs, files in os.walk(datapath):
+    n = 0
+    for root, dirs, files in os.walk(datapath):       
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
-            print('- adding %s' % (os.path.basename(filename).split('.', 1)[0]))
+            n += 1
+            if n % 1000 == 0: print('- processed %d' % (n))
+#            print('- adding %s' % (os.path.basename(filename).split('.', 1)[0]))
             filepath = filename
             f = open(filepath, 'r', encoding='utf8')
             data = yaml.load(f, Loader=Loader)            
             f.close()
                 
             out.write(json.dumps(data, ensure_ascii=False) + '\n')
+    print('- processed %d' % (n))
     out.close()    
 
 def merge_datasets(list_datasets, result_file):
@@ -284,7 +288,7 @@ def add_legacy():
             _add_single_entry(url, software, preloaded=scheduled_list)
         f.close()
 
-def _add_single_entry(url, software, catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, preloaded=None):
+def _add_single_entry(url, software, catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, scheduled=True, force=False, preloaded=None):
     from apidetect import detect_single
     domain = urlparse(url).netloc.lower()
     record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
@@ -301,6 +305,7 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
     record = copy.deepcopy(ENTRY_TEMPLATE)
     record['id']  = record_id
 
+    postfix = None
     has_location = False
     if country is not None:
         if country in COUNTRIES.keys():
@@ -317,7 +322,7 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
     record['langs'] = []
     if lang:
         record['langs'].append(lang)
-    if postfix in COUNTRIES_LANGS.keys():
+    if has_location and postfix in COUNTRIES_LANGS.keys():
         record['langs'].append(COUNTRIES_LANGS[postfix])
 
     record['link'] = url
@@ -325,8 +330,8 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
     if description is not None:
         record['description'] = description
 
-    record['coverage'].append(location)
-    record['owner'].update(location)
+    record['coverage'].append(copy.deepcopy(location))
+    record['owner'].update(copy.deepcopy(location))
     if owner_name is not None:
         record['owner']['name'] = owner_name
     if owner_link is not None:
@@ -344,7 +349,8 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
         record['software'] = {'id' : software, 'name' : software_map[software]}
     else:
         record['software'] = {'id' : software, 'name' : software.title()}
-    country_dir = os.path.join(SCHEDULED_DIR, location['location']['country']['id'])
+    root_dir = SCHEDULED_DIR if scheduled is True else ROOT_DIR
+    country_dir = os.path.join(root_dir, location['location']['country']['id'])
     if not os.path.exists(country_dir):
         os.mkdir(country_dir)
     subdir_name = MAP_CATALOG_TYPE_SUBDIR[record['catalog_type']] if record['catalog_type'] in MAP_CATALOG_TYPE_SUBDIR.keys() else 'opendata'
@@ -352,21 +358,25 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
     if not os.path.exists(subdir_dir):
         os.mkdir(subdir_dir)    
     filename = os.path.join(subdir_dir, record_id + '.yaml')
-    f = open(filename, 'w', encoding='utf8')
-    f.write(json.dumps(record, indent=4))
-    f.close()
-    print('%s saved' % (record_id))
-    detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
+    if os.path.exists(filename) and force:
+        print('Already processed and force not set')
+    else:
+        f = open(filename, 'w', encoding='utf8')
+#        print(record)
+        f.write(yaml.safe_dump(record, allow_unicode=True))
+        f.close()
+        print('%s saved' % (record_id))
+        detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
 
 @app.command()
-def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None):
+def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, force=False, scheduled=True):
     """Adds data catalog to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
     full_list = []
     for row in full_data:
         full_list.append(row['id'])
-    _add_single_entry(url, software, preloaded=full_list)
+    _add_single_entry(url, software, name, description, lang, country, owner_name, owner_link, scheduled, force, preloaded=full_list)
 
 
 @app.command()
@@ -394,7 +404,36 @@ def add_opendatasoft_catalog(filename):
     for item in ods_data:
         lang = item['lang'].rsplit('/', 1)[-1].upper()
         _add_single_entry(item['website'], software="opendatasoft", name=item['title'], description=item['description'], lang=lang, preloaded=full_list)
-    f.close()
+
+@app.command()
+def add_socrata_catalog(filename):
+    """Adds Socrata prepared data catalogs list"""
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    full_list = []
+    for row in full_data:
+        full_list.append(row['id'])
+    ods_data = load_jsonl(filename)
+    for item in ods_data:
+        lang = item['locale'].rsplit('/', 1)[-1].upper()
+        _add_single_entry(item['website'], software="socrata", name=item['title'], lang=lang, preloaded=full_list)
+
+
+@app.command()
+def add_arcgishub_catalog(filename, force=False):
+    """Adds ArcGIS Hub prepared data catalogs list"""
+    full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    full_list = []
+    for row in full_data:
+        full_list.append(row['id'])
+    ods_data = load_jsonl(filename)
+    for item in ods_data:
+        if item['culture'] is not None:
+            lang = item['culture'].rsplit('-', 1)[0].upper() if item['culture'] != 'zh-TW' else item['culture']
+        else:
+            lang = 'EN'
+        country = item['region']
+        if country == 'WO': country = 'US'       
+        _add_single_entry(item['website'], software="arcgishub", name=item['title'], description=item['description'], lang=lang, owner_name = item['owner_name'], country=country, force=force, scheduled=False, preloaded=full_list)
 
 
 
