@@ -92,7 +92,7 @@ def build():
 @app.command()
 def report():
     """Report incomplete data per set"""
-    data = load_jsonl(os.path.join(DATASETS_DIR, 'catalogs.jsonl'))
+    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
     typer.echo('')
     for d in data:     
         irep = []
@@ -288,7 +288,7 @@ def add_legacy():
             _add_single_entry(url, software, preloaded=scheduled_list)
         f.close()
 
-def _add_single_entry(url, software, catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, scheduled=True, force=False, preloaded=None):
+def _add_single_entry(url, software, catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, owner_type=None, scheduled=True, force=False, preloaded=None):
     from apidetect import detect_single
     domain = urlparse(url).netloc.lower()
     record_id = domain.split(':', 1)[0].replace('_', '').replace('-', '').replace('.', '')
@@ -336,6 +336,9 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
         record['owner']['name'] = owner_name
     if owner_link is not None:
         record['owner']['link'] = owner_link
+    if owner_type is not None:
+        record['owner']['type'] = owner_type
+    
 
     if software in MAP_SOFTWARE_OWNER_CATALOG_TYPE.keys():
         record['catalog_type'] = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software]
@@ -369,18 +372,18 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
         detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
 
 @app.command()
-def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, force=False, scheduled=True):
+def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, owner_type=None, force=False, scheduled=True):
     """Adds data catalog to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
     full_list = []
     for row in full_data:
         full_list.append(row['id'])
-    _add_single_entry(url, software, name, description, lang, country, owner_name, owner_link, scheduled, force, preloaded=full_list)
+    _add_single_entry(url, software, name, description, lang, country, owner_name, owner_link, owner_type, scheduled, force, preloaded=full_list)
 
 
 @app.command()
-def add_list(filename, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None):
+def add_list(filename, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, owner_type=None):
     """Adds data catalog one by one from list to the scheduled list"""
 
     full_data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
@@ -390,7 +393,7 @@ def add_list(filename, software='custom', catalog_type="Open data portal", name=
     f = open(filename, 'r', encoding='utf8')
     for line in f:
         line = line.strip()
-        _add_single_entry(line, software, catalog_type, name, description, lang, country, owner_name, owner_link, preloaded=full_list)
+        _add_single_entry(line, software, catalog_type, name, description, lang, country, owner_name, owner_link, owner_type, preloaded=full_list)
     f.close()
 
 @app.command()
@@ -502,6 +505,76 @@ def get_countries():
     text += "}"
     print(text)
    
+
+
+METRICS = {'has_owner_name' : 'Has owner organization name', 
+'has_owner_type' : "Has owner organization type",
+'has_owner_link' : "Has owner organization link",
+'has_country' : 'Country known',
+'has_subregion' : 'Subregion information known',
+"has_description" : "Has description",
+"has_langs" : 'Has languages',
+'has_tags' : 'Has tags',
+'has_topics' : "Has topics",
+'valid_title' : 'TItle is not empty or temporary',
+'draft_records' : "Temporary records",
+}
+
+@app.command()
+def quality_control():
+    """Quality control metrics"""
+    from rich.console import Console
+    from rich.table import Table
+    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    metrics = {}
+    for key in METRICS.keys():
+        metrics[key] = [key, METRICS[key], 0, 0, 0]
+    for d in data:     
+        if 'langs' in d.keys() and len(d['langs']) > 0:
+            metrics['has_langs'][3] += 1
+        if 'tags' in d.keys() and len(d['tags']) > 0:
+            metrics['has_tags'][3] += 1
+        if 'topics' in d.keys() and len(d['topics']) > 0:
+            metrics['has_topics'][3] += 1
+        if 'status' in d.keys() and d['status'] == 'scheduled':
+            metrics['draft_records'][3] += 1
+        if 'description' in d.keys() and d['description'] != 'This is a temporary record with some data collected but it should be updated befor adding to the index':
+            metrics['has_description'][3] += 1
+        if 'name' in d.keys():
+            if not d['name'].lower() == urlparse(d['link']).netloc.lower():
+                metrics['valid_title'][3] += 1 
+        if 'owner' in d.keys():
+            if 'type' in d['owner'].keys() and d['owner']['type'] != 'Unknown':
+                metrics['has_owner_type'][3] += 1
+            if 'link' in d['owner'].keys() and d['owner']['link'] is not None and len(d['owner']['link']) > 0:
+                metrics['has_owner_link'][3] += 1
+            if 'name' in d['owner'].keys() and d['owner']['name'] is not None and len(d['owner']['name']) > 0 and d['owner']['name'] != 'Unknown':
+                metrics['has_owner_name'][3] += 1
+            if 'location' in d['owner'].keys() and d['owner']['location'] is not None and 'country' in d['owner']['location'].keys() and d['owner']['location']['country']['id'] != 'Unknown': 
+                metrics['has_country'][3] += 1
+            if d['owner']['type'] in ['Regional government', 'Local government', 'Unknown']:
+                metrics['has_subregion'][2] += 1
+                if 'location' in d['owner'].keys() and d['owner']['location'] is not None and 'subregion' in d['owner']['location'].keys(): 
+                    metrics['has_subregion'][3] += 1
+
+        for key in ['has_tags', 'has_langs', 'has_topics', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country']:
+            metrics[key][2] += 1
+#    for metric in metrics.values(): 
+#        print('%s, total %d, found %d, share %0.2f' % (metric[1], metric[2], metric[3], metric[3]*100.0 / metric[2] if metric[2] > 0 else 0))
+    table = Table(title='Common Data Index registry. Metadata quality metrics') 
+    table.add_column("Metric name", justify="right", style="cyan", no_wrap=True)
+    table.add_column("Total", style="magenta")
+    table.add_column("Count", style="magenta")
+    table.add_column("Share", justify="right", style="green", no_wrap=True)
+    for metric in metrics.values(): 
+        item = []
+        for o in metric[1:-1]: item.append(str(o))
+        item.append('%0.2f' % (metric[3]*100.0 / metric[2] if metric[2] > 0 else 0))
+        table.add_row(*item)
+    console = Console()
+    console.print(table)  
+  
+
 
 if __name__ == "__main__":    
     app()
