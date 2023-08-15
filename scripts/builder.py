@@ -379,7 +379,7 @@ def add_single(url, software='custom', catalog_type="Open data portal", name=Non
     full_list = []
     for row in full_data:
         full_list.append(row['id'])
-    _add_single_entry(url, software, name, description, lang, country, owner_name, owner_link, owner_type, scheduled, force, preloaded=full_list)
+    _add_single_entry(url, software, name=name, description=desscription, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, scheduled=scheduled, force=force, preloaded=full_list)
 
 
 @app.command()
@@ -393,7 +393,7 @@ def add_list(filename, software='custom', catalog_type="Open data portal", name=
     f = open(filename, 'r', encoding='utf8')
     for line in f:
         line = line.strip()
-        _add_single_entry(line, software, catalog_type, name, description, lang, country, owner_name, owner_link, owner_type, preloaded=full_list)
+        _add_single_entry(line, software, catalog_type_catalog_type, name=name, description=description, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, preloaded=full_list)
     f.close()
 
 @app.command()
@@ -510,6 +510,7 @@ def get_countries():
 METRICS = {'has_owner_name' : 'Has owner organization name', 
 'has_owner_type' : "Has owner organization type",
 'has_owner_link' : "Has owner organization link",
+'has_catalog_type' : "Has catalog type",
 'has_country' : 'Country known',
 'has_subregion' : 'Subregion information known',
 "has_description" : "Has description",
@@ -538,6 +539,8 @@ def quality_control():
             metrics['has_topics'][3] += 1
         if 'status' in d.keys() and d['status'] == 'scheduled':
             metrics['draft_records'][3] += 1
+        if 'catalog_type' in d.keys() and d['catalog_type'] not in [None, 'Unknown']:
+            metrics['has_catalog_type'][3] += 1
         if 'description' in d.keys() and d['description'] != 'This is a temporary record with some data collected but it should be updated befor adding to the index':
             metrics['has_description'][3] += 1
         if 'name' in d.keys():
@@ -557,7 +560,7 @@ def quality_control():
                 if 'location' in d['owner'].keys() and d['owner']['location'] is not None and 'subregion' in d['owner']['location'].keys(): 
                     metrics['has_subregion'][3] += 1
 
-        for key in ['has_tags', 'has_langs', 'has_topics', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country']:
+        for key in ['has_tags', 'has_langs', 'has_topics', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country', 'has_catalog_type']:
             metrics[key][2] += 1
 #    for metric in metrics.values(): 
 #        print('%s, total %d, found %d, share %0.2f' % (metric[1], metric[2], metric[3], metric[3]*100.0 / metric[2] if metric[2] > 0 else 0))
