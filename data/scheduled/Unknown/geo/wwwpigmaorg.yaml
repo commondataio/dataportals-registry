@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,12 @@ description: This is a temporary record with some data collected but it should b
 endpoints:
 - type: geonetwork:query
   url: https://www.pigma.org/geonetwork/srv/eng/q
+- type: openapi
+  url: https://www.pigma.org/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.pigma.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 - type: opensearch
   url: https://www.pigma.org/geonetwork/srv/eng/portal.opensearch
   version: '1.0'

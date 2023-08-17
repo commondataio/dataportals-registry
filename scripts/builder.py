@@ -352,7 +352,7 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
         record['software'] = {'id' : software, 'name' : software_map[software]}
     else:
         record['software'] = {'id' : software, 'name' : software.title()}
-    root_dir = SCHEDULED_DIR if scheduled is True else ROOT_DIR
+    root_dir = SCHEDULED_DIR if scheduled else ROOT_DIR
     country_dir = os.path.join(root_dir, location['location']['country']['id'])
     if not os.path.exists(country_dir):
         os.mkdir(country_dir)
@@ -369,7 +369,7 @@ def _add_single_entry(url, software, catalog_type="Open data portal", name=None,
         f.write(yaml.safe_dump(record, allow_unicode=True))
         f.close()
         print('%s saved' % (record_id))
-        detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled')
+        detect_single(record_id, dryrun=False, replace_endpoints=True, mode='scheduled' if scheduled else 'entries')
 
 @app.command()
 def add_single(url, software='custom', catalog_type="Open data portal", name=None, description=None, lang=None, country=None, owner_name=None, owner_link=None, owner_type=None, force=False, scheduled=True):
@@ -379,7 +379,7 @@ def add_single(url, software='custom', catalog_type="Open data portal", name=Non
     full_list = []
     for row in full_data:
         full_list.append(row['id'])
-    _add_single_entry(url, software, name=name, description=desscription, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, scheduled=scheduled, force=force, preloaded=full_list)
+    _add_single_entry(url, software, name=name, description=description, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, scheduled=scheduled, force=force, preloaded=full_list)
 
 
 @app.command()
@@ -393,7 +393,7 @@ def add_list(filename, software='custom', catalog_type="Open data portal", name=
     f = open(filename, 'r', encoding='utf8')
     for line in f:
         line = line.strip()
-        _add_single_entry(line, software, catalog_type_catalog_type, name=name, description=description, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, preloaded=full_list)
+        _add_single_entry(line, software, catalog_type=catalog_type, name=name, description=description, lang=lang, country=country, owner_name=owner_name, owner_link=owner_link, owner_type=owner_type, preloaded=full_list)
     f.close()
 
 @app.command()

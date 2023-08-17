@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,8 @@ description: This is a temporary record with some data collected but it should b
 endpoints:
 - type: geonetwork:query
   url: http://catalogo.geoidep.gob.pe/metadata/srv/eng/q
+- type: geonetwork:records
+  url: http://catalogo.geoidep.gob.pe/metadata/srv/api/records
 - type: openapi
   url: http://catalogo.geoidep.gob.pe/metadata/srv/v2/api-docs
   version: '2'
