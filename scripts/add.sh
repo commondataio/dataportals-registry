@@ -1,7 +1,9 @@
+# This scripts one by one adds manually prepared lists of urls 
 python builder.py add-list --software arcgishub arcgishub.txt
 python builder.py add-list --software arcgisserver arcgishubserver.txt
 python builder.py add-list --software aleph aleph.txt
 python builder.py add-list --software ckan ckan.txt
+python builder.py add-list --software figshare figshare.txt
 python builder.py add-list --software dkan dkan.txt
 python builder.py add-list --software drupal drupal.txt
 python builder.py add-list --software custom custom.txt
@@ -25,3 +27,4 @@ python builder.py add-list --software thredds thredds.txt
 python builder.py add-list --software erddap erddap.txt
 python builder.py add-list --software wordpress wordpress.txt
 python builder.py add-list --software elsevierdigitalcommons digitalcommons.txt
+python builder.py add-list --software junar junar.txt
