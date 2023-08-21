@@ -261,7 +261,8 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "wordpress" : "Open data portal",
     "searchengines" : "Data search engines",
     "mapproxy" : "Geoportal",
-    "pygeoapi" : "Geoportal"
+    "pygeoapi" : "Geoportal",
+    "colectica" : "Microdata catalog",
 }
 
 CUSTOM_SOFTWARE_KEYS = ['searchengines', 'ml', 'opendata', 'indicators', 'scientific', 'metadataregistries', 'api']

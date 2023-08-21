@@ -28,3 +28,5 @@ python builder.py add-list --software erddap erddap.txt
 python builder.py add-list --software wordpress wordpress.txt
 python builder.py add-list --software elsevierdigitalcommons digitalcommons.txt
 python builder.py add-list --software junar junar.txt
+python builder.py add-list --software koordinates koordinates.txt
+python builder.py add-list --software colectica colectica.txt
