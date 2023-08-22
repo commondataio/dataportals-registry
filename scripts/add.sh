@@ -22,6 +22,7 @@ python builder.py add-list --software ipt ipt.txt
 python builder.py add-list --software opendatasoft opendatasoft.txt
 python builder.py add-list --software pxweb pxweb.txt
 python builder.py add-list --software custom --catalog-type "Scientific data repository" scientific.txt
+python builder.py add-list --software custom --catalog-type "Microdata catalog" microdata.txt
 python builder.py add-list --software socrata socrata.txt
 python builder.py add-list --software thredds thredds.txt
 python builder.py add-list --software erddap erddap.txt
@@ -30,3 +31,5 @@ python builder.py add-list --software elsevierdigitalcommons digitalcommons.txt
 python builder.py add-list --software junar junar.txt
 python builder.py add-list --software koordinates koordinates.txt
 python builder.py add-list --software colectica colectica.txt
+python builder.py add-list --software nesstar nesstar.txt
+python builder.py add-list --software nada nada.txt

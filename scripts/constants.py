@@ -202,6 +202,7 @@ DOMAIN_LOCATIONS = {
     'ml' : {'location' : {'country' : {'id' : "ML", 'name' : "Mali"}, 'level' : 1}},
     'ir' : {'location' : {'country' : {'id' : "IR", 'name' : "Iran"}, 'level' : 1}},
     'pk' : {'location' : {'country' : {'id' : "PK", 'name' : "Pakistan"}, 'level' : 1}},
+    'taipei' : {'location' : {'country' : {'id' : "TW", 'name' : "Taiwan"}, 'level' : 2}, 'subregion' : {'id' : 'TW-TPE'}},
 }
 
 
