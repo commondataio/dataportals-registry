@@ -33,3 +33,5 @@ python builder.py add-list --software koordinates koordinates.txt
 python builder.py add-list --software colectica colectica.txt
 python builder.py add-list --software nesstar nesstar.txt
 python builder.py add-list --software nada nada.txt
+python builder.py add-list --software obibamica obibamica.txt
+python builder.py add-list --software statsuite statsuite.txt

@@ -264,6 +264,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "mapproxy" : "Geoportal",
     "pygeoapi" : "Geoportal",
     "colectica" : "Microdata catalog",
+    "statsuite" : "Indicators catalog"
 }
 
 CUSTOM_SOFTWARE_KEYS = ['searchengines', 'ml', 'opendata', 'indicators', 'scientific', 'metadataregistries', 'api']
