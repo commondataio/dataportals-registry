@@ -263,6 +263,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "searchengines" : "Data search engines",
     "mapproxy" : "Geoportal",
     "pygeoapi" : "Geoportal",
+    "smartdatasdi" : "Geoportal",
     "colectica" : "Microdata catalog",
     "statsuite" : "Indicators catalog"
 }
