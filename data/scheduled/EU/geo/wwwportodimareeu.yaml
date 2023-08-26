@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: https://www.portodimare.eu/api/layers/
+- type: geonode:documents
+  url: https://www.portodimare.eu/api/documents/
+- type: wms111
+  url: https://www.portodimare.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://www.portodimare.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://www.portodimare.eu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://www.portodimare.eu/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts100
+  url: https://www.portodimare.eu/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://www.portodimare.eu/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: wwwportodimareeu
+langs: []
+link: https://www.portodimare.eu
+name: www.portodimare.eu
+owner:
+  link: null
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: ''
+  type: Unknown
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags: []
+topics: []
+uid: temp00003611

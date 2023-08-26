@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # This script intended to detect data catalogs API
 
+import logging
 import sys
 import typer
 import requests
@@ -180,26 +181,6 @@ ARCGISSERVER_URLMAP = [
     {'id' : 'arcgis:geositemap',  'url' : '/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'arcgis:kmz',  'url' : '/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
 
-    {'id' : 'arcgis:rest:info',  'url' : '/server/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:rest:services',  'url' : '/server/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:soap',  'url' : '/server/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:sitemap',  'url' : '/server/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:geositemap',  'url' : '/server/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:kmz',  'url' : '/server/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
-
-    {'id' : 'arcgis:rest:info',  'url' : '/arcgis/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:rest:services',  'url' : '/arcgis/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:soap',  'url' : '/arcgis/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:sitemap',  'url' : '/arcgis/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:geositemap',  'url' : '/arcgis/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:kmz',  'url' : '/arcgis/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
-
-    {'id' : 'arcgis:rest:info',  'url' : '/arcgisserver/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:rest:services',  'url' : '/arcgisserver/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'arcgis:soap',  'url' : '/arcgisserver/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:sitemap',  'url' : '/arcgisserver/rest/services?f=sitemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:geositemap',  'url' : '/arcgisserver/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'arcgis:kmz',  'url' : '/arcgisserver/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
 
 ]
 
@@ -244,10 +225,12 @@ def geoserver_url_cleanup_func(url):
 def arcgisserver_url_cleanup_func(url):
     domain = urlparse(url).netloc
     if domain.find('443') > -1 or url[0:5] == 'https':
-        prefix = 'https://'
-    else:
-        prefix = 'http://'
-    return prefix + domain
+        url = url.replace('http://', 'https://')
+    if url.find('/rest/services') > -1:
+        url = url.rsplit('/rest/services', 1)[0]
+    elif url.find('/services') > -1:
+        url = url.rsplit('/services', 1)[0]
+    return url
 
 def geonetwork_url_cleanup_func(url):
     return url.split('/srv')[0]
@@ -255,19 +238,17 @@ def geonetwork_url_cleanup_func(url):
 
 URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func}
 
-def api_identifier(website_url, url_map, software_id, verify_json=False):
+def api_identifier(website_url, software_id, verify_json=False):
+    url_map = CATALOGS_URLMAP[software_id]
     results = []
     found = []
     s = requests.Session()
-    print('-', end="")
     # 
     if software_id in URL_CLEANUP_MAP:
         website_url = URL_CLEANUP_MAP[software_id](website_url)
     else:
         website_url = website_url.rstrip('/')
     for item in url_map:
-        print(" %s" % (item['id']), end="")
-
         if 'prefetch' in item and item['prefetch']:
             prefeteched_data = s.get(website_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
         request_url = website_url + item['url']
@@ -303,8 +284,7 @@ def api_identifier(website_url, url_map, software_id, verify_json=False):
             if item['version']: 
                 api['version'] = item['version']
             found.append(api)
-    print()
-    print(results)
+    logging.info('Found: ' + str(results))
     return found
 
 
@@ -329,7 +309,7 @@ def detect_software(software, dryrun=False, replace_endpoints=True, mode='entrie
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[software], software)
+                found = api_identifier(record['link'].rstrip('/'), software)
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -369,7 +349,7 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True, mode='entries'):
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -403,7 +383,7 @@ def detect_country(country, dryrun=False, replace_endpoints=True, mode='entries'
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                     print(' - skip, we have endpoints already and no replace mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -440,7 +420,7 @@ def detect_ckan(dryrun=False, replace_endpoints=True, mode='entries'):
                     base_url = record['endpoints'][0]['url'][0:-6]
                 else:
                     base_url = record['link'].rstrip('/')
-                found = api_identifier(base_url, CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                found = api_identifier(base_url, record['software']['id'])
                 record['endpoints'] = []
                 for api in found:
                     print('- %s %s' % (api['type'], api['url']))
@@ -475,7 +455,7 @@ def detect_all(status='undetected', replace_endpoints=True, mode='entries'):
                         if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
                             print(' - skip, we have endpoints already and no replace mode')
                             continue
-                        found = api_identifier(record['link'].rstrip('/'), CATALOGS_URLMAP[record['software']['id']], record['software']['id'])
+                        found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
                         record['endpoints'] = []
                         for api in found:
                             print('- %s %s' % (api['type'], api['url']))
