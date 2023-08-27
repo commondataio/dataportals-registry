@@ -37,3 +37,6 @@ python builder.py add-list --software obibamica obibamica.txt
 python builder.py add-list --software statsuite statsuite.txt
 python builder.py add-list --software smartdatasdi smartdatasdi.txt
 python builder.py add-list --software lizmap lizmap.txt
+python builder.py add-list --software esploro esploro.txt
+python builder.py add-list --software datapress datapress.txt
+
