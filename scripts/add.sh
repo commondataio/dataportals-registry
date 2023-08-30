@@ -1,6 +1,5 @@
 # This scripts one by one adds manually prepared lists of urls 
 python builder.py add-list --software arcgishub arcgishub.txt
-python builder.py add-list --software arcgisserver arcgisserver.txt
 python builder.py add-list --software aleph aleph.txt
 python builder.py add-list --software ckan ckan.txt
 python builder.py add-list --software figshare figshare.txt
@@ -39,4 +38,4 @@ python builder.py add-list --software smartdatasdi smartdatasdi.txt
 python builder.py add-list --software lizmap lizmap.txt
 python builder.py add-list --software esploro esploro.txt
 python builder.py add-list --software datapress datapress.txt
-
+python builder.py add-list --software arcgisserver arcgisserver.txt

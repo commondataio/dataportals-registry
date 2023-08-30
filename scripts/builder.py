@@ -587,6 +587,50 @@ def quality_control():
     console.print(table)  
 
   
+@app.command()
+def country_report():
+    """Country report"""
+    from rich.console import Console
+    from rich.table import Table
+    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    reg_countries = set()
+    countries_data = {}
+    tlds_data = {}
+    for row in data:
+        if 'owner' in row.keys() and 'location' in row['owner'].keys():
+            if row['owner']['location']['country']['id'] not in reg_countries: 
+                reg_countries.add(row['owner']['location']['country']['id'])
+    f = open('../data/reference/countries.csv', 'r', encoding='utf8')
+    reader = csv.DictReader(f)
+    for row in reader:
+        if row['status'] == 'UN member state':
+            countries_data[row['alpha2']] = row
+    wb_countries = set(countries_data.keys())
+    all_set = wb_countries.difference(reg_countries)
+    table = Table(title='Country report') 
+    table.add_column("Alpha-2", justify="right", style="cyan", no_wrap=True)
+    table.add_column("Name", style="magenta")
+    table.add_column("Internet TLD", style="magenta")
+    n = 0
+    for row_id in all_set:
+        item = [row_id, countries_data[row_id]['name'], countries_data[row_id]['cctld']]
+#        item = [row_id, row_id]
+        table.add_row(*item)
+        n += 1
+    table.add_section()
+    table.add_row('Total', str(n))
+    console = Console()
+    console.print(table)  
+    f = open('countries_report', 'w', encoding='utf8')
+    writer = csv.writer(f)
+    writer.writerow(['code', 'name', 'tld'])
+    for row_id in all_set:
+        item = [row_id, countries_data[row_id]['name'], countries_data[row_id]['cctld']]
+        writer.writerow(item)
+    f.close()
+
+
+    
 
 
 if __name__ == "__main__":    
