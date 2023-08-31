@@ -189,13 +189,14 @@ def stats(output='country_software.csv'):
     typer.echo('Wrote %s' % (output))    
 
 
-def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
+def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):    
     max_num = 0
-
+    n = 0
     for root, dirs, files in os.walk(dirpath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
-            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            n += 1
+            if n % 1000 == 0: print('Processed %d' % (n))
             filepath = filename
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)            
@@ -204,6 +205,7 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
                 if num > max_num:
                     max_num = num
             f.close() 
+    print('Processed %d' % (n))
 
 
     for root, dirs, files in os.walk(dirpath):
