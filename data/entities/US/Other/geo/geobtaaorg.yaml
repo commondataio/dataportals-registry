@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -15,6 +16,10 @@ description: The Big Ten Academic Alliance Geoportal provides discoverability an
   facilitates access to geospatial resources. The resources in the portal are selected
   and curated by librarians and geospatial specialists at twelve research institutions
   in the Big Ten Academic Alliance.
+endpoints:
+- type: blacklight:catalog
+  url: https://geo.btaa.org/catalog.json
+  version: '1.0'
 id: geobtaaorg
 langs:
 - EN

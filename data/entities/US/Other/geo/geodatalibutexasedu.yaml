@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -15,6 +16,10 @@ description: The Texas GeoData portal is an online interface designed to make it
   for users to search and browse for geospatial data from the collections of the UT
   Libraries at the University of Texas at Austin and from the collections of other
   institutions.
+endpoints:
+- type: blacklight:catalog
+  url: https://geodata.lib.utexas.edu/catalog.json
+  version: '1.0'
 id: geodatalibutexasedu
 langs:
 - EN

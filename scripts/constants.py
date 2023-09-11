@@ -296,6 +296,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "pygeoapi" : "Geoportal",
     "smartdatasdi" : "Geoportal",
     "lizmap" : "Geoportal",
+    "mapbender" : "Geoportal",
     "colectica" : "Microdata catalog",
     "statsuite" : "Indicators catalog"
 }

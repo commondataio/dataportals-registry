@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -16,6 +17,10 @@ description: The Colorado GeoLibrary is a venture of the University of Colorado 
   and beyond. The purpose of the GeoLibrary is to collect and provide access to data
   from across the State of Colorado in service of our students and researchers, as
   well as the general public.
+endpoints:
+- type: blacklight:catalog
+  url: https://geo.colorado.edu/catalog.json
+  version: '1.0'
 id: geodatawiscedu
 langs:
 - EN

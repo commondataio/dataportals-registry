@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -14,6 +15,10 @@ coverage:
 description: The NYU Spatial Data Repository is a search and discovery platform for
   geospatial data created by NYU's Data Services. The application is the entry point
   for discovering and accessing NYU's spatial data collections.
+endpoints:
+- type: blacklight:catalog
+  url: https://geo.nyu.edu/catalog.json
+  version: '1.0'
 id: geonyuedu
 langs:
 - EN

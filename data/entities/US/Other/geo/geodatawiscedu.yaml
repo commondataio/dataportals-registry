@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -15,6 +16,10 @@ description: GeoData@Wisconsin is an online geoportal that provides discovery an
   access to Wisconsin geospatial data, imagery, and scanned maps. GeoData@WI represents
   the holdings of the University of Wisconsin Robinson Map Library archives, plus
   all known open data portals maintained by Wisconsin geospatial data producers.
+endpoints:
+- type: blacklight:catalog
+  url: https://geodata.wisc.edu/catalog.json
+  version: '1.0'
 id: geodatawiscedu
 langs:
 - EN
