@@ -7,7 +7,7 @@ import datetime
 import yaml
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
+except ImportError:                                                                                                     
     from yaml import Loader, Dumper
 import csv
 import json
@@ -644,7 +644,120 @@ def update_languages(dryrun=False, mode='entities'):
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
 
             
+@app.command()
+def update_subregions(dryrun=False, mode='entities'):
+    """Update sub regions names"""    
+    data_dict = load_csv_dict('../data/reference/subregions/IP2LOCATION-ISO3166-2.CSV ', delimiter=',', key='code')
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False            
+            country_ids = []
+#            country_ids.append(record['owner']['location']['country']['id'])
+            n = 0
+            for location in record['coverage']:                 
+                if not 'level' in location['location'].keys():                   
+                    continue
+                if location['location']['level'] != 2:
+                    continue
+                if 'subregion' in location['location'].keys():                
+                    if 'name' in location['location']['subregion'].keys(): continue
+                    sid = location['location']['subregion']['id']
+                    if sid not in data_dict.keys():
+                        print(f'Not found coverage subregion {sid}')
+                    else:
+                        location['location']['subregion']['name'] = data_dict[sid]['subdivision_name']
+                        record['coverage'][n] = location
+                        changed = True
+                n += 1                
+            if 'owner' in record.keys():
+                if 'location' in record['owner'].keys():
+                    if 'subregion' in record['owner']['location'].keys() and 'name' not in record['owner']['location']['subregion'].keys():
+                        sid = record['owner']['location']['subregion']['id']
+                        if sid not in data_dict.keys():
+                             print(f'Not found owner subregion {sid}')
+                        else:
+                            record['owner']['location']['subregion']['name'] = data_dict[sid]['subdivision_name']
+                            changed = True
+            if changed is True:
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
             
+
+@app.command()
+def update_terms(dryrun=False, mode='entities'):
+    """Update terms"""    
+    software_dict = {}
+    f = open('../data/datasets/software.jsonl', 'r', encoding='utf8')
+    for l in f:
+        record = json.loads(l)
+        software_dict[record['id']] = record
+    f.close()
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False          
+            if record is None: continue
+#            print(record['id'], record['software']['id'])  
+            if record['software']['id'] not in software_dict.keys(): continue
+            software = software_dict[record['software']['id']]            
+            lic_type = software['rights_management']['licensing_type']            
+            rights_type = None
+            if lic_type == 'Global':
+                rights_type = 'global'
+            elif lic_type == 'Per dataset':
+                rights_type = 'granular'
+            elif lic_type == 'Not applicable':
+                rights_type = 'inapplicable'
+            else:
+                rights_type = 'unknown'
+            rights = {'tos_url' : None, 'privacy_policy_url' :None, 'rights_type' : rights_type, 'license_id' : None, 'license_name' : None, 'license_url' : None}
+            if 'tos_url' in software['rights_management'].keys():
+                rights['tos_url'] = software['rights_management']['tos_url']
+            if 'privacy_policy_url' in software['rights_management'].keys():
+                rights['privacy_policy_url'] = software['rights_management']['privacy_policy_url']
+            if software['id'] == 'opendatasoft':
+                rights['tos_url'] = record['link'] + '/terms/terms-and-conditions/'
+                rights['privacy_policy_url'] = record['link'] + '/terms/privacy-policy/'
+            properties = {} 
+            if software['pid_support']['has_doi'] == 'No':
+                properties['has_doi'] = False
+                changed = True
+            elif software['pid_support']['has_doi'] == 'Yes':
+                properties['has_doi'] = True
+                changed = True
+            if len(properties.values()) > 0:
+                if 'properties' in record.keys():
+                    record['properties'].update(properties)                    
+                else:
+                    record['properties'] = properties
+                changed = True
+            record['rights'] = rights
+            changed = True
+            if changed is True:
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
 
 if __name__ == "__main__":
     app()
+
+

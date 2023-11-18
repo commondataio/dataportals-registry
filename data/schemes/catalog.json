@@ -201,7 +201,8 @@
       },
       "level": {"type" : "number"},
       "subregion": {"type" : "dict", "schema" : {
-        "id" : {"type" : "string", "empty" : false}
+        "id" : {"type" : "string", "empty" : false},
+        "name" : {"type" : "string", "empty" : false}
       }
       }
     }
@@ -213,6 +214,7 @@
       },      
       "link": {
         "type": "string",
+        "nullable" : true,
         "required": false
       },
       "type": {
@@ -232,9 +234,57 @@
         "empty" : false,
         "required": false
       },      
+      "has_doi": {
+        "type": "boolean",
+        "empty" : false,
+        "required": false
+      },      
       "transferable_location": {
         "type": "boolean",
         "empty" : false,
+        "required": false
+      } 
+    }
+  }, 
+  "rights" : {
+    "type" : "dict",
+    "empty" : false,
+    "required": false,
+    "schema" : {
+      "tos_url": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
+        "required": false
+      },      
+      "privacy_policy_url": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
+        "required": false
+      },      
+      "rights_type": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
+        "required": false
+      },
+      "license_id": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
+        "required": false
+      },
+      "license_name": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
+        "required": false
+      },
+      "license_url": {
+        "type": "string",
+        "empty" : true,
+        "nullable": true,
         "required": false
       } 
     }

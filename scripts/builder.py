@@ -515,7 +515,9 @@ METRICS = {'has_owner_name' : 'Has owner organization name',
 'has_owner_type' : "Has owner organization type",
 'has_owner_link' : "Has owner organization link",
 'has_catalog_type' : "Has catalog type",
-'has_country' : 'Country known',
+'has_country' : 'Owner country known',
+'has_coverage' : 'Coverage known',
+'has_macroregion' : 'Macroregion information known',
 'has_subregion' : 'Subregion information known',
 "has_description" : "Has description",
 "has_langs" : 'Has languages',
@@ -527,17 +529,23 @@ METRICS = {'has_owner_name' : 'Has owner organization name',
 }
 
 @app.command()
-def quality_control():
+def quality_control(mode='full'):
     """Quality control metrics"""
     from rich.console import Console
     from rich.table import Table
-    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
+    data = load_jsonl(os.path.join(DATASETS_DIR, f'{mode}.jsonl'))
     metrics = {}
     for key in METRICS.keys():
         metrics[key] = [key, METRICS[key], 0, 0, 0]
     total = 0
     for d in data:     
         total += 1
+        if 'coverage' in d.keys() and len(d['coverage']) > 0:
+            metrics['has_coverage'][3] += 1
+            if 'location' in d['coverage'][0].keys():
+                location = d['coverage'][0]['location']
+                if 'macroregion' in location.keys():
+                    metrics['has_macroregion'][3] += 1
         if 'langs' in d.keys() and len(d['langs']) > 0:
             metrics['has_langs'][3] += 1
         if 'tags' in d.keys() and len(d['tags']) > 0:
@@ -569,7 +577,7 @@ def quality_control():
                 if 'location' in d['owner'].keys() and d['owner']['location'] is not None and 'subregion' in d['owner']['location'].keys(): 
                     metrics['has_subregion'][3] += 1
 
-        for key in ['has_tags', 'has_langs', 'has_topics', 'has_endpoints', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country', 'has_catalog_type']:
+        for key in ['has_tags', 'has_langs', 'has_topics', 'has_endpoints', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country', 'has_catalog_type', 'has_coverage', 'has_macroregion']:
             metrics[key][2] += 1
 #    for metric in metrics.values(): 
 #        print('%s, total %d, found %d, share %0.2f' % (metric[1], metric[2], metric[3], metric[3]*100.0 / metric[2] if metric[2] > 0 else 0))
