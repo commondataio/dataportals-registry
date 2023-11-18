@@ -13,6 +13,9 @@ coverage:
       id: NL
       name: Netherlands
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: geonetwork:query
   url: https://data.rivm.nl/meta/srv/eng/q
@@ -33,8 +36,10 @@ endpoints:
 export_standard: Geonetwork API
 id: datarivmnl
 langs:
-- EN
-- NL
+- id: EN
+  name: English
+- id: NL
+  name: Dutch
 link: https://data.rivm.nl/meta
 name: RIVMData (National Institute for Public Health and the Environment Netherlands)
 owner:

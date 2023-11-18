@@ -12,6 +12,9 @@ coverage:
       id: BE
       name: Belgium
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 description: FedEO Clearinghouse provides interoperable access, following ISO/OGC
   interface guidelines, to Earth Observation metadata
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: fedeoclearinghouse
 langs:
-- EN
+- id: EN
+  name: English
 link: https://eovoc.spacebel.be/
 name: FedEO Clearinghouse
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: SpaceBel
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000132

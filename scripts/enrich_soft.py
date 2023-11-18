@@ -89,8 +89,6 @@ def update_software(dryrun=False):
             f = open(filepath, 'w', encoding='utf8')
             f.write(yaml.safe_dump(record, allow_unicode=True))
             f.close()
-            
-            
 
 
 

@@ -12,6 +12,9 @@ coverage:
       id: FR
       name: France
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 description: Up to date Sentinel-2 and Landsat-8 catalog used for demo with rocket
   client.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: sentinel2andlandsat8catalog
 langs:
-- EN
+- id: EN
+  name: English
 link: https://tamn.snapplanet.io
 name: Sentinel-2 and Landsat-8 catalog
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: SnapPlanet
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000659

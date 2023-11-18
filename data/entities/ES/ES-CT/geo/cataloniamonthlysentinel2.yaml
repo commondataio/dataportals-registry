@@ -12,6 +12,9 @@ coverage:
       id: ES
       name: Spain
     level: 2
+    macroregion:
+      id: 039
+      name: Southern Europe
     subregion:
       id: ES-CT
 description: 'Monthly mosaics of sentinel-2 images over Catalonia, choosing lowest
@@ -23,7 +26,8 @@ endpoints:
 export_standard: STAC specification
 id: cataloniamonthlysentinel2
 langs:
-- EN
+- id: EN
+  name: English
 link: https://datacloud.icgc.cat/stac-catalog/catalog.json
 name: Monthly Mosaic of Sentinel 2 Images for Catalonia
 owner:
@@ -38,7 +42,7 @@ owner:
   name: Institut Cartogràfic i Geològic de Catalunya
   type: Regional government
 properties:
-  transferable_location: true
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -53,6 +57,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000538

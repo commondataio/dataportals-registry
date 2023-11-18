@@ -45,16 +45,20 @@
           },
           "level": {"type" : "number"},
           "subregion": {"type" : "dict", "schema" : {
-            "id" : {"type" : "string", "empty" : false}
+            "id" : {"type" : "string", "empty" : false},
+            "name" : {"type" : "string", "empty" : false, "required" : false}
+          }},
+          "macroregion": {"type" : "dict", "schema" : {
+            "id" : {"type" : "string", "empty" : false},
+            "name" : {"type" : "string", "empty" : false}
           }
         
-          }
-           
-          }
+          }           
+          
         }
      }
     }
-  },
+  }},
   "id": {
     "type": "string",
     "empty" : false,
@@ -63,9 +67,19 @@
   "langs": {
     "type": "list",
     "schema": {
-            "type": "string"
-    },
-    "required": true
+      "type" : "dict", "schema" : {
+      "id": {
+        "type": "string",
+        "empty" : false,
+        "required": true
+      },
+      "name": {
+        "type": "string",
+        "empty" : false,
+        "required": true
+      }
+    }},
+    "required": false
   },
   "link": {
     "type": "string",
@@ -199,7 +213,7 @@
       },      
       "link": {
         "type": "string",
-        "required": true
+        "required": false
       },
       "type": {
         "type": "string",

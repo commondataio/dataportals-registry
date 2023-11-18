@@ -11,12 +11,16 @@ coverage:
       id: RU
       name: Russian Federation
     level: 2
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
     subregion:
       id: RU-MOW
 export_standard: GeoServer API
 id: transportmosru
 langs:
-- RU
+- id: RU
+  name: Russian
 link: https://transport.mos.ru/geoserver
 name: Сервер геоданных портала Московский транспорт
 owner:
@@ -29,6 +33,8 @@ owner:
       id: RU-MOW
   name: ''
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: geoserver
   name: GeoServer
@@ -43,6 +49,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001401

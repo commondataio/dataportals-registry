@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: City plans Tunis
+endpoints:
+- type: arcgis:rest:info
+  url: https://geopau.gov.tn/arcgisserver/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geopau.gov.tn/arcgisserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geopau.gov.tn/arcgisserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://geopau.gov.tn/arcgisserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geopau.gov.tn/arcgisserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geopau.gov.tn/arcgisserver/rest/services?f=kmz
+id: geopaugovtn
+langs:
+- id: AR
+  name: Arabic
+link: https://geopau.gov.tn/arcgisserver/rest/services
+name: SIG WEB PAU - Plans d’Aménagement Urbain
+owner:
+  link: http://www.mehat.gov.tn
+  location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
+  name: Ministère de l'Équipement, de l'Habitat et de l'AmÉnagement du Territoire
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004192

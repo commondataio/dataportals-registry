@@ -12,6 +12,9 @@ coverage:
       id: RU
       name: Russian Federation
     level: 1
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.sgm.ru/server/rest/info?f=pjson
@@ -40,7 +43,8 @@ endpoints:
 export_standard: ArcGIS REST Services
 id: gissgmru
 langs:
-- RU
+- id: RU
+  name: Russian
 link: https://gis.sgm.ru/server/rest/services
 name: ArcGIS геосервер Государственного геологического музея им. Вернадского
 owner:

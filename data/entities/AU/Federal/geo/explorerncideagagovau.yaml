@@ -12,6 +12,9 @@ coverage:
       id: AU
       name: Australia
     level: 1
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
 description: ''
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: explorerncideagagovau
 langs:
-- EN
+- id: EN
+  name: English
 link: https://explorer.nci.dea.ga.gov.au
 name: Digital Earth Australia DataCube
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: Geoscience Australia
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: opendatacube
   name: Open Data Cube
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000075

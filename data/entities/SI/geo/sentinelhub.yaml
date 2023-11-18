@@ -12,6 +12,9 @@ coverage:
       id: SI
       name: Slovenia
     level: 1
+    macroregion:
+      id: 039
+      name: Southern Europe
 description: Sentinel Hub Catalog is an API implementing the STAC Specification, describing
   geospatial information about different data used with Sentinel Hub.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: sentinelhub
 langs:
-- EN
+- id: EN
+  name: English
 link: https://services.sentinel-hub.com/api/v1/catalog/1.0.0/
 name: Sentinel Hub
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: Sinergise Laboratory for geographical information systems, Ltd.
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001491

@@ -11,7 +11,12 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 1
+    level: 2
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
 endpoints:
 - type: csw202
   url: http://portalrediam.cica.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -22,7 +27,8 @@ endpoints:
 export_standard: Geonetwork API
 id: portalrediamcicaes
 langs:
-- ES
+- id: ES
+  name: Spanish
 link: http://portalrediam.cica.es/geonetwork
 name: Catálogo REDIAM
 owner:
@@ -31,7 +37,9 @@ owner:
     country:
       id: ES
       name: Spain
-    level: 1
+    level: 2
+    subregion:
+      id: ES-AN
   name: Centro Informático Científico de Andalucía
   type: Regional government
 properties:

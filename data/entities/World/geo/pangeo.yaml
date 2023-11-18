@@ -20,7 +20,8 @@ endpoints:
 export_standard: STAC specification
 id: pangeo
 langs:
-- EN
+- id: EN
+  name: English
 link: https://raw.githubusercontent.com/charlesbluca/pangeo-datastore-stac/master/master/catalog.json
 name: Pangeo Cloud Data Catalog
 owner:
@@ -32,10 +33,15 @@ owner:
     level: 1
   name: Pangeo
   type: Community
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
 status: active
+tags:
+- geospatial
+- has_api
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
@@ -52,9 +58,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
-tags:
-- geospatial
-- has_api
 uid: cdi00001957

@@ -12,6 +12,9 @@ coverage:
       id: GB
       name: United Kingdom
     level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
 description: Sample imagery from flight campaigns ran by Satellite Vu in March and
   April 2021. Consists of 5 images resampled to the highest resolution achievable
   by Satellite Vu sensor from orbit.
@@ -21,7 +24,8 @@ endpoints:
 export_standard: STAC specification
 id: satellitevupublicstaticstac
 langs:
-- EN
+- id: EN
+  name: English
 link: https://stac.satellitevu.com
 name: Satellite Vu public static STAC
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: ''
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000756

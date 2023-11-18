@@ -11,6 +11,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: Transportation data repository maintained by the Virginia Tech Transportation
   Institute.
 endpoints:
@@ -19,7 +22,8 @@ endpoints:
 export_standard: Dataverse API
 id: dataversevttivtedu
 langs:
-- EN
+- id: EN
+  name: English
 link: https://dataverse.vtti.vt.edu
 name: Virginia Tech Transportation data repository
 owner:
@@ -29,8 +33,10 @@ owner:
       id: US
       name: United States
     level: 1
-  name: 'Virginia Tech Transportation'
+  name: Virginia Tech Transportation
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: dataverse
   name: Dataverse
@@ -45,6 +51,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001698

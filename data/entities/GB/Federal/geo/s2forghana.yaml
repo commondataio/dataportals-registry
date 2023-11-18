@@ -12,6 +12,9 @@ coverage:
       id: GB
       name: United Kingdom
     level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
 description: Sentinel 2 Surface Reflectance over Ghana using SIAC AC.
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: s2forghana
 langs:
-- EN
+- id: EN
+  name: English
 link: https://gws-access.jasmin.ac.uk/public/odanceo/S2_L2/collection.json
 name: S2 for Ghana
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: Jasmin. The UK data analysis facility for environmental science
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000755

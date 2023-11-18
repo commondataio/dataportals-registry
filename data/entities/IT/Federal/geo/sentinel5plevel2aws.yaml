@@ -12,6 +12,9 @@ coverage:
       id: IT
       name: Italy
     level: 1
+    macroregion:
+      id: 039
+      name: Southern Europe
 description: Observations from the Sentinel-5 Precursor (Sentinel-5P) satellite of
   the European Commission’s Copernicus Earth Observation Programme. Hosted on AWS.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: sentinel5plevel2aws
 langs:
-- EN
+- id: EN
+  name: English
 link: https://meeo-s5p.s3.amazonaws.com/catalog.json
 name: Sentinel 5P Level 2 on AWS
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: Meteorological Environmental Earth Observation
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000944

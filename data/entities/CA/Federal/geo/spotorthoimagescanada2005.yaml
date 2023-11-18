@@ -12,6 +12,9 @@ coverage:
       id: CA
       name: Canada
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: Canada Orthoimages 2005-2010 is the national medium-resolution imagery
   coverage of Canada. These digital raster data acquired by the Spot4 and Spot5 satellites
   comprise five spectral bands.
@@ -21,7 +24,8 @@ endpoints:
 export_standard: STAC specification
 id: spot-orthoimages-canada-2005
 langs:
-- EN
+- id: EN
+  name: English
 link: https://spot-canada-ortho.s3.amazonaws.com/catalog.json
 name: SPOT Orthoimages of Canada (2005-2010)
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: Natural Resources Canada
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000280

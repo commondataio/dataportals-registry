@@ -12,6 +12,9 @@ coverage:
       id: IT
       name: Italy
     level: 1
+    macroregion:
+      id: 039
+      name: Southern Europe
 description: Observations from the Sentinel-3 satellite of the European Commission’s
   Copernicus Earth Observation Programme, available in Level 2 and 3. Hosted on AWS.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: sentinel3aws
 langs:
-- EN
+- id: EN
+  name: English
 link: https://meeo-s3.s3.amazonaws.com/catalog.json
 name: Sentinel 3 Level 2+3 on AWS
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: Meteorological Environmental Earth Observation
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000943

@@ -12,6 +12,9 @@ coverage:
       id: DE
       name: Germany
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: csw202
   url: https://gdi-he.gingko.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -25,8 +28,10 @@ endpoints:
 export_standard: Geonetwork API
 id: gdihegingkode
 langs:
-- DE
-- EN
+- id: DE
+  name: German
+- id: EN
+  name: English
 link: https://gdi-he.gingko.de/geonetwork
 name: Geodateninfrastructur Deuchland
 owner:

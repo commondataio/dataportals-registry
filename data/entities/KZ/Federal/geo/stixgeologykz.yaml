@@ -11,14 +11,19 @@ coverage:
       id: KZ
       name: Kazakhstan
     level: 1
+    macroregion:
+      id: '143'
+      name: Central Asia
 endpoints:
 - type: arcgis:rest:services
   url: https://stix.geology.kz:6443/arcgis/rest/services/?f=pjson
 export_standard: ArcGIS REST Services
 id: stixgeologykz
 langs:
-- RU
-- EN
+- id: RU
+  name: Russian
+- id: EN
+  name: English
 link: https://stix.geology.kz:6443/arcgis/rest/services/
 name: ArcGIS server of the LLP "Geological platform" E-Geoprom "
 owner:

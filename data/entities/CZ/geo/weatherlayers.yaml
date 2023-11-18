@@ -12,6 +12,9 @@ coverage:
       id: CZ
       name: Czech Republic
     level: 1
+    macroregion:
+      id: '151'
+      name: Eastern Europe
 description: WeatherLayers is Weather Visualization as a Service, providing pre-processed
   weather data for visualization and a frontend weather visualization library, which
   can be used with both cloud and custom self-hosted data. See [WeatherLayers](https://weatherlayers.com/)
@@ -22,7 +25,8 @@ endpoints:
 export_standard: STAC specification
 id: weatherlayers
 langs:
-- EN
+- id: EN
+  name: English
 link: https://catalog.weatherlayers.com/catalog/
 name: WeatherLayers
 owner:
@@ -33,6 +37,8 @@ owner:
     level: 1
   name: Kamzek s.r.o.
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -47,6 +53,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000398

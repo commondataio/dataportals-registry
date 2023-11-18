@@ -12,6 +12,9 @@ coverage:
       id: GB
       name: United Kingdom
     level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
 description: This STAC catalog contains Sentinel 2 (S2) surface reflectance over the
   UK from 2017 to 2019. The surface reflectance have been processed by SIAC atmospheric
   correction method, with per pixel uncertainty information.
@@ -21,7 +24,8 @@ endpoints:
 export_standard: STAC specification
 id: uknceoanalysisreadydataard
 langs:
-- EN
+- id: EN
+  name: English
 link: https://gws-access.jasmin.ac.uk/public/nceo_ard/NCEO_ARD_STAC/catalog.json
 name: UK NCEO Analysis Ready Data (ARD)
 owner:
@@ -32,6 +36,8 @@ owner:
     level: 1
   name: ''
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000757

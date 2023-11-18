@@ -31,6 +31,16 @@ DATA_NAMES = ['data', 'dati', 'datos', 'dados', 'podatki', 'datosabiertos', 'ope
 GOV_NAMES = ['gov', 'gob', 'gouv', 'egov', 'e-gov', 'go', 'govt']
 
 
+def load_csv_dict(filepath, key, delimiter='\t'):
+    data = {}
+    f = open(filepath, 'r', encoding='utf8')
+    reader = csv.DictReader(f, delimiter=delimiter)
+    for r in reader:
+        data[r[key]] = r
+    f.close()
+    return data
+
+
 @app.command()
 def enrich_ot(dryrun=False):
     """Update owner type according to name"""
@@ -530,9 +540,111 @@ def fix_api(dryrun=False, mode='entities'):
                 f.close()
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
             
+
+@app.command()
+def fix_catalog_type(dryrun=False, mode='entities'):
+    """Fix catalog_type"""    
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if record['catalog_type'] == 'Unknown':
+                record['catalog_type'] = 'Open data portal'
+                changed = True
+            if changed is True:
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
             
 
+@app.command()
+def update_macroregions(dryrun=False, mode='entities'):
+    """Update macro regions"""    
+    macro_dict = load_csv_dict('../data/reference/macroregion_countries.tsv', delimiter='\t', key='alpha2')
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False            
+            country_ids = []
+#            country_ids.append(record['owner']['location']['country']['id'])
+            n = 0
+            for location in record['coverage']:                 
+                cid = location['location']['country']['id']
+                if cid not in macro_dict.keys():
+                    print(f'Not found country {cid}')
+                else:
+                    location['location']['macroregion'] = {'id' : macro_dict[cid]['macroregion_code'], 'name' : macro_dict[cid]['macroregion_name']}
+                    record['coverage'][n] = location
+                    changed = True
+                n += 1                             
+            if changed is True:
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
 
+
+@app.command()
+def update_languages(dryrun=False, mode='entities'):
+    """Update languages schema and codes"""    
+    lang_dict = load_csv_dict('../data/reference/langs.tsv', delimiter='\t', key='code')
+    country_lang_dict = load_csv_dict('../data/reference/country_langs.tsv', delimiter='\t', key='alpha2')
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False            
+            cid = record['owner']['location']['country']['id']
+            langs = []
+            new_langs = []
+            if 'langs' not in record.keys():
+                if cid in country_lang_dict.keys():
+                    langs.append(country_lang_dict[cid]['langcode'])
+            else:
+                if isinstance(record['langs'], dict):
+                    continue
+                if len(record['langs']) == 0:
+                    if cid in country_lang_dict.keys():
+                        langs.append(country_lang_dict[cid]['langcode'])
+                else:
+                    langs = record['langs']
+            for code in langs:
+                if code not in lang_dict.keys():
+                    print(f'Not found language with code: {code}')
+                    print(record['id'])
+                else:
+                    new_langs.append({'id' : code, 'name' : lang_dict[code]['name']})
+                    record['langs'] = new_langs
+                    changed = True
+            n = 0
+            if changed is True:
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
+            
+            
 
 if __name__ == "__main__":
     app()

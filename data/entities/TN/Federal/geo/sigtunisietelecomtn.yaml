@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Tunis Telecom ArcGIS server
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.tunisietelecom.tn/server/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sig.tunisietelecom.tn/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.tunisietelecom.tn/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.tunisietelecom.tn/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.tunisietelecom.tn/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.tunisietelecom.tn/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.tunisietelecom.tn/server/rest/services?f=kmz
+id: sigtunisietelecomtn
+langs:
+- id: AR
+  name: Arabic
+link: https://sig.tunisietelecom.tn/server/rest/services
+name: TT Geoportail
+owner:
+  link: https://www.tunisietelecom.tn
+  location:
+    country:
+      id: TN
+      name: Tunis
+    level: 1
+  name: Tunis Telecom
+  type: Business
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags: []
+topics: []
+uid: cdi00004193

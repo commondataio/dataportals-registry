@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: 'This open SAR dataset contains > 100 Capella Space scenes.
 
 
@@ -26,7 +29,8 @@ endpoints:
 export_standard: STAC specification
 id: capellaspaceopendata
 langs:
-- EN
+- id: EN
+  name: English
 link: https://capella-open-data.s3.us-west-2.amazonaws.com/stac/catalog.json
 name: Capella Space Open Data
 owner:
@@ -37,6 +41,8 @@ owner:
     level: 1
   name: Capella Space
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -51,6 +57,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001647

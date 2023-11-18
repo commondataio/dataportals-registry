@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: Analysis Ready Data (ARD) hosted by USGS Astrogeology. This catalog is
   organized by planetary body (e.g., Mars or Jupiter). Within each sub-catalog, users
   will find ARD orgamized by moon and/or data type (e.g., Europa, or kaguyaTC DTMs)
@@ -22,7 +25,8 @@ endpoints:
 export_standard: STAC specification
 id: usgsastrogeologyard
 langs:
-- EN
+- id: EN
+  name: English
 link: https://asc-stacbrowser.s3.us-west-2.amazonaws.com/catalog.json
 name: USGS Astrogeology Provided Analysis Ready Data
 owner:
@@ -33,6 +37,8 @@ owner:
     level: 1
   name: USGS
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -48,6 +54,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001614

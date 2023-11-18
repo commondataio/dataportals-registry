@@ -12,6 +12,9 @@ coverage:
       id: NL
       name: Netherlands
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: geonetwork:query
   url: https://georegister.flevoland.nl/geonetwork/srv/eng/q
@@ -32,8 +35,10 @@ endpoints:
 export_standard: Geonetwork API
 id: georegisterflevolandnl
 langs:
-- NL
-- EN
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
 link: https://georegister.flevoland.nl/geonetwork
 name: Provincie Flevoland data portal
 owner:

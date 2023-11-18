@@ -12,6 +12,9 @@ coverage:
       id: TH
       name: Thailand
     level: 1
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
 description: This project is one part of the “Sphere", Thai Open Platform by GISTDA.
   Most of its components were developed by Open Data Cube ( ODC). You may experience
   space-time computation, almost the same as Google Earth Engine, with Python base
@@ -22,7 +25,8 @@ endpoints:
 export_standard: STAC specification
 id: datacubegistdaorth
 langs:
-- EN
+- id: EN
+  name: English
 link: https://datacube.gistda.or.th
 name: GISTDA DataCube
 owner:
@@ -34,6 +38,8 @@ owner:
     level: 1
   name: Thailand Geo-Informatics and Space Technology Development Agency (GISTDA)
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: opendatacube
   name: Open Data Cube
@@ -48,6 +54,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001509

@@ -12,6 +12,9 @@ coverage:
       id: US
       name: World
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: Satellite data to support disaster response worldwide.
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: disasterschartermappercatalog
 langs:
-- EN
+- id: EN
+  name: English
 link: https://supervisor.disasterscharter.org/api/catalog.json
 name: Disasters Charter Mapper Catalog
 owner:
@@ -30,6 +34,8 @@ owner:
     level: 1
   name: The International Charter Space and Major Disasters
   type: International
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -44,6 +50,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001649

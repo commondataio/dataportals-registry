@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: List of all rasters and vectors present in the [Google Earth Engine Catalog](https://developers.google.com/earth-engine/datasets/).
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: googleearthengine
 langs:
-- EN
+- id: EN
+  name: English
 link: https://earthengine-stac.storage.googleapis.com/catalog/catalog.json
 name: Google Earth Engine
 owner:
@@ -30,6 +34,8 @@ owner:
     level: 1
   name: Google Inc.
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -44,6 +50,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001653

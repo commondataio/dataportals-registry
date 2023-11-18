@@ -12,6 +12,9 @@ coverage:
       id: BE
       name: Belgium
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 description: openEO API to the VITO Remote Sensing product catalog and processing
   services.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: vitoopeneo
 langs:
-- EN
+- id: EN
+  name: English
 link: https://openeo.vito.be/openeo/1.0/
 name: VITO (openEO)
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: VITO NV
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000137

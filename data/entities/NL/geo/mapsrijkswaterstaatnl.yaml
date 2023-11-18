@@ -12,6 +12,9 @@ coverage:
       id: NL
       name: Netherlands
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: geonetwork:query
   url: https://maps.rijkswaterstaat.nl/dataregister/srv/eng/q
@@ -32,8 +35,10 @@ endpoints:
 export_standard: Geonetwork API
 id: mapsrijkswaterstaatnl
 langs:
-- NL
-- EN
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
 link: https://maps.rijkswaterstaat.nl/dataregister
 name: Dataregister Rijkswaterstaat
 owner:

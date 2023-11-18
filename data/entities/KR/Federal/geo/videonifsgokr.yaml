@@ -12,6 +12,9 @@ coverage:
       id: KR
       name: South Korea
     level: 1
+    macroregion:
+      id: '030'
+      name: Eastern Asia
 endpoints:
 - type: geonetwork:query
   url: https://video.nifs.go.kr:8443/geonetwork/srv/eng/q
@@ -30,8 +33,10 @@ endpoints:
 export_standard: Geonetwork API
 id: videonifsgokr
 langs:
-- EN
-- KR
+- id: EN
+  name: English
+- id: KO
+  name: Korean
 link: https://video.nifs.go.kr:8443/geonetwork
 name: Korea Oceanographic data center data catalogue
 owner:

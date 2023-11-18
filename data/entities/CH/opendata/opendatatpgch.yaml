@@ -11,13 +11,17 @@ coverage:
       id: CH
       name: Switzerland
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.tpg.ch/api
 export_standard: OpenDataSoft API
 id: opendatatpgch
 langs:
-- EN
+- id: EN
+  name: English
 link: https://opendata.tpg.ch
 name: Open Data Portal of Geneva Public Transport
 owner:
@@ -29,6 +33,9 @@ owner:
     level: 1
   name: TPG
   type: Regional government
+properties:
+  transferable_location: true
+  transferable_topics: true
 software:
   id: opendatasoft
   name: OpenDataSoft
@@ -43,7 +50,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
-  transferable_location: true
 uid: cdi00000346

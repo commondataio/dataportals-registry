@@ -12,14 +12,19 @@ coverage:
       id: US
       name: United States
     level: 1
-description: 'Root Catalog for Maxar ARD sample data. All contents Ⓒ Maxar and for evaluation only.'
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Root Catalog for Maxar ARD sample data. All contents Ⓒ Maxar and for
+  evaluation only.
 endpoints:
 - type: stacserverapi
   url: https://ard.maxar.com/samples/catalog.json
 export_standard: STAC specification
 id: maxarardsampledata
 langs:
-- EN
+- id: EN
+  name: English
 link: https://ard.maxar.com/samples/catalog.json
 name: Maxar ARD Sample Data
 owner:
@@ -30,6 +35,8 @@ owner:
     level: 1
   name: ''
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -44,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001654

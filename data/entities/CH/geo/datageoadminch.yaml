@@ -12,6 +12,9 @@ coverage:
       id: CH
       name: Switzerland
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 description: Data Catalog of the Swiss Federal Spatial Data Infrastructure
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: datageoadminch
 langs:
-- EN
+- id: EN
+  name: English
 link: https://data.geo.admin.ch/api/stac/v0.9/
 name: data.geo.admin.ch
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: Swiss Confederation Federal Administration
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000335

@@ -12,6 +12,9 @@ coverage:
       id: CH
       name: Switzerland
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: csw202
   url: https://www.geocat.ch/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -22,8 +25,10 @@ endpoints:
 export_standard: Geonetwork API
 id: wwwgeocatch
 langs:
-- DE
-- EN
+- id: DE
+  name: German
+- id: EN
+  name: English
 link: https://www.geocat.ch/geonetwork
 name: Geocat.ch geographic
 owner:

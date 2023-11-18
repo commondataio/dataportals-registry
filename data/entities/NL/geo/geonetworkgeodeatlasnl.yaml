@@ -12,6 +12,9 @@ coverage:
       id: NL
       name: Netherlands
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 endpoints:
 - type: csw202
   url: http://geonetwork.geodeatlas.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -22,8 +25,10 @@ endpoints:
 export_standard: Geonetwork API
 id: geonetworkgeodeatlasnl
 langs:
-- NL
-- EN
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
 link: http://geonetwork.geodeatlas.nl/geonetwork
 name: GEODE Atlas geonetwork
 owner:

@@ -12,6 +12,9 @@ coverage:
       id: RO
       name: Romania
     level: 1
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
 description: Spatio-Temporal Asset Catalog containing various geospatial products
   distributed by West University of Timisoara
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: uvtstaccatalog
 langs:
-- EN
+- id: EN
+  name: English
 link: https://stac.sage.uvt.ro
 name: UVT STAC Catalog
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: ''
   type: Academy
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001340

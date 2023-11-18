@@ -12,6 +12,9 @@ coverage:
       id: DE
       name: Germany
     level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
 description: Access to the mundialis Actinia service via an openEO interface.
 endpoints:
 - type: stacserverapi
@@ -19,7 +22,8 @@ endpoints:
 export_standard: STAC specification
 id: mundialisactiniaopeneo
 langs:
-- EN
+- id: EN
+  name: English
 link: https://openeo.mundialis.de/api/v1.0/
 name: mundialis Actinia (openEO)
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: Mundialis
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -45,6 +51,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000430

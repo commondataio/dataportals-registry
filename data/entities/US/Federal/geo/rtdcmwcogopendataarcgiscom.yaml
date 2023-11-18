@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 endpoints:
 - type: dcatap201
   url: https://rtdc.mwcog.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -24,7 +27,8 @@ endpoints:
 export_standard: DCAT AP 2.0.1,OGC Records API,DCAT US 1.1
 id: rtdcmwcogopendataarcgiscom
 langs:
-- EN
+- id: EN
+  name: English
 link: https://rtdc.mwcog.opendata.arcgis.com
 name: Regional Transportation Data Clearinghouse
 owner:
@@ -35,6 +39,8 @@ owner:
     level: 1
   name: Regional Transportation Data Clearinghouse
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -49,6 +55,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001612

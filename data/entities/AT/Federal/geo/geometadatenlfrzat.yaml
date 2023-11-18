@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: geonetwork:query
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/q
+- type: openapi
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geometadaten.lfrz.at/at.lfrz.discoveryservices/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+export_standard: Geonetwork API
+id: geometadatenlfrzat
+langs:
+- id: DE
+  name: German
+link: https://geometadaten.lfrz.at/at.lfrz.discoveryservices
+name: INSPIRE Suchdienst Österreich
+owner:
+  link: https://www.lfrz.gv.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 1
+  name: The agricultural, forestry and water management data center (LFRZ)
+  type: Central government
+properties:
+  transferable_topics: true
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00002110

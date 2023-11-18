@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 2
+    macroregion:
+      id: '021'
+      name: Northern America
     subregion:
       id: US-CA
 description: The Forest Observatory is a data-driven forest monitoring system that
@@ -24,7 +27,8 @@ endpoints:
 export_standard: STAC specification
 id: forestobservatory
 langs:
-- EN
+- id: EN
+  name: English
 link: https://storage.googleapis.com/cfo-public/catalog.json
 name: California Forest Observatory
 owner:
@@ -37,6 +41,8 @@ owner:
       id: US-CA
   name: California Forest Observatory
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -54,6 +60,4 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001652

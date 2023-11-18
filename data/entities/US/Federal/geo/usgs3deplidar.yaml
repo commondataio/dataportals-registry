@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: LiDAR 3DEP elevation data over the conterminous United States, Hawaii,
   and the U.S. territories, acquired over an 8-year period. Hosted on AWS.
 endpoints:
@@ -20,7 +23,8 @@ endpoints:
 export_standard: STAC specification
 id: usgs3deplidar
 langs:
-- EN
+- id: EN
+  name: English
 link: https://usgs-lidar-stac.s3-us-west-2.amazonaws.com/ept/catalog.json
 name: USGS 3DEP LiDAR Point Clouds
 owner:
@@ -31,6 +35,8 @@ owner:
     level: 1
   name: USGS
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -46,6 +52,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001613

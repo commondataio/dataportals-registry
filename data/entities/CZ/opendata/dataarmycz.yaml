@@ -10,6 +10,9 @@ coverage:
       id: CZ
       name: Czech Republic
     level: 1
+    macroregion:
+      id: '151'
+      name: Eastern Europe
 endpoints:
 - type: ckan:package-list
   url: https://data.army.cz/api/3/action/package_list
@@ -19,7 +22,8 @@ endpoints:
 export_standard: DKAN API
 id: datactucz
 langs:
-- CZ
+- id: CS
+  name: Czech
 link: https://data.army.cz
 name: CTU Open Data
 owner:
@@ -31,14 +35,14 @@ owner:
     level: 1
   name: Czech Telecommunication Office
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: dkan
   name: DKAN
 status: active
 tags:
 - government
-properties:
-  transferable_topics: true
 topics:
 - id: Intelligence / Military
   name: Intelligence / Military

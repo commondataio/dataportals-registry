@@ -12,6 +12,9 @@ coverage:
       id: AU
       name: Australia
     level: 1
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
 description: Digital Earth Australia (DEA) is a platform that uses spatial data and
   images recorded by satellites orbiting our planet to detect physical changes across
   Australia in unprecedented detail.
@@ -21,7 +24,8 @@ endpoints:
 export_standard: STAC specification
 id: digitalearthau
 langs:
-- EN
+- id: EN
+  name: English
 link: https://explorer.sandbox.dea.ga.gov.au/stac/
 name: Digital Earth Australia
 owner:
@@ -31,8 +35,10 @@ owner:
       id: AU
       name: Australia
     level: 1
-  name: 'Digital Earth Australia'
+  name: Digital Earth Australia
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -48,6 +54,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000072

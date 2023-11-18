@@ -12,6 +12,9 @@ coverage:
       id: FI
       name: Finland
     level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
 description: Analysis Ready Data from the Finnish Meteorological Institute in the
   Finnish reference grid epsg:3067. Sentinel-1 and -2 as dekad mosaics as main items,
   but many other related data sets over Finland are included as well. For example
@@ -22,7 +25,8 @@ endpoints:
 export_standard: STAC specification
 id: fmiardfinland
 langs:
-- EN
+- id: EN
+  name: English
 link: https://pta.data.lit.fmi.fi/stac/root.json
 name: FMI ARD Finland
 owner:
@@ -34,6 +38,8 @@ owner:
     level: 1
   name: Finnish Meteorological Institute
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -49,6 +55,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00000619

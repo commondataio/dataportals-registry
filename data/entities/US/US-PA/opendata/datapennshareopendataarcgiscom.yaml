@@ -11,6 +11,9 @@ coverage:
       id: US
       name: United States
     level: 2
+    macroregion:
+      id: '021'
+      name: Northern America
     subregion:
       id: US-PA
 endpoints:
@@ -25,7 +28,8 @@ endpoints:
 export_standard: DCAT AP 2.0.1,OGC Records API,DCAT US 1.1
 id: datapennshareopendataarcgiscom
 langs:
-- EN
+- id: EN
+  name: English
 link: https://data.pennshare.opendata.arcgis.com
 name: The Pennsylvania Department of Transportation GIS Open Data Portal
 owner:
@@ -38,6 +42,8 @@ owner:
       id: US-PA
   name: Pennsylvania Department of Transportation
   type: Regional government
+properties:
+  transferable_topics: true
 software:
   id: arcgishub
   name: ArcGIS Hub
@@ -52,6 +58,4 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
-properties:
-  transferable_topics: true
 uid: cdi00001881

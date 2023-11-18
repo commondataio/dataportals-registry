@@ -12,6 +12,9 @@ coverage:
       id: US
       name: United States
     level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
 description: Searchable spatiotemporal metadata describing Earth science datasets
   hosted by the Microsoft Planetary Computer
 endpoints:
@@ -22,7 +25,8 @@ endpoints:
 export_standard: STAC specification
 id: microsoftpc
 langs:
-- EN
+- id: EN
+  name: English
 link: https://planetarycomputer.microsoft.com
 name: Microsoft Planetary Computer STAC API
 owner:
@@ -34,6 +38,8 @@ owner:
     level: 1
   name: Microsoft
   type: Business
+properties:
+  transferable_topics: true
 software:
   id: stacserver
   name: Stac-server
@@ -48,6 +54,4 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001656

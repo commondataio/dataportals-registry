@@ -11,10 +11,14 @@ coverage:
       id: RU
       name: Russian Federation
     level: 1
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
 export_standard: GeoServer API
 id: mnpeconomygovru
 langs:
-- RU
+- id: RU
+  name: Russian
 link: https://mnp.economy.gov.ru/geoserver
 name: Сервер геоданных портала Новые инвестиционные проекты Минэкономразвития России
 owner:
@@ -24,8 +28,10 @@ owner:
       id: RU
       name: Russian Federation
     level: 1
-  name: 'Ministry of economic development of Russian Federation'
+  name: Ministry of economic development of Russian Federation
   type: Central government
+properties:
+  transferable_topics: true
 software:
   id: geoserver
   name: GeoServer
@@ -40,6 +46,4 @@ topics:
 - id: Economy
   name: Economy
   type: iso19115
-properties:
-  transferable_topics: true
 uid: cdi00001352

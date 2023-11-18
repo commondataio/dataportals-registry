@@ -11,6 +11,9 @@ coverage:
       id: SA
       name: Saudi Arabia
     level: 1
+    macroregion:
+      id: '145'
+      name: Western Asia
 endpoints:
 - type: ckan:package-search
   url: https://od.data.gov.sa/Data/api/3/action/package_search
@@ -21,8 +24,10 @@ endpoints:
 export_standard: CKAN API
 id: oddatagovsa
 langs:
-- AR
-- EN
+- id: AR
+  name: Arabic
+- id: EN
+  name: English
 link: https://od.data.gov.sa
 name: Saudi Open Data
 owner:
