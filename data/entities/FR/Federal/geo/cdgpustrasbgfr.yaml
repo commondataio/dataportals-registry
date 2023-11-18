@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: geonetwork:query
+  url: https://cdgp.u-strasbg.fr/geonetwork/srv/eng/q
+- type: csw202
+  url: https://cdgp.u-strasbg.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://cdgp.u-strasbg.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+export_standard: Geonetwork API
+id: cdgpustrasbgfr
+langs:
+- id: FR
+  name: French
+link: https://cdgp.u-strasbg.fr/geonetwork
+name: CDGP Catalogue
+owner:
+  link: https://www.unistra.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Université de Strasbourg/CNRS
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics: []
+uid: cdi00002297

@@ -1,0 +1,63 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: uncertain
+catalog_type: Microdata catalog
+content_types:
+- microdata
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: nada:catalog-search
+  url: https://data.ined.fr/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://data.ined.fr/index.php/catalog/export/csv?ps=5000&collection[]
+id: datainedfr
+langs:
+- id: FR
+  name: French
+link: https://data.ined.fr
+name: Catalogue d'enquêtes et de données de l'Ined
+owner:
+  link: https://www.ined.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: Demostaf France
+  type: Central government
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- government
+- has_api
+- microdata
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00000662

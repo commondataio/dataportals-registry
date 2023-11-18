@@ -1,0 +1,73 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: The spatial data platform for French schools abroad
+endpoints:
+- type: geonode:layers
+  url: https://geonode.resefe.fr/api/layers/
+- type: geonode:documents
+  url: https://geonode.resefe.fr/api/documents/
+- type: wms111
+  url: https://geonode.resefe.fr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.resefe.fr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.resefe.fr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.resefe.fr/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.resefe.fr/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.resefe.fr/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geonoderesefefr
+langs:
+- id: FR
+  name: French
+link: https://geonode.resefe.fr
+name: The spatial data platform for French schools abroad
+owner:
+  link: https://www.resefe.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 1
+  name: The French Schools Abroad (EFE)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+topics: []
+uid: cdi00002300

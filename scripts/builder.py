@@ -199,7 +199,7 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
             if n % 1000 == 0: print('Processed %d' % (n))
             filepath = filename
             f = open(filepath, 'r', encoding='utf8')
-            record = yaml.load(f, Loader=Loader)            
+            record = yaml.load(f, Loader=Loader)                         
             if 'uid' in record.keys():
                 num = int(record['uid'].split(prefix, 1)[-1])
                 if num > max_num:
