@@ -206,8 +206,6 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
                     max_num = num
             f.close() 
     print('Processed %d' % (n))
-
-
     for root, dirs, files in os.walk(dirpath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
