@@ -1,0 +1,80 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
+endpoints:
+- type: geonode:documents
+  url: http://geo.grida.no/api/documents/
+- type: wms111
+  url: http://geo.grida.no/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://geo.grida.no/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://geo.grida.no/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://geo.grida.no/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://geo.grida.no/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: http://geo.grida.no/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geo.grida.no/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geogridano
+langs:
+- id: EN
+  name: English
+link: http://geo.grida.no
+name: GRID-Arendal geodata catalog
+owner:
+  link: http://www.grida.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 1
+  name: GRID-Arendal is a non-profit environmental communications centre
+  type: Civil society
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00001198
