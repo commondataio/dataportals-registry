@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
+description: International Telecommunication Union (ITU) geocatalogue
+endpoints:
+- type: geonetwork:query
+  url: https://bbmaps.itu.int/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://bbmaps.itu.int/geonetwork/srv/api/records
+- type: openapi
+  url: https://bbmaps.itu.int/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://bbmaps.itu.int/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://bbmaps.itu.int/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://bbmaps.itu.int/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: bbmapsituint
+langs:
+- id: EN
+  name: English
+link: https://bbmaps.itu.int/geonetwork
+name: ITU Geocatalogue
+owner:
+  link: https://www.itu.int
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: International Telecommunication Union (ITU)
+  type: International
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- telecom
+topics: []
+uid: cdi00004236
