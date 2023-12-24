@@ -195,6 +195,7 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
     for root, dirs, files in os.walk(dirpath):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
+            print(filename)
             n += 1
             if n % 1000 == 0: print('Processed %d' % (n))
             filepath = filename
