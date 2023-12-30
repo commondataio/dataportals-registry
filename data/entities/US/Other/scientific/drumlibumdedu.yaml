@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The Digital Repository at the University of Maryland (DRUM) collects,
+  preserves, and provides public access to the scholarly output of the university.
+  Faculty and researchers can upload research products for rapid dissemination, global
+  visibility and impact, and long-term preservation.
+endpoints:
+- type: dspace
+  url: https://api.drum.lib.umd.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://api.drum.lib.umd.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://drum.lib.umd.edu/oai/request?verb=Identify
+  version: '2.0'
+id: drumlibumdedu
+langs:
+- id: EN
+  name: English
+link: https://drum.lib.umd.edu
+name: The Digital Repository at the University of Maryland (DRUM)
+owner:
+  link: https://www.umd.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: University of Maryland
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags: []
+topics: []
+uid: cdi00004260
