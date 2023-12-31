@@ -15,8 +15,10 @@ coverage:
       id: '154'
       name: Northern Europe
 endpoints:
-- type: ckan
-  url: https://data.gov.lt/api/3
+- type: dcatap21
+  url: https://data.gov.lt/edp/dcat-ap.rdf
+- type: customapi
+  url: https://data.gov.lt/partner/api/1/datasets
 export_standard: CKAN API
 id: datagovlt
 identifiers:
@@ -48,8 +50,8 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: ckan
-  name: CKAN
+  id: custom
+  name: Custom software
 status: active
 tags:
 - government

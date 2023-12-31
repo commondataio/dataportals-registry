@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 1
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: The National Public Data Portal collects and publishes on a unified platform
+  the list of registers and databases containing public data of public interest and
+  public interest managed by state organizations, the public data cadastre. This register
+  is available and accessible free of charge to all interested parties.
+endpoints:
+- type: dcatap21
+  url: https://kozadatportal.hu/catalog.rdf
+- type: ckan
+  url: https://kozadatportal.hu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://kozadatportal.hu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://kozadatportal.hu/api/3/action/package_list
+  version: '3'
+id: kozadatportalhu
+langs:
+- id: HU
+  name: Hungarian
+link: https://kozadatportal.hu
+name: The National Public Data Portal of Hungary
+owner:
+  link: https://www.navu.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 1
+  name: National data asset management agency
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags: []
+topics: []
+uid: cdi00004266
