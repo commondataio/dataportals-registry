@@ -17,6 +17,9 @@ coverage:
 description: The Australian Data Archive provides a national service for collecting,
   preserving, publishing and accessing digital research data.
 endpoints:
+- type: oaipmh20
+  url: https://dataverse.ada.edu.au/oai?verb=Identify
+  version: '2.0'
 - type: dataverseapi
   url: https://dataverse.ada.edu.au/api/search?q=*&type=dataset&sort=name&order=asc
 export_standard: Dataverse API

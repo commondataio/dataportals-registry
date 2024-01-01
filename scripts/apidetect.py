@@ -33,6 +33,7 @@ DEFAULT_TIMEOUT = 15
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
 KML_MIMETYPES = ['application/vnd.google-earth.kml+xml']
+HTML_MIMETYPES = ['text/html','text/html; charset=UTF-8']
 XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml'] + KML_MIMETYPES
 JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json']
 ZIP_MIMETYPES = ['application/zip']
@@ -138,7 +139,8 @@ GEOSERVER_URLMAP = [
 EPRINTS_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/cgi/latest_tool?output=RSS2', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
-    {'id' : 'atom', 'url' : '/cgi/latest_tool?output=Atom', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None}      
+    {'id' : 'atom', 'url' : '/cgi/latest_tool?output=Atom', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'eprintrest', 'url' : '/rest/eprint', 'expected_mime' : HTML_MIMETYPES, 'is_json' : False, 'version': None}
 ]
 
 KOORDINATES_URLMAP = [
