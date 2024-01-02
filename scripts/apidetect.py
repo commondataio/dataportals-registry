@@ -35,7 +35,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101
 KML_MIMETYPES = ['application/vnd.google-earth.kml+xml']
 HTML_MIMETYPES = ['text/html','text/html; charset=UTF-8']
 XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml'] + KML_MIMETYPES
-JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json']
+JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json', 'application/vnd.oai.openapi+json;version=3.0; charset=utf-8', 'application/vnd.oai.openapi+json']
 ZIP_MIMETYPES = ['application/zip']
 
 
@@ -160,6 +160,11 @@ MYCORE_URLMAP = [
     {'id' : 'mycore:objects', 'display_url' : 'api/v1/objects', 'url' : '/api/v1/objects?format=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
 ]
 
+PYGEOAPI_URLMAP = [
+    {'id' : 'pygeoapi:openapi', 'url' : '/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
+]
+
+
 OPENDATASOFT_URLMAP = [
     {'id' : 'opendatasoft', 'display_url' : '/api', 'url' : '/api/v2/catalog/datasets/', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
 ]
@@ -220,7 +225,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
 'magda' : MAGDA_URLMAP, 'opendatasoft' : OPENDATASOFT_URLMAP, 'arcgishub' : ARCGISHUB_URLMAP, 
 'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP,
-'esrigeo' : ESRIGEO_URLMAP, 'geoblacklight': BLACKLIGHT_URLMAP
+'esrigeo' : ESRIGEO_URLMAP, 'geoblacklight': BLACKLIGHT_URLMAP,
+'pygeoapi': PYGEOAPI_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
