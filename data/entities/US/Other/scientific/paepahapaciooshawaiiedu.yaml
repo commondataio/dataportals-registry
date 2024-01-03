@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -25,6 +25,9 @@ description: Scientific data from the Pacific Islands Ocean Observing System (Pa
   Wake). These data are served by Unidata Thematic Realtime Environmental Distributed
   Data Services (THREDDS) Data Server (TDS) in a variety of interoperable data services
   and output formats.
+endpoints:
+- type: thredds:catalog
+  url: https://pae-paha.pacioos.hawaii.edu/thredds/catalog.xml
 id: paepahapaciooshawaiiedu
 langs:
 - id: EN

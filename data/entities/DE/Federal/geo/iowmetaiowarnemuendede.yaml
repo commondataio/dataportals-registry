@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: geonetwork:query
+  url: https://iowmeta.io-warnemuende.de/geonetwork/srv/eng/q
+- type: openapi
+  url: https://iowmeta.io-warnemuende.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://iowmeta.io-warnemuende.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://iowmeta.io-warnemuende.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://iowmeta.io-warnemuende.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+export_standard: Geonetwork API
+id: iowmetaiowarnemuendede
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://iowmeta.io-warnemuende.de/geonetwork
+name: IOWMeta
+owner:
+  link: https://www.io-warnemuende.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 1
+  name: Leibniz Institute for Baltic Sea Research Warnemünde
+  type: Academy
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00004285

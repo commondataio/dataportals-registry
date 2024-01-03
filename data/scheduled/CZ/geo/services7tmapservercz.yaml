@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
       name: Eastern Europe
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: wmts100
+  url: https://services7.tmapserver.cz/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
 id: services7tmapservercz
 langs:
 - id: CS

@@ -34,7 +34,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101
 
 KML_MIMETYPES = ['application/vnd.google-earth.kml+xml']
 HTML_MIMETYPES = ['text/html','text/html; charset=UTF-8']
-XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml'] + KML_MIMETYPES
+XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml', 'application/xml;charset=UTF-8'] + KML_MIMETYPES
 JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json', 'application/vnd.oai.openapi+json;version=3.0; charset=utf-8', 'application/vnd.oai.openapi+json']
 ZIP_MIMETYPES = ['application/zip']
 
@@ -93,6 +93,11 @@ PXWEB_URLMAP = [
     {'id' : 'pxwebapi', 'url' : '/api/v1/en/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1'}
 ]
 
+STATSUITE_URLMAP = [
+    {'id' : 'statsuite:search', 'url' : '/api/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+]
+
+
 DATAVERSE_URLMAP = [
     {'id' : 'dataverseapi', 'display_url' : '/api/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'oaipmh20', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
@@ -136,6 +141,12 @@ GEOSERVER_URLMAP = [
     {'id' : 'csw202', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
 ]
 
+MAPPROXY_URLMAP = [
+    {'id' : 'wms111', 'url' : '/service?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wmts100', 'url' : '/service?REQUEST=GetCapabilities&SERVICE=WMTS', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'tms100', 'url' : '/tms/1.0.0/', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+]
+
 EPRINTS_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/cgi/latest_tool?output=RSS2', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
@@ -156,9 +167,6 @@ ALEPH_URLMAP = [
     {'id' : 'aleph:collections', 'url' : '/api/2/collections', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '2.0'}
 ]
 
-MYCORE_URLMAP = [
-    {'id' : 'mycore:objects', 'display_url' : 'api/v1/objects', 'url' : '/api/v1/objects?format=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
-]
 
 PYGEOAPI_URLMAP = [
     {'id' : 'pygeoapi:openapi', 'url' : '/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
@@ -205,6 +213,20 @@ METAGIS_URLMAP = [
     {'id' : 'metagis:layers',  'url' : '/ResultJSONGNServlet', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : True},    
 ]
 
+THREDDS_URLMAP = [
+    {'id' : 'thredds:catalog',  'url' : '/catalog.xml', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},    
+]
+
+ERDDAP_URLMAP = [
+    {'id' : 'erddap:index',  'url' : '/index.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : False},    
+]
+
+MYCORE_URLMAP = [
+    {'id' : 'mycore:objects', 'url' : '/api/v2/objects', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'oaipmh20', 'url' : '/servlets/OAIDataProvider?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'}
+]
+
+
 ESRIGEO_URLMAP = [
     {'id' : 'esrigeo:geoportal', 'url' : '/rest/geoportal', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'esrigeo:metadata:search', 'url' : '/rest/metadata/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -226,7 +248,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'magda' : MAGDA_URLMAP, 'opendatasoft' : OPENDATASOFT_URLMAP, 'arcgishub' : ARCGISHUB_URLMAP, 
 'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP,
 'esrigeo' : ESRIGEO_URLMAP, 'geoblacklight': BLACKLIGHT_URLMAP,
-'pygeoapi': PYGEOAPI_URLMAP
+'pygeoapi': PYGEOAPI_URLMAP, 'thredds' : THREDDS_URLMAP, 'erddap' : ERDDAP_URLMAP,
+'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -248,8 +271,14 @@ def arcgisserver_url_cleanup_func(url):
 def geonetwork_url_cleanup_func(url):
     return url.split('/srv')[0]
 
+def thredds_url_cleanup_func(url):
+    return url.split('/catalog.html')[0]
 
-URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func}
+def erddap_url_cleanup_func(url):
+    return url.split('/index.html')[0]
+
+
+URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func, 'thredds' : thredds_url_cleanup_func, 'erddap' : erddap_url_cleanup_func}
 
 def api_identifier(website_url, software_id, verify_json=False):
     url_map = CATALOGS_URLMAP[software_id]
@@ -262,16 +291,20 @@ def api_identifier(website_url, software_id, verify_json=False):
     else:
         website_url = website_url.rstrip('/')
     for item in url_map:
-        if 'prefetch' in item and item['prefetch']:
-            prefeteched_data = s.get(website_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
-        request_url = website_url + item['url']
         try:
+            if 'prefetch' in item and item['prefetch']:
+                request_url = website_url
+                prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))           
+            request_url = website_url + item['url']
             if 'accept' in item.keys():
                 response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
             else:
                 response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
         except requests.exceptions.Timeout:
             results.append({'url' : request_url,'error' : 'Timeout'})
+            continue       
+        except requests.exceptions.SSLError:
+            results.append({'url' : request_url,'error' : 'SSL Error'})
             continue       
         except ConnectionError:
             results.append({'url' : request_url,'error' : 'no connection'})
