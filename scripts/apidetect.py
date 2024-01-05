@@ -36,6 +36,7 @@ KML_MIMETYPES = ['application/vnd.google-earth.kml+xml']
 HTML_MIMETYPES = ['text/html','text/html; charset=UTF-8']
 XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'application/vnd.ogc.wms_xml', 'application/rdf+xml', 'application/rss+xml', 'application/atom+xml', 'application/xml;charset=UTF-8'] + KML_MIMETYPES
 JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json', 'application/vnd.oai.openapi+json;version=3.0; charset=utf-8', 'application/vnd.oai.openapi+json']
+N3_MIMETYPES = ['text/n3']
 ZIP_MIMETYPES = ['application/zip']
 
 
@@ -151,7 +152,9 @@ EPRINTS_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/cgi/latest_tool?output=RSS2', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'atom', 'url' : '/cgi/latest_tool?output=Atom', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
-    {'id' : 'eprintrest', 'url' : '/rest/eprint', 'expected_mime' : HTML_MIMETYPES, 'is_json' : False, 'version': None}
+    {'id' : 'eprints:rest', 'url' : '/rest/eprint', 'expected_mime' : HTML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'eprints:rdf', 'url' : '/cgi/export/repository/RDFXML/devel.rdf', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'eprints:n3', 'url' : '/cgi/export/repository/RDFN3/devel.n3', 'expected_mime' : N3_MIMETYPES, 'is_json' : False, 'version': None}
 ]
 
 KOORDINATES_URLMAP = [
