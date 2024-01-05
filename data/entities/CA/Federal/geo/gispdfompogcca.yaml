@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+    macroregion:
+      id: '021'
+      name: Northern America
+description: DFO eGIS Platform (Portal for ArcGIS)
+endpoints:
+- type: arcgis:portals:self
+  url: https://gisp.dfo-mpo.gc.ca/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisp.dfo-mpo.gc.ca/arcgis/rest/services?f=kmz
+id: gispdfompogcca
+langs:
+- id: EN
+  name: English
+link: https://gisp.dfo-mpo.gc.ca/arcgis/rest/services
+name: DFO eGIS Platform
+owner:
+  link: https://www.dfo-mpo.gc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 1
+  name: Fisheries and Oceans Canada
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004290

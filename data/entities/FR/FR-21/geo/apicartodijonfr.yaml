@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 2
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-21
+      name: Côte-d'Or
+description: Dijon Metropolitan Area ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://api-carto.dijon.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://api-carto.dijon.fr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://api-carto.dijon.fr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://api-carto.dijon.fr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://api-carto.dijon.fr/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://api-carto.dijon.fr/arcgis/rest/services?f=kmz
+id: apicartodijonfr
+langs:
+- id: FR
+  name: French
+link: https://api-carto.dijon.fr/arcgis/rest/services
+name: Dijon Metropolitan Area ArcGIS Server
+owner:
+  link: https://www.dijon.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 2
+    subregion:
+      id: FR-21
+      name: Côte-d'Or
+  name: Dijon Metropolitan Area
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004297

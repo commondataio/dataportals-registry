@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: The Geological Information System in terms of its content and the technical
+  aspects represents a result of activities carried out under the umbrella of the
+  Digital Geological Map of the Slovak Republic at 1, 50 000 and 1:500,000 (Káčer
+  et al., 2005) and Geological Infor-mation System GeoIS (Káčer et al., 2014). One
+  of the aims of these projects was the design and implementa-tion of technical solution
+  for publishing spatial and non-spatial geological information on the Internet.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags.geology.sk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags.geology.sk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ags.geology.sk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ags.geology.sk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ags.geology.sk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ags.geology.sk/arcgis/rest/services?f=kmz
+id: agsgeologysk
+langs:
+- id: SK
+  name: Slovak
+link: https://ags.geology.sk/arcgis/services
+name: State Geological Institute of Dionýz Štúr ArcGIS Server
+owner:
+  link: https://www.geology.sk
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 1
+  name: State Geological Institute of Dionýz Štúr
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004306

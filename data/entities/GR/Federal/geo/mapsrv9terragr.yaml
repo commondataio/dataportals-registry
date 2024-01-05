@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Terra.gr ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapsrv9.terra.gr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapsrv9.terra.gr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapsrv9.terra.gr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapsrv9.terra.gr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapsrv9.terra.gr/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapsrv9.terra.gr/arcgis/rest/services?f=kmz
+id: mapsrv9terragr
+langs:
+- id: EL
+  name: Greek
+link: https://mapsrv9.terra.gr/arcgis/rest/services
+name: Terra.gr ArcGIS Server
+owner:
+  link: https://www.terra.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 1
+  name: Αρ. Γ.Ε.ΜΗ
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004298

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 2
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: RU-VGG
+      name: Volgogradskaya oblast
+description: Administration Volgograd region ArcGIS server
+endpoints:
+- type: arcgis:portals:self
+  url: http://gis-vo.volganet.ru/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: http://gis-vo.volganet.ru/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis-vo.volganet.ru/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gis-vo.volganet.ru/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gis-vo.volganet.ru/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gis-vo.volganet.ru/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://gis-vo.volganet.ru/arcgis/rest/services?f=kmz
+id: gisvovolganetru
+langs:
+- id: RU
+  name: Russian
+link: http://gis-vo.volganet.ru/arcgis/rest/services
+name: Administration Volgograd region ArcGIS server
+owner:
+  link: https://www.volganet.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 2
+    subregion:
+      id: RU-VGG
+      name: Volgogradskaya oblast
+  name: Administration Volgograd region
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004304

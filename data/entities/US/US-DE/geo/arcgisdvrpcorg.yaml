@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DE
+      name: Delaware
+description: Delaware Valley Regional Planning Commission GIS Portal
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.dvrpc.org/portal/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.dvrpc.org/portal/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.dvrpc.org/portal/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.dvrpc.org/portal/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.dvrpc.org/portal/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://arcgis.dvrpc.org/portal/rest/services?f=kmz
+id: arcgisdvrpcorg
+langs: []
+link: https://arcgis.dvrpc.org/portal/rest/services
+name: DVRPC GIS Portal
+owner:
+  link: https://www.dvrpc.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-DE
+      name: Delaware
+  name: 'Delaware Valley Regional Planning Commission '
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004312

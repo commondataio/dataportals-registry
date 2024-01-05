@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 2
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-CMX
+      name: Ciudad de México
+description: Mexico City government Atlas ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/services?f=kmz
+id: serviciosatlassgirpccdmxgobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://serviciosatlas.sgirpc.cdmx.gob.mx/arcgis/rest/services
+name: Portal Atlas de Riesgos CDMX
+owner:
+  link: https://www.cdmx.gob.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 2
+    subregion:
+      id: MX-CMX
+      name: Ciudad de México
+  name: Mexico City government
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004301

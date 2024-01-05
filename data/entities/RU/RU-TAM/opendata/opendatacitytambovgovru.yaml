@@ -13,13 +13,17 @@ coverage:
     level: 2
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: 'Eastern Europe'
     subregion:
       id: RU-TAM
-      name: Tambovskaya oblast'
+      name: Tambovskaya oblast
 endpoints:
-- type: ckan
-  url: http://opendata.city.tambov.gov.ru/api/3
+- type: ckan:package-search
+  url: http://opendata.city.tambov.gov.ru/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://opendata.city.tambov.gov.ru/api/3/action/package_list
+  version: '3'
 export_standard: CKAN API
 id: opendatacitytambovgovru
 langs:
@@ -28,6 +32,7 @@ langs:
 link: http://opendata.city.tambov.gov.ru/
 name: Data portal of the Tambov city administration
 owner:
+  link: https://www.city.tambov.gov.ru
   location:
     country:
       id: RU
@@ -35,7 +40,7 @@ owner:
     level: 2
     subregion:
       id: RU-TAM
-      name: Tambovskaya oblast'
+      name: Tambovskaya oblast
   name: Tambov city administration
   type: Local government
 rights:

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+    macroregion:
+      id: '005'
+      name: South America
+description: A plataforma GeoInfo foi desenvolvida para o compartilhamento do acervo
+  de dados espaciais da Embrapa com a sociedade e segue padrões seguros e de qualidade
+  que possibilitam a preservação dos dados, a geração de novas informações e a sua
+  difusão entre pesquisadores e cidadãos. Esta plataforma foi criada a partir da adesão
+  da Embrapa à Infraestrutura Nacional de Dados Espaciais (Inde).
+endpoints:
+- type: geonode:layers
+  url: https://geoinfo.cnpm.embrapa.br/api/layers/
+- type: geonode:documents
+  url: https://geoinfo.cnpm.embrapa.br/api/documents/
+- type: wms111
+  url: https://geoinfo.cnpm.embrapa.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geoinfo.cnpm.embrapa.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoinfo.cnpm.embrapa.br/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoinfo.cnpm.embrapa.br/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoinfo.cnpm.embrapa.br/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geoinfo.cnpm.embrapa.br/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geoinfocnpmembrapabr
+langs:
+- id: PT
+  name: Portugal
+link: https://geoinfo.cnpm.embrapa.br
+name: GeoINFO
+owner:
+  link: https://www.embrapa.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 1
+  name: Brazilian Agricultural Research Corporation
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004288

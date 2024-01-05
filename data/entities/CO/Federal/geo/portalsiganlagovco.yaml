@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+    macroregion:
+      id: '005'
+      name: South America
+description: Autoridad Nacional de Licencias Ambientales ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://portalsig.anla.gov.co/publico/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portalsig.anla.gov.co/publico/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portalsig.anla.gov.co/publico/services?wsdl
+- type: arcgis:sitemap
+  url: https://portalsig.anla.gov.co/publico/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portalsig.anla.gov.co/publico/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portalsig.anla.gov.co/publico/rest/services?f=kmz
+id: portalsiganlagovco
+langs:
+- id: ES
+  name: Spanish
+link: https://portalsig.anla.gov.co/publico/rest/services
+name: Autoridad Nacional de Licencias Ambientales ArcGIS server
+owner:
+  link: https://www.anla.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 1
+  name: Autoridad Nacional de Licencias Ambientales
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004293

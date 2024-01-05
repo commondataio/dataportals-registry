@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 1
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Academic Map Publishing Platform of the Zhejiang University
+endpoints:
+- type: geonode:documents
+  url: http://amap.zju.edu.cn/api/documents/
+- type: wms111
+  url: http://amap.zju.edu.cn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://amap.zju.edu.cn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://amap.zju.edu.cn/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://amap.zju.edu.cn/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://amap.zju.edu.cn/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://amap.zju.edu.cn/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: amapzjueducn
+langs:
+- id: ZH
+  name: Chinese
+link: http://amap.zju.edu.cn
+name: Academic Map Publishing Platform
+owner:
+  link: http://www.zju.edu.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 1
+  name: Zhejiang University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004292
