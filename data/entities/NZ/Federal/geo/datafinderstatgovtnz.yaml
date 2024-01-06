@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +19,9 @@ endpoints:
 - type: koordinates:data-catalog
   url: https://datafinder.stats.govt.nz/services/api/v1.x/data/
   version: '1.0'
+- type: csw202
+  url: https://datafinder.stats.govt.nz/services/csw/?service=CSW&request=GetCapabilities
+  version: 2.0.2
 id: datafinderstatgovtnz
 langs:
 - id: EN

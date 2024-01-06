@@ -163,7 +163,8 @@ EPRINTS_URLMAP = [
 ]
 
 KOORDINATES_URLMAP = [
-    {'id' : 'koordinates:data-catalog', 'url' : '/services/api/v1.x/data/', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
+    {'id' : 'koordinates:data-catalog', 'url' : '/services/api/v1.x/data/', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'},
+    {'id' : 'csw202', 'url' : '/services/csw/?service=CSW&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'}    
 ]
 
 BLACKLIGHT_URLMAP = [
