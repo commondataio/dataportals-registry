@@ -390,6 +390,7 @@ def detect_single(uniqid, dryrun=False, replace_endpoints=True, mode='entries'):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename
+#            print(filepath)
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)            
             f.close()

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,13 +16,23 @@ coverage:
       name: 'Eastern Europe '
     subregion:
       id: RU-LEN
-      name: Leningradskaya oblast'
+      name: Leningradskaya oblast
+endpoints:
+- type: wmts100
+  url: https://map.vbglenobl.ru/GISWebServiceSE/service.php?SERVICE=WMTS&REQUEST=GetCapabilities&VERSION=1.0.0
+  version: '1.0.0'
+- type: wms130
+  url: https://map.vbglenobl.ru/GISWebServiceSE/service.php?SERVICE=WMS&REQUEST=GetCapabilities
+  version: '1.3.0'
+- type: wfs200
+  url: https://map.vbglenobl.ru/GISWebServiceSE/service.php?SERVICE=WFS&REQUEST=GetCapabilities
+  version: '2.0.0'
 id: mapvbglenoblru
 langs:
 - id: RU
   name: Russian
 link: https://map.vbglenobl.ru/
-name: Геопортал города Выборг
+name: Vyborg city and district geoportal
 owner:
   location:
     country:
@@ -31,15 +41,15 @@ owner:
     level: 2
     subregion:
       id: RU-LEN
-      name: Leningradskaya oblast'
-  name: ''
+      name: Leningradskaya oblast
+  name: 'City of Vyborg'
   type: Local government
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: global
   tos_url: null
 software:
   id: custom
