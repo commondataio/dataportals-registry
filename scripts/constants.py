@@ -2,7 +2,7 @@
 DEFAULT_LOCATION = {'location' : {'country' : {'id' : "Unknown", 'name' : "Unknown"}, 'level' : 1}}
 
 LANGS_COUNTRIES = {
-    'EN' : ['au', 'us', 'uk', 'gov', 'za', 'ca', 'ie', 'nz', 'zw', 'durban', 'eu', 'in', 'tt', 'tz', 'com', 'city', 'int', 'org', 'int', 'earth', 'edu', 'io', 'group', 'tools', 'net', 'science', 'sg', 'tc', 'cymru', 'ag', 'asia', 'ai', 'info', 'scot', 'aq', 'rw', 'bb', 'mt', 'lk', 'ug', 'ng'],
+    'EN' : ['au', 'us', 'uk', 'gov', 'za', 'ca', 'ie', 'nz', 'zw', 'durban', 'eu', 'in', 'tt', 'tz', 'com', 'city', 'int', 'org', 'int', 'earth', 'edu', 'io', 'group', 'tools', 'net', 'science', 'sg', 'tc', 'cymru', 'ag', 'asia', 'ai', 'info', 'scot', 'aq', 'rw', 'bb', 'mt', 'lk', 'ug', 'ng', 'zm'],
     'MN' : ['mn'],
     'LT' : ['lt'],
     'ES' : ['es', 'ar', 'sv', 'mx', 'cl', 'gt', 'hn', 'ec', 'cr', 'pe', 'cat', 'py', 'bo', 'uy', 'gal', 'eus', 'do', 'ad'],

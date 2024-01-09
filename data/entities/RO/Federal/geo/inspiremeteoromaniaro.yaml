@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+endpoints:
+- type: geonetwork:query
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://inspire.meteoromania.ro/geonetwork/srv/api/records
+- type: openapi
+  url: https://inspire.meteoromania.ro/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://inspire.meteoromania.ro/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+export_standard: Geonetwork API
+id: inspiremeteoromaniaro
+langs:
+- id: RO
+  name: Romanian
+link: https://inspire.meteoromania.ro/geonetwork
+name: ANM INSPIRE Catalogue
+owner:
+  link: https://www.meteoromania.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+  name: Administraţia Naţională de Meteorologie
+  type: Central government
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00001339

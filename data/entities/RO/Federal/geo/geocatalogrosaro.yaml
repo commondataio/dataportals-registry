@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+endpoints:
+- type: geonetwork:query
+  url: http://geocatalog.rosa.ro/geonetwork/srv/eng/q
+- type: openapi
+  url: http://geocatalog.rosa.ro/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://geocatalog.rosa.ro/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geocatalog.rosa.ro/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://geocatalog.rosa.ro/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+export_standard: Geonetwork API
+id: geocatalogrosaro
+langs:
+- id: RO
+  name: Romanian
+link: http://geocatalog.rosa.ro/geonetwork
+name: Romanian space agency geocatalog
+owner:
+  link: https://www.rosa.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 1
+  name: Romanian space agency
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics: []
+uid: cdi00001337

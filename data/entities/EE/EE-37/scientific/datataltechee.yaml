@@ -19,8 +19,6 @@ coverage:
       id: EE-37
       name: Harjumaa
 endpoints:
-- type: inveniordmapi
-  url: https://data.taltech.ee/api
 - type: inveniordmapi:records
   url: https://data.taltech.ee/api/records
 export_standard: InvenioRDM
@@ -48,6 +46,7 @@ owner:
   type: Academy
 properties:
   has_doi: true
+  invenio-filters: dataset,other
   transferable_topics: true
 rights:
   license_id: null
