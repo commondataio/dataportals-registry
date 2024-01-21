@@ -19,6 +19,10 @@ id: nspdrosreestrgovru
 langs:
 - id: RU
   name: Russian
+endpoints:
+- type: wfs200
+  url: https://nspd.rosreestr.gov.ru/api/wfs/v2?SERVICE=WFS&REQUEST=GetCapabilities
+  version: "2.0.0"
 link: https://nspd.rosreestr.gov.ru/geoserver
 name: Портал пространственных данных «Национальная система пространственных данных»
 owner:
@@ -41,8 +45,8 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: custom
+  name: Custom software
 status: active
 tags:
 - geospatial
