@@ -4,6 +4,7 @@
 import logging
 import sys
 import typer
+from typing_extensions import Annotated
 import requests
 import datetime
 import yaml
@@ -109,7 +110,7 @@ INVENIORDM_URLMAP = [
     {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
 ]
 
-INVENIO_URLMAP = [
+]INVENIO_URLMAP = [
     {'id' : 'inveniordmapi', 'url' : '/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
 ]
@@ -357,7 +358,7 @@ def api_identifier(website_url, software_id, verify_json=False):
 
 
 @app.command()
-def detect_software(software, dryrun=False, replace_endpoints=True, mode='entries'):
+def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
     """Enrich data catalogs with API endpoints by software"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -392,7 +393,7 @@ def detect_software(software, dryrun=False, replace_endpoints=True, mode='entrie
                     print('- no endpoints, not updated')
 
 @app.command()
-def detect_single(uniqid, dryrun=False, replace_endpoints=True, mode='entries'):
+def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--replace")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
     """Enrich single data catalog with API endpoints"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -503,7 +504,7 @@ def detect_ckan(dryrun=False, replace_endpoints=True, mode='entries'):
 
 
 @app.command()
-def detect_all(status='undetected', replace_endpoints=True, mode='entries'):
+def detect_all(status='undetected', replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
     """Detect all known API endpoints"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR

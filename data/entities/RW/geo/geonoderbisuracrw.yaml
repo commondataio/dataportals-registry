@@ -1,6 +1,7 @@
 access_mode:
 - closed
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,7 +15,19 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
-endpoints: []
+endpoints:
+- type: wms111
+  url: http://geonode.rbis.ur.ac.rw/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://geonode.rbis.ur.ac.rw/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://geonode.rbis.ur.ac.rw/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: http://geonode.rbis.ur.ac.rw/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: geonoderbisuracrw
 langs:
 - id: EN
