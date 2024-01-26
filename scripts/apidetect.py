@@ -110,7 +110,7 @@ INVENIORDM_URLMAP = [
     {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
 ]
 
-]INVENIO_URLMAP = [
+INVENIO_URLMAP = [
     {'id' : 'inveniordmapi', 'url' : '/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
 ]
@@ -157,6 +157,10 @@ GEOSERVER_URLMAP = [
     {'id' : 'wms-c111', 'url' : '/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
     {'id' : 'wmts100', 'url' : '/gwc/service/wmts?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
     {'id' : 'csw202', 'url' : '/csw?service=csw&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},    
+    {'id' : 'ogc:tiles', 'url' : '/ogc/tiles/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:images', 'url' : '/ogc/images/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:maps', 'url' : '/ogc/maps/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:features', 'url' : '/ogc/features/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
 ]
 
 MAPPROXY_URLMAP = [
@@ -393,7 +397,7 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
                     print('- no endpoints, not updated')
 
 @app.command()
-def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--replace")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
+def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
     """Enrich single data catalog with API endpoints"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
