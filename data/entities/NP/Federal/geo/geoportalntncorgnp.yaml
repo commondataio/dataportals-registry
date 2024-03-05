@@ -1,0 +1,74 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+    macroregion:
+      id: '034'
+      name: Southern Asia
+endpoints:
+- type: geonode:layers
+  url: http://geoportal.ntnc.org.np/api/layers/
+- type: geonode:documents
+  url: http://geoportal.ntnc.org.np/api/documents/
+- type: geonode:dcatus11
+  url: http://geoportal.ntnc.org.np/data.json
+- type: wms111
+  url: http://geoportal.ntnc.org.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://geoportal.ntnc.org.np/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://geoportal.ntnc.org.np/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://geoportal.ntnc.org.np/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wmts100
+  url: http://geoportal.ntnc.org.np/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://geoportal.ntnc.org.np/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geoportalntncorgnp
+langs:
+- id: EN
+  name: English
+link: http://geoportal.ntnc.org.np
+name: NTNC geoportal
+owner:
+  link: http://ntnc.org.np
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: National trust for nature conservation Nepal
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+topics: []
+uid: cdi00001213

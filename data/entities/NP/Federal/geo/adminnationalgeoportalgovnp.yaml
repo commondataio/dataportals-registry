@@ -1,0 +1,75 @@
+access_mode:
+- open
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+    macroregion:
+      id: '034'
+      name: Southern Asia
+endpoints:
+- type: geonode:layers
+  url: https://admin.nationalgeoportal.gov.np/api/layers/
+- type: geonode:dcatus11
+  url: https://admin.nationalgeoportal.gov.np/data.json
+- type: wms111
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://admin.nationalgeoportal.gov.np/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://admin.nationalgeoportal.gov.np/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://admin.nationalgeoportal.gov.np/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: adminnationalgeoportalgovnp
+langs:
+- id: EN
+  name: English
+link: https://admin.nationalgeoportal.gov.np
+name: National Spatial Data Center Geoportal
+owner:
+  link: http://nationalgeoportal.gov.np
+  location:
+    country:
+      id: NP
+      name: Nepal
+    level: 1
+  name: Ministry of Land Management, Cooperatives and Poverty of Nepal
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+topics: []
+uid: cdi00001212
