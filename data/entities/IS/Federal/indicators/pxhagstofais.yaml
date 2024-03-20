@@ -1,36 +1,37 @@
 access_mode:
 - open
-api: false
 api_status: uncertain
 catalog_type: Indicators catalog
 content_types:
-- dataset
+- indicator
 coverage:
 - location:
     country:
-      id: EE
-      name: Estonia
+      id: IS
+      name: Iceland
     level: 1
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
-id: pxwebtaiee
+id: pxhagstofais
 langs:
-- id: ET
-  name: Estonian
-link: https://pxweb.tai.ee/PXWeb2015
-name: pxweb.tai.ee
+- id: EN
+  name: English
+endpoints:
+- id: pxwebapi
+  url: https://px.hagstofa.is/pxen/api/v1/en/
+  version: '1'
+link: https://px.hagstofa.is/pxen
+name: Statistics Iceland pxweb
 owner:
-  link: null
+  link: https://statice.is
   location:
     country:
-      id: EE
-      name: Estonia
+      id: IS
+      name: Iceland
     level: 1
-  name: ''
-  type: Unknown
+  name: 'Statistics Iceland'
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -43,7 +44,9 @@ rights:
 software:
   id: pxweb
   name: PxWeb
-status: scheduled
-tags: []
+status: active
+tags:
+- statistics
+- government
 topics: []
-uid: temp00003540
+uid: cdi00000939
