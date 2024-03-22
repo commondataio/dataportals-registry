@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BT
+      name: Bhutan
+    level: 1
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Geo-enabled nation with par excellence land governance
+endpoints:
+- type: geonode:datasets
+  url: https://cgi-gn.nlcs.gov.bt/api/datasets/
+- type: geonode:documents
+  url: https://cgi-gn.nlcs.gov.bt/api/documents/
+- type: wms111
+  url: https://cgi-gn.nlcs.gov.bt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://cgi-gn.nlcs.gov.bt/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://cgi-gn.nlcs.gov.bt/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://cgi-gn.nlcs.gov.bt/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://cgi-gn.nlcs.gov.bt/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://cgi-gn.nlcs.gov.bt/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: cgignnlcsgovbt
+langs:
+- id: DZ
+  name: Dzongkha
+link: https://cgi-gn.nlcs.gov.bt
+name: NLCS Geospatial Data Hub
+owner:
+  link: https://web.nlcs.gov.bt/
+  location:
+    country:
+      id: BT
+      name: Bhutan
+    level: 1
+  name: National Land Comission (Bhutan)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: Geonode
+status: active
+tags: []
+topics: []
+uid: cdi00004464

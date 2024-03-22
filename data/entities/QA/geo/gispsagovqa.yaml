@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: QA
+      name: Qatar
+    level: 1
+    macroregion:
+      id: '145'
+      name: Western Asia
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.psa.gov.qa/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.psa.gov.qa/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.psa.gov.qa/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.psa.gov.qa/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.psa.gov.qa/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.psa.gov.qa/server/rest/services?f=kmz
+id: gispsagovqa
+langs:
+- id: AR
+  name: Arabic
+link: https://gis.psa.gov.qa/server/rest/services
+name: The Planning and Statistics Authority of Qatar geoserver
+owner:
+  link: https://www.psa.gov.qa
+  location:
+    country:
+      id: QA
+      name: Qatar
+    level: 1
+  name: The Planning and Statistics Authority of Qatar
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004472
