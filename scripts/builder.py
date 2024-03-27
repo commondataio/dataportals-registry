@@ -523,8 +523,8 @@ METRICS = {'has_owner_name' : 'Has owner organization name',
 'has_tags' : 'Has tags',
 'has_topics' : "Has topics",
 'has_endpoints' : "Has endpoints",
-'valid_title' : 'TItle is not empty or temporary',
-'draft_records' : "Temporary records",
+'valid_title' : 'Title is not empty or temporary',
+'perm_records' : "Permanent records",
 }
 
 @app.command()
@@ -553,8 +553,8 @@ def quality_control(mode='full'):
             metrics['has_topics'][3] += 1
         if 'endpoints' in d.keys() and len(d['endpoints']) > 0:
             metrics['has_endpoints'][3] += 1
-        if 'status' in d.keys() and d['status'] == 'scheduled':
-            metrics['draft_records'][3] += 1
+        if 'status' in d.keys() and d['status'] == 'active':
+            metrics['perm_records'][3] += 1
         if 'catalog_type' in d.keys() and d['catalog_type'] not in [None, 'Unknown']:
             metrics['has_catalog_type'][3] += 1
         if 'description' in d.keys() and d['description'] != 'This is a temporary record with some data collected but it should be updated befor adding to the index':
@@ -576,7 +576,7 @@ def quality_control(mode='full'):
                 if 'location' in d['owner'].keys() and d['owner']['location'] is not None and 'subregion' in d['owner']['location'].keys(): 
                     metrics['has_subregion'][3] += 1
 
-        for key in ['has_tags', 'has_langs', 'has_topics', 'has_endpoints', 'has_description', 'draft_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country', 'has_catalog_type', 'has_coverage', 'has_macroregion']:
+        for key in ['has_tags', 'has_langs', 'has_topics', 'has_endpoints', 'has_description', 'perm_records', 'has_owner_link', 'has_owner_type', 'has_owner_name', 'valid_title', 'has_country', 'has_catalog_type', 'has_coverage', 'has_macroregion']:
             metrics[key][2] += 1
 #    for metric in metrics.values(): 
 #        print('%s, total %d, found %d, share %0.2f' % (metric[1], metric[2], metric[3], metric[3]*100.0 / metric[2] if metric[2] > 0 else 0))
