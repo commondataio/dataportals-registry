@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
+    macroregion:
+      id: '145'
+      name: Western Asia
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.sgs.gov.sa/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.sgs.gov.sa/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.sgs.gov.sa/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.sgs.gov.sa/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.sgs.gov.sa/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.sgs.gov.sa/arcgis/rest/services?f=kmz
+id: gissgsgovsa
+langs:
+- id: AR
+  name: Arabic
+link: https://gis.sgs.gov.sa/arcgis/rest/services
+name: KAUST GIS platform
+owner:
+  link: https://www.sgs.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 1
+  name: Saudi Geological Survey
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004575

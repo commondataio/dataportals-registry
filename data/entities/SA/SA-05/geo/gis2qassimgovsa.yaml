@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 2
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: SA-05
+      name: Qassim
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis2.qassim.gov.sa:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis2.qassim.gov.sa:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=kmz
+id: gis2qassimgovsa
+langs:
+- id: AR
+  name: Arabic
+link: https://gis2.qassim.gov.sa:6443/arcgis/rest/services
+name: Qassim Municipality ArcGIS server
+owner:
+  link: https://www.qassim.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 2
+    subregion:
+      id: SA-05
+      name: Qassim
+  name: Qassim Municipality
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004580

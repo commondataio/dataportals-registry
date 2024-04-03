@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 1
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+endpoints:
+- type: geonetwork:query
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/api/records
+- type: openapi
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: ngdckenyacataloguebgsacuk
+langs:
+- id: EN
+  name: English
+link: https://ngdckenyacatalogue.bgs.ac.uk/geonetwork
+name: ngdckenyacatalogue.bgs.ac.uk
+owner:
+  link: https://www.petroleumandmining.go.ke
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 1
+  name: Kenya Ministry of Petroleum and Mining
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: []
+topics: []
+uid: cdi00004571

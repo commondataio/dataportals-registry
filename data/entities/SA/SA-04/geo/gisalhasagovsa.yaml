@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 2
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: SA-04
+      name: Eastern province (Saudi)
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.alhasa.gov.sa/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.alhasa.gov.sa/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.alhasa.gov.sa/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.alhasa.gov.sa/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.alhasa.gov.sa/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.alhasa.gov.sa/server/rest/services?f=kmz
+id: gisalhasagovsa
+langs:
+- id: AR
+  name: Arabic
+link: https://gis.alhasa.gov.sa/server/rest/services
+name: Qassim Municipality ArcGIS server
+owner:
+  link: https://www.alhasa.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 2
+    subregion:
+      id: SA-04
+      name: Eastern province (Saudi)
+  name: Al-Ahsa Municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004579

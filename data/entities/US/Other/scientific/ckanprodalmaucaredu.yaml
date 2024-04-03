@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,16 @@ coverage:
       name: Northern America
 description: DASH Search allows users to find, browse, and access digital assets created
   and published by NCAR and UCAR Community Programs.
+endpoints:
+- type: ckan
+  url: https://ckanprod-alma.ucar.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckanprod-alma.ucar.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckanprod-alma.ucar.edu/api/3/action/package_list
+  version: '3'
 id: ckanprodalmaucaredu
 langs:
 - id: EN

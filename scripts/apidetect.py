@@ -107,12 +107,14 @@ DATAVERSE_URLMAP = [
 
 INVENIORDM_URLMAP = [
     {'id' : 'inveniordmapi', 'url' : '/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
+    {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'oaipmh20', 'url' : '/oai2d', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'}
 ]
 
 INVENIO_URLMAP = [
     {'id' : 'inveniordmapi', 'url' : '/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None} 
+    {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'oaipmh20', 'url' : '/oai2d', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'}
 ]
 
 
@@ -130,6 +132,10 @@ DSPACE_URLMAP = [
     {'id' : 'rss', 'url' : '/feed/rss_2.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'atom', 'url' : '/feed/atom_1.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'}      
 ]
+ESPLORO_URLMAP = [
+    {'id' : 'esploro:search', 'display_url' : '/esplorows/rest/research/simpleSearch', 'url' : '/esplorows/rest/research/simpleSearch?_wadl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None} 
+]
+
 
 ELSVIERPURE_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
@@ -275,7 +281,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'esrigeo' : ESRIGEO_URLMAP, 'geoblacklight': BLACKLIGHT_URLMAP,
 'pygeoapi': PYGEOAPI_URLMAP, 'thredds' : THREDDS_URLMAP, 'erddap' : ERDDAP_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
-'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP
+'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+    macroregion:
+      id: '154'
+      name: Northern Europe
+endpoints:
+- type: arcgis:rest:info
+  url: http://data.geus.dk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://data.geus.dk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://data.geus.dk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://data.geus.dk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://data.geus.dk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://data.geus.dk/arcgis/rest/services?f=kmz
+id: datageusdk
+langs:
+- id: DA
+  name: Danish
+link: http://data.geus.dk/arcgis/rest/services
+name: GEUS ArcGIS Server
+owner:
+  link: https://www.geus.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 1
+  name: Geological Survey of Denmark and Greenland – GEUS
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004569

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -22,6 +22,16 @@ description: One Data Indonesia (SDI) is a government data management policy tha
   and regional agencies. This policy is contained in Presidential Regulation no. 39
   of 2019 concerning One Indonesian Data. other related agency data can end up on
   the One Data Indonesia Portal data.go.id. Through SDI, all government data and
+endpoints:
+- type: ckan
+  url: https://data.kaltaraprov.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.kaltaraprov.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.kaltaraprov.go.id/api/3/action/package_list
+  version: '3'
 id: datakaltaraprovgoid
 langs:
 - id: ID
