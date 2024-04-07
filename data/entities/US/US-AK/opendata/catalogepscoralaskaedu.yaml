@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AK
+      name: Alaska
+endpoints:
+- type: ckan
+  url: https://catalog.epscor.alaska.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.epscor.alaska.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.epscor.alaska.edu/api/3/action/package_list
+  version: '3'
+export_standard: CKAN API
+id: catalogepscoralaskaedu
+langs:
+- id: EN
+  name: English
+link: https://catalog.epscor.alaska.edu
+name: Alaska NSF EPSCoR
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AK
+      name: Alaska
+  name: University of Alaska
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+uid: cdi00004614
