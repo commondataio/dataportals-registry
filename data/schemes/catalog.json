@@ -209,8 +209,8 @@
       },
       "name": {
         "type": "string",
-        "empty" : false,
-        "required": true
+        "empty" : true,
+        "required": false
       },      
       "link": {
         "type": "string",
@@ -229,6 +229,12 @@
     "empty" : false,
     "required": false,
     "schema" : {
+      "invenio-filters": {
+        "type": "string",
+        "empty" : false,
+        "required": false
+      },      
+
       "transferable_topics": {
         "type": "boolean",
         "empty" : false,
