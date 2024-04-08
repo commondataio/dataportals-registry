@@ -264,6 +264,15 @@ MYCORE_URLMAP = [
 ]
 
 
+IFREMER_URLMAP = [
+    {'id' : 'ifremer:search',  'url' : '/api/full-search-response', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},    
+    {'id' : 'oaipmh20', 'url' : '/oai/OAIHandler?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'}
+]
+
+
+
+
+
 ESRIGEO_URLMAP = [
     {'id' : 'esrigeo:geoportal', 'url' : '/rest/geoportal', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'esrigeo:metadata:search', 'url' : '/rest/metadata/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -287,7 +296,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'esrigeo' : ESRIGEO_URLMAP, 'geoblacklight': BLACKLIGHT_URLMAP,
 'pygeoapi': PYGEOAPI_URLMAP, 'thredds' : THREDDS_URLMAP, 'erddap' : ERDDAP_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
-'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP
+'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
+'ifremercatalog' : IFREMER_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
