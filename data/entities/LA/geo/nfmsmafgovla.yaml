@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LA
+      name: Laos
+    level: 1
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+endpoints:
+- type: arcgis:rest:info
+  url: https://nfms.maf.gov.la/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://nfms.maf.gov.la/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://nfms.maf.gov.la/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://nfms.maf.gov.la/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://nfms.maf.gov.la/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://nfms.maf.gov.la/arcgis/rest/services?f=kmz
+id: nfmsmafgovla
+langs:
+- id: LO
+  name: Lao
+link: https://nfms.maf.gov.la/arcgis/rest/services
+name: Laos - National Forest Monitoring System
+owner:
+  link: https://www.maf.gov.la
+  location:
+    country:
+      id: LA
+      name: Laos
+    level: 1
+  name: Ministry of Agriculture and Forestry of Laos
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004672

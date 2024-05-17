@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
+description: Atlantic Ecosystems Assessment, Forecasting & Sustainability
+endpoints:
+- type: geonode:documents
+  url: https://atlanteco-geonode.eu/api/documents/
+- type: wms111
+  url: https://atlanteco-geonode.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://atlanteco-geonode.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://atlanteco-geonode.eu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://atlanteco-geonode.eu/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://atlanteco-geonode.eu/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://atlanteco-geonode.eu/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://atlanteco-geonode.eu/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: atlantecogeonodeeu
+langs:
+- id: EN
+  name: English
+link: https://atlanteco-geonode.eu
+name: AtlanticECO GeoNode
+owner:
+  link: https://www.atlanteco.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 1
+  name: AtlanticECO project
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004664

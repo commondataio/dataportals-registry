@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 1
+description: Open data to further your understanding of disaster risk
+endpoints:
+- type: geonode:layers
+  url: https://www.geonode-gfdrrlab.org/api/layers/
+- type: geonode:documents
+  url: https://www.geonode-gfdrrlab.org/api/documents/
+- type: wms111
+  url: https://www.geonode-gfdrrlab.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://www.geonode-gfdrrlab.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://www.geonode-gfdrrlab.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://www.geonode-gfdrrlab.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://www.geonode-gfdrrlab.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://www.geonode-gfdrrlab.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: wwwgeonodegfdrrlaborg
+langs:
+- id: EN
+  name: English
+link: https://www.geonode-gfdrrlab.org/
+name: GFDRR GeoNode
+owner:
+  link: https://www.gfdrr.org/en
+  location:
+    country:
+      id: US
+      name: United States
+    level: 1
+  name: Global Facility for Disaster Reduction and Recovery (GFDRR)
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004716

@@ -106,7 +106,6 @@ DATAVERSE_URLMAP = [
 ]
 
 
-
 INVENIORDM_URLMAP = [
     {'id' : 'inveniordmapi', 'url' : '/api', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'inveniordmapi:records', 'url' : '/api/records', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -238,7 +237,6 @@ ARCGISSERVER_URLMAP = [
     {'id' : 'arcgis:geositemap',  'url' : '/rest/services?f=geositemap', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'arcgis:kmz',  'url' : '/rest/services?f=kmz', 'expected_mime' : KMZ_MIMETYPES, 'is_json' : False, 'version': None},
 
-
 ]
 
 OSKARI_URLMAP = [
@@ -270,9 +268,6 @@ IFREMER_URLMAP = [
 ]
 
 
-
-
-
 ESRIGEO_URLMAP = [
     {'id' : 'esrigeo:geoportal', 'url' : '/rest/geoportal', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'esrigeo:metadata:search', 'url' : '/rest/metadata/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -284,6 +279,10 @@ ESRIGEO_URLMAP = [
     {'id' : 'esrigeo:csv', 'url' : '/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : CSV_MIMETYPES, 'is_json' : False, 'version': None},      
     {'id' : 'esrigeo:kml', 'url' : '/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D', 'expected_mime' : KML_MIMETYPES, 'is_json' : False, 'version': None},      
 ]
+
+JKAN_URLMAP = [
+    {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+ ]
 
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
@@ -297,7 +296,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'pygeoapi': PYGEOAPI_URLMAP, 'thredds' : THREDDS_URLMAP, 'erddap' : ERDDAP_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
-'ifremercatalog' : IFREMER_URLMAP
+'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -326,7 +325,8 @@ def erddap_url_cleanup_func(url):
     return url.split('/index.html')[0]
 
 
-URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func, 'thredds' : thredds_url_cleanup_func, 'erddap' : erddap_url_cleanup_func}
+URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func, 
+                  'thredds' : thredds_url_cleanup_func, 'erddap' : erddap_url_cleanup_func}
 
 def api_identifier(website_url, software_id, verify_json=False):
     url_map = CATALOGS_URLMAP[software_id]

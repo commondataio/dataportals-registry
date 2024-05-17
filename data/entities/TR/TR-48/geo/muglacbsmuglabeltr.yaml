@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 2
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-48
+      name: Mugla Province
+description: Mugla Geoinformation System ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://muglacbs.mugla.bel.tr/cbs/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://muglacbs.mugla.bel.tr/cbs/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://muglacbs.mugla.bel.tr/cbs/services?wsdl
+- type: arcgis:sitemap
+  url: https://muglacbs.mugla.bel.tr/cbs/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://muglacbs.mugla.bel.tr/cbs/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://muglacbs.mugla.bel.tr/cbs/rest/services?f=kmz
+id: muglacbsmuglabeltr
+langs:
+- id: TR
+  name: Turkish
+link: https://muglacbs.mugla.bel.tr/cbs/rest/services
+name: Mugla ArcGIS Server
+owner:
+  link: https://www.mugla.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 1
+  name: Mugla Province
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004710

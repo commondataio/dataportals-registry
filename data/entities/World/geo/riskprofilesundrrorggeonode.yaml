@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 1
+description: This data catalog has been developed as part of the EU-ACP Programme
+  “Building Disaster Resilience to Natural Hazards in Sub-Saharan African Regions,
+  Countries and Communities”. This data catalog has been developed as part of the
+  EU-ACP Programme “Building Disaster Resilience to Natural Hazards in Sub-Saharan
+  African Regions, Countries and Communities”.
+endpoints:
+- type: geonode:documents
+  url: http://riskprofilesundrr.org/api/documents/
+- type: wms111
+  url: http://riskprofilesundrr.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://riskprofilesundrr.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://riskprofilesundrr.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://riskprofilesundrr.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://riskprofilesundrr.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: http://riskprofilesundrr.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://riskprofilesundrr.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: riskprofilesundrrorggeonode
+langs:
+- id: EN
+  name: English
+link: http://riskprofilesundrr.org
+name: Africa disaster risk profiles geonode
+owner:
+  link: https://www.undrr.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 1
+  name: UNDRR
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004720

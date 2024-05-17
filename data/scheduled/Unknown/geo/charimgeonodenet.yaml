@@ -14,12 +14,22 @@ coverage:
     level: 1
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: csw202
+  url: http://charim-geonode.net/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://charim-geonode.net/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://charim-geonode.net/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: charimgeonodenet
 langs:
 - id: EN
   name: English
-link: http://charim-geonode.net:80/geoserver
-name: charim-geonode.net:80
+link: http://charim-geonode.net
+name: charim-geonode.net
 owner:
   link: null
   location:
@@ -39,8 +49,8 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: geonode
+  name: GeoNode
 status: scheduled
 tags: []
 topics: []

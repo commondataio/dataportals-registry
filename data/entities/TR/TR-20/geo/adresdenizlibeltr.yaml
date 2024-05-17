@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TR
+      name: Turkey
+    level: 2
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: TR-20
+      name: Denizli province
+description: Denizli metropolitan municipality ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://adres.denizli.bel.tr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://adres.denizli.bel.tr/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://adres.denizli.bel.tr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://adres.denizli.bel.tr/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://adres.denizli.bel.tr/arcgis/rest/services?f=kmz
+id: adresdenizlibeltr
+langs:
+- id: TR
+  name: Turkish
+link: https://adres.denizli.bel.tr/arcgis/rest/services
+name: Denizli metropolitan municipality ArcGIS server
+owner:
+  link: https://denizli.bel.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 1
+  name: Denizli metropolitan municipality
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004700
