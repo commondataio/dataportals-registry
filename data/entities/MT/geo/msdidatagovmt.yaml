@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,22 +18,35 @@ coverage:
 endpoints:
 - type: geonetwork:query
   url: https://msdi.data.gov.mt/geonetwork/srv/eng/q
-- type: geonetwork
-  url: https://msdi.data.gov.mt/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://msdi.data.gov.mt/geonetwork/srv/api/records
+- type: openapi
+  url: https://msdi.data.gov.mt/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://msdi.data.gov.mt/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://msdi.data.gov.mt/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://msdi.data.gov.mt/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 export_standard: Geonetwork API
 id: msdidatagovmt
 langs:
 - id: EN
   name: English
 link: https://msdi.data.gov.mt/geonetwork
-name: Malta Geoportal
+name: Malta INSPIRE Geoportal
 owner:
+  link: https://www.pa.org.mt
   location:
     country:
       id: MT
       name: Malta
     level: 1
-  name: ''
+  name: Malta Planning Authority
   type: Central government
 properties:
   has_doi: true

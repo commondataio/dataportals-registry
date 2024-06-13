@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AK
+      name: Alaska
+description: null
+endpoints:
+- type: geonetwork:query
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/api/records
+- type: openapi
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalog.snap.uaf.edu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: catalogsnapuafedu
+langs:
+- id: EN
+  name: English
+link: https://catalog.snap.uaf.edu/geonetwork/srv/eng/catalog.search
+name: SNAP Geonetwork
+owner:
+  link: https://www.uaf.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 2
+    subregion:
+      id: US-AK
+      name: Alaska
+  name: University of Alaska Fairbanks
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: []
+topics: []
+uid: cdi00004776

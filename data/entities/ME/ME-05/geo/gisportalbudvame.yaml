@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ME
+      name: Montenegro
+    level: 2
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ME-05
+      name: Budva
+description: Geoportal of the Budva Community - ArGIS
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.budva.me/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.budva.me/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.budva.me/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.budva.me/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.budva.me/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisportal.budva.me/server/rest/services?f=kmz
+id: gisportalbudvame
+langs:
+- id: SR
+  name: Serbian
+link: https://gisportal.budva.me/server/rest/services/
+name: Geoportal Budva (ArcGIS)
+owner:
+  link: https://www.budva.me
+  location:
+    country:
+      id: ME
+      name: Montenegro
+    level: 2
+    subregion:
+      id: ME-05
+      name: Budva
+  name: Budva city government
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004764

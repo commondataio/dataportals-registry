@@ -24,6 +24,13 @@ from urllib3.exceptions import InsecureRequestWarning#, ConnectionError
 # Suppress only the single warning from urllib3 needed.
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
+logging.basicConfig(
+            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            level=logging.DEBUG,
+)
+root = logging.getLogger()
+root.setLevel(logging.INFO)
+
 
 ENTRIES_DIR = '../data/entities'
 SCHEDULED_DIR = '../data/scheduled'
@@ -425,6 +432,7 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
         root_dir = ENTRIES_DIR
     else:
         root_dir = SCHEDULED_DIR
+    found = False        
     for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
@@ -438,7 +446,9 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
                 if k in record.keys():
                     idkeys.append(record[k])
             if uniqid not in idkeys:
+       
                 continue
+            found = True
             if record['software']['id']  in CATALOGS_URLMAP.keys():
                 print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
                 if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
@@ -456,6 +466,10 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
                     print('- updated profile')
                 else:
                     print('- no endpoints, not updated')
+            else:
+                print('There is no rules for software: %s' % (record['software']['id']))
+    if not found:
+        print('Data catalog with id %s not found' %(uniqid))                
 
 @app.command()
 def detect_country(country, dryrun=False, replace_endpoints=True, mode='entries'):
