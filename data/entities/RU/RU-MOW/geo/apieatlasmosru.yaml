@@ -14,15 +14,24 @@ coverage:
     level: 2
     macroregion:
       id: '151'
-      name: 'Eastern Europe'
+      name: Eastern Europe
     subregion:
       id: RU-MOW
       name: Moskva
 endpoints:
+- type: arcgis:rest:info
+  url: http://apieatlas.mos.ru/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: http://apieatlas.mos.ru/arcgis/rest/services?f=pjson
-export_standard: ArcGIS REST Services
-id: agoracleasutkru
+- type: arcgis:soap
+  url: http://apieatlas.mos.ru/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://apieatlas.mos.ru/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://apieatlas.mos.ru/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://apieatlas.mos.ru/arcgis/rest/services?f=kmz
+id: apietlasmosru
 langs:
 - id: RU
   name: Russian

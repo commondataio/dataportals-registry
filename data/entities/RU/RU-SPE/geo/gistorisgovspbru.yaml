@@ -19,14 +19,21 @@ coverage:
       id: RU-SPE
       name: Sankt-Peterburg
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.toris.gov.spb.ru/arccod1031/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gis.toris.gov.spb.ru/arccod1031/rest/services?f=pjson
-export_standard: ArcGIS REST Services
+- type: arcgis:sitemap
+  url: https://gis.toris.gov.spb.ru/arccod1031/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.toris.gov.spb.ru/arccod1031/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.toris.gov.spb.ru/arccod1031/rest/services?f=kmz
 id: gistorisgovspbru
 langs:
 - id: RU
   name: Russian
-link: https://gis.toris.gov.spb.ru/
+link: https://gis.toris.gov.spb.ru/arccod1031/rest/services
 name: Sankt-Peterbug geoportal GeoAS
 owner:
   link: https://kis.gov.spb.ru

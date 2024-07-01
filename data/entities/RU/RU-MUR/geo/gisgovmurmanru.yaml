@@ -17,16 +17,25 @@ coverage:
       name: 'Eastern Europe '
     subregion:
       id: RU-MUR
-      name: Murmanskaya oblast'
+      name: Murmanskaya oblast
 endpoints:
+- type: arcgis:rest:info
+  url: https://gisn.kgilc.ru:6443/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gisn.kgilc.ru:6443/arcgis/rest/services?f=pjson
-export_standard: ArcGIS REST Services
+- type: arcgis:soap
+  url: https://gisn.kgilc.ru:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisn.kgilc.ru:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisn.kgilc.ru:6443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisn.kgilc.ru:6443/arcgis/rest/services?f=kmz
 id: gisgovmurmanru
 langs:
 - id: RU
   name: Russian
-link: http://gis.gov-murman.ru/
+link: https://gisn.kgilc.ru:6443/arcgis/rest/services
 name: Геоинформационный портал Мурманской области
 owner:
   location:
