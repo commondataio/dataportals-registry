@@ -148,7 +148,6 @@ ESPLORO_URLMAP = [
     {'id' : 'esploro:search', 'display_url' : '/esplorows/rest/research/simpleSearch', 'url' : '/esplorows/rest/research/simpleSearch?_wadl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None} 
 ]
 
-
 ELSVIERPURE_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/en/datasets/?search=&isCopyPasteSearch=false&format=rss', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
@@ -210,6 +209,9 @@ ALEPH_URLMAP = [
     {'id' : 'aleph:collections', 'url' : '/api/2/collections', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '2.0'}
 ]
 
+QWC2_URLMAP = [
+    {'id' : 'qwc2:layers', 'url' : '/themes.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+]
 
 PYGEOAPI_URLMAP = [
     {'id' : 'pygeoapi:openapi', 'url' : '/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
@@ -303,7 +305,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'pygeoapi': PYGEOAPI_URLMAP, 'thredds' : THREDDS_URLMAP, 'erddap' : ERDDAP_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
-'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP
+'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
+'qwc2': QWC2_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-LU
+      name: Luzern
+description: Stadt Luzern geodata ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.stadtluzern.ch/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.stadtluzern.ch/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.stadtluzern.ch/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.stadtluzern.ch/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.stadtluzern.ch/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://map.stadtluzern.ch/server/rest/services?f=kmz
+id: mapstadtluzernch
+langs:
+- id: DE
+  name: German
+link: https://map.stadtluzern.ch/server/services
+name: Stadt Luzern City Map
+owner:
+  link: https://www.stadtluzern.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    subregion:
+      id: CH-LU
+      name: Luzern
+  name: Stadt Luzern
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004790

@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-GE
+      name: Geneva
+description: Geneva geoportal ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://ge.ch/sitgags1/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ge.ch/sitgags1/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ge.ch/sitgags1/services?wsdl
+- type: arcgis:sitemap
+  url: https://ge.ch/sitgags1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ge.ch/sitgags1/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ge.ch/sitgags1/rest/services?f=kmz
+id: gech
+langs:
+- id: DE
+  name: German
+link: https://ge.ch/sitgags1/rest/services
+name: ge.ch
+owner:
+  link: https://www.ge.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    subregion:
+      id: CH-GE
+      name: Geneva
+  name: Kanton Geneva
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004787

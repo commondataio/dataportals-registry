@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Portail cartographique du canton de Fribourg ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: http://map.geo.fr.ch/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://map.geo.fr.ch/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://map.geo.fr.ch/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://map.geo.fr.ch/arcgis/rest/services?f=sitemap
+- type: arcgis:kmz
+  url: http://map.geo.fr.ch/arcgis/rest/services?f=kmz
+id: mapgeofrch
+langs:
+- id: FR
+  name: French
+link: http://map.geo.fr.ch/arcgis/rest/services
+name: Portail cartographique du canton de Fribourg
+owner:
+  link: https://www.fr.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Canton de Fribourg
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004786

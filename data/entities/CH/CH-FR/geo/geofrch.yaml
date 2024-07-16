@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.fr.ch/ags/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.fr.ch/ags/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.fr.ch/ags/services?wsdl
+- type: arcgis:sitemap
+  url: https://geo.fr.ch/ags/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geo.fr.ch/ags/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geo.fr.ch/ags/rest/services?f=kmz
+id: Géoportail de l'Etat de Fribourg
+langs:
+- id: FR
+  name: French
+link: https://geo.fr.ch/ags/services
+owner:
+  link: https://www.fr.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: Canton de Fribourg
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004785

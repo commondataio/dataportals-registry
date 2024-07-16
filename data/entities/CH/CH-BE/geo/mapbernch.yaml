@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-BE
+      name: Bern
+description: Stadt Bern ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.bern.ch/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.bern.ch/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.bern.ch/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.bern.ch/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.bern.ch/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://map.bern.ch/arcgis/rest/services?f=kmz
+id: mapbernch
+langs:
+- id: DE
+  name: German
+link: https://map.bern.ch/arcgis/rest/services
+name: Stadt Bern ArcGIS server
+owner:
+  link: https://www.bern.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    subregion:
+      id: CH-BE
+      name: Bern
+  name: Stadt Bern
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004782

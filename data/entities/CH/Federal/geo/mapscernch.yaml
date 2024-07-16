@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: MapCERN ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.cern.ch/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.cern.ch/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.cern.ch/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.cern.ch/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.cern.ch/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.cern.ch/arcgis/rest/services?f=kmz
+id: mapscernch
+langs:
+- id: DE
+  name: German
+link: https://maps.cern.ch/arcgis/rest/services
+name: MapCERN ArcGIS server
+owner:
+  link: https://www.cern.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 1
+  name: CERN
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004803

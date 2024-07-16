@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-ZH
+      name: Zurich
+description: Stadt Zuerich stadtplan
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://www.gis.stadt-zuerich.ch/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://www.gis.stadt-zuerich.ch/arcgis/rest/services?f=kmz
+id: wwwgisstadtzuerichch
+langs:
+- id: DE
+  name: German
+link: http://www.gis.stadt-zuerich.ch/arcgis/rest/services
+name: Stadt Zuerich stadtplan
+owner:
+  link: https://www.stadt-zuerich.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 2
+    link: https://www.stadt-zuerich.ch
+    subregion:
+      id: CH-ZH
+      name: Zurich
+  name: Stadt Zuerich
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004798
