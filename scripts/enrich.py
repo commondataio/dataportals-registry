@@ -466,8 +466,44 @@ def enrich_identifiers(filepath, idtype, dryrun=False):
                 f = open(filepath, 'w', encoding='utf8')
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
-            print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
+
+REGIONS_DATA_THEME = {'id' : 'REGI', 'name' : 'Regions and cities', 'type' : 'eudatatheme'}
             
+@app.command()
+def enrich_regions_topics(dryrun=False):
+    """Enrich regions topics"""    
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if record['owner']['type'] not in ['Local government', 'Regional government']: continue
+            if 'topics' not in record.keys():
+                record['topics'] = [REGIONS_DATA_THEME]
+                changed = True
+            else:
+                not_exists = True
+                for topic in record['topics']:
+                    if topic['id'] == 'REGI': 
+                        not_exists = False
+                        break
+                if not_exists:
+                    record['topics'].append(REGIONS_DATA_THEME)
+                    changed = True                
+            if changed: 
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
+
 
 @app.command()
 def fix_api(dryrun=False, mode='entities'):

@@ -11,16 +11,12 @@ coverage:
       id: NP
       name: Nepal
     level: 2
-    subregion:
-      id: NP-P5
-      name: Lumbini province
     macroregion:
       id: '034'
       name: Southern Asia
-id: datatulsipurmungovnp
-langs:
-- id: EN
-  name: English
+    subregion:
+      id: NP-P5
+      name: Lumbini province
 endpoints:
 - type: ckan:package-search
   url: https://dms.tulsipurmun.gov.np/api/3/action/package_search
@@ -28,6 +24,10 @@ endpoints:
 - type: ckan:package-list
   url: https://dms.tulsipurmun.gov.np/api/3/action/package_list
   version: '3'
+id: datatulsipurmungovnp
+langs:
+- id: EN
+  name: English
 link: https://data.tulsipurmun.gov.np
 name: Integrated Data Management System of Tulsipur Sub-Metropolitan City
 owner:
@@ -57,5 +57,8 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
 uid: cdi00001215
