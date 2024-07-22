@@ -504,6 +504,40 @@ def enrich_regions_topics(dryrun=False):
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
 
 
+TECH_DATA_THEME = {'id' : 'TECH', 'name' : 'Science and technology', 'type' : 'eudatatheme'}
+            
+@app.command()
+def enrich_scientific(dryrun=False):
+    """Enrich scientific repositories"""    
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if record['catalog_type'] not in ['Scientific data repository',]: continue
+            if 'topics' not in record.keys():
+                record['topics'] = [TECH_DATA_THEME]
+                changed = True
+            else:
+                not_exists = True
+                for topic in record['topics']:
+                    if topic['id'] == 'TECH': 
+                        not_exists = False
+                        break
+                if not_exists:
+                    record['topics'].append(TECH_DATA_THEME)
+                    changed = True                
+            if changed: 
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
 
 @app.command()
 def fix_api(dryrun=False, mode='entities'):
