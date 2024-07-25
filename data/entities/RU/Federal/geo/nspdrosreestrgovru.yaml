@@ -10,19 +10,19 @@ coverage:
     country:
       id: RU
       name: Russian Federation
-    level: 1
+    level: 20
     macroregion:
       id: '151'
       name: Eastern Europe
+endpoints:
+- type: wfs200
+  url: https://nspd.rosreestr.gov.ru/api/wfs/v2?SERVICE=WFS&REQUEST=GetCapabilities
+  version: 2.0.0
 export_standard: GeoServer API
 id: nspdrosreestrgovru
 langs:
 - id: RU
   name: Russian
-endpoints:
-- type: wfs200
-  url: https://nspd.rosreestr.gov.ru/api/wfs/v2?SERVICE=WFS&REQUEST=GetCapabilities
-  version: "2.0.0"
 link: https://nspd.rosreestr.gov.ru/geoserver
 name: Портал пространственных данных «Национальная система пространственных данных»
 owner:
@@ -31,7 +31,7 @@ owner:
     country:
       id: RU
       name: Russian Federation
-    level: 1
+    level: 20
   name: The Federal Service for State Registration, Cadastre and Cartography (Rosreestr)
   type: Central government
 properties:

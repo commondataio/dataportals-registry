@@ -21,7 +21,7 @@ class MacroRegion(BaseModel):
 
 class LocationBase(BaseModel):
     country: Country = Field(..., examples=[{"location" : ["value"]}])
-    level: int = Field(1, examples=[1])
+    level: int = Field(1, examples=[1, 2, 3])
     subregion: Optional[SubRegion] = Field(None, examples=[{"id" : "US-TX", "name" : "Texas"}])
     macroregion: Optional[MacroRegion] = Field(None, examples=[{"id" : "145", "name" : "Western Asia"}])
 

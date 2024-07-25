@@ -10,20 +10,24 @@ coverage:
     country:
       id: US
       name: United States
-    level: 1
-description: "The NSF NCAR Research Data Archive (RDA) contains a large and diverse collection of meteorological and oceanographic observations, and operational and reanalysis model outputs, integrated with NSF NCAR High Performance Compute resources to support atmospheric and geosciences research. The RDA is managed by the Data Engineering and Curation Section (DECS) of the Computational and Information Systems Laboratory (CISL) at the NSF National Center for Atmospheric Research (NSF NCAR)."
+    level: 20
+description: The NSF NCAR Research Data Archive (RDA) contains a large and diverse
+  collection of meteorological and oceanographic observations, and operational and
+  reanalysis model outputs, integrated with NSF NCAR High Performance Compute resources
+  to support atmospheric and geosciences research. The RDA is managed by the Data
+  Engineering and Curation Section (DECS) of the Computational and Information Systems
+  Laboratory (CISL) at the NSF National Center for Atmospheric Research (NSF NCAR).
+endpoints:
+- type: oaipmh20
+  url: https://rda.ucar.edu/cgi-bin/oai?verb=Identify
+  version: 2.0.0
+- type: csw202
+  url: https://rda.ucar.edu/cgi-bin/oai
+  version: 2.0.2
 id: rdaucaredu
 langs:
 - id: EN
   name: English
-endpoints:
-- type: oaipmh20
-  url: https://rda.ucar.edu/cgi-bin/oai?verb=Identify
-  version: '2.0.0'
-- type: csw202
-  url: https://rda.ucar.edu/cgi-bin/oai
-  version: '2.0.2'   
- 
 link: https://rda.ucar.edu
 name: NCAR Research Data Archive
 owner:
@@ -32,7 +36,7 @@ owner:
     country:
       id: US
       name: United States
-    level: 1
+    level: 20
   name: University Corporation for Atmospheric Research
   type: Academy
 properties:

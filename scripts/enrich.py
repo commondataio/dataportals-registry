@@ -398,7 +398,7 @@ def enrich_location(dryrun=False):
             record = yaml.load(f, Loader=Loader)            
             f.close()
             # Create owner record
-            owner = {'name' : record['owner_name'], 'type' : record['owner_type'], 'location' : {'level' : 1, 'country' : record['countries'][0].copy()}}
+            owner = {'name' : record['owner_name'], 'type' : record['owner_type'], 'location' : {'level' : 20, 'country' : record['countries'][0].copy()}}
             if owner['location']['country']['id'] == 'UK':
                 owner['location']['country']['id'] = 'GB'
             if 'owner_link' in record.keys(): 
@@ -408,15 +408,15 @@ def enrich_location(dryrun=False):
                 country_id = country['id']
                 if country_id == 'UK': 
                     country_id = 'GB'
-                coverage.append({'location' : {'level' : 1, 'country' : {'id' : country_id, 'name': country['name']}}})
+                coverage.append({'location' : {'level' : 20, 'country' : {'id' : country_id, 'name': country['name']}}})
             for key in ['countries', 'owner_name', 'owner_type', 'owner_link']:
                 if key in record.keys():
                     del record[key]
             parent_path = root.rsplit('\\', 2)[-2]
             if parent_path.find('-') > -1:
-                owner['location']['level']  = 2
+                owner['location']['level']  = 30
                 owner['location']['subregion']  = {'id' : parent_path}
-                coverage[0]['location']['level']  = 2
+                coverage[0]['location']['level']  = 30
                 coverage[0]['location']['subregion']  = {'id' : parent_path}
             record['coverage'] = coverage
             record['owner'] = owner
@@ -537,6 +537,45 @@ def enrich_scientific(dryrun=False):
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
+@app.command()
+def enrich_level(dryrun=False):
+    """Enrich geolevel"""    
+    dirs = os.listdir(ROOT_DIR)
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if 'owner' in record.keys() and 'location' in record['owner'].keys():
+                if 'level' in record['owner']['location']:
+                    record['owner']['location']['level'] = 10 * (record['owner']['location']['level'] + 1)  
+                else:                                       
+                    record['owner']['location']['level'] = 20 if record['owner']['location']['country']['id'] not in ['Unknown', 'World'] else 10
+                changed = True
+            if 'coverage' in record.keys():
+                locations = []
+                for item in record['coverage']:
+                    if 'level' in item['location'].keys():
+                        item['location']['level'] = 10 * (item['location']['level'] + 1)
+                    else:
+                        item['location']['level'] = 20 if item['location']['country']['id'] not in ['Unknown', 'World'] else 10
+                    locations.append(item)
+                    if 'macroregion' not in item['location'].keys():
+                        if item['location']['country']['id'] in ['Unknown', 'World']:
+                            item['location']['macroregion'] = {'id' : 'World', 'name' : 'World'}
+                    changed = True
+                if changed:
+                    record['coverage']= locations              
+            if changed:                
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s level %d' % (os.path.basename(filename).split('.', 1)[0], record['owner']['location']['level']))
 
 
 @app.command()
@@ -735,7 +774,7 @@ def update_subregions(dryrun=False, mode='entities'):
             for location in record['coverage']:                 
                 if not 'level' in location['location'].keys():                   
                     continue
-                if location['location']['level'] != 2:
+                if location['location']['level'] != 3:
                     continue
                 if 'subregion' in location['location'].keys():                
                     if 'name' in location['location']['subregion'].keys(): continue
