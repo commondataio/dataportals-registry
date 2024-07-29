@@ -539,10 +539,10 @@ def enrich_scientific(dryrun=False):
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
 
 @app.command()
-def enrich_level(dryrun=False):
+def enrich_level(dryrun=False, root_dir=SCHEDULED_DIR):
     """Enrich geolevel"""    
-    dirs = os.listdir(ROOT_DIR)
-    for root, dirs, files in os.walk(ROOT_DIR):
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
 #            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
@@ -576,6 +576,54 @@ def enrich_level(dryrun=False):
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
                 print('Updated %s level %d' % (os.path.basename(filename).split('.', 1)[0], record['owner']['location']['level']))
+
+@app.command()
+def enrich_countries_py(dryrun=False):
+    """Enrich countries with pycountry values"""    
+    from pycountry import countries
+    dirs = os.listdir(ROOT_DIR)
+    ids = []
+    for root, dirs, files in os.walk(ROOT_DIR):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            changed = False
+            if 'owner' in record.keys() and 'location' in record['owner'].keys():
+                if 'country' in record['owner']['location']:
+                    c_id = record['owner']['location']['country']['id']
+                    c_name = record['owner']['location']['country']['name']
+                    country = countries.get(alpha_2=c_id)
+                    if c_id in ids: continue
+                    if not country:
+                        print('Country id %s name %s not found' % (c_id, c_name))                        
+                    elif c_name != country.name:
+                        print('Country name %s != %s' % (c_name, country.name))
+                    if c_id not in ids: ids.append(c_id)
+#                        print(country)
+#                changed = True
+            if 'coverage' in record.keys():
+                locations = []
+                for item in record['coverage']:
+                    if 'country' in item['location'].keys():
+                        c_id = item['location']['country']['id']
+                        c_name = item['location']['country']['name']
+                    locations.append(item)
+#                    if 'macroregion' not in item['location'].keys():
+#                        if item['location']['country']['id'] in ['Unknown', 'World']:
+#                            item['location']['macroregion'] = {'id' : 'World', 'name' : 'World'}
+#                    changed = True
+                if changed:
+                    record['coverage']= locations              
+            if changed:                
+                f = open(filepath, 'w', encoding='utf8')
+                f.write(yaml.safe_dump(record, allow_unicode=True))
+                f.close()
+                print('Updated %s level %d' % (os.path.basename(filename).split('.', 1)[0], record['owner']['location']['level']))
+
 
 
 @app.command()
