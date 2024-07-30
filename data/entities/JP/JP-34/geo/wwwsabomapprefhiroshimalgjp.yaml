@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-34
+      name: Hiroshima
+description: Hiroshima ArcGIS map server
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/services?f=kmz
+id: wwwsabomapprefhiroshimalgjp
+langs:
+- id: JA
+  name: Japanese
+link: https://www.sabo-map.pref.hiroshima.lg.jp/sabo_arcgis/rest/services
+name: Hiroshima ArcGIS map
+owner:
+  link: http://www.hiroshima.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-34
+      name: Hiroshima
+  name: Hiroshima
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- government
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004913

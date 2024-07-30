@@ -293,6 +293,12 @@ JKAN_URLMAP = [
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
  ]
 
+WEKO3_URLMAP = [
+    {'id' : 'weko3:records', 'url' : '/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+ ]
+
+
+
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
@@ -306,7 +312,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
-'qwc2': QWC2_URLMAP
+'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
