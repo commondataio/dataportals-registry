@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Servicio Nacional de Áreas Naturales Protegidas por el Estado ArcGIS
+  Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geospatial.sernanp.gob.pe/arcgis_server/rest/services?f=kmz
+id: geospatialsernanpgobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geospatial.sernanp.gob.pe/arcgis_server/rest/services
+name: Servicio Nacional de Áreas Naturales Protegidas por el Estado ArcGIS Server
+owner:
+  link: https://www.gob.pe/sernanp
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Servicio Nacional de Áreas Naturales Protegidas por el Estado
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00004958

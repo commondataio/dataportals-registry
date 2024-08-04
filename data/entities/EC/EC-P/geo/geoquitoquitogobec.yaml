@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: EC-P
+      name: Pichincha
+description: Municipio del Distrito Metropolitano de Quito ArcGIS server
+endpoints:
+- type: arcgis:portals:self
+  url: https://geoquito.quito.gob.ec/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geoquito.quito.gob.ec/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoquito.quito.gob.ec/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoquito.quito.gob.ec/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoquito.quito.gob.ec/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoquito.quito.gob.ec/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoquito.quito.gob.ec/server/rest/services?f=kmz
+id: geoquitoquitogobec
+langs:
+- id: ES
+  name: Spanish
+link: https://geoquito.quito.gob.ec/server/rest/services
+name: Quito ArcGIS server
+owner:
+  link: https://www.quito.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    subregion:
+      id: EC-P
+      name: Pichincha
+  name: Municipio del Distrito Metropolitano de Quito
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- spatial
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004931

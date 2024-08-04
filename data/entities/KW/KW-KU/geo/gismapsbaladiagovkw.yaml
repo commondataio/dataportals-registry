@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: KW-KU
+      name: Kuwait city
+description: Kuwait Municipality ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://gismaps.baladia.gov.kw/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gismaps.baladia.gov.kw/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gismaps.baladia.gov.kw/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gismaps.baladia.gov.kw/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gismaps.baladia.gov.kw/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gismaps.baladia.gov.kw/arcgis/rest/services?f=kmz
+id: gismapsbaladiagovkw
+langs:
+- id: AR
+  name: Arabic
+link: https://gismaps.baladia.gov.kw/arcgis/rest/services
+name: Kuwait Municipality ArcGIS server
+owner:
+  link: https://www.baladia.gov.kw
+  location:
+    country:
+      id: KW
+      name: Kuwait
+    level: 30
+    subregion:
+      id: KW-KU
+      name: Kuwait city
+  name: Kuwait city
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00004944

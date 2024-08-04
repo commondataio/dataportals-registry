@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Ministerio de Cultura ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://sigda.cultura.gob.pe/sigda/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sigda.cultura.gob.pe/sigda/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sigda.cultura.gob.pe/sigda/services?wsdl
+- type: arcgis:sitemap
+  url: https://sigda.cultura.gob.pe/sigda/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sigda.cultura.gob.pe/sigda/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sigda.cultura.gob.pe/sigda/rest/services?f=kmz
+id: sigdaculturagobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://sigda.cultura.gob.pe/sigda/rest/services
+name: Ministerio de Cultura ArcGIS Server
+owner:
+  link: https://www.gob.pe/cultura/
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Ministerio de Cultura
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00004959

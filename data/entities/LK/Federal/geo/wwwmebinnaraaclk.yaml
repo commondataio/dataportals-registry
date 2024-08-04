@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Marine Environmental Baseline Information Network (MEBIN) contains collection
+  of marine environmental data and information in Sri Lanka. Petroleum Resources Development
+  Secretariat (PRDS) has initiated to establish a Marine Database with a view to defining
+  mandatory environmental protection measures prior to future hydrocarbon exploration
+  activities. MEBIN encourage scientists, researches and students to share and published
+  their data in this national important programme that will be benefited by value
+  addition for research data and recognition for researchers.
+endpoints:
+- type: geonode:layers
+  url: http://www.mebin.nara.ac.lk/api/layers/
+- type: geonode:documents
+  url: http://www.mebin.nara.ac.lk/api/documents/
+- type: wms111
+  url: http://www.mebin.nara.ac.lk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://www.mebin.nara.ac.lk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://www.mebin.nara.ac.lk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://www.mebin.nara.ac.lk/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://www.mebin.nara.ac.lk/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: http://www.mebin.nara.ac.lk/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: http://www.mebin.nara.ac.lk/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: wwwmebinnaraaclk
+langs:
+- id: EN
+  name: English
+link: http://www.mebin.nara.ac.lk/
+name: Marine Environmental Baseline Information Network (MEBIN)
+owner:
+  link: https://pdasl.gov.lk
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: Petroleum Resources Development Secretariat
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00004950

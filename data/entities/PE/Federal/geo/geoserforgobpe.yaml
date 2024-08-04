@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal web de la Infraestructura de Datos Espaciales del SERFOR, cuya
+  finalidad es ofrecer a los usuarios el acceso a una serie de recursos y servicios
+  basados en la información geográfica espacial forestal y de fauna silvestre.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.serfor.gob.pe/geoservicios/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.serfor.gob.pe/geoservicios/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.serfor.gob.pe/geoservicios/services?wsdl
+- type: arcgis:sitemap
+  url: https://geo.serfor.gob.pe/geoservicios/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geo.serfor.gob.pe/geoservicios/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geo.serfor.gob.pe/geoservicios/rest/services?f=kmz
+id: geoserforgobpe
+langs:
+- id: ES
+  name: Spanish
+link: https://geo.serfor.gob.pe/geoservicios/rest/services
+name: GEOSERFOR
+owner:
+  link: https://www.gob.pe/serfor
+  location:
+    country:
+      id: PE
+      name: Peru
+    level: 20
+  name: Servicio Nacional Forestal y de Fauna Silvestre
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00004955

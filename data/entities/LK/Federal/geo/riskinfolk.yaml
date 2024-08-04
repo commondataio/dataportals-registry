@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: RiskInfo improves the quality of disaster management in Sri Lanka by
+  making data sharing and analysis easy and predictable. By exposing these resources
+  to interested institutions and the general public RiskInfo minimizes the hassle
+  of locating good data that exists.
+endpoints:
+- type: geonode:datasets
+  url: http://www.riskinfo.lk/api/datasets/
+- type: geonode:documents
+  url: http://www.riskinfo.lk/api/documents/
+- type: wms111
+  url: http://www.riskinfo.lk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://www.riskinfo.lk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://www.riskinfo.lk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://www.riskinfo.lk/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://www.riskinfo.lk/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://www.riskinfo.lk/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: riskinfolk
+langs:
+- id: EN
+  name: English
+link: http://www.riskinfo.lk
+name: Disaster Risk Information Platform (Riskinfo.lk)
+owner:
+  link: https://www.worldbank.org
+  location:
+    country:
+      id: LK
+      name: Sri Lanka
+    level: 20
+  name: The World Bank
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geonode
+  name: Geonode
+status: active
+tags: []
+topics: []
+uid: cdi00004948
