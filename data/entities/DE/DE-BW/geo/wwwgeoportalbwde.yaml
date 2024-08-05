@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: Your geocatalog for politics, administration, business, science and the
+  public.
 endpoints:
 - type: geonetwork:query
   url: https://www.geoportal-bw.de/geonetwork/srv/eng/q
@@ -39,29 +42,37 @@ langs:
 - id: DE
   name: German
 link: https://www.geoportal-bw.de/geonetwork
-name: www.geoportal-bw.de
+name: Geoportal Baden Wurttemberg
 owner:
-  link: null
+  link: https://www.bwl.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: State Office for Geoinformation and Rural Development Baden-Württemberg
+  type: Regional government
 properties:
   has_doi: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://www.geoportal-bw.de/datenschutz
   rights_type: granular
-  tos_url: null
+  tos_url: hhttps://www.geoportal-bw.de/nutzungsbedingungen
 software:
   id: geonetwork
   name: Geonetwork
-status: scheduled
-tags: []
-topics: []
-uid: temp00003521
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004976
