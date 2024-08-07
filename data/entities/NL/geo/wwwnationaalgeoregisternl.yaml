@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Nationaal georegister (Netherlands)
+endpoints:
+- type: geonetwork:query
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/api/records
+- type: openapi
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.nationaalgeoregister.nl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwnationaalgeoregisternl
+langs:
+- id: NL
+  name: Dutch
+link: https://www.nationaalgeoregister.nl/geonetwork
+name: Nationaal georegister (Netherlands)
+owner:
+  link: https://www.government.nl/ministries/ministry-of-the-interior-and-kingdom-relations
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: 'Ministry of the Interior and Kingdom Relations '
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.pdok.nl/privacy
+  rights_type: granular
+  tos_url: https://www.pdok.nl/copyright
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- spatial
+topics: []
+uid: cdi00005003

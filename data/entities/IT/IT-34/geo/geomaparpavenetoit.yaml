@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-34
+      name: Veneto
+description: Portale geografico dell'Agenzia Regionale per la Prevenzione e Protezione
+  Ambientale del Veneto.
+endpoints:
+- type: geonode:documents
+  url: https://geomap.arpa.veneto.it/api/documents/
+- type: dcatus11
+  url: https://geomap.arpa.veneto.it/data.json
+- type: wms111
+  url: https://geomap.arpa.veneto.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geomap.arpa.veneto.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geomap.arpa.veneto.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geomap.arpa.veneto.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geomap.arpa.veneto.it/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geomap.arpa.veneto.it/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geomap.arpa.veneto.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geomaparpavenetoit
+langs:
+- id: IT
+  name: Italian
+link: https://geomap.arpa.veneto.it
+name: Geoportale ARPA Veneto
+owner:
+  link: https://www.arpa.veneto.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Agency Regional and for Prevention Protection Environmental of Veneto
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00004994
