@@ -19,9 +19,18 @@ coverage:
       id: RU-VOR
       name: Voronezhskaya oblast
 endpoints:
+- type: arcgis:rest:info
+  url: http://map.govvrn.ru/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: http://map.govvrn.ru/arcgis/rest/services?f=pjson
-export_standard: ArcGIS REST Services
+- type: arcgis:soap
+  url: http://map.govvrn.ru/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://map.govvrn.ru/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://map.govvrn.ru/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://map.govvrn.ru/arcgis/rest/services?f=kmz
 id: mapgovvrnru
 langs:
 - id: RU
