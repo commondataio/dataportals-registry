@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: Bangladesh Water Development Board ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.bwdb.gov.bd/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.bwdb.gov.bd/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.bwdb.gov.bd/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.bwdb.gov.bd/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.bwdb.gov.bd/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.bwdb.gov.bd/server/rest/services?f=kmz
+id: gisbwdbgovbd
+langs:
+- id: BN
+  name: Bengali
+link: https://gis.bwdb.gov.bd/server/rest/services
+name: Bangladesh Water Development Board ArcGIS Server
+owner:
+  link: https://www.bwdb.gov.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+  name: Bangladesh Water Development Board
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00005022

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    macroregion:
+      id: 018
+      name: Southern Africa
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+description: City of Ekurhuleni Geographic Information ArcGIS server
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ekurhuleni.gov.za/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.ekurhuleni.gov.za/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=kmz
+id: gisekurhulenigovza
+langs:
+- id: EN
+  name: English
+link: https://gis.ekurhuleni.gov.za/arcgis/rest/services
+name: City of Ekurhuleni Geographic Information
+owner:
+  link: https://www.ekurhuleni.gov.za
+  location:
+    country:
+      id: ZA
+      name: South Africa
+    level: 30
+    subregion:
+      id: ZA-GP
+      name: Gauteng
+  name: City of Ekurhuleni
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005039

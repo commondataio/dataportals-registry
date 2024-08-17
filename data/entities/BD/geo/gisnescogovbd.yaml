@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+    macroregion:
+      id: '034'
+      name: Southern Asia
+description: WebGIS Based Distribution Line & Substation Monitoring
+endpoints:
+- type: geonode:layers
+  url: https://gis.nesco.gov.bd/api/layers/
+- type: geonode:documents
+  url: https://gis.nesco.gov.bd/api/documents/
+- type: wms111
+  url: https://gis.nesco.gov.bd/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://gis.nesco.gov.bd/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://gis.nesco.gov.bd/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://gis.nesco.gov.bd/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://gis.nesco.gov.bd/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://gis.nesco.gov.bd/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://gis.nesco.gov.bd/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: gisnescogovbd
+langs:
+- id: BN
+  name: Bengali
+link: https://gis.nesco.gov.bd
+name: Northern Electricity Supply Company PLC
+owner:
+  link: https://www.nesco.gov.bd
+  location:
+    country:
+      id: BD
+      name: Bangladesh
+    level: 20
+  name: Northern Electricity Supply Company PLC
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00005023

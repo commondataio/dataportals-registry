@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: Assess the impact of Climate Change on Antigua and Barbuda
+endpoints:
+- type: geonode:layers
+  url: https://climateriskmap.environment.gov.ag/api/layers/
+- type: geonode:documents
+  url: https://climateriskmap.environment.gov.ag/api/documents/
+- type: csw202
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://climateriskmap.environment.gov.ag/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: climateriskmapenvironmentgovag
+langs:
+- id: EN
+  name: English
+link: https://climateriskmap.environment.gov.ag
+name: Climate Change Risk Modelling
+owner:
+  link: https://www.environment.gov.ag
+  location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+  name: Department of Environment (DOE), Government of Antigua and Barbuda
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00005020

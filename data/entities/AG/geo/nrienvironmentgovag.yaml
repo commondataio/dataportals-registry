@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: NRI is a geospatial content management system, a platform for the management
+  and publication of geospatial data. It brings together mature and stable open-source
+  software projects under a consistent and easy-to-use interface allowing non-specialized
+  users to share data and create interactive maps.
+endpoints:
+- type: geonode:layers
+  url: https://nri.environment.gov.ag/api/layers/
+- type: geonode:documents
+  url: https://nri.environment.gov.ag/api/documents/
+- type: wms111
+  url: https://nri.environment.gov.ag/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://nri.environment.gov.ag/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://nri.environment.gov.ag/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://nri.environment.gov.ag/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://nri.environment.gov.ag/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://nri.environment.gov.ag/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://nri.environment.gov.ag/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: nrienvironmentgovag
+langs:
+- id: EN
+  name: English
+link: https://nri.environment.gov.ag
+name: Antigua and Barbuda Natural Resources Inventory (NRI)
+owner:
+  link: https://www.environment.gov.ag
+  location:
+    country:
+      id: AG
+      name: Antigua and Barbuda
+    level: 20
+  name: Department of Environment (DOE), Government of Antigua and Barbuda
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00005021
