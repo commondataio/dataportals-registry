@@ -42,6 +42,11 @@ def load_jsonl(filepath):
     return data
 
 
+def split_by_software(filepath):
+    os.makedirs('../data/datasets/bysoftware', exist_ok=True)
+    os.system('undatum split -f software.id -d %s %s' % ('../data/datasets/bysoftware', os.path.join(DATASETS_DIR, filepath)))
+
+
 def build_dataset(datapath, dataset_filename):
     out = open(os.path.join(DATASETS_DIR, dataset_filename), 'w', encoding='utf8')
     n = 0
@@ -86,6 +91,8 @@ def build():
     print('Finished building scheduled dataset. File saved as %s' % (os.path.join(DATASETS_DIR, 'scheduled.jsonl')))
     merge_datasets(['catalogs.jsonl', 'scheduled.jsonl'], 'full.jsonl')
     print('Merged datasets %s as %s' % (','.join(['catalogs.jsonl', 'scheduled.jsonl']), 'full.jsonl'))
+    print('Split by software')
+    split_by_software('full.jsonl')
 
 
 
