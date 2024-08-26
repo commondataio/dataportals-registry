@@ -21,6 +21,21 @@ coverage:
 description: El catálogo de información permite localizar y consultar qué información
   se ha generado y/o utilizado en el proyecto Life ADAPTAMED. La información se describe
   mediante fichas catalográficas conocidas habitualmente como metadatos
+endpoints:
+- type: geonetwork:query
+  url: https://adaptamed.agenciamedioambienteyagua.es/geonetwork/srv/eng/q
+- type: openapi
+  url: https://adaptamed.agenciamedioambienteyagua.es/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://adaptamed.agenciamedioambienteyagua.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://adaptamed.agenciamedioambienteyagua.es/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://adaptamed.agenciamedioambienteyagua.es/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: adaptamedagenciamedioambienteyaguaes
 langs:
 - id: ES

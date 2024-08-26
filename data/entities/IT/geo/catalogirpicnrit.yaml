@@ -16,6 +16,13 @@ coverage:
       id: 039
       name: Southern Europe
 description: Catalogo IRPI
+endpoints:
+- type: csw202
+  url: https://catalog.irpi.cnr.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://catalog.irpi.cnr.it/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: catalogirpicnrit
 langs:
 - id: IT
@@ -29,7 +36,7 @@ owner:
       id: IT
       name: Italy
     level: 20
-  name: 'Istituto di Ricerca per la Protezione Idrogeologica'
+  name: Istituto di Ricerca per la Protezione Idrogeologica
   type: Academy
 properties:
   has_doi: true

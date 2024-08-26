@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,13 @@ coverage:
       name: World
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: csw202
+  url: https://metadata.astuntechnology.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://metadata.astuntechnology.com/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: metadataastuntechnologycom
 langs:
 - id: EN

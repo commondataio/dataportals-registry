@@ -18,9 +18,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
+- type: arcgis:rest:info
+  url: http://share.actvet.ac.ae/public/rest/info?f=pjson
 - type: arcgis:rest:services
   url: http://share.actvet.ac.ae/public/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: http://share.actvet.ac.ae/public/services?wsdl
+- type: arcgis:sitemap
+  url: http://share.actvet.ac.ae/public/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://share.actvet.ac.ae/public/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://share.actvet.ac.ae/public/rest/services?f=kmz
 id: shareactvetacae
 langs:
 - id: AR

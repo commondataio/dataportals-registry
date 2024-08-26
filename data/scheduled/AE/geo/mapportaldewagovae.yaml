@@ -18,9 +18,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
+- type: arcgis:rest:info
+  url: https://mapportal.dewa.gov.ae/ags/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://mapportal.dewa.gov.ae/ags/rest/services/?f=pjson
-  version: null
+  url: https://mapportal.dewa.gov.ae/ags/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapportal.dewa.gov.ae/ags/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapportal.dewa.gov.ae/ags/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapportal.dewa.gov.ae/ags/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapportal.dewa.gov.ae/ags/rest/services?f=kmz
 id: mapportaldewagovae
 langs:
 - id: AR

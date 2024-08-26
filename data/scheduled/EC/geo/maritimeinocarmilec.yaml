@@ -18,9 +18,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
+- type: arcgis:rest:info
+  url: https://maritime.inocar.mil.ec/inocar/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://maritime.inocar.mil.ec/inocar/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: https://maritime.inocar.mil.ec/inocar/services?wsdl
+- type: arcgis:sitemap
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=kmz
 id: maritimeinocarmilec
 langs:
 - id: ES

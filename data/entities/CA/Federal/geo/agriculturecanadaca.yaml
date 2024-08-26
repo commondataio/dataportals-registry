@@ -17,8 +17,18 @@ coverage:
       name: Northern America
 description: Agriculture and Agri-Food Canada Atlas ArcGIS server
 endpoints:
+- type: arcgis:rest:info
+  url: https://agriculture.canada.ca/atlas/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://agriculture.canada.ca/atlas/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agriculture.canada.ca/atlas/services?wsdl
+- type: arcgis:sitemap
+  url: https://agriculture.canada.ca/atlas/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://agriculture.canada.ca/atlas/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://agriculture.canada.ca/atlas/rest/services?f=kmz
 id: agriculturecanadaca
 langs:
 - id: EN

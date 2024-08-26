@@ -19,6 +19,13 @@ coverage:
       id: ES-AN
       name: Andalucia
 description: Infraestructura de Datos Espaciales de Andalucía
+endpoints:
+- type: csw202
+  url: https://www.ideandalucia.es/catalogo/inspire/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://www.ideandalucia.es/catalogo/inspire/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: wwwideandaluciaes
 langs:
 - id: ES

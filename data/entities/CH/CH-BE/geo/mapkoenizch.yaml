@@ -19,6 +19,19 @@ coverage:
       id: CH-BE
       name: Bern
 description: Gemeinde Köniz geoportal (ArcGIS)
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.koeniz.ch/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.koeniz.ch/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.koeniz.ch/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.koeniz.ch/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.koeniz.ch/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://map.koeniz.ch/server/rest/services?f=kmz
 id: mapkoenizch
 langs:
 - id: DE

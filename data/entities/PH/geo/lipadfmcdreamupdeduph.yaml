@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Phillipines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: LiPAD serves as the primary data access and distribution center of the
+  Phil-LiDAR 1 and Phil-LiDAR 2 Programs, a Department of Science and Technology initiative
+  that engages the University of the Philippines and fifteen (15) Higher Education
+  Institutions (HEIs) throughout the country, with the aim to produce detailed flood
+  hazard and resource maps using LiDAR technology.
+endpoints:
+- type: geonode:layers
+  url: https://lipad-fmc.dream.upd.edu.ph/api/layers/
+- type: geonode:documents
+  url: https://lipad-fmc.dream.upd.edu.ph/api/documents/
+- type: wms111
+  url: https://lipad-fmc.dream.upd.edu.ph/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://lipad-fmc.dream.upd.edu.ph/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://lipad-fmc.dream.upd.edu.ph/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://lipad-fmc.dream.upd.edu.ph/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://lipad-fmc.dream.upd.edu.ph/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://lipad-fmc.dream.upd.edu.ph/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: lipadfmcdreamupdeduph
+langs:
+- id: EN
+  name: English
+link: https://lipad-fmc.dream.upd.edu.ph
+name: LiDAR Portal for Archiving and Distribution
+owner:
+  link: https://www.upd.edu.ph
+  location:
+    country:
+      id: PH
+      name: Phillipines
+    level: 20
+  name: University of the Philippines
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00005044

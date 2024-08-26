@@ -16,9 +16,18 @@ coverage:
       id: '154'
       name: Northern Europe
 endpoints:
+- type: arcgis:rest:info
+  url: http://aineistot.metsakeskus.fi/metsakeskus/rest/info?f=pjson
 - type: arcgis:rest:services
   url: http://aineistot.metsakeskus.fi/metsakeskus/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: http://aineistot.metsakeskus.fi/metsakeskus/services?wsdl
+- type: arcgis:sitemap
+  url: http://aineistot.metsakeskus.fi/metsakeskus/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://aineistot.metsakeskus.fi/metsakeskus/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://aineistot.metsakeskus.fi/metsakeskus/rest/services?f=kmz
 id: aineistotmetsakeskusfi
 langs:
 - id: FI

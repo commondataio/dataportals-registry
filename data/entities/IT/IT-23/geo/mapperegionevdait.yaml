@@ -20,9 +20,18 @@ coverage:
       name: Aosta Valley
 description: Regione Autonoma Valle d'Aosta ArcGIS server
 endpoints:
+- type: arcgis:rest:info
+  url: https://mappe.regione.vda.it/domini1/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://mappe.regione.vda.it/domini1/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: https://mappe.regione.vda.it/domini1/services?wsdl
+- type: arcgis:sitemap
+  url: https://mappe.regione.vda.it/domini1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mappe.regione.vda.it/domini1/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mappe.regione.vda.it/domini1/rest/services?f=kmz
 id: mapperegionevdait
 langs:
 - id: IT

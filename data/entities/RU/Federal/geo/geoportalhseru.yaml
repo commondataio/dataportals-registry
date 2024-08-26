@@ -15,6 +15,19 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.hse.ru/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.hse.ru/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.hse.ru/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.hse.ru/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.hse.ru/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.hse.ru/server/rest/services?f=kmz
 id: geoportalhseru
 langs:
 - id: RU

@@ -16,6 +16,19 @@ coverage:
       id: 018
       name: Southern Africa
 description: Botswana Mining Cadastre Portal ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.miningcadastre.gov.bw/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.miningcadastre.gov.bw/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.miningcadastre.gov.bw/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.miningcadastre.gov.bw/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.miningcadastre.gov.bw/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.miningcadastre.gov.bw/arcgis/rest/services?f=kmz
 id: gisminingcadastregovbw
 langs:
 - id: EN

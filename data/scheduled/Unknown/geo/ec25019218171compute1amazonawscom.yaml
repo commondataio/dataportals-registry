@@ -18,9 +18,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
+- type: arcgis:rest:info
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/info?f=pjson
 - type: arcgis:rest:services
   url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/services?wsdl
+- type: arcgis:sitemap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://ec2-50-19-218-171.compute-1.amazonaws.com/arcgis1/rest/services?f=kmz
 id: ec25019218171compute1amazonawscom
 langs:
 - id: EN

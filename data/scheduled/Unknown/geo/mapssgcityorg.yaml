@@ -17,6 +17,19 @@ coverage:
       name: World
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.sgcity.org/arcgisweb/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.sgcity.org/arcgisweb/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.sgcity.org/arcgisweb/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.sgcity.org/arcgisweb/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.sgcity.org/arcgisweb/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.sgcity.org/arcgisweb/rest/services?f=kmz
 id: mapssgcityorg
 langs:
 - id: EN

@@ -14,7 +14,19 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-endpoints: []
+endpoints:
+- type: wms111
+  url: https://www.giscloud.vn/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://www.giscloud.vn/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://www.giscloud.vn/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://www.giscloud.vn/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: wwwgiscloudvn
 langs:
 - id: VN

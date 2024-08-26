@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,6 +16,16 @@ coverage:
       name: World
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: ckan
+  url: https://data.lightmat.org/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.lightmat.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.lightmat.org/api/3/action/package_list
+  version: '3'
 id: datalightmatorg
 langs: []
 link: https://data.lightmat.org

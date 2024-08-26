@@ -17,6 +17,19 @@ coverage:
       name: Northern America
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisdata.seattle.gov/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisdata.seattle.gov/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisdata.seattle.gov/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisdata.seattle.gov/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisdata.seattle.gov/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisdata.seattle.gov/server/rest/services?f=kmz
 id: gisdataseattlegov
 langs:
 - id: EN

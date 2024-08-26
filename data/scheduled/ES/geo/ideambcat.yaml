@@ -21,8 +21,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
-- type: arcgis:portals:self
-  url: https://ide.amb.cat/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://ide.amb.cat/geoserveis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ide.amb.cat/geoserveis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ide.amb.cat/geoserveis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ide.amb.cat/geoserveis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ide.amb.cat/geoserveis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ide.amb.cat/geoserveis/rest/services?f=kmz
 id: ideambcat
 langs:
 - id: ES

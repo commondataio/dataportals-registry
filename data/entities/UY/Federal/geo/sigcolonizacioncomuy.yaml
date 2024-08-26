@@ -16,6 +16,21 @@ coverage:
       id: '005'
       name: South America
 description: Instituto National de Colonization geodata catalog
+endpoints:
+- type: geonetwork:query
+  url: http://sig.colonizacion.com.uy/geonetwork/srv/eng/q
+- type: openapi
+  url: http://sig.colonizacion.com.uy/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://sig.colonizacion.com.uy/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://sig.colonizacion.com.uy/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://sig.colonizacion.com.uy/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: sigcolonizacioncomuy
 langs:
 - id: ES

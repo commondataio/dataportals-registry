@@ -17,6 +17,21 @@ coverage:
       name: South America
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: https://cecoldo.dimar.mil.co/geonetwork/srv/eng/q
+- type: openapi
+  url: https://cecoldo.dimar.mil.co/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://cecoldo.dimar.mil.co/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://cecoldo.dimar.mil.co/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://cecoldo.dimar.mil.co/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: cecoldodimarmilco
 langs:
 - id: ES

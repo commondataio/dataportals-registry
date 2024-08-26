@@ -17,8 +17,18 @@ coverage:
       name: Eastern Europe
 description: Dornadzor Ltd. ArcGIS server
 endpoints:
+- type: arcgis:rest:info
+  url: https://gis.dornadzor-sz.ru/drn/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://gis.dornadzor-sz.ru/drn/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.dornadzor-sz.ru/drn/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.dornadzor-sz.ru/drn/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.dornadzor-sz.ru/drn/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.dornadzor-sz.ru/drn/rest/services?f=kmz
 id: gisdornadzorszru
 langs:
 - id: RU

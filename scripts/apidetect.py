@@ -36,7 +36,7 @@ ENTRIES_DIR = '../data/entities'
 SCHEDULED_DIR = '../data/scheduled'
 app = typer.Typer()
 
-DEFAULT_TIMEOUT = 15
+DEFAULT_TIMEOUT = 300
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
@@ -613,6 +613,41 @@ def report(status='undetected', filename=None, mode='entries'):
     if filename is not None:
         out.close()
                     
+
+@app.command()
+def update_broken_arcgis(status='undetected', replace_endpoints: Annotated[bool, typer.Option("--replace")]=True, mode='entries'):
+    """Detect all broken ArcGIS portals and update endpoints"""
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR   
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['software']['id'] in ['arcgishub', 'arcgisserver']:                
+                if 'endpoints' not in record.keys() or len(record['endpoints']) < 2:
+                    if status == 'undetected':
+                        print('Processing catalog %s, software %s' % (os.path.basename(filename).split('.', 1)[0], record['software']['id']))
+                        if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
+                            print(' - skip, we have endpoints already and no replace mode')
+                            continue
+                        found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
+                        record['endpoints'] = []
+                        for api in found:
+                            print('- %s %s' % (api['type'], api['url']))
+                            record['endpoints'].append(api)
+                        if len(record['endpoints']) > 0:
+                            f = open(filepath, 'w', encoding='utf8')
+                            f.write(yaml.safe_dump(record, allow_unicode=True))
+                            f.close()
+                            print('- updated profile')
+                        else:
+                            print('- no endpoints, not updated')
+
 
 
 if __name__ == "__main__":

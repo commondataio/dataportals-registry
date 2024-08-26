@@ -16,9 +16,18 @@ coverage:
       id: '145'
       name: Western Asia
 endpoints:
+- type: arcgis:rest:info
+  url: https://vmaps.address.gov.sa/agserver/rest/info?f=pjson
 - type: arcgis:rest:services
-  url: https://vmaps.address.gov.sa/agserver/rest/services/?f=pjson
-  version: null
+  url: https://vmaps.address.gov.sa/agserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://vmaps.address.gov.sa/agserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://vmaps.address.gov.sa/agserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://vmaps.address.gov.sa/agserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://vmaps.address.gov.sa/agserver/rest/services?f=kmz
 id: vmapsaddressgovsa
 langs:
 - id: AR

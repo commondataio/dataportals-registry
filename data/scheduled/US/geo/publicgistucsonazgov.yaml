@@ -17,6 +17,19 @@ coverage:
       name: Northern America
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: https://publicgis.tucsonaz.gov/open/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://publicgis.tucsonaz.gov/open/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://publicgis.tucsonaz.gov/open/services?wsdl
+- type: arcgis:sitemap
+  url: https://publicgis.tucsonaz.gov/open/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://publicgis.tucsonaz.gov/open/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://publicgis.tucsonaz.gov/open/rest/services?f=kmz
 id: publicgistucsonazgov
 langs:
 - id: EN

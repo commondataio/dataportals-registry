@@ -17,6 +17,15 @@ coverage:
       name: Southern Europe
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
+endpoints:
+- type: geonetwork:query
+  url: https://panthro.microlab.ntua.gr/geonetwork/srv/eng/q
+- type: csw202
+  url: https://panthro.microlab.ntua.gr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://panthro.microlab.ntua.gr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: panthromicrolabntuagr
 langs:
 - id: EL

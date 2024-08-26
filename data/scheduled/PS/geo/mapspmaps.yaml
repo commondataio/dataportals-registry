@@ -18,9 +18,18 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
+- type: arcgis:rest:info
+  url: https://maps.pma.ps/mapserver/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://maps.pma.ps/mapserver/rest/services?f=pjson
-  version: null
+- type: arcgis:soap
+  url: https://maps.pma.ps/mapserver/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.pma.ps/mapserver/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.pma.ps/mapserver/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.pma.ps/mapserver/rest/services?f=kmz
 id: mapspmaps
 langs:
 - id: AR
