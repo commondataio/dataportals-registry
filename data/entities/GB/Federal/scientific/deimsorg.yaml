@@ -16,7 +16,10 @@ description: DEIMS-SDR (Dynamic Ecological Information Management System - Site 
 endpoints:
 - type: customapi
   url: https://deims.org/api
-- type: csw
+- type: oaipmh20
+  url: https://deims.org/pycsw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: csw202
   url: https://deims.org/pycsw/
   version: 2.0.2
 id: deimsorg

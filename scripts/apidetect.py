@@ -177,7 +177,11 @@ GEOSERVER_URLMAP = [
     {'id' : 'ogc:tiles', 'url' : '/ogc/tiles/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'ogc:images', 'url' : '/ogc/images/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'ogc:maps', 'url' : '/ogc/maps/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'ogc:features', 'url' : '/ogc/features/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
+    {'id' : 'ogc:features', 'url' : '/ogc/features/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:version', 'url' : '/rest/about/version','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:server-status', 'url' : '/rest/about/server-status','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:settings', 'url' : '/rest/settings','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:layers', 'url' : '/rest/layers','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
 ]
 
 MAPPROXY_URLMAP = [

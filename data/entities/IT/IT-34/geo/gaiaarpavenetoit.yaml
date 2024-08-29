@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -63,6 +63,12 @@ endpoints:
 - type: wmts100
   url: https://gaia.arpa.veneto.it/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: geoserver:version
+  url: https://gaia.arpa.veneto.it/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://gaia.arpa.veneto.it/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://gaia.arpa.veneto.it/geoserver/rest/layers
 id: gaiaarpavenetoit
 langs:
 - id: IT

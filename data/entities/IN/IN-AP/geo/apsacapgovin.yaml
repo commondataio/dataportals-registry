@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-AP
+      name: Andhra Pradesh
+description: AP-State SDI Data Discovery Portal geonetwork
+endpoints:
+- type: geonetwork:query
+  url: https://apsac.ap.gov.in/geonetwork/srv/eng/q
+- type: openapi
+  url: https://apsac.ap.gov.in/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://apsac.ap.gov.in/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://apsac.ap.gov.in/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://apsac.ap.gov.in/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: apsacapgovin
+langs:
+- id: EN
+  name: English
+link: https://apsac.ap.gov.in/geonetwork
+name: AP-State SDI Data Discovery Portal
+owner:
+  link: https://apsac.ap.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-AP
+      name: Andhra Pradesh
+  name: Andhra Pradesh Space Applications Centre
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005134

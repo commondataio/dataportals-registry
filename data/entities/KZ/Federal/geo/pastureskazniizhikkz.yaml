@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -30,6 +31,9 @@ endpoints:
 - type: wfs200
   url: https://pastures.kazniizhik.kz:8443/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
   version: 2.0.0
+- type: wcs100
+  url: https://pastures.kazniizhik.kz:8443/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 - type: wcs110
   url: https://pastures.kazniizhik.kz:8443/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
   version: 1.1.0
@@ -45,6 +49,12 @@ endpoints:
 - type: wps100
   url: https://pastures.kazniizhik.kz:8443/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
+- type: tms100
+  url: https://pastures.kazniizhik.kz:8443/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://pastures.kazniizhik.kz:8443/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
 id: pastureskazniizhikkz
 langs:
 - id: RU

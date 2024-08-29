@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ONSDI is an open source platform that facilitates the creation, sharing,
+  and collaborative use of geospatial data
+endpoints:
+- type: geonode:datasets
+  url: https://geoportal.govmu.org/api/datasets/
+- type: geonode:documents
+  url: https://geoportal.govmu.org/api/documents/
+- type: wms111
+  url: https://geoportal.govmu.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geoportal.govmu.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoportal.govmu.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoportal.govmu.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.govmu.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geoportal.govmu.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geoportal.govmu.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geoportalgovmuorg
+langs:
+- id: EN
+  name: English
+link: https://geoportal.govmu.org
+name: Mauritius ONSDI Catalog
+owner:
+  link: https://www.govmu.org
+  location:
+    country:
+      id: MU
+      name: Mauritius
+    level: 20
+  name: The Ministry of Information Technology
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: cdi00005119

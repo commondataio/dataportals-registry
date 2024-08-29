@@ -624,7 +624,7 @@ def country_report():
     wb_countries = set(countries_data.keys())
     all_set = wb_countries.difference(reg_countries)
 #    all_set = wb_countries.intersection(reg_countries)
-    table = Table(title='Country report') 
+    table = Table(title='Missing countries report') 
     table.add_column("Alpha-2", justify="right", style="cyan", no_wrap=True)
     table.add_column("Name", style="magenta")
     table.add_column("Internet TLD", style="magenta")

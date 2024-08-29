@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-UP
+      name: Uttar Pradesh
+description: Varanasi ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.varanasismartcity.gov.in/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.varanasismartcity.gov.in/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.varanasismartcity.gov.in/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.varanasismartcity.gov.in/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.varanasismartcity.gov.in/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://map.varanasismartcity.gov.in/server/rest/services?f=kmz
+id: mapvaranasismartcitygovin
+langs:
+- id: EN
+  name: English
+link: https://map.varanasismartcity.gov.in/server/rest/services
+name: Varanasi ArcGIS Server
+owner:
+  link: https://varanasi.nic.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-UP
+      name: Uttar Pradesh
+  name: Varanasi Municipal Corporation
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: axtive
+tags: []
+topics: []
+uid: cdi00005140

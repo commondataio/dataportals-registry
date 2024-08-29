@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: IN-KE
+      name: Kerala
+description: Kerala Geoportal (GeoNode)
+endpoints:
+- type: geonode:datasets
+  url: https://opensdi.kerala.gov.in/api/datasets/
+- type: geonode:documents
+  url: https://opensdi.kerala.gov.in/api/documents/
+- type: csw202
+  url: https://opensdi.kerala.gov.in/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://opensdi.kerala.gov.in/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://opensdi.kerala.gov.in/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: opensdikeralagovin
+langs:
+- id: EN
+  name: English
+link: https://opensdi.kerala.gov.in
+name: Kerala Geoportal
+owner:
+  link: https://www.kerala.gov.in
+  location:
+    country:
+      id: IN
+      name: India
+    level: 30
+    subregion:
+      id: IN-KE
+      name: Kerala
+  name: Government of Kerala
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics: []
+uid: cdi00005137
