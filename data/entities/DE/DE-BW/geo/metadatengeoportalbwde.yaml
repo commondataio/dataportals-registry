@@ -19,22 +19,16 @@ coverage:
       id: DE-BW
       name: Baden-Wurttemberg
 endpoints:
-- type: geonetwork:query
-  url: https://metadaten.geoportal-bw.de/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://metadaten.geoportal-bw.de/geonetwork/srv/api/records
-- type: openapi
-  url: https://metadaten.geoportal-bw.de/geonetwork/srv/v2/api-docs
-  version: '2'
 - type: csw202
   url: https://metadaten.geoportal-bw.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
   version: 2.0.2
-- type: opensearch
-  url: https://metadaten.geoportal-bw.de/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
 - type: oaipmh20
   url: https://metadaten.geoportal-bw.de/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://metadaten.geoportal-bw.de/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://metadaten.geoportal-bw.de/geonetwork/srv/api/site
 id: metadatengeoportalbwde
 langs:
 - id: DE

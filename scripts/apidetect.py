@@ -52,6 +52,9 @@ CSV_MIMETYPES = ['text/csv']
 PLAIN_MIMETYPES = ['text/plain']
 KMZ_MIMETYPES = ['application/vnd.google-earth.kmz .kmz']
 
+
+GEONETWORK_SEARCH_POST_PARAMS = """{"from":0,"size":20, "bucket" : "metadata", "sort":["_score"],"query":{"function_score":{"boost":"5","functions":[{"filter":{"match":{"resourceType":"series"}},"weight":1.5},{"filter":{"exists":{"field":"parentUuid"}},"weight":0.3},{"filter":{"match":{"cl_status.key":"obsolete"}},"weight":0.2},{"filter":{"match":{"cl_status.key":"superseded"}},"weight":0.3},{"gauss":{"dateStamp":{"scale":"365d","offset":"90d","decay":0.5}}}],"score_mode":"multiply","query":{"bool":{"must":[{"terms":{"isTemplate":["n"]}}]}}}},"aggregations":{"groupOwner":{"terms":{"field":"groupOwner"},"aggs":{"sourceCatalogue":{"terms":{"field":"sourceCatalogue"}}},"meta":{"field":"groupOwner"}},"resourceType":{"terms":{"field":"resourceType"},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon-"},"field":"resourceType"}},"availableInServices":{"filters":{"filters":{"availableInViewService":{"query_string":{"query":"+linkProtocol:/OGC:WMS.*/"}},"availableInDownloadService":{"query_string":{"query":"+linkProtocol:/OGC:WFS.*/"}}}},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw ","map":{"availableInViewService":"fa-globe","availableInDownloadService":"fa-download"}}}},"cl_topic.key":{"terms":{"field":"cl_topic.key","size":5},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon-"},"field":"cl_topic.key"}},"th_httpinspireeceuropaeutheme-theme_tree.key":{"terms":{"field":"th_httpinspireeceuropaeutheme-theme_tree.key","size":5},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon iti-","expression":"http://inspire.ec.europa.eu/theme/(.*)"},"field":"th_httpinspireeceuropaeutheme-theme_tree.key"}},"tag":{"terms":{"field":"tag.default","include":".*","size":5},"meta":{"caseInsensitiveInclude":true,"field":"tag.default"}},"sourceCatalogue":{"terms":{"field":"sourceCatalogue","size":5,"include":".*"},"meta":{"orderByTranslation":true,"filterByTranslation":true,"displayFilter":true,"field":"sourceCatalogue"}},"OrgForResource":{"terms":{"field":"OrgForResourceObject.default","include":".*","size":5},"meta":{"caseInsensitiveInclude":true,"field":"OrgForResourceObject.default"}},"creationYearForResource":{"terms":{"field":"creationYearForResource","size":5,"order":{"_key":"desc"}},"meta":{"field":"creationYearForResource"}},"format":{"terms":{"field":"format","size":5,"order":{"_key":"asc"}},"meta":{"field":"format"}},"cl_spatialRepresentationType.key":{"terms":{"field":"cl_spatialRepresentationType.key","size":5},"meta":{"field":"cl_spatialRepresentationType.key"}},"cl_maintenanceAndUpdateFrequency.key":{"terms":{"field":"cl_maintenanceAndUpdateFrequency.key","size":5},"meta":{"field":"cl_maintenanceAndUpdateFrequency.key"}},"cl_status.key":{"terms":{"field":"cl_status.key","size":5},"meta":{"field":"cl_status.key"}},"resolutionScaleDenominator":{"terms":{"field":"resolutionScaleDenominator","size":5,"order":{"_key":"asc"}},"meta":{"field":"resolutionScaleDenominator"}},"resolutionDistance":{"terms":{"field":"resolutionDistance","size":5,"order":{"_key":"asc"}},"meta":{"field":"resolutionDistance"}},"dateStamp":{"auto_date_histogram":{"field":"dateStamp","buckets":50}}},"_source":{"includes":["uuid","id","groupOwner","logo","cat","inspireThemeUri","inspireTheme_syn","cl_topic","resourceType","resourceTitle*","resourceAbstract*","draft","owner","link","status*","rating","geom","contact*","Org*","isTemplate","valid","isHarvested","dateStamp","documentStandard","standardNameObject.default","cl_status*","mdStatus*"]},"script_fields":{"overview":{"script":{"source":"return params['_source'].overview == null ? [] : params['_source'].overview.stream().findFirst().orElse([]);"}}},"track_total_hits":true}"""
+
 GEONODE_URLMAP = [
     {'id' : 'geonode:layers', 'url' : '/api/layers/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'geonode:datasets', 'url' : '/api/datasets/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -91,6 +94,10 @@ GEONETWORK_URLMAP = [
     {'id' : 'csw202', 'url' : '/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
     {'id' : 'opensearch', 'url' : '/srv/eng/portal.opensearch', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
     {'id' : 'oaipmh20', 'url' : '/srv/eng/oaipmh?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},    
+#    {'id' : 'geonetwork:search', 'url' : '/srv/api/search/records/_search?bucket=metadata', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None, 'post_params': GEONETWORK_SEARCH_POST_PARAMS},
+    {'id' : 'geonetwork:settings', 'url' : '/srv/api/settings', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},    
+    {'id' : 'geonetwork:selections', 'url' : '/srv/api/selections', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'geonetwork:site', 'url' : '/srv/api/site', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},
 ]
 
 SOCRATA_URLMAP = [
@@ -218,7 +225,8 @@ QWC2_URLMAP = [
 ]
 
 PYGEOAPI_URLMAP = [
-    {'id' : 'pygeoapi:openapi', 'url' : '/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
+    {'id' : 'pygeoapi:openapi', 'url' : '/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'},
+    {'id' : 'pygeoapi:collections', 'url' : '/collections/?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
 ]
 
 
@@ -360,14 +368,21 @@ def api_identifier(website_url, software_id, verify_json=False):
         website_url = website_url.rstrip('/')
     for item in url_map:
         try:
-            if 'prefetch' in item and item['prefetch']:
-                request_url = website_url
-                prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))           
-            request_url = website_url + item['url']
-            if 'accept' in item.keys():
-                response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+            if 'post_params' in item.keys():
+                if 'accept' in item.keys():
+                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, json=json.loads(item['post_params']), timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                else:
+                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, json=json.loads(item['post_params']), timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                
             else:
-                response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                if 'prefetch' in item and item['prefetch']:
+                    request_url = website_url
+                    prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))           
+                request_url = website_url + item['url']
+                if 'accept' in item.keys():
+                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                else:
+                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
         except requests.exceptions.Timeout:
             results.append({'url' : request_url,'error' : 'Timeout'})
             continue       
