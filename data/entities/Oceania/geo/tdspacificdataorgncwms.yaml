@@ -12,6 +12,13 @@ coverage:
       name: Oceania
     level: 20
 description: PCCOS Pacific Data Hub service
+endpoints:
+- type: wms111
+  url: https://tds.pacificdata.org/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+  version: 1.1.1
+- type: wms130
+  url: https://tds.pacificdata.org/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
 id: tdspacificdataorgncwms
 langs:
 - id: EN
@@ -35,7 +42,7 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: nswms
+  id: ncwms
   name: ncWMS
 status: active
 tags:

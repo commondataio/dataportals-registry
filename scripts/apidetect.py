@@ -195,7 +195,14 @@ MAPPROXY_URLMAP = [
     {'id' : 'wms111', 'url' : '/service?REQUEST=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
     {'id' : 'wmts100', 'url' : '/service?REQUEST=GetCapabilities&SERVICE=WMTS', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
     {'id' : 'tms100', 'url' : '/tms/1.0.0/', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wmts100', 'url' : '/wmts/1.0.0/WMTSCapabilities.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
 ]
+
+NCWMS_URLMAP = [
+    {'id' : 'wms111', 'url' : '/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'wms130', 'url' : '/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.3.0'},
+]
+
 
 EPRINTS_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/cgi/oai2?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
@@ -329,7 +336,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
-'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP
+'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
