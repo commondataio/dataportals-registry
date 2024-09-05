@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Palestinian Energy and Natural Resources Authority - Mapping Portal
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapserver.penra.pna.ps/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapserver.penra.pna.ps/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapserver.penra.pna.ps/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapserver.penra.pna.ps/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapserver.penra.pna.ps/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapserver.penra.pna.ps/server/rest/services?f=kmz
+id: mapserverpenrapnaps
+langs:
+- id: AR
+  name: Arabic
+link: https://mapserver.penra.pna.ps/server/rest/services
+name: Palestinian Energy and Natural Resources Authority - Mapping Portal
+owner:
+  link: https://penra.gov.ps
+  location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+  name: Palestinian Energy and Natural Resources Authority
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00005158

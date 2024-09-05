@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Palestinian National Security Forces ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.nsf.ps/security/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.nsf.ps/security/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.nsf.ps/security/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.nsf.ps/security/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.nsf.ps/security/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.nsf.ps/security/rest/services?f=kmz
+id: mapsnsfps
+langs:
+- id: AR
+  name: Arabic
+link: https://maps.nsf.ps/security/rest/services/
+name: Palestinian National Security Forces ArcGIS Server
+owner:
+  link: https://www.nsf.ps
+  location:
+    country:
+      id: PS
+      name: Palestine
+    level: 20
+  name: Palestinian National Security Forces
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: Intelligence / Military
+  name: Intelligence / Military
+  type: iso19115
+uid: cdi00005159
