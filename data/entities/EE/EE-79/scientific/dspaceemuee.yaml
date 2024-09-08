@@ -20,12 +20,14 @@ coverage:
       name: Tartumaa
 description: Estonian University of Life Sciences
 endpoints:
-- type: dspace:items
-  url: https://dspace.emu.ee/rest/items
-  version: '6'
-- type: oaipmh20
-  url: https://dspace.emu.ee/oai/request?verb=Identify
-  version: '2.0'
+- type: dspace
+  url: https://dspace.emu.ee/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://dspace.emu.ee/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://dspace.emu.ee/sitemap_index.xml
 id: dspaceemuee
 identifiers:
 - id: opendoar

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,18 +16,17 @@ coverage:
       name: World
 description: A Repository of Agricultural Research Outputs
 endpoints:
+- type: dspace
+  url: https://cgspace.cgiar.org/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://cgspace.cgiar.org/server/api/discover/search/objects
+  version: '7'
 - type: dspace:items
   url: https://cgspace.cgiar.org/rest/items
   version: '6'
-- type: oaipmh20
-  url: https://cgspace.cgiar.org/oai/request?verb=Identify
-  version: '2.0'
-- type: rss
-  url: https://cgspace.cgiar.org/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://cgspace.cgiar.org/feed/atom_1.0/site
-  version: '1.0'
+- type: sitemap
+  url: https://cgspace.cgiar.org/sitemap_index.xml
 id: cgspacecgiarorg
 langs:
 - id: EN

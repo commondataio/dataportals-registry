@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,12 +17,8 @@ coverage:
 description: DepositOnce is TU Berlin’s institutional repository and is operated and
   continually developed by the Service Center for Research Data and Publications.
 endpoints:
-- type: dspace
-  url: https://api-depositonce.tu-berlin.de/server/api
-  version: '7'
-- type: dspace:objects
-  url: https://api-depositonce.tu-berlin.de/server/api/discover/search/objects
-  version: '7'
+- type: sitemap
+  url: https://depositonce.tu-berlin.de/sitemap_index.xml
 id: depositoncetuberlinde
 langs:
 - id: DE

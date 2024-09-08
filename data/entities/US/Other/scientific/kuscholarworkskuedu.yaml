@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -13,18 +13,17 @@ coverage:
     level: 20
 description: KU ScholarWorks is the digital repository of the University of Kansas.
 endpoints:
-- type: dspace:items
-  url: https://kuscholarworks.ku.edu/rest/items
-  version: '6'
+- type: dspace
+  url: https://kuscholarworks.ku.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://kuscholarworks.ku.edu/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
   url: https://kuscholarworks.ku.edu/oai/request?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://kuscholarworks.ku.edu/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://kuscholarworks.ku.edu/feed/atom_1.0/site
-  version: '1.0'
+- type: sitemap
+  url: https://kuscholarworks.ku.edu/sitemap_index.xml
 id: kuscholarworkskuedu
 langs:
 - id: EN

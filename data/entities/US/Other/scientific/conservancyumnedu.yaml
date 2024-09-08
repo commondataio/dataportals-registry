@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -14,12 +15,14 @@ coverage:
       id: '021'
       name: Northern America
 endpoints:
-- type: dspace:items
-  url: https://conservancy.umn.edu/rest/items
-  version: '6'
-- type: oaipmh20
-  url: https://conservancy.umn.edu/oai/request?verb=Identify
-  version: '2.0'
+- type: dspace
+  url: https://conservancy.umn.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://conservancy.umn.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://conservancy.umn.edu/sitemap_index.xml
 export_standard: OAI-PMH,DSpace REST API
 id: conservancyumnedu
 identifiers:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,15 +17,14 @@ coverage:
 description: BORIS is the institutional repository of the University of Bern and lists
   the scientific publications produced at the University of Bern.
 endpoints:
-- type: oaipmh20
-  url: https://boris-portal.unibe.ch/oai/request?verb=Identify
-  version: '2.0'
-- type: rss
-  url: https://boris-portal.unibe.ch/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://boris-portal.unibe.ch/feed/atom_1.0/site
-  version: '1.0'
+- type: dspace
+  url: https://boris-portal.unibe.ch/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://boris-portal.unibe.ch/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://boris-portal.unibe.ch/sitemap_index.xml
 id: borisportalunibech
 langs:
 - id: DE

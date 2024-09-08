@@ -60,13 +60,35 @@ GEONODE_URLMAP = [
     {'id' : 'geonode:datasets', 'url' : '/api/datasets/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'geonode:documents', 'url' : '/api/documents/', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'csw202', 'url' : '/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
+    {'id' : 'oaipmh20', 'url' : '/catalogue/csw?mode=oaipmh&verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'opensearch', 'url' : '/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+
+
     {'id' : 'wms111', 'url' : '/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
     {'id' : 'wfs110', 'url' : '/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
     {'id' : 'wcs111', 'url' : '/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
-    {'id' : 'csw202', 'url' : '/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
-    {'id' : 'oaipmh20', 'url' : '/catalogue/csw?mode=oaipmh&verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'wmts100', 'url' : '/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
-    {'id' : 'opensearch', 'url' : '/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+
+    {'id' : 'wms130', 'url' : '/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.3.0'},
+    {'id' : 'wfs100', 'url' : '/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wfs200', 'url' : '/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.0'},
+    {'id' : 'wcs100', 'url' : '/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wcs110', 'url' : '/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.0'},
+    {'id' : 'wcs11', 'url' : '/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1'},
+    {'id' : 'wcs201', 'url' : '/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.1'},    
+    {'id' : 'wps100', 'url' : '/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'tms100', 'url' : '/geoserver/gwc/service/tms/1.0.0', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0.0'},
+    {'id' : 'wms-c111', 'url' : '/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.1.1'},
+    {'id' : 'ogc:tiles', 'url' : '/geoserver/ogc/tiles/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:images', 'url' : '/geoserver/ogc/images/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:maps', 'url' : '/geoserver/ogc/maps/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'ogc:features', 'url' : '/geoserver/ogc/features/collections', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:version', 'url' : '/geoserver/rest/about/version','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:server-status', 'url' : '/geoserver/rest/about/server-status','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:settings', 'url' : '/geoserver/rest/settings','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'geoserver:layers', 'url' : '/geoserver/rest/layers','accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+
 ]
 
 DKAN_URLMAP = [
@@ -85,6 +107,11 @@ CKAN_URLMAP = [
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
 ]
 
+JUNAR_URLMAP = [
+    {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+]
+
+
 GEONETWORK_URLMAP = [
     {'id' : 'geonetwork:api', 'url' : '/srv/api', 'expected_mime' : XML_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'geonetwork:query', 'display_url' : '/srv/eng/q', 'url' : '/srv/eng/q?_content_type=json&bucket=s101&facet.q=&fast=index&resultType=details&sortBy=relevance&sortOrder=&title_OR_altTitle_OR_any=', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -98,6 +125,10 @@ GEONETWORK_URLMAP = [
     {'id' : 'geonetwork:settings', 'url' : '/srv/api/settings', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},    
     {'id' : 'geonetwork:selections', 'url' : '/srv/api/selections', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},
     {'id' : 'geonetwork:site', 'url' : '/srv/api/site', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : False, 'version': None},
+]
+
+FIGSHARE_URLMAP = [
+    {'id' : 'sitemap', 'url' : '/sitemap/siteindex.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'urlpat' : '/articles/dataset/'},
 ]
 
 SOCRATA_URLMAP = [
@@ -115,7 +146,7 @@ STATSUITE_URLMAP = [
 
 
 DATAVERSE_URLMAP = [
-    {'id' : 'dataverseapi', 'display_url' : '/api/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'dataverseapi', 'display_url' : '/api	/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'oaipmh20', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
 ]
 
@@ -134,7 +165,8 @@ INVENIO_URLMAP = [
 
 
 WORKTRIBE_URLMAP = [
-    {'id' : 'oaipmh20', 'url' : '/oaiprovider?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
+    {'id' : 'oaipmh20', 'url' : '/oaiprovider?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'sitemap', 'url' : '/sitemap_index.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
 ]
 
 
@@ -149,16 +181,26 @@ DSPACE_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/oai/request?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'opensearch', 'url' : '/open-search/description.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
     {'id' : 'rss', 'url' : '/feed/rss_2.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
-    {'id' : 'atom', 'url' : '/feed/atom_1.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'}      
-]
-ESPLORO_URLMAP = [
-    {'id' : 'esploro:search', 'display_url' : '/esplorows/rest/research/simpleSearch', 'url' : '/esplorows/rest/research/simpleSearch?_wadl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None} 
+    {'id' : 'atom', 'url' : '/feed/atom_1.0/site', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+    {'id' : 'sitemap', 'url' : '/sitemap_index.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
 ]
 
-ELSVIERPURE_URLMAP = [
-    {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
-    {'id' : 'rss', 'url' : '/en/datasets/?search=&isCopyPasteSearch=false&format=rss', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
+ESPLORO_URLMAP = [
+    {'id' : 'esploro:search', 'display_url' : '/esplorows/rest/research/simpleSearch', 'url' : '/esplorows/rest/research/simpleSearch?_wadl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'sitemap', 'url' : '/view/google/siteindex.xml', 'is_json' : False, 'version': None, 'urlpat' : '/dataset/'},
+                                
 ]
+
+ELSEVIERPURE_URLMAP = [
+    {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'rss', 'url' : '/en/datasets/?search=&isCopyPasteSearch=false&format=rss', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'sitemap', 'url' : '/sitemap/datasets.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+]
+
+ELSEVIERDC_URLMAP = [
+    {'id' : 'sitemap', 'url' : '/sitemap/index', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+]
+
 
 NADA_URLMAP = [
     {'id' : 'nada:catalog-search', 'url' : '/index.php/api/catalog/search', 'accept': 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
@@ -291,7 +333,8 @@ ERDDAP_URLMAP = [
 
 MYCORE_URLMAP = [
     {'id' : 'mycore:objects', 'url' : '/api/v2/objects', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
-    {'id' : 'oaipmh20', 'url' : '/servlets/OAIDataProvider?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'}
+    {'id' : 'oaipmh20', 'url' : '/servlets/OAIDataProvider?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'sitemap', 'url' : '/sitemap_google.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
 ]
 
 
@@ -327,7 +370,7 @@ WEKO3_URLMAP = [
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
 'ckan' : CKAN_URLMAP, 'geonetwork' : GEONETWORK_URLMAP, 'pxweb' : PXWEB_URLMAP,
 'socrata' : SOCRATA_URLMAP, 'dataverse' : DATAVERSE_URLMAP,
-'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 
+'dspace' : DSPACE_URLMAP, 'elsevierpure' : ELSEVIERPURE_URLMAP, 'nada' : NADA_URLMAP, 'geoserver' : GEOSERVER_URLMAP, 
 'eprints' :EPRINTS_URLMAP, 'koordinates' : KOORDINATES_URLMAP, 'aleph' : ALEPH_URLMAP, 'mycore' : MYCORE_URLMAP,
 'magda' : MAGDA_URLMAP, 'opendatasoft' : OPENDATASOFT_URLMAP, 'arcgishub' : ARCGISHUB_URLMAP, 
 'arcgisserver' : ARCGISSERVER_URLMAP, 'oskari' : OSKARI_URLMAP, 'metagis' : METAGIS_URLMAP,
@@ -336,7 +379,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'mapproxy': MAPPROXY_URLMAP, 'statsuite' : STATSUITE_URLMAP, 'worktribe' : WORKTRIBE_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
-'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP
+'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
+'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -410,21 +454,31 @@ def api_identifier(website_url, software_id, verify_json=False):
         if response.status_code != 200: 
             results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower() if 'content-type' in response.headers.keys() else '', 'error' : 'Wrong status'})
             continue
-        if item['expected_mime'] is not None and 'Content-Type' in response.headers.keys():
-            if response.headers['Content-Type'].split(';', 1)[0].lower() not in item['expected_mime']:
-                results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower(), 'error' : 'Wrong content type'})
-                continue
+        if 'expected_mime' in item.keys() and item['expected_mime'] is not None and 'Content-Type' in response.headers.keys():
             if verify_json:
                 if 'is_json' in item.keys() and item['is_json']:
                     try:
                         data = json.loads(response.content)
                     except KeyError:
                         results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower(), 'error' : 'Error loading JSON'})
-                        continue
+                        continue            
+            if response.headers['Content-Type'].split(';', 1)[0].lower() not in item['expected_mime']:
+                results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower(), 'error' : 'Wrong content type'})
+                continue
             api = {'type': item['id'], 'url' : website_url + item['display_url'] if 'display_url' in item.keys() else request_url}
             if item['version']: 
                 api['version'] = item['version']
+            if 'urlpat' in item.keys():
+                api['url_pattern'] = item['urlpat']
             found.append(api)
+        else:
+            api = {'type': item['id'], 'url' : website_url + item['display_url'] if 'display_url' in item.keys() else request_url}
+            if item['version']: 
+                api['version'] = item['version']
+            if 'urlpat' in item.keys():
+                api['url_pattern'] = item['urlpat']
+            found.append(api)
+
     logging.info('Found: ' + str(results))
     return found
 

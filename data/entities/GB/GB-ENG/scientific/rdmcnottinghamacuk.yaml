@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -23,6 +24,12 @@ endpoints:
 - type: oaipmh20
   url: https://rdmc.nottingham.ac.uk/oai/request?verb=Identify
   version: '2.0'
+- type: rss
+  url: https://rdmc.nottingham.ac.uk/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://rdmc.nottingham.ac.uk/feed/atom_1.0/site
+  version: '1.0'
 id: rdmcnottinghamacuk
 identifiers:
 - id: re3data
