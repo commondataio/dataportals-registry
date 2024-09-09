@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,12 @@ description: This is a temporary record with some data collected but it should b
 endpoints:
 - type: erddap:index
   url: https://www.smartatlantic.ca/erddap/index.json
+- type: erddap:datasets
+  url: https://www.smartatlantic.ca/erddap/info/index.json
+- type: opensearch
+  url: https://www.smartatlantic.ca/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://www.smartatlantic.ca/erddap/sitemap.xml
 id: wwwsmartatlanticca
 langs:
 - id: EN

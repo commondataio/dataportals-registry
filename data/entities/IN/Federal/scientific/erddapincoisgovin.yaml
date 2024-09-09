@@ -17,7 +17,13 @@ coverage:
 description: ESSO - Indian National Centre for Ocean Information Services ERDDAP server
 endpoints:
 - type: erddap:index
+  url: https://erddap.incois.gov.in/erddap/index.json
+- type: erddap:datasets
   url: https://erddap.incois.gov.in/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.incois.gov.in/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.incois.gov.in/erddap/sitemap.xml
 id: erddapincoisgovin
 langs:
 - id: EN

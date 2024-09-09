@@ -329,6 +329,9 @@ THREDDS_URLMAP = [
 
 ERDDAP_URLMAP = [
     {'id' : 'erddap:index',  'url' : '/index.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : False},    
+    {'id' : 'erddap:datasets',  'url' : '/info/index.json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None, 'prefetch' : False},
+    {'id' : 'opensearch',  'url' : '/opensearch1.1/description.xml', 'expected_mime' : 'application/opensearchdescription+xml', 'is_json' : False, 'version': None, 'prefetch' : False},    
+    {'id' : 'sitemap',  'url' : '/sitemap.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
 ]
 
 MYCORE_URLMAP = [

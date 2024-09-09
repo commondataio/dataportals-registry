@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,7 +18,13 @@ description: This is a temporary record with some data collected but it should b
   updated befor adding to the index
 endpoints:
 - type: erddap:index
+  url: https://canwinerddap.ad.umanitoba.ca/erddap/index.json
+- type: erddap:datasets
   url: https://canwinerddap.ad.umanitoba.ca/erddap/info/index.json
+- type: opensearch
+  url: https://canwinerddap.ad.umanitoba.ca/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://canwinerddap.ad.umanitoba.ca/erddap/sitemap.xml
 id: canwinerddapadumanitobaca
 langs:
 - id: EN
