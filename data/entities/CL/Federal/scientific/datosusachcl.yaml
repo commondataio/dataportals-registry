@@ -21,7 +21,10 @@ description: El repositorio de datos de investigación de la USACH proporciona u
   a la población.
 endpoints:
 - type: dataverseapi
-  url: https://datos.usach.cl/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://datos.usach.cl/api/search
+- type: oaipmh20
+  url: https://datos.usach.cl/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: datosusachcl
 langs:

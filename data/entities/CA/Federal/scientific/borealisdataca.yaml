@@ -18,7 +18,12 @@ description: Open for researchers and organizations associated with subscribing 
   universities to deposit data.
 endpoints:
 - type: dataverseapi
-  url: https://borealisdata.ca/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://borealisdata.ca/api/search
+- type: oaipmh20
+  url: https://borealisdata.ca/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://borealisdata.ca/sitemap.xml
 export_standard: Dataverse API
 id: borealisdataca
 identifiers:

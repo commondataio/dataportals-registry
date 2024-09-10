@@ -18,7 +18,10 @@ description: The Dataverse portal of the International Center for Agricultural R
   in Dry Ares.
 endpoints:
 - type: dataverseapi
-  url: https://data.mel.cgiar.org/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://data.mel.cgiar.org/api/search
+- type: oaipmh20
+  url: https://data.mel.cgiar.org/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: datamelcgiarorg
 langs:

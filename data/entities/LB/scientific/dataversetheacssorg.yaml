@@ -25,7 +25,12 @@ description: The ACSS Dataverse is an initiative of the Arab Council for the Soc
   by depositing data.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.theacss.org/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.theacss.org/api/search
+- type: oaipmh20
+  url: https://dataverse.theacss.org/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dataverse.theacss.org/sitemap/sitemap.xml
 export_standard: Dataverse API
 id: dataversetheacssorg
 identifiers:

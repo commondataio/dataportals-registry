@@ -18,7 +18,10 @@ description: The FIU Research Data Portal serves as an inter-disciplinary data a
   to support access and reuse of research data produced at FIU.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.fiu.edu/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.fiu.edu/api/search
+- type: oaipmh20
+  url: https://dataverse.fiu.edu/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataversefiuedu
 langs:

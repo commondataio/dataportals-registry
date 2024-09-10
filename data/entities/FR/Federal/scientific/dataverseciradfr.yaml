@@ -23,8 +23,11 @@ description: Organisme français de recherche agronomique et de coopération int
   social sciences and engineering sciences, applied to agriculture, the environment
   and territorial management.
 endpoints:
-- type: dataverseapi
-  url: https://dataverse.cirad.fr/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://dataverse.cirad.fr/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dataverse.cirad.fr/sitemap/sitemap.xml
 export_standard: Dataverse API
 id: dataverseciradfr
 identifiers:

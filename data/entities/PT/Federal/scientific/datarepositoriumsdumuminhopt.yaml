@@ -18,7 +18,10 @@ description: Institutional Data Repository of the University of Minho. Share, pu
   and manage research data from UMinho research units.
 endpoints:
 - type: dataverseapi
-  url: https://datarepositorium.sdum.uminho.pt/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://datarepositorium.sdum.uminho.pt/api/search
+- type: oaipmh20
+  url: https://datarepositorium.sdum.uminho.pt/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: datarepositoriumsdumuminhopt
 langs:

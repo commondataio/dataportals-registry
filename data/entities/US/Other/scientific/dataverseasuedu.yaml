@@ -22,7 +22,10 @@ description: ASU Library research data repository (powered by Harvard’s Datave
   ecosystem to present a more complete picture of ASU’s scholarly activities.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.asu.edu/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.asu.edu/api/search
+- type: oaipmh20
+  url: https://dataverse.asu.edu/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseasuedu
 identifiers:

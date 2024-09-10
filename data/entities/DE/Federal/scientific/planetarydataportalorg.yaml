@@ -21,7 +21,10 @@ description: The TRR170-DB was set up to manage data products of the collaborati
   geological maps and model simulations.
 endpoints:
 - type: dataverseapi
-  url: https://planetary-data-portal.org/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://planetary-data-portal.org/api/search
+- type: oaipmh20
+  url: https://planetary-data-portal.org/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: planetarydataportalorg
 identifiers:

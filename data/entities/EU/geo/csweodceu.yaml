@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,21 @@ endpoints:
 - type: csw202
   url: https://csw.eodc.eu
   version: 2.0.2
+- type: oaipmh20
+  url: https://csw.eodc.eu/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://csw.eodc.eu/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://csw.eodc.eu/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://csw.eodc.eu/opensearch
+  version: '1.0'
+- type: sru
+  url: https://csw.eodc.eu/sru
+  version: '1.0'
 id: csweodceu
 langs:
 - id: EN

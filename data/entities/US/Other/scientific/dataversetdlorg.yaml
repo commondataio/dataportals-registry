@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,8 +17,9 @@ coverage:
 description: A statewide archive of research data from Texas Digital Library (TDL)
   member institutions.
 endpoints:
-- type: dataverseapi
-  url: https://dataverse.tdl.org/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://dataverse.tdl.org/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataversetdlorg
 identifiers:

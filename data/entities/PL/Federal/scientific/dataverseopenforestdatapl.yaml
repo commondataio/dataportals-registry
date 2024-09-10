@@ -17,7 +17,10 @@ coverage:
 description: Podlasie digital repository of natural science data
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.openforestdata.pl/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.openforestdata.pl/api/search
+- type: oaipmh20
+  url: https://dataverse.openforestdata.pl/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseopenforestdatapl
 identifiers:

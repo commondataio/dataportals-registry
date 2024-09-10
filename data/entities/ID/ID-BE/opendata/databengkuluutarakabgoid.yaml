@@ -17,6 +17,16 @@ coverage:
     subregion:
       id: ID-BE
       name: Bengkulu
+endpoints:
+- type: ckan
+  url: https://data.bengkuluutarakab.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.bengkuluutarakab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.bengkuluutarakab.go.id/api/3/action/package_list
+  version: '3'
 id: databengkuluutarakabgoid
 langs:
 - id: EN
@@ -45,8 +55,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government

@@ -26,7 +26,10 @@ description: Arca Dados is Fiocruz's official repository to archive, publish, di
   that meet society's demands. For more information, email dataabertos@fiocruz.br
 endpoints:
 - type: dataverseapi
-  url: https://dadosdepesquisa.fiocruz.br/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dadosdepesquisa.fiocruz.br/api/search
+- type: oaipmh20
+  url: https://dadosdepesquisa.fiocruz.br/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dadosdepesquisafiocruzbr
 langs:

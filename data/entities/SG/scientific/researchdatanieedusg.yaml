@@ -20,7 +20,10 @@ description: NIE Data Repository is the institutional open access research data 
   in order to make their research data discoverable, accessible and reusable.
 endpoints:
 - type: dataverseapi
-  url: https://researchdata.nie.edu.sg/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://researchdata.nie.edu.sg/api/search
+- type: oaipmh20
+  url: https://researchdata.nie.edu.sg/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: researchdatanieedusg
 identifiers:

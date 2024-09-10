@@ -18,7 +18,10 @@ description: Open for researchers associated with British Columbia universities 
   deposit data.
 endpoints:
 - type: dataverseapi
-  url: https://abacus.library.ubc.ca/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://abacus.library.ubc.ca/api/search
+- type: oaipmh20
+  url: https://abacus.library.ubc.ca/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: abacuslibraryubcca
 identifiers:

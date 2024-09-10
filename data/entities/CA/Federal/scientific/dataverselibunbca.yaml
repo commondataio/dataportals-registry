@@ -18,7 +18,10 @@ description: UNB Dataverse is repository for research data collected by research
   and organizations primarily affiliated with the University of New Brunswick.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.lib.unb.ca/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.lib.unb.ca/api/search
+- type: oaipmh20
+  url: https://dataverse.lib.unb.ca/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverselibunbca
 identifiers:

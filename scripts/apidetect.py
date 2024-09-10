@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # This script intended to detect data catalogs API
-
 import logging
 import sys
+from io import BytesIO
 import typer
 from typing_extensions import Annotated
 import requests
+from urllib.parse import urljoin
 import datetime
 import yaml
 try:
@@ -19,6 +20,9 @@ from  urllib.parse import urlparse
 import shutil
 import pprint
 from urllib.parse import urlparse
+import lxml.html
+import lxml.etree
+import robots
 from requests.exceptions import ConnectionError, TooManyRedirects
 from urllib3.exceptions import InsecureRequestWarning#, ConnectionError
 # Suppress only the single warning from urllib3 needed.
@@ -36,7 +40,7 @@ ENTRIES_DIR = '../data/entities'
 SCHEDULED_DIR = '../data/scheduled'
 app = typer.Typer()
 
-DEFAULT_TIMEOUT = 300
+DEFAULT_TIMEOUT = 10
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
@@ -46,11 +50,11 @@ XML_MIMETYPES = ['text/xml', 'application/xml', 'application/vnd.ogc.se_xml', 'a
 JSON_MIMETYPES = ['text/json', 'application/json', 'application/hal+json', 'application/vnd.oai.openapi+json;version=3.0; charset=utf-8', 'application/vnd.oai.openapi+json']
 N3_MIMETYPES = ['text/n3']
 ZIP_MIMETYPES = ['application/zip']
-
+EXCEL_MIMETYPES = ['application/vnd.ms-excel',]
 
 CSV_MIMETYPES = ['text/csv']
 PLAIN_MIMETYPES = ['text/plain']
-KMZ_MIMETYPES = ['application/vnd.google-earth.kmz .kmz']
+KMZ_MIMETYPES = ['application/vnd.google-earth.kmz']
 
 
 GEONETWORK_SEARCH_POST_PARAMS = """{"from":0,"size":20, "bucket" : "metadata", "sort":["_score"],"query":{"function_score":{"boost":"5","functions":[{"filter":{"match":{"resourceType":"series"}},"weight":1.5},{"filter":{"exists":{"field":"parentUuid"}},"weight":0.3},{"filter":{"match":{"cl_status.key":"obsolete"}},"weight":0.2},{"filter":{"match":{"cl_status.key":"superseded"}},"weight":0.3},{"gauss":{"dateStamp":{"scale":"365d","offset":"90d","decay":0.5}}}],"score_mode":"multiply","query":{"bool":{"must":[{"terms":{"isTemplate":["n"]}}]}}}},"aggregations":{"groupOwner":{"terms":{"field":"groupOwner"},"aggs":{"sourceCatalogue":{"terms":{"field":"sourceCatalogue"}}},"meta":{"field":"groupOwner"}},"resourceType":{"terms":{"field":"resourceType"},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon-"},"field":"resourceType"}},"availableInServices":{"filters":{"filters":{"availableInViewService":{"query_string":{"query":"+linkProtocol:/OGC:WMS.*/"}},"availableInDownloadService":{"query_string":{"query":"+linkProtocol:/OGC:WFS.*/"}}}},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw ","map":{"availableInViewService":"fa-globe","availableInDownloadService":"fa-download"}}}},"cl_topic.key":{"terms":{"field":"cl_topic.key","size":5},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon-"},"field":"cl_topic.key"}},"th_httpinspireeceuropaeutheme-theme_tree.key":{"terms":{"field":"th_httpinspireeceuropaeutheme-theme_tree.key","size":5},"meta":{"decorator":{"type":"icon","prefix":"fa fa-fw gn-icon iti-","expression":"http://inspire.ec.europa.eu/theme/(.*)"},"field":"th_httpinspireeceuropaeutheme-theme_tree.key"}},"tag":{"terms":{"field":"tag.default","include":".*","size":5},"meta":{"caseInsensitiveInclude":true,"field":"tag.default"}},"sourceCatalogue":{"terms":{"field":"sourceCatalogue","size":5,"include":".*"},"meta":{"orderByTranslation":true,"filterByTranslation":true,"displayFilter":true,"field":"sourceCatalogue"}},"OrgForResource":{"terms":{"field":"OrgForResourceObject.default","include":".*","size":5},"meta":{"caseInsensitiveInclude":true,"field":"OrgForResourceObject.default"}},"creationYearForResource":{"terms":{"field":"creationYearForResource","size":5,"order":{"_key":"desc"}},"meta":{"field":"creationYearForResource"}},"format":{"terms":{"field":"format","size":5,"order":{"_key":"asc"}},"meta":{"field":"format"}},"cl_spatialRepresentationType.key":{"terms":{"field":"cl_spatialRepresentationType.key","size":5},"meta":{"field":"cl_spatialRepresentationType.key"}},"cl_maintenanceAndUpdateFrequency.key":{"terms":{"field":"cl_maintenanceAndUpdateFrequency.key","size":5},"meta":{"field":"cl_maintenanceAndUpdateFrequency.key"}},"cl_status.key":{"terms":{"field":"cl_status.key","size":5},"meta":{"field":"cl_status.key"}},"resolutionScaleDenominator":{"terms":{"field":"resolutionScaleDenominator","size":5,"order":{"_key":"asc"}},"meta":{"field":"resolutionScaleDenominator"}},"resolutionDistance":{"terms":{"field":"resolutionDistance","size":5,"order":{"_key":"asc"}},"meta":{"field":"resolutionDistance"}},"dateStamp":{"auto_date_histogram":{"field":"dateStamp","buckets":50}}},"_source":{"includes":["uuid","id","groupOwner","logo","cat","inspireThemeUri","inspireTheme_syn","cl_topic","resourceType","resourceTitle*","resourceAbstract*","draft","owner","link","status*","rating","geom","contact*","Org*","isTemplate","valid","isHarvested","dateStamp","documentStandard","standardNameObject.default","cl_status*","mdStatus*"]},"script_fields":{"overview":{"script":{"source":"return params['_source'].overview == null ? [] : params['_source'].overview.stream().findFirst().orElse([]);"}}},"track_total_hits":true}"""
@@ -146,7 +150,7 @@ STATSUITE_URLMAP = [
 
 
 DATAVERSE_URLMAP = [
-    {'id' : 'dataverseapi', 'display_url' : '/api	/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'dataverseapi', 'display_url' : '/api/search','url' : '/api/search?q=*&type=dataset&sort=name&order=asc', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'oaipmh20', 'url' : '/oai?verb=Identify', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'} 
 ]
 
@@ -195,6 +199,7 @@ ELSEVIERPURE_URLMAP = [
     {'id' : 'oaipmh20', 'url' : '/ws/oai?verb=Identify', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'rss', 'url' : '/en/datasets/?search=&isCopyPasteSearch=false&format=rss', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
     {'id' : 'sitemap', 'url' : '/sitemap/datasets.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'pure:export_excel', 'url' : '/en/datasets/?export=xls', 'expected_mime' : EXCEL_MIMETYPES, 'is_json' : False, 'version': None},
 ]
 
 ELSEVIERDC_URLMAP = [
@@ -278,6 +283,18 @@ PYGEOAPI_URLMAP = [
     {'id' : 'pygeoapi:collections', 'url' : '/collections/?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
 ]
 
+PYCSW30_URLMAP = [
+    {'id' : 'ogcrecords', 'url' : '/collections?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'},
+    {'id' : 'oaipmh20', 'url' : '/oaipmh', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+    {'id' : 'csw202', 'url' : '/csw?service=CSW&version=2.0.2&request=GetCapabilities', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0.2'},
+    {'id' : 'csw300', 'url' : '/csw', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '3.0.0'},
+    {'id' : 'opensearch', 'url' : '/opensearch', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+    {'id' : 'sru', 'url' : '/sru', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '1.0'},
+    {'id' : 'openapi', 'url' : '/openapi?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'stac:collection', 'url' : '/search?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+]
+
+
 WIS20BOX_URLMAP = [
     {'id' : 'pygeoapi:openapi', 'url' : '/oapi/openapi', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'},
     {'id' : 'pygeoapi:collections', 'url' : '/oapi/collections/?f=json', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'}
@@ -304,7 +321,6 @@ ARCGISHUB_URLMAP = [
 
 ARCGISSERVER_URLMAP = [
     {'id' : 'arcgis:portals:self',  'url' : '/portal/sharing/rest/portals/self?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES, 'is_json' : True, 'version': None},
-
     {'id' : 'arcgis:rest:info',  'url' : '/rest/info?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'arcgis:rest:services',  'url' : '/rest/services?f=pjson', 'accept' : 'application/json', 'expected_mime' : PLAIN_MIMETYPES + JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'arcgis:soap',  'url' : '/services?wsdl', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
@@ -367,7 +383,84 @@ WEKO3_URLMAP = [
     {'id' : 'weko3:records', 'url' : '/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
  ]
 
+CUSTOM_URLMAP = [
+    {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'sitemap',  'url' : '/sitemap.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
+    {'id' : 'sitemap',  'url' : '/sitemap.xml.gz', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
+    {'id' : 'sitemap', 'url' : '/sitemap_google.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'sitemap', 'url' : '/sitemap/index', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+    {'id' : 'sitemap', 'url' : '/sitemap_index.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None},
+]
 
+
+def analyze_robots(root_url): 
+   robots_url = root_url.rstrip('/') + '/robots.txt'
+   print('Analyzing robots.txt', robots_url)
+   parser = robots.RobotsParser.from_uri(robots_url)
+   sitemaps = parser.sitemaps
+   output = []
+   if sitemaps is not None and len(sitemaps) > 0:
+        print('Found sitemaps: %s' % (', '.join(sitemaps))) 
+        for s in sitemaps:
+            output.append({'type' : 'sitemap', 'url' : s})
+   return output
+
+
+FILTER_RELS  = ['stylesheet', 'icon', 'shortcut icon', 'mask-icon', 'apple-touch-icon', 'manifest', 'apple-touch-icon-precomposed', 'preconnect', 'shortlink', 'canonical', 'dns-prefetch', 'prefetch', 'preload', 'terms-of-service']
+FILTER_TYPES = ['text/css', 'image/x-icon', 'image/png']
+
+def analyze_root(root_url):
+    print('Analyzing root page', root_url)
+    output = []
+    s = requests.Session()
+    try:
+        response = s.get(root_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+    except requests.exceptions.Timeout:
+#        results.append({'url' : request_url,'error' : 'Timeout'})
+        return output
+    except requests.exceptions.SSLError:
+#        results.append({'url' : request_url,'error' : 'SSL Error'})
+        return output
+    except ConnectionError:
+#        results.append({'url' : request_url,'error' : 'no connection'})
+        return output  
+    except TooManyRedirects:
+#        results.append({'url' : request_url,'error' : 'no connection'})
+        return output      
+    if response.status_code != 200: 
+#        results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower() if 'content-type' in response.headers.keys() else '', 'error' : 'Wrong status'})
+        return output
+#    print(response.text)
+    try:
+        hp = lxml.etree.HTMLParser()#encoding='utf8')
+        document = lxml.html.fromstring(response.content, parser=hp)
+    except ValueError:
+        return output
+    except lxml.etree.ParserError:
+        return output
+    links = document.xpath('//head/link')
+    for link in links:
+        lr = dict(link.attrib)
+        if 'rel' in lr.keys() and lr['rel'].lower() in FILTER_RELS: continue
+        if 'type' in lr.keys() and lr['type'].lower() in FILTER_TYPES: continue
+        print(lr)
+        if 'rel' in lr.keys() and 'href' in lr.keys():
+            if lr['rel'] == 'resourcesync':
+                output.append({'type' : 'resourcesync', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+            elif lr['rel'] == 'Sword':
+                output.append({'type' : 'sword', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+            elif lr['rel'] == 'SwordDeposit':
+                output.append({'type' : 'sword:deposit', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+            elif lr['rel'] == 'SwordDeposit':
+                output.append({'type' : 'sword:deposit', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+            elif lr['rel'] == 'unapi-server':
+                output.append({'type' : 'unapi', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+        if 'type' in lr.keys() and 'href' in lr.keys():
+            if lr['type'] == 'application/opensearchdescription+xml':
+                output.append({'type' : 'opensearch', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+    return output
+
+DEEP_SEARCH_FUNCTIONS = [analyze_robots, analyze_root] 
 
 
 CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP, 
@@ -383,7 +476,8 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'inveniordm' : INVENIORDM_URLMAP, 'invenio' : INVENIO_URLMAP, 'esploro' : ESPLORO_URLMAP, 'hyrax' : HYRAX_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
 'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
-'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP
+'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP, 'custom' : CUSTOM_URLMAP,
+'pycsw' : PYCSW30_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -415,7 +509,7 @@ def erddap_url_cleanup_func(url):
 URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func, 
                   'thredds' : thredds_url_cleanup_func, 'erddap' : erddap_url_cleanup_func}
 
-def api_identifier(website_url, software_id, verify_json=False):
+def api_identifier(website_url, software_id, verify_json=False, deep=False):
     url_map = CATALOGS_URLMAP[software_id]
     results = []
     found = []
@@ -427,6 +521,7 @@ def api_identifier(website_url, software_id, verify_json=False):
         website_url = website_url.rstrip('/')
     for item in url_map:
         try:
+            request_url = website_url + item['url']
             if 'post_params' in item.keys():
                 if 'accept' in item.keys():
                     response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, json=json.loads(item['post_params']), timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
@@ -435,7 +530,7 @@ def api_identifier(website_url, software_id, verify_json=False):
                 
             else:
                 if 'prefetch' in item and item['prefetch']:
-                    request_url = website_url
+#                    request_url = website_url
                     prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))           
                 request_url = website_url + item['url']
                 if 'accept' in item.keys():
@@ -481,14 +576,19 @@ def api_identifier(website_url, software_id, verify_json=False):
             if 'urlpat' in item.keys():
                 api['url_pattern'] = item['urlpat']
             found.append(api)
-
+    if deep:
+        print('Going deep')
+        for func in DEEP_SEARCH_FUNCTIONS:
+            extracted = func(website_url)
+            if len(extracted) > 0:
+                found.extend(extracted)
     logging.info('Found: ' + str(results))
     return found
 
 
 
 @app.command()
-def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
+def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
     """Enrich data catalogs with API endpoints by software"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -504,15 +604,29 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
             f.close()
             if record['software']['id']  == software:
                 print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
-                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
-                    print(' - skip, we have endpoints already and no replace mode')
+                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and action == 'insert':
+                    print(' - skip, we have endpoints already and not in replace or update mode')
                     continue
-                found = api_identifier(record['link'].rstrip('/'), software)
-                record['endpoints'] = []
+                found = api_identifier(record['link'].rstrip('/'), software, deep=deep)             
+                keys = []
+                if action == 'update':
+                    if 'endpoints' in record.keys() and len(record['endpoints']) > 0:
+                        for e in record['endpoints']:
+                            if 'url' in e.keys():
+                                keys.append(e['url'])
+                    else:
+                        record['endpoints'] = []
+                else:
+                    record['endpoints'] = []
+                added = 0
                 for api in found:
-                    print('- %s %s' % (api['type'], api['url']))
-                    record['endpoints'].append(api)                
-                if len(record['endpoints']) > 0:
+                    if api['url'] not in keys:                        
+                        print('- %s %s' % (api['type'], api['url']))
+                        record['endpoints'].append(api)
+                        keys.append(api['url'])
+                        added += 1
+                print('Found %d, added %d' % (len(found), added))
+                if added > 0:
                     record['api'] = True
                     record['api_status'] = 'active'
                     f = open(filepath, 'w', encoding='utf8')
@@ -520,7 +634,7 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
                     f.close()
                     print('- updated profile')
                 else:
-                    print('- no endpoints, not updated')
+                    print('- no endpoints or no new endpoints, not updated')
 
 @app.command()
 def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):

@@ -27,7 +27,10 @@ description: e-cienciaDatos is a multidisciplinary data repository that houses t
   por universidad con los datasets de dicha universidad.
 endpoints:
 - type: dataverseapi
-  url: https://edatos.consorciomadrono.es/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://edatos.consorciomadrono.es/api/search
+- type: oaipmh20
+  url: https://edatos.consorciomadrono.es/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: edatosconsorciomadronoes
 identifiers:

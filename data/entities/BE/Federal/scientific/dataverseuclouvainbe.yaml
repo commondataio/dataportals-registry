@@ -17,7 +17,10 @@ coverage:
 description: Université catholique de Louvain - Belgium
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.uclouvain.be/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.uclouvain.be/api/search
+- type: oaipmh20
+  url: https://dataverse.uclouvain.be/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseuclouvainbe
 langs:

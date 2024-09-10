@@ -20,7 +20,10 @@ description: DaRUS, the data repository of the University of Stuttgart, offers a
   and exchanging data at all stages of the lifecycle.
 endpoints:
 - type: dataverseapi
-  url: https://darus.uni-stuttgart.de/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://darus.uni-stuttgart.de/api/search
+- type: oaipmh20
+  url: https://darus.uni-stuttgart.de/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: darusunistuttgartde
 identifiers:

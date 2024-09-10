@@ -17,7 +17,10 @@ coverage:
 description: Explore research data from Universidad del Rosario affiliated researchers.
 endpoints:
 - type: dataverseapi
-  url: https://research-data.urosario.edu.co/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://research-data.urosario.edu.co/api/search
+- type: oaipmh20
+  url: https://research-data.urosario.edu.co/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: researchdataurosarioeduco
 identifiers:

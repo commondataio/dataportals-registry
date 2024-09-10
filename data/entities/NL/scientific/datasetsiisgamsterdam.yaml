@@ -18,7 +18,10 @@ description: The IISH Dataverse contains micro-, meso-, and macro-level datasets
   social and economic history.
 endpoints:
 - type: dataverseapi
-  url: https://datasets.iisg.amsterdam/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://datasets.iisg.amsterdam/api/search
+- type: oaipmh20
+  url: https://datasets.iisg.amsterdam/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: datasetsiisgamsterdam
 identifiers:

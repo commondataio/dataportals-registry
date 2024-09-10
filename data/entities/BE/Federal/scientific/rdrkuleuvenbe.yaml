@@ -19,7 +19,12 @@ description: RDR is the institutional research data repository created by KU Leu
   their research data.
 endpoints:
 - type: dataverseapi
-  url: https://rdr.kuleuven.be/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://rdr.kuleuven.be/api/search
+- type: oaipmh20
+  url: https://rdr.kuleuven.be/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://rdr.kuleuven.be/sitemap/sitemap.xml
 export_standard: Dataverse API
 id: rdrkuleuvenbe
 identifiers:

@@ -2,7 +2,7 @@ access_mode:
 - open
 - limited
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,8 +16,9 @@ coverage:
       id: 039
       name: Southern Europe
 endpoints:
-- type: dataverseapi
-  url: https://dmportal.biodata.pt/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://dmportal.biodata.pt/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dmportalbiodatapt
 langs:

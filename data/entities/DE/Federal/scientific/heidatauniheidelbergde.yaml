@@ -17,7 +17,10 @@ coverage:
 description: Open for Heidelberg University affiliated researchers to deposit data.
 endpoints:
 - type: dataverseapi
-  url: https://heidata.uni-heidelberg.de/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://heidata.uni-heidelberg.de/api/search
+- type: oaipmh20
+  url: https://heidata.uni-heidelberg.de/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: heidatauniheidelbergde
 identifiers:

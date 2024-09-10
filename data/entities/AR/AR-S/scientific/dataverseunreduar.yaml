@@ -32,7 +32,10 @@ description: El Repositorio de Datos Académicos UNR (RDA-UNR) permite compartir
   guides and training sessions.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.unr.edu.ar/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.unr.edu.ar/api/search
+- type: oaipmh20
+  url: https://dataverse.unr.edu.ar/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseunreduar
 identifiers:

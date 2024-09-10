@@ -22,7 +22,10 @@ description: osnaData, the institutional research data repository of the Osnabr√
   well as Open Science. Research data of all types and formats are published.
 endpoints:
 - type: dataverseapi
-  url: https://osnadata.ub.uni-osnabrueck.de/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://osnadata.ub.uni-osnabrueck.de/api/search
+- type: oaipmh20
+  url: https://osnadata.ub.uni-osnabrueck.de/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: osnadataubuniosnabrueckde
 identifiers:

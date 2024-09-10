@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,18 +17,17 @@ coverage:
 description: This is a temporary record with some data collected but it should be
   updated befor adding to the index
 endpoints:
-- type: dspace:items
-  url: https://research-repository.griffith.edu.au/rest/items
-  version: '6'
+- type: dspace
+  url: https://research-repository.griffith.edu.au/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://research-repository.griffith.edu.au/server/api/discover/search/objects
+  version: '7'
 - type: oaipmh20
   url: https://research-repository.griffith.edu.au/oai/request?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://research-repository.griffith.edu.au/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://research-repository.griffith.edu.au/feed/atom_1.0/site
-  version: '1.0'
+- type: sitemap
+  url: https://research-repository.griffith.edu.au/sitemap_index.xml
 id: researchrepositorygriffitheduau
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,8 +17,9 @@ coverage:
 description: Open for all researchers worldwide from all disciplines to deposit data.
   The Odum Institute also offers multiple data curation service levels.
 endpoints:
-- type: dataverseapi
-  url: https://dataverse.unc.edu/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://dataverse.unc.edu/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseuncedu
 identifiers:

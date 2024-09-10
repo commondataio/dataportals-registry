@@ -16,7 +16,10 @@ coverage:
       name: South America
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.ufabc.edu.br/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.ufabc.edu.br/api/search
+- type: oaipmh20
+  url: https://dataverse.ufabc.edu.br/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseufabcedubr
 langs:

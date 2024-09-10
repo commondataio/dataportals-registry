@@ -20,7 +20,10 @@ description: The CUHK Research Data Repository serves as an institutional resear
   research data outputs at CUHK.
 endpoints:
 - type: dataverseapi
-  url: https://researchdata.cuhk.edu.hk/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://researchdata.cuhk.edu.hk/api/search
+- type: oaipmh20
+  url: https://researchdata.cuhk.edu.hk/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: researchdatacuhkeduhk
 identifiers:

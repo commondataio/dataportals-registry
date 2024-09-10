@@ -20,7 +20,10 @@ description: El Repositorio de datos de investigación de la Universidad de Chil
   y facilitar su acceso y reutilización.
 endpoints:
 - type: dataverseapi
-  url: https://datos.uchile.cl/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://datos.uchile.cl/api/search
+- type: oaipmh20
+  url: https://datos.uchile.cl/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: datosuchilecl
 identifiers:

@@ -17,7 +17,10 @@ coverage:
 description: Johns Hopkins University Data Archive
 endpoints:
 - type: dataverseapi
-  url: https://archive.data.jhu.edu/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://archive.data.jhu.edu/api/search
+- type: oaipmh20
+  url: https://archive.data.jhu.edu/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: archivedatajhuedu
 identifiers:
@@ -36,7 +39,7 @@ owner:
       id: US
       name: United States
     level: 20
-  name: 'Johns Hopkins University'
+  name: Johns Hopkins University
   type: Academy
 properties:
   has_doi: true

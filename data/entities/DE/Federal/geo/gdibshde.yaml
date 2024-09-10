@@ -15,16 +15,31 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
+endpoints:
+- type: csw300
+  url: https://gdi.bsh.de/webservice/pycsw
+  version: 3.0.0
+- type: oaipmh20
+  url: https://gdi.bsh.de/webservice/pycsw/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://gdi.bsh.de/webservice/pycsw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://gdi.bsh.de/webservice/pycsw/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://gdi.bsh.de/webservice/pycsw/opensearch
+  version: '1.0'
+- type: sru
+  url: https://gdi.bsh.de/webservice/pycsw/sru
+  version: '1.0'
 id: gdibshde
 langs:
 - id: DE
   name: German
 - id: EN
   name: English
-endpoints:
-- type: csw300
-  url: https://gdi.bsh.de/webservice/pycsw
-  version: 3.0.0
 link: https://gdi.bsh.de/webservice/pycsw
 name: The Federal Maritime and Hydrographic Agency CSW server
 owner:

@@ -17,7 +17,10 @@ coverage:
 description: CESA | Repositorio de datos académicos
 endpoints:
 - type: dataverseapi
-  url: https://opendata.cesa.edu.co/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://opendata.cesa.edu.co/api/search
+- type: oaipmh20
+  url: https://opendata.cesa.edu.co/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: opendatacesaeduco
 langs:

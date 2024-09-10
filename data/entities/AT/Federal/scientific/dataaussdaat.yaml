@@ -20,7 +20,10 @@ description: AUSSDA - The Austrian Social Science Data Archive makes social scie
   of European Social Science Data Archives (CESSDA ERIC).
 endpoints:
 - type: dataverseapi
-  url: https://data.aussda.at/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://data.aussda.at/api/search
+- type: oaipmh20
+  url: https://data.aussda.at/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataaussdaat
 identifiers:

@@ -16,8 +16,9 @@ coverage:
       name: Eastern Asia
 description: Peking University Open Research Data Platform
 endpoints:
-- type: dataverseapi
-  url: https://opendata.pku.edu.cn/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://opendata.pku.edu.cn/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: opendatapkueducn
 identifiers:

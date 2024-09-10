@@ -22,7 +22,10 @@ description: IIT Dataverse is the research data repository of Istituto Italiano 
   researchers. IIT is also member of the Global Dataverse Community Consortium
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.iit.it/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.iit.it/api/search
+- type: oaipmh20
+  url: https://dataverse.iit.it/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseiitit
 identifiers:

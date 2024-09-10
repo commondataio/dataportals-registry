@@ -18,16 +18,31 @@ coverage:
     subregion:
       id: DE-HE
       name: Hessen
+endpoints:
+- type: csw300
+  url: https://gdk.geoportal.hessen.de/pycsw
+  version: 3.0.0
+- type: oaipmh20
+  url: https://gdk.geoportal.hessen.de/pycsw/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://gdk.geoportal.hessen.de/pycsw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://gdk.geoportal.hessen.de/pycsw/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://gdk.geoportal.hessen.de/pycsw/opensearch
+  version: '1.0'
+- type: sru
+  url: https://gdk.geoportal.hessen.de/pycsw/sru
+  version: '1.0'
 id: gdkgeoportalhessende
 langs:
 - id: DE
   name: German
 - id: EN
   name: English
-endpoints:
-- type: csw300
-  url: https://gdk.geoportal.hessen.de/pycsw
-  version: 3.0.0
 link: https://gdk.geoportal.hessen.de/pycsw
 name: Hessen pycsw server
 owner:

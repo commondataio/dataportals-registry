@@ -23,7 +23,10 @@ description: The institutional data repository DOREL - DOnnées de REcherche Lor
   software.
 endpoints:
 - type: dataverseapi
-  url: https://dorel.univ-lorraine.fr/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dorel.univ-lorraine.fr/api/search
+- type: oaipmh20
+  url: https://dorel.univ-lorraine.fr/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dorelunivlorrainefr
 identifiers:

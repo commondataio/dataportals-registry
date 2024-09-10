@@ -23,7 +23,12 @@ description: The University of Milan is home to important research teams operati
   to laws, from economics to hard sciences, from humanities to mathematics.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.unimi.it/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.unimi.it/api/search
+- type: oaipmh20
+  url: https://dataverse.unimi.it/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://dataverse.unimi.it/sitemap.xml
 export_standard: Dataverse API
 id: dataverseunimiit
 identifiers:

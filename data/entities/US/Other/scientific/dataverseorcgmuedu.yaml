@@ -18,7 +18,10 @@ description: George Mason University Libraries Dataverse publishes, shares, and 
   data of enduring value produced by George Mason faculty, staff, and students.
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.orc.gmu.edu/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.orc.gmu.edu/api/search
+- type: oaipmh20
+  url: https://dataverse.orc.gmu.edu/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataverseorcgmuedu
 identifiers:

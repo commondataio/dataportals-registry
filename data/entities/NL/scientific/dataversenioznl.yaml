@@ -18,7 +18,10 @@ description: Open access repository for marine research data collected, processe
   and published by the Royal Netherlands Institute for Sea Research
 endpoints:
 - type: dataverseapi
-  url: https://dataverse.nioz.nl/api/search?q=*&type=dataset&sort=name&order=asc
+  url: https://dataverse.nioz.nl/api/search
+- type: oaipmh20
+  url: https://dataverse.nioz.nl/oai?verb=Identify
+  version: '2.0'
 export_standard: Dataverse API
 id: dataversenioznl
 langs:
