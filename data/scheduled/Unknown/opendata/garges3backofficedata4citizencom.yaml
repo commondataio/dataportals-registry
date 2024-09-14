@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,12 @@ description: This is a temporary record with some data collected but it should b
 endpoints:
 - type: ckan:package-search
   url: https://garges3-backoffice.data4citizen.com/api/3/action/package_search
+  version: '3'
+- type: ckan
+  url: https://garges3-backoffice.data4citizen.com/api/3
+  version: '3'
+- type: ckan:package-list
+  url: https://garges3-backoffice.data4citizen.com/api/3/action/package_list
   version: '3'
 id: garges3backofficedata4citizencom
 langs: []

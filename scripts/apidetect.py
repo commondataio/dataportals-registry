@@ -16,7 +16,6 @@ except ImportError:
 import csv
 import json
 import os
-from  urllib.parse import urlparse
 import shutil
 import pprint
 from urllib.parse import urlparse
@@ -102,6 +101,10 @@ DKAN_URLMAP = [
     {'id' : 'dkan:search', 'url' : '/api/1/search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1'},
     {'id' : 'dkan:metastore', 'url' : '/api/1/metastore', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1'},
     {'id' : 'dkan:datastore', 'url' : '/api/1/metastore', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1'},
+    {'id' : 'dcat:n3', 'url' : '/catalog.n3', 'expected_mime' : 'text/n3', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:ttl', 'url' : '/catalog.ttl', 'expected_mime' : 'text/turtle', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:xml', 'url' : '/catalog.xml', 'expected_mime' : 'application/rdf+xml', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:jsonld', 'url' : '/catalog.jsonld', 'expected_mime' : 'application/ld+json', 'is_json' : True, 'version': None},
 ]
 
 CKAN_URLMAP = [
@@ -109,6 +112,10 @@ CKAN_URLMAP = [
     {'id' : 'ckan:package-search', 'url' : '/api/3/action/package_search', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '3'},
     {'id' : 'ckan:package-list', 'url' : '/api/3/action/package_list', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '3'},
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'dcat:n3', 'url' : '/catalog.n3', 'expected_mime' : 'text/n3', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:ttl', 'url' : '/catalog.ttl', 'expected_mime' : 'text/turtle', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:xml', 'url' : '/catalog.xml', 'expected_mime' : 'application/rdf+xml', 'is_json' : False, 'version': None},
+    {'id' : 'dcat:jsonld', 'url' : '/catalog.jsonld', 'expected_mime' : 'application/ld+json', 'is_json' : True, 'version': None},
 ]
 
 JUNAR_URLMAP = [
@@ -383,6 +390,8 @@ WEKO3_URLMAP = [
     {'id' : 'weko3:records', 'url' : '/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
  ]
 
+OPENDAP_URLMAP = []
+
 CUSTOM_URLMAP = [
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
     {'id' : 'sitemap',  'url' : '/sitemap.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
@@ -394,9 +403,15 @@ CUSTOM_URLMAP = [
 
 
 def analyze_robots(root_url): 
-   robots_url = root_url.rstrip('/') + '/robots.txt'
+   p = urlparse(root_url)
+   robots_url = p.scheme + "://" + p.netloc + '/robots.txt'
    print('Analyzing robots.txt', robots_url)
-   parser = robots.RobotsParser.from_uri(robots_url)
+   try:
+       r = requests.get(robots_url, timeout=DEFAULT_TIMEOUT)
+   except Exception as e:
+       print(e)
+       return []
+   parser = robots.RobotsParser.from_string(r.text)
    sitemaps = parser.sitemaps
    output = []
    if sitemaps is not None and len(sitemaps) > 0:
@@ -477,7 +492,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
 'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
 'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP, 'custom' : CUSTOM_URLMAP,
-'pycsw' : PYCSW30_URLMAP
+'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -587,6 +602,41 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
 
 
 
+def __detect_one(filename, record, software, action, deep, filepath):
+    print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
+    if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and action == 'insert':
+        print(' - skip, we have endpoints already and not in replace or update mode')
+        return
+    found = api_identifier(record['link'].rstrip('/'), software, deep=deep)             
+    keys = []
+    if action == 'update':
+        if 'endpoints' in record.keys() and len(record['endpoints']) > 0:
+            for e in record['endpoints']:
+                if 'url' in e.keys():
+                    keys.append(e['url'])
+        else:
+            record['endpoints'] = []
+    else:
+        record['endpoints'] = []
+    added = 0
+    for api in found:
+        if api['url'] not in keys:                        
+            print('- %s %s' % (api['type'], api['url']))
+            record['endpoints'].append(api)
+            keys.append(api['url'])
+            added += 1
+    print('Found %d, added %d' % (len(found), added))
+    if added > 0:
+        record['api'] = True
+        record['api_status'] = 'active'
+        f = open(filepath, 'w', encoding='utf8')
+        f.write(yaml.safe_dump(record, allow_unicode=True))
+        f.close()
+        print('- updated profile')
+    else:
+        print('- no endpoints or no new endpoints, not updated')
+
+
 @app.command()
 def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
     """Enrich data catalogs with API endpoints by software"""
@@ -603,41 +653,10 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
             record = yaml.load(f, Loader=Loader)            
             f.close()
             if record['software']['id']  == software:
-                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
-                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and action == 'insert':
-                    print(' - skip, we have endpoints already and not in replace or update mode')
-                    continue
-                found = api_identifier(record['link'].rstrip('/'), software, deep=deep)             
-                keys = []
-                if action == 'update':
-                    if 'endpoints' in record.keys() and len(record['endpoints']) > 0:
-                        for e in record['endpoints']:
-                            if 'url' in e.keys():
-                                keys.append(e['url'])
-                    else:
-                        record['endpoints'] = []
-                else:
-                    record['endpoints'] = []
-                added = 0
-                for api in found:
-                    if api['url'] not in keys:                        
-                        print('- %s %s' % (api['type'], api['url']))
-                        record['endpoints'].append(api)
-                        keys.append(api['url'])
-                        added += 1
-                print('Found %d, added %d' % (len(found), added))
-                if added > 0:
-                    record['api'] = True
-                    record['api_status'] = 'active'
-                    f = open(filepath, 'w', encoding='utf8')
-                    f.write(yaml.safe_dump(record, allow_unicode=True))
-                    f.close()
-                    print('- updated profile')
-                else:
-                    print('- no endpoints or no new endpoints, not updated')
+                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
 
 @app.command()
-def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, replace_endpoints: Annotated[bool, typer.Option("--replace")]=False, mode='entries'):
+def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
     """Enrich single data catalog with API endpoints"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -656,34 +675,14 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
             for k in ['uid', 'id', 'link']:
                 if k in record.keys():
                     idkeys.append(record[k])
-            if uniqid not in idkeys:
-       
+            if uniqid not in idkeys:       
                 continue
             found = True
             if record['software']['id']  in CATALOGS_URLMAP.keys():
-                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
-                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
-                    print(' - skip, we have endpoints already and no replace mode')
-                    continue
-                found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
-                record['endpoints'] = []
-                for api in found:
-                    print('- %s %s' % (api['type'], api['url']))
-                    record['endpoints'].append(api)
-                if len(record['endpoints']) > 0:
-                    f = open(filepath, 'w', encoding='utf8')
-                    f.write(yaml.safe_dump(record, allow_unicode=True))
-                    f.close()
-                    print('- updated profile')
-                else:
-                    print('- no endpoints, not updated')
-            else:
-                print('There is no rules for software: %s' % (record['software']['id']))
-    if not found:
-        print('Data catalog with id %s not found' %(uniqid))                
+                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
 
 @app.command()
-def detect_country(country, dryrun=False, replace_endpoints=True, mode='entries'):
+def detect_country(country, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
     """Enrich data catalogs with API endpoints by country"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -699,27 +698,32 @@ def detect_country(country, dryrun=False, replace_endpoints=True, mode='entries'
             if record['owner']['location']['country']['id'] != country:
                 continue
             if record['software']['id']  in CATALOGS_URLMAP.keys():
-                print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
-                if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and replace_endpoints is False:
-                    print(' - skip, we have endpoints already and no replace mode')
-                    continue
-                found = api_identifier(record['link'].rstrip('/'), record['software']['id'])
-                record['endpoints'] = []
-                for api in found:
-                    print('- %s %s' % (api['type'], api['url']))
-                    record['endpoints'].append(api)
-                if len(record['endpoints']) > 0:
-                    f = open(filepath, 'w', encoding='utf8')
-                    f.write(yaml.safe_dump(record, allow_unicode=True))
-                    f.close()
-                    print('- updated profile')
-                else:
-                    print('- no endpoints, not updated')
+                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+
+
+@app.command()
+def detect_cattype(catalogtype, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
+    """Enrich data catalogs with API endpoints by catalog type"""
+    if mode == 'entries':
+        root_dir = ENTRIES_DIR
+    else:
+        root_dir = SCHEDULED_DIR    
+    for root, dirs, files in os.walk(root_dir):
+        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
+        for filename in files:                
+            filepath = filename
+            f = open(filepath, 'r', encoding='utf8')
+            record = yaml.load(f, Loader=Loader)            
+            f.close()
+            if record['catalog_type'] != catalogtype:
+                continue
+            if record['software']['id']  in CATALOGS_URLMAP.keys():
+                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+
 
 @app.command()
 def detect_ckan(dryrun=False, replace_endpoints=True, mode='entries'):
     """Enrich data catalogs with API endpoints by CKAN instance (special function to update all endpoints"""
-    """Enrich data catalogs with API endpoints by country"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
     else:

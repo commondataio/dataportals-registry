@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,10 @@ endpoints:
 - type: ckan:package-list
   url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/api/3/action/package_list
   version: '3'
+- type: dcat:xml
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/catalog.xml
+- type: dcat:jsonld
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/catalog.jsonld
 id: datacatalogregioneemiliaromagnait
 langs:
 - id: IT

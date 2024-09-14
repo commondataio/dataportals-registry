@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: deprecated
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +20,25 @@ coverage:
 endpoints:
 - type: ckan
   url: https://data.houstontx/gpv/api/3
+- type: ckan
+  url: https://data.houstontx.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.houstontx.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.houstontx.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.houstontx.gov/data.json
+- type: dcat:n3
+  url: https://data.houstontx.gov/catalog.n3
+- type: dcat:ttl
+  url: https://data.houstontx.gov/catalog.ttl
+- type: dcat:xml
+  url: https://data.houstontx.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://data.houstontx.gov/catalog.jsonld
 id: datahoustontxgov
 identifiers:
 - id: wikidata

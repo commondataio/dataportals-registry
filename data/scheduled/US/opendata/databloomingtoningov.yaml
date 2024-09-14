@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://data.bloomington.in.gov/data.json
 - type: socrata:views
   url: https://data.bloomington.in.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.bloomington.in.gov.xml
+- type: opensearch
+  url: https://data.bloomington.in.gov/opensearch.xml
 id: databloomingtoningov
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://data.coloradosprings.gov/data.json
 - type: socrata:views
   url: https://data.coloradosprings.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.coloradosprings.gov.xml
+- type: opensearch
+  url: https://data.coloradosprings.gov/opensearch.xml
 id: datacoloradospringsgov
 langs:
 - id: EN

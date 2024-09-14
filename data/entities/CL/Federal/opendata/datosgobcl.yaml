@@ -18,6 +18,23 @@ description: 'Datos.gob el repositorio de datos abiertos centralizado del Estado
 endpoints:
 - type: ckan
   url: http://datos.gob.cl/api/3
+- type: ckan
+  url: https://datos.gob.cl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.gob.cl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.gob.cl/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://datos.gob.cl/catalog.n3
+- type: dcat:ttl
+  url: https://datos.gob.cl/catalog.ttl
+- type: dcat:xml
+  url: https://datos.gob.cl/catalog.xml
+- type: dcat:jsonld
+  url: https://datos.gob.cl/catalog.jsonld
 export_standard: CKAN API
 id: datosgobcl
 identifiers:

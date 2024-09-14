@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,15 @@ coverage:
 description: Research Data Unipd is a research data archive. The service aims to facilitate
   data discovery, data sharing, and reuse as required by funding institutions (e.g.
   European Commission).
+endpoints:
+- type: sitemap
+  url: https://researchdata.cab.unipd.it/sitemap.xml
+- type: sword
+  url: https://researchdata.cab.unipd.it/sword-app/servicedocument
+- type: sword:deposit
+  url: https://researchdata.cab.unipd.it/id/contents
+- type: opensearch
+  url: http://researchdata.cab.unipd.it/cgi/opensearchdescription
 id: researchdatacabunipdit
 langs:
 - id: IT

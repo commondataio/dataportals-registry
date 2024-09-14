@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,14 @@ endpoints:
 - type: ckan:package-list
   url: https://roiet.gdcatalog.go.th/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://roiet.gdcatalog.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://roiet.gdcatalog.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://roiet.gdcatalog.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://roiet.gdcatalog.go.th/catalog.jsonld
 id: roietgdcataloggoth
 langs:
 - id: TH

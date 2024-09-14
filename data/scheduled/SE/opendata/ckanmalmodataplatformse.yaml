@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,14 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan-malmo.dataplatform.se/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://ckan-malmo.dataplatform.se/catalog.n3
+- type: dcat:ttl
+  url: https://ckan-malmo.dataplatform.se/catalog.ttl
+- type: dcat:xml
+  url: https://ckan-malmo.dataplatform.se/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan-malmo.dataplatform.se/catalog.jsonld
 id: ckanmalmodataplatformse
 langs:
 - id: SV

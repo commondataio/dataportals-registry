@@ -20,6 +20,22 @@ coverage:
 endpoints:
 - type: ckan
   url: https://opendata.sjgov.org/api/3
+- type: ckan:package-search
+  url: https://opendata.sjgov.org/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.sjgov.org/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://opendata.sjgov.org/data.json
+- type: dcat:n3
+  url: https://opendata.sjgov.org/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.sjgov.org/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.sjgov.org/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.sjgov.org/catalog.jsonld
 export_standard: CKAN API
 id: opendatasjgovorg
 langs:

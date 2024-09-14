@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -29,6 +29,14 @@ endpoints:
 - type: oaipmh20
   url: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geo-01.innovacion.gob.pa/geonetwork/srv/api/site
+- type: sitemap
+  url: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap
+- type: sitemap
+  url: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap?format=rdf
+- type: opensearch
+  url: https://geo-01.innovacion.gob.pa/portal.opensearch
 export_standard: Geonetwork API
 id: geo01innovactiongobpa
 langs:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://datahub.usac.org/data.json
 - type: socrata:views
   url: https://datahub.usac.org/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-datahub.usac.org.xml
+- type: opensearch
+  url: https://datahub.usac.org/opensearch.xml
 id: datahubusacorg
 langs:
 - id: EN

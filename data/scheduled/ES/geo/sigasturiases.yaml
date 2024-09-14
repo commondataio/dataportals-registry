@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,6 +32,16 @@ endpoints:
   url: https://sig.asturias.es/server/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://sig.asturias.es/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://sig.asturias.es/servicios/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.asturias.es/servicios/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.asturias.es/servicios/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.asturias.es/servicios/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.asturias.es/servicios/rest/services?f=geositemap
 id: sigasturiases
 langs:
 - id: ES

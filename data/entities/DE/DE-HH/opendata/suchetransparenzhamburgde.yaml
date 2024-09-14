@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -24,6 +24,15 @@ endpoints:
 - type: ckan:package-list
   url: https://suche.transparenz.hamburg.de/api/3/action/package_list
   version: '3'
+- type: ckan
+  url: https://suche.transparenz.hamburg.de/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://suche.transparenz.hamburg.de/catalog.n3
+- type: dcat:ttl
+  url: https://suche.transparenz.hamburg.de/catalog.ttl
+- type: dcat:xml
+  url: https://suche.transparenz.hamburg.de/catalog.xml
 export_standard: CKAN API
 id: suchetransparenzhamburgde
 langs:

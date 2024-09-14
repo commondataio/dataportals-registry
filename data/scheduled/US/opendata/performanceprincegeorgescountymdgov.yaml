@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://performance.princegeorgescountymd.gov/data.json
 - type: socrata:views
   url: https://performance.princegeorgescountymd.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-performance.princegeorgescountymd.gov.xml
+- type: opensearch
+  url: https://performance.princegeorgescountymd.gov/opensearch.xml
 id: performanceprincegeorgescountymdgov
 langs:
 - id: EN

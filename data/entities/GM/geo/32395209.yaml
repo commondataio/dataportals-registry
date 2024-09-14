@@ -42,6 +42,43 @@ endpoints:
 - type: opensearch
   url: http://3.23.95.209/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
+- type: dcatus11
+  url: http://3.23.95.209/data.json
+- type: wms130
+  url: http://3.23.95.209/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://3.23.95.209/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: http://3.23.95.209/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: http://3.23.95.209/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://3.23.95.209/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: http://3.23.95.209/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: http://3.23.95.209/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: http://3.23.95.209/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://3.23.95.209/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: geoserver:version
+  url: http://3.23.95.209/geoserver/rest/about/version
+- type: geoserver:settings
+  url: http://3.23.95.209/geoserver/rest/settings
+- type: geoserver:layers
+  url: http://3.23.95.209/geoserver/rest/layers
+- type: opensearch
+  url: http://ec2-3-23-95-209.us-east-2.compute.amazonaws.com/catalogue/opensearch
 id: '32395209'
 langs:
 - id: EN

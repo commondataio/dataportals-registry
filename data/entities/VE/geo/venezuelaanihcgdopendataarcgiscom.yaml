@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,15 @@ description: En este portal están disponibles datos, información y conocimient
   (CGD) de la Academia Nacional de la Ingeniería y el Hábitat (ANIH), con la participación
   activa de las universidades, centros de investigación a nivel nacional e internacional
   y el sector privado, apoyando el desarrollo sostenible del país.
+endpoints:
+- type: dcatap201
+  url: https://venezuela-anihcgd.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://venezuela-anihcgd.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: ogcrecordsapi
+  url: https://venezuela-anihcgd.opendata.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://venezuela-anihcgd.opendata.arcgis.com/sitemap.xml
 id: venezuelaanihcgdopendataarcgiscom
 langs:
 - id: ES

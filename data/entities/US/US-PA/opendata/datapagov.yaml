@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -22,6 +22,10 @@ endpoints:
   url: https://data.pa.gov/data.json
 - type: socrata:views
   url: https://data.pa.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.pa.gov.xml
+- type: opensearch
+  url: https://data.pa.gov/opensearch.xml
 id: datapagov
 langs:
 - id: EN

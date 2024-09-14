@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://covid19.buffalony.gov/data.json
 - type: socrata:views
   url: https://covid19.buffalony.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-covid19.buffalony.gov.xml
+- type: opensearch
+  url: https://covid19.buffalony.gov/opensearch.xml
 id: covid19buffalonygov
 langs:
 - id: EN

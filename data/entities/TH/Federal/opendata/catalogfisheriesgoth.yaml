@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -16,6 +17,20 @@ coverage:
 endpoints:
 - type: ckan
   url: https://catalog.fisheries.go.th/api/3
+- type: ckan:package-search
+  url: https://catalog.fisheries.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.fisheries.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalog.fisheries.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://catalog.fisheries.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://catalog.fisheries.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://catalog.fisheries.go.th/catalog.jsonld
 export_standard: CKAN API
 id: catalogfisheriesgoth
 langs:

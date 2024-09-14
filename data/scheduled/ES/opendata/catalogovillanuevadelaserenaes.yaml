@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,8 @@ endpoints:
 - type: ckan:package-list
   url: http://catalogo.villanuevadelaserena.es/api/3/action/package_list
   version: '3'
+- type: dcat:ttl
+  url: http://catalogo.villanuevadelaserena.es/catalog.ttl
 id: catalogovillanuevadelaserenaes
 langs:
 - id: ES

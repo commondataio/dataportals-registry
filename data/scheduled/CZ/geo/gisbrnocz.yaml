@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -30,6 +30,14 @@ endpoints:
   url: https://gis.brno.cz/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://gis.brno.cz/arcgis/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://gis.brno.cz/ags1/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.brno.cz/ags1/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.brno.cz/ags1/services?wsdl
+- type: arcgis:geositemap
+  url: https://gis.brno.cz/ags1/rest/services?f=geositemap
 id: gisbrnocz
 langs:
 - id: CS

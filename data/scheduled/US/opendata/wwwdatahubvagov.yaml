@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ description: This is a temporary record with some data collected but it should b
 endpoints:
 - type: dcatus11
   url: https://www.datahub.va.gov/data.json
+- type: socrata:views
+  url: https://www.datahub.va.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-www.datahub.va.gov.xml
 id: wwwdatahubvagov
 langs:
 - id: EN

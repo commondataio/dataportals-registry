@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,6 +19,10 @@ endpoints:
   url: https://data.cdp.net/data.json
 - type: socrata:views
   url: https://data.cdp.net/api/views
+- type: sitemap
+  url: https://s3-eu-west-1.amazonaws.com/sa-socrata-sitemaps-eu-west-1-prod/sitemaps/sitemap-data.cdp.net.xml
+- type: opensearch
+  url: https://data.cdp.net/opensearch.xml
 id: datacdpnet
 langs:
 - id: EN

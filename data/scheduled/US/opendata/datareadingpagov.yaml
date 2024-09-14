@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://data.readingpa.gov/data.json
 - type: socrata:views
   url: https://data.readingpa.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.readingpa.gov.xml
+- type: opensearch
+  url: https://data.readingpa.gov/opensearch.xml
 id: datareadingpagov
 langs:
 - id: EN

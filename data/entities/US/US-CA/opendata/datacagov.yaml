@@ -20,6 +20,22 @@ coverage:
 endpoints:
 - type: ckan
   url: https://data.ca.gov/api/3
+- type: ckan:package-search
+  url: https://data.ca.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.ca.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.ca.gov/data.json
+- type: dcat:n3
+  url: https://data.ca.gov/catalog.n3
+- type: dcat:ttl
+  url: https://data.ca.gov/catalog.ttl
+- type: dcat:xml
+  url: https://data.ca.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://data.ca.gov/catalog.jsonld
 export_standard: CKAN API
 id: datacagov
 identifiers:

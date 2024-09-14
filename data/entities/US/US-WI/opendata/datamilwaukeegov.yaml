@@ -20,6 +20,22 @@ coverage:
 endpoints:
 - type: ckan
   url: https://data.milwaukee.gov/api/3
+- type: ckan:package-search
+  url: https://data.milwaukee.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.milwaukee.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.milwaukee.gov/data.json
+- type: dcat:n3
+  url: https://data.milwaukee.gov/catalog.n3
+- type: dcat:ttl
+  url: https://data.milwaukee.gov/catalog.ttl
+- type: dcat:xml
+  url: https://data.milwaukee.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://data.milwaukee.gov/catalog.jsonld
 export_standard: CKAN API
 id: datamilwaukeegov
 langs:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -28,6 +28,8 @@ endpoints:
   url: http://sigimip.org.mx:6080/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
   url: http://sigimip.org.mx:6080/arcgis/rest/services?f=kmz
+- type: arcgis:soap
+  url: http://sigimip.org.mx:6080/arcgis/services?wsdl
 id: sigimiporgmx
 langs:
 - id: ES

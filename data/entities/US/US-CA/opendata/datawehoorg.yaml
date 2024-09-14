@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +22,10 @@ endpoints:
   url: https://data.weho.org/data.json
 - type: socrata:views
   url: https://data.weho.org/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.weho.org.xml
+- type: opensearch
+  url: https://data.weho.org/opensearch.xml
 id: datawehoorg
 identifiers:
 - id: dataportals.org

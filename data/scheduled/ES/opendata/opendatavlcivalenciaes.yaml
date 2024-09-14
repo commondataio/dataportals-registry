@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,14 @@ endpoints:
 - type: ckan:package-list
   url: https://opendata.vlci.valencia.es/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://opendata.vlci.valencia.es/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.vlci.valencia.es/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.vlci.valencia.es/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.vlci.valencia.es/catalog.jsonld
 id: opendatavlcivalenciaes
 langs:
 - id: ES

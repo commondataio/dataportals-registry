@@ -29,6 +29,15 @@ endpoints:
 - type: opensearch
   url: https://maps.oraotca.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
   version: '1.0'
+- type: wps100
+  url: https://maps.oraotca.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geoserver:version
+  url: https://maps.oraotca.org/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://maps.oraotca.org/geoserver/rest/settings
+- type: opensearch
+  url: https://maps.oraotca.org/catalogue/opensearch
 id: mapsoraotcaorg
 langs:
 - id: EN

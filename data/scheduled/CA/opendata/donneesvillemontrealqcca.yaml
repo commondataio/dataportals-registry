@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,6 +26,14 @@ endpoints:
 - type: ckan:package-list
   url: https://donnees.ville.montreal.qc.ca/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://donnees.ville.montreal.qc.ca/catalog.n3
+- type: dcat:ttl
+  url: https://donnees.ville.montreal.qc.ca/catalog.ttl
+- type: dcat:xml
+  url: https://donnees.ville.montreal.qc.ca/catalog.xml
+- type: dcat:jsonld
+  url: https://donnees.ville.montreal.qc.ca/catalog.jsonld
 id: donneesvillemontrealqcca
 langs:
 - id: EN

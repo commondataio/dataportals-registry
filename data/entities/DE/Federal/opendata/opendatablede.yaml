@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -25,6 +25,14 @@ endpoints:
 - type: ckan:package-list
   url: https://open-data.ble.de/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://open-data.ble.de/catalog.n3
+- type: dcat:ttl
+  url: https://open-data.ble.de/catalog.ttl
+- type: dcat:xml
+  url: https://open-data.ble.de/catalog.xml
+- type: dcat:jsonld
+  url: https://open-data.ble.de/catalog.jsonld
 id: opendatablede
 langs:
 - id: DE

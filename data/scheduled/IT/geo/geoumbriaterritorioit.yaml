@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -28,6 +28,18 @@ endpoints:
   url: http://geo.umbriaterritorio.it/arcgis/rest/services?f=sitemap
 - type: arcgis:geositemap
   url: http://geo.umbriaterritorio.it/arcgis/rest/services?f=geositemap
+- type: arcgis:rest:info
+  url: http://geo.umbriaterritorio.it/ArcGIS/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://geo.umbriaterritorio.it/ArcGIS/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://geo.umbriaterritorio.it/ArcGIS/services?wsdl
+- type: arcgis:sitemap
+  url: http://geo.umbriaterritorio.it/ArcGIS/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://geo.umbriaterritorio.it/ArcGIS/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://geo.umbriaterritorio.it/ArcGIS/rest/services?f=kmz
 id: geoumbriaterritorioit
 langs:
 - id: IT

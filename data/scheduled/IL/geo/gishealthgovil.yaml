@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -28,6 +28,10 @@ endpoints:
   url: https://gis.health.gov.il/arcgis/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://gis.health.gov.il/arcgis/rest/services?f=kmz
+- type: arcgis:portals:self
+  url: https://gis.health.gov.il/arcgis/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:soap
+  url: https://gis.health.gov.il/arcgis/services?wsdl
 id: gishealthgovil
 langs:
 - id: HE

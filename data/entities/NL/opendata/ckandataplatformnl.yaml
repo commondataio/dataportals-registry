@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -25,6 +25,14 @@ endpoints:
 - type: ckan:package-list
   url: https://ckan.dataplatform.nl/api/3/action/package_list
   version: '3'
+- type: dcat:n3
+  url: https://ckan.dataplatform.nl/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.dataplatform.nl/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.dataplatform.nl/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.dataplatform.nl/catalog.jsonld
 id: ckandataplatformnl
 langs:
 - id: NL

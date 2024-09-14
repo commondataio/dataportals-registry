@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,10 @@ endpoints:
   url: https://opennassau.nassaucountyny.gov/data.json
 - type: socrata:views
   url: https://opennassau.nassaucountyny.gov/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-opennassau.nassaucountyny.gov.xml
+- type: opensearch
+  url: https://opennassau.nassaucountyny.gov/opensearch.xml
 id: opennassaunassaucountynygov
 langs:
 - id: EN
