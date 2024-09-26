@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,6 +33,10 @@ endpoints:
 - type: oaipmh20
   url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geonodeide.santarosa.gob.ar/geonetwork/srv/api/site
+- type: opensearch
+  url: https://geonodeide.santarosa.gob.ar/portal.opensearch
 export_standard: Geonetwork API
 id: geonodeidesantarosagobargeonetwork
 langs:

@@ -122,6 +122,10 @@ JUNAR_URLMAP = [
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
 ]
 
+TRIPLYDB_URLMAP = [
+    {'id' : 'triplydb:datasets', 'url' : '/_api/facets/datasets', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+]
+
 
 GEONETWORK_URLMAP = [
     {'id' : 'geonetwork:api', 'url' : '/srv/api', 'expected_mime' : XML_MIMETYPES, 'is_json' : True, 'version': None},
@@ -407,7 +411,7 @@ def analyze_robots(root_url):
    robots_url = p.scheme + "://" + p.netloc + '/robots.txt'
    print('Analyzing robots.txt', robots_url)
    try:
-       r = requests.get(robots_url, timeout=DEFAULT_TIMEOUT)
+       r = requests.get(robots_url, timeout=DEFAULT_TIMEOUT, verify=False,)
    except Exception as e:
        print(e)
        return []
@@ -473,6 +477,65 @@ def analyze_root(root_url):
         if 'type' in lr.keys() and 'href' in lr.keys():
             if lr['type'] == 'application/opensearchdescription+xml':
                 output.append({'type' : 'opensearch', 'url' : lr['href'] if lr['href'][0:4] == 'http' else urljoin(root_url, lr['href'])})
+    scripts = document.xpath("//script[@type='application/ld+json']")
+    for s in scripts:
+        p = urlparse(root_url)
+        f = open('temp/%s.json' % (p.hostname), 'w', encoding='utf8')
+        f.write(s.text)
+        f.close()
+        print('-- ld+json script found')
+        try:
+            data = json.loads(s.text)
+#            print(data)                 
+            if isinstance(data, list):
+                if len(data) > 0:
+                    data = data[0]
+                else:
+                    return output
+            print('-- keys', data.keys())
+            if '@graph' in data.keys() and data['@graph'] is not None:
+                print('-- graph found')
+                root_item = data['@graph']
+            else:
+                root_item = data
+            if root_item is not None:
+                slist = []
+                if isinstance(root_item, dict):
+                    slist.append(root_item)
+                elif isinstance(root_item, list):
+                    slist = root_item
+                print('-- slist created', slist)
+                found = False
+                for stype in slist:
+                    if '@type' in stype.keys():
+                        if isinstance(stype['@type'], list) and 'DataCatalog' in stype['@type']:
+                            output.append({'type' : 'schemaorg:datacatalog', 'url' : root_url})
+                            found = True
+                            break
+                        elif isinstance(stype['@type'], str) and stype['@type'] == 'DataCatalog': 
+                            output.append({'type' : 'schemaorg:datacatalog', 'url' : root_url})                        
+                            found = True
+                            break
+                    if 'mainEntity' in stype.keys() and stype['mainEntity'] is not None:
+                        mainlist = []
+                        if isinstance(stype['mainEntity'], dict):
+                            mainlist.append(stype['mainEntity'])
+                        elif isinstance(stype['mainEntity'], list):
+                            mainlist = stype['mainEntity']
+                        for entity in mainlist:
+                            if '@type' not in entity.keys(): continue
+                        if isinstance(entity['@type'], list) and 'DataCatalog' in entity['@type']:
+                            output.append({'type' : 'schemaorg:datacatalog', 'url' : root_url})
+                            found = True
+                            break
+                        elif isinstance(entity['@type'], str) and entity['@type'] == 'DataCatalog':
+                            found = True
+                            output.append({'type' : 'schemaorg:datacatalog', 'url' : root_url})                        
+                            break
+
+        except ValueError:
+            continue
+          
     return output
 
 DEEP_SEARCH_FUNCTIONS = [analyze_robots, analyze_root] 
@@ -492,7 +555,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
 'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
 'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP, 'custom' : CUSTOM_URLMAP,
-'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP
+'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP, 'triplydb' : TRIPLYDB_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -653,7 +716,11 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
             record = yaml.load(f, Loader=Loader)            
             f.close()
             if record['software']['id']  == software:
-                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+                if record['software']['id']  in CATALOGS_URLMAP.keys():
+                    __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+                else:
+                    __detect_one(filename, record, 'custom', action, deep, filepath)
+
 
 @app.command()
 def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
@@ -680,6 +747,8 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
             found = True
             if record['software']['id']  in CATALOGS_URLMAP.keys():
                 __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+            else:
+                __detect_one(filename, record, 'custom', action, deep, filepath)
 
 @app.command()
 def detect_country(country, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
@@ -699,6 +768,8 @@ def detect_country(country, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fa
                 continue
             if record['software']['id']  in CATALOGS_URLMAP.keys():
                 __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+            else:
+                __detect_one(filename, record, 'custom', action, deep, filepath)
 
 
 @app.command()
@@ -719,6 +790,8 @@ def detect_cattype(catalogtype, dryrun: Annotated[bool, typer.Option("--dryrun")
                 continue
             if record['software']['id']  in CATALOGS_URLMAP.keys():
                 __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+            else:
+                __detect_one(filename, record, 'custom', action, deep, filepath)
 
 
 @app.command()

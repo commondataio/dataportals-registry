@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -29,7 +29,15 @@ endpoints:
 - type: oaipmh20
   url: http://www.marlin.csiro.au/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: http://www.marlin.csiro.au/geonetwork/srv/api/site
+- type: opensearch
+  url: http://www.marlin.csiro.au/portal.opensearch
 id: marlincsiroau
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100013965
+  value: r3d100013965
 langs:
 - id: EN
   name: English

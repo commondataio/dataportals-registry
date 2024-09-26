@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,6 +32,10 @@ endpoints:
 - type: oaipmh20
   url: http://rederit.datageo.ambiente.sp.gov.br/geonetworkrit/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: http://rederit.datageo.ambiente.sp.gov.br/geonetworkrit/srv/api/site
+- type: opensearch
+  url: http://rederit.datageo.ambiente.sp.gov.br/portal.opensearch
 id: rederitdatageoambientespgovbr
 langs:
 - id: PT

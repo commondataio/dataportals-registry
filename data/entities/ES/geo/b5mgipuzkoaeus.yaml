@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -37,6 +37,10 @@ endpoints:
 - type: oaipmh20
   url: https://b5m.gipuzkoa.eus/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://b5m.gipuzkoa.eus/geonetwork/srv/api/site
+- type: opensearch
+  url: https://b5m.gipuzkoa.eus/portal.opensearch
 id: b5mgipuzkoaeus
 langs:
 - id: ES

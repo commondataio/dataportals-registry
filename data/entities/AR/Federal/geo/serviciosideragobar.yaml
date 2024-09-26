@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,16 @@ endpoints:
   url: http://servicios.idera.gob.ar/geonetwork/srv/eng/q
 - type: geonetwork
   url: http://servicios.idera.gob.ar/geonetwork/srv/api
+- type: csw202
+  url: http://servicios.idera.gob.ar/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://servicios.idera.gob.ar/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: http://servicios.idera.gob.ar/geonetwork/srv/api/site
+- type: opensearch
+  url: http://servicios.idera.gob.ar/portal.opensearch
 export_standard: Geonetwork API
 id: serviciosideragobar
 langs:

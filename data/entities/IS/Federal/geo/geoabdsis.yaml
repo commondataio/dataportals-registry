@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,6 +32,10 @@ endpoints:
 - type: oaipmh20
   url: https://geo.abds.is/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geo.abds.is/geonetwork/srv/api/site
+- type: opensearch
+  url: https://geo.abds.is/portal.opensearch
 export_standard: Geonetwork API
 id: geoabdsis
 langs:

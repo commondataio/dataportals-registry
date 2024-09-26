@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -35,6 +35,12 @@ endpoints:
 - type: oaipmh20
   url: https://geoportal.um.gorzow.pl/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geoportal.um.gorzow.pl/geonetwork/srv/api/site
+- type: sitemap
+  url: https://geoportal.um.gorzow.pl/wp-sitemap.xml
+- type: opensearch
+  url: https://geoportal.um.gorzow.pl/portal.opensearch
 export_standard: Geonetwork API
 id: geoportalumgorzowpl
 langs:

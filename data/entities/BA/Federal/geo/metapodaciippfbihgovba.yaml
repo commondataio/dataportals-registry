@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -25,6 +25,15 @@ endpoints:
 - type: oaipmh20
   url: https://metapodaci.ippfbih.gov.ba/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:query
+  url: https://metapodaci.ippfbih.gov.ba/srv/eng/q
+- type: openapi
+  url: https://metapodaci.ippfbih.gov.ba/srv/v2/api-docs
+  version: '2'
+- type: geonetwork:site
+  url: https://metapodaci.ippfbih.gov.ba/srv/api/site
+- type: opensearch
+  url: https://metapodaci.ippfbih.gov.ba/portal.opensearch
 export_standard: Geonetwork API
 id: metapodaciippfbihgovba
 langs:

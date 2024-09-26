@@ -2,7 +2,7 @@ access_mode:
 - open
 add_date: 23.3.2023
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,6 +33,10 @@ endpoints:
 - type: oaipmh20
   url: https://nationaalgeoregister.nl/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://nationaalgeoregister.nl/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://nationaalgeoregister.nl/geonetwork/srv/api/site
 export_standard: Geonetwork API
 id: nationaalgeoregisternl
 langs:

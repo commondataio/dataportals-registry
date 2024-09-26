@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,6 +32,16 @@ endpoints:
 - type: oaipmh20
   url: https://metadata.bgs.ac.uk/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://metadata.bgs.ac.uk/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://metadata.bgs.ac.uk/geonetwork/srv/api/site
+- type: sitemap
+  url: https://metadata.bgs.ac.uk/geonetwork/srv/api/sitemap
+- type: sitemap
+  url: https://metadata.bgs.ac.uk/geonetwork/srv/api/sitemap?format=rdf
+- type: opensearch
+  url: https://metadata.bgs.ac.uk/geonetwork/api/collections/main?f=opensearch
 export_standard: Geonetwork API
 id: metadatabgsacuk
 langs:

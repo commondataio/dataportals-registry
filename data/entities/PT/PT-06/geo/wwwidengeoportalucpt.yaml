@@ -23,6 +23,22 @@ endpoints:
   url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/eng/q
 - type: geonetwork
   url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/api
+- type: openapi
+  url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: http://www.iden-geoportal.uc.pt:8080/geonetwork/srv/api/site
+- type: opensearch
+  url: http://www.iden-geoportal.uc.pt:8080/portal.opensearch
 export_standard: Geonetwork API
 id: wwwidengeoportalucpt
 langs:

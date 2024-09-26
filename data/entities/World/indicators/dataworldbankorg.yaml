@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -13,7 +14,16 @@ coverage:
     macroregion:
       id: World
       name: World
+endpoints:
+- type: sitemap
+  url: https://data.worldbank.org/sitemap.xml
+- type: sitemap
+  url: https://data.worldbank.org/sitemap.xml.gz
 id: dataworldbankorg
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100000042
+  value: r3d100000042
 langs:
 - id: EN
   name: English

@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -12,12 +12,12 @@ coverage:
       id: FR
       name: France
     level: 30
-    subregion:
-      id: FR-35
-      name: Ille-et-Vilaine
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-35
+      name: Ille-et-Vilaine
 endpoints:
 - type: geonetwork:query
   url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/q
@@ -35,6 +35,10 @@ endpoints:
 - type: oaipmh20
   url: https://public.sig.rennesmetropole.fr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://public.sig.rennesmetropole.fr/geonetwork/srv/api/site
+- type: opensearch
+  url: https://public.sig.rennesmetropole.fr/portal.opensearch
 export_standard: Geonetwork API
 id: publicsigrennesmetropolefr
 langs:
@@ -52,7 +56,7 @@ owner:
     subregion:
       id: FR-35
       name: Ille-et-Vilaine
-  name: 'Rennes Metropole'
+  name: Rennes Metropole
   type: Local government
 properties:
   has_doi: true

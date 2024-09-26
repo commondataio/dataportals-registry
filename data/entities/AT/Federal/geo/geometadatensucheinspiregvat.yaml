@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,6 +32,14 @@ endpoints:
 - type: oaipmh20
   url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/api/site
+- type: sitemap
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/api/sitemap
+- type: sitemap
+  url: https://geometadatensuche.inspire.gv.at/metadatensuche/srv/api/sitemap?format=rdf
+- type: opensearch
+  url: https://geometadatensuche.inspire.gv.at/portal.opensearch
 export_standard: Geonetwork API
 id: geometadatensucheinspiregvat
 langs:

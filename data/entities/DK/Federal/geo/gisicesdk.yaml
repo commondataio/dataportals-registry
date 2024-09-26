@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,6 +22,10 @@ endpoints:
 - type: oaipmh20
   url: https://gis.ices.dk/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://gis.ices.dk/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://gis.ices.dk/geonetwork/srv/api/site
 export_standard: Geonetwork API
 id: gisicesdk
 langs:

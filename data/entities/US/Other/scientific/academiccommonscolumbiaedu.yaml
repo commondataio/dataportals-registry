@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -21,7 +21,21 @@ endpoints:
   url: https://academiccommons.columbia.edu/oai
 - type: customapi
   url: https://academiccommons.columbia.edu/api/v1/search
+- type: sitemap
+  url: https://academiccommons.columbia.edu/sitemap.xml.gz
+- type: opensearch
+  url: https://academiccommons.columbia.edu/search/opensearch.xml
 id: academiccommonscolumbiaedu
+identifiers:
+- id: re3data
+  url: https://www.re3data.org/repository/r3d100011375
+  value: r3d100011375
+- id: roar
+  url: http://roar.eprints.org/6350/
+  value: '6350'
+- id: opendoar
+  url: https://v2.sherpa.ac.uk/id/repository/429
+  value: Columbia Academic Commons
 langs:
 - id: EN
   name: English

@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -30,6 +30,10 @@ endpoints:
 - type: oaipmh20
   url: http://geodata.icmyl.unam.mx/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: http://geodata.icmyl.unam.mx/geonetwork/srv/api/site
+- type: opensearch
+  url: http://geodata.icmyl.unam.mx/portal.opensearch
 export_standard: Geonetwork API
 id: geodataicmylunammx
 langs:

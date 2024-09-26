@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,6 +24,10 @@ endpoints:
 - type: oaipmh20
   url: https://antcat.antarcticanz.govt.nz/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://antcat.antarcticanz.govt.nz/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://antcat.antarcticanz.govt.nz/geonetwork/srv/api/site
 id: antcatantarcticanzgovtnz
 langs:
 - id: EN

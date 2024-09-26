@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -37,6 +37,10 @@ endpoints:
 - type: oaipmh20
   url: https://www.geoportal-bw.de/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://www.geoportal-bw.de/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://www.geoportal-bw.de/geonetwork/srv/api/site
 id: wwwgeoportalbwde
 langs:
 - id: DE

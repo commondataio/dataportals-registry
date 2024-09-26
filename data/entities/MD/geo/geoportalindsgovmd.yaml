@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,6 +22,16 @@ endpoints:
 - type: oaipmh20
   url: http://geoportalinds.gov.md/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: http://geoportalinds.gov.md/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: http://geoportalinds.gov.md/geonetwork/srv/api/site
+- type: sitemap
+  url: https://geoportalinds.gov.md/sitemap_index.xml
+- type: sitemap
+  url: https://inds.gov.md/sitemap_index.xml
+- type: opensearch
+  url: http://geoportalinds.gov.md/portal.opensearch
 export_standard: Geonetwork API
 id: geoportalindsgovmd
 langs:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -34,6 +34,10 @@ endpoints:
 - type: oaipmh20
   url: http://mg-idesc.cali.gov.co:8080/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:site
+  url: http://mg-idesc.cali.gov.co:8080/geonetwork/srv/api/site
+- type: opensearch
+  url: http://mg-idesc.cali.gov.co:8080/portal.opensearch
 id: mgidesccaligovco
 langs:
 - id: ES

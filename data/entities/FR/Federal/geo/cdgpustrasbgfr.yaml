@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,6 +24,12 @@ endpoints:
 - type: oaipmh20
   url: https://cdgp.u-strasbg.fr/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
+- type: geonetwork:selections
+  url: https://cdgp.u-strasbg.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://cdgp.u-strasbg.fr/geonetwork/srv/api/site
+- type: opensearch
+  url: https://cdgp.u-strasbg.fr/portal.opensearch
 export_standard: Geonetwork API
 id: cdgpustrasbgfr
 langs:
