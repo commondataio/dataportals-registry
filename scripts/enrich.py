@@ -448,12 +448,19 @@ def enrich_identifiers(filepath, idtype, dryrun=False):
             record = yaml.load(f, Loader=Loader)            
             f.close()
             changed = False
+            
             if 'identifiers' not in record.keys():
                 if record['uid'] in reg_map.keys():
                     record['identifiers'] = reg_map[record['uid']]
                     changed = True
             else:
                 if record['uid'] in reg_map.keys():
+                    # Clean up
+                    for n in range(0, len(record['identifiers'])):
+                        if record['identifiers'][n]['id'] == idtype: 
+                            del record['identifiers'][n]
+                            changed = True
+                            break
                     ids = []
                     for item in record['identifiers']:
                         ids.append(item['url'])

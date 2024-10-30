@@ -46,6 +46,11 @@ def split_by_software(filepath):
     os.makedirs('../data/datasets/bysoftware', exist_ok=True)
     os.system('undatum split -f software.id -d %s %s' % ('../data/datasets/bysoftware', os.path.join(DATASETS_DIR, filepath)))
 
+def split_by_type(filepath):
+    os.makedirs('../data/datasets/bytype', exist_ok=True)
+    os.system('undatum split -f catalog_type -d %s %s' % ('../data/datasets/bytype', os.path.join(DATASETS_DIR, filepath)))
+
+
 
 def build_dataset(datapath, dataset_filename):
     out = open(os.path.join(DATASETS_DIR, dataset_filename), 'w', encoding='utf8')
@@ -93,6 +98,8 @@ def build():
     print('Merged datasets %s as %s' % (','.join(['catalogs.jsonl', 'scheduled.jsonl']), 'full.jsonl'))
     print('Split by software')
     split_by_software('full.jsonl')
+    print('Split by catalog type')
+    split_by_type('full.jsonl')
 
 
 
