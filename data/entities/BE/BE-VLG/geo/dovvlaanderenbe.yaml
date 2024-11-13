@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VLG
+      name: Flemish Region
+description: DOV metadata zoekdienst is een officiële website van de Vlaamse overheid
+endpoints:
+- type: geonetwork:query
+  url: https://dov.vlaanderen.be/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://dov.vlaanderen.be/geonetwork/srv/api/records
+- type: openapi
+  url: https://dov.vlaanderen.be/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://dov.vlaanderen.be/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://dov.vlaanderen.be/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://dov.vlaanderen.be/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://dov.vlaanderen.be/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://dov.vlaanderen.be/geonetwork/srv/api/site
+- type: opensearch
+  url: https://dov.vlaanderen.be/geonetwork/api/collections/main?f=opensearch
+id: dovvlaanderenbe
+langs:
+- id: FR
+  name: French
+link: https://dov.vlaanderen.be/geonetwork
+name: DOV metadata zoekdienst
+owner:
+  link: https://www.dov.vlaanderen.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-VLG
+      name: Flemish Region
+  name: Subsurface Flanders Database
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005180

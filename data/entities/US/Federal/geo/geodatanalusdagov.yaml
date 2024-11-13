@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GeoData is a system for USDA creation and management of geospatial metadata
+  at the National Agricultural Library (NAL). It currently contains supports the ISO
+  19115 metadata format, including the newest version, ISO 19115-3. The metadata catalog
+  component of GeoData contains several hundred catalog entries, so it is for demonstration
+  purposes, not a comprehensive catalog to search for data.
+endpoints:
+- type: csw202
+  url: https://geodata.nal.usda.gov/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodata.nal.usda.gov/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geodatanalusdagov
+langs:
+- id: EN
+  name: English
+link: https://geodata.nal.usda.gov/geonetwork/srv/eng/catalog.search#/search
+name: NAL Geodata
+owner:
+  link: https://www.usda.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: US Department Of Agriculture
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- government
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00005197

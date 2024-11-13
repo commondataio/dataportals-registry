@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: 'Beim Open Data Portal Österreich handelt es sich um einen Katalog für
+  alle offenen Daten, die nicht Daten der öffentlichen Verwaltung (Open Government
+  Data) sind: Darunter sind Datensätze und deren Beschreibung (Meta-Daten) zu verstehen,
+  die von Zivilgesellschaft, Wissenschaft (OpenScience), Wirtschaft, Kunst & Kultur
+  (OpenGLAM)  und NPOs/NGOs zur Verfügung gestellt werden.'
+endpoints:
+- type: ckan
+  url: https://www.opendataportal.at/katalog/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.opendataportal.at/katalog/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.opendataportal.at/katalog/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://www.opendataportal.at/katalog/catalog.n3
+- type: dcat:ttl
+  url: https://www.opendataportal.at/katalog/catalog.ttl
+- type: dcat:xml
+  url: https://www.opendataportal.at/katalog/catalog.xml
+- type: dcat:jsonld
+  url: https://www.opendataportal.at/katalog/catalog.jsonld
+- type: sitemap
+  url: https://www.opendataportal.at/katalog/sitemap.xml
+- type: sitemap
+  url: https://www.opendataportal.at/sitemap.xml
+id: wwwopendataportalat
+langs:
+- id: DE
+  name: German
+link: https://www.opendataportal.at/katalog
+name: Open Data Portal Österreich
+owner:
+  link: https://data.gv.at/infos/cooperation-ogd-oesterreich/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 20
+  name: Cooperation OGD Austria
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags: []
+topics: []
+uid: cdi00005177

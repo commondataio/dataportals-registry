@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Great East
+description: Données OpenData du Conseil Régional Grand Est
+endpoints:
+- type: ckan
+  url: https://grandest-moissonnage.data4citizen.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://grandest-moissonnage.data4citizen.com/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://grandest-moissonnage.data4citizen.com/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://grandest-moissonnage.data4citizen.com/catalog.n3
+- type: dcat:ttl
+  url: https://grandest-moissonnage.data4citizen.com/catalog.ttl
+- type: dcat:xml
+  url: https://grandest-moissonnage.data4citizen.com/catalog.xml
+- type: dcat:jsonld
+  url: https://grandest-moissonnage.data4citizen.com/catalog.jsonld
+id: grandestmoissonnagedata4citizencom
+langs:
+- id: FR
+  name: French
+link: https://grandest-moissonnage.data4citizen.com
+name: Région GRAND EST
+owner:
+  link: https://www.grandest.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Great East
+  name: Région GRAND EST
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005187
