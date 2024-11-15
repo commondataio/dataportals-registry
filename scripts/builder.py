@@ -253,7 +253,7 @@ def validate():
     f = open(schema_file, 'r', encoding='utf8')
     schema = json.load(f)
     f.close()
-    records = load_jsonl(os.path.join(DATASETS_DIR, 'catalogs.jsonl'))
+    records = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
     typer.echo('Loaded %d data catalog records' % (len(records)))
 
     v = Validator(schema)
