@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: deprecated
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,11 @@ description: Repositório de dados de pesquisa Unifesp
 endpoints:
 - type: dataverseapi
   url: https://repositoriodedados.unifesp.br/api/search?q=*&type=dataset&sort=name&order=asc
+- type: oaipmh20
+  url: https://repositoriodedados.unifesp.br/oai?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://repositoriodedados.unifesp.br/sitemap.xml
 export_standard: Dataverse API
 id: repositoriodedadosunifespbr
 langs:

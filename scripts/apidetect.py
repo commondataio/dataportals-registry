@@ -39,7 +39,7 @@ ENTRIES_DIR = '../data/entities'
 SCHEDULED_DIR = '../data/scheduled'
 app = typer.Typer()
 
-DEFAULT_TIMEOUT = 10
+DEFAULT_TIMEOUT = 5
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0'
 
@@ -597,7 +597,10 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
         website_url = URL_CLEANUP_MAP[software_id](website_url)
     else:
         website_url = website_url.rstrip('/')
-    for item in url_map:
+    umap = url_map.copy()
+    if software_id != 'custom' and deep:
+        umap.extend(CUSTOM_URLMAP)
+    for item in umap:
         try:
             request_url = website_url + item['url']
             if 'post_params' in item.keys():

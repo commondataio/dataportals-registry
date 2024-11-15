@@ -100,7 +100,8 @@ def build():
     split_by_software('full.jsonl')
     print('Split by catalog type')
     split_by_type('full.jsonl')
-
+    print('Building final parquet file %s' % (os.path.join(DATASETS_DIR, 'full.parquet')))
+    os.system("duckdb -c \"copy '%s' to '%s'  (FORMAT 'parquet', COMPRESSION 'zstd');\"" % (os.path.join(DATASETS_DIR, 'full.jsonl'), os.path.join(DATASETS_DIR, 'full.parquet')))
 
 
 @app.command()
