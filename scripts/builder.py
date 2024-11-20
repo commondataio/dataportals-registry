@@ -614,16 +614,25 @@ def quality_control(mode='full'):
 @app.command()
 def country_report():
     """Country report"""
+    import duckdb
     from rich.console import Console
     from rich.table import Table
-    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl'))
-    reg_countries = set()
+#    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl')) 
+#    ids = duckdb.sql("select distinct(unnest(coverage).location.country.id) as id from '%s';" % (os.path.join(DATASETS_DIR, 'full.parquet'))).df().id.tolist()
+    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
+#    print(ids)
+    reg_countries = set(ids)
     countries_data = {}
     tlds_data = {}
-    for row in data:
-        if 'owner' in row.keys() and 'location' in row['owner'].keys():
-            if row['owner']['location']['country']['id'] not in reg_countries: 
-                reg_countries.add(row['owner']['location']['country']['id'])
+#    for row in data:
+#        if 'owner' in row.keys() and 'location' in row['owner'].keys():
+#            if row['owner']['location']['country']['id'] not in reg_countries: 
+#                reg_countries.add(row['owner']['location']['country']['id'])
+#        if 'coverage' in row.keys():
+#            for loc in row['coverage']:
+#                if loc['location']['country']['id'] not in reg_countries: 
+#                    reg_countries.add(loc['location']['country']['id'])
+
     f = open('../data/reference/countries.csv', 'r', encoding='utf8')
     reader = csv.DictReader(f)
     for row in reader:

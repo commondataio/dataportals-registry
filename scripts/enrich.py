@@ -427,8 +427,9 @@ def enrich_location(dryrun=False):
             f.close()
 
 @app.command()
-def enrich_identifiers(filepath, idtype, dryrun=False):
+def enrich_identifiers(filepath, idtype, dryrun=False, mode='entities'):
     """Enrich identifiers"""    
+    root_dir = ROOT_DIR if mode == 'entities' else SCHEDULED_DIR
     f = open(filepath, 'r', encoding='utf8')
     reader = csv.DictReader(f, delimiter='\t')
     reg_map = {}
@@ -438,8 +439,8 @@ def enrich_identifiers(filepath, idtype, dryrun=False):
         else:
             reg_map[row['registry_uid']].append({'id' : idtype, 'url' : row['dataportals_url'], 'value' : row['dataportals_name']})
 
-    dirs = os.listdir(ROOT_DIR)
-    for root, dirs, files in os.walk(ROOT_DIR):
+    dirs = os.listdir(root_dir)
+    for root, dirs, files in os.walk(root_dir):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
 #            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
