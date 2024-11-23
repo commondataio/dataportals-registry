@@ -159,6 +159,13 @@ def country():
     console.print(table)  
     
 
+#def fullindex()
+#    import duckdb
+#    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
+#    for cid in ids:
+#        duckdb.sql('select count(id) where ')
+
+
 
 if __name__ == "__main__":    
     app()

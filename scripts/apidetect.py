@@ -144,6 +144,7 @@ GEONETWORK_URLMAP = [
 
 FIGSHARE_URLMAP = [
     {'id' : 'sitemap', 'url' : '/sitemap/siteindex.xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'urlpat' : '/articles/dataset/'},
+    {'id' : 'figshare:graphql', 'url' : '/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': '1.0'},
 ]
 
 SOCRATA_URLMAP = [

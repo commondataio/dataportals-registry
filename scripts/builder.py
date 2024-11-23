@@ -619,7 +619,7 @@ def country_report():
     from rich.table import Table
 #    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl')) 
 #    ids = duckdb.sql("select distinct(unnest(coverage).location.country.id) as id from '%s';" % (os.path.join(DATASETS_DIR, 'full.parquet'))).df().id.tolist()
-    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
+    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s' where source.catalog_type != 'Indicators catalog';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
 #    print(ids)
     reg_countries = set(ids)
     countries_data = {}
