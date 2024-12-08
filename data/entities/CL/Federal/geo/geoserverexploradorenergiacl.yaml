@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: The website https://geoserver.exploradorenergia.cl serves as a geospatial
+  data portal managed by the Ministerio de Energía de la República de Chile (Ministry
+  of Energy of Chile). It provides access to a variety of geospatial information related
+  to the energy sector
 endpoints:
 - type: wms111
   url: https://geoserver.exploradorenergia.cl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +58,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoserver.exploradorenergia.cl/geoserver
-name: geoserver.exploradorenergia.cl
+name: Chile MinEnergy geoserver
 owner:
-  link: null
+  link: https://energia.gob.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: ''
-  type: Unknown
+  name: Ministry of Energy of Chile
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -78,7 +80,12 @@ rights:
 software:
   id: geoserver
   name: GeoServer
-status: scheduled
-tags: []
-topics: []
-uid: temp00003305
+status: active
+tags:
+- energy
+- chile
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00005236

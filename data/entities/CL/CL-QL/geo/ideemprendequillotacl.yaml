@@ -11,12 +11,17 @@ coverage:
     country:
       id: CL
       name: Chile
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CL-QL
+      name: Quillota
+description: The website https://ide.emprendequillota.cl is owned by the Municipality
+  of Quillota in Chile. It serves as a platform for the Infraestructura de Datos Espaciales
+  (IDE), which focuses on providing geospatial information and resources to support
+  local development and planning initiatives in the Quillota region
 endpoints:
 - type: geonode:layers
   url: https://ide.emprendequillota.cl/api/layers/
@@ -50,16 +55,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://ide.emprendequillota.cl
-name: ide.emprendequillota.cl
+name: SIGQuillota
 owner:
-  link: null
+  link: https://quillota.cl/municipalidad/
   location:
     country:
       id: CL
       name: Chile
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CL-QL
+      name: Quillota
+  name: Municipality of Quillota
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -67,12 +75,16 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: geonode
   name: GeoNode
-status: scheduled
-tags: []
-topics: []
-uid: temp00003469
+status: active
+tags:
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005228

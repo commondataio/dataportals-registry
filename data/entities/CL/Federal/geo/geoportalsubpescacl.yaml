@@ -15,8 +15,11 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: The website https://geoportal.subpesca.cl is owned by the Subsecretaría
+  de Pesca y Acuicultura (Subpesca), which is a governmental agency in Chile responsible
+  for the management and regulation of fisheries and aquaculture. This geoportal provides
+  access to geospatial data related to marine resources and fishing activities in
+  the country.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportal.subpesca.cl/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +40,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoportal.subpesca.cl/server/rest/services
-name: geoportal.subpesca.cl
+name: Subpesca ArcGIS Server
 owner:
-  link: null
+  link: https://www.subpesca.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: ''
-  type: Unknown
+  name: Subsecretaría de Pesca y Acuicultura (Subpesca)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -59,7 +62,19 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: scheduled
-tags: []
-topics: []
-uid: temp00001196
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- agriculture
+- livestock
+- chile
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00005235

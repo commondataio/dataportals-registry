@@ -15,8 +15,17 @@ coverage:
       id: 039
       name: Southern Europe
 endpoints:
+- type: ckan:package-search
+  url: http://dati.gov.it/opendata/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://dati.gov.it/opendata/api/3/action/package_list
+  version: '3'
 - type: ckan
-  url: https://dati.gov.it/api/3
+  url: http://dati.gov.it/opendata/api/3
+  version: '3'
+- type: sitemap
+  url: https://dati.gov.it/sitemap.xml
 export_standard: CKAN API
 id: datigovit
 identifiers:

@@ -15,8 +15,11 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: The website https://sdngsig.sernageomin.cl is owned by SERNAGEOMIN, which
+  stands for the Servicio Nacional de Geología y Minería (National Service of Geology
+  and Mining) in Chile. This governmental agency is responsible for geological and
+  mining activities, including the management and dissemination of geospatial data
+  related to geological resources and mining operations in the country.
 endpoints:
 - type: arcgis:rest:info
   url: https://sdngsig.sernageomin.cl/gissdng/rest/info?f=pjson
@@ -35,16 +38,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://sdngsig.sernageomin.cl/gissdng/rest/services
-name: sdngsig.sernageomin.cl
+name: SERNAGEOMIN ArcGIS Server
 owner:
-  link: null
+  link: https://www.sernageomin.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: ''
-  type: Unknown
+  name: National Service of Geology and Mining
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -57,7 +60,15 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: scheduled
-tags: []
-topics: []
-uid: temp00001198
+status: active
+tags:
+- geology
+- chile
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00005241

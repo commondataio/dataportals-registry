@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: The website https://geoportal.sag.gob.cl is owned by the Servicio Agrícola
+  y Ganadero (SAG), which is a governmental agency in Chile responsible for agricultural
+  and livestock services. The geoportal provides access to geospatial data related
+  to agriculture and livestock management in the country.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportal.sag.gob.cl/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoportal.sag.gob.cl/server/rest/services
-name: geoportal.sag.gob.cl
+name: Servicio Agrícola y Ganadero (SAG) ArcGIS Server
 owner:
-  link: null
+  link: https://www.sag.gov.cl
   location:
     country:
       id: CL
       name: Chile
     level: 20
-  name: ''
-  type: Unknown
+  name: Servicio Agrícola y Ganadero (SAG)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -59,7 +61,19 @@ rights:
 software:
   id: arcgisserver
   name: ArcGIS Server
-status: scheduled
-tags: []
-topics: []
-uid: temp00001195
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- agriculture
+- livestock
+- chile
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: cdi00005234
