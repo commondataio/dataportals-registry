@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Find the latest COVID-19 Dashboards, Data and State Sponsored Test Sites
+endpoints:
+- type: ckan:package-search
+  url: https://data.chhs.ca.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.chhs.ca.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://data.chhs.ca.gov/data.json
+- type: ckan
+  url: https://data.chhs.ca.gov/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://data.chhs.ca.gov/catalog.n3
+- type: dcat:ttl
+  url: https://data.chhs.ca.gov/catalog.ttl
+- type: dcat:xml
+  url: https://data.chhs.ca.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://data.chhs.ca.gov/catalog.jsonld
+id: datachhscagov
+langs:
+- id: EN
+  name: English
+link: https://data.chhs.ca.gov
+name: California Health and Human Services Open Data Portal
+owner:
+  link: https://www.chhs.ca.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: California Health and Human Services
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00005283
