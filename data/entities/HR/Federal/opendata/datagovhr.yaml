@@ -15,8 +15,22 @@ coverage:
       id: 039
       name: Southern Europe
 endpoints:
-- type: ckan
-  url: https://data.gov.hr/api/3
+- type: sparql:web
+  url: https://data.gov.hr/trazilica-page-sparql/
+- type: ckan:package-search
+  url: https://data.gov.hr/ckan/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.hr/ckan/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.gov.hr/ckan/catalog.n3
+- type: dcat:ttl
+  url: https://data.gov.hr/ckan/catalog.ttl
+- type: dcat:xml
+  url: https://data.gov.hr/ckan/catalog.xml
+- type: dcat:jsonld
+  url: https://data.gov.hr/ckan/catalog.jsonld
 export_standard: CKAN API
 id: datagovhr
 identifiers:
