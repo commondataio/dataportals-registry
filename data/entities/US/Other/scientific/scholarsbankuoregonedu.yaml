@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Scholars' Bank is an open access digital archive for the scholarly and
+  creative output of the University of Oregon community. Its mission is to preserve
+  and disseminate the intellectual and creative output of the University of Oregon's
+  faculty, staff, and students.
+endpoints:
+- type: dspace:items
+  url: https://scholarsbank.uoregon.edu/rest/items
+  version: '6'
+- type: oaipmh20
+  url: https://scholarsbank.uoregon.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://scholarsbank.uoregon.edu/xmlui/sitemap
+- type: sitemap
+  url: https://scholarsbank.uoregon.edu/xmlui/htmlmap
+- type: opensearch
+  url: http://scholarsbank.uoregon.edu:80/xmlui/open-search/description.xml
+- type: dspace
+  url: https://scholarsbank.uoregon.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://scholarsbank.uoregon.edu/server/api/discover/search/objects
+  version: '7'
+- type: sitemap
+  url: https://scholarsbank.uoregon.edu/sitemap_index.xml
+- type: sitemap
+  url: https://localhost:4000/sitemap_index.xml
+- type: sitemap
+  url: https://localhost:4000/sitemap_index.html
+id: scholarsbankuoregonedu
+langs:
+- id: EN
+  name: English
+link: https://scholarsbank.uoregon.edu
+name: Scholars' Bank
+owner:
+  link: https://www.uoregon.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: University of Oregon
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: dspace
+  name: DSpace
+status: active
+tags:
+- scientific
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00005384

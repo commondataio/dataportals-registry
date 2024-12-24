@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: As part of the WMO Information System, the National Meteorological Satellite
+  Center (NMSC) operates the DCPC NMSC, which provides level 1 data of the Geo-KOMPSAT-2A
+  (GK2A) satellite, as well as level 1 and 2 data of the Communication, Ocean and
+  Meteorological Satellite (COMS).
+endpoints:
+- type: csw202
+  url: http://dcpc.nmsc.kma.go.kr/openwis-user-portal/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://dcpc.nmsc.kma.go.kr/openwis-user-portal/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://dcpc.nmsc.kma.go.kr/openwis-user-portal/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: dcpcnmsckmagokr
+langs:
+- id: EN
+  name: English
+link: http://dcpc.nmsc.kma.go.kr/openwis-user-portal
+name: DCPC NMSC User Portal
+owner:
+  link: https://www.weather.go.kr
+  location:
+    country:
+      id: KR
+      name: South Korea
+    level: 20
+  name: Korea Meteorological Administration
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: openwis
+  name: OpenWIS
+status: active
+tags:
+- wather
+- meteorology
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00005380

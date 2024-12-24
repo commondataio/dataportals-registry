@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: The power company SEV is an inter-municipal community, owned by all the
+  municipalities in the Faroe Islands, and therefore owned by the people of the Faroe
+  Islands.
+endpoints:
+- type: arcgis:rest:info
+  url: https://agisportal.sev.fo/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agisportal.sev.fo/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://agisportal.sev.fo/arcgis/rest/services?f=kmz
+id: agisportalsevfo
+langs:
+- id: DA
+  name: Danish
+link: https://agisportal.sev.fo/arcgis/rest/services
+name: SEV ArcGIS Server
+owner:
+  link: null
+  location:
+    country:
+      id: FO
+      name: Faroe Islands
+    level: 20
+  name: SEV
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- electricity
+topics:
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: ENER
+  name: Energy
+  type: eudatatheme
+uid: cdi00005362
