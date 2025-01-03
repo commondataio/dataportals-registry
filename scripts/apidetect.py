@@ -118,6 +118,13 @@ CKAN_URLMAP = [
     {'id' : 'dcat:jsonld', 'url' : '/catalog.jsonld', 'expected_mime' : 'application/ld+json', 'is_json' : True, 'version': None},
 ]
 
+IPT_URLMAP = [
+    {'id' : 'dcat:ttl', 'url' : '/dcat', 'expected_mime' : 'text/turtle', 'is_json' : False, 'version': None},
+    {'id' : 'ipt:dataset', 'url' : '/inventory/dataset', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'rss', 'url' : '/rss.do', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': '2.0'},
+]
+
+
 JUNAR_URLMAP = [
     {'id' : 'dcatus11', 'url' : '/data.json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
 ]
@@ -354,6 +361,8 @@ METAGIS_URLMAP = [
 
 THREDDS_URLMAP = [
     {'id' : 'thredds:catalog',  'url' : '/catalog.xml', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},    
+    {'id' : 'thredds:info',  'url' : '/serverInfo.xml', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
+    {'id' : 'thredds:info',  'url' : '/info/serverInfo.xml', 'accept' : 'application/xml', 'expected_mime' : XML_MIMETYPES, 'is_json' : False, 'version': None, 'prefetch' : False},
 ]
 
 ERDDAP_URLMAP = [
@@ -557,7 +566,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
 'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
 'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP, 'custom' : CUSTOM_URLMAP,
-'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP, 'triplydb' : TRIPLYDB_URLMAP
+'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP, 'triplydb' : TRIPLYDB_URLMAP, 'ipt' : IPT_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):

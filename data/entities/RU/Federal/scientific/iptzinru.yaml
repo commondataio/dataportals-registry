@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,14 @@ coverage:
       name: 'Eastern Europe '
 description: IPT of the Zoological Institute of the Russian Academy of Sciences and
   Komarov Botanical Institute of the Russian Academy of Sciences
+endpoints:
+- type: ipt:dataset
+  url: https://ipt.zin.ru/inventory/dataset
+- type: rss
+  url: https://ipt.zin.ru/rss.do
+  version: '2.0'
+- type: dcat:ttl
+  url: https://ipt.zin.ru/dcat
 id: iptzinru
 langs:
 - id: RU

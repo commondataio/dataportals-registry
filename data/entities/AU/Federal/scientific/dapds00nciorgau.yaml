@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,8 @@ description: NCI THREDDS Server
 endpoints:
 - type: thredds:catalog
   url: https://dapds00.nci.org.au/thredds/catalog.xml
+- type: thredds:info
+  url: https://dapds00.nci.org.au/thredds/info/serverInfo.xml
 id: dapds00nciorgau
 langs:
 - id: EN
