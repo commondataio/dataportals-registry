@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-FL
+      name: Flevoland
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: geonetwork:query
+  url: https://georegister.flevoland.nl/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://georegister.flevoland.nl/geonetwork/srv/api/records
+- type: openapi
+  url: https://georegister.flevoland.nl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://georegister.flevoland.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://georegister.flevoland.nl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://georegister.flevoland.nl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://georegister.flevoland.nl/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://georegister.flevoland.nl/geonetwork/srv/api/site
+export_standard: Geonetwork API
+id: georegisterflevolandnl
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://georegister.flevoland.nl/geonetwork
+name: Provincie Flevoland data portal
+owner:
+  link: https://www.flevoland.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-FL
+      name: Flevoland
+  name: Provincie Flevoland
+  type: Regional government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00002121

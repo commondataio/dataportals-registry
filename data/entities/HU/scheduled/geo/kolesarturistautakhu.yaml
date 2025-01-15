@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: wms111
+  url: http://kolesar.turistautak.hu/mapproxy/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: http://kolesar.turistautak.hu/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: http://kolesar.turistautak.hu/mapproxy/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: http://kolesar.turistautak.hu/mapproxy/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: kolesarturistautakhu
+langs:
+- id: HU
+  name: Hungarian
+link: http://kolesar.turistautak.hu/mapproxy
+name: kolesar.turistautak.hu
+owner:
+  link: null
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: ''
+  type: Unknown
+properties:
+  has_doi: false
+  unfinished: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: Mapproxy
+status: active
+tags: []
+topics: []
+uid: cdi00007375

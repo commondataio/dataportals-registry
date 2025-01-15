@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.bps.go.id/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.bps.go.id/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.bps.go.id/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.bps.go.id/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.bps.go.id/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.bps.go.id/server/rest/services?f=kmz
+id: geoportalbpsgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.bps.go.id/server/rest/services
+name: geoportal.bps.go.id
+owner:
+  link: null
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: ''
+  type: Unknown
+properties:
+  has_doi: false
+  unfinished: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: cdi00007425

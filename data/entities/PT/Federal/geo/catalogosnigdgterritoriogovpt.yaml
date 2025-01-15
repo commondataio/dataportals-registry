@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Registo Nacional de Dados Geográficos
+endpoints:
+- type: geonetwork:query
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/eng/q
+- type: openapi
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://catalogosnig.dgterritorio.gov.pt/rndg/srv/api/site
+- type: opensearch
+  url: https://catalogosnig.dgterritorio.gov.pt/portal.opensearch
+id: catalogosnigdgterritoriogovpt
+langs:
+- id: PT
+  name: Portugal
+link: https://catalogosnig.dgterritorio.gov.pt/rndg
+name: Registo Nacional de Dados Geográficos
+owner:
+  link: https://www.dgterritorio.gov.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: 'Direção-Geral do Território'
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: 
+- spatial
+topics: []
+uid: cdi00004167

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-GA
+      name: Galicia
+description: Galicia ArcGIS Server
+endpoints:
+- type: arcgis:rest:info
+  url: https://ideg.xunta.gal/servizos/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ideg.xunta.gal/servizos/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://ideg.xunta.gal/servizos/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ideg.xunta.gal/servizos/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ideg.xunta.gal/servizos/rest/services?f=kmz
+id: idegxuntagal
+langs:
+- id: ES
+  name: Spanish
+link: https://ideg.xunta.gal/servizos/rest/services
+name: Galicia ArcGIS Server
+owner:
+  link: https://www.xunta.gal
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-GA
+      name: Galicia
+  name: Galicia government
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geo
+- spatial
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00006497
