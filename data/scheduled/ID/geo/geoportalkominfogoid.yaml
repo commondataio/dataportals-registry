@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: This is a temporary record with some data collected but it should be
+  updated befor adding to the index
+endpoints:
+- type: geonode:layers
+  url: https://geoportal.kominfo.go.id/api/layers/
+- type: geonode:documents
+  url: https://geoportal.kominfo.go.id/api/documents/
+- type: wms111
+  url: https://geoportal.kominfo.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geoportal.kominfo.go.id/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoportal.kominfo.go.id/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoportal.kominfo.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.kominfo.go.id/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geoportal.kominfo.go.id/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geoportal.kominfo.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geoportalkominfogoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.kominfo.go.id/
+name: geoportal.kominfo.go.id
+owner:
+  link: null
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: ''
+  type: Unknown
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags: []
+topics: []
+uid: temp00000351

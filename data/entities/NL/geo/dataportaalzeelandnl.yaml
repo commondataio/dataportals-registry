@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+endpoints:
+- type: geonetwork:query
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/eng/q
+- type: geonetwork:records
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/api/records
+- type: openapi
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://dataportaal.zeeland.nl/dataportaal/srv/api/site
+- type: opensearch
+  url: https://dataportaal.zeeland.nl/portal.opensearch
+export_standard: Geonetwork API
+id: dataportaalzeelandnl
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://dataportaal.zeeland.nl/dataportaal
+name: Open Data portaal Zeeland
+owner:
+  link: https://www.zeeland.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Provincie Zeeland
+  type: Regional government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00002118

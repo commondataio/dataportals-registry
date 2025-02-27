@@ -922,53 +922,6 @@ def update_terms(dryrun=False, mode='entities'):
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
 
 
-@app.command()
-def move_scheduled():
-    """Move scheduled"""    
-
-#    dirs = os.listdir(root)
-    for cdir in os.listdir(SCHEDULED_DIR):
-        print(cdir)
-        target = os.path.join(ROOT_DIR, cdir, 'scheduled')
-        os.makedirs(target, exist_ok=True)
-        subdirs = os.listdir(os.path.join(SCHEDULED_DIR, cdir))
-        for s in subdirs:
-            print('Moving', os.path.join(SCHEDULED_DIR, cdir, s), os.path.join(target, s))
-            shutil.move(os.path.join(SCHEDULED_DIR, cdir, s), os.path.join(target, s))
-
-
-@app.command()
-def remove_scheduled(dryrun=False):
-    """Remove scheduled"""    
-    root_dir = ROOT_DIR
-    dirs = os.listdir(root_dir)
-    for root, dirs, files in os.walk(root_dir):
-        files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
-        for filename in files:                
-#            print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
-            filepath = filename
-            f = open(filepath, 'r', encoding='utf8')
-            record = yaml.load(f, Loader=Loader)            
-            f.close()
-            n = 0
-            changed = False
-            if 'uid' in record.keys() and record['uid'][0:4] == 'temp':
-                del record['uid']
-                if 'properties' not in record.keys():   
-                    record['properties'] = {}
-                record['properties']['unfinished'] = True
-                changed = True
-            if record['status'] == 'scheduled':
-                record['status'] = 'active'
-                changed = True
-            if changed is True:
-                f = open(filepath, 'w', encoding='utf8')
-                f.write(yaml.safe_dump(record, allow_unicode=True))
-                f.close()
-                print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
-
-            
-
 if __name__ == "__main__":
     app()
 
