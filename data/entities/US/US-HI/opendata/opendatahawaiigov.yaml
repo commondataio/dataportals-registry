@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-HI
+      name: Hawaii
+description: With the launch of the State of Hawaii's Open Data portal, the State
+  of Hawaii has now begun providing residents, analysts, and civic developers with
+  unparalleled access to State data for use in increasing transparency, driving civic
+  innovation, and engaging participants in a more collaborative form of government.
+endpoints:
+- type: ckan:package-search
+  url: https://opendata.hawaii.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.hawaii.gov/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://opendata.hawaii.gov/data.json
+- type: ckan
+  url: https://opendata.hawaii.gov/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.hawaii.gov/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.hawaii.gov/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.hawaii.gov/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.hawaii.gov/catalog.jsonld
+id: opendatahawaiigov
+langs:
+- id: EN
+  name: English
+link: https://opendata.hawaii.gov
+name: Hawaii Open Data
+owner:
+  link: https://www.hawaii.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+  name: Sate of Hawaii
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010156

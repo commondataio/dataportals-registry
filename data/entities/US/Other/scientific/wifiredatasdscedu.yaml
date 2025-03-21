@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: WIFIRE’s primary mission is to turn data and computing into a utility
+  for advancing fire science. The principles behind the system are transparency and
+  community collaboration. WIFIRE is built to enable and use any fire modeling software
+  in combination with data at scale, and many are needed for use in different environments
+  and hazards. This data catalog integrates and serves data from diverse providers,
+  some of which fund WIFIRE to sustain the data catalog.
+endpoints:
+- type: ckan
+  url: https://wifire-data.sdsc.edu/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://wifire-data.sdsc.edu/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://wifire-data.sdsc.edu/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://wifire-data.sdsc.edu/catalog.n3
+- type: dcat:ttl
+  url: https://wifire-data.sdsc.edu/catalog.ttl
+- type: dcat:xml
+  url: https://wifire-data.sdsc.edu/catalog.xml
+- type: dcat:jsonld
+  url: https://wifire-data.sdsc.edu/catalog.jsonld
+id: wifiredatasdscedu
+langs:
+- id: EN
+  name: English
+link: https://wifire-data.sdsc.edu
+name: Wifire Commons
+owner:
+  link: https://wwww.sdsc.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: San Diego Supercomputer Center
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- science
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00010155
