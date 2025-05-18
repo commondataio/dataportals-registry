@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer instance as a data catalog
 endpoints:
 - type: wfs200
   url: http://wgmatera.paesit.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
@@ -53,16 +52,16 @@ langs:
 - id: IT
   name: Italian
 link: http://wgmatera.paesit.it/geoserver
-name: wgmatera.paesit.it
+name: wgmatera.paesit.it/geoserver
 owner:
-  link: null
+  link: http://wgmatera.paesit.it/geoserver
   location:
     country:
       id: IT
       name: Italy
     level: 20
-  name: ''
-  type: Unknown
+  name: Not specified
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -76,6 +75,15 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- GIS
+- spatial data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00003793

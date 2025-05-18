@@ -10,11 +10,18 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: L'Open data de la Ville de Vincennes catalog
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Official open data portal of the city of Vincennes, providing public
+  datasets, datavisualizations, and access to the city's Geographic Information System.
+  Users can navigate by data catalog or datavisualization, with categories such as
+  mobility, accessibility, and citizen life. Data are frequently updated and can include
+  information from multiple producers (city, state, RATP, etc.).
 endpoints:
 - type: opendatasoft
   url: https://data.vincennes.fr/api
@@ -27,14 +34,17 @@ langs:
 link: https://data.vincennes.fr
 name: L'Open data de la Ville de Vincennes catalog
 owner:
-  link: null
+  link: https://www.vincennes.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Ville de Vincennes
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -48,6 +58,40 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- public sector
+- transportation
+- urban
+- mobility
+- GIS
+- datavisualization
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00002352

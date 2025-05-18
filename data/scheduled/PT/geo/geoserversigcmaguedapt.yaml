@@ -11,12 +11,15 @@ coverage:
     country:
       id: PT
       name: Portugal
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: PT-01
+      name: Aveiro
+description: Geospatial data catalog provided by the Municipality of Águeda (Câmara
+  Municipal de Águeda).
 endpoints:
 - type: wms111
   url: https://geoserver.sig.cm-agueda.pt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +59,19 @@ langs:
 - id: PT
   name: Portugal
 link: https://geoserver.sig.cm-agueda.pt/geoserver
-name: geoserver.sig.cm-agueda.pt
+name: geoserver.sig.cm-agueda.pt/geoserver
 owner:
-  link: null
+  link: https://geoserver.sig.cm-agueda.pt/geoserver
   location:
     country:
       id: PT
       name: Portugal
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: PT-01
+      name: Aveiro
+  name: Câmara Municipal de Águeda (Municipality of Águeda)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -79,6 +85,16 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- WMS
+- WFS
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00005298

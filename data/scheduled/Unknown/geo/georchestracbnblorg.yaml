@@ -9,14 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: FR
+      name: France
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: GeoServer module within geOrchestra for the CBNBL, providing a map and
+  features server as part of a spatial data infrastructure.
 endpoints:
 - type: wms111
   url: https://georchestra.cbnbl.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,16 +63,19 @@ endpoints:
 id: georchestracbnblorg
 langs: []
 link: https://georchestra.cbnbl.org/geoserver
-name: georchestra.cbnbl.org
+name: CBNBL geOrchestra GeoServer
 owner:
-  link: null
+  link: https://georchestra.cbnbl.org/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: CBNBL
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -83,6 +89,11 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- Spatial Data Infrastructure
+- GeoServer
+- geOrchestra
+- INSPIRE
+- CBNBL
 topics: []
 uid: temp00003966

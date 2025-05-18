@@ -11,12 +11,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: ArcGIS-based map and spatial data services provided by Worcestershire
+  County Council.
 endpoints:
 - type: arcgis:rest:info
   url: http://gis.worcestershire.gov.uk/arcgis/rest/info?f=pjson
@@ -29,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: http://gis.worcestershire.gov.uk/arcgis/services
-name: gis.worcestershire.gov.uk
+name: Worcestershire County Council GIS Data Catalog
 owner:
-  link: null
+  link: http://gis.worcestershire.gov.uk/arcgis/services
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Worcestershire County Council
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -52,6 +58,12 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- ArcGIS
+- Local government
+- Open data
+- Spatial data
+- Worcestershire
 topics: []
 uid: temp00004998

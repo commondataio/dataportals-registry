@@ -9,14 +9,18 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: Explore, Map, Download Contact Information mordziejewski@laporteco.in.gov
-  Mike Ordziejewski - La Porte County GIS Director
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IN
+      name: Indiana
+description: Discover, analyze and download data from LaPorte County GIS Hub. Download
+  in CSV, KML, Zip, GeoJSON, GeoTIFF or PNG. Find API links for GeoServices, WMS,
+  ...
 endpoints:
 - type: dcatap201
   url: https://laporte-county-gis-hub-laportecounty.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -35,14 +39,17 @@ langs:
 link: https://laporte-county-gis-hub-laportecounty.hub.arcgis.com/
 name: LaPorte County GIS Hub
 owner:
-  link: null
+  link: https://laporte-county-gis-hub-laportecounty.hub.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IN
+      name: Indiana
+  name: LaPorte County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -56,6 +63,17 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Parcel
+- Address
+- Zoning
+- Centerline
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: cdi00002989

@@ -11,12 +11,16 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-MC
+      name: Murcia, Region de
+description: Servicio web de mapas para la visualización de ortofotos históricas y
+  actuales de la Región de Murcia. Este servicio sirve las imágenes históricas y actuales
+  mediante estándares WMS.
 endpoints:
 - type: wms111
   url: https://ortofotos-gis.carm.es:443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -50,16 +54,20 @@ langs:
 - id: ES
   name: Spanish
 link: https://ortofotos-gis.carm.es:443/geoserver
-name: ortofotos-gis.carm.es:443
+name: ortofotos-gis.carm.es/geoserver
 owner:
-  link: null
+  link: https://ortofotos-gis.carm.es/geoserver
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-MC
+      name: Murcia, Region de
+  name: Servicio de Cartografía. Dirección General de Ordenación del Territorio, Arquitectura
+    y Vivienda. CARM
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -73,6 +81,14 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- ortofoto
+- WMS
+- CARM
+- Murcia
+- aerial imagery
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00001457

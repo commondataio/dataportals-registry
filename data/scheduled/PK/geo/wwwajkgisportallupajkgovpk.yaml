@@ -11,12 +11,16 @@ coverage:
     country:
       id: PK
       name: Pakistan
-    level: 20
+    level: 30
     macroregion:
       id: '034'
       name: Southern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: PK-JK
+      name: Azad Jammu and Kashmir
+description: Official data catalog for GIS services and spatial datasets under Land
+  Use Planning Section, Planning and Development Department, Azad Jammu & Kashmir
+  (AJK). The portal provides REST services for accessing various GIS datasets.
 endpoints:
 - type: arcgis:rest:info
   url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/info?f=pjson
@@ -37,14 +41,17 @@ langs:
 link: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services
 name: www.ajkgisportal.lupajk.gov.pk
 owner:
-  link: null
+  link: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services
   location:
     country:
       id: PK
       name: Pakistan
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: PK-JK
+      name: Azad Jammu and Kashmir
+  name: Land Use Planning Section, Planning and Development Department, AJK
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,11 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- Spatial data
+- AJK
+- Pakistan
+- REST services
 topics: []
 uid: temp00002006

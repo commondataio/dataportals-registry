@@ -10,12 +10,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: Research data repository managed by the University of Cambridge, supporting
+  data sharing, access, and reusability.
 endpoints:
 - type: oaipmh20
   url: https://www.repository.cam.ac.uk/oai/request?verb=Identify
@@ -29,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://www.repository.cam.ac.uk
-name: www.repository.cam.ac.uk
+name: University of Cambridge Repository Data Catalog
 owner:
-  link: null
+  link: https://www.repository.cam.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Cambridge
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -52,6 +58,18 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
-topics: []
+tags:
+- research data
+- science
+- repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00001872

@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer hosting the Global Renewable Energy Atlas managed by IRENA
 endpoints:
 - type: wms111
   url: https://irena-ga.azurewebsites.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -62,16 +61,16 @@ langs:
 - id: EN
   name: English
 link: https://irena-ga.azurewebsites.net/geoserver
-name: irena-ga.azurewebsites.net
+name: IRENA Global Atlas GeoServer
 owner:
-  link: null
+  link: https://www.irena.org/
   location:
     country:
       id: Unknown
       name: Unknown
     level: 20
-  name: ''
-  type: Unknown
+  name: IRENA
+  type: International
 properties:
   has_doi: false
 rights:
@@ -85,6 +84,30 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- renewable energy
+- solar
+- wind
+- geothermal
+- GIS
+- atlas
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001738

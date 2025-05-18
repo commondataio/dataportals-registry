@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: Conjunto de datasets que corresponden a los resultados de investigaciones
+  realizadas por el Observatorio Universitario de la Ciudad.
 endpoints:
 - type: ckan:package-search
   url: http://datosabiertos.ufasta.edu.ar/api/3/action/package_search
@@ -38,16 +41,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://datosabiertos.ufasta.edu.ar
-name: datosabiertos.ufasta.edu.ar
+name: Datos Abiertos del Observatorio Universitario de la Ciudad
 owner:
-  link: null
+  link: http://datosabiertos.ufasta.edu.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Universidad FASTA / Observatorio Universitario de la Ciudad
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,15 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- open_data
+- research
+- university
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00003090

@@ -10,12 +10,19 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Contains a mirror eReefs model data, and custom aggregations performed
-  by the Knowledge System team.
+    subregion:
+      id: AU-QLD
+      name: Queensland
+description: eReefs research project aims to develop a platform providing a comprehensive
+  view of dynamic marine environment conditions across the Great Barrier Reef from
+  end-of-catchments and estuaries to reef lagoons and the open ocean. The system provides
+  information on physical processes, sediment transport, biogeochemistry and ocean
+  colour, addressing enhanced monitoring, data standards, data architecture, operational
+  modelling, reporting and data visualisation.
 endpoints:
 - type: thredds:catalog
   url: https://thredds.ereefs.aims.gov.au/thredds/catalog/catalog.xml
@@ -24,14 +31,17 @@ langs:
 - id: EN
   name: English
 link: https://thredds.ereefs.aims.gov.au/thredds/catalog/catalog.html
-name: AIMS eReefs THREDDS
+name: eReefs THREDDS Data Server catalogue
 owner:
   link: https://ereefs.aims.gov.au/
   location:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-QLD
+      name: Queensland
   name: Australian Institute of Marine Science - eReefs
   type: Academy
 properties:
@@ -53,6 +63,12 @@ tags:
 - climate
 - ocean
 - earth science
+- Great Barrier Reef
+- hydrodynamics
+- sediment
+- biogeochemistry
+- ocean colour
+- NetCDF
 topics:
 - id: ENVI
   name: Environment
@@ -66,4 +82,13 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00005314

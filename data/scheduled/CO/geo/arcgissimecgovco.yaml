@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: REST endpoint for ArcGIS services, acting as a data catalog for geospatial
+  datasets
 endpoints:
 - type: arcgis:rest:info
   url: http://arcgis.simec.gov.co:6080/arcgis/rest/info?f=pjson
@@ -35,16 +35,16 @@ langs:
 - id: ES
   name: Spanish
 link: http://arcgis.simec.gov.co:6080/arcgis/rest/services
-name: arcgis.simec.gov.co:6080
+name: arcgis.simec.gov.co:6080/arcgis/rest/services
 owner:
-  link: null
+  link: http://arcgis.simec.gov.co:6080
   location:
     country:
       id: CO
       name: Colombia
     level: 20
-  name: ''
-  type: Unknown
+  name: Not specified in text
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +58,40 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- arcgis
+- rest
+- geospatial
+- colombia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001374

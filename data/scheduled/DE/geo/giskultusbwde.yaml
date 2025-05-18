@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: GeoServer data catalog for the Ministry of Education, Youth and Sport
+  Baden-Württemberg
 endpoints:
 - type: wms111
   url: https://gis.kultus-bw.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,14 +67,17 @@ langs:
 link: https://gis.kultus-bw.de/geoserver
 name: gis.kultus-bw.de
 owner:
-  link: null
+  link: https://gis.kultus-bw.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: Ministry of Education, Youth and Sport Baden-Württemberg
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -85,6 +91,15 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- education
+- geoserver
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001400

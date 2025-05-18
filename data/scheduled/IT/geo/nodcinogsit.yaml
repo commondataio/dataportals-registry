@@ -11,12 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-36
+      name: Friuli-Venezia Giulia
+description: Geoportal and data access for oceanographic data in Italy, managed by
+  the National Oceanographic Data Centre under OGS.
 endpoints:
 - type: wms111
   url: https://nodc.inogs.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: IT
   name: Italian
 link: https://nodc.inogs.it/geoserver
-name: nodc.inogs.it
+name: 'NODC/OGS: National Oceanographic Data Centre for Italy'
 owner:
-  link: null
+  link: https://nodc.ogs.it/
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-36
+      name: Friuli-Venezia Giulia
+  name: OGS (National Institute of Oceanography and Applied Geophysics)
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- oceanography
+- ocean data
+- geospatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00001576

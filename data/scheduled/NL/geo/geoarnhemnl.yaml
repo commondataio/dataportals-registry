@@ -11,12 +11,14 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NL-GE
+      name: Gelderland
+description: ArcGIS REST services catalog for geo.arnhem.nl (Local Government)
 endpoints:
 - type: arcgis:rest:info
   url: https://geo.arnhem.nl/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: NL
   name: Dutch
 link: https://geo.arnhem.nl/arcgis/rest/services
-name: geo.arnhem.nl
+name: geo.arnhem.nl/arcgis/rest/services
 owner:
-  link: null
+  link: https://geo.arnhem.nl/arcgis/rest/services
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NL-GE
+      name: Gelderland
+  name: geo.arnhem.nl
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,10 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- ArcGIS
+- Open Data
+- Geospatial
 topics: []
 uid: temp00003825

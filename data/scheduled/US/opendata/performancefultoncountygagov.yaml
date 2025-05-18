@@ -10,12 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Website providing strategic performance measures for Fulton County, Georgia,
+  USA.
 endpoints:
 - type: dcatus11
   url: https://performance.fultoncountyga.gov/data.json
@@ -32,14 +35,17 @@ langs:
 link: https://performance.fultoncountyga.gov
 name: Rally | Open Data Portal | Fulton Performance
 owner:
-  link: null
+  link: https://performance.fultoncountyga.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Fulton County Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -53,6 +59,15 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- performance
+- strategic
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00002554

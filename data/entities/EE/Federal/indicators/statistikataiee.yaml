@@ -10,13 +10,18 @@ coverage:
     country:
       id: EE
       name: Estonia
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: The Health Statistics and Health Research Database is Estonian largest
-  set of health-related statistics and survey results administrated by National Institute
-  for Health Development.
+    subregion:
+      id: EE-37
+      name: Harjumaa
+description: Estonian largest set of health-related statistics and survey results
+  administrated by National Institute for Health Development. Data covers population,
+  morbidity, use of healthcare and reasons for treatment, healthcare resources and
+  their use, health and health behaviour, statistics on medicines, and data for health
+  and welfare profile. Regularly provides data to EUROSTAT, WHO, OECD, and others.
 endpoints:
 - type: pxwebapi
   url: https://statistika.tai.ee/api/v1/en/
@@ -33,7 +38,10 @@ owner:
     country:
       id: EE
       name: Estonia
-    level: 20
+    level: 30
+    subregion:
+      id: EE-37
+      name: Harjumaa
   name: National Institute for Health Development
   type: Central government
 properties:
@@ -53,6 +61,17 @@ tags:
 - government
 - has_api
 - health
+- health statistics
+- health research
+- population
+- morbidity
+- healthcare
+- medicines
+- welfare
+- public health
+- EUROSTAT
+- WHO
+- OECD
 topics:
 - id: HEAL
   name: Health

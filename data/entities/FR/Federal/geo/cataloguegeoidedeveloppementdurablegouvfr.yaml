@@ -16,6 +16,13 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
+description: 'Schéma pour l’extraction d’informations depuis un catalogue de données
+  utilisant trois vocabulaires : owner_type_reference, data_theme, iso19115_theme,
+  selon l’URL fournie. Aucune information directe n’a pu être extraite d’une page
+  HTML via la seule URL (les données sont dynamiques ou protégées, non accessibles
+  en texte brut). Cependant, voici le schéma attendu si extraction possible, et l’exemple
+  vide à remplir par l’utilisateur ou via API. Pour extraire concrètement, il faudrait
+  accéder à des APIs ou métadonnées du catalogue.'
 endpoints:
 - type: geonetwork:query
   url: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue/srv/eng/q
@@ -40,6 +47,7 @@ langs:
 link: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue
 name: Catalogue interministériel de données géographiques
 owner:
+  link: http://catalogue.geo-ide.developpement-durable.gouv.fr/catalogue
   location:
     country:
       id: FR

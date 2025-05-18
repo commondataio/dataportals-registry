@@ -10,10 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-OR
+      name: Oregon
+description: Data catalog for datasets collected by OHSU researchers; provides access
+  descriptions and metadata.
 endpoints:
 - type: inveniordmapi:records
   url: https://research-data-catalog.ohsu.edu/api/records
@@ -29,7 +34,10 @@ owner:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-OR
+      name: Oregon
   name: Oregon Health and Science University
   type: Academy
 properties:
@@ -53,4 +61,10 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00005167

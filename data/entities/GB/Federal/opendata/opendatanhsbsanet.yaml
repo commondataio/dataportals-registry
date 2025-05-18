@@ -10,10 +10,18 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Home of data released to the public by NHS Business Services Authority.
+  You can view, filter, and download data and metadata. Contains ad hoc official statistics
+  and management information, datasets on prescribing and dispensing of medicines,
+  NHS dental activity, digital performance metrics, dispensing contractors, FOI responses,
+  medicines supply, and commercial/financial data.
 endpoints:
 - type: ckan:package-search
   url: https://opendata.nhsbsa.net/api/3/action/package_search
@@ -32,11 +40,15 @@ langs:
 link: https://opendata.nhsbsa.net
 name: NHS Business Services Authority’s (NHSBSA) Open Data Portal
 owner:
+  link: https://www.nhsbsa.nhs.uk/
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: NHS Business Services Authority’s (NHSBSA)
   type: Central government
 rights:
@@ -52,4 +64,11 @@ software:
 status: active
 tags:
 - has_api
+- NHS
+- Healthcare
+- Medicine
+- Prescriptions
+- Dental
+- Statistics
+- Open data
 uid: cdi00000770

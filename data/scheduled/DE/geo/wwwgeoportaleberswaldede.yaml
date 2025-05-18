@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+description: A data catalog providing geospatial data and services via Geoserver for
+  the Eberswalde region.
 endpoints:
 - type: wms111
   url: http://www.geoportal.eberswalde.de:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,14 +67,17 @@ langs:
 link: http://www.geoportal.eberswalde.de:8080/geoserver
 name: www.geoportal.eberswalde.de:8080
 owner:
-  link: null
+  link: http://www.geoportal.eberswalde.de:8080/geoserver
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+  name: Eberswalde Geoportal
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -85,6 +91,45 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- opendata
+- GIS
+- geoserver
+- Germany
+- Eberswalde
+topics:
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
 uid: temp00001416

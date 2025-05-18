@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: BE-VLG
       name: Flemish Region
-description: Flanders Subsurface Database ArcGIS Server
+description: GeoServer instance for Databank Ondergrond Vlaanderen (DOV), providing
+  public access to geospatial data on soil, subsoil, and groundwater in Flanders.
 endpoints:
 - type: wms111
   url: http://www.dov.vlaanderen.be:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -90,9 +91,23 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
+tags:
+- soil
+- subsoil
+- groundwater
+- Flanders
+- Belgium
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00004287

@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-E
+      name: Entre Rios
+description: Geospatial data portal of Gualeguaychú, Entre Ríos (local government)
 endpoints:
 - type: geonode:layers
   url: https://geo.gualeguaychu.gov.ar/api/layers/
@@ -84,14 +86,17 @@ langs:
 link: https://geo.gualeguaychu.gov.ar
 name: geo.gualeguaychu.gov.ar
 owner:
-  link: null
+  link: https://geo.gualeguaychu.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-E
+      name: Entre Rios
+  name: Municipalidad de Gualeguaychú
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -105,6 +110,24 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- map
+- Gualeguaychú
+- Entre Ríos
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00000014

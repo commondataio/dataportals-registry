@@ -12,8 +12,9 @@ coverage:
       id: EU
       name: European Union
     level: 20
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: EMODnet Geoserver provides access to bathymetry and other marine thematic
+  data as web services, supporting viewing and downloading of harmonized Digital Terrain
+  Models and related data products.
 endpoints:
 - type: wms111
   url: http://ows.emodnet.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,16 +61,16 @@ endpoints:
 id: owsemodneteu
 langs: []
 link: http://ows.emodnet.eu/geoserver
-name: ows.emodnet.eu
+name: EMODnet Geoserver (Bathymetry and Marine Data)
 owner:
-  link: null
+  link: https://emodnet.ec.europa.eu
   location:
     country:
       id: EU
       name: European Union
     level: 20
-  name: ''
-  type: Unknown
+  name: European Marine Observation and Data Network
+  type: International
 properties:
   has_doi: false
 rights:
@@ -83,6 +84,25 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- bathymetry
+- marine data
+- DTM
+- geoserver
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00005488

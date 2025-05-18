@@ -10,10 +10,15 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Open Data from the city of Rotterdam, Netherlands. A project of the University
+  of Rotterdam, the city of Rotterdam, and local companies.
 endpoints:
 - type: ckan
   url: http://rotterdamopendata.nl/api/3
@@ -27,14 +32,18 @@ langs:
 - id: NL
   name: Dutch
 link: https://rotterdamopendata.nl
-name: Rotterdam Open Data
+name: Rotterdam Open Data Store
 owner:
+  link: http://www.rotterdamopendata.nl/
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Rotterdam Open Data
   type: Local government
 properties:
   transferable_location: true
@@ -52,8 +61,30 @@ status: active
 tags:
 - government
 - has_api
+- level.local
+- ckan
+- eu-official
+- netherlands
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00001185

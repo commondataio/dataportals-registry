@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer del Instituto Geográfico Nacional de Argentina, que publica
+  servicios web geográficos OGC (WMS, WFS) y mapas base oficiales (Argenmap) según
+  estándares internacionales.
 endpoints:
 - type: wms111
   url: https://wms.ign.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +66,16 @@ langs:
 - id: ES
   name: Spanish
 link: https://wms.ign.gob.ar/geoserver
-name: wms.ign.gob.ar
+name: IGN Argentina - Geoserver
 owner:
-  link: null
+  link: https://ign.gob.ar
   location:
     country:
       id: AR
       name: Argentina
     level: 20
-  name: ''
-  type: Unknown
+  name: Instituto Geográfico Nacional (IGN)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -88,6 +89,24 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- WMS
+- WFS
+- Argenmap
+- Argentina
+- mapas base
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00003348

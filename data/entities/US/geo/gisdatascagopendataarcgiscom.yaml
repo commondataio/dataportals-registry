@@ -11,10 +11,13 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-CA
+      name: California
 description: "SCAG GIS Open Data Portal Data Sharing and Exploring Geographic Information\
   \ Systems (GIS) data managed by SCAG may be discovered, examined, and downloaded\
   \ in a variety of formats for use in mapping and analysis using ESRI Open Data.\
@@ -70,16 +73,19 @@ langs:
 - id: EN
   name: English
 link: https://gisdata-scag.opendata.arcgis.com/
-name: Southern California Association of Governments
+name: Southern California Association of Governments GIS Data Catalog
 owner:
-  link: null
+  link: https://gisdata-scag.opendata.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: Southern California Association of Governments
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -93,6 +99,27 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- California
+- congressional districts
+- land use
+- boundaries
+- transportation
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00003524

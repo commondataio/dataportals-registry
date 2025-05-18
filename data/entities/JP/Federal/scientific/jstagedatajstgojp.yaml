@@ -10,12 +10,18 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: J-STAGE Data is a research data repository service provided by Japan
-  Science and Technology Agency to advance research data sharing and reuse.
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: J-STAGE is a platform for publishing and providing access to the electronic
+  versions of academic journals released in Japan, providing over 5.5 million articles
+  from more than 3,800 titles, with about 95% of full-text articles free to read.
+  It covers fields such as medicine, life sciences, engineering, basic sciences, and
+  humanities and social sciences.
 endpoints:
 - type: sitemap
   url: https://jstagedata.jst.go.jp/sitemap/siteindex.xml
@@ -39,7 +45,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: Japan Science and Technology Agency
   type: Central government
 properties:
@@ -55,6 +64,18 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- academic journal
+- full-text
+- open access
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004874

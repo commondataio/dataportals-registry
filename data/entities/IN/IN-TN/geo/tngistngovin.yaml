@@ -11,11 +11,16 @@ coverage:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
     macroregion:
       id: '034'
       name: Southern Asia
-description: Tamil Nadu GeoServer
+    subregion:
+      id: IN-TN
+      name: Tamil Nadu
+description: Platform for spatial data sharing and visualization managed by the Government
+  of Tamil Nadu, enabling access to standardized district and state level GIS datasets
+  for planning, monitoring, and disaster management.
 endpoints:
 - type: wms111
   url: https://tngis.tn.gov.in/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -55,14 +60,17 @@ langs:
 - id: EN
   name: English
 link: https://tngis.tn.gov.in/geoserver
-name: Tamil Nadu GeoServer
+name: TNGIS - Tamil Nadu Geographical Information System Geoserver
 owner:
   link: https://tn.gov.in
   location:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
+    subregion:
+      id: IN-TN
+      name: Tamil Nadu
   name: Government of Tamil Nadu
   type: Central government
 properties:
@@ -82,5 +90,18 @@ tags:
 - geospatial
 - government
 - has_api
-topics: []
+- GIS
+- spatial data
+- mapping
+- government data
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00005139

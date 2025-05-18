@@ -10,11 +10,17 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: EDF  Corse et Outre-mer catalog
+    subregion:
+      id: FR-20R
+      name: Corse
+description: 'In Corsica and in the French Overseas Territories, EDF integrates all
+  of the businesses that ensure the public service of electricity: production, purchase,
+  transport, distribution and marketing. We present here a summary of the main data
+  of the open data platform of Corsica and Overseas.'
 endpoints:
 - type: opendatasoft
   url: https://opendata-corse-outremer.edf.fr/api
@@ -27,16 +33,19 @@ langs:
 - id: FR
   name: French
 link: https://opendata-corse-outremer.edf.fr
-name: EDF  Corse et Outre-mer catalog
+name: Data catalogue of EDF Corsica and Oversea
 owner:
-  link: null
+  link: https://opendata-corse-outremer.edf.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-20R
+      name: Corse
+  name: EDF Corse & Outre-mer
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -50,6 +59,20 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- electricity
+- production
+- consumption
+- storage
+- transport
+- distribution
+- marketing
+- mobility
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: temp00002363

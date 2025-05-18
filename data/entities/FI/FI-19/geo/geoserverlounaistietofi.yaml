@@ -18,9 +18,9 @@ coverage:
     subregion:
       id: FI-19
       name: Varsinais-Suomi
-description: Lounaistieto is the regional information service of Southwest Finland.
-  We maintain, among other things, a map service, a statistical service and open data
-  services.
+description: GeoServer web interface for Lounaistieto geographic data (not explicitly
+  a catalog, but used to access and serve geographic datasets, often used with data
+  catalogs in the background)
 endpoints:
 - type: wms111
   url: http://geoserver.lounaistieto.fi/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,7 +60,7 @@ langs:
 - id: FI
   name: Finnish
 link: http://geoserver.lounaistieto.fi/geoserver
-name: Lounaistieto Geoserver
+name: geoserver.lounaistieto.fi/geoserver
 owner:
   link: https://varsinais-suomi.fi/en/
   location:
@@ -86,9 +86,16 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
+tags:
+- geospatial
+- open data
+- GIS
+- Finland
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00004515

@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Web page listing REST services for geospatial data provided by the DC
+  Government
 endpoints:
 - type: arcgis:rest:info
   url: https://em.dcgis.dc.gov/dcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://em.dcgis.dc.gov/dcgis/rest/services
-name: em.dcgis.dc.gov
+name: DCGIS REST Services
 owner:
-  link: null
+  link: https://em.dcgis.dc.gov/dcgis/rest/services
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: DC Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,22 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- REST
+- Open Data
+- Washington DC
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00005673

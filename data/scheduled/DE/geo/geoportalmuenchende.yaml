@@ -11,12 +11,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: Geoserver endpoint providing spatial data services for the GeoPortal
+  München, supporting official city maps, addresses, aerial images, and specialized
+  thematic content for the city of Munich.
 endpoints:
 - type: wms111
   url: https://geoportal.muenchen.de:443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -50,16 +54,19 @@ langs:
 - id: DE
   name: German
 link: https://geoportal.muenchen.de:443/geoserver
-name: geoportal.muenchen.de:443
+name: GeoPortal München Geoserver
 owner:
-  link: null
+  link: https://geoportal.muenchen.de/geoserver
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Stadtverwaltung München (City Administration Munich)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -73,6 +80,50 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- city planning
+- geothermal energy
+- traffic control
+- aerial images
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: temp00003502

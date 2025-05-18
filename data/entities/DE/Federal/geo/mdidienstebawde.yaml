@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Competence Centre for Waterways Engineering and the Building of Specialised
-  Ships geoserver
+description: A compliant implementation of WMS plus most of the SLD extension (dynamic
+  styling). Can also generate PDF, SVG, KML, GeoRSS.
 endpoints:
 - type: wms111
   url: http://mdi-dienste.baw.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,7 +59,7 @@ langs:
 - id: DE
   name: German
 link: http://mdi-dienste.baw.de/geoserver
-name: The BAW geoserver
+name: GeoServer Web Map Service (EasyGSH)
 owner:
   link: https://www.baw.de
   location:
@@ -83,6 +83,26 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- WMS
+- SLD
+- geodata
+- marine
+- coastal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00005027

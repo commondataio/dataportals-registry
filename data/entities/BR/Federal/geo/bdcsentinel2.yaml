@@ -11,10 +11,13 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: US-WA
+      name: Washington
 description: Catalogs of Brazil Data Cube (BDC) Sentinel-2 (A+B) Earth Observation
   data cube imagery on AWS.
 endpoints:
@@ -28,11 +31,15 @@ langs:
 link: https://bdc-sentinel-2.s3.us-west-2.amazonaws.com/catalog.json
 name: EO Data Cubes for Brazil - Sentinel 2
 owner:
+  link: https://bdc-sentinel-2.s3.us-west-2.amazonaws.com/catalog.json
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
   name: Brazilian Development Bank (BNDES)
   type: Central government
 properties:
@@ -52,11 +59,20 @@ status: active
 tags:
 - geospatial
 - has_api
+- satellite
+- remote sensing
+- Sentinel-2
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
   type: iso19115
 uid: cdi00000179

@@ -11,12 +11,15 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Geospatial data services and REST endpoints provided by the City of Rouyn-Noranda,
+  Québec, Canada.
 endpoints:
 - type: arcgis:rest:info
   url: https://cartes.rouyn-noranda.ca/server/rest/info?f=pjson
@@ -29,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://cartes.rouyn-noranda.ca/server/rest/services
-name: cartes.rouyn-noranda.ca
+name: cartes.rouyn-noranda.ca/server/rest/services
 owner:
-  link: null
+  link: https://cartes.rouyn-noranda.ca/
   location:
     country:
       id: CA
       name: Canada
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: City of Rouyn-Noranda
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -52,6 +58,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- geospatial
+- GIS
+- map services
 topics: []
 uid: temp00004906

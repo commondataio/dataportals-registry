@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-E
+      name: Entre Rios
+description: Ponemos a disposición de los ciudadanos datos públicos en formatos abiertos
+  para que puedan consultarlos, descargarlos y reutilizarlos.
 endpoints:
 - type: ckan:package-search
   url: http://datos.crespo.gob.ar/api/3/action/package_search
@@ -38,16 +41,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://datos.crespo.gob.ar
-name: datos.crespo.gob.ar
+name: Datos abiertos Crespo
 owner:
-  link: null
+  link: http://crespo.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-E
+      name: Entre Rios
+  name: Municipalidad de Crespo
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,11 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- government
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 uid: temp00004470

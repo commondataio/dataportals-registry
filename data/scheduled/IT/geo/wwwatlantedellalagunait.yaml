@@ -11,12 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-34
+      name: Veneto
+description: Una nuova mappa che mostra il livello di marea e le correnti all'interno
+  della laguna di Venezia, simulate da un modello che si aggiorna ogni trenta minuti.
 endpoints:
 - type: wms111
   url: https://www.atlantedellalaguna.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -62,16 +65,19 @@ langs:
 - id: IT
   name: Italian
 link: https://www.atlantedellalaguna.it
-name: www.atlantedellalaguna.it
+name: Atlante della laguna di Venezia
 owner:
-  link: null
+  link: https://www.atlantedellalaguna.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-34
+      name: Veneto
+  name: Comune di Venezia - Direzione Ambiente
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -85,6 +91,18 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- lagoon
+- Venice
+- tide
+- currents
+- simulation
+- map
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00002755

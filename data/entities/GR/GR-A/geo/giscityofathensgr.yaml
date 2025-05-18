@@ -11,11 +11,16 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: A catalog of geospatial data of Municipality of Athens
+    subregion:
+      id: GR-I
+      name: Attiki
+description: A catalog of geospatial data published by the Municipality of Athens.
+  Users can browse, aggregate, style, and share maps. Data is available in standard
+  formats, and users can upload and manage geospatial data and associated documents.
 endpoints:
 - type: geonode:layers
   url: http://gis.cityofathens.gr/api/layers/
@@ -92,7 +97,10 @@ owner:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
+    subregion:
+      id: GR-I
+      name: Attiki
   name: Athens city
   type: Local government
 properties:
@@ -108,9 +116,24 @@ software:
   id: geonode
   name: GeoNode
 status: active
-tags: []
+tags:
+- GIS
+- geospatial
+- Athens
+- municipality
+- open data
+- GeoNode
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00004610

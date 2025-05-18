@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+description: Geospatial data catalog for Situbondo Regency, accessible via GeoServer
 endpoints:
 - type: wms111
   url: http://situbondokab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +67,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://situbondokab.ina-sdi.or.id/geoserver
-name: situbondokab.ina-sdi.or.id
+name: Situbondo Kabupaten Geoserver Catalog
 owner:
-  link: null
+  link: http://situbondokab.ina-sdi.or.id/
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+  name: Not specified
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,19 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- opendata
+- sidina
+- indonesia
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005220

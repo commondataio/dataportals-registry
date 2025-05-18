@@ -9,15 +9,19 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: 'M.O.O.D. Mid-Ohio Open Data Transportation Boundaries Demographics Land
-  Use All Data 2020 Census Redistricting Data for Ohio (in Excel for download) Population
-  Resource Hub Phone: 614.228.2663'
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OH
+      name: Ohio
+description: A one-stop platform for publicly available datasets provided by the Mid-Ohio
+  Regional Planning Commission (MORPC), featuring maps, downloadable GIS and tabular
+  data, categorized into themes such as Transportation, Boundaries, Demographics,
+  Land Use, and Other.
 endpoints:
 - type: dcatap201
   url: https://public-morpc.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -36,14 +40,17 @@ langs:
 link: https://public-morpc.hub.arcgis.com/
 name: MID-OHIO OPEN DATA (MOOD)
 owner:
-  link: null
+  link: https://www.morpc.org/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: Mid-Ohio Regional Planning Commission (MORPC)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -57,6 +64,21 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- open data
+- region planning
+- forecast
+- Central Ohio
+- ArcGIS Hub
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 uid: cdi00003116

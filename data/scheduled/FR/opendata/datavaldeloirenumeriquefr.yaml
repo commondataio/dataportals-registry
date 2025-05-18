@@ -10,11 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Val de Loire Numérique Open Data catalog
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+description: Le syndicat mixte ouvert Val de Loire Numérique pilote les projets de
+  déploiement de réseaux numériques d'initiative publique en Loir-et-Cher et en Indre-et-Loire.
 endpoints:
 - type: opendatasoft
   url: https://data.valdeloirenumerique.fr/api
@@ -29,14 +33,17 @@ langs:
 link: https://data.valdeloirenumerique.fr
 name: Val de Loire Numérique Open Data catalog
 owner:
-  link: null
+  link: https://www.valdeloirenumerique.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+  name: Val de Loire Numérique
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +57,20 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- public networks
+- digital inclusion
+- wifi
+- infrastructure
+- open data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00002345

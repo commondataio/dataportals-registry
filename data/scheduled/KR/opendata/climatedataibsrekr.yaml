@@ -10,12 +10,15 @@ coverage:
     country:
       id: KR
       name: South Korea
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: KR-11
+      name: Seoul-teukbyeolsi
+description: Climate model simulations conducted as part of the research activities
+  of the IBS Center for Climate Physics.
 endpoints:
 - type: thredds:catalog
   url: https://climatedata.ibs.re.kr:8443/thredds/catalog.xml
@@ -28,14 +31,17 @@ langs:
 link: https://climatedata.ibs.re.kr:8443/thredds/catalog.html
 name: climatedata.ibs.re.kr:8443
 owner:
-  link: null
+  link: https://ibsclimate.org
   location:
     country:
       id: KR
       name: South Korea
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: KR-11
+      name: Seoul-teukbyeolsi
+  name: IBS Center for Climate Physics
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -49,6 +55,10 @@ software:
   id: thredds
   name: Thredds
 status: scheduled
-tags: []
+tags:
+- climate model
+- climate physics
+- research data
+- simulations
 topics: []
 uid: temp00003804

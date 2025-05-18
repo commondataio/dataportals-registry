@@ -10,12 +10,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: Research data repository of the University of Mannheim. Enables researchers
+  to archive data securely and makes it accessible as required. All entries can be
+  clearly cited via DOI and are listed in research data directories.
 endpoints:
 - type: oaipmh20
   url: https://madata.bib.uni-mannheim.de/cgi/oai2?verb=Identify
@@ -44,16 +48,19 @@ langs:
 - id: DE
   name: German
 link: https://madata.bib.uni-mannheim.de
-name: madata.bib.uni-mannheim.de
+name: Madata - Mannheim Research Data Repository
 owner:
-  link: null
+  link: https://www.bib.uni-mannheim.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: Universitätsbibliothek Mannheim (University Library Mannheim)
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -67,6 +74,16 @@ software:
   id: eprints
   name: EPrints
 status: scheduled
-tags: []
-topics: []
+tags:
+- research data
+- FAIR
+- DOI
+- archiving
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00002055

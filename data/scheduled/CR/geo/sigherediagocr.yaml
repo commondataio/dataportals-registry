@@ -11,12 +11,15 @@ coverage:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CR-H
+      name: Heredia
+description: Information from the data catalog related to service endpoints hosted
+  by Heredia, Costa Rica.
 endpoints:
 - type: arcgis:rest:info
   url: https://sig.heredia.go.cr/server/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://sig.heredia.go.cr/server/rest/services
-name: sig.heredia.go.cr
+name: Extract from https://sig.heredia.go.cr/server/rest/services
 owner:
-  link: null
+  link: https://sig.heredia.go.cr
   location:
     country:
       id: CR
       name: Costa Rica
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CR-H
+      name: Heredia
+  name: Municipalidad de Heredia
+  type: Local government
 properties:
   has_doi: false
 rights:

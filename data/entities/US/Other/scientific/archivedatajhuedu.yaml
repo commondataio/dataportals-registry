@@ -10,11 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Johns Hopkins University Data Archive
+    subregion:
+      id: US-MD
+      name: Maryland
+description: An open access repository for Johns Hopkins University researchers to
+  share their research data. Contains 48 dataverses, 168 datasets, 3,599 files. Access
+  types include open, embargoed, and restricted.
 endpoints:
 - type: dataverseapi
   url: https://archive.data.jhu.edu/api/search
@@ -34,14 +39,17 @@ langs:
 - id: EN
   name: English
 link: https://archive.data.jhu.edu
-name: Johns Hopkins University Dataverse
+name: Johns Hopkins Research Data Repository
 owner:
   link: https://www.jhu.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
   name: Johns Hopkins University
   type: Academy
 properties:
@@ -60,8 +68,19 @@ status: active
 tags:
 - scientific
 - has_api
+- open data
+- research data repository
+- JHU data
+- publicly available datasets
+- US academic institution
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001673

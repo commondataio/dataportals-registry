@@ -10,12 +10,14 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-EX
+      name: Extremadura
+description: Portal de datos abiertos de la Diputación de Badajoz
 endpoints:
 - type: ckan:package-search
   url: http://datosabiertos.dip-badajoz.es/api/3/action/package_search
@@ -38,14 +40,17 @@ langs:
 link: http://datosabiertos.dip-badajoz.es
 name: datosabiertos.dip-badajoz.es
 owner:
-  link: null
+  link: http://www.dip-badajoz.es
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-EX
+      name: Extremadura
+  name: Diputación de Badajoz
+  type: Local government
 rights:
   license_id: null
   license_name: null

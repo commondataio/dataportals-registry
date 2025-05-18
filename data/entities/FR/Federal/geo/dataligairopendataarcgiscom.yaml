@@ -11,10 +11,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+description: Geoportal for air quality data in Centre-Val de Loire region
 endpoints:
 - type: dcatap201
   url: https://data-ligair.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -36,7 +40,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
   name: Centre-Val de Loire
   type: Local government
 properties:
@@ -56,8 +63,19 @@ status: active
 tags:
 - geospatial
 - has_api
+- air quality
+- opendata
+- ArcGIS Hub
+- dataset
+- map_layer
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00000653

@@ -10,10 +10,17 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-NH
+      name: New Hampshire
+description: Dartmouth's institutional repository for depositing and sharing research
+  data, including datasets, supplementary tables and documentation, publications,
+  presentations, etc. Supports a variety of research data types and formats, and provides
+  DOIs for published datasets.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.dartmouth.edu/api/search
@@ -23,14 +30,18 @@ langs:
 - id: EN
   name: English
 link: https://dataverse.dartmouth.edu
-name: Dartmouth Dataverse
+name: Dataverse at Dartmouth
 owner:
+  link: https://www.dartmouth.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: US-NH
+      name: New Hampshire
+  name: Dartmouth College
   type: Academy
 properties:
   has_doi: true
@@ -48,6 +59,11 @@ status: active
 tags:
 - scientific
 - has_api
+- Dataset repository
+- Research data management
+- Open access
+- DOI
+- Academic
 topics:
 - id: TECH
   name: Science and technology

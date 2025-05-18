@@ -11,12 +11,14 @@ coverage:
     country:
       id: IL
       name: Israel
-    level: 20
+    level: 30
     macroregion:
       id: '145'
       name: Western Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IL-JM
+      name: Yerushalayim
+description: ArcGIS REST Services Directory providing open health data for Israel
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.health.gov.il/arcgis/rest/info?f=pjson
@@ -37,16 +39,19 @@ langs:
 - id: HE
   name: Hebrew
 link: https://gis.health.gov.il/arcgis/rest/services
-name: gis.health.gov.il
+name: GIS Health Opendata API
 owner:
-  link: null
+  link: https://www.gov.il/en/departments/ministry_of_health/govil-landing-page
   location:
     country:
       id: IL
       name: Israel
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IL-JM
+      name: Yerushalayim
+  name: Ministry of Health, Israel
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -60,6 +65,17 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- gis
+- open data
+- health
+- arcgis
+- israel
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00005928

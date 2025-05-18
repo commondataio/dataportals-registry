@@ -10,23 +10,35 @@ coverage:
     country:
       id: CH
       name: Switzerland
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: CH-AG
+      name: Aargau
+description: A central data catalogue for storing the metadata of data taken at the
+  Photon Science facilities SLS and SwissFEL in the form of datasets. Each dataset
+  is uniquely identified with a globally unique persistent identifier (PID). The data
+  are tagged with metadata and can be archived in a Petabyte Archive System. The system
+  enables scientists to catalogue their data safely for long-term, allowing the data
+  to be annotated and published in agreement with the FAIR principles.
 id: discoverypsich
 langs:
 - id: EN
   name: English
 link: https://discovery.psi.ch/
-name: SciCat PSI
+name: SciCat metadata catalogue for scientific research data.
 owner:
   link: https://www.psi.ch
   location:
     country:
       id: CH
       name: Switzerland
-    level: 20
+    level: 30
+    subregion:
+      id: CH-AG
+      name: Aargau
   name: Paul Scherrer Institut
   type: Academy
 properties:
@@ -42,7 +54,13 @@ software:
   id: custom
   name: Custom software
 status: active
-tags: []
+tags:
+- research
+- photon science
+- SLS
+- SwissFEL
+- SciCat
+- FAIR principles
 topics:
 - id: TECH
   name: Science and technology

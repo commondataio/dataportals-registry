@@ -10,10 +10,18 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
+    subregion:
+      id: IT-32
+      name: Trentino-Alto Adige
+description: A dedicated repository for language data hosted by the Institute for
+  Applied Linguistics (IAL) at Eurac Research. It is part of the Europe-wide CLARIN
+  infrastructure and follows international standards for (meta)data and procedures.
+  The repository hosts data collected at the IAL and is open for data deposits from
+  external collaborators.
 endpoints:
 - type: oaipmh20
   url: https://clarin.eurac.edu/oai/request?verb=Identify
@@ -34,12 +42,16 @@ langs:
 link: https://clarin.eurac.edu
 name: Eurac Research CLARIN Centre Repository
 owner:
+  link: https://clarin.eurac.edu
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: IT-32
+      name: Trentino-Alto Adige
+  name: Eurac Research, Institute for Applied Linguistics
   type: Academy
 properties:
   has_doi: true
@@ -57,8 +69,19 @@ software:
 status: active
 tags:
 - scientific
+- Language data
+- Linguistics
+- Corpus
+- Metadata standards
+- Research infrastructure
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000966

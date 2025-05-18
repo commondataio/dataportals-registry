@@ -10,11 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Moissy-Cramayel catalog
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Catalog of administrative acts and open data for the commune Moissy-Cramayel.
 endpoints:
 - type: opendatasoft
   url: https://data.moissy-cramayel.fr/api
@@ -27,16 +30,19 @@ langs:
 - id: FR
   name: French
 link: https://data.moissy-cramayel.fr
-name: Moissy-Cramayel catalog
+name: 'Moissy-Cramayel: Explore — OpenData'
 owner:
-  link: null
+  link: https://data.moissy-cramayel.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Moissy-Cramayel
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,18 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- catalogue
+- opendata
+- local government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00002327

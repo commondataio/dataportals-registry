@@ -9,13 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: GIS Data Hub Chicago Boundaries Demographic Buildings
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IL
+      name: Illinois
+description: Search and browse geospatial data curated by the University of Chicago
+  Library. Built with ArcGIS Hub.
 endpoints:
 - type: dcatap201
   url: https://library-uchicago.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,16 +36,19 @@ langs:
 - id: EN
   name: English
 link: https://library-uchicago.opendata.arcgis.com/
-name: University of Chicago Library
+name: University of Chicago Library Geospatial Data Catalog
 owner:
-  link: null
+  link: https://library-uchicago.opendata.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IL
+      name: Illinois
+  name: University of Chicago Library
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -55,6 +62,29 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- ArcGIS Hub
+- geospatial
+- mapping
+- Chicago
+- Illinois
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00002990

@@ -15,6 +15,9 @@ coverage:
     macroregion:
       id: '014'
       name: Eastern Africa
+description: An online microdata catalog maintained by the Kenya National Bureau of
+  Statistics (KNBS), containing datasets from national surveys, censuses, and administrative
+  records, covering economic, social, and demographic topics.
 endpoints:
 - type: nada:catalog-search
   url: https://statistics.knbs.or.ke/nada/index.php/api/catalog/search
@@ -25,12 +28,13 @@ langs:
 link: https://statistics.knbs.or.ke/nada/index.php
 name: Kenya National Data Archive (KeNADA)
 owner:
+  link: https://statistics.knbs.or.ke/nada/index.php
   location:
     country:
       id: KE
       name: Kenya
     level: 20
-  name: ''
+  name: Kenya National Bureau of Statistics (KNBS)
   type: Central government
 properties:
   has_doi: false
@@ -50,11 +54,22 @@ tags:
 - government
 - has_api
 - microdata
+- survey
+- census
+- household
+- firm
+- administrative records
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00001028

@@ -9,14 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-RI
+      name: Rhode Island
+description: Catalog of GIS data services provided by the Environmental Data Center
+  (EDC) at the University of Rhode Island.
 endpoints:
 - type: arcgis:portals:self
   url: http://maps.edc.uri.edu/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +40,19 @@ langs:
 - id: EN
   name: English
 link: http://maps.edc.uri.edu/arcgis/rest/services
-name: maps.edc.uri.edu
+name: ArcGIS REST Services Catalog (EDC, URI)
 owner:
-  link: null
+  link: http://maps.edc.uri.edu
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-RI
+      name: Rhode Island
+  name: Environmental Data Center, University of Rhode Island
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -60,6 +66,19 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- spatial
+- Environmental Data Center
+- URI
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: temp00001746

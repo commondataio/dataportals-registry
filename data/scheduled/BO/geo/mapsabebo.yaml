@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Geospatial data catalog and publishing platform.
 endpoints:
 - type: wfs100
   url: http://maps.abe.bo:8081/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -50,16 +49,16 @@ langs:
 - id: ES
   name: Spanish
 link: http://maps.abe.bo:8081/geoserver
-name: maps.abe.bo:8081
+name: GeoServer at maps.abe.bo
 owner:
-  link: null
+  link: http://maps.abe.bo:8081/geoserver
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
   name: ''
-  type: Unknown
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -73,6 +72,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- data
+- catalog
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00001917

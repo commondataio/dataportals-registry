@@ -11,12 +11,14 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+description: ArcGIS mapping services provided by the NSW Department of Environment
 endpoints:
 - type: arcgis:rest:info
   url: https://mapprod2.environment.nsw.gov.au/arcgis/rest/info?f=pjson
@@ -35,16 +37,20 @@ langs:
 - id: EN
   name: English
 link: https://mapprod2.environment.nsw.gov.au/arcgis/services
-name: mapprod2.environment.nsw.gov.au
+name: mapprod2.environment.nsw.gov.au/arcgis/services
 owner:
-  link: null
+  link: https://www.seed.nsw.gov.au
   location:
     country:
       id: AU
       name: Australia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+  name: NSW Department of Planning, Housing and Infrastructure (DPHI) or Department
+    of Climate Change, Energy, the Environment and Water (DCCEEW)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,20 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- environment
+- geospatial
+- NSW
+- Australia
+- ArcGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00004886

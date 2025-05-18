@@ -11,12 +11,16 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-25
+      name: Lombardia
+description: Data catalog and geospatial platform managed by Politecnico di Milano,
+  enabling geospatial data sharing, management, and visualization via GeoNode and
+  GeoServer.
 endpoints:
 - type: geonode:layers
   url: https://www.geolmiv-geonode.polimi.it/api/layers/
@@ -88,14 +92,17 @@ langs:
 link: https://www.geolmiv-geonode.polimi.it/
 name: www.geolmiv-geonode.polimi.it
 owner:
-  link: null
+  link: https://www.polimi.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-25
+      name: Lombardia
+  name: Politecnico di Milano
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -109,6 +116,10 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
+tags:
+- GeoNode
+- GeoServer
+- geospatial
+- GIS
 topics: []
 uid: temp00000382

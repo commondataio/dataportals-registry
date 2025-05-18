@@ -10,10 +10,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Marine data available to download from the British Oceanographic Data
+  Centre (BODC) database, including CTD profiles, currents, samples, and wave data.
 endpoints:
 - type: sitemap
   url: https://www.bodc.ac.uk/sitemap.xml
@@ -55,7 +60,10 @@ owner:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: British Oceanographic data centre
   type: Academy
 properties:
@@ -73,6 +81,13 @@ software:
 status: active
 tags:
 - scientific
+- marine data
+- CTD profiles
+- ocean currents
+- wave data
+- samples
+- UK
+- BODC
 topics:
 - id: Oceans
   name: Oceans

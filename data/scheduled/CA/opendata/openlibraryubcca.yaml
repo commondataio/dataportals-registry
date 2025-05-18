@@ -10,12 +10,15 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: UBC Library Open Collections provides direct programmatic access to all
+  of the metadata and much of the media available on the website through APIs.
 endpoints:
 - type: sitemap
   url: https://open.library.ubc.ca/sitemap.xml
@@ -52,16 +55,19 @@ langs:
 - id: EN
   name: English
 link: https://open.library.ubc.ca
-name: open.library.ubc.ca
+name: UBC Library Open Collections
 owner:
-  link: null
+  link: https://open.library.ubc.ca
   location:
     country:
       id: CA
       name: Canada
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: University of British Columbia Library
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -73,6 +79,18 @@ software:
   id: custom
   name: Custom software
 status: scheduled
-tags: []
-topics: []
+tags:
+- metadata
+- digital collections
+- API
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001842

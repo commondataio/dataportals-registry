@@ -11,12 +11,15 @@ coverage:
     country:
       id: 'NO'
       name: Norway
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NO-03
+      name: Oslo
+description: This is a data catalog provided via ArcGIS REST services, primarily for
+  geospatial data.
 endpoints:
 - type: arcgis:rest:info
   url: https://nve.geodataonline.no/arcgis/rest/info?f=pjson
@@ -31,14 +34,17 @@ langs:
 link: https://nve.geodataonline.no/arcgis/rest/services/
 name: nve.geodataonline.no
 owner:
-  link: null
+  link: https://www.nve.no/
   location:
     country:
       id: 'NO'
       name: Norway
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NO-03
+      name: Oslo
+  name: Norwegian Water Resources and Energy Directorate (NVE)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -52,6 +58,45 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- hydrology
+- GIS
+- geodata
+- ArcGIS
+- NVE
+- Norway
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001188

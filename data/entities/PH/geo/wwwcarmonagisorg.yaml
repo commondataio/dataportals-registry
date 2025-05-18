@@ -11,11 +11,18 @@ coverage:
     country:
       id: PH
       name: Phillipines
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: City of Carmona GIS
+    subregion:
+      id: ES-AN
+      name: Andalucia
+description: Provides access to mapping applications, GIS services, and ready to use
+  informational products. Publishes relevant, timely data and applications that are
+  focused, easy to use, and flexible enough to work on both web and mobile platforms.
+  Users can browse, aggregate, and style geospatial data, generate maps, download
+  standard-format data, and manage metadata and documents.
 endpoints:
 - type: geonode:layers
   url: https://www.carmonagis.org/api/layers/
@@ -85,14 +92,17 @@ langs:
 - id: EN
   name: English
 link: https://www.carmonagis.org
-name: Carmona GIS
+name: Carmona GIS Portal
 owner:
   link: https://www.carmona.gov.ph
   location:
     country:
       id: PH
       name: Phillipines
-    level: 20
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucia
   name: City of Carmona
   type: Local government
 properties:
@@ -108,9 +118,26 @@ software:
   id: geonode
   name: GeoNode
 status: active
-tags: []
+tags:
+- GIS
+- Mapping
+- Geospatial Data
+- GeoNode
+- Open Data
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: cdi00004683

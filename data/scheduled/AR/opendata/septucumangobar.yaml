@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-T
+      name: Tucuman
+description: Official data catalog of the Government of Tucumán, providing access
+  to open datasets for the province.
 endpoints:
 - type: ckan:package-search
   url: https://sep.tucuman.gob.ar/api/3/action/package_search
@@ -30,16 +33,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://sep.tucuman.gob.ar
-name: sep.tucuman.gob.ar
+name: SEP Tucumán Data Catalog
 owner:
-  link: null
+  link: https://sep.tucuman.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-T
+      name: Tucuman
+  name: Government of Tucumán
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -51,6 +57,8 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- open data
+- government
 topics: []
 uid: temp00004491

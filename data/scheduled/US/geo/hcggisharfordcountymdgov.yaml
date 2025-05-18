@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MD
+      name: Maryland
+description: Collection of GIS web services provided by Harford County
 endpoints:
 - type: arcgis:rest:info
   url: https://hcggis.harfordcountymd.gov/eg/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://hcggis.harfordcountymd.gov/eg/rest/services
-name: hcggis.harfordcountymd.gov
+name: Harford County REST GIS Services
 owner:
-  link: null
+  link: https://hcggis.harfordcountymd.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
+  name: Harford County Department of Planning and Zoning
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,12 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- Rest API
+- geospatial data
+- county
+- Maryland
+- USA
 topics: []
 uid: temp00004351

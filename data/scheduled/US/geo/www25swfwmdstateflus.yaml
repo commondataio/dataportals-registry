@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-FL
+      name: Florida
+description: ArcGIS REST API endpoint for geospatial data services provided by the
+  Southwest Florida Water Management District.
 endpoints:
 - type: arcgis:rest:info
   url: https://www25.swfwmd.state.fl.us/arcgis12/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://www25.swfwmd.state.fl.us/arcgis12/rest/services
-name: www25.swfwmd.state.fl.us
+name: Southwest Florida Water Management District ArcGIS REST Services
 owner:
-  link: null
+  link: https://www25.swfwmd.state.fl.us/arcgis12/rest/services
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Southwest Florida Water Management District
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,17 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- Water management
+- GIS
+- ArcGIS
+- Florida
+- Environmental data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00004417

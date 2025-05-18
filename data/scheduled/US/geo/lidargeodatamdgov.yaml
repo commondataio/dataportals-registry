@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MD
+      name: Maryland
+description: A data catalog providing access to Maryland LiDAR datasets and services.
 endpoints:
 - type: arcgis:rest:info
   url: http://lidar.geodata.md.gov/imap/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: http://lidar.geodata.md.gov/imap/rest/services
-name: lidar.geodata.md.gov
+name: Maryland LiDAR Data Catalog
 owner:
-  link: null
+  link: http://lidar.geodata.md.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
+  name: Maryland Department of Information Technology, Geographic Information Office
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- LiDAR
+- geospatial
+- Maryland
+- elevation
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
 uid: temp00004362

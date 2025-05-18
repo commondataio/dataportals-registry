@@ -11,10 +11,16 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Data catalog of the Institut national d’études démographiques (INED,
+  French Institute for Demographic Studies), featuring tables on French and world
+  population and access to several online databases.
 endpoints:
 - type: nada:catalog-search
   url: https://data.ined.fr/index.php/api/catalog/search
@@ -32,7 +38,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
   name: Demostaf France
   type: Central government
 properties:
@@ -53,11 +62,23 @@ tags:
 - government
 - has_api
 - microdata
+- demography
+- population
+- statistics
+- France
+- world
+- survey data
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00000662

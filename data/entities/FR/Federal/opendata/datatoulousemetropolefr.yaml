@@ -10,10 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: Catalogue des données ouvertes. Localisation, offre transport, structures
+  petite enfance, jeunesse, etc.
 endpoints:
 - type: opendatasoftapi
   url: https://data.toulouse-metropole.fr/api
@@ -29,14 +34,17 @@ langs:
 - id: FR
   name: French
 link: https://data.toulouse-metropole.fr
-name: Open Data Toulouse Metropole
+name: Catalogue des données ouvertes de Toulouse Metropole
 owner:
   link: https://www.toulouse-metropole.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
   name: Toulouse Métropole
   type: Regional government
 properties:
@@ -55,8 +63,26 @@ software:
 status: active
 tags:
 - has_api
+- transport
+- enfance
+- données ouvertes
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00000696

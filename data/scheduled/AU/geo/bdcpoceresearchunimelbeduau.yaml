@@ -11,12 +11,15 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AU-VIC
+      name: Victoria
+description: Data catalog associated with the Melbourne eResearch Group, supporting
+  research-oriented software engineering and data-intensive projects.
 endpoints:
 - type: geonode:datasets
   url: https://bdcpoc.eresearch.unimelb.edu.au/api/datasets/
@@ -75,16 +78,19 @@ langs:
 - id: EN
   name: English
 link: https://bdcpoc.eresearch.unimelb.edu.au
-name: bdcpoc.eresearch.unimelb.edu.au
+name: BDC POC (eresearch.unimelb.edu.au)
 owner:
-  link: null
+  link: https://eresearch.unimelb.edu.au
   location:
     country:
       id: AU
       name: Australia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AU-VIC
+      name: Victoria
+  name: Melbourne eResearch Group, The University of Melbourne
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -98,6 +104,16 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- Research data
+- Big data
+- Software engineering
+- Melbourne
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00000048

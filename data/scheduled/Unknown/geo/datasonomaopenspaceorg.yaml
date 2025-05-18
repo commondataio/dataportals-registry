@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: Data catalog with ArcGIS REST services
 endpoints:
 - type: arcgis:rest:info
   url: http://data.sonomaopenspace.org/arcgis/rest/info?f=pjson
@@ -33,16 +35,19 @@ endpoints:
 id: datasonomaopenspaceorg
 langs: []
 link: http://data.sonomaopenspace.org/arcgis/rest/services
-name: data.sonomaopenspace.org
+name: data.sonomaopenspace.org/arcgis/rest/services
 owner:
-  link: null
+  link: http://data.sonomaopenspace.org
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: ''
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -57,5 +62,14 @@ software:
   name: ArcGIS Server
 status: scheduled
 tags: []
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003947

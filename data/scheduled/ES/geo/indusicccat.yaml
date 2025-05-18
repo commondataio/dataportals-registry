@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-CT
       name: Catalunya
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Geospatial data service and catalog hosted on GeoServer at indus.icc.cat:8080/geoserver.
+  This endpoint provides access to geospatial datasets and mapping services.
 endpoints:
 - type: wms111
   url: http://indus.icc.cat:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,9 +68,9 @@ langs:
 - id: ES
   name: Spanish
 link: http://indus.icc.cat:8080/geoserver
-name: indus.icc.cat:8080
+name: Geoserver at indus.icc.cat
 owner:
-  link: null
+  link: http://indus.icc.cat:8080/geoserver
   location:
     country:
       id: ES
@@ -79,8 +79,8 @@ owner:
     subregion:
       id: ES-CT
       name: Catalunya
-  name: ''
-  type: Unknown
+  name: ICC
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -94,6 +94,13 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- catalonia
+- open_data
+- ogc_services
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00001451

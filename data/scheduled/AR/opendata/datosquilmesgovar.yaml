@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: Portal de datos abiertos del Municipio de Quilmes para promover una gestión
+  transparente y participativa.
 endpoints:
 - type: ckan:package-search
   url: http://datos.quilmes.gov.ar/api/3/action/package_search
@@ -38,16 +41,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://datos.quilmes.gov.ar
-name: datos.quilmes.gov.ar
+name: Datos Quilmes Gobierno
 owner:
-  link: null
+  link: http://datos.quilmes.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Municipio de Quilmes
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,25 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- transparencia
+- datos abiertos
+- gestión pública
+- participación ciudadana
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00004477

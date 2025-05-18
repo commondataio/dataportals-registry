@@ -11,12 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: Geospatial data catalog and WMS service for Sardinia
 endpoints:
 - type: wms111
   url: https://webgis.regione.sardegna.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,16 +70,19 @@ langs:
 - id: IT
   name: Italian
 link: https://webgis.regione.sardegna.it/geoserver
-name: webgis.regione.sardegna.it
+name: Sardegna Geoportale Geoserver
 owner:
-  link: null
+  link: https://webgis.regione.sardegna.it/geoserver
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: Regione Autonoma della Sardegna
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -91,6 +96,20 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- WMS
+- cartography
+- SITR
+- Sardinia
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001588

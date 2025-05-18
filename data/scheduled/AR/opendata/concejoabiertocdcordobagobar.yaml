@@ -10,12 +10,17 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-X
+      name: Cordoba
+description: Portal abierto con información legislativa, presupuestaria, de personal
+  y proveedores del Concejo Deliberante de la Ciudad de Córdoba. Permite acceso a
+  datos históricos y actuales sobre proyectos legislativos, asistencias, audiencias
+  públicas, gastos, votaciones y solicitudes de información pública.
 endpoints:
 - type: ckan:package-search
   url: http://concejoabierto.cdcordoba.gob.ar/api/3/action/package_search
@@ -34,14 +39,17 @@ langs:
 link: http://concejoabierto.cdcordoba.gob.ar
 name: concejoabierto.cdcordoba.gob.ar
 owner:
-  link: null
+  link: http://concejoabierto.cdcordoba.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-X
+      name: Cordoba
+  name: Concejo Deliberante de la Ciudad de Córdoba
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -53,6 +61,23 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- transparencia
+- política
+- gobierno
+- legislación
+- audiencias públicas
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00004461

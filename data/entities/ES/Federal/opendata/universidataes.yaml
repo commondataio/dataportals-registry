@@ -9,10 +9,18 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: Open Data collaborative portal specialized in the higher education sector.
+  Offers homogeneous and documented datasets following a 'Common Core' specification
+  and accepted standards like DCAT and DCMI, available in formats such as CSV, XLSX,
+  or JSON. Features a search engine, classification by topics, and a free API. Includes
+  a laboratory section for example analyses.
 endpoints:
 - type: ckan:package-list
   url: https://universidata.es/api/3/action/package_list
@@ -31,7 +39,10 @@ owner:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
   name: DIMETRICAL, The Analytics Lab, SL
   type: Academy
 properties:
@@ -49,5 +60,15 @@ software:
 status: active
 tags:
 - government
-topics: []
+- higher education
+- open data
+- data portal
+- academic datasets
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000583

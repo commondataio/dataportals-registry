@@ -11,12 +11,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-SCT
+      name: Scotland
+description: Data catalog provided by the Scottish Environment Protection Agency (SEPA),
+  featuring environmental data on water, pollution, waste, and more.
 endpoints:
 - type: arcgis:rest:info
   url: https://map.sepa.org.uk/server/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://map.sepa.org.uk/server/services
-name: map.sepa.org.uk
+name: SEPA Environmental Data Catalog
 owner:
-  link: null
+  link: https://www.sepa.org.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: Scottish Environment Protection Agency
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,23 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- environmental monitoring
+- water quality
+- pollution release
+- waste data
+- GIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00005027

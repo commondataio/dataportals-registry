@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-Q
+      name: Neuquen
+description: GeoServer implementation as a data catalog
 endpoints:
 - type: wms111
   url: http://ideneu.neuquen.gov.ar:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -72,9 +74,12 @@ owner:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
+    subregion:
+      id: AR-Q
+      name: Neuquen
   name: ''
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,11 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geo
+- catalog
+- Geospatial
+- OpenGIS
+- Geoserver
 topics: []
 uid: temp00001214

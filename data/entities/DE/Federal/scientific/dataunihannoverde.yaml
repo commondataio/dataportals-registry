@@ -10,10 +10,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: Course catalogues and resources for students and researchers at Leibniz
+  University Hannover, including module catalogues, tutorials, and labs.
 endpoints:
 - type: ckan:package-search
   url: https://data.uni-hannover.de/api/3/action/package_search
@@ -50,14 +55,17 @@ langs:
 - id: EN
   name: English
 link: https://data.uni-hannover.de
-name: Forschungsdaten - Repositorium der LUH
+name: Leibniz University Hannover Data Catalog
 owner:
   link: https://uni-hannover.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
   name: University of Hannover
   type: Academy
 rights:
@@ -73,5 +81,17 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- course catalogue
+- module catalogue
+- tutorial
+- lab
+- lectures
+- data management
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000474

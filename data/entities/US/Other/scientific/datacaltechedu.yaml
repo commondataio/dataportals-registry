@@ -10,10 +10,22 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: The CaltechDATA repository offers standard data preservation and DOI
+  (permanent identifier) services, enabling researchers to upload research data, link
+  data with their publications, and assign a permanent DOI so that others can reference
+  the data set. All data is preserved using the OAIS reference model, and multiple
+  copies of all data sets are stored at the Caltech Library and remotely. CaltechDATA
+  is intended as a long-term data repository and it is expected that data will be
+  available for the foreseeable future. At a minimum, all data will be preserved by
+  Caltech Library at least 5 years past the tenure of the grant. The repository is
+  managed by Caltech Library and built on InvenioRDM.
 endpoints:
 - type: inveniordmapi:records
   url: https://data.caltech.edu/api/records
@@ -32,14 +44,17 @@ langs:
 - id: EN
   name: English
 link: https://data.caltech.edu
-name: Caltech Data
+name: CaltechDATA (data.caltech.edu)
 owner:
   link: https://www.caltech.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: Caltech
   type: Academy
 properties:
@@ -59,6 +74,12 @@ status: active
 tags:
 - scientific
 - has_api
+- research data
+- DOI
+- open access
+- data management plan
+- long-term preservation
+- InvenioRDM
 topics:
 - id: TECH
   name: Science and technology

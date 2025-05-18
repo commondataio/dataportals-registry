@@ -11,12 +11,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-TH
+      name: Thuringen
+description: A catalog to manage spatially referenced resources, with metadata editing,
+  search, and map viewing. It supports international standards for spatial data and
+  metadata.
 endpoints:
 - type: geonetwork:query
   url: https://geomis.geoportal-th.de/geonetwork/srv/eng/q
@@ -43,16 +47,19 @@ langs:
 - id: DE
   name: German
 link: https://geomis.geoportal-th.de/geonetwork
-name: geomis.geoportal-th.de
+name: GeoNetwork Data Catalog
 owner:
-  link: null
+  link: https://geomis.geoportal-th.de/geonetwork
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-TH
+      name: Thuringen
+  name: GeoNetwork
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -66,6 +73,21 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- spatial data
+- metadata
+- geospatial catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00004137

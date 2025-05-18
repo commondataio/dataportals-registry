@@ -11,10 +11,15 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: US-TN
+      name: Tennessee
+description: Provides access to rich, longitudinal clinical data, including EHR, genomics,
+  imaging, and biospecimens, supporting diverse research use cases.
 endpoints:
 - type: oaipmh20
   url: https://research.vumc.nl/ws/oai?verb=Identify
@@ -46,7 +51,10 @@ owner:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
+    subregion:
+      id: US-TN
+      name: Tennessee
   name: Vrije Universiteit Amsterdam
   type: Academy
 properties:
@@ -65,8 +73,15 @@ software:
 status: active
 tags:
 - scientific
+- clinical data
+- EHR
+- genomics
+- research
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: HEAL
+  name: Health
   type: eudatatheme
 uid: cdi00002251

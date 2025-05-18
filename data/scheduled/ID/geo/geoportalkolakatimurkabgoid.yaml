@@ -11,12 +11,15 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-SG
+      name: Sulawesi Tenggara
+description: Geospatial data portal for Kolaka Timur Regency, providing access to
+  spatial data and catalog services for administrative and thematic mapping.
 endpoints:
 - type: geonode:layers
   url: http://geoportal.kolakatimurkab.go.id/api/layers/
@@ -86,16 +89,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://geoportal.kolakatimurkab.go.id
-name: geoportal.kolakatimurkab.go.id
+name: GeoPortal Kabupaten Kolaka Timur
 owner:
-  link: null
+  link: https://kolakatimurkab.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-SG
+      name: Sulawesi Tenggara
+  name: Pemerintah Kabupaten Kolaka Timur
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -109,6 +115,18 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoportal
+- administrative units
+- boundaries
+- sulawesi
+- kolaka timur
+- indonesia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005114

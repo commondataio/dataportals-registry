@@ -9,14 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Data catalog of ArcGIS REST Services provided by gis.dfwmaps.com. It
+  offers datasets and map services typically related to geographic information.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.dfwmaps.com/arcgis/rest/info?f=pjson
@@ -33,16 +36,19 @@ endpoints:
 id: gisdfwmapscom
 langs: []
 link: https://gis.dfwmaps.com/arcgis/rest/services
-name: gis.dfwmaps.com
+name: gis.dfwmaps.com ArcGIS REST Services
 owner:
-  link: null
+  link: https://gis.dfwmaps.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: DFW Maps (assumed, not verified in text)
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -56,6 +62,26 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- arcgis
+- rest
+- gis
+- dfw
+- maps
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00005626

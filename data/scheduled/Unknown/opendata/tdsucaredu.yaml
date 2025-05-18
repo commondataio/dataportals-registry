@@ -8,30 +8,38 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: A web server providing metadata and data access for scientific datasets,
+  using OPeNDAP, OGC WMS and WCS, HTTP, and other remote data access protocols. The
+  TDS is developed and supported by Unidata, a division of the University Corporation
+  for Atmospheric Research (UCAR).
 endpoints:
 - type: thredds:catalog
   url: https://tds.ucar.edu/thredds/catalog.xml
 id: tdsucaredu
 langs: []
 link: https://tds.ucar.edu/thredds/catalog.html
-name: tds.ucar.edu
+name: UCAR THREDDS Data Server Data Catalog
 owner:
-  link: null
+  link: https://tds.ucar.edu/thredds/catalog.html
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: University Corporation for Atmospheric Research (UCAR)
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -45,6 +53,17 @@ software:
   id: thredds
   name: Thredds
 status: scheduled
-tags: []
-topics: []
+tags:
+- Scientific
+- Climate
+- Atmosphere
+- Oceanography
+- Remote Sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00004180

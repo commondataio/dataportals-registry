@@ -11,13 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: 'DDOT Urban Forestry Division This page has moved to: https://trees.dc.gov
-
-  Please update your bookmarks!'
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Open data portal featuring urban forestry datasets for Washington, DC,
+  including information on tree canopy, public tree inventories, and related geospatial
+  data.
 endpoints:
 - type: dcatap201
   url: https://urban-forestry-dcgis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://urban-forestry-dcgis.opendata.arcgis.com/
-name: DC Urban Forestry
+name: Urban Forestry - DC GIS Open Data Portal
 owner:
-  link: null
+  link: https://urban-forestry-dcgis.opendata.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: City of Washington, DC
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -57,6 +63,17 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- urban forestry
+- tree canopy
+- tree inventory
+- GIS
+- Washington DC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00004052

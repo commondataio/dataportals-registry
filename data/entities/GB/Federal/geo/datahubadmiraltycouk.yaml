@@ -11,12 +11,16 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: The ADMIRALTY Marine Data Portal provides access to view and download
-  marine data sets held by the UK Hydrographic Office (UKHO).
+    subregion:
+      id: GB-ENG
+      name: England
+description: A portal providing access to a wide range of marine geospatial data from
+  seabed to surface, offshore and beyond, including bathymetry, wrecks and obstructions,
+  ships' routeing, maritime limits and offshore infrastructure.
 endpoints:
 - type: arcgis:rest:info
   url: https://datahub.admiralty.co.uk/server/rest/info?f=pjson
@@ -42,7 +46,10 @@ owner:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: UK Hydrographic Office (UKHO)
   type: Central government
 properties:
@@ -58,6 +65,43 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- marine
+- navigation
+- seabed
+- hydrography
+- weather
+- astronomical data
+- tidal data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00004531

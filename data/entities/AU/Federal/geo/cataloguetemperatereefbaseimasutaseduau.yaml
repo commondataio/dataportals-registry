@@ -11,11 +11,15 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: TemperateReefBase Geonetwork Catalogue
+    subregion:
+      id: AU-TAS
+      name: Tasmania
+description: A data catalog for marine and temperate reef data hosted by IMAS at the
+  University of Tasmania.
 endpoints:
 - type: geonetwork:query
   url: https://catalogue-temperatereefbase.imas.utas.edu.au/geonetwork/srv/eng/q
@@ -49,7 +53,10 @@ owner:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-TAS
+      name: Tasmania
   name: University of Tasmania
   type: Academy
 properties:
@@ -67,6 +74,11 @@ software:
 status: active
 tags:
 - scientific
+- marine
+- reef
+- Australia
+- IMAS
+- Tasmania
 topics:
 - id: TECH
   name: Science and technology
@@ -77,4 +89,10 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00004916

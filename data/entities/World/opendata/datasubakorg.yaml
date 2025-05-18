@@ -10,10 +10,15 @@ coverage:
     country:
       id: World
       name: World
-    level: 20
+    level: 30
     macroregion:
       id: World
       name: World
+    subregion:
+      id: GB-ENG
+      name: England
+description: A collection of climate and energy data resources, created and curated
+  by Subak Member Organisations, focusing on innovation, equity, and sustainability.
 endpoints:
 - type: ckan
   url: https://data.subak.org/api/3
@@ -45,7 +50,10 @@ owner:
     country:
       id: World
       name: World
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: Subak
   type: Civil society
 rights:
@@ -61,5 +69,26 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- climate
+- energy
+- transport
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00002002

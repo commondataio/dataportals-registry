@@ -11,10 +11,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Catalog for managing metadata of spatially referenced resources, providing
+  search, editing, and interoperability functions based on open standards.
 endpoints:
 - type: geonetwork:query
   url: https://metadata.bgs.ac.uk/geonetwork/srv/eng/q
@@ -50,12 +55,16 @@ langs:
 link: https://metadata.bgs.ac.uk/geonetwork
 name: British Geological Survey Data Catalogue
 owner:
+  link: https://www.bgs.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: British Geological Survey
   type: Academy
 properties:
   has_doi: true
@@ -73,4 +82,7 @@ status: active
 tags:
 - geospatial
 - has_api
+- geology
+- metadata
+- catalogue
 uid: cdi00000754

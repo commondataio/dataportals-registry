@@ -11,12 +11,19 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: Oxford County offers many geographic data services and mapping products
+  through the Corporate Geographic Information System (GIS). GIS is used by staff
+  to manage building permits, inspection tracking, property ownership, 911 addresses,
+  transportation networks, and land development proposals. The system supports business
+  processes such as administering building permits, civic addressing, and public works
+  work management.
 endpoints:
 - type: arcgis:rest:info
   url: http://public.oxfordcounty.ca/arcgis/rest/info?f=pjson
@@ -45,16 +52,19 @@ langs:
 - id: EN
   name: English
 link: http://public.oxfordcounty.ca/gis/rest/services
-name: public.oxfordcounty.ca
+name: Oxford County GIS Data Catalog
 owner:
-  link: null
+  link: https://www.oxfordcounty.ca
   location:
     country:
       id: CA
       name: Canada
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Oxford County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -68,6 +78,29 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Mapping
+- Oxford County
+- Canada
+- Open Data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00001349

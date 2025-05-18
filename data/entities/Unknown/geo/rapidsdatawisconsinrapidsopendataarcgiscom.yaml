@@ -9,13 +9,19 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: Contact Information jconner@wirapids.org
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WI
+      name: Wisconsin
+description: Web mapping applications built with ArcGIS JavaScript, covering various
+  topics and datasets mainly for Wisconsin Rapids. Maps run on most major browsers.
+  The site uses ArcGIS Hub and implements anonymous tracking for improving performance
+  and usage analysis in line with Esri's Privacy Statement.
 endpoints:
 - type: dcatap201
   url: https://rapidsdata-wisconsinrapids.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,14 +40,17 @@ langs:
 link: https://rapidsdata-wisconsinrapids.opendata.arcgis.com/
 name: Wisconsin Rapids Maps & Apps
 owner:
-  link: null
+  link: https://rapidsdata-wisconsinrapids.opendata.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WI
+      name: Wisconsin
+  name: City of Wisconsin Rapids
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -55,6 +64,19 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- ArcGIS
+- Open Data
+- Public Sector
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00003121

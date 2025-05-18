@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Interactive mapping services from IBGE, Brazil's official statistics
+  agency, providing access to GIS data via REST API.
 endpoints:
 - type: arcgis:rest:info
   url: http://mapasinterativos.ibge.gov.br/arcgis/rest/info?f=pjson
@@ -35,16 +35,16 @@ langs:
 - id: PT
   name: Portugal
 link: http://mapasinterativos.ibge.gov.br/arcgis/rest/services
-name: mapasinterativos.ibge.gov.br
+name: mapasinterativos.ibge.gov.br/arcgis/rest/services
 owner:
-  link: null
+  link: https://www.ibge.gov.br
   location:
     country:
       id: BR
       name: Brazil
     level: 20
-  name: ''
-  type: Unknown
+  name: IBGE (Instituto Brasileiro de Geografia e Estatística)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +58,13 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Mapping
+- Statistics
+- REST
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00003421

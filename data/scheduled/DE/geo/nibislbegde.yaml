@@ -11,12 +11,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: GeoNetwork data catalog managed by the LBEG (Lower Saxony State Office
+  for Mining, Energy and Geology), providing access to and integrated use of spatial
+  data.
 endpoints:
 - type: geonetwork:query
   url: https://nibis.lbeg.de/geonetwork/srv/eng/q
@@ -37,16 +41,19 @@ langs:
 - id: DE
   name: German
 link: https://nibis.lbeg.de/geonetwork
-name: nibis.lbeg.de
+name: LBEG GeoNetwork Catalogue
 owner:
-  link: null
+  link: https://nibis.lbeg.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: LBEG
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -60,6 +67,11 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
+tags:
+- spatial data
+- metadata
+- geospatial
+- Germany
+- LBEG
 topics: []
 uid: temp00003517

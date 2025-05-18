@@ -15,6 +15,8 @@ coverage:
     macroregion:
       id: 029
       name: Caribbean
+description: GeoServer instance for road inventory data managed by the Ministry of
+  Public Works and Communications (MOPC), Dominican Republic.
 endpoints:
 - type: wms111
   url: https://inventariovial.mopc.gob.do/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,14 +68,15 @@ langs:
 - id: ES
   name: Spanish
 link: https://inventariovial.mopc.gob.do/geoserver
-name: MOPC Geoserver Dominicana
+name: Inventario Vial MOPC GeoServer
 owner:
+  link: https://mopc.gob.do
   location:
     country:
       id: DO
       name: Republica Dominicana
     level: 20
-  name: ''
+  name: Ministerio de Obras Públicas y Comunicaciones (MOPC)
   type: Central government
 properties:
   has_doi: false
@@ -91,5 +94,14 @@ status: active
 tags:
 - geospatial
 - government
-topics: []
+- transportation
+- roads
+- geoserver
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000508

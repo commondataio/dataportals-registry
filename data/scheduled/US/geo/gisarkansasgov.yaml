@@ -11,12 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-AR
+      name: Arkansas
+description: ArcGIS REST services endpoint for the Arkansas Spatial Data Infrastructure
+  (ASDI), providing dynamic access to map, feature, image, and locator services for
+  Arkansas's geospatial data.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.arkansas.gov/arcgis/rest/info?f=pjson
@@ -35,16 +39,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.arkansas.gov/arcgis/rest/services
-name: gis.arkansas.gov
+name: Arkansas Spatial Data Infrastructure (ASDI) ArcGIS REST Services
 owner:
-  link: null
+  link: https://gis.arkansas.gov/
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-AR
+      name: Arkansas
+  name: Arkansas GIS Office
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,53 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- REST
+- map services
+- feature services
+- image services
+- locator services
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004289

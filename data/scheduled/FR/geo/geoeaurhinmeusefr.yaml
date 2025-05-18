@@ -11,12 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Portal providing geospatial data services related to water management
+  in the Rhin-Meuse basin in France.
 endpoints:
 - type: arcgis:rest:info
   url: https://geo.eau-rhin-meuse.fr/server/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: FR
   name: French
 link: https://geo.eau-rhin-meuse.fr/server/rest/services
-name: geo.eau-rhin-meuse.fr
+name: geo.eau-rhin-meuse.fr/server/rest/services
 owner:
-  link: null
+  link: https://geo.eau-rhin-meuse.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+  name: Agence de l'Eau Rhin-Meuse
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,10 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- water management
+- Rhin-Meuse basin
+- France
+- geoportal
 topics: []
 uid: temp00003642

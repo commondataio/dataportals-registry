@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+description: Geospatial data portal for Tulungagung Regency
 endpoints:
 - type: wms111
   url: http://geoportal.tulungagung.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +67,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://geoportal.tulungagung.go.id/geoserver
-name: geoportal.tulungagung.go.id
+name: geoportal.tulungagung.go.id/geoserver
 owner:
-  link: null
+  link: http://geoportal.tulungagung.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
+  name: Regional government of Tulungagung Regency
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,9 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- Spatial data
+- Geoportal
+- GIS
 topics: []
 uid: temp00005137

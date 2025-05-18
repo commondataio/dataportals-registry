@@ -10,11 +10,17 @@ coverage:
     country:
       id: DK
       name: Denmark
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: Library Open Access Repository
+    subregion:
+      id: DK-84
+      name: Hovedstaden
+description: Library Open Access Repository (LOAR) is an open data repository established
+  in 2016 as a service for storing and providing access to Danish research data. It
+  provides open datasets containing raw text from monographs, newspapers and audio
+  recordings.
 endpoints:
 - type: dspace
   url: https://loar.kb.dk/server/api
@@ -38,14 +44,17 @@ langs:
 - id: EN
   name: English
 link: https://loar.kb.dk
-name: LOAR
+name: LOAR (Library Open Access Repository)
 owner:
   link: https://www.kb.dk
   location:
     country:
       id: DK
       name: Denmark
-    level: 20
+    level: 30
+    subregion:
+      id: DK-84
+      name: Hovedstaden
   name: Royal Danish Library
   type: Academy
 properties:
@@ -61,9 +70,23 @@ software:
   id: dspace
   name: DSpace
 status: active
-tags: []
+tags:
+- open data
+- research data
+- OCR
+- audio recordings
+- historical newspapers
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00004264

@@ -10,12 +10,16 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: UNB Dataverse is repository for research data collected by researchers
-  and organizations primarily affiliated with the University of New Brunswick.
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: Repository for research data collected by researchers and organizations
+  primarily affiliated with the University of New Brunswick. Allows researchers to
+  deposit, share, analyze, cite, and explore data.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.lib.unb.ca/api/search
@@ -44,7 +48,10 @@ owner:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
   name: UNB Libraries
   type: Academy
 properties:
@@ -64,8 +71,19 @@ status: active
 tags:
 - scientific
 - has_api
+- business
+- cadastral maps
+- chemistry
+- earth
+- environment
+- management
+- multidisciplinary
+- survey
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000331

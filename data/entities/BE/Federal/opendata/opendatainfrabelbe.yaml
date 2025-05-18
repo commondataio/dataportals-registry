@@ -10,10 +10,16 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: Infrabel is the Belgian railway infrastructure manager. We build, maintain
+  and modernise the network. Infrabel is also responsible for the allocation of train-
+  ...
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.infrabel.be/api
@@ -25,14 +31,17 @@ langs:
 - id: FR
   name: French
 link: https://opendata.infrabel.be
-name: Open Data Infrabel
+name: Infrabel - Open Data
 owner:
   link: https://www.infrabel.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: InfraBel
   type: Business
 properties:
@@ -52,11 +61,22 @@ status: active
 tags:
 - government
 - has_api
+- railway
+- infrastructure
+- Belgium
+- open data
+- transportation
 topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
 - id: Transportation
   name: Transportation
+  type: iso19115
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Structure
+  name: Structure
   type: iso19115
 uid: cdi00002438

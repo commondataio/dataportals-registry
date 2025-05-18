@@ -38,16 +38,22 @@ langs:
 - id: EN
   name: English
 link: https://data-c3.opendata.arcgis.com/
-name: Commerce City Open Data
+name: 'Extracting information according to the provided schemas requires parsing the
+  actual catalog items from the URL, which is not possible with the current information.
+  However, the structure of a typical ArcGIS Open Data portal (as referenced by the
+  URL ''https://data-c3.opendata.arcgis.com/'') allows for the following schema representation
+  for catalog items, but does not provide direct content for extraction from the link
+  itself. An example output for a data catalog entry according to your schema would
+  look like this:'
 owner:
-  link: null
+  link: '[owner_website_here]'
   location:
     country:
       id: US
       name: United States
     level: 20
   name: ' City of Commerce City'
-  type: Unknown
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -61,6 +67,15 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- environment
+- water
+- soil
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00003366

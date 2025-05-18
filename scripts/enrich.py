@@ -40,6 +40,16 @@ def load_csv_dict(filepath, key, delimiter='\t'):
     f.close()
     return data
 
+def load_jsonl_dict(filepath, key):
+    data = {}
+    f = open(filepath, 'r', encoding='utf8')
+    for line in f:
+        r = json.loads(line)
+        data[r[key]] = r
+    f.close()
+    return data
+
+
 
 @app.command()
 def enrich_ot(dryrun=False):
@@ -920,6 +930,7 @@ def update_terms(dryrun=False, mode='entities'):
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
                 print('Updated %s' % (os.path.basename(filename).split('.', 1)[0]))
+
 
 
 if __name__ == "__main__":

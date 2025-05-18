@@ -10,15 +10,20 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: The Place-Based Longitudinal Data Resource (PLDR) brings together datasets
-  that track changes in the determinants of health and health outcomes, in places
-  over time. These are used by researchers, local government, the NHS and the third
-  sector to understand what works to improve public and health, what doesn’t and what
-  can cause harm.
+    subregion:
+      id: GB-ENG
+      name: England
+description: The PLDR brings together datasets that track changes in the determinants
+  of health and health outcomes, in places over time. These are used by researchers,
+  local government, the NHS and the third sector to understand what works to improve
+  public and health outcomes, what doesn’t and what can cause harm. The PLDR uses
+  local and national datasets (e.g. hospital admissions data, budgetary data, prescribing
+  data) to calculate indicators for places (neighbourhoods, local government areas,
+  regions and countries) that are consistent over time.
 id: pldrorg
 langs:
 - id: EN
@@ -31,7 +36,10 @@ owner:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: University of Liverpool
   type: Academy
 rights:
@@ -49,11 +57,25 @@ tags:
 - government
 - has_api
 - microdata
+- longitudinal data
+- public health
+- social care
+- finance
+- place-based
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
 - id: Society
   name: Society
+  type: iso19115
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Health
+  name: Health
   type: iso19115
 uid: cdi00005396

@@ -10,10 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-NY
+      name: New York
+description: UltraViolet is a repository built on InvenioRDM for NYU Libraries collections,
+  including proprietary data collections. It allows depositing materials and uses
+  the DataCite metadata schema. Metadata is open to enhance discovery and allow repurposing.
 endpoints:
 - type: inveniordmapi:records
   url: https://ultraviolet.library.nyu.edu/api/records
@@ -26,14 +32,17 @@ langs:
 - id: EN
   name: English
 link: https://ultraviolet.library.nyu.edu
-name: NYU Ultraviolet
+name: UltraViolet - NYU
 owner:
   link: https://www.nyu.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-NY
+      name: New York
   name: New York University
   type: Academy
 properties:
@@ -53,6 +62,7 @@ status: active
 tags:
 - scientific
 - has_api
+- Academic repository, Data repositories, Scholarly communications
 topics:
 - id: TECH
   name: Science and technology

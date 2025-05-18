@@ -10,10 +10,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: The FAIR portal provides an overview of existing databases with health
+  and health care related data and aims to steadily make this data discoverable.
 endpoints:
 - type: dcatus11
   url: https://fair.healthdata.be/data.json
@@ -29,7 +34,10 @@ owner:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: Healthdata Belgium
   type: Central government
 properties:
@@ -48,6 +56,10 @@ software:
 status: active
 tags:
 - government
+- health data
+- data catalog
+- data portal
+- Belgium
 topics:
 - id: Health
   name: Health
@@ -55,4 +67,7 @@ topics:
 - id: HEAL
   name: Health
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00002435

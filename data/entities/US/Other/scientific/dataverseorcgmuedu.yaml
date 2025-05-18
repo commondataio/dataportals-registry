@@ -10,12 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: George Mason University Libraries Dataverse publishes, shares, and preserves
-  data of enduring value produced by George Mason faculty, staff, and students.
+    subregion:
+      id: US-VA
+      name: Virginia
+description: A place for George Mason researchers to share data publicly; part of
+  the Mason Archival Repository Service (MARS). Includes works of GMU scholarship
+  such as articles, books, theses, dissertations, and data.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.orc.gmu.edu/api/search
@@ -36,12 +40,16 @@ langs:
 link: https://dataverse.orc.gmu.edu
 name: George Mason University Dataverse
 owner:
+  link: https://dataverse.orc.gmu.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: George Mason University
   type: Academy
 properties:
   has_doi: true
@@ -59,8 +67,20 @@ status: active
 tags:
 - scientific
 - has_api
+- open data
+- scholarship
+- research
+- theses
+- dissertations
+- higher education
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001694

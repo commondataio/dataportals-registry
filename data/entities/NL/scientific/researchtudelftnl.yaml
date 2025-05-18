@@ -11,10 +11,18 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+description: Central, comprehensive catalog for datasets of the Ruisdael Observatory,
+  aggregating and indexing datasets stored on various platforms (e.g., KNMI Data Platform,
+  4TU Research Data, ACTRIS CloudNet Portal, MAQ Observations, ICOS-portal). Enables
+  searching, describing, and linking to datasets independently of their physical storage
+  location.
 endpoints:
 - type: rss
   url: https://research.tudelft.nl/en/datasets/?search=&isCopyPasteSearch=false&format=rss
@@ -37,7 +45,10 @@ owner:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
   name: TU Delft
   type: Academy
 properties:
@@ -56,8 +67,18 @@ software:
 status: active
 tags:
 - scientific
+- climate
+- atmosphere
+- environment
+- observatory
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00002247

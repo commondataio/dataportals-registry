@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-X
+      name: Cordoba
+description: ArcGIS REST services endpoint as a data catalog
 endpoints:
 - type: arcgis:rest:info
   url: https://arcgis.aguascordobesas.com.ar/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://arcgis.aguascordobesas.com.ar/arcgis/rest/services
-name: arcgis.aguascordobesas.com.ar
+name: arcgis.aguascordobesas.com.ar/arcgis/rest/services
 owner:
-  link: null
+  link: https://www.aguascordobesas.com.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-X
+      name: Cordoba
+  name: Aguas Cordobesas
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,12 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Water
+- Utilities
+topics:
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 uid: temp00005854

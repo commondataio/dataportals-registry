@@ -8,14 +8,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: Data catalog for the Austin Metro area provided by Socrata.
 endpoints:
 - type: dcatus11
   url: https://austin-metro.demo.socrata.com/data.json
@@ -36,14 +38,17 @@ name: 'Open Data Portal | Rally - Open Data Portal
 
   '
 owner:
-  link: null
+  link: https://austin-metro.demo.socrata.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Socrata
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -57,6 +62,22 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- government
+- open-data
+- transportation
+- metropolitan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002470

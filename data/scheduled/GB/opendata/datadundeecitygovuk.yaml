@@ -10,12 +10,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-SCT
+      name: Scotland
+description: Welcome to the Dundee Open Data Hub. The Dundee open data hub is a free
+  platform where anyone can discover open data about Dundee.
 endpoints:
 - type: ckan:package-search
   url: https://data.dundeecity.gov.uk/api/3/action/package_search
@@ -32,16 +35,19 @@ langs:
 - id: EN
   name: English
 link: https://data.dundeecity.gov.uk
-name: data.dundeecity.gov.uk
+name: Dundee City Council Open Data Portal
 owner:
-  link: null
+  link: https://data.dundeecity.gov.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: Dundee City Council
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -53,6 +59,9 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- open data
+- datalake
+- local government
 topics: []
 uid: temp00004664

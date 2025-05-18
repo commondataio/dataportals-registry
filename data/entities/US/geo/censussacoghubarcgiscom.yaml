@@ -11,10 +11,13 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-CA
+      name: California
 description: SACOG Census Data Sacramento Region Census Data Regional Census 2020
   Maps 2020 Census Block Groups SACOG Region 2020 Census Block Groups SACOG Region
   Total Population for SACOG Region Whole Counties 2020 Census Block Groups SACOG
@@ -69,16 +72,19 @@ langs:
 - id: EN
   name: English
 link: https://census-sacog.hub.arcgis.com/
-name: Census Data
+name: SACOG Census Data
 owner:
-  link: null
+  link: https://census-sacog.hub.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: Sacramento Area Council of Governments
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -92,6 +98,17 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- Demographics
+- Census
+- Population
+- Housing
+- Redistricting
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00003284

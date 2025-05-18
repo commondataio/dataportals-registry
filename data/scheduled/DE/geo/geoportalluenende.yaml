@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Geoportal providing ArcGIS-based map and data services for the city of
+  Lünen
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportal.luenen.de/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: DE
   name: German
 link: https://geoportal.luenen.de/arcgis/services
-name: geoportal.luenen.de
+name: Geoportal Lünen - ArcGIS Services
 owner:
-  link: null
+  link: https://geoportal.luenen.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: City of Lünen
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,19 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- ArcGIS
+- geoportal
+- municipal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003501

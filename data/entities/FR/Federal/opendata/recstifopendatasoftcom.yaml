@@ -10,10 +10,20 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Directly provided from the site content as requested, but without visiting
+  the underlying pages, only the information extractable from the URL and its description
+  is provided below. For complete and precise extraction of owner_type_reference,
+  data_theme, and iso19115_theme, a full HTML scrape of the catalog's main and dataset
+  pages is required. The following is based on mapping only from what can be inferred
+  from the provided URL and standard vocabularies, not from actual web scraping or
+  site content.
 endpoints:
 - type: opendatasoftapi
   url: https://rec-stif.opendatasoft.com/api
@@ -25,13 +35,17 @@ langs:
 - id: FR
   name: French
 link: https://rec-stif.opendatasoft.com
-name: STIF
+name: No extraction performed
 owner:
+  link: https://rec-stif.opendatasoft.com
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
   name: STIF
   type: Central government
 properties:
@@ -50,5 +64,19 @@ status: active
 tags:
 - government
 - has_api
-topics: []
+- public transport
+- transport
+- STIF
+- Île-de-France
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000726

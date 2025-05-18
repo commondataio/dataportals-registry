@@ -11,12 +11,15 @@ coverage:
     country:
       id: SE
       name: Sweden
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: SE-S
+      name: Varmlands lan
+description: Geospatial data portal hosted by the municipality of Karlstad, Sweden,
+  providing access to geospatial datasets and data services.
 endpoints:
 - type: wms111
   url: http://gi.karlstad.se:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,14 +70,17 @@ langs:
 link: http://gi.karlstad.se:8080/geoserver
 name: gi.karlstad.se:8080
 owner:
-  link: null
+  link: http://gi.karlstad.se
   location:
     country:
       id: SE
       name: Sweden
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: SE-S
+      name: Varmlands lan
+  name: Karlstad Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,22 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- WMS
+- WFS
+- GIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001664

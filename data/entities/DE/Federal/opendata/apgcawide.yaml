@@ -14,6 +14,11 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
+description: Metadata catalog based on CKAN, a web-based data catalog software, providing
+  information on individual datasets, including title, abstract, product guides, and
+  detailed metadata on thematic, spatial, and temporal properties via an Additional
+  Info table. Product guides describe data processing methods. Datasets are documented
+  according to FAIR data principles.
 endpoints:
 - type: ckan:package-search
   url: https://apgc.awi.de/api/3/action/package_search
@@ -42,7 +47,7 @@ langs:
 - id: EN
   name: English
 link: https://apgc.awi.de
-name: Arctic Permafrost Geospatial Centre
+name: Arctic Permafrost Geospatial Centre (APGC)
 owner:
   link: https://awi.de
   location:
@@ -65,5 +70,16 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- permafrost
+- geospatial
+- Arctic
+- metadata
+- polar research
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00000441

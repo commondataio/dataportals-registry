@@ -10,12 +10,16 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Catalog of datasets related to parking and urban mobility managed by
+  Saemes in the Paris region, including parking spots, electric charging points, bike
+  and motorcycle spaces, and related photos.
 endpoints:
 - type: opendatasoft
   url: https://opendata.saemes.fr/api
@@ -28,14 +32,17 @@ langs:
 link: https://opendata.saemes.fr
 name: opendata.saemes.fr
 owner:
-  link: null
+  link: https://opendata.saemes.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Saemes
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -49,6 +56,18 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- parking
+- urban mobility
+- public parking
+- off-street parking
+- on-street parking
+- eco-mobility
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00003680

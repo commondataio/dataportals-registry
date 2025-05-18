@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: TR-77
       name: Yalova province
-description: Yalova province geoserver
+description: Geospatial data catalog provided by Yalova Municipality, featuring data
+  access via Geoserver.
 endpoints:
 - type: wms111
   url: http://cbs.yalova.bel.tr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,7 +66,10 @@ owner:
     country:
       id: TR
       name: Turkey
-    level: 20
+    level: 30
+    subregion:
+      id: TR-77
+      name: Yalova
   name: Yalova Metropolitan Municipality
   type: Regional government
 properties:
@@ -81,9 +85,38 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
+tags:
+- geoserver
+- geospatial
+- open data
+- Yalova
+- Turkey
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00004713

@@ -11,12 +11,14 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AU-WA
+      name: Western Australia
+description: GIS web services catalog published by Main Roads Western Australia.
 endpoints:
 - type: arcgis:rest:info
   url: https://mrgis.mainroads.wa.gov.au/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://mrgis.mainroads.wa.gov.au/arcgis/rest/services
-name: mrgis.mainroads.wa.gov.au
+name: Main Roads WA Data Catalog (GIS Rest Services)
 owner:
-  link: null
+  link: https://www.mainroads.wa.gov.au/
   location:
     country:
       id: AU
       name: Australia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AU-WA
+      name: Western Australia
+  name: Main Roads Western Australia
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,18 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- roads
+- GIS
+- infrastructure
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00003376

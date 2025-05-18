@@ -11,10 +11,16 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comte
+description: GeoNetwork opensource permet de partager des informations géographiques
+  thématiques entre divers acteurs. Ce catalogue regroupe des jeux de données conformes
+  aux spécifications INSPIRE.
 endpoints:
 - type: geonetwork:query
   url: https://inspire.ternum-bfc.fr/geonetwork/srv/eng/q
@@ -40,14 +46,17 @@ langs:
 - id: FR
   name: French
 link: https://inspire.ternum-bfc.fr/geonetwork
-name: DéO BFC - Catalogue INSPIRE
+name: IDéO BFC - Catalogue INSPIRE
 owner:
   link: https://www.ternum-bfc.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comte
   name: Regional Agency for Digital and Artificial Intelligence
   type: Regional government
 properties:
@@ -69,8 +78,25 @@ tags:
 - government
 - has_api
 - ml
+- INSPIRE
+- GeoNetwork
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: cdi00002305

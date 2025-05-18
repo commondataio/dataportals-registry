@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: GeoServer-based data catalog operated by the city of Stuttgart
 endpoints:
 - type: wms111
   url: https://geoserver.stuttgart.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,14 +69,17 @@ langs:
 link: https://geoserver.stuttgart.de/geoserver
 name: geoserver.stuttgart.de
 owner:
-  link: null
+  link: https://geoserver.stuttgart.de/geoserver
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: City of Stuttgart
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,16 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- opendata
+- city
+- gis
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003507

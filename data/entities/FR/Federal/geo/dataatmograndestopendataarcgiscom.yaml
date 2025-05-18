@@ -11,10 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Catalogue d'applications d'ATMO Grand Est, trouvez des données notamment
+  sur la qualité de l’air, via un géoportail.
 endpoints:
 - type: dcatap201
   url: https://data-atmograndest.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,11 +39,15 @@ langs:
 link: https://data-atmograndest.opendata.arcgis.com
 name: Atmo Grand Est Open Data
 owner:
+  link: https://data-atmograndest.opendata.arcgis.com
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
   name: Grand Est
   type: Local government
 properties:
@@ -58,8 +67,17 @@ status: active
 tags:
 - geospatial
 - has_api
+- air quality
+- ArcGIS
+- Open Data
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00000647

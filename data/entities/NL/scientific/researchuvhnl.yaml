@@ -11,10 +11,15 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: NL-UT
+      name: Utrecht
+description: Information on researchers, research output and student theses of the
+  University of Humanistic Studies.
 endpoints:
 - type: oaipmh20
   url: https://research.uvh.nl/ws/oai?verb=Identify
@@ -44,7 +49,10 @@ owner:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
+    subregion:
+      id: NL-UT
+      name: Utrecht
   name: University of Humanistic Studies
   type: Academy
 properties:
@@ -63,8 +71,13 @@ software:
 status: active
 tags:
 - scientific
+- research portal
+- scholarly information
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00002250

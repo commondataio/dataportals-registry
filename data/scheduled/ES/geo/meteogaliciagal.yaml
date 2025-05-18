@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-GA
       name: Galicia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer instance for meteorological and environmental data provided
+  by MeteoGalicia, the regional government
 endpoints:
 - type: wms111
   url: https://meteogalicia.gal/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,9 +59,9 @@ langs:
 - id: ES
   name: Spanish
 link: https://meteogalicia.gal/geoserver
-name: meteogalicia.gal
+name: MeteoGalicia GeoServer
 owner:
-  link: null
+  link: https://www.meteogalicia.es
   location:
     country:
       id: ES
@@ -70,8 +70,8 @@ owner:
     subregion:
       id: ES-GA
       name: Galicia
-  name: ''
-  type: Unknown
+  name: MeteoGalicia
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -85,6 +85,17 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- meteorology
+- environment
+- geospatial
+- WMS
+- REST
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 uid: temp00003560

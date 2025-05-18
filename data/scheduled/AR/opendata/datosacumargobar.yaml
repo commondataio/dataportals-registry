@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-C
+      name: Ciudad Autonoma de Buenos Aires
+description: Ponemos a tu alcance datos públicos de ACUMAR en formatos abiertos para
+  que puedas usarlos, modificarlos y compartirlos
 endpoints:
 - type: ckan:package-search
   url: https://datos.acumar.gob.ar/api/3/action/package_search
@@ -38,16 +41,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://datos.acumar.gob.ar
-name: datos.acumar.gob.ar
+name: Autoridad de Cuenca Matanza Riachuelo (ACUMAR) Data Catalog
 owner:
-  link: null
+  link: https://datos.acumar.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-C
+      name: Ciudad Autonoma de Buenos Aires
+  name: Autoridad de Cuenca Matanza Riachuelo (ACUMAR)
+  type: Central government
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,12 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- open data
+- environment
+- water quality
+- public health
+- Argentina
+- Matanza Riachuelo
 topics: []
 uid: temp00004463

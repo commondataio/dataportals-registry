@@ -11,12 +11,14 @@ coverage:
     country:
       id: AT
       name: Austria
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AT-2
+      name: Karnten
+description: ''
 endpoints:
 - type: wms111
   url: https://geo.kaerntennetz.at/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,9 +65,12 @@ owner:
     country:
       id: AT
       name: Austria
-    level: 20
+    level: 30
+    subregion:
+      id: AT-2
+      name: Karnten
   name: ''
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -79,6 +84,13 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- ''
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00005445

@@ -11,11 +11,15 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: INSPER Portal de dados urbanos
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
+description: Brazilian non-profit higher education institution in São Paulo offering
+  courses in Business, Economics, Engineering, Law, and Computer Science.
 endpoints:
 - type: terria:config
   url: https://mapacessopde.datascience.insper.edu.br/config.json
@@ -27,11 +31,15 @@ langs:
 link: https://www.insper.edu.br
 name: INSPER Portal de dados urbanos
 owner:
+  link: https://www.insper.edu.br
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
   name: INSPER
   type: Academy
 properties:
@@ -51,11 +59,24 @@ status: active
 tags:
 - geospatial
 - has_api
+- education
+- academia
+- Brazil
+- higher education
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
   type: iso19115
 uid: cdi00004742

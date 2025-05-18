@@ -9,14 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: gis data portal for Virginia Beach, hosting REST API services for spatial
+  datasets
 endpoints:
 - type: arcgis:rest:info
   url: https://gismaps.vbgov.com/arcgis/rest/info?f=pjson
@@ -35,14 +38,17 @@ langs: []
 link: https://gismaps.vbgov.com/arcgis/rest/services
 name: gismaps.vbgov.com
 owner:
-  link: null
+  link: https://www.vbgov.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: City of Virginia Beach
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -56,6 +62,23 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Open Data
+- Maps
+- API
+- Virginia Beach
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00003990

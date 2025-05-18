@@ -10,10 +10,14 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
+description: Open data portal of the Instituto Federal Catarinense (IFC)
 endpoints:
 - type: ckan:package-search
   url: https://dadosabertos.ifc.edu.br/api/3/action/package_search
@@ -37,7 +41,10 @@ owner:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
+    subregion:
+      id: BR-SC
+      name: Santa Catarina
   name: IFC
   type: Academy
 rights:
@@ -53,5 +60,20 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- education
+- government
+- open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: cdi00000193

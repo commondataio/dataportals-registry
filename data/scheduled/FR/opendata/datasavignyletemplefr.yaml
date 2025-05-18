@@ -10,11 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Portail OpenData de Savigny-le-Temple catalog
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Data catalog containing public datasets from the city of Savigny-le-Temple
 endpoints:
 - type: opendatasoft
   url: https://data.savigny-le-temple.fr/api
@@ -29,14 +32,17 @@ langs:
 link: https://data.savigny-le-temple.fr
 name: Portail OpenData de Savigny-le-Temple catalog
 owner:
-  link: null
+  link: https://www.savigny-le-temple.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Ville de Savigny-le-Temple
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,34 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- public data
+- open data
+- local government data
+- Savigny-le-Temple
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002339

@@ -10,10 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: Portal for open data managed by the Region Hauts-de-France.
 endpoints:
 - type: ckan:package-list
   url: https://opendata.hautsdefrance.fr/api/3/action/package_list
@@ -32,11 +36,15 @@ langs:
 link: https://opendata.hautsdefrance.fr
 name: OPEN DATA Hauts-de-France
 owner:
+  link: https://opendata.hautsdefrance.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
   name: 'Région Hauts-de-France '
   type: Regional government
 properties:
@@ -55,6 +63,9 @@ status: active
 tags:
 - government
 - has_api
+- open data
+- public sector
+- Hauts-de-France
 topics:
 - id: REGI
   name: Regions and cities

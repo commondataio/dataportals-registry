@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: NII Repository for Tokyo University of Foreign Studies (not a data catalog,
+  but a digital repository for academic works)
 endpoints:
 - type: weko3:records
   url: https://tufs.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -33,7 +38,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: Tokyo University of Foreign Studies
   type: Academy
 properties:
@@ -56,5 +64,8 @@ tags:
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 uid: cdi00004906

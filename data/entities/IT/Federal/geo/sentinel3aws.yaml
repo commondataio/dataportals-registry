@@ -15,8 +15,13 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Observations from the Sentinel-3 satellite of the European Commission’s
-  Copernicus Earth Observation Programme, available in Level 2 and 3. Hosted on AWS.
+description: No data was extracted from the provided URL as the actual content of
+  the catalog.json was not included in the search results or supplied in the request.
+  Without access to the raw content or the JSON file from the given URL, it is not
+  possible to extract or map catalog information using the specified vocabularies
+  (owner_type_reference, data_theme, iso19115_theme) in a precise, non-hallucinated
+  manner. To generate a CSV or JSON output conforming to your schema, you must provide
+  the actual content of the catalog.json file or ensure it is accessible.
 endpoints:
 - type: stacserverapi
   url: https://meeo-s3.s3.amazonaws.com/catalog.json
@@ -26,7 +31,7 @@ langs:
 - id: EN
   name: English
 link: https://meeo-s3.s3.amazonaws.com/catalog.json
-name: Sentinel 3 Level 2+3 on AWS
+name: meeo-s3.s3.amazonaws.com/catalog.json
 owner:
   link: https://www.meeo.it
   location:
@@ -53,6 +58,7 @@ status: active
 tags:
 - geospatial
 - has_api
+- catalog
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information

@@ -10,12 +10,17 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-ST
+      name: Sachsen-Anhalt
+description: Share_it is the central service for storing, archiving and making accessible
+  publications (eg Open Access publications, secondary publications, grey literature)
+  and research data for the University Libraries in Saxony-Anhalt and Martin Luther
+  University Halle-Wittenberg.
 endpoints:
 - type: oaipmh20
   url: https://opendata.uni-halle.de/oai/request?verb=Identify
@@ -37,16 +42,19 @@ langs:
 - id: DE
   name: German
 link: https://opendata.uni-halle.de
-name: opendata.uni-halle.de
+name: Share_it - Open Access Publications and Research Data Repository
 owner:
-  link: null
+  link: https://opendata.uni-halle.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-ST
+      name: Sachsen-Anhalt
+  name: Martin Luther University Halle-Wittenberg / University Libraries in Saxony-Anhalt
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -60,6 +68,19 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
-topics: []
+tags:
+- Open Access
+- Research Data
+- Academic Publications
+- Dissertations
+- Grey Literature
+- University
+- Halle-Wittenberg
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001853

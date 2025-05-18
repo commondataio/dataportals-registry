@@ -9,14 +9,18 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: CA
+      name: Canada
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: Town of Canmore Open Data Explore Our Datasets Welcome What is Open Data?
-  Licensing Contact Information gis@canmore.ca Links Visit Us
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: A publicly available GIS data sharing portal where anyone can access
+  and utilize data relating to the Town of Canmore, Alberta, Canada. Includes a variety
+  of municipal geospatial datasets.
 endpoints:
 - type: dcatap201
   url: https://opendata-canmore.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -39,14 +43,17 @@ langs:
 link: https://opendata-canmore.opendata.arcgis.com/
 name: Town of Canmore Open Data Portal
 owner:
-  link: null
+  link: https://opendata-canmore.opendata.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Town of Canmore
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +67,30 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- hydro line
+- land use
+- vegetation
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00003049

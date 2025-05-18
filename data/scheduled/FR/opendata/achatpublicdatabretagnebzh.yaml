@@ -10,11 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: achat-public catalog
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: Data catalog focused on public procurement in the Bretagne region.
 endpoints:
 - type: opendatasoft
   url: https://achat-public.data.bretagne.bzh/api
@@ -27,16 +30,19 @@ langs:
 - id: FR
   name: French
 link: https://achat-public.data.bretagne.bzh
-name: achat-public catalog
+name: achat-public.data.bretagne.bzh
 owner:
-  link: null
+  link: https://www.bretagne.bzh
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: Region Bretagne
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,11 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- public procurement
+- data.bretagne.bzh
+topics:
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: temp00002291

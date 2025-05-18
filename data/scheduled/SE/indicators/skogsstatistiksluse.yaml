@@ -10,12 +10,17 @@ coverage:
     country:
       id: SE
       name: Sweden
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: SE-U
+      name: Vastmanlands lan
+description: Official statistics and environmental monitoring data about Swedish forests
+  and land use, managed by SLU (Swedish University of Agricultural Sciences). Data
+  includes land area by traditional land use class, forest conditions, and other environmental
+  statistics.
 endpoints:
 - type: pxwebapi
   url: https://skogsstatistik.slu.se/api/v1/en/
@@ -27,14 +32,17 @@ langs:
 link: https://skogsstatistik.slu.se
 name: skogsstatistik.slu.se
 owner:
-  link: null
+  link: https://slu.se
   location:
     country:
       id: SE
       name: Sweden
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: SE-U
+      name: Vastmanlands lan
+  name: Swedish University of Agricultural Sciences (SLU)
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -48,6 +56,19 @@ software:
   id: pxweb
   name: PxWeb
 status: scheduled
-tags: []
-topics: []
+tags:
+- forest
+- statistics
+- land use
+- monitoring
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: temp00003887

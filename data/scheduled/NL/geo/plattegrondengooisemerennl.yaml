@@ -11,27 +11,33 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+description: GeoServer-based web service for geographic data from Gooisemeren (Netherlands),
+  offering various spatial datasets and map services.
 id: plattegrondengooisemerennl
 langs:
 - id: NL
   name: Dutch
 link: https://plattegronden.gooisemeren.nl/geoserver
-name: plattegronden.gooisemeren.nl
+name: Geoserver Plattegronden Gooisemeren
 owner:
-  link: null
+  link: https://plattegronden.gooisemeren.nl/geoserver
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NL-NH
+      name: Noord-Holland
+  name: Gooise Meren Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -45,6 +51,32 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- GeoServer
+- GIS
+- spatial data
+- web services
+- municipal data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00005277

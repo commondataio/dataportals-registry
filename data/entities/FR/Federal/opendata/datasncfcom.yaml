@@ -10,10 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: SNCF open data portal featuring datasets on French rail transport, including
+  timetables, station facilities, on-time performance, lines, and connections.
 endpoints:
 - type: opendatasoftapi
   url: https://data.sncf.com/api
@@ -25,14 +30,18 @@ langs:
 - id: FR
   name: French
 link: https://data.sncf.com
-name: SNCF Data
+name: data.sncf.com
 owner:
+  link: https://www.groupe-sncf.com
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: SNCF
   type: Business
 properties:
   has_doi: false
@@ -49,5 +58,14 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- railway
+- transport
+- France
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000695

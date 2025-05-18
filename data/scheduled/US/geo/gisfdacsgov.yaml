@@ -11,27 +11,32 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-FL
+      name: Florida
+description: ''
 id: gisfdacsgov
 langs:
 - id: EN
   name: English
 link: https://gis.fdacs.gov/mapping/rest/services
-name: gis.fdacs.gov
+name: gis.fdacs.gov/mapping/rest/services
 owner:
-  link: null
+  link: https://gis.fdacs.gov/mapping/rest/services
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Department of Agriculture and Consumer Services
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -45,6 +50,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- agriculture
+- FDACS
+- Florida
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005690

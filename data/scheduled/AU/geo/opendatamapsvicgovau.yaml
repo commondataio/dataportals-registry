@@ -11,12 +11,15 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AU-VIC
+      name: Victoria
+description: A data catalog (Geoserver) hosting open geographic datasets provided
+  by the Victorian Government, Australia.
 endpoints:
 - type: wms111
   url: https://opendata.maps.vic.gov.au/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +59,19 @@ langs:
 - id: EN
   name: English
 link: https://opendata.maps.vic.gov.au/geoserver
-name: opendata.maps.vic.gov.au
+name: opendata.maps.vic.gov.au/geoserver
 owner:
   link: null
   location:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-VIC
+      name: Victoria
   name: ''
-  type: Unknown
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -79,6 +85,33 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- open data
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003377

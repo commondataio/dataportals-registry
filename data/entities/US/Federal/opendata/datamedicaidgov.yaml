@@ -9,10 +9,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Medicaid data portals and datasets, including beneficiary eligibility,
+  enrollment, utilization, cost, payment data, provider participation, and service
+  delivery network information.
 endpoints:
 - type: dcatus11
   url: https://data.medicaid.gov/data.json
@@ -37,7 +43,10 @@ owner:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: Medicaid
   type: Central government
 properties:
@@ -56,6 +65,14 @@ software:
 status: active
 tags:
 - government
+- Medicaid
+- CHIP
+- healthcare
+- government data
+- eligibility
+- provider
+- payment
+- utilization
 topics:
 - id: HEAL
   name: Health

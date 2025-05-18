@@ -11,12 +11,15 @@ coverage:
     country:
       id: BO
       name: Bolivia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BO-L
+      name: La Paz
+description: Web GIS platform and spatial data catalog of INRA Bolivia, providing
+  access to geospatial layers and services.
 endpoints:
 - type: wms111
   url: https://geo.inra.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://geo.inra.gob.bo/geoserver
-name: geo.inra.gob.bo
+name: geo.inra.gob.bo/geoserver
 owner:
-  link: null
+  link: https://geo.inra.gob.bo
   location:
     country:
       id: BO
       name: Bolivia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BO-L
+      name: La Paz
+  name: INRA Bolivia
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,17 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- INRA
+- land
+- cadastre
+- Bolivia
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00001915

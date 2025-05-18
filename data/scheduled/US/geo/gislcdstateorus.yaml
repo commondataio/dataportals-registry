@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-OR
+      name: Oregon
+description: Data Catalog for TransGIS PROD (Internet)
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.lcd.state.or.us/server/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.lcd.state.or.us/server/rest/services
-name: gis.lcd.state.or.us
+name: transgis/catalog (MapServer)
 owner:
-  link: null
+  link: https://www.oregon.gov/odot
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-OR
+      name: Oregon
+  name: Oregon Department of Transportation (ODOT)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,36 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- highway
+- bridge
+- drainage
+- transport
+- asset
+- signals
+- structures
+- catalog
+- Oregon
+- USA
+- infrastructure
+- road
+- traffic
+- culvert
+- stormwater
+- tunnel
+- retaining wall
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00004314

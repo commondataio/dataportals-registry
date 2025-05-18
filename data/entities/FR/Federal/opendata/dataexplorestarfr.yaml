@@ -10,10 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: Open Data platform for public transport data from the STAR network in
+  Rennes, France.
 endpoints:
 - type: opendatasoftapi
   url: https://data.explore.star.fr/api
@@ -27,12 +32,16 @@ langs:
 link: https://data.explore.star.fr
 name: Star Data Explore
 owner:
+  link: https://data.explore.star.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: STAR (Service des Transports de l’Agglomération Rennaise)
   type: Business
 properties:
   has_doi: false
@@ -49,5 +58,14 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- public transport
+- gtfs
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000685

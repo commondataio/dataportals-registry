@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-MU
+      name: Maluku Utara
+description: Geospatial data catalog for Halmahera Utara region
 endpoints:
 - type: wms111
   url: http://halmaherautarakab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +58,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://halmaherautarakab.ina-sdi.or.id/geoserver
-name: halmaherautarakab.ina-sdi.or.id
+name: halmaherautarakab.ina-sdi.or.id/geoserver
 owner:
-  link: null
+  link: http://halmaherautarakab.ina-sdi.or.id/geoserver
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-MU
+      name: Maluku Utara
+  name: Halmahera Utara Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -79,6 +84,20 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- open data
+- Indonesia
+- Halmahera Utara
+- SDI
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005142

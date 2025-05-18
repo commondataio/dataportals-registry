@@ -11,12 +11,17 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NL-GR
+      name: Groningen
+description: Galerij voor Geoportaal, digitale kaarten en datasets die het beleid
+  van de provincie laten zien of laten zien waar de provincie bezig is met de uitvoering
+  van haar taken, inclusief bodemkwaliteit, gezondheid, geluidsbelasting, en meer.
+  De datasets zijn vrij beschikbaar als open data.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportaal.provinciegroningen.nl/portal/sharing/rest/portals/self?f=pjson
@@ -27,14 +32,17 @@ langs:
 link: https://geoportaal.provinciegroningen.nl/portal/home/
 name: geoportaal.provinciegroningen.nl
 owner:
-  link: null
+  link: https://geoportaal.provinciegroningen.nl/portal/home/
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NL-GR
+      name: Groningen
+  name: Provincie Groningen
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -48,6 +56,40 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- maps
+- open data
+- GIS
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00000504

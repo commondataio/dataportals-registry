@@ -10,11 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Montreuil Data catalog
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Open data portal of the municipality of Montreuil
 endpoints:
 - type: opendatasoft
   url: https://data.montreuil.fr/api
@@ -29,14 +32,17 @@ langs:
 link: https://data.montreuil.fr
 name: Montreuil Data catalog
 owner:
-  link: null
+  link: https://data.montreuil.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Ville de Montreuil
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,34 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- local government
+- municipal services
+- public sector
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00002328

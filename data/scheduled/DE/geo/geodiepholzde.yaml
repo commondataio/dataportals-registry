@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: Data catalog providing ArcGIS services for the region Diepholz.
 endpoints:
 - type: arcgis:rest:info
   url: https://geo.diepholz.de/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: DE
   name: German
 link: https://geo.diepholz.de/arcgis/services
-name: geo.diepholz.de
+name: geo.diepholz.de/arcgis/services
 owner:
-  link: null
+  link: https://geo.diepholz.de/arcgis/services
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:

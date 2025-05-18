@@ -10,10 +10,14 @@ coverage:
     country:
       id: UA
       name: Ukraine
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
+    subregion:
+      id: UA-14
+      name: Donetska oblast
+description: Official data catalog of Mariupol City Council
 endpoints:
 - type: ckan
   url: http://data.mariupolrada.gov.ua/api/3
@@ -25,12 +29,16 @@ langs:
 link: https://data.mariupolrada.gov.ua
 name: Портал відкритих даних Маріуполя
 owner:
+  link: https://mariupolrada.gov.ua/en
   location:
     country:
       id: UA
       name: Ukraine
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: UA-14
+      name: Donetska oblast
+  name: Mariupol City Council
   type: Local government
 properties:
   transferable_location: true
@@ -51,5 +59,8 @@ tags:
 topics:
 - id: REGI
   name: Regions and cities
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
   type: eudatatheme
 uid: cdi00001599

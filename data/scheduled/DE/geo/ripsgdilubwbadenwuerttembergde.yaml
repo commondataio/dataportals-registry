@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: Website providing access to geospatial and environmental data via ArcGIS
+  services, managed by the Baden-Württemberg state authority LUBW.
 endpoints:
 - type: arcgis:rest:info
   url: https://rips-gdi.lubw.baden-wuerttemberg.de/arcgis/rest/info?f=pjson
@@ -37,14 +40,17 @@ langs:
 link: https://rips-gdi.lubw.baden-wuerttemberg.de/arcgis/services
 name: rips-gdi.lubw.baden-wuerttemberg.de
 owner:
-  link: null
+  link: http://www.lubw.baden-wuerttemberg.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: Landesanstalt für Umwelt Baden-Württemberg (LUBW)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,41 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- environment
+- ArcGIS
+- INSPIRE
+- OpenData
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 uid: temp00003519

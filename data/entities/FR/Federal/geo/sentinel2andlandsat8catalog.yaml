@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Up to date Sentinel-2 and Landsat-8 catalog used for demo with rocket
-  client.
+description: A metadata catalog and search engine dedicated to geospatialized data.
+  Originally, its main purpose is to handle Earth Observation satellite imagery including
+  Sentinel-2 and Landsat-8, but it can store any metadata localized in time and space.
+  The catalog implements the SpatioTemporal Asset Catalog (STAC) API 1.0.0.
 endpoints:
 - type: stacserverapi
   url: https://tamn.snapplanet.io
@@ -28,6 +30,7 @@ langs:
 link: https://tamn.snapplanet.io
 name: Sentinel-2 and Landsat-8 catalog
 owner:
+  link: https://tamn.snapplanet.io
   location:
     country:
       id: FR
@@ -52,6 +55,12 @@ status: active
 tags:
 - geospatial
 - has_api
+- satellite
+- Earth Observation
+- STAC
+- Sentinel-2
+- Landsat-8
+- metadata catalog
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information
@@ -59,4 +68,7 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: cdi00000659

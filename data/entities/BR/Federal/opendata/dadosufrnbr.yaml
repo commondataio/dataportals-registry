@@ -10,10 +10,15 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-RN
+      name: Rio Grande do Norte
+description: Portal de Dados Abertos da UFRN que disponibiliza para toda a comunidade
+  dados e informações públicas da Instituição.
 endpoints:
 - type: ckan:package-search
   url: https://dados.ufrn.br/api/3/action/package_search
@@ -32,12 +37,16 @@ langs:
 link: https://dados.ufrn.br
 name: Dados Abertos da UFRN
 owner:
+  link: https://dados.ufrn.br
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: BR-RN
+      name: Rio Grande do Norte
+  name: Universidade Federal do Rio Grande do Norte
   type: Academy
 rights:
   license_id: null
@@ -52,5 +61,26 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- requisição
+- servidores
+- biblioteca
+- comunicados e documentos
+- contratos e convênios
+- despesas e orçamento
+- ensino
+- extensão
+- institucional
+- materiais
+- patrimônio
+- pesquisa
+- pessoas
+- processos
+- estatísticas
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000239

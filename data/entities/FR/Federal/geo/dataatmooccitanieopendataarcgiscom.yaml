@@ -11,10 +11,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: Surveillance de la qualité de l'air en région Occitanie - Portail Open-Data.
 endpoints:
 - type: dcatap201
   url: https://data-atmo-occitanie.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,11 +38,15 @@ langs:
 link: https://data-atmo-occitanie.opendata.arcgis.com
 name: Atmo Occitanie Open Data
 owner:
+  link: https://data-atmo-occitanie.opendata.arcgis.com
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
   name: Occitanie
   type: Local government
 properties:
@@ -58,8 +66,20 @@ status: active
 tags:
 - geospatial
 - has_api
+- Air quality
+- Monitoring
+- Occitanie
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00000649

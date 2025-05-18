@@ -15,8 +15,7 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: ArcGIS REST Services endpoint serving data catalog
 endpoints:
 - type: arcgis:rest:info
   url: http://kartta.nba.fi/arcgis/rest/info?f=pjson
@@ -35,16 +34,16 @@ langs:
 - id: FI
   name: Finnish
 link: http://kartta.nba.fi/arcgis/rest/services
-name: kartta.nba.fi
+name: kartta.nba.fi/arcgis/rest/services
 owner:
-  link: null
+  link: http://kartta.nba.fi/
   location:
     country:
       id: FI
       name: Finland
     level: 20
-  name: ''
-  type: Unknown
+  name: Not provided in source
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +57,15 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- maps
+- arcgis
+- rest
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001498

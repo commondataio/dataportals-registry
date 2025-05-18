@@ -10,12 +10,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-SS
+      name: Sumatera Selatan
+description: Official publications and datasets from the Lahat Regency government.
 endpoints:
 - type: ckan:package-list
   url: https://data.lahatkab.go.id/api/3/action/package_list
@@ -29,14 +31,17 @@ langs:
 link: https://data.lahatkab.go.id
 name: data.lahatkab.go.id
 owner:
-  link: null
+  link: https://data.lahatkab.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-SS
+      name: Sumatera Selatan
+  name: Kabupaten Lahat (Lahat Regency)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +55,16 @@ software:
   id: dkan
   name: DKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- publication
+- statistic
+- government data
+- Lahat
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001991

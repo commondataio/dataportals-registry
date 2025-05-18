@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-R
+      name: Rio Negro
+description: Server REST services for geospatial data at Rionegro government agency.
 endpoints:
 - type: arcgis:rest:info
   url: http://mapasagencia.rionegro.gov.ar/server/rest/info?f=pjson
@@ -37,14 +39,17 @@ langs:
 link: http://mapasagencia.rionegro.gov.ar/server/rest/services
 name: mapasagencia.rionegro.gov.ar
 owner:
-  link: null
+  link: http://mapasagencia.rionegro.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-R
+      name: Rio Negro
+  name: mapasagencia.rionegro.gov.ar
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,15 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- rest
+- gis
+- geospatial services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003344

@@ -11,12 +11,14 @@ coverage:
     country:
       id: FI
       name: Finland
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FI-09
+      name: Kymenlaakso
+description: Data catalog for geospatial data in Kymenlaakso region
 endpoints:
 - type: arcgis:portals:self
   url: https://paikkatieto.kymenlaakso.fi/portal/sharing/rest/portals/self?f=pjson
@@ -39,14 +41,17 @@ langs:
 link: https://paikkatieto.kymenlaakso.fi/server/rest/services
 name: paikkatieto.kymenlaakso.fi
 owner:
-  link: null
+  link: https://paikkatieto.kymenlaakso.fi
   location:
     country:
       id: FI
       name: Finland
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FI-09
+      name: Kymenlaakso
+  name: Kymenlaakso region
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -60,6 +65,13 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- Geoportal
+- GIS
+- Kymenlaakso
+- Finland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00001506

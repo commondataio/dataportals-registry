@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+description: Website hosting a geospatial data catalog via GeoServer interface.
 endpoints:
 - type: wms111
   url: http://geoportal.eberswalde.de:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -62,16 +64,19 @@ langs:
 - id: DE
   name: German
 link: http://geoportal.eberswalde.de:8080/geoserver
-name: geoportal.eberswalde.de:8080
+name: eberswalde geoportal geoserver
 owner:
-  link: null
+  link: http://geoportal.eberswalde.de:8080/geoserver
   location:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-BB
+      name: Brandenburg
   name: ''
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -85,6 +90,9 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- Geodata
+- GeoServer
+- Open Data
 topics: []
 uid: temp00001393

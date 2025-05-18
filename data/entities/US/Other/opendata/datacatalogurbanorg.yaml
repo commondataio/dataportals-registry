@@ -9,10 +9,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: A place to discover and download open data provided by Urban Institute
+  researchers and data scientists. You can search for specific datasets or view all
+  of our public datasets.
 endpoints:
 - type: ckan:package-list
   url: https://datacatalog.urban.org/api/3/action/package_list
@@ -24,14 +30,17 @@ langs:
 - id: EN
   name: English
 link: https://datacatalog.urban.org
-name: Urban Institute Data Catalog
+name: Urban Data Catalog - Urban Institute
 owner:
   link: https://urban.org
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: Urban Institute
   type: Business
 properties:
@@ -49,4 +58,9 @@ software:
 status: active
 tags:
 - government
+- open data
+- research
+- social policy
+- economics
+- community
 uid: cdi00001667

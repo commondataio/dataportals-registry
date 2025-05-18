@@ -10,12 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: EPA maintains 50+ related product data sets updated daily, allowing users
+  to generate reports, export in various formats, and access via API for developers.
+  Supports ENERGY STAR certified models and tools for data analysis and integration.
 endpoints:
 - type: dcatus11
   url: https://data.energystar.gov/data.json
@@ -28,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://data.energystar.gov
-name: data.energystar.gov
+name: ENERGY STAR Product Data Catalog
 owner:
-  link: null
+  link: https://www.energystar.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: EPA (U.S. Environmental Protection Agency)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -51,6 +58,29 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- energy efficiency
+- certification
+- products
+- EPA
+- data center storage
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00002841

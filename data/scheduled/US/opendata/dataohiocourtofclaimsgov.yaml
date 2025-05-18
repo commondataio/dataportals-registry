@@ -10,12 +10,19 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-OH
+      name: Ohio
+description: The Ohio Court of Claims Open Data portal provides access to real-time
+  court case data sets and visualizations, including information about case filings,
+  types, judgments, dispositions, and a calendar of upcoming events. The portal also
+  offers financial and transactional data related to court operations, and is listed
+  in the DataOhio catalog as a single source for datasets from Ohio state agencies
+  and entities.
 endpoints:
 - type: dcatus11
   url: https://data.ohiocourtofclaims.gov/data.json
@@ -30,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://data.ohiocourtofclaims.gov
-name: data.ohiocourtofclaims.gov
+name: Ohio Court of Claims Open Data
 owner:
-  link: null
+  link: https://ohiocourtofclaims.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: Ohio Court of Claims
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -53,6 +63,15 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- Court cases
+- Legal system
+- Court expenses
+- Open data
+- Ohio
+- Government transparency
+topics:
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
 uid: temp00002856

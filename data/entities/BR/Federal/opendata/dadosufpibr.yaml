@@ -10,10 +10,14 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-PI
+      name: Piaui
+description: Open data portal
 endpoints:
 - type: ckan:package-search
   url: https://dados.ufpi.br/api/3/action/package_search
@@ -32,12 +36,16 @@ langs:
 link: https://dados.ufpi.br
 name: Dados Abertos - UFPI
 owner:
+  link: https://ufpi.br
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: BR-PI
+      name: Piaui
+  name: UFPI
   type: Academy
 rights:
   license_id: null
@@ -52,5 +60,8 @@ software:
 status: active
 tags:
 - has_api
+- open data
+- university
+- catalog
 topics: []
 uid: cdi00000236

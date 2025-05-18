@@ -11,11 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Data, Maps, Tools, and Resources for the DMV Region
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Atlas ConnectedDMV is a data catalog portal serving the DMV (DC, Maryland,
+  Virginia) region, presenting datasets and GIS resources related to urban planning,
+  demographics, transportation, and more.
 endpoints:
 - type: dcatap201
   url: https://atlas-connecteddmv.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://atlas-connecteddmv.hub.arcgis.com/
-name: DMV Atlas
+name: Atlas ConnectedDMV
 owner:
-  link: null
+  link: https://atlas-connecteddmv.hub.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: Connected DMV
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -55,6 +63,49 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Mapping
+- Regional Data
+- ConnectedDMV
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00003246

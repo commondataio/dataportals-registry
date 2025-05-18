@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: Repository operated by the National Institute of Informatics (NII) for
+  sharing and accessing academic datasets and research outputs.
 endpoints:
 - type: weko3:records
   url: https://repository.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -30,14 +35,17 @@ langs:
 - id: JA
   name: Japanese
 link: https://repository.nii.ac.jp
-name: NII Repository
+name: repository.nii.ac.jp
 owner:
   link: https://repository.nii.ac.jp
   location:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: National Institute of Informatics
   type: Academy
 properties:
@@ -57,6 +65,9 @@ tags:
 - government
 - has_api
 - academy
+- academic repository
+- dataset sharing
+- open science
 topics:
 - id: TECH
   name: Science and technology

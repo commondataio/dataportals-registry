@@ -10,11 +10,15 @@ coverage:
     country:
       id: 'NO'
       name: Norway
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: MET Norway Thredds Service
+    subregion:
+      id: NO-03
+      name: Oslo
+description: Data archive service operated by MET Norway for publishing historical
+  and current research weather and climate datasets in NetCDF format.
 endpoints:
 - type: thredds:catalog
   url: https://thredds.met.no/thredds/catalog.xml
@@ -25,14 +29,17 @@ langs:
 - id: 'NO'
   name: Norwegian
 link: https://thredds.met.no/thredds/catalog.html
-name: MET Norway Thredds Service
+name: Norwegian Meteorological Institute Data Catalog (THREDDS)
 owner:
   link: http://met.no
   location:
     country:
       id: 'NO'
       name: Norway
-    level: 20
+    level: 30
+    subregion:
+      id: NO-03
+      name: Oslo
   name: Norwegian Meteorological Institute
   type: Academy
 properties:
@@ -54,6 +61,9 @@ tags:
 - climate
 - ocean
 - earth science
+- weather
+- forecast
+- Nordic
 topics:
 - id: ENVI
   name: Environment

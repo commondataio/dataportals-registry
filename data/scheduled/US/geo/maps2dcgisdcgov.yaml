@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Extracted catalog information from the provided URL, structured according
+  to the specified vocabulary schema.
 endpoints:
 - type: arcgis:rest:info
   url: https://maps2.dcgis.dc.gov/dcgis/rest/info?f=pjson
@@ -37,14 +40,17 @@ langs:
 link: https://maps2.dcgis.dc.gov/dcgis/rest/services
 name: maps2.dcgis.dc.gov
 owner:
-  link: null
+  link: https://maps2.dcgis.dc.gov/dcgis/rest/services
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: DCGIS (DC Office of the Chief Technology Officer)
+  type: Local government
 properties:
   has_doi: false
 rights:

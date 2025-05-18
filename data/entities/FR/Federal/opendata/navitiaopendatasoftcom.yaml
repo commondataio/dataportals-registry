@@ -10,10 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Data catalog providing traveler information and urban transportation
+  data via the Navitia API.
 endpoints:
 - type: opendatasoftapi
   url: https://navitia.opendatasoft.com/api
@@ -25,11 +30,15 @@ langs:
 link: https://navitia.opendatasoft.com
 name: Navitia.io Open Data Transport
 owner:
+  link: https://www.kisio.com/
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
   name: Keolis / Kisio Digital
   type: Business
 properties:
@@ -49,6 +58,10 @@ status: active
 tags:
 - government
 - has_api
+- transportation
+- mobility
+- API
+- public transport
 topics:
 - id: Transportation
   name: Transportation

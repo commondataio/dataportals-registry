@@ -10,12 +10,14 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: Data catalog provided by the University of Liverpool.
 endpoints:
 - type: oaipmh20
   url: http://datacat.liverpool.ac.uk/cgi/oai2?verb=Identify
@@ -44,16 +46,19 @@ langs:
 - id: EN
   name: English
 link: http://datacat.liverpool.ac.uk
-name: datacat.liverpool.ac.uk
+name: University of Liverpool Data Catalog
 owner:
-  link: null
+  link: http://datacat.liverpool.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Liverpool
+  type: Academy
 properties:
   has_doi: true
 rights:

@@ -10,11 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Loire-Atlantique - Open Data catalog
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+description: Data catalog for Loire-Atlantique department, launched April 2012
 endpoints:
 - type: opendatasoft
   url: https://data.loire-atlantique.fr/api
@@ -27,16 +30,19 @@ langs:
 - id: FR
   name: French
 link: https://data.loire-atlantique.fr
-name: Loire-Atlantique - Open Data catalog
+name: Loire Atlantique Ouverture des Donnees (LOAD)
 owner:
-  link: null
+  link: http://data.loire-atlantique.fr/
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+  name: Departement Loire-Atlantique
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,48 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- level.regional
+- eu-official
+- france
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002323

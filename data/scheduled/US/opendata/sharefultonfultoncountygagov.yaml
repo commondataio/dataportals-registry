@@ -10,12 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-GA
+      name: Georgia
+description: This dataset contains violations of the Georgia Department of Public
+  Health's Food Service Rules and Regulations reported by Fulton County Board of Health.
 endpoints:
 - type: dcatus11
   url: https://sharefulton.fultoncountyga.gov/data.json
@@ -30,16 +33,19 @@ langs:
 - id: EN
   name: English
 link: https://sharefulton.fultoncountyga.gov
-name: Share Fulton
+name: Fulton County Open Data
 owner:
-  link: null
+  link: https://sharefulton.fultoncountyga.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Fulton County Board of Health
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -53,6 +59,14 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- food safety
+- public health
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00002559

@@ -11,10 +11,15 @@ coverage:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
     macroregion:
       id: '034'
       name: Southern Asia
+    subregion:
+      id: IN-KA
+      name: Karnataka
+description: A geospatial data catalog and web service by the Indian Institute of
+  Science (IISc), Bengaluru, providing access to spatial datasets.
 endpoints:
 - type: wms111
   url: https://wgbis.ces.iisc.ac.in/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -58,7 +63,10 @@ owner:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
+    subregion:
+      id: IN-KA
+      name: Karnataka
   name: CENTRE FOR ECOLOGICAL SCIENCES
   type: Academy
 properties:
@@ -78,6 +86,9 @@ tags:
 - geospatial
 - climate
 - meteorology
+- OGC
+- GIS
+- data services
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

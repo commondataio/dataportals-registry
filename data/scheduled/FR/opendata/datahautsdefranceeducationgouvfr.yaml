@@ -10,11 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Région académique Hauts-de-France catalog
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+description: Official data catalog for educational data in the Hauts-de-France region,
+  managed by the regional education authority.
 endpoints:
 - type: opendatasoft
   url: https://data.hauts-de-france.education.gouv.fr/api
@@ -29,14 +33,17 @@ langs:
 link: https://data.hauts-de-france.education.gouv.fr
 name: Région académique Hauts-de-France catalog
 owner:
-  link: null
+  link: https://data.hauts-de-france.education.gouv.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+  name: Hauts-de-France Regional Education Authority
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -50,6 +57,18 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- education
+- school
+- geospatial
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00002316

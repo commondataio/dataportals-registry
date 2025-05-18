@@ -15,9 +15,10 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: AURIN streamlines access to health, transport, housing, economic, land
-  use, demographic, and an extensive catalogue of other data — all integrated to work
-  together.
+description: Programmatic access to AURIN’s Data Catalogue, over Web Feature Services
+  (WFS), for authenticated Australian researchers, streamlining access to health,
+  transport, housing, economic, land use, demographic, and an extensive catalogue
+  of other data.
 endpoints:
 - type: wms111
   url: https://adp.aurin.org.au/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -69,7 +70,7 @@ langs:
 - id: EN
   name: English
 link: https://adp.aurin.org.au/geoserver
-name: AURIN Geoserver
+name: AURIN Data Provider (ADP)
 owner:
   link: https://aurid.org.au
   location:
@@ -92,6 +93,39 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- Australian data
+- research infrastructure
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004452

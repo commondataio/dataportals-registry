@@ -11,12 +11,19 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+description: Geoportal provides selected and current geoinformation and services from
+  different areas of the administration. The metadata catalog offers the simple possibility
+  to search for public geodata and geodata services of the city. Various search options
+  can be used, and the catalog informs about the rights of use of the searched data.
+  If further information is required, corresponding contact addresses or further links
+  are available.
 endpoints:
 - type: wms111
   url: https://geoportal.stadt.wolfsburg.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +72,19 @@ langs:
 - id: DE
   name: German
 link: https://geoportal.stadt.wolfsburg.de/geoserver
-name: geoportal.stadt.wolfsburg.de
+name: geoportal.stadt.wolfsburg.de/geoserver
 owner:
-  link: null
+  link: https://geoportal.stadt.wolfsburg.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+  name: Stadt Wolfsburg
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +98,52 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geo
+- opendata
+- wolfsburg
+- germany
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00001395

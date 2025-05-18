@@ -10,12 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Open data portal containing datasets related to Fulton County, Georgia,
+  including tax parcels, city limits, census, and LiDAR surveys.
 endpoints:
 - type: dcatus11
   url: https://data.fultoncountyga.gov/data.json
@@ -30,16 +33,19 @@ langs:
 - id: EN
   name: English
 link: https://data.fultoncountyga.gov
-name: data.fultoncountyga.gov
+name: Fulton County, Georgia - Open Data
 owner:
-  link: null
+  link: https://data.fultoncountyga.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Fulton County Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -53,6 +59,14 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- tax parcels
+- city limits
+- LIDAR
+- GIS
+- census
+topics:
+- id: Elevation
+  name: Elevation
+  type: iso19115
 uid: temp00002845

@@ -9,12 +9,15 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
 description: Anna Open Data Discover interactive maps and downloadable GIS data from
   The City of Anna This site is the central location for Anna GIS data, map applications,
   and PDF maps. Anyone can view these maps and download this data at no cost. Web
@@ -53,16 +56,19 @@ langs:
 - id: EN
   name: English
 link: https://open-data-anna-gis.hub.arcgis.com/
-name: Anna Open Data
+name: Anna Open Data GIS Portal
 owner:
-  link: null
+  link: https://open-data-anna-gis.hub.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: City of Anna
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -76,6 +82,29 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- address
+- parcel
+- road centerlines
+- zoning
+- city limits
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00003048

@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-IL
+      name: Illinois
+description: GIS portal for City of Champaign, Illinois, providing access to spatial
+  data and maps for city infrastructure, planning, and administration.
 endpoints:
 - type: arcgis:rest:info
   url: https://gisportal.champaignil.gov/ms/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://gisportal.champaignil.gov/ms/rest/services
-name: gisportal.champaignil.gov
+name: Champaign GIS (City of Champaign GIS)
 owner:
-  link: null
+  link: https://champaignil.gov/
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-IL
+      name: Illinois
+  name: City of Champaign
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,37 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- maps
+- infrastructure
+- planning
+- aerial photography
+- zoning
+- streetlights
+- fire stations
+- building footprints
+- educational properties
+- religious structures
+- traffic signs
+- pavement
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004330

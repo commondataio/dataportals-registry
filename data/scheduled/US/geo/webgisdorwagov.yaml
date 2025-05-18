@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-WA
+      name: Washington
+description: ArcGIS REST Services from the Washington Department of Revenue
 endpoints:
 - type: arcgis:portals:self
   url: https://webgis.dor.wa.gov/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,19 @@ langs:
 - id: EN
   name: English
 link: https://webgis.dor.wa.gov/arcgis/rest/services
-name: webgis.dor.wa.gov
+name: webgis.dor.wa.gov ArcGIS REST Services
 owner:
-  link: null
+  link: https://webgis.dor.wa.gov/arcgis/rest/services
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Washington Department of Revenue
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -60,6 +65,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- ArcGIS
+- Washington
 topics: []
 uid: temp00002825

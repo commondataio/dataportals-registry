@@ -10,12 +10,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-AC
+      name: Aceh
+description: A data catalog providing datasets related to the Aceh Jaya region.
 endpoints:
 - type: ckan:package-search
   url: https://data.acehjayakab.go.id/api/3/action/package_search
@@ -30,14 +32,17 @@ langs:
 link: https://data.acehjayakab.go.id
 name: data.acehjayakab.go.id
 owner:
-  link: null
+  link: https://data.acehjayakab.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-AC
+      name: Aceh
+  name: Pemerintah Kabupaten Aceh Jaya
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -49,6 +54,10 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- Indonesia
+- Aceh Jaya
+- local government
+- Open Data
 topics: []
 uid: temp00004673

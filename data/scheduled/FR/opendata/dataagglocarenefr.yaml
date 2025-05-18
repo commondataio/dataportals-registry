@@ -10,11 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Saint-Nazaire Agglo - Open Data catalog
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+description: 'Open Data portal of Saint-Nazaire Agglomération and its 10 communes:
+  Besné, La Chapelle-des-Marais, Donges, Montoir-de-Bretagne, Pornichet, etc.'
 endpoints:
 - type: opendatasoft
   url: https://data.agglo-carene.fr/api
@@ -29,14 +33,17 @@ langs:
 link: https://data.agglo-carene.fr
 name: Saint-Nazaire Agglo - Open Data catalog
 owner:
-  link: null
+  link: https://data.agglo-carene.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+  name: Saint-Nazaire agglo - La CARENE
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +57,22 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- Saint-Nazaire
+- Agglomération
+- Open Data
+- France
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00002294

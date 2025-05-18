@@ -11,12 +11,14 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+description: Catalog of ArcGIS REST Services, NSW Government
 endpoints:
 - type: arcgis:rest:info
   url: https://portal.data.nsw.gov.au/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://portal.data.nsw.gov.au/arcgis/rest/services
-name: portal.data.nsw.gov.au
+name: ArcGIS REST Services Data Catalog
 owner:
-  link: null
+  link: https://portal.data.nsw.gov.au/arcgis/rest/services
   location:
     country:
       id: AU
       name: Australia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+  name: NSW Government (Spatial Services)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- ArcGIS
+- spatial data
+- NSW Government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00004892

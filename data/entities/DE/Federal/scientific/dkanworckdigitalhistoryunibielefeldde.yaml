@@ -9,10 +9,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: DKAN instance serving as the main resource of all data publications generated
+  by the SFB1288, hosted by the Data Infrastructure and Digital History unit at University
+  of Bielefeld.
 endpoints:
 - type: ckan:package-list
   url: https://dkan.worck.digital-history.uni-bielefeld.de/api/3/action/package_list
@@ -24,14 +30,17 @@ langs:
 - id: DE
   name: German
 link: https://dkan.worck.digital-history.uni-bielefeld.de
-name: Worlds of Related Coercions in Work (WORCK) data catalog
+name: DKAN Catalog hosted at Bielefeld University - Wroc Centre for Digital History
 owner:
   link: https://www.uni-bielefeld.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
   name: Universität Bielefeld
   type: Academy
 properties:
@@ -47,5 +56,8 @@ software:
   id: dkan
   name: DKAN
 status: active
+tags:
+- digital history
+- research data
 topics: []
 uid: cdi00000478

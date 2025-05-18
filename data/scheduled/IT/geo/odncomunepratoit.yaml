@@ -11,12 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-52
+      name: Toscana
+description: Data catalog for open data resources from Comune di Prato
 endpoints:
 - type: csw202
   url: http://odn.comune.prato.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -34,14 +36,17 @@ langs:
 link: http://odn.comune.prato.it/geonetwork
 name: odn.comune.prato.it
 owner:
-  link: null
+  link: http://odn.comune.prato.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-52
+      name: Toscana
+  name: Comune di Prato
+  type: Local government
 properties:
   has_doi: true
 rights:
@@ -55,6 +60,10 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
+tags:
+- prato
+- opendata
+- geonetwork
+- italy
 topics: []
 uid: temp00003782

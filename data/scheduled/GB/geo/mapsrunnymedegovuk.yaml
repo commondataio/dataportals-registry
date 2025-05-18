@@ -11,12 +11,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: GeoServer Web Service, anonymous access to 22 workspaces, with 254 layers.
+  Includes EVCP, addresses, basemap, business, community, council, education...
 endpoints:
 - type: wfs100
   url: https://maps.runnymede.gov.uk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -53,16 +56,19 @@ langs:
 - id: EN
   name: English
 link: https://maps.runnymede.gov.uk/geoserver
-name: maps.runnymede.gov.uk
+name: maps.runnymede.gov.uk/geoserver
 owner:
-  link: null
+  link: https://maps.runnymede.gov.uk/geoserver/web/
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Runnymede Borough Council
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -76,6 +82,24 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- geoserver
+- web service
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00005033

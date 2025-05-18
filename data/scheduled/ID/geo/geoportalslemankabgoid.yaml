@@ -11,12 +11,15 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+description: Assign topic according to EU data theme vocabulary associated with Data
+  Catalog Vocabulary application profile (DCAT-AP)
 endpoints:
 - type: geonode:layers
   url: https://geoportal.slemankab.go.id/api/layers/
@@ -73,14 +76,17 @@ langs:
 link: https://geoportal.slemankab.go.id
 name: geoportal.slemankab.go.id
 owner:
-  link: null
+  link: https://geoportal.slemankab.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+  name: Sleman Regency Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -94,6 +100,20 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- population growth
+- village data
+- demographic analysis
+- region
+- geoportal
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00000352

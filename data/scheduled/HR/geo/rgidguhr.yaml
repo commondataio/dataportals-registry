@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Web interface offering access to the Register of Geographical Names maintained
+  by the State Geodetic Administration of Croatia. The Register contains official
+  geographical names (toponyms) of counties, cities, municipalities, settlements,
+  and other geographic objects, compliant with INSPIRE and ISO19115 standards.
 endpoints:
 - type: wms111
   url: http://rgi.dgu.hr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -59,16 +61,16 @@ langs:
 - id: HR
   name: Croatian
 link: http://rgi.dgu.hr/geoserver/web/
-name: rgi.dgu.hr
+name: SGA (State Geodetic Administration) Geoportal - Geographical Names Register
 owner:
-  link: null
+  link: http://rgi.dgu.hr/
   location:
     country:
       id: HR
       name: Croatia
     level: 20
-  name: ''
-  type: Unknown
+  name: State Geodetic Administration of Croatia
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -82,6 +84,16 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geographical names
+- gazetteer
+- INSPIRE
+- ISO19115
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00000345

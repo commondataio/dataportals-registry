@@ -11,12 +11,15 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Open Geo Data from the OpenData portal of the City of Bonn, prepared
+  for OpenStreetMap.
 endpoints:
 - type: sitemap
   url: https://opengeodata-bonn.de/sitemap.xml
@@ -27,14 +30,17 @@ langs:
 link: https://opengeodata-bonn.de
 name: opengeodata-bonn.de
 owner:
-  link: null
+  link: https://opengeodata-bonn.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: City of Bonn
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -46,6 +52,15 @@ software:
   id: custom
   name: Custom software
 status: scheduled
-tags: []
-topics: []
+tags:
+- Open Data
+- Geodata
+- OpenStreetMap
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003235

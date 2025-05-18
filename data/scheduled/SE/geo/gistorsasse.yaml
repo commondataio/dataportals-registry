@@ -11,12 +11,14 @@ coverage:
     country:
       id: SE
       name: Sweden
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: SE-K
+      name: Blekinge lan
+description: GIS services and datasets provided by Torsås municipality
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.torsas.se/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: SV
   name: Swedish
 link: https://gis.torsas.se/arcgis/rest/services
-name: gis.torsas.se
+name: Arcgis REST Services Directory
 owner:
-  link: null
+  link: https://gis.torsas.se/arcgis/rest/services
   location:
     country:
       id: SE
       name: Sweden
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: SE-K
+      name: Blekinge lan
+  name: Torsås kommun
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,8 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- ArcGIS
 topics: []
 uid: temp00003877

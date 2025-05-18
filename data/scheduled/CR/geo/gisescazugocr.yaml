@@ -11,12 +11,15 @@ coverage:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CR-SJ
+      name: San Jose
+description: A data catalog for spatial services and datasets maintained by the Escazú
+  Municipality.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.escazu.go.cr/server/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://gis.escazu.go.cr/server/rest/services
-name: gis.escazu.go.cr
+name: GIS Portal, Escazú Municipality
 owner:
-  link: null
+  link: https://gis.escazu.go.cr
   location:
     country:
       id: CR
       name: Costa Rica
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CR-SJ
+      name: San Jose
+  name: Escazú Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,17 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- municipal
+- spatial data
+- services
+- Escazú
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00005869

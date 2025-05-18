@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: A web-based service for serving geospatial data, datasets, and map visualizations
 endpoints:
 - type: wms111
   url: https://ide.pergamino.gob.ar:8443/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +67,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://ide.pergamino.gob.ar:8443/geoserver
-name: ide.pergamino.gob.ar:8443
+name: Geoserver at ide.pergamino.gob.ar
 owner:
-  link: null
+  link: https://ide.pergamino.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Municipalidad de Pergamino
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,44 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- maps
+- spatial data
+- open data
+- gis
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00003340

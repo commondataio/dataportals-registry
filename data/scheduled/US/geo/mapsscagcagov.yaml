@@ -11,12 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-CA
+      name: California
+description: REST Services providing access to GIS data managed by the Southern California
+  Association of Governments, supporting mapping, plans, studies, analyses and presentations,
+  with a focus on Southern California region.
 endpoints:
 - type: arcgis:rest:info
   url: https://maps.scag.ca.gov/scaggis/rest/info?f=pjson
@@ -35,16 +39,19 @@ langs:
 - id: EN
   name: English
 link: https://maps.scag.ca.gov/scaggis/rest/services
-name: maps.scag.ca.gov
+name: SCAG GIS REST Services
 owner:
-  link: null
+  link: https://scag.ca.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Southern California Association of Governments
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,25 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- geospatial
+- Southern California
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00005719

@@ -11,12 +11,14 @@ coverage:
     country:
       id: UY
       name: Uruguay
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: UY-MO
+      name: Montevideo
+description: Geospatial data catalog of Montevideo
 endpoints:
 - type: wms111
   url: http://geoserver.montevideo.gub.uy/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,14 +69,17 @@ langs:
 link: http://geoserver.montevideo.gub.uy/geoserver/web/
 name: geoserver.montevideo.gub.uy
 owner:
-  link: null
+  link: http://geoserver.montevideo.gub.uy/geoserver/web/
   location:
     country:
       id: UY
       name: Uruguay
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: UY-MO
+      name: Montevideo
+  name: Montevideo Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- data catalog
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001076

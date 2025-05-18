@@ -10,10 +10,15 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Open Data site of the National Institute for Health and Care Research
+  (NIHR), the nation's largest funder of health and care research.
 endpoints:
 - type: opendatasoftapi
   url: https://nihr.opendatasoft.com/api
@@ -27,11 +32,15 @@ langs:
 link: https://nihr.opendatasoft.com
 name: National Institute for Health Research
 owner:
+  link: https://nihr.opendatasoft.com
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: National Institute for Health Research
   type: Central government
 properties:
@@ -51,6 +60,11 @@ status: active
 tags:
 - government
 - has_api
+- healthcare
+- research
+- funding
+- awards
+- health data
 topics:
 - id: HEAL
   name: Health

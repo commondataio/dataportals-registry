@@ -11,12 +11,18 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+description: GeoNode is an Open Source, Content Management System (CMS) for geospatial
+  data. It is a web-based application and platform for developing geospatial information
+  systems and sharing geospatial data, including datasets, maps, documents, GeoStories,
+  and dashboards. Data can be uploaded as vector (e.g., Shapefile, KML, JSON, CSV)
+  or raster (e.g., GeoTIFF) formats, with metadata following ISO 19115/19139 standards.
 endpoints:
 - type: geonode:layers
   url: https://geonode.gis.qub.ac.uk/api/layers/
@@ -50,14 +56,17 @@ langs:
 link: https://geonode.gis.qub.ac.uk
 name: geonode.gis.qub.ac.uk
 owner:
-  link: null
+  link: https://www.qub.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+  name: Queen's University Belfast
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -71,6 +80,12 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
+tags:
+- opendata
+- geospatial
+- catalogue
+- QUB
+- GeoNode
+- gis
 topics: []
 uid: temp00000314

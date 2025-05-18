@@ -11,10 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: U.S. Department of Transportation Hub Site providing geospatial and statistical
+  data on national transportation infrastructure, networks, flows, and characteristics.
 endpoints:
 - type: dcatap201
   url: https://geodata.bts.gov/api/feed/dcat-ap/2.0.1.json
@@ -32,13 +37,17 @@ langs:
 - id: EN
   name: English
 link: https://geodata.bts.gov
-name: Geospatial at BTS
+name: Bureau of Transportation Statistics Geospatial Portal
 owner:
+  link: https://geodata.bts.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: United States Department of Transportation
   type: Central government
 properties:
@@ -59,6 +68,9 @@ tags:
 - geospatial
 - government
 - has_api
+- transportation
+- statistics
+- infrastructure
 topics:
 - id: Transportation
   name: Transportation
@@ -66,4 +78,7 @@ topics:
 - id: TRAN
   name: Transport
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001607

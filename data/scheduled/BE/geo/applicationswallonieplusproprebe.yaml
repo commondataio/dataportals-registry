@@ -15,8 +15,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: This is a RESTful service endpoint providing geospatial data services,
+  likely related to public cleanliness initiatives and datasets managed by Be WaPP,
+  an ASBL (civil society organization) focused on improving public cleanliness in
+  Wallonia.
 endpoints:
 - type: arcgis:portals:self
   url: https://applications.walloniepluspropre.be/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,16 @@ langs:
 - id: FR
   name: French
 link: https://applications.walloniepluspropre.be/server/rest/services
-name: applications.walloniepluspropre.be
+name: applications.walloniepluspropre.be/server/rest/services
 owner:
-  link: null
+  link: https://www.bewapp.be
   location:
     country:
       id: BE
       name: Belgium
     level: 20
-  name: ''
-  type: Unknown
+  name: Be WaPP
+  type: Civil society
 properties:
   has_doi: false
 rights:
@@ -60,6 +62,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- cleanliness
+- public space
+- geospatial data
+- Wallonia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001237

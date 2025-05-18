@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-SB
+      name: Sumatera Barat
+description: GeoServer-based geospatial data catalog for Padang Panjang region
 endpoints:
 - type: wms111
   url: http://serambigeoportal.padangpanjang.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,14 +69,17 @@ langs:
 link: http://serambigeoportal.padangpanjang.go.id/geoserver
 name: serambigeoportal.padangpanjang.go.id
 owner:
-  link: null
+  link: http://padangpanjang.go.id/
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-SB
+      name: Sumatera Barat
+  name: Padang Panjang Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,17 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- opendata
+- GIS
+- Indonesia
+- PadangPanjang
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00005215

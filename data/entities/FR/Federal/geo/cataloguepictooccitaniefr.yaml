@@ -11,10 +11,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: Geoportal catalog for geospatial data resources.
 endpoints:
 - type: geonetwork:query
   url: https://catalogue.picto-occitanie.fr/geonetwork/srv/eng/q
@@ -44,11 +48,15 @@ langs:
 link: https://catalogue.picto-occitanie.fr/geonetwork
 name: Picto-Occitanie Geocatalogue
 owner:
+  link: https://catalogue.picto-occitanie.fr/geonetwork
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
   name: Prefet de la Occitanie
   type: Regional government
 properties:
@@ -69,6 +77,8 @@ tags:
 - geospatial
 - government
 - has_api
+- geoportal
+- open data
 topics:
 - id: REGI
   name: Regions and cities

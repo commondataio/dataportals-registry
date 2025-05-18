@@ -18,7 +18,7 @@ coverage:
     subregion:
       id: TR-48
       name: Mugla Province
-description: Mugla Geoinformation System ArcGIS Server
+description: Catalog of REST services (likely geospatial data) provided by Muğla Municipality
 endpoints:
 - type: arcgis:rest:info
   url: https://muglacbs.mugla.bel.tr/cbs/rest/info?f=pjson
@@ -37,14 +37,17 @@ langs:
 - id: TR
   name: Turkish
 link: https://muglacbs.mugla.bel.tr/cbs/rest/services
-name: Mugla ArcGIS Server
+name: Mugla CBS REST Services
 owner:
   link: https://www.mugla.bel.tr
   location:
     country:
       id: TR
       name: Turkey
-    level: 20
+    level: 30
+    subregion:
+      id: TR-48
+      name: Mugla
   name: Mugla Province
   type: Regional government
 properties:
@@ -60,9 +63,15 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
+tags:
+- geospatial
+- government data
+- REST
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00004710

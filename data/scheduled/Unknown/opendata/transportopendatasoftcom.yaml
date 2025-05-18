@@ -8,13 +8,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: CO
+      name: Colombia
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: Transporte Bogotá catalog
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+description: Official data catalog for transportation data in Bogotá, Colombia.
 endpoints:
 - type: opendatasoft
   url: https://transport.opendatasoft.com/api
@@ -27,16 +30,19 @@ langs:
 - id: EN
   name: English
 link: https://transport.opendatasoft.com
-name: Transporte Bogotá catalog
+name: Transporte Bogotá data catalog
 owner:
-  link: null
+  link: https://transport.opendatasoft.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+  name: Transporte Bogotá
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +56,15 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- transport
+- public transport
+- Bogotá
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002453

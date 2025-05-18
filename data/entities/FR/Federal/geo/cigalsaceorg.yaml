@@ -11,10 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+description: Data catalog to manage spatially referenced resources for the Grand Est
+  region (Alsace), providing metadata editing, search, and map viewing.
 endpoints:
 - type: geonetwork:query
   url: https://www.cigalsace.org/geonetwork/srv/eng/q
@@ -26,13 +31,17 @@ langs:
 - id: FR
   name: French
 link: https://www.cigalsace.org/geonetwork
-name: Catalogue GeoGrandEst
+name: GeoNetwork - CIGAL Alsace
 owner:
+  link: https://www.cigalsace.org
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-GES
+      name: Grand-Est
   name: Prefet de la Region Grand Est
   type: Regional government
 properties:
@@ -53,8 +62,30 @@ tags:
 - geospatial
 - government
 - has_api
+- metadata
+- Alsace
+- WMS
+- OGC
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00000643

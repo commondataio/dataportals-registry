@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
+      id: FR
+      name: France
     level: 20
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '155'
+      name: Western Europe
+description: 'Platform developed by Magellium Artal Group for open and free access
+  to OpenStreetMap data, updated daily for mainland France. Provides WMS/WFS flows
+  and change tracking on major themes: roads, train routes, social structures, regional
+  nature parks, etc.'
 endpoints:
 - type: wms111
   url: https://magosm.magellium.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,14 +67,14 @@ langs: []
 link: https://magosm.magellium.com/geoserver
 name: magosm.magellium.com
 owner:
-  link: null
+  link: https://www.magellium.com
   location:
     country:
-      id: Unknown
-      name: Unknown
+      id: FR
+      name: France
     level: 20
-  name: ''
-  type: Unknown
+  name: Magellium Artal Group
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -86,6 +88,29 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- OpenStreetMap
+- France
+- vector
+- daily update
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00004026

@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: TR-08
       name: Artvin province
-description: Geographic data produced by various activities within the Artvin Special
-  Provincial Administration, Geographic Information Systems Project Office.
+description: Data catalog URL operated via a REST service endpoint, likely a spatial
+  data catalog, as indicated by the ArcGIS Server REST Services Directory structure.
 endpoints:
 - type: arcgis:portals:self
   url: https://cbs.artvinozelidare.gov.tr/portal/sharing/rest/portals/self?f=pjson
@@ -47,7 +47,10 @@ owner:
     country:
       id: TR
       name: Turkey
-    level: 20
+    level: 30
+    subregion:
+      id: TR-08
+      name: Artvin
   name: Artvin province
   type: Regional government
 properties:
@@ -63,9 +66,31 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
+tags:
+- geodata
+- spatial
+- rest
+- catalog
+- government
+- turkish
+- local
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00004698

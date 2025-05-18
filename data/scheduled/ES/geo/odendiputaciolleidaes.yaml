@@ -11,12 +11,14 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-CT
+      name: Catalunya
+description: Data catalog hosted on Geoserver by Diputació de Lleida
 endpoints:
 - type: wms111
   url: http://oden.diputaciolleida.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -53,16 +55,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://oden.diputaciolleida.es/geoserver
-name: oden.diputaciolleida.es
+name: Geoserver Data Catalog from Diputació de Lleida
 owner:
-  link: null
+  link: http://oden.diputaciolleida.es/geoserver
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya
+  name: Diputació de Lleida
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -76,6 +81,11 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geospatial
+- catalonia
+- local government
+- geoserver
+- open data
 topics: []
 uid: temp00005482

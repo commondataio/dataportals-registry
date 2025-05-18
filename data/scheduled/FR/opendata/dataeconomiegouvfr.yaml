@@ -10,12 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Portail diffusant les données ouvertes (open data) produites par les
+  directions du ministère de l’Économie, des Finances et de l'Industrie et numérique.
 endpoints:
 - type: opendatasoftapi
   url: https://data.economie.gouv.fr/api
@@ -26,16 +29,21 @@ langs:
 - id: FR
   name: French
 link: https://data.economie.gouv.fr
-name: data.economie.gouv.fr
+name: Data Economie — Ministère de l’Économie, des Finances et de la Souveraineté
+  industrielle et numérique
 owner:
-  link: null
+  link: https://data.economie.gouv.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Ministère de l’Économie, des Finances et de la Souveraineté industrielle et
+    numérique
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -49,6 +57,24 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- Open data
+- Ministere
+- État
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00000299

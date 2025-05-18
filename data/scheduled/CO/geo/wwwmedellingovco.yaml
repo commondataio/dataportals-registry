@@ -11,12 +11,14 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CO-ANT
+      name: Antioquia
+description: GIS Catalog, data services and resources provided by Medellín government
 endpoints:
 - type: geonetwork:query
   url: https://www.medellin.gov.co/giscatalogacion/srv/eng/q
@@ -41,14 +43,17 @@ langs:
 link: https://www.medellin.gov.co/giscatalogacion
 name: www.medellin.gov.co
 owner:
-  link: null
+  link: https://www.medellin.gov.co/
   location:
     country:
       id: CO
       name: Colombia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CO-ANT
+      name: Antioquia
+  name: Medellín city government
+  type: Local government
 properties:
   has_doi: true
 rights:
@@ -62,6 +67,28 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoportal
+- GIS
+- mapping
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00003485

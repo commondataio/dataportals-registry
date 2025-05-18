@@ -11,12 +11,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: Geospatial application data catalog for Lower Saxony (Niedersachsen)
+  governmental resources, including agricultural parcel and land use data, accessible
+  via Geoserver and WFS services.
 endpoints:
 - type: wms111
   url: https://sla.niedersachsen.de/ml-geoportal/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +60,19 @@ langs:
 - id: DE
   name: German
 link: https://sla.niedersachsen.de/ml-geoportal/geoserver
-name: sla.niedersachsen.de
+name: sla.niedersachsen.de/ml-geoportal/geoserver
 owner:
-  link: null
+  link: https://sla.niedersachsen.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: ML/SLA Niedersachsen
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -79,6 +86,23 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- Geoportal
+- Geoserver
+- WFS
+- Agriculture
+- Land use
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00001409

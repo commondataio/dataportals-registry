@@ -11,12 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: Geoportal of the Regione Siciliana providing access to geographic data
+  services via REST API
 endpoints:
 - type: arcgis:rest:info
   url: http://sifweb.regione.sicilia.it/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: IT
   name: Italian
 link: http://sifweb.regione.sicilia.it/arcgis/rest/services
-name: sifweb.regione.sicilia.it
+name: sifweb.regione.sicilia.it/arcgis/rest/services
 owner:
-  link: null
+  link: https://sifweb.regione.sicilia.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-82
+      name: Sicilia
+  name: Regione Siciliana
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,47 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- regional
+- geospatial
+- open data
+- Sicily
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001583

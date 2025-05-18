@@ -11,10 +11,15 @@ coverage:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
+    subregion:
+      id: CR-A
+      name: Alajuela
+description: Ofrece servicios de sistemas de información geográfica (SIG), teledetección
+  y análisis de datos espaciales para ayudar a los agricultores y empresas.
 endpoints:
 - type: geonode:datasets
   url: https://ide.agroint.co.cr/api/datasets/
@@ -70,14 +75,17 @@ langs:
 - id: ES
   name: Spanish
 link: https://ide.agroint.co.cr
-name: Aerointelligencia Geoespacial
+name: AgroInt – Cultivando el Futuro de la Agricultura con Inteligencia
 owner:
   link: https://www.agroint.co.cr
   location:
     country:
       id: CR
       name: Costa Rica
-    level: 20
+    level: 30
+    subregion:
+      id: CR-A
+      name: Alajuela
   name: AgroInt
   type: Business
 properties:
@@ -95,11 +103,21 @@ software:
 status: active
 tags:
 - geospatial
+- agricultura
+- SIG
+- teledetección
+- datos espaciales
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Farming
   name: Farming
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00002400

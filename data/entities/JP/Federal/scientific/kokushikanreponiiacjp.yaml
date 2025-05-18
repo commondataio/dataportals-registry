@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: Academic and research data repository for Kokushikan University, hosting
+  scientific and educational resources.
 endpoints:
 - type: weko3:records
   url: https://kokushikan.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -37,7 +42,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: Kokushikan University
   type: Academy
 properties:
@@ -57,8 +65,19 @@ tags:
 - government
 - has_api
 - academy
+- academic repository
+- research data
+- institutional repository
+- education
+- culture
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004880

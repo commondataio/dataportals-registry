@@ -10,12 +10,15 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+description: Data catalog of Kabupaten Bantul, featuring datasets on population, poverty,
+  zakat distribution, and more.
 endpoints:
 - type: ckan
   url: https://data.bantulkab.go.id/api/3
@@ -33,14 +36,17 @@ langs:
 link: https://data.bantulkab.go.id
 name: data.bantulkab.go.id
 owner:
-  link: null
+  link: https://data.bantulkab.go.id
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-YO
+      name: Yogyakarta
+  name: Pemerintah Kabupaten Bantul (Bantul Regency Government)
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -52,6 +58,19 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- DTKS
+- BDT
+- Kemiskinan
+- kependudukan
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00004676

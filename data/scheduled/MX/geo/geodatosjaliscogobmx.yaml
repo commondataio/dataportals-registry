@@ -11,12 +11,15 @@ coverage:
     country:
       id: MX
       name: Mexico
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: MX-JAL
+      name: Jalisco
+description: Geospatial data catalog for Jalisco, Mexico, providing access to geoserver
+  resources
 id: geodatosjaliscogobmx
 langs:
 - id: ES
@@ -24,14 +27,17 @@ langs:
 link: http://geo.datos.jalisco.gob.mx/geoserver
 name: geo.datos.jalisco.gob.mx
 owner:
-  link: null
+  link: http://geo.datos.jalisco.gob.mx/
   location:
     country:
       id: MX
       name: Mexico
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: MX-JAL
+      name: Jalisco
+  name: Jalisco Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -45,6 +51,16 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- catalog
+- opendata
+- geoserver
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00005244

@@ -10,10 +10,14 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+description: Open data portal of IFSULDEMINAS
 endpoints:
 - type: ckan:package-search
   url: https://dados.ifsuldeminas.edu.br/api/3/action/package_search
@@ -32,12 +36,16 @@ langs:
 link: https://dados.ifsuldeminas.edu.br
 name: Portal de Dados Abertos do IFSULDEMINAS
 owner:
+  link: https://dados.ifsuldeminas.edu.br
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: BR-MG
+      name: Minas Gerais
+  name: Instituto Federal do Sul de Minas Gerais
   type: Academy
 rights:
   license_id: null
@@ -52,5 +60,11 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- administração
+- inventários
+- patrimônio
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: cdi00000218

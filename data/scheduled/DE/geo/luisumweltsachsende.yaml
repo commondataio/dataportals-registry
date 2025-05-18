@@ -11,27 +11,32 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-SN
+      name: Sachsen
+description: GIS data services catalog provided by Saxony's environmental authority
 id: luisumweltsachsende
 langs:
 - id: DE
   name: German
 link: https://luis.umwelt.sachsen.de/arcgis/services
-name: luis.umwelt.sachsen.de
+name: luis.umwelt.sachsen.de/arcgis/services
 owner:
-  link: null
+  link: https://luis.umwelt.sachsen.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-SN
+      name: Sachsen
+  name: Sachsen (Saxony) State Environmental Agency
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -45,6 +50,18 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- environmental data
+- ArcGIS services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00004947

@@ -9,14 +9,18 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IL
+      name: Illinois
+description: A catalog providing access to various geospatial datasets, including
+  climate, coastal, elevation, geology, hydrology, and imagery data for the state
+  of Illinois via ArcGIS REST services.
 endpoints:
 - type: arcgis:rest:info
   url: https://data.isgs.illinois.edu/arcgis/rest/info?f=pjson
@@ -31,16 +35,19 @@ endpoints:
 id: dataisgsillinoisedu
 langs: []
 link: https://data.isgs.illinois.edu/arcgis/rest/services
-name: data.isgs.illinois.edu
+name: Illinois State Geological Survey Data Catalog (ArcGIS REST Services)
 owner:
-  link: null
+  link: https://data.isgs.illinois.edu/arcgis/rest/services
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IL
+      name: Illinois
+  name: Illinois State Geological Survey
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -54,6 +61,18 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geology
+- climate
+- coastal
+- elevation
+- hydrology
+- imagery
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: temp00003943

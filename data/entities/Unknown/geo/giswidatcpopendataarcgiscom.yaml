@@ -9,12 +9,15 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WI
+      name: Wisconsin
 description: 'DATCP GIS Data DATCP provides this site as the location to host its
   commonly requested, statewide GIS data for download. DATCP GIS data is provided
   on an “as is” basis. Users are responsible for determining “fitness of use” of DATCP
@@ -60,14 +63,17 @@ langs:
 link: https://gis-widatcp.opendata.arcgis.com/
 name: Commonly Requested Public GIS Data
 owner:
-  link: null
+  link: https://datcp.wi.gov/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WI
+      name: Wisconsin
+  name: Wisconsin Department of Agriculture, Trade and Consumer Protection
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -81,6 +87,20 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- agriculture
+- environment
+- vector data
+- ArcGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00002941

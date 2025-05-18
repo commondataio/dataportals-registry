@@ -11,12 +11,14 @@ coverage:
     country:
       id: DK
       name: Denmark
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DK-82
+      name: Midtjylland
+description: Geospatial data catalog hosted by Aarhus University.
 endpoints:
 - type: arcgis:rest:info
   url: https://augis.au.dk/server/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: DA
   name: Danish
 link: https://augis.au.dk/server/rest/services
-name: augis.au.dk
+name: Aarhus University Geospatial Information Server (AUGIS)
 owner:
-  link: null
+  link: https://augis.au.dk
   location:
     country:
       id: DK
       name: Denmark
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DK-82
+      name: Midtjylland
+  name: Aarhus University
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,17 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- geodata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00005878

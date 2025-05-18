@@ -10,10 +10,16 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
+    subregion:
+      id: AU-VIC
+      name: Victoria
+description: A national research infrastructure providing urban and regional planning
+  data and tools, offering access to thousands of datasets from diverse research disciplines
+  and data visualisation tools.
 endpoints:
 - type: ckan:package-search
   url: https://data.aurin.org.au/api/3/action/package_search
@@ -37,7 +43,10 @@ owner:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-VIC
+      name: Victoria
   name: Government of Australia
   type: Academy
 rights:
@@ -53,5 +62,46 @@ software:
 status: active
 tags:
 - has_api
-topics: []
+- urban research
+- planning
+- GIS
+- spatial data
+- Australia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000088

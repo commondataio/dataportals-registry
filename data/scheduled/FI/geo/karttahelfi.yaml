@@ -11,12 +11,15 @@ coverage:
     country:
       id: FI
       name: Finland
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FI-18
+      name: Uusimaa
+description: Open geographic data portal for the City of Helsinki, providing map,
+  geospatial and environmental datasets via OGC WMS, WFS, WMTS, WCS and 3D interfaces.
 endpoints:
 - type: wms111
   url: https://kartta.hel.fi/ws/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: FI
   name: Finnish
 link: https://kartta.hel.fi/ws/geoserver
-name: kartta.hel.fi
+name: Helsinki Geoserver Open Data Catalog
 owner:
-  link: null
+  link: https://www.hel.fi/en/decision-making/information-on-helsinki/maps-and-geospatial-data/make-better-use-of-geospatial-data/open-geographic-data
   location:
     country:
       id: FI
       name: Finland
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FI-18
+      name: Uusimaa
+  name: City of Helsinki Urban Environment Division
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,47 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- Open data
+- Maps
+- Geospatial
+- City planning
+- Urban environment
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00003623

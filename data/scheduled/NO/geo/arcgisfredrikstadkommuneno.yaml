@@ -11,12 +11,14 @@ coverage:
     country:
       id: 'NO'
       name: Norway
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NO-30
+      name: Viken
+description: GIS and geospatial data services for Fredrikstad municipality
 endpoints:
 - type: arcgis:rest:info
   url: https://arcgis.fredrikstad.kommune.no/server/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: 'NO'
   name: Norwegian
 link: https://arcgis.fredrikstad.kommune.no/server/rest/services
-name: arcgis.fredrikstad.kommune.no
+name: arcgis.fredrikstad.kommune.no server/rest/services
 owner:
-  link: null
+  link: https://arcgis.fredrikstad.kommune.no
   location:
     country:
       id: 'NO'
       name: Norway
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NO-30
+      name: Viken
+  name: Fredrikstad kommune
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,33 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- gis
+- municipality
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00005595

@@ -11,12 +11,14 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CO-ANT
+      name: Antioquia
+description: Catalog of ArcGIS REST services for geospatial datasets.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.siatac.co/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://gis.siatac.co/arcgis/rest/services
-name: gis.siatac.co
+name: GIS REST Services by SIATAC
 owner:
-  link: null
+  link: https://gis.siatac.co
   location:
     country:
       id: CO
       name: Colombia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CO-ANT
+      name: Antioquia
+  name: SIATAC
+  type: Business
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,11 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- geospatial
+- ArcGIS
+- REST
+- GIS
+- SIATAC
 topics: []
 uid: temp00003475

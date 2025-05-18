@@ -8,14 +8,19 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: DSpace@MIT is a digital repository for MIT's research, including peer-reviewed
+  articles, technical reports, working papers, theses, and more. It is a service of
+  the MIT Libraries to provide MIT faculty, researchers, and their supporting communities
+  stable, long-term storage and open access to research output.
 endpoints:
 - type: dspace:items
   url: http://dspace.mit.edu/rest/items
@@ -42,14 +47,17 @@ langs:
 link: http://dspace.mit.edu
 name: dspace.mit.edu
 owner:
-  link: null
+  link: http://web.mit.edu
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: Massachusetts Institute of Technology (MIT)
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -63,6 +71,26 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
-topics: []
+tags:
+- research repository
+- open access
+- publications
+- theses
+- technical reports
+- working papers
+- MIT
+- academic research
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001894

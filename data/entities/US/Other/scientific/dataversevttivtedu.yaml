@@ -10,12 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
 description: Transportation data repository maintained by the Virginia Tech Transportation
-  Institute.
+  Institute, containing datasets such as commercial motor vehicle (CMV) driving studies,
+  deidentified public use datasets, and related transportation research data.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.vtti.vt.edu/api/search
@@ -29,14 +33,17 @@ langs:
 - id: EN
   name: English
 link: https://dataverse.vtti.vt.edu
-name: Virginia Tech Transportation data repository
+name: Virginia Tech Transportation Institute Dataverse
 owner:
   link: https://www.vtti.vt.edu
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
   name: Virginia Tech Transportation
   type: Academy
 properties:
@@ -56,6 +63,14 @@ status: active
 tags:
 - scientific
 - has_api
+- naturalistic driving data
+- commercial motor vehicle
+- transportation safety
+- public dataset
+- research data
+- Virginia Tech
+- FMCSA
+- Safe-D
 topics:
 - id: Transportation
   name: Transportation
@@ -66,4 +81,10 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00001698

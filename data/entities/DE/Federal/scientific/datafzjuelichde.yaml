@@ -10,12 +10,17 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Jülich DATA is the institutional research data repositorium made at Forschungszentrum
-  Jülich. Featuring metadata focus and running on Kubernetes.
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Institutional research data repository at Forschungszentrum Jülich, serving
+  as a reference system for data output. It enables data publication, re-use, and
+  search. Data are automatically assigned a DOI for citation. The platform is used
+  by researchers to make research data FAIR.
 endpoints:
 - type: dataverseapi
   url: https://data.fz-juelich.de/api/search
@@ -36,11 +41,15 @@ langs:
 link: https://data.fz-juelich.de
 name: Jülich DATA
 owner:
+  link: https://www.fz-juelich.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
   name: Forschungszentrum Jülich GmbH
   type: Academy
 properties:
@@ -60,6 +69,10 @@ status: active
 tags:
 - scientific
 - has_api
+- research data
+- repository
+- FAIR
+- DOI
 topics:
 - id: TECH
   name: Science and technology

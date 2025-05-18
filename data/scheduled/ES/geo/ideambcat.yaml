@@ -18,8 +18,8 @@ coverage:
     subregion:
       id: ES-CT
       name: Catalunya
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Data catalog providing geospatial services and related datasets (inferred
+  from URL, not from actual extraction)
 endpoints:
 - type: arcgis:rest:info
   url: https://ide.amb.cat/geoserveis/rest/info?f=pjson
@@ -38,9 +38,9 @@ langs:
 - id: ES
   name: Spanish
 link: https://ide.amb.cat/geoserveis/rest/services
-name: ide.amb.cat
+name: ide.amb.cat/geoserveis/rest/services
 owner:
-  link: null
+  link: https://ide.amb.cat
   location:
     country:
       id: ES
@@ -50,7 +50,7 @@ owner:
       id: ES-CT
       name: Catalunya
   name: ''
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -64,6 +64,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoservices
+- rest
+- open data
+- catalonia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00000229

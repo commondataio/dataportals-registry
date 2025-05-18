@@ -8,30 +8,36 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: Catalog Services for CDIP data, including real-time and model forecasts,
+  with access to dataset ISO 19115 metadata, NCML, and other formats.
 endpoints:
 - type: thredds:catalog
   url: http://thredds.cdip.ucsd.edu/thredds/catalog.xml
 id: threddscdipucsdedu
 langs: []
 link: http://thredds.cdip.ucsd.edu/thredds/catalog.html
-name: thredds.cdip.ucsd.edu
+name: thredds.cdip.ucsd.edu/thredds/catalog.html
 owner:
-  link: null
+  link: http://cdip.ucsd.edu/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Coastal Data Information Program (CDIP), Scripps Institution of Oceanography
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -45,6 +51,17 @@ software:
   id: thredds
   name: Thredds
 status: scheduled
-tags: []
-topics: []
+tags:
+- coastal
+- wave
+- forecast
+- real-time
+- metadata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: temp00003072

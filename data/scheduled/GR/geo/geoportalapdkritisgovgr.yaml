@@ -11,12 +11,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GR-M
+      name: Kriti
+description: WebGIS REST services provided by the Regional Authority of Crete (PDA
+  Crete)
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportal.apdkritis.gov.gr/webgis/rest/info?f=pjson
@@ -37,14 +40,17 @@ langs:
 link: https://geoportal.apdkritis.gov.gr/webgis/rest/services
 name: geoportal.apdkritis.gov.gr
 owner:
-  link: null
+  link: https://geoportal.apdkritis.gov.gr/
   location:
     country:
       id: GR
       name: Greece
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kriti
+  name: Regional Authority of Crete (PDA Crete)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,12 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- WebGIS
+- REST
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00003728

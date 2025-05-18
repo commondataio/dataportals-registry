@@ -11,12 +11,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: The earthquake catalogue and database of the Royal Observatory of Belgium
+  contains source parameters of earthquakes that occurred in and around Belgium.
 endpoints:
 - type: wms111
   url: https://inspire.seismology.be/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: FR
   name: French
 link: https://inspire.seismology.be/geoserver
-name: inspire.seismology.be
+name: ROB Earthquake Catalogue and Database
 owner:
-  link: null
+  link: https://inspire.seismology.be/geoserver
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+  name: Royal Observatory of Belgium
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,13 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- earthquake
+- seismology
+- catalogue
+- database
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00001249

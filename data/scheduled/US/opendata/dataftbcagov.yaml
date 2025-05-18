@@ -10,12 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-CA
+      name: California
+description: Discover, analyze, and download all types of data from the Franchise
+  Tax Board. You may access, share, and reuse our data for free.
 endpoints:
 - type: dcatus11
   url: https://data.ftb.ca.gov/data.json
@@ -26,16 +29,19 @@ langs:
 - id: EN
   name: English
 link: https://data.ftb.ca.gov
-name: data.ftb.ca.gov
+name: Data, reports, and plans | FTB.ca.gov Open Data Portal
 owner:
-  link: null
+  link: https://www.ftb.ca.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Franchise Tax Board (FTB)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -50,5 +56,11 @@ software:
   name: Socrata
 status: scheduled
 tags: []
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
 uid: temp00002844

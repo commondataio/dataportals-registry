@@ -8,14 +8,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NM
+      name: New Mexico
+description: A collection of water data - for effective water management and planning.
 endpoints:
 - type: ckan
   url: https://catalog.newmexicowaterdata.org/api/3
@@ -41,14 +43,17 @@ langs:
 link: https://catalog.newmexicowaterdata.org/
 name: catalog.newmexicowaterdata.org
 owner:
-  link: null
+  link: https://catalog.newmexicowaterdata.org/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NM
+      name: New Mexico
+  name: New Mexico Water Data Initiative
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -60,6 +65,30 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- water quantity
+- water quality
+- water planning
+- ecosystems & wildlife
+- infrastructure
+- climate
+- water use
+- energy
+- natural hazards
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00000895

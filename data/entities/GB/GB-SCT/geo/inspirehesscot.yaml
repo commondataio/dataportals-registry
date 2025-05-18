@@ -18,7 +18,9 @@ coverage:
     subregion:
       id: GB-SCT
       name: Scotland
-description: Historic Environment Scotland ArcGIS server
+description: INSPIRE compliant Web Map Service combining all the spatial data available
+  from Historic Environment Scotland. The layers have geospatial data on cultural
+  protected sites in Scotland.
 endpoints:
 - type: arcgis:rest:info
   url: https://inspire.hes.scot/arcgis/rest/info?f=pjson
@@ -37,7 +39,7 @@ langs:
 - id: EN
   name: English
 link: https://inspire.hes.scot/arcgis/services
-name: Historic Environment Scotland ArcGIS server
+name: INSPIRE/Scottish_Cultural_ProtectedSites (MapServer)
 owner:
   link: https://www.historicenvironment.scot
   location:
@@ -63,6 +65,20 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- INSPIRE
+- Cultural Protection
+- Scotland
+- ArcGIS
+- Web Map Service
+topics:
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00005145

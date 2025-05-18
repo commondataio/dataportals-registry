@@ -11,12 +11,15 @@ coverage:
     country:
       id: TH
       name: Thailand
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: TH-10
+      name: Krung Thep Maha Nakhon
+description: ArcGIS REST endpoint for the Bangkok Metropolitan Administration (BMA)
+  GIS services
 endpoints:
 - type: arcgis:rest:info
   url: https://bmagis.bangkok.go.th/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: TH
   name: Thai
 link: https://bmagis.bangkok.go.th/arcgis/rest/services
-name: bmagis.bangkok.go.th
+name: Bangkok Metropolitan Administration (BMA) GIS REST Services Data Catalog
 owner:
-  link: null
+  link: https://bmagis.bangkok.go.th
   location:
     country:
       id: TH
       name: Thailand
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: TH-10
+      name: Krung Thep Maha Nakhon
+  name: Bangkok Metropolitan Administration
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,32 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- ArcGIS
+- GIS
+- REST API
+- Open Data
+- Local government
+- Thailand
+- BMA
+- Bangkok
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005425

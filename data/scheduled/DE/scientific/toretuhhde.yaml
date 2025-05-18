@@ -10,12 +10,17 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-HH
+      name: Hamburg
+description: Repository for Open Access publications and for research data of the
+  Hamburg University of Technology (TUHH). As a research information system, TORE
+  makes the TUHH's research landscape visible, presenting institutes, working groups,
+  researchers, their publications, research data and projects.
 endpoints:
 - type: oaipmh20
   url: https://tore.tuhh.de/oai/request?verb=Identify
@@ -29,16 +34,19 @@ langs:
 - id: DE
   name: German
 link: https://tore.tuhh.de
-name: tore.tuhh.de
+name: TORE - TUHH Open Research
 owner:
-  link: null
+  link: https://tore.tuhh.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-HH
+      name: Hamburg
+  name: Hamburg University of Technology (TUHH)
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -52,6 +60,16 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
-topics: []
+tags:
+- FAIR
+- geodata
+- mobility
+- transport planning
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00001856

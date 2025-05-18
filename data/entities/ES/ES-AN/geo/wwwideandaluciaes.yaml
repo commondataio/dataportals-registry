@@ -18,7 +18,11 @@ coverage:
     subregion:
       id: ES-AN
       name: Andalucia
-description: Infraestructura de Datos Espaciales de Andalucía
+description: Servicio web de localización, basado en el perfil INSPIRE de Catálogo
+  que permite consultar registros de datos y servicios web del Sistema Estadístico
+  y Cartográfico de Andalucía. Promueve la compartición de información temática y
+  georeferenciada entre organizaciones, mejorando el acceso a los datos y facilitando
+  la integración (interoperabilidad).
 endpoints:
 - type: csw202
   url: https://www.ideandalucia.es/catalogo/inspire/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -63,7 +67,9 @@ software:
   id: geonetwork
   name: Geonetwork
 status: active
-tags: []
+tags:
+- INSPIRE
+- GeoNetwork
 topics:
 - id: REGI
   name: Regions and cities

@@ -15,13 +15,14 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: 'Imagery acquired by the China-Brazil Earth Resources (CBERS) and
-
-  Amazonia-1 satellites. The image files are recorded and processed by
-
-  INPE and are converted to Cloud Optimized Geotiff format in order to
-
-  optimize its use for cloud based applications. Daily updated and hosted on AWS.'
+description: STAC (SpatioTemporal Asset Catalog) is a standard that provides a common
+  structure for exposing and cataloging geospatial data, such as imagery, SAR, point
+  clouds, data cubes, and more. STAC enables access to different spatial data formats
+  and provides a common way to find information about a geographic location over time.
+  The main components are Item, Catalog, and Collection. The 'catalog.json' typically
+  serves as the entry point for navigating the catalog structure, which can be compared
+  to a directory tree, grouping other catalogs, collections, and items for discovery
+  and browsing.
 endpoints:
 - type: stacserverapi
   url: https://stac.amskepler.com/v100/
@@ -31,7 +32,7 @@ langs:
 - id: EN
   name: English
 link: https://stac.amskepler.com/v100/
-name: CBERS and Amazonia-1 on AWS
+name: spatiotemporal-asset-catalog
 owner:
   link: https://amskepler.com
   location:
@@ -58,6 +59,13 @@ status: active
 tags:
 - geospatial
 - has_api
+- imagery
+- catalog
+- STAC
+- SAR
+- point clouds
+- data cubes
+- metadata
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information
@@ -65,4 +73,7 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: cdi00000180

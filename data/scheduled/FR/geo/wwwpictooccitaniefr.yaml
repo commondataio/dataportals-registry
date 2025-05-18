@@ -11,12 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: A geospatial catalog providing data sets, services, and maps for the
+  Occitanie region, integrated with GeoNetwork.
 endpoints:
 - type: geonetwork:query
   url: https://www.picto-occitanie.fr/geonetwork/srv/eng/q
@@ -39,16 +42,19 @@ langs:
 - id: FR
   name: French
 link: https://www.picto-occitanie.fr/geonetwork
-name: www.picto-occitanie.fr
+name: Picto-Occitanie Geocatalogue
 owner:
-  link: null
+  link: https://www.picto-occitanie.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+  name: Picto-Occitanie
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -62,6 +68,41 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- spatial data
+- geodata
+- Occitanie
+- geography
+- map viewer
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00003654

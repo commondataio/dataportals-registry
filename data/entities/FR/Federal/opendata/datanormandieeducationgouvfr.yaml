@@ -10,10 +10,14 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-NOR
+      name: Normandie
+description: Official data catalog for Normandy region educational sector (France)
 endpoints:
 - type: opendatasoftapi
   url: https://data.normandie.education.gouv.fr/api
@@ -32,7 +36,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-NOR
+      name: Normandie
   name: Région académique Normandie
   type: Regional government
 properties:
@@ -51,6 +58,12 @@ software:
 status: active
 tags:
 - has_api
+- education
+- school
+- ministry
+- public
+- normandy
+- france
 topics:
 - id: EDUC
   name: Education, culture and sport
@@ -60,5 +73,8 @@ topics:
   type: iso19115
 - id: REGI
   name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 uid: cdi00000691

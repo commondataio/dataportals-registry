@@ -11,12 +11,16 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+description: TransMilenio GIS services and data catalog for Bogotá's mass transit
+  system, offering geospatial datasets mainly on public transport infrastructure (e.g.,
+  stations, routes).
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.transmilenio.gov.co/arcgis/rest/info?f=pjson
@@ -35,16 +39,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://gis.transmilenio.gov.co/arcgis/services
-name: gis.transmilenio.gov.co
+name: gis.transmilenio.gov.co/arcgis/services
 owner:
-  link: null
+  link: gis.transmilenio.gov.co
   location:
     country:
       id: CO
       name: Colombia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+  name: TransMilenio (Bogotá)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,20 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- transport
+- public transport
+- Bogotá
+- GIS
+- TransMilenio
+- mass transit
+- stations
+- routes
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004922

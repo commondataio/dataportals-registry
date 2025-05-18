@@ -15,8 +15,13 @@ coverage:
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: This appears to be a GeoServer instance, indicating it provides access
+  to spatial datasets and data services, typically used for sharing and visualizing
+  geographic data. However, the provided URL does not directly expose metadata in
+  a DCAT-compliant or machine-readable format, nor does it clearly identify the owner
+  of the data catalog, data themes, or ISO 19115 topics. Therefore, using only the
+  URL and in line with the vocabularies specified, the output must be informed by
+  best practices and typical use cases for such platforms.
 endpoints:
 - type: wms111
   url: http://ketapangkab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,7 +70,7 @@ langs:
 - id: ID
   name: Indonesian
 link: http://ketapangkab.ina-sdi.or.id/geoserver
-name: ketapangkab.ina-sdi.or.id
+name: ketapangkab.ina-sdi.or.id/geoserver
 owner:
   link: null
   location:
@@ -74,7 +79,7 @@ owner:
       name: Indonesia
     level: 20
   name: ''
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,8 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geospatial
+- geoserver
 topics: []
 uid: temp00005158

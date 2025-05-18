@@ -10,10 +10,18 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Access the catalogue of index lot records, used to record the presence
+  of some entomological and zoological species in the Museum collection. View datasets
+  including high-resolution photographs of pinned insect drawers, butterfly reference
+  material, and digitized collections. Datasets are available for download or via
+  an API.
 endpoints:
 - type: ckan:package-search
   url: https://data.nhm.ac.uk/api/3/action/package_search
@@ -52,7 +60,10 @@ owner:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: National history museum
   type: Academy
 rights:
@@ -68,4 +79,10 @@ software:
 status: active
 tags:
 - has_api
+- biodiversity
+- entomology
+- zoology
+- museum
+- digitization
+- scientific collections
 uid: cdi00000766

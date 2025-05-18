@@ -11,12 +11,15 @@ coverage:
     country:
       id: BG
       name: Bulgaria
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BG-23
+      name: Sofia
+description: Data catalog containing ArcGIS REST services, likely related to mapping
+  or geospatial data.
 endpoints:
 - type: arcgis:rest:services
   url: https://map.daizchistim.bg/arcgis/rest/services?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: BG
   name: Bulgarian
 link: https://map.daizchistim.bg/arcgis/rest/services
-name: map.daizchistim.bg
+name: map.daizchistim.bg/arcgis/rest/services
 owner:
-  link: null
+  link: Not available (from given source)
   location:
     country:
       id: BG
       name: Bulgaria
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BG-23
+      name: Sofia
+  name: Not available (from given source)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- ArcGIS
+- REST
+- Geospatial
+- Mapping
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00000079

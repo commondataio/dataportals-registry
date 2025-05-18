@@ -10,11 +10,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: ICDC TDS Scientific data
+    subregion:
+      id: DE-HH
+      name: Hamburg
+description: THREDDS Data Server top-level catalog hosted by the Integrated Climate
+  Data Center (ICDC), University of Hamburg. Contains various datasets classified
+  in spheres such as atmosphere, ocean, ice and snow, land, and society.
 endpoints:
 - type: thredds:catalog
   url: http://icdc.cen.uni-hamburg.de/thredds/catalog.xml
@@ -25,14 +30,17 @@ langs:
 - id: DE
   name: German
 link: http://icdc.cen.uni-hamburg.de/thredds/catalog.html
-name: ICDC TDS
+name: ICDC TDS Catalog
 owner:
   link: https://www.cen.uni-hamburg.de/en/icdc.html
   location:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-HH
+      name: Hamburg
   name: Integrated Climate Data Center
   type: Academy
 properties:
@@ -54,6 +62,8 @@ tags:
 - climate
 - ocean
 - earth science
+- data catalog
+- earth system
 topics:
 - id: ENVI
   name: Environment
@@ -67,4 +77,13 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00005325

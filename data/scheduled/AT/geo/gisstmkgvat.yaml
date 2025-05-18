@@ -11,12 +11,15 @@ coverage:
     country:
       id: AT
       name: Austria
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AT-6
+      name: Steiermark
+description: Web services and data catalog provided by the Land Steiermark (State
+  of Styria) regional GIS portal.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.stmk.gv.at/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: DE
   name: German
 link: https://gis.stmk.gv.at/arcgis/services
-name: gis.stmk.gv.at
+name: gis.stmk.gv.at/arcgis/services
 owner:
-  link: null
+  link: https://gis.stmk.gv.at
   location:
     country:
       id: AT
       name: Austria
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AT-6
+      name: Steiermark
+  name: Land Steiermark
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- gis
+- arcgis
+- web services
 topics: []
 uid: temp00004873

@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-47
+      name: Okinawa
+description: Academic repository of the University of the Ryukyus, providing open
+  access to research outputs and data.
 endpoints:
 - type: weko3:records
   url: https://u-ryukyu.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -26,14 +31,17 @@ langs:
 - id: JA
   name: Japanese
 link: https://u-ryukyu.repo.nii.ac.jp
-name: University of the Ryukyus Repository
+name: 琉球大学学術リポジトリ (University of the Ryukyus Repository)
 owner:
   link: https://u-ryukyu.repo.nii.ac.jp
   location:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-47
+      name: Okinawa
   name: University of the Ryukyus
   type: Academy
 properties:
@@ -53,8 +61,17 @@ tags:
 - government
 - has_api
 - academy
+- academic repository
+- open access
+- research data
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004908

@@ -10,13 +10,20 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: RDR is the institutional research data repository created by KU Leuven
-  in collaboration with LIBIS and Dataverse to help its researchers publish and share
-  their research data.
+    subregion:
+      id: BE-VLI
+      name: Limburg
+description: RDR ('Radar') is the curated institutional research data repository of
+  KU Leuven. It contains published data resulting from KU Leuven research in a FAIR
+  way and allows the published data to be as open as possible, but as closed as necessary.
+  The repository helps KU Leuven researchers publish, share, cite, and preserve their
+  research data in a findable, accessible, interoperable, and reusable way, with support
+  from university staff. The repository uses the open source Dataverse project software
+  as its base.
 endpoints:
 - type: dataverseapi
   url: https://rdr.kuleuven.be/api/search
@@ -47,7 +54,10 @@ owner:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-VLI
+      name: Limburg
   name: KU Leven
   type: Academy
 properties:
@@ -67,8 +77,16 @@ status: active
 tags:
 - scientific
 - has_api
+- Research data
+- FAIR data
+- Open data
+- Dataverse
+- Academic repository
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000153

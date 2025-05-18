@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+description: Data catalog providing ArcGIS REST services for Amt Peitz region.
 endpoints:
 - type: arcgis:rest:info
   url: http://geoportal.amt-peitz.de/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: DE
   name: German
 link: http://geoportal.amt-peitz.de/arcgis/rest/services
-name: geoportal.amt-peitz.de
+name: Geoportal Amt Peitz ArcGIS REST Services
 owner:
-  link: null
+  link: http://geoportal.amt-peitz.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+  name: Amt Peitz
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,31 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- ArcGIS
+- REST
+- OpenData
+- SpatialData
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003217

@@ -11,12 +11,15 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-JA
+      name: Jambi
+description: A geospatial data catalog service provided via GeoServer, typically hosting
+  datasets for mapping, GIS, or related applications.
 endpoints:
 - type: wms111
   url: http://geoportal.jambikota.go.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://geoportal.jambikota.go.id/geoserver
-name: geoportal.jambikota.go.id
+name: geoportal.jambikota.go.id/geoserver
 owner:
-  link: null
+  link: http://geoportal.jambikota.go.id/geoserver
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-JA
+      name: Jambi
+  name: Jambikota
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,11 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- GeoServer
+- GIS
+- geospatial
+- catalog
+- Indonesia
 topics: []
 uid: temp00005106

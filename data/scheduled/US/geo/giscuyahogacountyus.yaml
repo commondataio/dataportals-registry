@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-OH
+      name: Ohio
+description: Public GIS data and mapping services for Cuyahoga County, Ohio.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.cuyahogacounty.us/server/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.cuyahogacounty.us/server/rest/services
-name: gis.cuyahogacounty.us
+name: Cuyahoga County GIS Data Catalog
 owner:
-  link: null
+  link: https://geospatial.gis.cuyahogacounty.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: Cuyahoga County Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,40 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Open Data
+- Maps
+- Local Government
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00005686

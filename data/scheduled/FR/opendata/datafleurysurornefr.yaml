@@ -10,11 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Portail Open Data de la Ville de Fleury-sur-Orne catalog
+    subregion:
+      id: FR-NOR
+      name: Normandie
+description: Le portail open data de la Ville de Fleury-sur-Orne vous donne accès
+  à un maximum de données sur la commune.
 endpoints:
 - type: opendatasoft
   url: https://data.fleurysurorne.fr/api
@@ -29,14 +33,17 @@ langs:
 link: https://data.fleurysurorne.fr
 name: Portail Open Data de la Ville de Fleury-sur-Orne catalog
 owner:
-  link: null
+  link: https://data.fleurysurorne.fr
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-NOR
+      name: Normandie
+  name: Ville de Fleury-sur-Orne
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +57,12 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- commune
+- local government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00002311

@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-04
+      name: Miyagi
+description: Institutional repository for academic outputs, including research data,
+  hosted by Tohoku University.
 endpoints:
 - type: weko3:records
   url: https://tohoku.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -37,7 +42,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-04
+      name: Miyagi
   name: Tohoku University
   type: Academy
 properties:
@@ -57,6 +65,9 @@ tags:
 - government
 - has_api
 - academy
+- institutional repository
+- academic data
+- research data
 topics:
 - id: TECH
   name: Science and technology

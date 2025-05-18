@@ -9,13 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: AU
+      name: Australia
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: ''
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: AU-QLD
+      name: Queensland
+description: Open Spatial Data Website for Brisbane City Council, allowing discovery,
+  analysis, and download of spatial data in various formats.
 endpoints:
 - type: dcatap201
   url: https://testbris-brisbane.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,14 +38,17 @@ langs:
 link: https://testbris-brisbane.opendata.arcgis.com/
 name: Brisbane City Council - Test Open Spatial Data Portal
 owner:
-  link: null
+  link: https://www.spatial-data.brisbane.qld.gov.au
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: AU
+      name: Australia
+    level: 30
+    subregion:
+      id: AU-QLD
+      name: Queensland
+  name: Brisbane City Council
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -55,6 +62,40 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- Brisbane
+- spatial data
+- open data
+- city council
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00003164

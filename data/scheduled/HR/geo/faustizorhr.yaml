@@ -11,12 +11,14 @@ coverage:
     country:
       id: HR
       name: Croatia
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: HR-21
+      name: Grad Zagreb
+description: Data catalog web interface for geospatial data
 endpoints:
 - type: wfs100
   url: http://faust.izor.hr:8080/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
@@ -52,14 +54,17 @@ langs:
 link: http://faust.izor.hr:8080/geoserver/web/
 name: faust.izor.hr:8080
 owner:
-  link: null
+  link: https://www.izor.hr/
   location:
     country:
       id: HR
       name: Croatia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: HR-21
+      name: Grad Zagreb
+  name: Institute of Oceanography and Fisheries (IZOR)
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -73,6 +78,11 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geospatial
+- marine
+- oceanography
+- Web GIS
+- GeoServer
 topics: []
 uid: temp00000343

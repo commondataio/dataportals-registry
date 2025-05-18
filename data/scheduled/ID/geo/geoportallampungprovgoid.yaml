@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-LA
+      name: Lampung
+description: Geoportal providing GIS services for Lampung Province
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportal.lampungprov.go.id/gis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: ID
   name: Indonesian
 link: https://geoportal.lampungprov.go.id/gis/rest/services
-name: geoportal.lampungprov.go.id
+name: Geoportal Lampung Province Data Catalog
 owner:
-  link: null
+  link: https://geoportal.lampungprov.go.id/gis/rest/services
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-LA
+      name: Lampung
+  name: Lampung Province Government
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- Open Data
+- Spatial Data
 topics: []
 uid: temp00005396

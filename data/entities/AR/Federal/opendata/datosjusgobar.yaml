@@ -10,10 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: AR-C
+      name: Ciudad Autonoma de Buenos Aires
+description: Recursos libres y reutilizables acerca del sistema de justicia de la
+  República Argentina
 endpoints:
 - type: ckan
   url: http://datos.jus.gob.ar/api/3
@@ -39,14 +44,17 @@ langs:
 - id: ES
   name: Spanish
 link: https://datos.jus.gob.ar
-name: Datos Justicia Argentina
+name: Portal de Datos Justicia Argentina
 owner:
   link: https://www.argentina.gob.ar/justicia
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
+    subregion:
+      id: AR-C
+      name: Ciudad Autonoma de Buenos Aires
   name: Ministerio de Justicia y Derechos Humanos
   type: Central government
 properties:
@@ -65,8 +73,19 @@ status: active
 tags:
 - government
 - has_api
+- justice
+- law
+- court
+- legal data
+- open data
 topics:
 - id: JUST
   name: Justice, legal system and public safety
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000034

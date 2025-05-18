@@ -11,12 +11,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: GeoNetwork catalog to manage spatially referenced resources, with metadata
+  editing, search, and map viewer.
 endpoints:
 - type: geonetwork:query
   url: https://geobru-geonetwork.irisnet.be/geonetwork/srv/eng/q
@@ -41,14 +44,17 @@ langs:
 link: https://geobru-geonetwork.irisnet.be/geonetwork
 name: geobru-geonetwork.irisnet.be
 owner:
-  link: null
+  link: https://irisnet.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+  name: IRISnet
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -62,6 +68,10 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
+tags:
+- geonetwork
+- catalog
+- spatial
+- metadata
 topics: []
 uid: temp00003392

@@ -11,12 +11,17 @@ coverage:
     country:
       id: PL
       name: Poland
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: PL-24
+      name: Slaskie
+description: 'GeoNetwork''s purpose: to improve access to and integrated use of spatial
+  data and information, to support decision making, to promote multidisciplinary approaches.
+  Easy sharing of geographic information between organizations. Interactive web map
+  viewer, metadata editing and search functions.'
 endpoints:
 - type: geonetwork:query
   url: https://zsip.myslowice.pl/geonetwork/srv/eng/q
@@ -37,16 +42,20 @@ langs:
 - id: PL
   name: Polish
 link: https://zsip.myslowice.pl/geonetwork
-name: zsip.myslowice.pl
+name: ZSIP CRD MIIP Katalog metadanych
 owner:
-  link: null
+  link: https://zsip.myslowice.pl/geonetwork
   location:
     country:
       id: PL
       name: Poland
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: PL-24
+      name: Slaskie
+  name: ZSIP CRD MIIP (or contact directly for full name; typically associated with
+    local government)
+  type: Local government
 properties:
   has_doi: true
 rights:
@@ -60,6 +69,31 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- geoportal
+- metadata
+- GeoNetwork
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00003864

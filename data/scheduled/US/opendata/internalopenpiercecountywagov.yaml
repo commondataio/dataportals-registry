@@ -10,12 +10,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-WA
+      name: Washington
+description: Public geospatial and administrative data portal for Pierce County, Washington.
 endpoints:
 - type: dcatus11
   url: https://internal.open.piercecountywa.gov/data.json
@@ -28,16 +30,19 @@ langs:
 - id: EN
   name: English
 link: https://internal.open.piercecountywa.gov
-name: Internal Open Pierce County
+name: Pierce County, WA Data Catalog
 owner:
-  link: null
+  link: https://internal.open.piercecountywa.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: Pierce County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -51,6 +56,30 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- open data
+- Pierce County
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00002548

@@ -10,12 +10,16 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Open access repository for marine research data collected, processed
-  and published by the Royal Netherlands Institute for Sea Research
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Research data portal for the Royal Netherlands Institute for Sea Research
+  (NIOZ) providing access to datasets, metadata, and documents, with datasets assigned
+  DOIs via DataCite.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.nioz.nl/api/search
@@ -28,14 +32,18 @@ langs:
 - id: NL
   name: Dutch
 link: https://dataverse.nioz.nl
-name: NIOZ Dataverse
+name: NIOZ dataportal
 owner:
+  link: https://www.nioz.nl
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Royal Netherlands Institute for Sea Research (NIOZ)
   type: Academy
 properties:
   has_doi: true
@@ -54,6 +62,11 @@ status: active
 tags:
 - scientific
 - has_api
+- marine research
+- data sharing
+- dataverse
+- doi
+- metadata
 topics:
 - id: TECH
   name: Science and technology

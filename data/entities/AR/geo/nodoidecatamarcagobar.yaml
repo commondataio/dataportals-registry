@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-K
+      name: Catamarca
+description: Spatial data catalog managed by the Provincial Government of Catamarca
 endpoints:
 - type: geonetwork:query
   url: http://nodoide.catamarca.gob.ar/geonetwork/srv/eng/q
@@ -41,16 +43,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://nodoide.catamarca.gob.ar/geonetwork
-name: nodoide.catamarca.gob.ar
+name: Catamarca Node IDE Geonetwork
 owner:
-  link: null
+  link: http://nodoide.catamarca.gob.ar/geonetwork
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-K
+      name: Catamarca
+  name: Provincial Government of Catamarca
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -64,6 +69,23 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- spatial data
+- geodata
+- metadata
+- OGC
+- ISO19115
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00004119

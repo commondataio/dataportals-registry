@@ -11,10 +11,15 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+description: Catalog providing access to spatial and related information for the Zuid-Holland
+  region
 endpoints:
 - type: geonetwork:query
   url: https://opendata.zuid-holland.nl/geonetwork/srv/eng/q
@@ -44,14 +49,17 @@ langs:
 - id: EN
   name: English
 link: https://opendata.zuid-holland.nl/geonetwork
-name: Provincie Zuid-Holland open data portal
+name: Open-dataportaal Zuid-Holland (geonetwork)
 owner:
   link: https://www.zuid-holland.nl
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
   name: Provincie Zuid-Holland
   type: Regional government
 properties:
@@ -71,8 +79,20 @@ status: active
 tags:
 - geospatial
 - has_api
+- spatial
+- geo
+- open data
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00002123

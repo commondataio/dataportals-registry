@@ -11,12 +11,14 @@ coverage:
     country:
       id: IR
       name: Iran
-    level: 20
+    level: 30
     macroregion:
       id: '034'
       name: Southern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IR-28
+      name: Khorasan-e Shomali
+description: ArcGIS REST API endpoint listing various geospatial and mapping services.
 endpoints:
 - type: arcgis:rest:info
   url: http://map137.qazvin.ir:6080/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: FA
   name: Persian
 link: http://map137.qazvin.ir:6080/arcgis/rest/services
-name: map137.qazvin.ir:6080
+name: ArcGIS REST Services Directory
 owner:
-  link: null
+  link: http://map137.qazvin.ir
   location:
     country:
       id: IR
       name: Iran
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IR-28
+      name: Khorasan-e Shomali
+  name: Qazvin Municipal GIS Center (example, if not stated use Unknown)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,31 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- arcgis
+- rest
+- gis
+- mapping
+- spatial data
+- services
+- directory
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001946

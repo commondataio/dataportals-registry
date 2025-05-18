@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: A data catalog providing geospatial datasets via REST services, supporting
+  education statistics and related geographic data.
 endpoints:
 - type: arcgis:rest:info
   url: https://nces.ed.gov/opengis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://nces.ed.gov/opengis/rest/services
-name: nces.ed.gov
+name: NCES OpenGIS REST Services
 owner:
-  link: null
+  link: https://nces.ed.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: National Center for Education Statistics
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Education
+- Government
+- REST
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00004395

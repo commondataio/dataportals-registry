@@ -10,10 +10,14 @@ coverage:
     country:
       id: MX
       name: Mexico
-    level: 20
+    level: 30
     macroregion:
       id: '013'
       name: Central America
+    subregion:
+      id: MX-SLP
+      name: San Luis Potosi
+description: Open data portal for the state of San Luis Potosí, Mexico.
 endpoints:
 - type: ckan
   url: https://datos15-21.slp.gob.mx/api/3
@@ -36,7 +40,10 @@ owner:
     country:
       id: MX
       name: Mexico
-    level: 20
+    level: 30
+    subregion:
+      id: MX-SLP
+      name: San Luis Potosi
   name: Gobierno de San Luis Potosí
   type: Regional government
 rights:
@@ -53,8 +60,22 @@ status: active
 tags:
 - government
 - has_api
+- open data
+- public sector
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00002466

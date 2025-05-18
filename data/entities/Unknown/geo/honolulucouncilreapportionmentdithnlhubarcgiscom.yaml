@@ -9,14 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: 2021 Council Reapportionment Commission Members City and County of Honolulu
-  Population Change From 2010 % Change From 2010
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-HI
+      name: Hawaii
+description: Dataset displaying Oahu land areas, specifically the Council District
+  boundaries adopted and filed by the 2021 Honolulu Council Reapportionment Commission.
 endpoints:
 - type: dcatap201
   url: https://honolulu-council-reapportionment-dithnl.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -35,14 +38,17 @@ langs:
 link: https://honolulu-council-reapportionment-dithnl.hub.arcgis.com/
 name: Honolulu Council Reapportionment
 owner:
-  link: null
+  link: https://honolulu-council-reapportionment-dithnl.hub.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-HI
+      name: Hawaii
+  name: Honolulu Council Reapportionment Commission
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -56,6 +62,17 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- reapportionment
+- boundaries
+- political districts
+- census
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00002956

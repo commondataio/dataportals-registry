@@ -11,13 +11,20 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This server provides OGCAPI endpoints for a selection of BGS Open geospatial
+    subregion:
+      id: GB-ENG
+      name: England
+description: This server provides OGCAPI endpoints for a selection of BGS open geospatial
   data. The BGS has a wide range of datasets and wants to increase access to these,
-  publishing as many as possible under Open Government Licence.
+  publishing as many as possible under Open Government Licence. Not all datasets are
+  available under OGL, please check the metadata record for the dataset to confirm
+  any licence requirements and obligations if not OGL. This is a BETA API service,
+  endpoints and attributes could change at any time, unscheduled downtime should be
+  expected.
 endpoints:
 - type: pygeoapi:openapi
   url: https://ogcapi.bgs.ac.uk/openapi
@@ -30,14 +37,17 @@ langs:
 - id: EN
   name: English
 link: https://ogcapi.bgs.ac.uk
-name: BGS OpenGeoscience API
+name: BGS OGC API Service BETA
 owner:
   link: https://www.ukri.org/councils/nerc/
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: Natural Environment Research Council (NERC)
   type: Academy
 properties:
@@ -53,7 +63,12 @@ software:
   id: pygeoapi
   name: Pygeoapi
 status: active
-tags: []
+tags:
+- geospatial
+- api
+- open data
+- OGL
+- geology
 topics:
 - id: Environment
   name: Environment
@@ -61,4 +76,7 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00004277

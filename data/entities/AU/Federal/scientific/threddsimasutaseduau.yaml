@@ -10,13 +10,17 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: The Institute for Marine and Antarctic Studies (IMAS) pursues multidisciplinary
-  and interdisciplinary work to advance understanding of temperate marine, Southern
-  Ocean, and Antarctic environments.
+    subregion:
+      id: AU-TAS
+      name: Tasmania
+description: The IMAS Data Catalog is a repository for metadata and access to spatial
+  data related to marine, Antarctic, and related environmental research. It supports
+  improved access and integrated use of spatial data and information for decision-making
+  and multidisciplinary research.
 endpoints:
 - type: thredds:catalog
   url: https://thredds.imas.utas.edu.au/thredds/catalog.xml
@@ -34,7 +38,10 @@ owner:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-TAS
+      name: Tasmania
   name: Institute for Marine and Antarctic Studies
   type: Academy
 properties:
@@ -56,6 +63,17 @@ tags:
 - climate
 - ocean
 - earth science
+- biological
+- biosphere
+- chemical
+- chlorophyll
+- ecology
+- ocean temperature
+- oceanography
+- photosynthesis
+- physical-water
+- sea surface
+- vegetation
 topics:
 - id: ENVI
   name: Environment
@@ -69,4 +87,22 @@ topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
 uid: cdi00005315

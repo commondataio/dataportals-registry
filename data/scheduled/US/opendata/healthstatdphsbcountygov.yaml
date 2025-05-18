@@ -10,12 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-CA
+      name: California
+description: Interactive data resources for health topics in San Bernardino County,
+  including disease burden, vaccination rates, community health needs, and weekly
+  morbidity and mortality reports.
 endpoints:
 - type: dcatus11
   url: https://healthstat.dph.sbcounty.gov/data.json
@@ -28,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://healthstat.dph.sbcounty.gov
-name: San Bernardino | HealthStat
+name: San Bernardino County Health Statistics Data Catalog
 owner:
-  link: null
+  link: https://healthstat.dph.sbcounty.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: San Bernardino County Department of Public Health
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -51,6 +58,17 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- public health
+- statistics
+- disease burden
+- vaccination
+- community health
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00002545

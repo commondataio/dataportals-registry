@@ -10,12 +10,16 @@ coverage:
     country:
       id: SE
       name: Sweden
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: SE-Y
+      name: Vasternorrlands lan
+description: Open geodata portal for Sandvikens kommun, providing digital geographic
+  information including overview and detailed plans, available for public use, reuse,
+  and sharing. Includes downloadable ZIP files for planning documents.
 endpoints:
 - type: ckan
   url: https://geodata.sandviken.se/api/3
@@ -33,14 +37,17 @@ langs:
 link: https://geodata.sandviken.se
 name: geodata.sandviken.se
 owner:
-  link: null
+  link: https://sandviken.se
   location:
     country:
       id: SE
       name: Sweden
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: SE-Y
+      name: Vasternorrlands lan
+  name: Sandvikens kommun
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -52,6 +59,18 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- open data
+- municipal data
+- planning maps
+- overviews
+- detailed plans
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00004554

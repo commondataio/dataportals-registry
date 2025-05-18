@@ -10,12 +10,16 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: Search and browse repository of research datasets from the University
+  of Leeds. Supports OAI 2.0 with a base URL. Includes datasets across a range of
+  academic disciplines.
 endpoints:
 - type: oaipmh20
   url: http://archive.researchdata.leeds.ac.uk/cgi/oai2?verb=Identify
@@ -38,14 +42,17 @@ langs:
 link: http://archive.researchdata.leeds.ac.uk
 name: archive.researchdata.leeds.ac.uk
 owner:
-  link: null
+  link: https://archive.researchdata.leeds.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: University of Leeds
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -59,6 +66,13 @@ software:
   id: eprints
   name: EPrints
 status: scheduled
-tags: []
-topics: []
+tags:
+- research data
+- university
+- open data
+- repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00002077

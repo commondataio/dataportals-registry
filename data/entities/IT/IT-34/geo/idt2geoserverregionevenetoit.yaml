@@ -11,11 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: Veneto IDT2 geoserver
+    subregion:
+      id: IT-34
+      name: Veneto
+description: Regione Veneto Geoserver Data Catalog
 endpoints:
 - type: wms111
   url: https://idt2-geoserver.regione.veneto.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,7 +67,7 @@ langs:
 - id: IT
   name: Italian
 link: https://idt2-geoserver.regione.veneto.it/geoserver
-name: Veneto IDT2 geoserver
+name: idt2-geoserver.regione.veneto.it/geoserver
 owner:
   link: https://www.regione.veneto.it
   location:
@@ -90,7 +93,10 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
+tags:
+- geoserver
+- regional
+- public data
 topics:
 - id: REGI
   name: Regions and cities

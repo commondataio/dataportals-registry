@@ -11,12 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+description: GeoServer endpoint for geographic data of Comune di Reggio Emilia.
 endpoints:
 - type: wms111
   url: https://geoserver.comune.re.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +58,19 @@ langs:
 - id: IT
   name: Italian
 link: https://geoserver.comune.re.it/geoserver
-name: geoserver.comune.re.it
+name: geoserver.comune.re.it/geoserver
 owner:
-  link: null
+  link: https://geoserver.comune.re.it/geoserver
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+  name: Comune di Reggio Emilia
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -79,6 +84,15 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- opendata
+- GIS
+- geodata
+- local government
+- geospatial
+- public data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00002950

@@ -11,12 +11,16 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: 'A GeoServer-based platform for publishing geospatial data, associated
+  with Airparif. (Note: No explicit metadata provided; additional context from Airparif
+  suggests environmental/air quality focus.)'
 endpoints:
 - type: wms111
   url: https://magellan.airparif.fr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -53,16 +57,19 @@ langs:
 - id: FR
   name: French
 link: https://magellan.airparif.fr/geoserver
-name: magellan.airparif.fr
+name: Magellan (Airparif) GeoServer
 owner:
-  link: null
+  link: https://magellan.airparif.fr/geoserver
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Airparif
+  type: Civil society
 properties:
   has_doi: false
 rights:
@@ -76,6 +83,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- air quality
+- environmental data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00005501

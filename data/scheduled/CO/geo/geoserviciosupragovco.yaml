@@ -11,12 +11,14 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+description: ArcGIS REST services endpoint for geospatial data
 endpoints:
 - type: arcgis:rest:info
   url: https://geoservicios.upra.gov.co/arcgis/rest/info?f=pjson
@@ -37,14 +39,17 @@ langs:
 link: https://geoservicios.upra.gov.co/arcgis/rest/services
 name: geoservicios.upra.gov.co
 owner:
-  link: null
+  link: https://upra.gov.co
   location:
     country:
       id: CO
       name: Colombia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+  name: Unidad de Planificación Rural Agropecuaria (UPRA)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,24 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- rest
+- arcgis
+- agro
+- rural
+- geospatial
+- colombia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00003474

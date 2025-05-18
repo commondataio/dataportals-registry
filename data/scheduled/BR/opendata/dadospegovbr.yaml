@@ -10,12 +10,16 @@ coverage:
     country:
       id: BR
       name: Brazil
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BR-PE
+      name: Pernambuco
+description: Dados Abertos podem ser usados, reutilizados e redistribuídos livremente
+  por qualquer pessoa, sujeitos, no máximo, à exigência de identificação da fonte
+  e compartilhamento.
 endpoints:
 - type: ckan
   url: https://dados.pe.gov.br/api/3
@@ -31,16 +35,19 @@ langs:
 - id: PT
   name: Portugal
 link: https://dados.pe.gov.br
-name: dados.pe.gov.br
+name: Portal de Dados Abertos de Pernambuco
 owner:
-  link: null
+  link: https://dados.pe.gov.br
   location:
     country:
       id: BR
       name: Brazil
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BR-PE
+      name: Pernambuco
+  name: Estado de Pernambuco
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -52,6 +59,9 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- saúde
+- gastos
+- oss
 topics: []
 uid: temp00004590

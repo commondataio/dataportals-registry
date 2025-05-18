@@ -11,10 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: A web-based 'one-stop' for data and information related to National Park
+  Service natural and cultural resources.
 endpoints:
 - type: dcatap201
   url: https://public-nps.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,13 +37,17 @@ langs:
 - id: EN
   name: English
 link: https://public-nps.opendata.arcgis.com/
-name: National Park Service Open Data
+name: National Park Service - Public Open Data Portal
 owner:
+  link: https://public-nps.opendata.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: U.S. Department of the Interior
   type: Central government
 properties:
@@ -57,4 +66,9 @@ status: active
 tags:
 - government
 - has_api
+- national parks
+- natural resources
+- cultural resources
+- GIS
+- open data
 uid: cdi00001611

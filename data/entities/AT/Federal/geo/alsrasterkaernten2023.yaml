@@ -11,11 +11,15 @@ coverage:
     country:
       id: AT
       name: Austria
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Elevation data and ortho photos Spatial temporal catalog test
+    subregion:
+      id: AT-2
+      name: Karnten
+description: Catalog with geospatial data hosted under the Kärnten (Carinthia) regional
+  government domain.
 endpoints:
 - type: stacserverapi
   url: https://gis.ktn.gv.at/ogd/custom/stac_cat_ktn/STAC_2023/kagis-catalog/catalog.json
@@ -25,13 +29,17 @@ langs:
 - id: EN
   name: English
 link: https://gis.ktn.gv.at/ogd/custom/stac_cat_ktn/STAC_2023/kagis-catalog/catalog.json
-name: ALS Raster Kaernten 2023
+name: gis.ktn.gv.at/ogd/custom/stac_cat_ktn/STAC_2023/kagis-catalog/catalog.json
 owner:
+  link: https://gis.ktn.gv.at/ogd
   location:
     country:
       id: AT
       name: Austria
-    level: 20
+    level: 30
+    subregion:
+      id: AT-2
+      name: Karnten
   name: Land Karnten Austria
   type: Central government
 properties:
@@ -52,6 +60,9 @@ tags:
 - geospatial
 - government
 - has_api
+- open data
+- Austria
+- Carinthia
 topics:
 - id: Geoscientific Information
   name: Geoscientific Information
@@ -59,4 +70,10 @@ topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: cdi00000049

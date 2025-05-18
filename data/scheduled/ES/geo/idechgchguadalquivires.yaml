@@ -11,12 +11,15 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-AN
+      name: Andalucia
+description: Geospatial data catalog hosted by the Guadalquivir River Basin Authority
+  (Confederación Hidrográfica del Guadalquivir).
 endpoints:
 - type: wms111
   url: http://idechg.chguadalquivir.es:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -47,16 +50,19 @@ langs:
 - id: ES
   name: Spanish
 link: http://idechg.chguadalquivir.es:80/geoserver
-name: idechg.chguadalquivir.es:80
+name: Guadalquivir River Basin Authority Data Catalog
 owner:
-  link: null
+  link: http://www.chguadalquivir.es
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucia
+  name: Confederación Hidrográfica del Guadalquivir
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -70,6 +76,21 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- public
+- river_basin
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001447

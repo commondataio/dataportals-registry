@@ -10,10 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Data published by CDC public health programs to help save lives and protect
+  people from health, safety, and security threats.
 endpoints:
 - type: dcatus11
   url: https://data.cdc.gov/data.json
@@ -32,14 +37,18 @@ langs:
 - id: EN
   name: English
 link: https://data.cdc.gov
-name: CDC Data Catalog
+name: Data | Centers for Disease Control and Prevention - CDC
 owner:
+  link: https://data.cdc.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Centers for Disease Control and Prevention
   type: Central government
 properties:
   has_doi: false
@@ -56,4 +65,8 @@ software:
 status: active
 tags:
 - government
+- public health
+- surveillance
+- epidemiology
+- statistics
 uid: cdi00001617

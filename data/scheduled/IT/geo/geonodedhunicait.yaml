@@ -11,12 +11,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-88
+      name: Sardegna
+description: GeoNode-based data catalog platform hosted by UNICA (University of Cagliari)
+  for publishing, sharing, and managing geospatial data.
 endpoints:
 - type: geonode:layers
   url: https://geonode.dh.unica.it/api/layers/
@@ -88,14 +91,17 @@ langs:
 link: https://geonode.dh.unica.it
 name: geonode.dh.unica.it
 owner:
-  link: null
+  link: https://www.unica.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-88
+      name: Sardegna
+  name: University of Cagliari
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -109,6 +115,30 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial data
+- GIS
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00000376

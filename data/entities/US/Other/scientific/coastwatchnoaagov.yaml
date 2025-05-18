@@ -10,11 +10,18 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: STAR TDS Installation
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: The THREDDS Data Server (TDS) is a web server that provides metadata
+  and data access for scientific datasets, using OPeNDAP, OGC WMS and WCS, HTTP, and
+  other remote data access protocols. The TDS is developed and supported by Unidata,
+  a division of the University Corporation for Atmospheric Research (UCAR), and is
+  sponsored by the National Science Foundation.
 endpoints:
 - type: thredds:catalog
   url: https://coastwatch.noaa.gov/thredds/catalog.xml
@@ -27,14 +34,17 @@ langs:
 - id: EN
   name: English
 link: https://coastwatch.noaa.gov/thredds/catalog.html
-name: STAR TDS Installation
+name: NOAA CoastWatch THREDDS Catalog
 owner:
   link: https://www.star.nesdis.noaa.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: NESDIS STAR
   type: Academy
 properties:
@@ -53,6 +63,11 @@ status: active
 tags:
 - ocean
 - environment
+- satellite
+- oceanography
+- science
+- coastal
+- climate
 topics:
 - id: TECH
   name: Science and technology

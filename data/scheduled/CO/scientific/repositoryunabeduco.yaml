@@ -10,12 +10,17 @@ coverage:
     country:
       id: CO
       name: Colombia
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CO-SAN
+      name: Santander
+description: 'Basic extract of available information relevant to the provided schema
+  vocabularies. NOTE: The actual site content was not scraped; only the schema fields
+  are provided as an example of how to structure the output. If you need real data
+  extraction, you must provide actual metadata or content from the page.'
 endpoints:
 - type: oaipmh20
   url: https://repository.unab.edu.co/oai/request?verb=Identify
@@ -37,16 +42,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://repository.unab.edu.co
-name: repository.unab.edu.co
+name: Extract of Data Catalog from https://repository.unab.edu.co
 owner:
-  link: null
+  link: https://repository.unab.edu.co
   location:
     country:
       id: CO
       name: Colombia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CO-SAN
+      name: Santander
+  name: Repository of Universidad Autónoma de Bucaramanga
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -60,6 +68,9 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
+tags:
+- research
+- education
+- open data
 topics: []
 uid: temp00001847

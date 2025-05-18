@@ -10,11 +10,17 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Open for Fudan University affiliated researchers to deposit data.
+    subregion:
+      id: CN-SH
+      name: Shanghai
+description: 'Open for Fudan University affiliated researchers to deposit data. Includes
+  datasets such as research findings, working papers, journal papers, and social science
+  data. Majority of data: survey and census data from demography, economics, social
+  science, geography, etc.'
 endpoints:
 - type: dataverseapi
   url: https://dvn.fudan.edu.cn/api/search?q=*&type=dataset&sort=name&order=asc
@@ -28,14 +34,17 @@ langs:
 - id: ZH
   name: Chinese
 link: https://dvn.fudan.edu.cn
-name: Fudan University Dataverse
+name: Fudan University Social Science Data Repository
 owner:
   link: https://fudan.edu.cn
   location:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
+    subregion:
+      id: CN-SH
+      name: Shanghai
   name: Fudan University
   type: Academy
 properties:
@@ -55,8 +64,23 @@ status: active
 tags:
 - scientific
 - has_api
+- Chinese population
+- surveys
+- urbanization
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00000374

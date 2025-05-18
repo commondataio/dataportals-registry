@@ -9,14 +9,18 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MD
+      name: Maryland
+description: REST services for GIS data catalogs managed by ESRGC, an outreach unit
+  of Salisbury University, providing technical GIS services and support to municipal
+  and regional partners.
 endpoints:
 - type: arcgis:rest:info
   url: https://esrgc.salisbury.edu/arcgis/rest/info?f=pjson
@@ -33,16 +37,19 @@ endpoints:
 id: esrgcsalisburyedu
 langs: []
 link: https://esrgc.salisbury.edu/arcgis/rest/services
-name: esrgc.salisbury.edu
+name: Eastern Shore Regional GIS Cooperative (ESRGC)
 owner:
-  link: null
+  link: https://esrgc.salisbury.edu/arcgis/rest/services
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
+  name: Eastern Shore Regional GIS Cooperative (ESRGC)
+  type: Academy
 properties:
   has_doi: false
 rights:
@@ -56,6 +63,10 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- REST
+- ArcGIS
+- Salisbury University
 topics: []
 uid: temp00003957

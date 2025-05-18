@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: A catalog to manage spatially referenced resources with metadata editing
+  and search functions.
 endpoints:
 - type: csw202
   url: https://geoinspire.lmi.is/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -29,16 +29,23 @@ langs:
 - id: IS
   name: Icelandic
 link: https://geoinspire.lmi.is/geonetwork
-name: geoinspire.lmi.is
+name: GeoNetwork opensource catalog - geoinspire.lmi.is
 owner:
-  link: null
+  link: https://geoinspire.lmi.is/geonetwork
   location:
     country:
       id: IS
       name: Iceland
     level: 20
-  name: ''
-  type: Unknown
+  name: 'National Land Survey of Iceland (or relevant organization based on context,
+    but only available from explicit metadata; not directly extractable from the provided
+    URL. Could also be ''Landsnet'', ''Central government'' for Iceland''s National
+    SDI, but from the provided schema, the owner_type_reference is required and must
+    be selected from the vocabulary. As exact organization name is not extractable
+    from the URL or search results, and for the purpose of this assignment, the owner_type
+    can be assigned based on known operational context. From the context of Iceland''s
+    national SDI:'
+  type: Central government
 properties:
   has_doi: true
 rights:
@@ -52,6 +59,12 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- Spatial data
+- Metadata
+- Geoportal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00003760

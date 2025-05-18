@@ -11,12 +11,15 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-AR
+      name: Aragon
+description: Geospatial data catalog and web map services hosted by the Aragón region,
+  Spain.
 endpoints:
 - type: wms111
   url: https://gestion4-idearagon.aragon.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -67,14 +70,17 @@ langs:
 link: https://gestion4-idearagon.aragon.es/geoserver
 name: gestion4-idearagon.aragon.es
 owner:
-  link: null
+  link: https://gestion4-idearagon.aragon.es/
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-AR
+      name: Aragon
+  name: Gobierno de Aragón
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,9 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geospatial
+- Aragón
+- maps
 topics: []
 uid: temp00001442

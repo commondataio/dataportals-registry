@@ -10,11 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: North Carolina Office of State Budget and Management open data portal
+    subregion:
+      id: US-NC
+      name: North Carolina
+description: The new North Carolina State Demographer data platform houses the latest
+  data produced by the Office of the State Demographer, providing detailed information
+  about population and population trends.
 endpoints:
 - type: opendatasoftapi
   url: https://demography.osbm.nc.gov/api
@@ -25,14 +30,17 @@ langs:
 - id: EN
   name: English
 link: https://demography.osbm.nc.gov
-name: OSBM Open Data
+name: North Carolina State Demographer Data
 owner:
   link: https://www.osbm.nc.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
   name: North Carolina Office of State Budget and Management
   type: Regional government
 properties:
@@ -50,6 +58,11 @@ software:
 status: active
 tags:
 - population
+- demographics
+- estimates
+- projections
+- race
+- ethnicity
 topics:
 - id: Society
   name: Society
@@ -57,4 +70,7 @@ topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00005286

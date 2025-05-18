@@ -11,10 +11,16 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: Metadata catalog providing access to scientific datasets, services, and
+  maps in biodiversity, geology, marine datasets, and marine essentials, managed by
+  the Royal Belgian Institute of Natural Sciences (RBINS).
 endpoints:
 - type: csw202
   url: https://metadata.naturalsciences.be/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -32,14 +38,17 @@ langs:
 - id: FR
   name: French
 link: https://metadata.naturalsciences.be/geonetwork
-name: RBINS Geodata Catalog
+name: RBINS metadata catalog
 owner:
   link: https://www.naturalsciences.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: Royal Belgian Institute of Natural Sciences
   type: Academy
 properties:
@@ -58,6 +67,9 @@ status: active
 tags:
 - geospatial
 - has_api
+- biodiversity
+- geology
+- marine
 topics:
 - id: Oceans
   name: Oceans
@@ -65,4 +77,7 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00000134

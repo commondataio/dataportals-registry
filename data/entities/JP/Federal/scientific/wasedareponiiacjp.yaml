@@ -10,10 +10,16 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: Bibliographic information of contents from Waseda University Repository;
+  Waseda Doctoral Dissertations, Academic Papers of Waseda Researcher, Bulletin and
+  so on.
 endpoints:
 - type: weko3:records
   url: https://waseda.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -40,7 +46,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: Waseda University
   type: Academy
 properties:
@@ -60,6 +69,9 @@ tags:
 - government
 - has_api
 - academy
+- academic papers
+- doctoral dissertations
+- research publications
 topics:
 - id: TECH
   name: Science and technology

@@ -10,12 +10,15 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-82
+      name: Sicilia
+description: Data catalog portal of Comune di Catania related to Mount Etna and associated
+  events.
 endpoints:
 - type: ckan
   url: https://etnaopen.comune.catania.it/api/3
@@ -39,16 +42,19 @@ langs:
 - id: IT
   name: Italian
 link: https://etnaopen.comune.catania.it
-name: etnaopen.comune.catania.it
+name: Etna Open - Comune di Catania Data Catalog
 owner:
-  link: null
+  link: https://etnaopen.comune.catania.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-82
+      name: Sicilia
+  name: Comune di Catania
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -60,6 +66,18 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- Etna
+- Volcano
+- Catania
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00004706

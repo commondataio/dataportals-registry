@@ -11,10 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+description: Air quality data catalog for Hauts-de-France region, including measured
+  concentrations of regulated air pollutants and pollution episodes.
 endpoints:
 - type: dcatap201
   url: https://data-atmo-hdf.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,11 +39,15 @@ langs:
 link: https://data-atmo-hdf.opendata.arcgis.com
 name: Atmo Hauts de France Open Data
 owner:
+  link: https://data-atmo-hdf.opendata.arcgis.com
   location:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
   name: Hauts-de-France
   type: Local government
 properties:
@@ -58,8 +67,20 @@ status: active
 tags:
 - geospatial
 - has_api
+- air quality
+- pollution
+- environmental measurement
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 uid: cdi00000648

@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: ArcGIS REST endpoint for USDA NRCS (Natural Resources Conservation Service)
+  geospatial services
 endpoints:
 - type: arcgis:rest:info
   url: https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/info?f=pjson
@@ -37,14 +37,14 @@ langs:
 link: https://nrcsgeoservices.sc.egov.usda.gov/arcgis/rest/services
 name: nrcsgeoservices.sc.egov.usda.gov
 owner:
-  link: null
+  link: https://www.nrcs.usda.gov
   location:
     country:
       id: US
       name: United States
     level: 20
-  name: ''
-  type: Unknown
+  name: Natural Resources Conservation Service
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +58,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- agriculture
+- soil
+- environment
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00001796

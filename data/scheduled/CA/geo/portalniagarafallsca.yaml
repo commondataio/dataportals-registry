@@ -11,12 +11,15 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: GIS data services endpoint for the City of Niagara Falls, providing access
+  to spatial and thematic data.
 endpoints:
 - type: arcgis:portals:self
   url: https://portal.niagarafalls.ca/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +40,19 @@ langs:
 - id: EN
   name: English
 link: https://portal.niagarafalls.ca/arcgis/rest/services
-name: portal.niagarafalls.ca
+name: Niagara Falls ArcGIS REST Services
 owner:
-  link: null
+  link: https://niagarafalls.ca
   location:
     country:
       id: CA
       name: Canada
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: City of Niagara Falls
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +66,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- Open Data
+- Spatial Data
 topics: []
 uid: temp00001346

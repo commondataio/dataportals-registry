@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DE
+      name: Delaware
+description: Portal focusing on spatial data for the State of Delaware.
 endpoints:
 - type: dcatap201
   url: https://opendata.firstmap.delaware.gov/api/feed/dcat-ap/2.0.1.json
@@ -33,14 +35,17 @@ langs:
 link: https://opendata.firstmap.delaware.gov
 name: opendata.firstmap.delaware.gov
 owner:
-  link: null
+  link: https://opendata.firstmap.delaware.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DE
+      name: Delaware
+  name: State of Delaware
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -54,6 +59,9 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
+tags:
+- geospatial
+- spatial data
+- open data
 topics: []
 uid: temp00002814

@@ -17,8 +17,8 @@ coverage:
     subregion:
       id: ES-PV
       name: Pais Vasco
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Catalog endpoint for data access via THREDDS Data Server (TDS) at Euskos,
+  a provider likely supporting regional or environmental data services.
 endpoints:
 - type: thredds:catalog
   url: http://thredds.euskoos.eus/thredds/catalog.xml
@@ -29,7 +29,7 @@ langs:
 - id: ES
   name: Spanish
 link: http://thredds.euskoos.eus/thredds/catalog.html
-name: thredds.euskoos.eus
+name: thredds.euskoos.eus/thredds/catalog.html
 owner:
   link: null
   location:
@@ -41,7 +41,7 @@ owner:
       id: ES-PV
       name: Pais Vasco
   name: ''
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -55,6 +55,17 @@ software:
   id: thredds
   name: Thredds
 status: scheduled
-tags: []
-topics: []
+tags:
+- THREDDS
+- Environmental data
+- Hydrological data
+- Open data
+- OGC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003583

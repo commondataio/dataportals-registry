@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MA
+      name: Massachusetts
+description: ArcGIS REST Services Directory of the City of Boston. This catalog provides
+  access to a variety of geospatial services and data published by the City of Boston.
 endpoints:
 - type: arcgis:portals:self
   url: https://gis.boston.gov/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +40,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.boston.gov/arcgis/rest/services
-name: gis.boston.gov
+name: City of Boston ArcGIS REST Services Directory
 owner:
-  link: null
+  link: https://gis.boston.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MA
+      name: Massachusetts
+  name: City of Boston
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +66,20 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- ArcGIS
+- geospatial
+- GIS
+- Boston
+- Local government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00002796

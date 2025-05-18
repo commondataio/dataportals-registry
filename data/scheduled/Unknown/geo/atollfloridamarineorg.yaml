@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: ArcGIS REST Services Catalog hosted at atoll.floridamarine.org
 endpoints:
 - type: arcgis:rest:info
   url: https://atoll.floridamarine.org/arcgis/rest/info?f=pjson
@@ -33,16 +35,19 @@ endpoints:
 id: atollfloridamarineorg
 langs: []
 link: https://atoll.floridamarine.org/arcgis/rest/services
-name: atoll.floridamarine.org
+name: Atoll REST Services Catalog
 owner:
-  link: null
+  link: https://atoll.floridamarine.org
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Marine Research Institute
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -56,6 +61,20 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- ArcGIS
+- REST
+- marine
+- research
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00005618

@@ -10,11 +10,18 @@ coverage:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Peking University Open Research Data Platform
+    subregion:
+      id: CN-BJ
+      name: Beijing
+description: The PKU Open Research Data provides preservation, management and distribution
+  services for research data. It encourages data owners to share data and data users
+  to reuse data. PKU library cooperates with NSFC-PKU data center for management science,
+  PKU science and research department, and PKU social sciences department to jointly
+  launch the platform.
 endpoints:
 - type: oaipmh20
   url: https://opendata.pku.edu.cn/oai?verb=Identify
@@ -31,14 +38,17 @@ langs:
 - id: ZH
   name: Chinese
 link: https://opendata.pku.edu.cn
-name: Peking University Dataverse
+name: Peking University Open Research Data
 owner:
   link: https://pku.edu.cn
   location:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
+    subregion:
+      id: CN-BJ
+      name: Beijing
   name: Peking University
   type: Academy
 properties:
@@ -58,8 +68,18 @@ status: active
 tags:
 - scientific
 - has_api
+- Humanities and Social Sciences
+- Social and Behavioural Sciences
+- Engineering Sciences
+- Computer Science, Systems and Electrical Engineering
 topics:
 - id: TECH
   name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
   type: eudatatheme
 uid: cdi00000375

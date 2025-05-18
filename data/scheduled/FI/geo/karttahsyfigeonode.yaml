@@ -11,12 +11,16 @@ coverage:
     country:
       id: FI
       name: Finland
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FI-18
+      name: Uusimaa
+description: HSY open map and geographic information interfaces, providing data in
+  WMS, WFS, and WMTS formats. Freely available for public and commercial use under
+  open data licence, covering Helsinki Region environmental and geographic data.
 endpoints:
 - type: wms111
   url: https://kartta.hsy.fi/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +69,19 @@ langs:
 - id: FI
   name: Finnish
 link: https://kartta.hsy.fi/geoserver
-name: kartta.hsy.fi
+name: kartta.hsy.fi/geoserver
 owner:
-  link: null
+  link: https://www.hsy.fi/en/environmental-information/geographic-information/
   location:
     country:
       id: FI
       name: Finland
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FI-18
+      name: Uusimaa
+  name: HSY (Helsinki Region Environmental Services Authority)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -88,6 +95,33 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geographic_data
+- open_data
+- geoserver
+- WMS
+- WFS
+- WMTS
+- HSY
+- Helsinki_region
+- Finland
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001141

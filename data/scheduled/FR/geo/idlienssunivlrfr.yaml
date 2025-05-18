@@ -11,12 +11,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+description: Geospatial data catalog hosted by University of La Rochelle, providing
+  access to geospatial datasets and services through the Geoserver platform.
 endpoints:
 - type: wms111
   url: https://idlienss.univ-lr.fr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,16 +71,19 @@ langs:
 - id: FR
   name: French
 link: https://idlienss.univ-lr.fr/geoserver
-name: idlienss.univ-lr.fr
+name: Geoserver at University of La Rochelle
 owner:
-  link: null
+  link: https://idlienss.univ-lr.fr/geoserver
   location:
     country:
       id: FR
       name: France
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: University of La Rochelle
+  type: Academy
 properties:
   has_doi: false
 rights:

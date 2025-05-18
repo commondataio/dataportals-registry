@@ -10,12 +10,16 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: The Australian Data Archive provides a national service for collecting,
-  preserving, publishing and accessing digital research data.
+    subregion:
+      id: AU-ACT
+      name: Australian Capital Territory
+description: Data catalog for research data from the social sciences and related fields,
+  including Medical, Environmental, and Human Science disciplines. Supports multiple
+  data types and formats, and serves academic, government, and commercial users.
 endpoints:
 - type: dataverseapi
   url: https://dataverse.ada.edu.au/api/search
@@ -35,7 +39,10 @@ owner:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-ACT
+      name: Australian Capital Territory
   name: Australian Data Archive
   type: Academy
 properties:
@@ -55,8 +62,37 @@ status: active
 tags:
 - scientific
 - has_api
+- research data
+- social science
+- longitudinal studies
+- quantitative data
+- qualitative data
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00000120

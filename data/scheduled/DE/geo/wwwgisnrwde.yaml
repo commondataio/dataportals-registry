@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: ArcGIS REST service directory for geospatial data from North Rhine-Westphalia
 endpoints:
 - type: arcgis:rest:info
   url: http://www.gis.nrw.de/arcgis/rest/info?f=pjson
@@ -31,14 +33,17 @@ langs:
 link: http://www.gis.nrw.de/arcgis/rest/services
 name: www.gis.nrw.de
 owner:
-  link: null
+  link: http://www.gis.nrw.de/
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Regional government
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -52,6 +57,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- geospatial
+- rest
+- ArcGIS
 topics: []
 uid: temp00001417

@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MN
+      name: Minnesota
+description: ArcGIS REST Services for Dakota County GIS and mapping data.
 endpoints:
 - type: arcgis:rest:info
   url: http://gis2.co.dakota.mn.us/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: http://gis2.co.dakota.mn.us/arcgis/rest/services
-name: gis2.co.dakota.mn.us
+name: GIS Data Catalog - Dakota County, Minnesota
 owner:
-  link: null
+  link: http://www.co.dakota.mn.us
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: Dakota County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,23 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- mapping
+- parcel
+- property
+- rest services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00004285

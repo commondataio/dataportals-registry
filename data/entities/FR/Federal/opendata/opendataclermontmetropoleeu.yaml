@@ -10,10 +10,15 @@ coverage:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhone-Alpes
+description: Portail mutualisé des données Open Data sur le territoire de Clermont
+  Auvergne Métropole
 endpoints:
 - type: opendatasoftapi
   url: https://opendata.clermontmetropole.eu/api
@@ -36,7 +41,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 20
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhone-Alpes
   name: Métropole Clermontoise
   type: Central government
 properties:
@@ -55,5 +63,20 @@ status: active
 tags:
 - government
 - has_api
-topics: []
+- transport
+- budget
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00000720

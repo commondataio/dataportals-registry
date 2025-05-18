@@ -11,12 +11,15 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+description: ArcGIS Server REST endpoint hosting various geospatial services, likely
+  representing datasets, map services, and other GIS data catalogs
 endpoints:
 - type: arcgis:rest:info
   url: https://test.opengis.regina.ca/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://test.opengis.regina.ca/arcgis/rest/services
-name: test.opengis.regina.ca
+name: test.opengis.regina.ca/arcgis/rest/services
 owner:
   link: null
   location:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
   name: ''
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:

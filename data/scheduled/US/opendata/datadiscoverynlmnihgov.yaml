@@ -10,12 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: A catalog of biomedical datasets from various repositories for users
+  to search, discover, retrieve, and connect with datasets.
 endpoints:
 - type: dcatus11
   url: https://datadiscovery.nlm.nih.gov/data.json
@@ -34,14 +37,17 @@ langs:
 link: https://datadiscovery.nlm.nih.gov
 name: National Library of Medicine | National Institutes of Health | Open Data Portal
 owner:
-  link: null
+  link: https://www.nlm.nih.gov/
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: National Library of Medicine
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -55,6 +61,12 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- biomedical
+- datasets
+- catalog
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00002528

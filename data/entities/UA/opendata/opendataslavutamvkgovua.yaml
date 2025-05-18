@@ -10,10 +10,15 @@ coverage:
     country:
       id: UA
       name: Ukraine
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
+    subregion:
+      id: UA-68
+      name: Khmelnytska oblast
+description: Data catalog for Slavuta city, Khmelnytskyi Oblast, Ukraine. Hosts municipal
+  open datasets for public access.
 endpoints:
 - type: ckan
   url: https://opendata.slavuta-mvk.gov.ua/api/3
@@ -32,12 +37,16 @@ langs:
 link: https://opendata.slavuta-mvk.gov.ua
 name: Портал відкритих даних Славутської міської ради
 owner:
+  link: http://www.slavuta-mvk.info/
   location:
     country:
       id: UA
       name: Ukraine
-    level: 20
-  name: ''
+    level: 30
+    subregion:
+      id: UA-68
+      name: Khmelnytska oblast
+  name: Slavuta Municipal Council
   type: Local government
 properties:
   transferable_location: true
@@ -55,8 +64,24 @@ status: active
 tags:
 - government
 - has_api
+- Slavuta
+- municipality
+- open data
+- Ukraine
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: cdi00001602

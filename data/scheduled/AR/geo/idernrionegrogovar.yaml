@@ -11,12 +11,14 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-R
+      name: Rio Negro
+description: GeoServer instance hosted by IDERN, Río Negro province, Argentina
 endpoints:
 - type: wms111
   url: https://idern.rionegro.gov.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +67,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://idern.rionegro.gov.ar/geoserver
-name: idern.rionegro.gov.ar
+name: geoserver (idern.rionegro.gov.ar)
 owner:
-  link: null
+  link: https://idern.rionegro.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-R
+      name: Rio Negro
+  name: IDERN (Instituto de Desarrollo de Regiones Negras y Originales)
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,10 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- Geospatial
+- GIS
+- GeoServer
+- Open Data
 topics: []
 uid: temp00003341

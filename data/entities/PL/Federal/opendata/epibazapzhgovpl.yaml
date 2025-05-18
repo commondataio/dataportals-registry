@@ -9,10 +9,17 @@ coverage:
     country:
       id: PL
       name: Poland
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
+    subregion:
+      id: PL-14
+      name: Mazowieckie
+description: System integrujący dane z istniejących w NIZP PZH – PIB systemów informatycznych
+  oraz umożliwiający wprowadzanie danych przez uczestników procesu gromadzenia informacji.
+  Pozwala na dostęp do danych historycznych, optymalizację procesu gromadzenia i przetwarzania
+  danych w zakresie nadzoru epidemiologicznego oraz urzędowej kontroli żywności.
 endpoints:
 - type: ckan:package-list
   url: https://epibaza.pzh.gov.pl/api/3/action/package_list
@@ -31,7 +38,10 @@ owner:
     country:
       id: PL
       name: Poland
-    level: 20
+    level: 30
+    subregion:
+      id: PL-14
+      name: Mazowieckie
   name: Narodowy Instytut Zdrowia Publicznego
   type: Central government
 properties:
@@ -49,5 +59,14 @@ software:
 status: active
 tags:
 - government
-topics: []
+- epidemiology
+- food safety
+- health surveillance
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: cdi00001288

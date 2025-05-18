@@ -10,10 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
+    subregion:
+      id: JP-31
+      name: Tottori
+description: Online repository for academic resources managed by Tottori University,
+  serving as a data catalog for published works, theses, and digital content.
 endpoints:
 - type: weko3:records
   url: https://repository.lib.tottori-u.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -40,7 +45,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-31
+      name: Tottori
   name: Tottori University
   type: Academy
 properties:
@@ -60,8 +68,21 @@ tags:
 - government
 - has_api
 - academy
+- academic repository
+- library
+- university
+- Japan
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004894

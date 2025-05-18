@@ -10,11 +10,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Northwest Knowledge Network (NKN) - THREDDS Server
+    subregion:
+      id: US-ID
+      name: Idaho
+description: A data catalog hosted by Northwest Knowledge Network, providing datasets
+  for research and public use.
 endpoints:
 - type: thredds:catalog
   url: http://thredds.northwestknowledge.net/thredds/catalog.xml
@@ -32,7 +36,10 @@ owner:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-ID
+      name: Idaho
   name: University of Idaho. Research Computing and Data Services
   type: Academy
 properties:
@@ -51,6 +58,9 @@ status: active
 tags:
 - ocean
 - environment
+- climate
+- geospatial
+- research_data
 topics:
 - id: TECH
   name: Science and technology

@@ -11,12 +11,14 @@ coverage:
     country:
       id: VN
       name: Vietnam
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: VN-31
+      name: Binh Dinh
+description: GIS data catalog REST endpoint for Binh Dinh provincial government
 endpoints:
 - type: arcgis:rest:info
   url: http://csdltnmt.binhdinh.gov.vn:6080/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: VN
   name: Vietnamese
 link: http://csdltnmt.binhdinh.gov.vn:6080/arcgis/rest/
-name: csdltnmt.binhdinh.gov.vn:6080
+name: CSDLTNMT - Binh Dinh GIS Portal
 owner:
-  link: null
+  link: http://csdltnmt.binhdinh.gov.vn
   location:
     country:
       id: VN
       name: Vietnam
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: VN-31
+      name: Binh Dinh
+  name: Binh Dinh Provincial Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,15 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Geospatial Data
+- Provincial Data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001086

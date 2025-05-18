@@ -11,10 +11,17 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
+    subregion:
+      id: IT-52
+      name: Toscana
+description: Catalog application to manage spatially referenced resources for the
+  NextData project. It provides metadata editing and search functions, and is hosted
+  by CNR in Pisa. It supports interoperability with major global geospatial data systems
+  and FAIR data principles.
 endpoints:
 - type: csw202
   url: http://geonetwork.nextdataproject.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -31,14 +38,17 @@ langs:
 - id: IT
   name: Italian
 link: http://geonetwork.nextdataproject.it/geonetwork
-name: Share Geonetwork
+name: GeoNetwork NextData Data Catalog
 owner:
   link: https://www.nextdataproject.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
+    subregion:
+      id: IT-52
+      name: Toscana
   name: The Project of Interest NextData
   type: Academy
 properties:
@@ -58,5 +68,30 @@ tags:
 - geospatial
 - government
 - has_api
-topics: []
+- metadata
+- open data
+- FAIR
+- NextData
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
 uid: cdi00002147

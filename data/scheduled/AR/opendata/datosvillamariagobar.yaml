@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-X
+      name: Cordoba
+description: Catálogo de datos públicos y en formatos abiertos de la Municipalidad
+  de Villa María. Incluye datos de economía, ambiente, salud y otros temas.
 id: datosvillamariagobar
 langs:
 - id: ES
@@ -23,14 +26,17 @@ langs:
 link: https://datos.villamaria.gob.ar
 name: datos.villamaria.gob.ar
 owner:
-  link: null
+  link: https://datos.villamaria.gob.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-X
+      name: Cordoba
+  name: Municipalidad de Villa María
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -42,6 +48,48 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- datos abiertos
+- municipio
+- estadísticas
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004482

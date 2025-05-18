@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: FR
+      name: France
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: GeoNetwork-based data catalog for environmental and geographical datasets
 endpoints:
 - type: geonetwork:query
   url: https://sig.oreme.org/geonetwork/srv/eng/q
@@ -39,16 +41,19 @@ langs:
 - id: EN
   name: English
 link: https://sig.oreme.org/geonetwork/srv/eng/catalog.search#/home
-name: sig.oreme.org
+name: sig.oreme.org/geonetwork
 owner:
-  link: null
+  link: https://sig.oreme.org/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+  name: sig.oreme.org
+  type: Regional government
 properties:
   has_doi: true
 rights:
@@ -62,6 +67,13 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- environment
+- geospatial
+- water
+- land use
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: temp00000836

@@ -11,10 +11,19 @@ coverage:
     country:
       id: LB
       name: Lebanon
-    level: 20
+    level: 30
     macroregion:
       id: '145'
       name: Western Asia
+    subregion:
+      id: LB-JL
+      name: Mont-Liban
+description: The Beirut Urban Observatory is a platform of geolocalized urban data
+  informing ongoing post-blast recovery efforts. It builds on the Beirut Built Environment
+  Database (BBED), contains many data layers available for download, and aims to facilitate
+  coordination among multiple stakeholders, produce and disseminate maps and visual
+  data, inform city dwellers and key actors about ongoing repair and recovery processes,
+  and support an integrated and inclusive framework of urban recovery.
 endpoints:
 - type: dcatap201
   url: https://beirut-urban-observatory-aub.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -39,7 +48,10 @@ owner:
     country:
       id: LB
       name: Lebanon
-    level: 20
+    level: 30
+    subregion:
+      id: LB-JL
+      name: Mont-Liban
   name: Beirut Urban Lab
   type: Academy
 properties:
@@ -58,5 +70,26 @@ status: active
 tags:
 - geospatial
 - has_api
-topics: []
+- urban
+- recovery
+- post-blast
+- Lebanon
+- Beirut
+- infrastructure
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00002103

@@ -11,12 +11,14 @@ coverage:
     country:
       id: DZ
       name: Algeria
-    level: 20
+    level: 30
     macroregion:
       id: '015'
       name: Northern Africa
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DZ-16
+      name: Alger
+description: Rest services for data catalog at SEAAL.
 endpoints:
 - type: arcgis:portals:self
   url: https://sig.seaal.dz/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,19 @@ langs:
 - id: AR
   name: Arabic
 link: https://sig.seaal.dz/server/rest/services
-name: sig.seaal.dz
+name: SEAAL Data Catalog
 owner:
-  link: null
+  link: https://sig.seaal.dz/server/rest/services
   location:
     country:
       id: DZ
       name: Algeria
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DZ-16
+      name: Alger
+  name: SEAAL
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -61,5 +66,11 @@ software:
   name: ArcGIS Server
 status: scheduled
 tags: []
-topics: []
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001429

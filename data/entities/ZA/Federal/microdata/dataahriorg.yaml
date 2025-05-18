@@ -11,10 +11,15 @@ coverage:
     country:
       id: ZA
       name: South Africa
-    level: 20
+    level: 30
     macroregion:
       id: 018
       name: Southern Africa
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Extract metadata from a data catalog URL, assigning vocabularies as per
+  the provided schema.
 endpoints:
 - type: nada:catalog-search
   url: https://data.ahri.org/index.php/api/catalog/search
@@ -27,14 +32,17 @@ langs:
 - id: EN
   name: English
 link: https://data.ahri.org/index.php
-name: AHRI Data Repository
+name: Extract metadata from data catalog URL
 owner:
   link: https://www.ahri.org
   location:
     country:
       id: ZA
       name: South Africa
-    level: 20
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
   name: The Africa Health Research Institute
   type: Academy
 properties:
@@ -54,6 +62,14 @@ status: active
 tags:
 - has_api
 - microdata
+- HVACR
+- certification
+- performance
+- product
+- AHRI
+- heating
+- cooling
+- refrigeration
 topics:
 - id: SOCI
   name: Population and society
@@ -66,5 +82,11 @@ topics:
   type: eudatatheme
 - id: Health
   name: Health
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Economy
+  name: Economy
   type: iso19115
 uid: cdi00002335

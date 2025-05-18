@@ -9,13 +9,17 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: ''
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: Santa Clara County Geographic Information System (SCCGIS) Open Data portal
+  provides datasets related to Santa Clara County geography, infrastructure, and services.
 endpoints:
 - type: dcatap201
   url: https://opendata-sccgis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -34,14 +38,17 @@ langs:
 link: https://opendata-sccgis.opendata.arcgis.com/
 name: County of Santa Cruz, California
 owner:
-  link: null
+  link: https://opendata-sccgis.opendata.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Santa Clara County Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -55,6 +62,37 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- GIS
+- Santa Clara
+- California
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00003076

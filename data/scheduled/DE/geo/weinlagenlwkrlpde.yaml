@@ -11,12 +11,14 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+description: ''
 endpoints:
 - type: wms111
   url: http://weinlagen.lwk-rlp.de:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +67,19 @@ langs:
 - id: DE
   name: German
 link: http://weinlagen.lwk-rlp.de:80/geoserver
-name: weinlagen.lwk-rlp.de:80
+name: weinlagen.lwk-rlp.de:80/geoserver
 owner:
-  link: null
+  link: https://www.lwk-rlp.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-RP
+      name: Rheinland-Pfalz
+  name: Landwirtschaftskammer Rheinland-Pfalz (LWK RLP)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -88,6 +93,21 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- weinlagen
+- geodata
+- wine
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00001412

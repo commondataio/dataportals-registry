@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-ID
+      name: Idaho
+description: ArcGIS REST services endpoint hosted by Clearwater County GIS department.
 endpoints:
 - type: arcgis:rest:info
   url: http://gis.clearwatercounty.org/arcgis/rest/info?f=pjson
@@ -33,16 +35,19 @@ endpoints:
 id: gisclearwatercountyorg
 langs: []
 link: http://gis.clearwatercounty.org/arcgis/rest/services
-name: gis.clearwatercounty.org
+name: GIS services data catalog (Clearwater County)
 owner:
-  link: null
+  link: http://gis.clearwatercounty.org/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-ID
+      name: Idaho
+  name: Clearwater County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -56,6 +61,19 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- geospatial
+- ArcGIS
+- map services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003984

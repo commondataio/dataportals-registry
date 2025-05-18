@@ -10,12 +10,16 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GR-M
+      name: Kriti
+description: Main open data catalog of CERTH-HIT, providing access to datasets related
+  to traffic networks, real-time and historical speeds, travel times, device detections,
+  and more for the Thessaloniki region and Greece.
 endpoints:
 - type: ckan
   url: https://opendata.imet.gr/api/3
@@ -31,16 +35,19 @@ langs:
 - id: EL
   name: Greek
 link: https://opendata.imet.gr
-name: opendata.imet.gr
+name: CERTH-HIT OpenData Hub Greece
 owner:
-  link: null
+  link: https://opendata.imet.gr
   location:
     country:
       id: GR
       name: Greece
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GR-M
+      name: Kriti
+  name: CERTH-HIT
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -52,6 +59,17 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- traffic
+- transportation
+- travel times
+- real-time data
+- historical data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004546

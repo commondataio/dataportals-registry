@@ -9,14 +9,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: NZ
+      name: New Zealand
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-WKO
+      name: Waikato
+description: GIS and geospatial data catalog for Waikato, New Zealand
 endpoints:
 - type: dcatap201
   url: https://data-waikatolass.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -33,14 +35,17 @@ langs: []
 link: https://data-waikatolass.opendata.arcgis.com
 name: data-waikatolass.opendata.arcgis.com
 owner:
-  link: null
+  link: https://data-waikatolass.opendata.arcgis.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-WKO
+      name: Waikato
+  name: Waikato LASS
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -54,6 +59,15 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- GIS
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00003172

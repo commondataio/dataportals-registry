@@ -9,14 +9,18 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: MX
+      name: Mexico
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+description: Repositorio estatal administrado por el Instituto de Planeación, Estadística
+  y Geografía de Guanajuato. Permite descargar capas geográficas, consultar y crear
+  mapas.
 endpoints:
 - type: wms111
   url: http://geoinfo.iplaneg.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -71,16 +75,19 @@ langs:
 - id: EN
   name: English
 link: http://geoinfo.iplaneg.net/
-name: geoinfo.iplaneg.net
+name: Catálogo Geográfico SEIEG
 owner:
-  link: null
+  link: http://geoinfo.iplaneg.net/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+  name: Instituto de Planeación, Estadística y Geografía de Guanajuato
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -94,6 +101,13 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- map
+- GDF5.0
+- ISO 14825:2011
+topics:
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00000768

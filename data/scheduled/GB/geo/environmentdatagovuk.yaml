@@ -11,12 +11,18 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: Defra group have put in place the Data Services Platform to make environmental
+  data openly available to a wide range of users. The platform includes spatial data
+  feeds and APIs, supporting informed decisions and actions for the environment, food
+  and farming, and rural economy. Data is available in commonly used formats and via
+  APIs, with feeds suitable for GIS applications.
 endpoints:
 - type: arcgis:rest:info
   url: https://environment.data.gov.uk/arcgis/rest/info?f=pjson
@@ -37,16 +43,19 @@ langs:
 - id: EN
   name: English
 link: https://environment.data.gov.uk/arcgis/rest/services
-name: environment.data.gov.uk
+name: Defra Data Services Platform (arcgis map services)
 owner:
-  link: null
+  link: https://environment.data.gov.uk/arcgis/rest/services
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Department for Environment, Food and Rural Affairs (Defra)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -60,6 +69,16 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- environmental data
+- spatial data
+- GIS
+- APIs
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003695

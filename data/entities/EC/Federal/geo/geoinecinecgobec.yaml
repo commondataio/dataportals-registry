@@ -15,6 +15,8 @@ coverage:
     macroregion:
       id: '005'
       name: South America
+description: Catalog application to manage spatially referenced resources. Provides
+  metadata editing and search functions, facilitating access to geo-referenced databases.
 endpoints:
 - type: csw202
   url: https://geoinec.inec.gob.ec/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -33,7 +35,7 @@ langs:
 - id: EN
   name: English
 link: https://geoinec.inec.gob.ec/geonetwork
-name: Ecuador statistics geonetwork
+name: GeoNEC - Ecuador Statistics Geonetwork
 owner:
   link: https://www.ecuadorencifras.gob.ec
   location:
@@ -59,5 +61,20 @@ status: active
 tags:
 - geospatial
 - has_api
-topics: []
+- statistics
+- spatial data
+- metadata
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00000511

@@ -10,12 +10,15 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: Open data portal for Machida City, Tokyo, providing access to municipal
+  datasets.
 endpoints:
 - type: ckan
   url: https://opendata.city.machida.tokyo.jp/api/3
@@ -33,14 +36,17 @@ langs:
 link: https://opendata.city.machida.tokyo.jp
 name: opendata.city.machida.tokyo.jp
 owner:
-  link: null
+  link: https://opendata.city.machida.tokyo.jp
   location:
     country:
       id: JP
       name: Japan
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
+  name: Machida City
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -53,5 +59,17 @@ software:
   name: CKAN
 status: scheduled
 tags: []
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: temp00004728

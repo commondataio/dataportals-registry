@@ -10,12 +10,15 @@ coverage:
     country:
       id: TH
       name: Thailand
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: TH-45
+      name: Roi Et
+description: Open data portal for government data as part of the Government Data Catalog
+  (GD Catalog), managed by a government agency in Roi Et, Thailand.
 endpoints:
 - type: ckan
   url: https://roiet.gdcatalog.go.th/api/3
@@ -41,14 +44,17 @@ langs:
 link: https://roiet.gdcatalog.go.th
 name: roiet.gdcatalog.go.th
 owner:
-  link: null
+  link: https://roiet.gdcatalog.go.th
   location:
     country:
       id: TH
       name: Thailand
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: TH-45
+      name: Roi Et
+  name: Unknown
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -60,6 +66,12 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- government data
+- GD Catalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00005327

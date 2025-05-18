@@ -11,12 +11,14 @@ coverage:
     country:
       id: BG
       name: Bulgaria
-    level: 20
+    level: 30
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BG-07
+      name: Gabrovo
+description: Data catalog of geospatial services and datasets for Gabrovo region
 endpoints:
 - type: arcgis:rest:info
   url: http://gishub.gabrovo.bg/arcgis/rest/info?f=pjson
@@ -37,14 +39,17 @@ langs:
 link: http://gishub.gabrovo.bg/arcgis/rest/services
 name: gishub.gabrovo.bg
 owner:
-  link: null
+  link: http://gishub.gabrovo.bg/
   location:
     country:
       id: BG
       name: Bulgaria
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BG-07
+      name: Gabrovo
+  name: Municipality of Gabrovo
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,22 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- GIS
+- rest services
+- open data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00000076

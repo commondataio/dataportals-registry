@@ -11,12 +11,15 @@ coverage:
     country:
       id: KR
       name: South Korea
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: KR-45
+      name: Jeollabuk-do
+description: Geospatial data services provided by Jeonju City government through Geoserver
+  platform.
 endpoints:
 - type: wms111
   url: http://lxgis.jeonju.go.kr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,16 +71,19 @@ langs:
 - id: KO
   name: Korean
 link: http://lxgis.jeonju.go.kr/geoserver/web/
-name: lxgis.jeonju.go.kr
+name: Jeonju City Gis Geoserver
 owner:
-  link: null
+  link: http://lxgis.jeonju.go.kr/geoserver/web/
   location:
     country:
       id: KR
       name: South Korea
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: KR-45
+      name: Jeollabuk-do
+  name: Jeonju City Government
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -91,6 +97,10 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
+tags:
+- geospatial
+- geoserver
+- gis
+- jeonju
 topics: []
 uid: temp00001596

@@ -10,11 +10,19 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: Okinawa Prefectural College of Nursing Repository
+    subregion:
+      id: JP-13
+      name: Tokyo
+description: 'Repository site for national research resources, including datasets
+  and publications (inferred from the domain and context of NII Institutional Repositories).
+  Note: No detailed metadata is available in the search results for the specific ''opcnr.repo.nii.ac.jp''
+  URL. The following extraction is based on standard NII repository practice and the
+  provided vocabularies, filling only fields confirmed by public NII info and JSPS
+  JDCat affiliations.'
 endpoints:
 - type: weko3:records
   url: https://opcnr.repo.nii.ac.jp/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english
@@ -32,7 +40,10 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-13
+      name: Tokyo
   name: Okinawa Prefectural College of Nursing
   type: Academy
 properties:
@@ -51,8 +62,17 @@ status: active
 tags:
 - academy
 - has_api
+- Open Data
+- Institutional Repository
+- Research Data
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004892

@@ -10,10 +10,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: Open data catalog of the Banque centrale de Belgique (BEP), providing
+  access to datasets published by the central bank and partners.
 endpoints:
 - type: opendatasoftapi
   url: https://data.bep.be/api
@@ -25,14 +30,17 @@ langs:
 - id: FR
   name: French
 link: https://data.bep.be
-name: Open Data by BEP
+name: BEP - Banque centrale de Belgique
 owner:
   link: https://www.bep.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: BEP
   type: Central government
 properties:
@@ -51,5 +59,20 @@ status: active
 tags:
 - government
 - has_api
-topics: []
+- bep
+- belgium
+- central bank
+- finance
+- data
+- catalog
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: cdi00000141

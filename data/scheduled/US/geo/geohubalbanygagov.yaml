@@ -11,12 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-GA
+      name: Georgia
+description: Discover, analyze and download data from City of Albany, GA Geohub. Download
+  in CSV, KML, Zip, GeoJSON, GeoTIFF or PNG. Find API links for GeoServices, WMS,
+  ...
 endpoints:
 - type: dcatap201
   url: https://geohub.albanyga.gov/api/feed/dcat-ap/2.0.1.json
@@ -33,16 +37,19 @@ langs:
 - id: EN
   name: English
 link: https://geohub.albanyga.gov
-name: geohub.albanyga.gov
+name: City of Albany, GA Geohub
 owner:
-  link: null
+  link: https://geohub.albanyga.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: City of Albany, GA
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -56,6 +63,11 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
+tags:
+- zoning
+- zipcodes
+- spatial
+- geodata
+- open data
 topics: []
 uid: temp00002789

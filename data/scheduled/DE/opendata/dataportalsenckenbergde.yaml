@@ -10,12 +10,16 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-HE
+      name: Hessen
+description: Data catalog providing access to datasets and metadata from Senckenberg
+  research units and partner organizations, including biodiversity, earth system research,
+  and natural science collections.
 endpoints:
 - type: ckan
   url: https://dataportal.senckenberg.de/api/3
@@ -35,16 +39,20 @@ langs:
 - id: DE
   name: German
 link: https://dataportal.senckenberg.de
-name: dataportal.senckenberg.de
+name: Senckenberg (meta) data catalog
 owner:
-  link: null
+  link: https://dataportal.senckenberg.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-HE
+      name: Hessen
+  name: Senckenberg Leibniz Institution for Biodiversity and Earth System Research
+    (SGN)
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -56,6 +64,26 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- biodiversity
+- earth system research
+- natural science
+- metadata
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00000210

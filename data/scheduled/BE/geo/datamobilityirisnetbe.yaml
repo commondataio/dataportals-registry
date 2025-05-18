@@ -11,12 +11,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: Geoportal providing geodata services, including WMS, WFS, and WPS, focused
+  on mobility data for the Brussels region.
 endpoints:
 - type: wms111
   url: http://data-mobility.irisnet.be/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +59,19 @@ langs:
 - id: FR
   name: French
 link: http://data-mobility.irisnet.be/geoserver
-name: data-mobility.irisnet.be
+name: data-mobility.irisnet.be Geoserver
 owner:
-  link: null
+  link: http://data-mobility.irisnet.be/geoserver
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: ''
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -79,6 +85,15 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- mobility
+- geoserver
+- geoportal
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00001240

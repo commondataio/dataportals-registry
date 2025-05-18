@@ -11,10 +11,14 @@ coverage:
     country:
       id: PE
       name: Peru
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
+    subregion:
+      id: PE-UCA
+      name: Ucayali
+description: Portal de Datos y Metadatos del Gobierno Regional de Ucayali
 endpoints:
 - type: geonetwork:query
   url: http://catalogo.regionucayali.gob.pe/geonetwork/srv/eng/q
@@ -30,14 +34,17 @@ langs:
 - id: ES
   name: Spanish
 link: http://catalogo.regionucayali.gob.pe/geonetwork
-name: Portal de Datos de Gobierno Regional de Ucayali
+name: Portal de Datos del Gobierno Regional de Ucayali
 owner:
   link: https://www.gob.pe/regionucayali
   location:
     country:
       id: PE
       name: Peru
-    level: 20
+    level: 30
+    subregion:
+      id: PE-UCA
+      name: Ucayali
   name: Gobierno Regional de Ucayali
   type: Regional government
 properties:
@@ -58,8 +65,23 @@ tags:
 - geospatial
 - government
 - has_api
+- cartografia
+- plano
+- planeamiento
+- catastro
+- servicios geográficos
+- datos abiertos
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00002128

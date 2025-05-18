@@ -10,12 +10,17 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: The DBT is the common platform for Thuringian universities Electronic
-  publishing and long-term archiving of multimedia documents from research and teaching.
+    subregion:
+      id: DE-TH
+      name: Thuringen
+description: Website hosting academic and institutional databases (including PDF,
+  MySQL, Access), covering topics like traits, spatial/geometric data, multimedia
+  constraints, virus databases, and more. Not directly a data catalog, but acts as
+  a repository providing access to various data and publications.
 endpoints:
 - type: mycore:objects
   url: https://www.db-thueringen.de/api/v2/objects
@@ -46,7 +51,10 @@ owner:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
+    subregion:
+      id: DE-TH
+      name: Thuringen
   name: University Jena
   type: Academy
 properties:
@@ -64,8 +72,23 @@ software:
 status: active
 tags:
 - scientific
+- academic data
+- institutional data
+- spatial data
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004483

@@ -11,12 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MS
+      name: Mississippi
+description: ArcGIS REST Services Directory for the Mississippi Department of Environmental
+  Quality (MDEQ). Provides access to geospatial data and services for environmental
+  monitoring, permitting, and regulatory programs.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.deq.ms.gov/arcgis/rest/info?f=pjson
@@ -35,16 +39,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.deq.ms.gov/arcgis/rest/services
-name: gis.deq.ms.gov
+name: gis.deq.ms.gov/arcgis/rest/services
 owner:
-  link: null
+  link: https://www.mdeq.ms.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MS
+      name: Mississippi
+  name: Mississippi Department of Environmental Quality (MDEQ)
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,29 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- environmental monitoring
+- ArcGIS
+- MDEQ
+- Mississippi
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00005689

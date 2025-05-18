@@ -11,11 +11,14 @@ coverage:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
     macroregion:
       id: '034'
       name: Southern Asia
-description: MOHUA ArcGIS server
+    subregion:
+      id: IN-DL
+      name: Delhi
+description: URL pointing to a government-provided ArcGIS REST services catalog
 endpoints:
 - type: arcgis:rest:info
   url: https://iuo.mohua.gov.in/arcgis/rest/info?f=pjson
@@ -41,7 +44,10 @@ owner:
     country:
       id: IN
       name: India
-    level: 20
+    level: 30
+    subregion:
+      id: IN-DL
+      name: Delhi
   name: Ministry of Housing and Urban affairs of India
   type: Central government
 properties:
@@ -57,6 +63,24 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- ArcGIS
+- REST
+- Services
+- GIS
+- Spatial Data
+- Government Data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00005128

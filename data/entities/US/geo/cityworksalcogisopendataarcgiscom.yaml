@@ -11,11 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: City Works Datasets All Datasets
+    subregion:
+      id: US-AL
+      name: Alabama
+description: Open data catalog for Cityworks and ALCoGIS hosted on ArcGIS Online platform.
 endpoints:
 - type: dcatap201
   url: https://cityworks-alcogis.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -32,16 +35,19 @@ langs:
 - id: EN
   name: English
 link: https://cityworks-alcogis.opendata.arcgis.com/
-name: Allegheny County City Works Data
+name: Cityworks ALCoGIS Open Data Portal
 owner:
-  link: null
+  link: https://cityworks-alcogis.opendata.arcgis.com/
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-AL
+      name: Alabama
   name: County of Allegheny, PA
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -55,6 +61,10 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
+tags:
+- ArcGIS
+- Open Data
+- ALCoGIS
+- Cityworks
 topics: []
 uid: cdi00003327

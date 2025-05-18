@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-MO
+      name: Missouri
+description: GIS REST API endpoint for the City of St. Louis, providing access to
+  a variety of spatial datasets across city departments and themes.
 endpoints:
 - type: arcgis:rest:info
   url: https://stlgis3.stlouis-mo.gov/arcgis/rest/info?f=pjson
@@ -35,16 +38,19 @@ langs:
 - id: EN
   name: English
 link: https://stlgis3.stlouis-mo.gov/arcgis/rest/services
-name: stlgis3.stlouis-mo.gov
+name: stlgis3.stlouis-mo.gov/arcgis/rest/services
 owner:
-  link: null
+  link: https://www.stlouis-mo.gov
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-MO
+      name: Missouri
+  name: City of St. Louis
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +64,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- Open Data
+- Spatial
 topics: []
 uid: temp00005436

@@ -10,12 +10,17 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: University of Southampton Institutional Research Repository, ePrints
-  Soton
+    subregion:
+      id: GB-ENG
+      name: England
+description: University of Southampton Institutional Research Repository, containing
+  details and, if available, downloads of research outputs including journal articles,
+  books, PhD theses, conference papers, data, reports, working papers, and art exhibitions.
+  Research data can be open or on request depending on the nature.
 endpoints:
 - type: oaipmh20
   url: https://eprints.soton.ac.uk/cgi/oai2?verb=Identify
@@ -60,7 +65,10 @@ owner:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
   name: University of Southampton
   type: Academy
 properties:
@@ -78,8 +86,14 @@ software:
 status: active
 tags:
 - scientific
+- research outputs
+- open access
+- data repository
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00004479

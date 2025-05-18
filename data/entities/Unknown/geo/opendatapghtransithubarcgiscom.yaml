@@ -9,12 +9,15 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: US
+      name: United States
+    level: 30
     macroregion:
-      id: World
-      name: World
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-PA
+      name: Pennsylvania
 description: 'Pittsburgh Regional Transit Open Geospatial Data Find open data about
   PRT''s regional transit system. Search for: Routes - Stops &amp; Stations - Walksheds
   - Park &amp; Rides Fixed Guideways - Fare Vending Locations - Sidewalks Our System
@@ -39,16 +42,19 @@ langs:
 - id: EN
   name: English
 link: https://open-data-pgh-transit.hub.arcgis.com/
-name: Pittsburgh Regional Transit Open GIS Data
+name: Pittsburgh Regional Transit Open GIS Data Catalog
 owner:
-  link: null
+  link: https://open-data-pgh-transit.hub.arcgis.com/
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-PA
+      name: Pennsylvania
+  name: Pittsburgh Regional Transit
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -62,6 +68,23 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- Transit
+- Routes
+- Stops
+- Park and Ride
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00003073

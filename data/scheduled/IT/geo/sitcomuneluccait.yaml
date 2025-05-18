@@ -11,12 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-52
+      name: Toscana
+description: GIS services provided by the Comune di Lucca via ArcGIS REST API.
 endpoints:
 - type: arcgis:portals:self
   url: https://sit.comune.lucca.it/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,19 @@ langs:
 - id: IT
   name: Italian
 link: https://sit.comune.lucca.it/arcgis/rest/services
-name: sit.comune.lucca.it
+name: ArcGIS REST Services (Comune di Lucca)
 owner:
-  link: null
+  link: https://sit.comune.lucca.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-52
+      name: Toscana
+  name: Comune di Lucca
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +65,11 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- GIS
+- REST
+- ArcGIS
+- public administration
+- geospatial
 topics: []
 uid: temp00001586

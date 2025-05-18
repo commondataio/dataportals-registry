@@ -10,12 +10,17 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-W
+      name: Corrientes
+description: El Portal de Datos Abiertos es una iniciativa ligada a las políticas
+  de Gobierno Abierto que sirve para almacenar y compartir las bases de datos producidas
+  por el Municipio para facilitar el conocimiento del gobierno, fortalecer el rendimiento
+  de cuentas y mejorar la participación ciudadana.
 endpoints:
 - type: ckan:package-search
   url: https://datos.ciudaddecorrientes.gov.ar/api/3/action/package_search
@@ -38,16 +43,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://datos.ciudaddecorrientes.gov.ar
-name: datos.ciudaddecorrientes.gov.ar
+name: Portal de Datos Abiertos - Municipalidad de Corrientes
 owner:
-  link: null
+  link: https://datos.ciudaddecorrientes.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-W
+      name: Corrientes
+  name: Municipalidad de Corrientes
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -59,6 +67,11 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- open data
+- government datasets
+- environmental data
+- public transport data
+- health data
 topics: []
 uid: temp00004466

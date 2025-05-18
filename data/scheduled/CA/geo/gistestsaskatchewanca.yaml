@@ -11,12 +11,14 @@ coverage:
     country:
       id: CA
       name: Canada
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+description: Web mapping and GIS REST services managed by the Government of Saskatchewan.
 endpoints:
 - type: arcgis:portals:self
   url: https://gistest.saskatchewan.ca/portal/sharing/rest/portals/self?f=pjson
@@ -37,14 +39,17 @@ langs:
 link: https://gistest.saskatchewan.ca/arcgis/rest/services
 name: gistest.saskatchewan.ca
 owner:
-  link: null
+  link: https://gistest.saskatchewan.ca/arcgis/rest/services
   location:
     country:
       id: CA
       name: Canada
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: CA-SK
+      name: Saskatchewan
+  name: Government of Saskatchewan
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,29 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- GIS
+- geospatial data
+- map services
+- government data
+- Saskatchewan
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001305

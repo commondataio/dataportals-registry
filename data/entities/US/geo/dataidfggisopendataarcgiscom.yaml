@@ -11,10 +11,13 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
 description: 'NOTICE: IDFG is migrating our ArcGIS Server deployment. Services consumed
   from https://gis.idfg.idaho.gov/server/rest/services will be taken offline later
   this year. Please migrate these services to our new ArcGIS Server location, https://gisportal-idfg.idaho.gov/hosting/rest/services.
@@ -41,16 +44,19 @@ langs:
 - id: EN
   name: English
 link: https://data-idfggis.opendata.arcgis.com/
-name: Idaho Fish and Game
+name: Paris Region Open Data Hub
 owner:
-  link: null
+  link: https://www.iledefrance-mobilites.fr
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
   name: Idaho Department of Fish and Game - AGOL
-  type: Unknown
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -64,6 +70,17 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- mobility
+- transport
+- public transport
+- gis
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00003446

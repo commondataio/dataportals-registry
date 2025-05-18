@@ -11,13 +11,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: EarthWorks is Stanford University Libraries discovery tool for Geographic
-  Information Systems (GIS) data. It combines data sources from many institutions
-  allowing users to search through tens of thousands of geospatial datasets.
+    subregion:
+      id: US-CA
+      name: California
+description: Discovery tool for geospatial (a.k.a. GIS) data owned by Stanford and
+  partner institutions, allowing users to search and browse GIS collections, including
+  topographical maps, historical maps, nautical charts, thematic maps, and atlases.
 endpoints:
 - type: blacklight:catalog
   url: https://earthworks.stanford.edu/catalog.json
@@ -41,7 +44,10 @@ owner:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: Stanford University
   type: Academy
 properties:
@@ -59,4 +65,10 @@ software:
 status: active
 tags:
 - has_api
+- geospatial
+- gis
+- maps
+- cartography
+- metadata
+- discovery
 uid: cdi00002386

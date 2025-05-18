@@ -10,12 +10,18 @@ coverage:
     country:
       id: LV
       name: Latvia
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: LV-RIX
+      name: Riga
+description: CLARIN.lv Repository is a digital infrastructure for language resources,
+  offering data, tools, and services for research and scholarly use. It supports long-term
+  availability, persistent identifiers, and metadata management for deposited datasets.
+  The repository does not process or alter primary data, but allows versioning and
+  maintains audit trails for integrity and transparency.
 endpoints:
 - type: opensearch
   url: https://repository.clarin.lv:443/repository/xmlui/open-search/description.xml
@@ -26,14 +32,17 @@ langs:
 link: https://repository.clarin.lv/repository/xmlui/
 name: repository.clarin.lv
 owner:
-  link: null
+  link: https://www.clarin.eu/
   location:
     country:
       id: LV
       name: Latvia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: LV-RIX
+      name: Riga
+  name: CLARIN
+  type: Academy
 rights:
   license_id: null
   license_name: null
@@ -45,6 +54,12 @@ software:
   id: custom
   name: Custom software
 status: scheduled
-tags: []
-topics: []
+tags:
+- language resources
+- research
+- linguistics
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 uid: temp00000475

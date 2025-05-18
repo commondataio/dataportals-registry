@@ -10,12 +10,17 @@ coverage:
     country:
       id: DE
       name: Germany
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: DE-BE
+      name: Berlin
+description: Institutional open access repository of the Humboldt University in Berlin,
+  available for publishing research data. Supports open, standardized, non-proprietary
+  formats and offers persistent identifiers (DOI) for both research data and text
+  publications.
 endpoints:
 - type: oaipmh20
   url: https://edoc.hu-berlin.de/oai/request?verb=Identify
@@ -49,14 +54,17 @@ langs:
 link: https://edoc.hu-berlin.de
 name: edoc.hu-berlin.de
 owner:
-  link: null
+  link: https://edoc.hu-berlin.de
   location:
     country:
       id: DE
       name: Germany
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: DE-BE
+      name: Berlin
+  name: Humboldt-Universität zu Berlin
+  type: Academy
 properties:
   has_doi: true
 rights:
@@ -70,6 +78,19 @@ software:
   id: dspace
   name: DSpace
 status: scheduled
-tags: []
-topics: []
+tags:
+- university repository
+- open access
+- research data
+- Berlin
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001852

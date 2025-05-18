@@ -11,13 +11,16 @@ coverage:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Welcome to the City of Parramatta’s Data Visualisation Hub. This page
-  provides you with access to interactive maps so that you can discover and view useful
-  information about the City.
+    subregion:
+      id: AU-NSW
+      name: New South Wales
+description: Official open data portal for Parramatta City Council, enabling public
+  access to various datasets, maps, and applications related to local government operations,
+  community services, and urban planning.
 endpoints:
 - type: dcatap201
   url: https://open-data-parracity.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -36,14 +39,17 @@ langs:
 link: https://open-data-parracity.hub.arcgis.com/
 name: City of Parramatta Data Visualisation
 owner:
-  link: null
+  link: https://open-data-parracity.hub.arcgis.com/
   location:
     country:
       id: AU
       name: Australia
-    level: 20
+    level: 30
+    subregion:
+      id: AU-NSW
+      name: New South Wales
   name: City of Parramatta - ArcGIS Online (AGOL)
-  type: Unknown
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -57,6 +63,37 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
-topics: []
+tags:
+- council
+- open data
+- parramatta
+- maps
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00002499

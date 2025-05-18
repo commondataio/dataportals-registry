@@ -11,12 +11,14 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-SR
+      name: Sulawesi Barat
+description: Geospatial data catalog
 endpoints:
 - type: wms111
   url: http://sulbarprov.ina-sdi.or.id:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,16 +58,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://sulbarprov.ina-sdi.or.id:8080/geoserver
-name: sulbarprov.ina-sdi.or.id:8080
+name: sulbarprov.ina-sdi.or.id:8080/geoserver
 owner:
-  link: null
+  link: http://sulbarprov.ina-sdi.or.id:8080/geoserver
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-SR
+      name: Sulawesi Barat
+  name: sulbarprov.ina-sdi.or.id
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -79,6 +84,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- geospatial data
+- sulawesi barat
+- indonesia regional government
+- data catalog
+- spatial data infrastructure
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005225

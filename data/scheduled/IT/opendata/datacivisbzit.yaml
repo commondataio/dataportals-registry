@@ -14,8 +14,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Another vocabulary data_theme should be used to assign topic according
+  to EU data theme vocabulary associated with Data Catalog Vocabulary application
+  profile (DCAT-AP).
 endpoints:
 - type: ckan
   url: https://data.civis.bz.it/api/3
@@ -31,16 +32,18 @@ langs:
 - id: IT
   name: Italian
 link: https://data.civis.bz.it
-name: data.civis.bz.it
+name: 'First vocabulary owner_type_reference should be used to identify type of the
+  owner of the data catalogs and could have following values: Central government,
+  Regional government, Local government, Business, Civil society, Academy, International.'
 owner:
-  link: null
+  link: https://www.civisanalytics.com/platform/
   location:
     country:
       id: IT
       name: Italy
     level: 20
-  name: ''
-  type: Unknown
+  name: Civis Analytics
+  type: Business
 rights:
   license_id: null
   license_name: null
@@ -52,6 +55,18 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- Data Catalog
+- AI Platform
+- Managed Data Warehouse
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00002954

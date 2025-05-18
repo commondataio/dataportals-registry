@@ -10,12 +10,16 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: GRIIDC is a data repository based out of the Harte Research Institute
-  for Gulf of Mexico Studies at Texas A&M University-Corpus Christi.
+    subregion:
+      id: US-TX
+      name: Texas
+description: ERDDAP is a data server that converts, catalogs, and serves scientific
+  datasets with a user-friendly interface. It enables downloading subsets of datasets
+  in common file formats and making graphs and maps.
 endpoints:
 - type: erddap:index
   url: https://erddap.griidc.org/erddap/index.json
@@ -30,14 +34,17 @@ langs:
 - id: EN
   name: English
 link: https://erddap.griidc.org/erddap/index.html
-name: GRIIDC ERDDAP
+name: GRIIDC ERDDAP Data Catalog
 owner:
   link: https://www.harteresearch.org
   location:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
   name: Harte Research Institute for Gulf of Mexico Studies
   type: Academy
 properties:
@@ -57,6 +64,12 @@ tags:
 - oceans
 - seas
 - environment
+- scientific data
+- oceanographic data
+- hydrographic data
+- current measurements
+- underway sensor measurements
+- drifter/float trajectories
 topics:
 - id: TECH
   name: Science and technology
@@ -67,4 +80,10 @@ topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00005275

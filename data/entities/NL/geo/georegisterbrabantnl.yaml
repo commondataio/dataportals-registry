@@ -11,10 +11,15 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
+    subregion:
+      id: NL-NB
+      name: Noord-Brabant
+description: GeoNetwork opensource allows to easily share geographically referenced
+  thematic information between different organizations.
 endpoints:
 - type: geonetwork:query
   url: https://georegister.brabant.nl/geonetwork/srv/eng/q
@@ -51,7 +56,10 @@ owner:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
+    subregion:
+      id: NL-NB
+      name: Noord-Brabant
   name: Provincie Noord-Brabant
   type: Regional government
 properties:
@@ -71,8 +79,14 @@ status: active
 tags:
 - geospatial
 - has_api
+- geographical
+- metadata
+- Noord-Brabant
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00002120

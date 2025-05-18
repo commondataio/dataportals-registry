@@ -18,7 +18,8 @@ coverage:
     subregion:
       id: FI-18
       name: Uusimaa
-description: Nykytila Suunnitelma Vaikutusten arviointi
+description: Data catalog for HSL (Helsinki Region Transport) containing datasets
+  on public transport
 endpoints:
 - type: dcatap201
   url: https://mal-2023-aineistojen-latauspalvelu-hslhrt.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
@@ -35,9 +36,9 @@ langs:
 - id: FI
   name: Finnish
 link: https://mal-2023-aineistojen-latauspalvelu-hslhrt.hub.arcgis.com/
-name: MAL 2023
+name: HSL Helsinki Region Transport
 owner:
-  link: null
+  link: https://www.hsl.fi/en
   location:
     country:
       id: FI
@@ -61,9 +62,19 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: scheduled
-tags: []
+tags:
+- public transport
+- transit
+- schedules
+- routes
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00002661

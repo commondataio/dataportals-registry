@@ -9,10 +9,18 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
+    subregion:
+      id: GR-A
+      name: Anatoliki Makedonia kai Thraki
+description: Centralized GIS and open data portal of the Municipality of Thessaloniki,
+  offering access to approximately 90 open datasets, available in near real time,
+  supporting transparency and repurposing of data under an appropriate legal framework.
+  The portal is compliant with the EU INSPIRE Directive and provides geospatial and
+  other municipal datasets.
 endpoints:
 - type: ckan:package-list
   url: http://opendata.thessaloniki.gr/api/3/action/package_list
@@ -34,7 +42,10 @@ owner:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
+    subregion:
+      id: GR-A
+      name: Anatoliki Makedonia kai Thraki
   name: City of Thessaloniki
   type: Regional government
 properties:
@@ -53,8 +64,43 @@ software:
 status: active
 tags:
 - government
+- gis
+- open data
+- INSPIRE
+- geospatial
+- transparency
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: cdi00000862

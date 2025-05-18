@@ -11,12 +11,15 @@ coverage:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
     macroregion:
       id: '035'
       name: South-eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ID-JK
+      name: Jakarta Raya
+description: Geoserver catalog provided by MetroKota as part of the Indonesian Spatial
+  Data Infrastructure (INA SDI) initiative.
 endpoints:
 - type: wms111
   url: http://metrokota.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,16 +68,19 @@ langs:
 - id: ID
   name: Indonesian
 link: http://metrokota.ina-sdi.or.id/geoserver
-name: metrokota.ina-sdi.or.id
+name: MetroKota INA SDI Geoserver
 owner:
-  link: null
+  link: http://metrokota.ina-sdi.or.id/geoserver
   location:
     country:
       id: ID
       name: Indonesia
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ID-JK
+      name: Jakarta Raya
+  name: MetroKota/INA SDI
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -88,6 +94,18 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geoserver
+- opendata
+- sdi
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005184

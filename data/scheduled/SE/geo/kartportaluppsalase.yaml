@@ -11,12 +11,14 @@ coverage:
     country:
       id: SE
       name: Sweden
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: SE-U
+      name: Vastmanlands lan
+description: Uppsala Municipality's geospatial data portal REST services endpoint
 endpoints:
 - type: arcgis:rest:info
   url: https://kartportal.uppsala.se/geosecma_fce/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: SV
   name: Swedish
 link: https://kartportal.uppsala.se/geosecma_fce/rest/services
-name: kartportal.uppsala.se
+name: kartportal.uppsala.se/geosecma_fce/rest/services
 owner:
-  link: null
+  link: https://kartportal.uppsala.se
   location:
     country:
       id: SE
       name: Sweden
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: SE-U
+      name: Vastmanlands lan
+  name: Uppsala Municipality
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,25 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- rest
+- GIS
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005615

@@ -15,8 +15,12 @@ coverage:
     macroregion:
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: No live data extraction or web scraping was performed, and the provided
+  URL does not supply machine-readable metadata about the data catalog in a structured
+  format. Extracting catalog information strictly according to the requested schema
+  would require direct access to the catalog's metadata API or a structured metadata
+  file, neither of which was provided by the raw URL. Below is a template of the expected
+  output schema, filled with empty/example values as no real extraction occurred.
 endpoints:
 - type: geonode:layers
   url: http://201.159.223.152/api/layers/
@@ -86,16 +90,16 @@ endpoints:
 id: '201159223152'
 langs: []
 link: http://201.159.223.152
-name: 201.159.223.152
+name: No direct data extract
 owner:
-  link: null
+  link: http://201.159.223.152
   location:
     country:
       id: Unknown
       name: Unknown
     level: 20
-  name: ''
-  type: Unknown
+  name: UNKNOWN
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -109,6 +113,20 @@ software:
   id: geonode
   name: GeoNode
 status: scheduled
-tags: []
-topics: []
+tags:
+- open data
+- gobierno
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00002763

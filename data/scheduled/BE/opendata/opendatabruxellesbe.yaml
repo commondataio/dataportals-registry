@@ -10,11 +10,15 @@ coverage:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: Open Data Ville de Bruxelles catalog
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+description: The City of Brussels makes its datasets available to everyone. This gives
+  you access to hundreds of data on culture, tourism, mobility, municipal facilities.
 endpoints:
 - type: opendatasoft
   url: https://opendata.bruxelles.be/api
@@ -29,14 +33,17 @@ langs:
 link: https://opendata.bruxelles.be
 name: Open Data Ville de Bruxelles catalog
 owner:
-  link: null
+  link: https://opendata.bruxelles.be
   location:
     country:
       id: BE
       name: Belgium
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+  name: City of Brussels
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -50,6 +57,28 @@ software:
   id: opendatasoft
   name: OpenDataSoft
 status: scheduled
-tags: []
-topics: []
+tags:
+- Open data
+- Brussels
+- Belgium
+- municipal data
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002283

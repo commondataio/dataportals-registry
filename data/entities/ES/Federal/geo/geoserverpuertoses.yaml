@@ -15,7 +15,8 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Spain Port System Geoserver
+description: GeoServer deployment by the Spanish Port System (Puertos del Estado),
+  providing spatial data services for port service areas.
 endpoints:
 - type: wms111
   url: https://geoserver.puertos.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,7 +65,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoserver.puertos.es/geoserver
-name: Spain Port System Geoserver
+name: GeoServer Spanish Port System
 owner:
   link: https://www.puertos.es/en-us
   location:
@@ -87,6 +88,19 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- ports
+- WMS
+- WFS
+- INSPIRE
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: cdi00005047

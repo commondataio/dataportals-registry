@@ -11,27 +11,34 @@ coverage:
     country:
       id: GB
       name: United Kingdom
-    level: 20
+    level: 30
     macroregion:
       id: '154'
       name: Northern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: GB-ENG
+      name: England
+description: A data catalog for geospatial datasets provided by the Ribble Valley
+  area, likely serving as a portal for government and public sector geospatial data,
+  accessible via a GeoServer interface.
 id: inspireribblevalleygovuk
 langs:
 - id: EN
   name: English
 link: http://inspire.ribblevalley.gov.uk/geoserver
-name: inspire.ribblevalley.gov.uk
+name: inspire.ribblevalley.gov.uk/geoserver
 owner:
-  link: null
+  link: http://inspire.ribblevalley.gov.uk/geoserver
   location:
     country:
       id: GB
       name: United Kingdom
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Ribble Valley
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -45,6 +52,12 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geodata
+- wms
+- wfs
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00005010

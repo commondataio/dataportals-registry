@@ -8,14 +8,16 @@ content_types:
 coverage:
 - location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
+      id: CA
+      name: Canada
+    level: 30
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+description: Open data portal for the Government of New Brunswick
 endpoints:
 - type: dcatus11
   url: https://gnb.socrata.com/data.json
@@ -30,16 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://gnb.socrata.com
-name: gnb.socrata.com
+name: Open Data New Brunswick
 owner:
-  link: null
+  link: https://gnb.socrata.com
   location:
     country:
-      id: Unknown
-      name: Unknown
-    level: 20
-  name: ''
-  type: Unknown
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-NB
+      name: New Brunswick
+  name: Government of New Brunswick
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -53,6 +58,16 @@ software:
   id: socrata
   name: Socrata
 status: scheduled
-tags: []
-topics: []
+tags:
+- multidisciplinary
+- geonb
+- new brunswick
+- nouveau-brunswick
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00000941

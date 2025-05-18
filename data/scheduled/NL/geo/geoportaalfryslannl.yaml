@@ -11,12 +11,14 @@ coverage:
     country:
       id: NL
       name: Netherlands
-    level: 20
+    level: 30
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: NL-FR
+      name: Fryslan
+description: ArcGIS services catalog for geospatial data in Fryslân (Friesland) region
 endpoints:
 - type: arcgis:rest:info
   url: https://geoportaal.fryslan.nl/arcgis/rest/info?f=pjson
@@ -35,16 +37,19 @@ langs:
 - id: NL
   name: Dutch
 link: https://geoportaal.fryslan.nl/arcgis/services
-name: geoportaal.fryslan.nl
+name: geoportaal.fryslan.nl/arcgis/services
 owner:
-  link: null
+  link: https://geoportaal.fryslan.nl
   location:
     country:
       id: NL
       name: Netherlands
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: NL-FR
+      name: Fryslan
+  name: geoportaal.fryslan.nl
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -58,6 +63,11 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- geospatial
+- ArcGIS
+- open data
+- services
+- Friesland
 topics: []
 uid: temp00005259

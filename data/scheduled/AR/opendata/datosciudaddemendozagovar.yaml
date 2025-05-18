@@ -10,12 +10,15 @@ coverage:
     country:
       id: AR
       name: Argentina
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: AR-M
+      name: Mendoza
+description: El Portal de Datos Abiertos pone a disposición los datos del gobierno
+  municipal para que puedas consultarlos, descargarlos y reutilizarlos.
 endpoints:
 - type: ckan:package-search
   url: https://datos.ciudaddemendoza.gov.ar/api/3/action/package_search
@@ -38,16 +41,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://datos.ciudaddemendoza.gov.ar
-name: datos.ciudaddemendoza.gov.ar
+name: Portal de Datos Abiertos de la Ciudad de Mendoza
 owner:
-  link: null
+  link: https://datos.ciudaddemendoza.gov.ar
   location:
     country:
       id: AR
       name: Argentina
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: AR-M
+      name: Mendoza
+  name: Gobierno de la Ciudad de Mendoza
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -59,6 +65,9 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
+tags:
+- Open Data
+- Municipal data
+- Argentina
 topics: []
 uid: temp00004468

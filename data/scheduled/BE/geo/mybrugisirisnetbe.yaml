@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer Web Service providing anonymous access to spatial data layers
+  for Brussels (BruGIS).
 endpoints:
 - type: wms111
   url: https://mybrugis.irisnet.be/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -68,16 +68,16 @@ langs:
 - id: FR
   name: French
 link: https://mybrugis.irisnet.be/geoserver
-name: mybrugis.irisnet.be
+name: GeoServer at mybrugis.irisnet.be
 owner:
-  link: null
+  link: https://mybrugis.irisnet.be/geoserver
   location:
     country:
       id: BE
       name: Belgium
     level: 20
-  name: ''
-  type: Unknown
+  name: BruGIS / Urban Brussels
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -91,6 +91,24 @@ software:
   id: geoserver
   name: GeoServer
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- Brussels
+- GIS
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00003400

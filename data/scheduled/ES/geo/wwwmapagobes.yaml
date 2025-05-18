@@ -11,12 +11,19 @@ coverage:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: 'El catálogo de metadatos del portal IDE del Ministerio contiene los
+  metadatos (descripción de los datos) de los productos y servicios que ofrece el
+  Ministerio, facilitando la búsqueda y consulta de información espacial mediante
+  opciones como nombre, área geográfica, coordenadas, categoría temática y tipo de
+  dato. Permite descargar fichas de metadatos y visualizar mapas mediante servicios
+  interoperables (OGC: WMS, WFS, WCS).'
 endpoints:
 - type: csw202
   url: https://www.mapa.gob.es/ide/metadatos/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -29,16 +36,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://www.mapa.gob.es/ide/metadatos
-name: www.mapa.gob.es
+name: Catálogo de Metadatos del Ministerio de Agricultura, Pesca y Alimentación (MAPA)
 owner:
-  link: null
+  link: https://www.mapa.gob.es/ide/metadatos
   location:
     country:
       id: ES
       name: Spain
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+  name: Ministerio de Agricultura, Pesca y Alimentación
+  type: Central government
 properties:
   has_doi: true
 rights:
@@ -52,6 +62,28 @@ software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- metadata
+- agriculture
+- fisheries
+- food
+- government
+- Spain
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00003567

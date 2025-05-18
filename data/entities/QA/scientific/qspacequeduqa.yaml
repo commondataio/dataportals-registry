@@ -10,13 +10,17 @@ coverage:
     country:
       id: QA
       name: Qatar
-    level: 20
+    level: 30
     macroregion:
       id: '145'
       name: Western Asia
-description: Welcome to the Qatar Univeristy Digital Hub Portal, where we provide
-  you digital access to Qatar University's original research, scholarly works, adminstrative
-  and archive of historical materials.
+    subregion:
+      id: QA-DA
+      name: Ad Dawhah
+description: Provides digital access to Qatar University's original research, scholarly
+  works, administrative and historical materials. Built on DSpace platform, hosted
+  in-house through ITS department. Managed by the University Library, responsible
+  for quality control and policy.
 endpoints:
 - type: dspace:items
   url: https://qspace.qu.edu.qa/rest/items
@@ -55,7 +59,10 @@ owner:
     country:
       id: QA
       name: Qatar
-    level: 20
+    level: 30
+    subregion:
+      id: QA-DA
+      name: Ad Dawhah
   name: Qatar University
   type: Academy
 properties:
@@ -71,9 +78,22 @@ software:
   id: dspace
   name: DSpace
 status: active
-tags: []
+tags:
+- research-repository
+- scholarly-works
+- university-archive
+- digital-library
 topics:
 - id: TECH
   name: Science and technology
   type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: cdi00004473

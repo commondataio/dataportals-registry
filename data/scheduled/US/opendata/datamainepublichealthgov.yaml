@@ -10,12 +10,17 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: US-ME
+      name: Maine
+description: Metadata is a text document that describes the data, so that a potential
+  data user can decide whether or not the data are appropriate to use. Metadata may
+  include information about the context, quality and condition, or characteristics
+  of the data.
 id: datamainepublichealthgov
 langs:
 - id: EN
@@ -23,14 +28,17 @@ langs:
 link: https://data.mainepublichealth.gov/tracking/metadata
 name: data.mainepublichealth.gov
 owner:
-  link: null
+  link: https://data.mainepublichealth.gov/tracking/metadata
   location:
     country:
       id: US
       name: United States
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: US-ME
+      name: Maine
+  name: Maine Tracking Network
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -42,6 +50,16 @@ software:
   id: custom
   name: Custom software
 status: scheduled
-tags: []
-topics: []
+tags:
+- metadata
+- public health
+- environmental health
+- Maine
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00002851

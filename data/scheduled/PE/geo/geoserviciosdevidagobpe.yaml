@@ -11,12 +11,14 @@ coverage:
     country:
       id: PE
       name: Peru
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: PE-LIM
+      name: Lima
+description: ArcGIS Server REST services for geospatial data provided by DEVIDA (Peru).
 endpoints:
 - type: arcgis:rest:info
   url: https://geoservicios.devida.gob.pe/arcgis_server/rest/info?f=pjson
@@ -35,14 +37,17 @@ langs:
 link: https://geoservicios.devida.gob.pe/arcgis_server/rest/services
 name: geoservicios.devida.gob.pe
 owner:
-  link: null
+  link: https://geoservicios.devida.gob.pe/
   location:
     country:
       id: PE
       name: Peru
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: PE-LIM
+      name: Lima
+  name: DEVIDA (Peru)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -56,6 +61,38 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- DEVIDA
+- geospatial
+- REST
+- ArcGIS Server
+- Peru
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00006007

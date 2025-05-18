@@ -11,12 +11,15 @@ coverage:
     country:
       id: EC
       name: Ecuador
-    level: 20
+    level: 30
     macroregion:
       id: '005'
       name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: EC-G
+      name: Guayas
+description: ArcGIS REST services endpoint hosted by the Guayaquil city government
+  providing geospatial data and services.
 endpoints:
 - type: arcgis:portals:self
   url: https://geoportalcat.guayaquil.gob.ec/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +40,19 @@ langs:
 - id: ES
   name: Spanish
 link: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services
-name: geoportalcat.guayaquil.gob.ec
+name: geoportalcat.guayaquil.gob.ec/arcgis/rest/services
 owner:
-  link: null
+  link: https://geoportalcat.guayaquil.gob.ec/
   location:
     country:
       id: EC
       name: Ecuador
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: EC-G
+      name: Guayas
+  name: Municipality of Guayaquil
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -60,6 +66,13 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
-topics: []
+tags:
+- geospatial
+- open-data
+- maps
+- rest-api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00001925

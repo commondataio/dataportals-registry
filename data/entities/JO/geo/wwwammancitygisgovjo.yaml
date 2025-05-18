@@ -11,10 +11,15 @@ coverage:
     country:
       id: JO
       name: Jordan
-    level: 20
+    level: 30
     macroregion:
       id: '145'
       name: Western Asia
+    subregion:
+      id: JO-AM
+      name: Al 'Asimah
+description: ArcGIS REST services endpoint for the Amman City GIS, providing access
+  to various geospatial data services for Amman, Jordan.
 endpoints:
 - type: arcgis:rest:info
   url: http://www.ammancitygis.gov.jo/arcgis/rest/info?f=pjson
@@ -34,14 +39,17 @@ langs:
 - id: AR
   name: Arabic
 link: http://www.ammancitygis.gov.jo/arcgis/rest/services
-name: Amman city geoportal
+name: Amman City GIS REST Services
 owner:
   link: http://www.ammancity.gov.jo
   location:
     country:
       id: JO
       name: Jordan
-    level: 20
+    level: 30
+    subregion:
+      id: JO-AM
+      name: Al 'Asimah
   name: Amman city
   type: Regional government
 properties:
@@ -61,8 +69,15 @@ status: active
 tags:
 - geospatial
 - government
+- ArcGIS
+- GIS
+- Amman
+- municipality
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00000978

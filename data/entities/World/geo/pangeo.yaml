@@ -11,12 +11,16 @@ coverage:
     country:
       id: World
       name: World
-    level: 20
+    level: 30
     macroregion:
       id: World
       name: World
-description: Experimental STAC catalog of ocean, weather, and climate data stored
-  in Zarr format in Google Cloud Storage.
+    subregion:
+      id: US-CA
+      name: California
+description: Catalog of geoscience datasets for Pangeo Datastore, following the STAC
+  JSON format. It contains references to geospatial and scientific datasets, typically
+  used in the Pangeo community for Earth data science workflows.
 endpoints:
 - type: stacserverapi
   url: https://raw.githubusercontent.com/charlesbluca/pangeo-datastore-stac/master/master/catalog.json
@@ -26,14 +30,17 @@ langs:
 - id: EN
   name: English
 link: https://raw.githubusercontent.com/charlesbluca/pangeo-datastore-stac/master/master/catalog.json
-name: Pangeo Cloud Data Catalog
+name: Pangeo Datastore STAC Master Catalog
 owner:
   link: https://pangeo.io
   location:
     country:
       id: World
       name: World
-    level: 20
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
   name: Pangeo
   type: Community
 properties:
@@ -53,6 +60,11 @@ status: active
 tags:
 - geospatial
 - has_api
+- STAC
+- Pangeo
+- climate data
+- Jupyter
+- cloud
 topics:
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere
@@ -68,5 +80,23 @@ topics:
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
   type: iso19115
 uid: cdi00001957

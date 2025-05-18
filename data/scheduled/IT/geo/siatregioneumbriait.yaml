@@ -11,12 +11,14 @@ coverage:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: IT-55
+      name: Umbria
+description: ArcGIS REST services interface for SIAT Regione Umbria data catalog.
 endpoints:
 - type: arcgis:portals:self
   url: http://siat.regione.umbria.it/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +39,19 @@ langs:
 - id: IT
   name: Italian
 link: http://siat.regione.umbria.it/arcgis/rest/services
-name: siat.regione.umbria.it
+name: SIAT Regione Umbria REST Services
 owner:
-  link: null
+  link: http://siat.regione.umbria.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: IT-55
+      name: Umbria
+  name: Regione Umbria
+  type: Regional government
 properties:
   has_doi: false
 rights:
@@ -60,6 +65,9 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- ArcGIS
+- REST
+- regional data
 topics: []
 uid: temp00001581

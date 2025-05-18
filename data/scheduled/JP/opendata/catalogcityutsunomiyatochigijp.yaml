@@ -10,12 +10,14 @@ coverage:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: JP-09
+      name: Tochigi
+description: Open data portal for Utsunomiya city, Tochigi, Japan
 endpoints:
 - type: ckan
   url: https://catalog.city.utsunomiya.tochigi.jp/api/3
@@ -38,9 +40,12 @@ owner:
     country:
       id: JP
       name: Japan
-    level: 20
+    level: 30
+    subregion:
+      id: JP-09
+      name: Tochigi
   name: ''
-  type: Unknown
+  type: Local government
 rights:
   license_id: null
   license_name: null
@@ -52,6 +57,21 @@ software:
   id: ckan
   name: CKAN
 status: scheduled
-tags: []
-topics: []
+tags:
+- dataset
+- open data
+- local government
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00004711

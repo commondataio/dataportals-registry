@@ -11,12 +11,16 @@ coverage:
     country:
       id: PG
       name: Papua New Guinea
-    level: 20
+    level: 30
     macroregion:
       id: '054'
       name: Melanesia
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+    subregion:
+      id: PG-NCD
+      name: National Capital District (Port Moresby)
+description: Portal providing access to geospatial services and data managed by the
+  Mineral Resources Authority (MRA) of Papua New Guinea, mainly covering mineral,
+  geological, and cadastre information.
 endpoints:
 - type: arcgis:rest:info
   url: https://portal.mra.gov.pg/arcgis/rest/info?f=pjson
@@ -35,16 +39,19 @@ langs:
 - id: EN
   name: English
 link: https://portal.mra.gov.pg/arcgis/rest/services
-name: portal.mra.gov.pg
+name: portal.mra.gov.pg/arcgis/rest/services
 owner:
-  link: null
+  link: https://mra.gov.pg
   location:
     country:
       id: PG
       name: Papua New Guinea
-    level: 20
-  name: ''
-  type: Unknown
+    level: 30
+    subregion:
+      id: PG-NCD
+      name: National Capital District (Port Moresby)
+  name: Mineral Resources Authority (MRA), Papua New Guinea
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -58,6 +65,13 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
-tags: []
+tags:
+- mining
+- geology
+- cadastre
+- Papua New Guinea
+- exploration
+- geo
+- government
 topics: []
 uid: temp00005800
