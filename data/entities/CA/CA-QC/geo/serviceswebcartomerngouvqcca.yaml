@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Data catalog (or service catalog) for geospatial web services provided
+  by the Ministère de l’Environnement, de la lutte contre les changements climatiques,
+  de la Faune et des Parcs du Québec (MERN), a Québec government department. The site
+  hosts web mapping and data services for ecological and environmental data. Exact
+  thematic and categorical details are not explicitly provided in the URL; inference
+  based on agency and typical service offerings.
+endpoints:
+- type: arcgis:rest:info
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/services?wsdl
+- type: arcgis:sitemap
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://serviceswebcarto.mern.gouv.qc.ca/pes/rest/services?f=kmz
+id: serviceswebcartomerngouvqcca
+langs:
+- id: EN
+  name: English
+link: https://serviceswebcarto.mern.gouv.qc.ca/pes/services
+name: MERN ArcGIS REST Services
+owner:
+  link: https://www.mern.gouv.qc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ministère de l’Environnement, de la lutte contre les changements climatiques,
+    de la Faune et des Parcs du Québec (MERN)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- ecological data
+- web mapping
+- government data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: temp00004915

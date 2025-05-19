@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: A metadata catalogue provided by the National Biodiversity Data Centre
+  for discovering biodiversity datasets in Ireland
+endpoints:
+- type: csw202
+  url: https://metadata.biodiversityireland.ie/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadata.biodiversityireland.ie/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadata.biodiversityireland.ie/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: metadatabiodiversityirelandie
+langs:
+- id: EN
+  name: English
+link: https://metadata.biodiversityireland.ie/geonetwork
+name: Biodiversity Ireland Metadata Catalogue
+owner:
+  link: https://www.biodiversityireland.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: National Biodiversity Data Centre
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: scheduled
+tags:
+- Biodiversity
+- Species
+- Ireland
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: temp00001553

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-W
+      name: Corrientes
+description: El Portal de Datos Abiertos es una iniciativa ligada a las políticas
+  de Gobierno Abierto que sirve para almacenar y compartir las bases de datos producidas
+  por el Municipio para facilitar el conocimiento del gobierno, fortalecer el rendimiento
+  de cuentas y mejorar la participación ciudadana.
+endpoints:
+- type: ckan:package-search
+  url: https://datos.ciudaddecorrientes.gov.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.ciudaddecorrientes.gov.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://datos.ciudaddecorrientes.gov.ar/data.json
+- type: dcat:n3
+  url: https://datos.ciudaddecorrientes.gov.ar/catalog.n3
+- type: dcat:ttl
+  url: https://datos.ciudaddecorrientes.gov.ar/catalog.ttl
+- type: dcat:xml
+  url: https://datos.ciudaddecorrientes.gov.ar/catalog.xml
+- type: dcat:jsonld
+  url: https://datos.ciudaddecorrientes.gov.ar/catalog.jsonld
+id: datosciudaddecorrientesgovar
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.ciudaddecorrientes.gov.ar
+name: Portal de Datos Abiertos - Municipalidad de Corrientes
+owner:
+  link: https://www.ciudaddecorrientes.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-W
+      name: Corrientes
+  name: Municipalidad de Corrientes
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- open data
+- government datasets
+- environmental data
+- public transport data
+- health data
+topics: []
+uid: temp00004466

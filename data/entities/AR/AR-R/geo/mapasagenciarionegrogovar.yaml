@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-R
+      name: Rio Negro
+description: Server REST services for geospatial data at Rionegro government agency.
+endpoints:
+- type: arcgis:rest:info
+  url: http://mapasagencia.rionegro.gov.ar/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://mapasagencia.rionegro.gov.ar/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://mapasagencia.rionegro.gov.ar/server/services?wsdl
+- type: arcgis:sitemap
+  url: http://mapasagencia.rionegro.gov.ar/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://mapasagencia.rionegro.gov.ar/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://mapasagencia.rionegro.gov.ar/server/rest/services?f=kmz
+id: mapasagenciarionegrogovar
+langs:
+- id: ES
+  name: Spanish
+link: http://mapasagencia.rionegro.gov.ar/server/rest/services
+name: Rio Negro ArcGIS REST Services
+owner:
+  link: http://www.rionegro.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-R
+      name: Rio Negro
+  name: Rio Negro Government
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- rest
+- gis
+- geospatial services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003344

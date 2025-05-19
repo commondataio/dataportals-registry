@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+description: Portal de datos abiertos del Municipio de Quilmes para promover una gestión
+  transparente y participativa.
+endpoints:
+- type: ckan:package-search
+  url: http://datos.quilmes.gov.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://datos.quilmes.gov.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://datos.quilmes.gov.ar/data.json
+- type: dcat:n3
+  url: http://datos.quilmes.gov.ar/catalog.n3
+- type: dcat:ttl
+  url: http://datos.quilmes.gov.ar/catalog.ttl
+- type: dcat:xml
+  url: http://datos.quilmes.gov.ar/catalog.xml
+- type: dcat:jsonld
+  url: http://datos.quilmes.gov.ar/catalog.jsonld
+id: datosquilmesgovar
+langs:
+- id: ES
+  name: Spanish
+link: http://datos.quilmes.gov.ar
+name: Datos Quilmes Gobierno
+owner:
+  link: http://www.quilmes.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-B
+      name: Buenos Aires
+  name: Municipio de Quilmes
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- transparencia
+- datos abiertos
+- gestión pública
+- participación ciudadana
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00004477

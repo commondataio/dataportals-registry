@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: EC-G
+      name: Guayas
+description: ArcGIS REST services endpoint hosted by the Guayaquil city government
+  providing geospatial data and services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://geoportalcat.guayaquil.gob.ec/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services?f=kmz
+id: geoportalcatguayaquilgobec
+langs:
+- id: ES
+  name: Spanish
+link: https://geoportalcat.guayaquil.gob.ec/arcgis/rest/services
+name: Guayas ArcGIS REST Services
+owner:
+  link: https://geoportalcat.guayaquil.gob.ec/
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    subregion:
+      id: EC-G
+      name: Guayas
+  name: Municipality of Guayaquil
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- open-data
+- maps
+- rest-api
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001925

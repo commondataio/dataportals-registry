@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-W
+      name: Corrientes
+description: 'A través de la herramienta Datos Abiertos, el municipio pone los datos públicos al alcance de los ciudadanos, en formatos abiertos para que puedan ser utilizados, modificados y compartidos.'
+endpoints:
+- type: ckan:package-search
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/data.json
+- type: dcat:n3
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/catalog.n3
+- type: dcat:ttl
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/catalog.ttl
+- type: dcat:xml
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/catalog.xml
+- type: dcat:jsonld
+  url: http://goy-cte-datos.paisdigital.modernizacion.gob.ar/catalog.jsonld
+id: goyctedatospaisdigitalmodernizaciongobar
+langs:
+- id: ES
+  name: Spanish
+link: http://goy-cte-datos.paisdigital.modernizacion.gob.ar
+name: Municipalidad de Goya Portal de Datos Abiertos
+owner:
+  link: https://www.goya.gob.ar/
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-W
+      name: Corrientes
+  name: 'Municipalidad de Goya'
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags: []
+topics: []
+uid: temp00004485

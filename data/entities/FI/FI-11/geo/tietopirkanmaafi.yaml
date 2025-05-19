@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-11
+      name: Pirkanmaa
+description: A GeoServer instance providing geospatial data services for the Pirkanmaa
+  region.
+endpoints:
+- type: wfs100
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://tieto.pirkanmaa.fi/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://tieto.pirkanmaa.fi/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+id: tietopirkanmaafi
+langs:
+- id: FI
+  name: Finnish
+link: https://tieto.pirkanmaa.fi/geoserver
+name: Geoserver - Pirkanmaa
+owner:
+  link: https://www.pirkanmaa.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-11
+      name: Pirkanmaa
+  name: Pirkanmaan liitto
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: scheduled
+tags:
+- GeoServer
+- GIS
+- Geospatial
+- Open Data
+topics: []
+uid: temp00001511

@@ -1,0 +1,104 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-R
+      name: Rio Negro
+description: Data catalog website of a municipality in Río Negro province, Argentina
+endpoints:
+- type: wms111
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://municipiosig.rionegro.gov.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://municipiosig.rionegro.gov.ar/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: http://municipiosig.rionegro.gov.ar/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: http://municipiosig.rionegro.gov.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://municipiosig.rionegro.gov.ar/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: http://municipiosig.rionegro.gov.ar/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: municipiosigrionegrogovar
+langs:
+- id: ES
+  name: Spanish
+link: http://municipiosig.rionegro.gov.ar
+name: Rio Negro GeoNode
+owner:
+  link: http://www.rionegro.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-R
+      name: Rio Negro
+  name: Municipality of Río Negro
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags: []
+topics: []
+uid: temp00002718

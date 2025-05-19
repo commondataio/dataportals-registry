@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: A catalogue for discovering, accessing, and downloading marine data and
+  metadata from the Atlantic region. Focuses on providing open, interoperable, and
+  regionally specific ocean data and supports multiple data formats.
+endpoints:
+- type: ckan
+  url: https://catalogue.dev.cioosatlantic.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogue.dev.cioosatlantic.ca/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.n3
+- type: dcat:ttl
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.ttl
+- type: dcat:xml
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.xml
+- type: dcat:jsonld
+  url: https://catalogue.dev.cioosatlantic.ca/catalog.jsonld
+id: cataloguedevcioosatlanticca
+langs:
+- id: EN
+  name: English
+link: https://catalogue.dev.cioosatlantic.ca
+name: CIOOS Data Catalogue
+owner:
+  link: https://cioosatlantic.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: CIOOS Atlantic
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- marine
+- ocean
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: temp00004529

@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-974
+      name: Reunion
+description: PEIGEO is a regional platform for the dissemination of data covered by
+  the INSPIRE directive, a European directive aimed at facilitating the dissemination
+  of geographic information.
+endpoints:
+- type: geonetwork:query
+  url: http://peigeo.re:8080/geonetwork/srv/eng/q
+- type: openapi
+  url: http://peigeo.re:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://peigeo.re:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://peigeo.re:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://peigeo.re:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: http://peigeo.re:8080/geonetwork/srv/api/site
+- type: opensearch
+  url: http://peigeo.re:8080/portal.opensearch
+export_standard: Geonetwork API
+id: peigeore
+langs:
+- id: FR
+  name: French
+link: http://peigeo.re:8080/geonetwork
+name: peigeo.re/geonetwork Data Catalog
+owner:
+  link: https://www.regionreunion.com
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-974
+      name: Reunion
+  name: Region Reunion
+  type: Regional government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- GeoNetwork
+- Spatial Data
+- Reunion
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00001336

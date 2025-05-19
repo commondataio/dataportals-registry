@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-08
+      name: Primorsko-goranska zupanija
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: A data catalog offering geospatial datasets and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.pgz.hr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.pgz.hr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.pgz.hr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.pgz.hr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.pgz.hr/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisportal.pgz.hr/server/rest/services?f=kmz
+id: gisportalpgzhr
+langs:
+- id: SR
+  name: Serbian
+link: https://gisportal.pgz.hr/server/rest/services
+name: PGZ ArcGIS REST Services
+owner:
+  link: https://www.pgz.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-08
+      name: Primorsko-goranska zupanija
+  name: Primorsko-goranska županija (PGZ)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- GIS
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: temp00005911

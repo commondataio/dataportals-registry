@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: A data catalog of REST services provided by Tulare County, primarily
+  serving as a geospatial and administrative endpoints.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ihost.tularecounty.ca.gov/ihost/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ihost.tularecounty.ca.gov/ihost/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ihost.tularecounty.ca.gov/ihost/services?wsdl
+- type: arcgis:sitemap
+  url: https://ihost.tularecounty.ca.gov/ihost/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ihost.tularecounty.ca.gov/ihost/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ihost.tularecounty.ca.gov/ihost/rest/services?f=kmz
+id: ihosttularecountycagov
+langs:
+- id: EN
+  name: English
+link: https://ihost.tularecounty.ca.gov/ihost/rest/services
+name: Tulare County iHost REST Services
+owner:
+  link: https://www.tularecounty.ca.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Tulare County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- GIS
+- local government
+- rest api
+- services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00004355

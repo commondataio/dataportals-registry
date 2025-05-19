@@ -1,0 +1,107 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: The LBDC Directory is the Ethiopian National Open Data and Data Catalog
+  portal.
+endpoints:
+- type: geonode:datasets
+  url: http://lbdcdirectory.gov.et/api/datasets/
+- type: geonode:documents
+  url: http://lbdcdirectory.gov.et/api/documents/
+- type: wms111
+  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://lbdcdirectory.gov.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: http://lbdcdirectory.gov.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://lbdcdirectory.gov.et/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://lbdcdirectory.gov.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: lbdcdirectorygovet
+langs:
+- id: EN
+  name: English
+link: http://lbdcdirectory.gov.et
+name: lbdcdirectory.gov.et
+owner:
+  link: https://innovation.et
+  location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+  name: Ethiopian Ministry of Innovation and Technology
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: scheduled
+tags:
+- Open Data
+- Data Portal
+- Ethiopia
+- Open Government Data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: temp00001462

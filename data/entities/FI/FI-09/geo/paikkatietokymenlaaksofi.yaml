@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-09
+      name: Kymenlaakso
+description: Data catalog for geospatial data in Kymenlaakso region
+endpoints:
+- type: arcgis:portals:self
+  url: https://paikkatieto.kymenlaakso.fi/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://paikkatieto.kymenlaakso.fi/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://paikkatieto.kymenlaakso.fi/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://paikkatieto.kymenlaakso.fi/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://paikkatieto.kymenlaakso.fi/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://paikkatieto.kymenlaakso.fi/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://paikkatieto.kymenlaakso.fi/server/rest/services?f=kmz
+id: paikkatietokymenlaaksofi
+langs:
+- id: FI
+  name: Finnish
+link: https://paikkatieto.kymenlaakso.fi/server/rest/services
+name: Kymenlaakso ArcGIS REST Services
+owner:
+  link: https://paikkatieto.kymenlaakso.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-09
+      name: Kymenlaakso
+  name: Kymenlaakso region
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- Geoportal
+- GIS
+- Kymenlaakso
+- Finland
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001506

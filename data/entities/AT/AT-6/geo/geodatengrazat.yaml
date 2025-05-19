@@ -1,0 +1,104 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-6
+      name: Steiermark
+description: Geo data service REST API endpoint for the City of Graz.
+endpoints:
+- type: arcgis:portals:self
+  url: https://geodaten.graz.at/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geodaten.graz.at/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodaten.graz.at/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodaten.graz.at/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geodaten.graz.at/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geodaten.graz.at/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geodaten.graz.at/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://geodaten.graz.at/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodaten.graz.at/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodaten.graz.at/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geodaten.graz.at/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geodaten.graz.at/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geodaten.graz.at/arcgis/rest/services?f=kmz
+id: geodatengrazat
+langs:
+- id: DE
+  name: German
+link: https://geodaten.graz.at/arcgis/rest/services
+name: City of Graz ArcGIS REST
+owner:
+  link: https://geodaten.graz.at/
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-6
+      name: Steiermark
+  name: City of Graz
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- maps
+- open data
+- WMS
+- WFS
+- REST
+- API
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003288

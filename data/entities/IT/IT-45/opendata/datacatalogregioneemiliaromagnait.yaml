@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+description: Catalogo regionale dei dataset Giunta, Assemblea Legislativa e Agenzie.
+endpoints:
+- type: ckan
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/api/3/action/package_list
+  version: '3'
+- type: dcat:xml
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/catalog.xml
+- type: dcat:jsonld
+  url: https://datacatalog.regione.emilia-romagna.it/catalogCTA/catalog.jsonld
+id: datacatalogregioneemiliaromagnait
+langs:
+- id: IT
+  name: Italian
+link: https://datacatalog.regione.emilia-romagna.it/catalogCTA/
+name: Regione Emilia-Romagna Data Catalog
+owner:
+  link: http://www.regione.emilia-romagna.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-45
+      name: Emilia-Romagna
+  name: Regione Emilia-Romagna
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- public administration
+- open data
+- region Emilia-Romagna
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: temp00002953

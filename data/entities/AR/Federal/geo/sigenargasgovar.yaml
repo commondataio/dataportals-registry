@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: REST-based geospatial services provided by ENARGAS, the Argentine National
+  Gas Regulatory Entity.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sig.enargas.gov.ar/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.enargas.gov.ar/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.enargas.gov.ar/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.enargas.gov.ar/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.enargas.gov.ar/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.enargas.gov.ar/arcgis/rest/services?f=kmz
+id: sigenargasgovar
+langs:
+- id: ES
+  name: Spanish
+link: https://sig.enargas.gov.ar/arcgis/rest/services
+name: ENARGAS Geographic Information System REST Services
+owner:
+  link: https://www.enargas.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: ENARGAS
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- gas
+- infrastructure
+- REST
+- Argentina
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005861

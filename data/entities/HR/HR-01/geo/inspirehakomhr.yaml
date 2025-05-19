@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: HR-01
+      name: Zagrebacka zupanija
+description: Data catalog providing access to geospatial services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://inspire.hakom.hr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://inspire.hakom.hr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://inspire.hakom.hr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://inspire.hakom.hr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://inspire.hakom.hr/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://inspire.hakom.hr/server/rest/services?f=kmz
+id: inspirehakomhr
+langs:
+- id: SR
+  name: Serbian
+link: https://inspire.hakom.hr/server/rest/services
+name: HAKOM ArcGIS REST Services
+owner:
+  link: https://www.hakom.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-01
+      name: Zagrebacka zupanija
+  name: HAKOM
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- INSPIRE
+- geoinfo
+- catalog
+- HR
+- hko
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00005588

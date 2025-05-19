@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Geospatial data catalog hosted by Aarhus University.
+endpoints:
+- type: arcgis:rest:info
+  url: https://augis.au.dk/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://augis.au.dk/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://augis.au.dk/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://augis.au.dk/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://augis.au.dk/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://augis.au.dk/server/rest/services?f=kmz
+id: augisaudk
+langs:
+- id: DA
+  name: Danish
+link: https://augis.au.dk/server/rest/services
+name: Aarhus University Geospatial Information Server (AUGIS)
+owner:
+  link: https://augis.au.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-82
+      name: Midtjylland
+  name: Aarhus University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- geodata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005878

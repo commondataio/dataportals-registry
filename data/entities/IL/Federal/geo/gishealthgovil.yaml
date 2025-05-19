@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IL
+      name: Israel
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST Services Directory providing open health data for Israel
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.health.gov.il/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.health.gov.il/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://gis.health.gov.il/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.health.gov.il/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.health.gov.il/arcgis/rest/services?f=kmz
+- type: arcgis:portals:self
+  url: https://gis.health.gov.il/arcgis/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:soap
+  url: https://gis.health.gov.il/arcgis/services?wsdl
+id: gishealthgovil
+langs:
+- id: HE
+  name: Hebrew
+link: https://gis.health.gov.il/arcgis/rest/services
+name: GIS Health Opendata API
+owner:
+  link: https://www.gov.il/en/departments/ministry_of_health/govil-landing-page
+  location:
+    country:
+      id: IL
+      name: Israel
+    level: 30
+    subregion:
+      id: IL-JM
+      name: Yerushalayim
+  name: Ministry of Health, Israel
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- gis
+- open data
+- health
+- arcgis
+- israel
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: temp00005928

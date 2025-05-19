@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: AT-5
+      name: Salzburg
+description: Official geospatial data catalog for Salzburg, providing ArcGIS services
+  and layers for the region.
+endpoints:
+- type: arcgis:rest:info
+  url: https://service.salzburg.gv.at/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://service.salzburg.gv.at/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://service.salzburg.gv.at/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://service.salzburg.gv.at/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://service.salzburg.gv.at/arcgis/rest/services?f=kmz
+id: servicesalzburggvat
+langs:
+- id: DE
+  name: German
+link: https://service.salzburg.gv.at/arcgis/services
+name: SAGIS - Salzburg Geospatial Online Services
+owner:
+  link: https://ццц.salzburg.gv.at
+  location:
+    country:
+      id: AT
+      name: Austria
+    level: 30
+    subregion:
+      id: AT-5
+      name: Salzburg
+  name: Salzburger Landesregierung / Land Salzburg
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- GIS
+- Salzburg
+- ArcGIS
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00004874

@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+    subregion:
+      id: RU-KHM
+      name: Khanty-Mansiyskiy avtonomnyy okrug
+description: WMS server for Khanty-Mansi Autonomous Okrug (HMAO) based on MapProxy,
+  part of geowebportal based on NextGIS. MapProxy is an open source proxy for geospatial
+  data, caches, accelerates and transforms data from existing map services
+endpoints:
+- type: wms111
+  url: https://geo.uriit.ru/mp/mapproxy/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://geo.uriit.ru/mp/mapproxy/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: https://geo.uriit.ru/mp/mapproxy/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: https://geo.uriit.ru/mp/mapproxy/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: geouriitrumapproxy
+langs:
+- id: RU
+  name: Russian
+link: https://geo.uriit.ru/mp/mapproxy
+name: HMAO MapProxy
+owner:
+  link: https://geo.uriit.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-KHM
+      name: Khanty-Mansiyskiy avtonomnyy okrug
+  name: URIIT
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: Mapproxy
+status: scheduled
+tags:
+- geodata
+- gis
+- maps
+- WMS
+- MapProxy
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002203

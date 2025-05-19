@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS REST services endpoint providing access to building-related datasets
+  for Ireland.
+endpoints:
+- type: arcgis:rest:info
+  url: https://webservices.buildingsofireland.ie/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webservices.buildingsofireland.ie/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webservices.buildingsofireland.ie/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://webservices.buildingsofireland.ie/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://webservices.buildingsofireland.ie/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://webservices.buildingsofireland.ie/arcgis/rest/services?f=kmz
+id: webservicesbuildingsofirelandie
+langs:
+- id: EN
+  name: English
+link: https://webservices.buildingsofireland.ie/arcgis/rest/services
+name: Buildings of Ireland ArcGIS REST Services
+owner:
+  link: https://www.buildingsofireland.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Buildings of Ireland
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- Buildings
+- Ireland
+- GIS
+- Architecture
+topics:
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: temp00001555

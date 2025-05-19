@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: HR-21
+      name: Grad Zagreb
+description: Data catalog web interface for geospatial data
+endpoints:
+- type: wfs100
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: http://faust.izor.hr:8080/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: faustizorhr
+langs:
+- id: HR
+  name: Croatian
+link: http://faust.izor.hr:8080/geoserver/web/
+name: IZOR ArcGIS REST Services
+owner:
+  link: https://www.izor.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 30
+    subregion:
+      id: HR-21
+      name: Grad Zagreb
+  name: Institute of Oceanography and Fisheries (IZOR)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: scheduled
+tags:
+- geospatial
+- marine
+- oceanography
+- Web GIS
+- GeoServer
+topics: []
+uid: temp00000343

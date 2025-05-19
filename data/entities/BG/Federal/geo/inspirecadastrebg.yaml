@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: ArcGIS REST services endpoint for cadastral data under INSPIRE Directive.
+endpoints:
+- type: arcgis:rest:info
+  url: https://inspire.cadastre.bg/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://inspire.cadastre.bg/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://inspire.cadastre.bg/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://inspire.cadastre.bg/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://inspire.cadastre.bg/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://inspire.cadastre.bg/arcgis/rest/services?f=kmz
+id: inspirecadastrebg
+langs:
+- id: BG
+  name: Bulgarian
+link: https://inspire.cadastre.bg/arcgis/rest/services
+name: INSPIRE Cadastre REST Services, Bulgaria
+owner:
+  link: https://inspire.cadastre.bg
+  location:
+    country:
+      id: BG
+      name: Bulgaria
+    level: 20
+  name: Bulgarian Cadastre Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- INSPIRE
+- cadastre
+- geospatial
+- ArcGIS
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00001254

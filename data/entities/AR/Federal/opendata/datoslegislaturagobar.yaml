@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Access to open datasets from the Legislative branch of the City of Buenos
+  Aires, including parliamentary data, statistics, and contracting information.
+endpoints:
+- type: ckan:package-search
+  url: http://datos.legislatura.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://datos.legislatura.gob.ar/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: http://datos.legislatura.gob.ar/data.json
+- type: dcat:n3
+  url: http://datos.legislatura.gob.ar/catalog.n3
+- type: dcat:ttl
+  url: http://datos.legislatura.gob.ar/catalog.ttl
+- type: dcat:xml
+  url: http://datos.legislatura.gob.ar/catalog.xml
+- type: dcat:jsonld
+  url: http://datos.legislatura.gob.ar/catalog.jsonld
+id: datoslegislaturagobar
+langs:
+- id: ES
+  name: Spanish
+link: http://datos.legislatura.gob.ar
+name: Legislatura Ciudad Autónoma de Buenos Aires - Portal de Datos Abiertos
+owner:
+  link: http://datos.legislatura.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-C
+      name: Ciudad Autonoma de Buenos Aires
+  name: Legislatura Ciudad Autónoma de Buenos Aires
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- legislatura
+- datos abiertos
+- parlamentario
+- transparencia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00004474
