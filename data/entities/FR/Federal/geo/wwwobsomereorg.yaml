@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Catalog of spatial data and information managed by the ORE OMERE observatory,
+  focused on hydrological and environmental monitoring in Mediterranean environments.
+endpoints:
+- type: geonetwork:query
+  url: https://www.obs-omere.org/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://www.obs-omere.org/geonetwork/srv/api/records
+- type: openapi
+  url: https://www.obs-omere.org/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.obs-omere.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.obs-omere.org/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.obs-omere.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwobsomereorg
+langs:
+- id: FR
+  name: French
+link: https://www.obs-omere.org/geonetwork
+name: "Catalalogue de l'ORE OMERE"
+owner:
+  link: https://www.obs-omere.org
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: ORE OMERE
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: scheduled
+tags:
+- spatial data
+- environmental monitoring
+- Mediterranean region
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00002014

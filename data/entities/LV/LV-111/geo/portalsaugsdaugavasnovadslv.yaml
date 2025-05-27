@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: LV-111
+      name: Augšdaugava
+description: ArcGIS REST services catalog for Augšdaugava municipality, providing
+  geospatial data and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://portals.augsdaugavasnovads.lv/portal/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portals.augsdaugavasnovads.lv/portal/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portals.augsdaugavasnovads.lv/portal/services?wsdl
+- type: arcgis:sitemap
+  url: https://portals.augsdaugavasnovads.lv/portal/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portals.augsdaugavasnovads.lv/portal/rest/services?f=geositemap
+id: portalsaugsdaugavasnovadslv
+langs:
+- id: LV
+  name: Latvian
+link: https://portals.augsdaugavasnovads.lv/portal/rest/services
+name: Augšdaugava ArcGIS REST Services
+owner:
+  link: https://www.augsdaugavasnovads.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 30
+    subregion:
+      id: LV-111
+      name: Augšdaugava
+  name: Augšdaugavas novads
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- GIS
+- municipality
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00010185

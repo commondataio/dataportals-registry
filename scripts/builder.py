@@ -217,6 +217,7 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)                         
             if 'uid' in record.keys():
+                if record['uid'].find(prefix) == -1: continue
                 num = int(record['uid'].split(prefix, 1)[-1])
                 if num > max_num:
                     max_num = num
@@ -618,8 +619,8 @@ def country_report():
     from rich.console import Console
     from rich.table import Table
 #    data = load_jsonl(os.path.join(DATASETS_DIR, 'full.jsonl')) 
-#    ids = duckdb.sql("select distinct(unnest(coverage).location.country.id) as id from '%s';" % (os.path.join(DATASETS_DIR, 'full.parquet'))).df().id.tolist()
-    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s' where source.catalog_type != 'Indicators catalog';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
+    ids = duckdb.sql("select distinct(unnest(coverage).location.country.id) as id from '%s';" % (os.path.join(DATASETS_DIR, 'full.parquet'))).df().id.tolist()
+#    ids = duckdb.sql("select distinct(unnest(source.countries).id) as id from '%s' where source.catalog_type != 'Indicators catalog';" % (os.path.join("../../cdi-data/search", 'dateno.parquet'))).df().id.tolist()
 #    print(ids)
     reg_countries = set(ids)
     countries_data = {}

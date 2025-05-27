@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: The St. Lawrence Global Observatory data catalogue
+endpoints:
+- type: ckan
+  url: https://catalogue.slgo.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogue.slgo.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogue.slgo.ca/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalogue.slgo.ca/catalog.n3
+- type: dcat:ttl
+  url: https://catalogue.slgo.ca/catalog.ttl
+- type: dcat:xml
+  url: https://catalogue.slgo.ca/catalog.xml
+- type: dcat:jsonld
+  url: https://catalogue.slgo.ca/catalog.jsonld
+- type: sitemap
+  url: https://catalogue.ogsl.ca/sitemap/sitemap-1.xml
+id: catalogueslgoca
+langs:
+- id: EN
+  name: English
+link: https://catalogue.slgo.ca
+name: Catalogue de données OGSL
+owner:
+  link: https://www.slgo.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: The St. Lawrence Global Observatory
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- geospatial
+- GIS
+- Quebec
+- Canada
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00004599

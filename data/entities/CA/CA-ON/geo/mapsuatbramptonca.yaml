@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: REST endpoint for map services provided by the City of Brampton
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapsuat.brampton.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapsuat.brampton.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapsuat.brampton.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapsuat.brampton.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapsuat.brampton.ca/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapsuat.brampton.ca/arcgis/rest/services?f=kmz
+id: mapsuatbramptonca
+langs:
+- id: EN
+  name: English
+link: https://mapsuat.brampton.ca/arcgis/rest/services
+name: Brampton ArcGIS REST Services
+owner:
+  link: https://www.brampton.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: City of Brampton
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- Mapping
+- City of Brampton
+- ArcGIS
+- Open Data
+- Ontario
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00001337

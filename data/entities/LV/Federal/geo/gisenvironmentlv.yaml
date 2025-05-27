@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Geoportal providing geospatial information services through web services
+  (REST/ArcGIS Server) under the Environment.lv company
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.environment.lv/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.environment.lv/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.environment.lv/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.environment.lv/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.environment.lv/server/rest/services?f=geositemap
+id: gisenvironmentlv
+langs:
+- id: LV
+  name: Latvian
+link: https://gis.environment.lv/server/rest/services
+name: Environment.lv ArcGIS REST
+owner:
+  link: https://www.environment.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: International consulting company — SIA “Estonian, Latvian & Lithuanian Environment”
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geoportal
+- ArcGIS Server
+- REST
+- geospatial
+- Latvia
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00010181
