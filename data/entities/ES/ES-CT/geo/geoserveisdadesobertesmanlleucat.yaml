@@ -1,0 +1,102 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya
+description: Data catalog of the municipality of Manlleu, containing open datasets
+  primarily focused on geospatial and municipal information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoserveis.dadesobertesmanlleu.cat/server/rest/services?f=kmz
+id: geoserveisdadesobertesmanlleucat
+langs:
+- id: ES
+  name: Spanish
+link: https://geoserveis.dadesobertesmanlleu.cat/server/rest/services
+name: Manlleu ArcGIS REST Services
+owner:
+  link: https://www.dadesobertesmanlleu.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya
+  name: Ajuntament Manlleu
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- open data
+- municipal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00005578

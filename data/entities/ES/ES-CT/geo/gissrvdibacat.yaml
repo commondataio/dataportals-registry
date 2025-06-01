@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CT
+      name: Catalunya
+description: ArcGIS REST API endpoint for services managed by Diputació de Barcelona
+endpoints:
+- type: arcgis:rest:info
+  url: https://gissrv.diba.cat/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gissrv.diba.cat/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gissrv.diba.cat/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gissrv.diba.cat/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gissrv.diba.cat/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gissrv.diba.cat/arcgis/rest/services?f=kmz
+id: gissrvdibacat
+langs:
+- id: ES
+  name: Spanish
+link: https://gissrv.diba.cat/arcgis/rest/services
+name: DIBA ArcGIS REST Services
+owner:
+  link: https://www.diba.cat
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CT
+      name: Catalunya
+  name: Diputació de Barcelona
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- ArcGIS
+- REST
+- geospatial
+- services
+- Diputació de Barcelona
+topics: 
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00003553

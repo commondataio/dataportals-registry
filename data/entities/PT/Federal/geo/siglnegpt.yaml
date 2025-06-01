@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: REST services catalog of the National Laboratory for Energy and Geology
+  (LNEG) of Portugal.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.lneg.pt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sig.lneg.pt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.lneg.pt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.lneg.pt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.lneg.pt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.lneg.pt/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.lneg.pt/server/rest/services?f=kmz
+id: siglnegpt
+langs:
+- id: PT
+  name: Portugal
+link: https://sig.lneg.pt/server/rest/services
+name: SIG Portugal REST Services (LNEG Catalog)
+owner:
+  link: https://www.lneg.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: LNEG
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- energy
+- geology
+- REST services
+- Portugal
+- OGC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00001648

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Web-based catalog of geospatial services hosted by Instituto da Conservação
+  da Natureza e das Florestas (ICNF), Portugal.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sigservices.icnf.pt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sigservices.icnf.pt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sigservices.icnf.pt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sigservices.icnf.pt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sigservices.icnf.pt/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sigservices.icnf.pt/server/rest/services?f=kmz
+id: sigservicesicnfpt
+langs:
+- id: PT
+  name: Portugal
+link: https://sigservices.icnf.pt/server/rest/services
+name: SIGServiços ICNF Catalogue
+owner:
+  link: https://www.icnf.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Instituto da Conservação da Natureza e das Florestas (ICNF)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- geospatial services
+- Portugal
+- ICNF
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003867

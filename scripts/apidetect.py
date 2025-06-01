@@ -405,6 +405,14 @@ WEKO3_URLMAP = [
     {'id' : 'weko3:records', 'url' : '/api/records/?page=1&size=20&sort=-createdate&search_type=0&q=&title=&creator=&filedate_from=&filedate_to=&fd_attr=&id=&id_attr=&srctitle=&type=17&dissno=&lang=english', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None}
  ]
 
+SDMXRI_URLMAP = [
+    {'id' : 'sdmx:dataflows',  'url' : '/rest/dataflow', 'accept' : 'application/json', 'expected_mime' : JSON_MIMETYPES, 'is_json' : True, 'version': None},
+    {'id' : 'sdmx:datastructure', 'url' : '/rest/datastructure', 'expected_mime' : "application/vnd.sdmx.structure+xml", 'is_json' : False, 'version': '1.0'},
+    {'id' : 'sdmx:codelist', 'url' : '/rest/codelist', 'expected_mime' : "application/vnd.sdmx.structure+xml", 'is_json' : False, 'version': '1.0'},
+    {'id' : 'sdmx:conceptscheme', 'url' : '/rest/conceptscheme', 'expected_mime' : "application/vnd.sdmx.structure+xml", 'is_json' : False, 'version': '1.0'},
+]
+
+
 OPENDAP_URLMAP = []
 
 CUSTOM_URLMAP = [
@@ -566,7 +574,7 @@ CATALOGS_URLMAP = {'geonode' : GEONODE_URLMAP, 'dkan' : DKAN_URLMAP,
 'ifremercatalog' : IFREMER_URLMAP, 'jkan' : JKAN_URLMAP,
 'qwc2': QWC2_URLMAP, 'weko3' : WEKO3_URLMAP, 'wis20box': WIS20BOX_URLMAP, 'ncwms': NCWMS_URLMAP,
 'figshare' : FIGSHARE_URLMAP, 'elsevierdigitalcommons' : ELSEVIERDC_URLMAP, 'junar' : JUNAR_URLMAP, 'custom' : CUSTOM_URLMAP,
-'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP, 'triplydb' : TRIPLYDB_URLMAP, 'ipt' : IPT_URLMAP
+'pycsw' : PYCSW30_URLMAP, 'opendap' : OPENDAP_URLMAP, 'triplydb' : TRIPLYDB_URLMAP, 'ipt' : IPT_URLMAP, 'sdmxri' : SDMXRI_URLMAP
 }
 
 def geoserver_url_cleanup_func(url):
@@ -598,7 +606,7 @@ def erddap_url_cleanup_func(url):
 URL_CLEANUP_MAP = {'geoserver' : geoserver_url_cleanup_func, 'arcgisserver' : arcgisserver_url_cleanup_func, 'geonetwork' : geonetwork_url_cleanup_func, 
                   'thredds' : thredds_url_cleanup_func, 'erddap' : erddap_url_cleanup_func}
 
-def api_identifier(website_url, software_id, verify_json=False, deep=False):
+def api_identifier(website_url, software_id, verify_json=False, deep=False, timeout=DEFAULT_TIMEOUT):
     url_map = CATALOGS_URLMAP[software_id]
     results = []
     found = []
@@ -614,21 +622,22 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
     for item in umap:
         try:
             request_url = website_url + item['url']
+            logging.info(f'Requesting {request_url}')
             if 'post_params' in item.keys():
                 if 'accept' in item.keys():
-                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, json=json.loads(item['post_params']), timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, json=json.loads(item['post_params']), timeout=(timeout, timeout))
                 else:
-                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, json=json.loads(item['post_params']), timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                    response = s.post(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, json=json.loads(item['post_params']), timeout=(timeout, timeout))
                 
             else:
                 if 'prefetch' in item and item['prefetch']:
 #                    request_url = website_url
-                    prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))           
+                    prefeteched_data = s.get(request_url, headers={'User-Agent' : USER_AGENT}, timeout=(timeout, timeout))           
                 request_url = website_url + item['url']
                 if 'accept' in item.keys():
-                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT, 'Accept' : item['accept']}, timeout=(timeout, timeout))
                 else:
-                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
+                    response = s.get(request_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(timeout, timeout))
         except requests.exceptions.Timeout:
             results.append({'url' : request_url,'error' : 'Timeout'})
             continue       
@@ -644,6 +653,7 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
         if response.status_code != 200: 
             results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower() if 'content-type' in response.headers.keys() else '', 'error' : 'Wrong status'})
             continue
+        logging.info(f'Finished request to {request_url}')
         if 'expected_mime' in item.keys() and item['expected_mime'] is not None and 'Content-Type' in response.headers.keys():
             if verify_json:
                 if 'is_json' in item.keys() and item['is_json']:
@@ -669,7 +679,7 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
                 api['url_pattern'] = item['urlpat']
             found.append(api)
     if deep:
-        print('Going deep')
+        logging.info('Going deep')
         for func in DEEP_SEARCH_FUNCTIONS:
             extracted = func(website_url)
             if len(extracted) > 0:
@@ -679,12 +689,12 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False):
 
 
 
-def __detect_one(filename, record, software, action, deep, filepath):
+def __detect_one(filename, record, software, action, deep, filepath, timeout=DEFAULT_TIMEOUT):
     print('Processing %s' % (os.path.basename(filename).split('.', 1)[0]))
     if 'endpoints' in record.keys() and len(record['endpoints']) > 0 and action == 'insert':
         print(' - skip, we have endpoints already and not in replace or update mode')
         return
-    found = api_identifier(record['link'].rstrip('/'), software, deep=deep)             
+    found = api_identifier(record['link'].rstrip('/'), software, deep=deep, timeout=timeout)             
     keys = []
     if action == 'update':
         if 'endpoints' in record.keys() and len(record['endpoints']) > 0:
@@ -737,7 +747,7 @@ def detect_software(software, dryrun: Annotated[bool, typer.Option("--dryrun")]=
 
 
 @app.command()
-def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
+def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False, timeout:int=DEFAULT_TIMEOUT):
     """Enrich single data catalog with API endpoints"""
     if mode == 'entries':
         root_dir = ENTRIES_DIR
@@ -760,9 +770,9 @@ def detect_single(uniqid, dryrun: Annotated[bool, typer.Option("--dryrun")]=Fals
                 continue
             found = True
             if record['software']['id']  in CATALOGS_URLMAP.keys():
-                __detect_one(filename, record, record['software']['id'], action, deep, filepath)
+                __detect_one(filename, record, record['software']['id'], action, deep, filepath, timeout=timeout)
             else:
-                __detect_one(filename, record, 'custom', action, deep, filepath)
+                __detect_one(filename, record, 'custom', action, deep, filepath, timeout=timeout)
 
 @app.command()
 def detect_country(country, dryrun: Annotated[bool, typer.Option("--dryrun")]=False, action: Annotated[str, typer.Option("--action")]='insert', mode:str='entries', deep:bool=False):
