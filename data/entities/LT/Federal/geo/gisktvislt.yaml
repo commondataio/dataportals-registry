@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS REST endpoint providing geospatial data services from gis.ktvis.lt.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ktvis.lt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ktvis.lt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.ktvis.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.ktvis.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.ktvis.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.ktvis.lt/arcgis/rest/services?f=kmz
+id: gisktvislt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://gis.ktvis.lt/arcgis/rest/services
+name: KTVIS ArcGIS REST
+owner:
+  link: https://am.lrv.lt/
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 20
+  name: Lietuvos Respublikos aplinkos ministerija
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- ArcGIS
+- GIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003807

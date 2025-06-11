@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Catálogo de metadatos SINA 3.0
+endpoints:
+- type: csw202
+  url: https://geosinav30metadata.conagua.gob.mx:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geosinav30metadata.conagua.gob.mx:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://geosinav30metadata.conagua.gob.mx:8080/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geosinav30metadata.conagua.gob.mx:8080/geonetwork/srv/api/site
+- type: opensearch
+  url: https://geosinav30metadata.conagua.gob.mx:8080/portal.opensearch
+id: geosinav30metadataconaguagobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://geosinav30metadata.conagua.gob.mx:8080/geonetwork
+name: Catálogo de metadatos SINA 3.0
+owner:
+  link: https://www.conagua.gob.mx/
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Comisión Nacional del Agua (CONAGUA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geonetwork
+- geospatial data
+- water management
+- Mexico
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00010228

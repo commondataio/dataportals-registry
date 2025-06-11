@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: ArcGIS REST services directory for the La Dirección General del Servicio de Información Agroalimentaria y Pesquera
+endpoints:
+- type: arcgis:rest:info
+  url: https://cmgs.gob.mx:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://cmgs.gob.mx:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://cmgs.gob.mx:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://cmgs.gob.mx:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://cmgs.gob.mx:6443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://cmgs.gob.mx:6443/arcgis/rest/services?f=kmz
+id: cmgsgobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://cmgs.gob.mx:6443/arcgis/rest/services
+name: CMGS ArcGIS REST Services
+owner:
+  link: https://www.gob.mx/agricultura/dgsiap
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: La Dirección General del Servicio de Información Agroalimentaria y Pesquera
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- ArcGIS REST
+- Geospatial
+- Municipal services
+topics: []
+uid: temp00005973

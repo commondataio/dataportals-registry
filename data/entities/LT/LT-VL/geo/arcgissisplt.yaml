@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    subregion:
+      id: LT-VL
+      name: Vilniaus apskritis
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GIS Data and Map Services
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.sisp.lt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.sisp.lt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.sisp.lt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.sisp.lt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.sisp.lt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://arcgis.sisp.lt/arcgis/rest/services?f=kmz
+id: arcgissisplt
+langs:
+- id: LT
+  name: Lithuanian
+link: https://arcgis.sisp.lt/arcgis/rest/services
+name: SISP ArcAGIS REST
+owner:
+  link: https://vilnius.lt/struktura-ir-kontaktai/si-susisiekimo-paslaugos
+  location:
+    country:
+      id: LT
+      name: Lithuania
+    level: 30
+    subregion:
+      id: LT-VL
+      name: Vilniaus apskritis
+  name: Susisiekimo paslaugos
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- Map Services
+- Rest API
+- transport
+topics: []
+uid: temp00003806

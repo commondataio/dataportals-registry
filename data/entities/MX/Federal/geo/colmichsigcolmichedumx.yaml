@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: ArcGIS REST services directory for data catalog
+endpoints:
+- type: arcgis:rest:info
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/services?wsdl
+- type: arcgis:sitemap
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://colmichsig.colmich.edu.mx/ArcGIS/rest/services?f=kmz
+id: colmichsigcolmichedumx
+langs:
+- id: ES
+  name: Spanish
+link: https://colmichsig.colmich.edu.mx/ArcGIS/rest/services
+name: El Colegio de Michoacán sedes ArcGIS REST
+owner:
+  link: https://www.colmich.edu.mx/
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: El Colegio de Michoacán sedes
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- REST
+- data catalog
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005974

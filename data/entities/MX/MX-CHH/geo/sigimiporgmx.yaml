@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-CHH
+      name: Chihuahua
+    macroregion:
+      id: '013'
+      name: Central America
+description: Sistema de Información Geográfica Municipal SIGMUN
+endpoints:
+- type: arcgis:rest:info
+  url: http://sigimip.org.mx:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://sigimip.org.mx:6080/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: http://sigimip.org.mx:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sigimip.org.mx:6080/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://sigimip.org.mx:6080/arcgis/rest/services?f=kmz
+- type: arcgis:soap
+  url: http://sigimip.org.mx:6080/arcgis/services?wsdl
+id: sigimiporgmx
+langs:
+- id: ES
+  name: Spanish
+link: http://sigimip.org.mx:6080/arcgis/rest/services
+name: SIGMUN Ciudad Juarez
+owner:
+  link: https://www.imip.org.mx
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-CHH
+      name: Chihuahua
+  name: Instituto Municipal de Investigacion y Planeación (IMIP) Ciudad Juárez
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- GIS
+- REST
+- MX
+topics: []
+uid: temp00005984

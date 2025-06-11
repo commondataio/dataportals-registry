@@ -21,7 +21,7 @@ import pprint
 from urllib.parse import urlparse
 import lxml.html
 import lxml.etree
-import robots
+import urllib.robotparser
 from requests.exceptions import ConnectionError, TooManyRedirects
 from urllib3.exceptions import InsecureRequestWarning#, ConnectionError
 # Suppress only the single warning from urllib3 needed.
@@ -434,8 +434,9 @@ def analyze_robots(root_url):
    except Exception as e:
        print(e)
        return []
-   parser = robots.RobotsParser.from_string(r.text)
-   sitemaps = parser.sitemaps
+   parser = urllib.robotparser.RobotFileParser()
+   parser.parse(r.text)
+   sitemaps = parser.site_maps()
    output = []
    if sitemaps is not None and len(sitemaps) > 0:
         print('Found sitemaps: %s' % (', '.join(sitemaps))) 
