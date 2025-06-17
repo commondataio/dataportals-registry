@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Servicio REST del Sistema de Información Geográfica de Asturias que expone
+  servicios y catálogos de datos geoespaciales.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.asturias.es/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sig.asturias.es/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.asturias.es/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.asturias.es/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.asturias.es/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.asturias.es/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.asturias.es/server/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://sig.asturias.es/servicios/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.asturias.es/servicios/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.asturias.es/servicios/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.asturias.es/servicios/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.asturias.es/servicios/rest/services?f=geositemap
+id: sigasturiases
+langs:
+- id: ES
+  name: Spanish
+link: https://sig.asturias.es/servicios/rest/services
+name: Servicios REST SIG Asturias
+owner:
+  link: https://www.asturias.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-AS
+      name: Asturias, Principado de
+  name: Gobierno del Principado de Asturias
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geospatial
+- ArcGIS REST
+- public sector
+- Spain
+- Asturias
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00001458

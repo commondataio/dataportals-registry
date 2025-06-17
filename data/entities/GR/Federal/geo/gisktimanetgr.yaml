@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Cadastral land parcel boundaries maintained in the Hellenic Cadastre
+  data base. The dataset refers to the land parcels that have been integrated into
+  the Hellenic Cadastre data base.
+endpoints:
+- type: arcgis:rest:services
+  url: http://gis.ktimanet.gr/inspire/rest/services?f=pjson
+  version: '1.0'
+- type: arcgis:rest:info
+  url: http://gis.ktimanet.gr/inspire/rest/info?f=pjson
+- type: arcgis:soap
+  url: http://gis.ktimanet.gr/inspire/services?wsdl
+- type: arcgis:sitemap
+  url: http://gis.ktimanet.gr/inspire/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gis.ktimanet.gr/inspire/rest/services?f=geositemap
+id: gisktimanetgr
+langs:
+- id: EL
+  name: Greek
+link: http://gis.ktimanet.gr/inspire/rest/services
+name: Cadastral Parcels of the Hellenic Cadastre (1:1000, 1:5000)
+owner:
+  link: https://www.ktimanet.gr/
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Hellenic Cadastre, Directorate of Geospatial Information / Department of Geoinformation
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- cadastre
+- parcels
+- land boundaries
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00001543

@@ -22,14 +22,17 @@ description: Геопортал для доступа к каталогу дан
 endpoints:
 - type: opensearch
   url: http://hags.north-east.ru:8080/geoportal/openSearchDescription
+- type: csw202
+  url: http://hags.north-east.ru:8080/geoportal/csw
+  version: 3.0.0
 id: hagsnortheastru
 langs:
 - id: RU
   name: Russian
-link: http://hags.north-east.ru:8080/geoportal/catalog/main/home.page
+link: http://hags.north-east.ru:8080/geoportal
 name: Геопортал СВКНИИ ДВО РАН
 owner:
-  link: http://hags.north-east.ru:8080/geoportal/catalog/main/home.page
+  link: http://www.north-east.ru
   location:
     country:
       id: RU
@@ -48,8 +51,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: esrigeo
+  name: Esri Geoportal Server
 status: active
 tags:
 - geospatial

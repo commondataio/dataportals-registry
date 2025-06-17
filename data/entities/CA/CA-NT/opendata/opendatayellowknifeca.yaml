@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -18,6 +19,19 @@ coverage:
       name: Northwest Territories
 description: Use this platform to discover data through a variety of web apps, or
   download data to create and join the data with other datasets for analysis.
+endpoints:
+- type: dcatap201
+  url: https://opendata.yellowknife.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opendata.yellowknife.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata.yellowknife.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata.yellowknife.ca/api/search/v1
+- type: dcatus11
+  url: https://opendata.yellowknife.ca/data.json
+- type: sitemap
+  url: https://opendata.yellowknife.ca/sitemap.xml
 id: opendatayellowknifeca
 langs:
 - id: EN
@@ -46,8 +60,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: arcgishub
+  name: ArcGIS Hub
 status: active
 tags:
 - government

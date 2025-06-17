@@ -22,7 +22,7 @@ from urllib.parse import urlparse
 import lxml.html
 import lxml.etree
 import urllib.robotparser
-from requests.exceptions import ConnectionError, TooManyRedirects
+from requests.exceptions import ConnectionError, TooManyRedirects, ContentDecodingError
 from urllib3.exceptions import InsecureRequestWarning#, ConnectionError
 # Suppress only the single warning from urllib3 needed.
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
@@ -455,29 +455,37 @@ def analyze_root(root_url):
     try:
         response = s.get(root_url, verify=False, headers={'User-Agent' : USER_AGENT}, timeout=(DEFAULT_TIMEOUT, DEFAULT_TIMEOUT))
     except requests.exceptions.Timeout:
+        logging.info('Timeout error processing root page')
 #        results.append({'url' : request_url,'error' : 'Timeout'})
         return output
     except requests.exceptions.SSLError:
+        logging.info('SSL error processing root page')
 #        results.append({'url' : request_url,'error' : 'SSL Error'})
         return output
     except ConnectionError:
+        logging.info('Connection error processing root page')
 #        results.append({'url' : request_url,'error' : 'no connection'})
         return output  
     except TooManyRedirects:
+        logging.info('Redirects error processing root page')
 #        results.append({'url' : request_url,'error' : 'no connection'})
         return output      
     if response.status_code != 200: 
 #        results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower() if 'content-type' in response.headers.keys() else '', 'error' : 'Wrong status'})
+        logging.info(f'Status code is {response.status_code}. Error processing root page')
         return output
 #    print(response.text)
     try:
         hp = lxml.etree.HTMLParser()#encoding='utf8')
         document = lxml.html.fromstring(response.content, parser=hp)
     except ValueError:
+        logging.info('Error processing root page')
         return output
     except lxml.etree.ParserError:
+        logging.info('Error parsing root page')
         return output
     links = document.xpath('//head/link')
+    logging.debug(f'Found header links {len(links)}')
     for link in links:
         lr = dict(link.attrib)
         if 'rel' in lr.keys() and lr['rel'].lower() in FILTER_RELS: continue
@@ -650,6 +658,9 @@ def api_identifier(website_url, software_id, verify_json=False, deep=False, time
             continue       
         except TooManyRedirects:
             results.append({'url' : request_url,'error' : 'no connection'})
+            continue       
+        except ContentDecodingError:
+            results.append({'url' : request_url,'error' : 'content error'})
             continue       
         if response.status_code != 200: 
             results.append({'url' : request_url, 'status' : response.status_code, 'mime' : response.headers['Content-Type'].split(';', 1)[0].lower() if 'content-type' in response.headers.keys() else '', 'error' : 'Wrong status'})

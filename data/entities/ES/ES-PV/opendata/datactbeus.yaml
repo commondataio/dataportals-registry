@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Pais Vasco
+description: "CTB's open data portal is a service aimed at publishing data relating
+  to public transport in the area of Biscay."
+endpoints:
+- type: ckan
+  url: https://data.ctb.eus/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.ctb.eus/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.ctb.eus/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.ctb.eus/catalog.n3
+- type: dcat:ttl
+  url: https://data.ctb.eus/catalog.ttl
+- type: dcat:xml
+  url: https://data.ctb.eus/catalog.xml
+- type: dcat:jsonld
+  url: https://data.ctb.eus/catalog.jsonld
+id: datactbeus
+langs:
+- id: ES
+  name: Spanish
+link: https://data.ctb.eus
+name: Portal Open Data del Consorcio de Transportes de Bizkaia
+owner:
+  link: https://data.ctb.eus
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Pais Vasco
+  name: Consorcio de Transportes de Bizkaia (CTB)
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: scheduled
+tags:
+- public transport
+- open data
+- transport planning
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00001937

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Data catalog of OGC REST services provided by APambiente.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sniambgeoogc.apambiente.pt/getogc/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sniambgeoogc.apambiente.pt/getogc/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sniambgeoogc.apambiente.pt/getogc/services?wsdl
+- type: arcgis:sitemap
+  url: https://sniambgeoogc.apambiente.pt/getogc/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sniambgeoogc.apambiente.pt/getogc/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sniambgeoogc.apambiente.pt/getogc/rest/services?f=kmz
+id: sniambgeoogcapambientept
+langs:
+- id: PT
+  name: Portugal
+link: https://sniambgeoogc.apambiente.pt/getogc/rest/services
+name: APambiente ArcGIS REST Services
+owner:
+  link: https://www.apambiente.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: APambiente
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- OGC
+- WMS
+- WFS
+- REST
+- Geo
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00001651

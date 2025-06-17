@@ -21,6 +21,7 @@ import json
 import os
 import shutil
 import pprint
+import tqdm
 
 from constants import ENTRY_TEMPLATE, CUSTOM_SOFTWARE_KEYS, MAP_SOFTWARE_OWNER_CATALOG_TYPE, DOMAIN_LOCATIONS, DEFAULT_LOCATION, COUNTRIES_LANGS, MAP_CATALOG_TYPE_SUBDIR, COUNTRIES
 
@@ -207,12 +208,11 @@ def stats(output='country_software.csv'):
 def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):    
     max_num = 0
     n = 0
-    for root, dirs, files in os.walk(dirpath):
+    for root, dirs, files in tqdm.tqdm(os.walk(dirpath)):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
-            print(filename)
             n += 1
-            if n % 1000 == 0: print('Processed %d' % (n))
+#            if n % 1000 == 0: print('Processed %d' % (n))
             filepath = filename
             f = open(filepath, 'r', encoding='utf8')
             record = yaml.load(f, Loader=Loader)                         
@@ -223,7 +223,7 @@ def assign_by_dir(prefix='cdi', dirpath=ROOT_DIR):
                     max_num = num
             f.close() 
     print('Processed %d' % (n))
-    for root, dirs, files in os.walk(dirpath):
+    for root, dirs, files in tqdm.tqdm(os.walk(dirpath)):
         files = [ os.path.join(root, fi) for fi in files if fi.endswith(".yaml") ]
         for filename in files:                
             filepath = filename

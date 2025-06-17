@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NC
+      name: New Caledonia
+description: Public platform for exploring and downloading geographic data from the
+  City of Nouméa as part of an open data initiative.
+endpoints:
+- type: arcgis:rest:info
+  url: https://carto.noumea.nc/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://carto.noumea.nc/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://carto.noumea.nc/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://carto.noumea.nc/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://carto.noumea.nc/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://carto.noumea.nc/arcgis/rest/services?f=kmz
+id: cartonoumeanc
+langs:
+- id: FR
+  name: French
+link: https://carto.noumea.nc/arcgis/rest/services
+name: Nouméa Carto (via arcgis/rest/services)
+owner:
+  link: https://www.noumea.nc
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NC
+      name: New Caledonia
+  name: Ville de Nouméa
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geographic data
+- municipal
+- open data
+- spatial catalog
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005890
