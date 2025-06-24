@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Geospatial data services provided via ArcGIS REST Services
+endpoints:
+- type: arcgis:rest:info
+  url: https://paumaps.pau.go.ug/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://paumaps.pau.go.ug/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://paumaps.pau.go.ug/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://paumaps.pau.go.ug/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://paumaps.pau.go.ug/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://paumaps.pau.go.ug/arcgis/rest/services?f=kmz
+id: paumapspaugoug
+langs:
+- id: EN
+  name: English
+link: https://paumaps.pau.go.ug/arcgis/rest/services
+name: Petroleum Authority of Uganda ArcGIS REST
+owner:
+  link: https://www.pau.go.ug
+  location:
+    country:
+      id: UG
+      name: Uganda
+    level: 20
+  name: Petroleum Authority of Uganda
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: scheduled
+tags:
+- geoportal
+- maps
+- ArcGIS REST services
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00005839
