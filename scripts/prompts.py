@@ -5,6 +5,7 @@ import json
 import requests
 import csv
 import sys
+from iterable.helpers.detect import open_iterable
 import os
 from io import StringIO
 
@@ -160,5 +161,36 @@ def get_profile(url):
     response = resp.json()     
     return response["choices"][0]["message"]["content"]
 
+
+def build_markdown_from_record(item):
+ #   api_url = "https://api.perplexity.ai/chat/completions"
+    api_url = "http://127.0.0.1:1234/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {PERPLEXITY_API_KEY}"}
+    payload = {
+        "model": "sonar",
+        "messages": [
+            {"role": "system", "content": "Be precise and concise, provide data output only Markdown text"},
+            {"role": "user", "content": ("Return following data as markdown\n" + str(item))}
+        ]
+    }
+    resp = requests.post(api_url, headers=headers, json=payload)
+    response = resp.json()     
+    return response["choices"][0]["message"]["content"]
+
+
+def generate_markdown():
+    import tqdm
+    iterable = open_iterable('../data/datasets/full.jsonl.zst', mode='r')
+    for item in tqdm.tqdm(iterable):
+        fname = f'docs/{item["uid"]}.md'
+        if os.path.exists(fname): continue
+
+        doc = build_markdown_from_record(item)
+        f = open(fname, 'w')
+        f.write(doc)
+        f.close()
+#        print(doc)
+
 if __name__ == "__main__":
-    get_profile(sys.argv[1])
+#    get_profile(sys.argv[1])
+    generate_markdown()

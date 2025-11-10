@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: IT-25
+      name: Lombardia
+description: ArcGIS Server for the Provincia di Lodi
+endpoints:
+- type: arcgis:rest:info
+  url: https://spatialdata.provincia.lodi.it/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://spatialdata.provincia.lodi.it/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://spatialdata.provincia.lodi.it/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://spatialdata.provincia.lodi.it/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://spatialdata.provincia.lodi.it/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://spatialdata.provincia.lodi.it/server/rest/services?f=kmz
+id: spatialdataprovincialodiit
+langs:
+- id: IT
+  name: Italian
+link: https://spatialdata.provincia.lodi.it/server/rest/services
+name: Provincia di Lodi Spatial Data
+owner:
+  link: https://www.provincia.lodi.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-25
+      name: Lombardia
+  name: Provincia di Lodi
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- environment
+- geodata
+- catalog
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00003788
