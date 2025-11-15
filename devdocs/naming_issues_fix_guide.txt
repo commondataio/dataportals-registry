@@ -1,0 +1,151 @@
+================================================================================
+HOW TO FIX NAMING ISSUES - GUIDE
+================================================================================
+
+
+1. DUPLICATE IDs
+--------------------------------------------------------------------------------
+Problem: Multiple files share the same 'id' field value.
+Impact: IDs should be unique identifiers for each catalog.
+
+How to fix:
+  a. Review each duplicate ID case
+  b. Determine if they represent the same catalog (merge) or different ones
+  c. If same catalog: Keep one file, remove others or merge their content
+  d. If different catalogs: Make IDs unique by:
+     - Adding location suffix (e.g., 'datagov-us', 'datagov-uk')
+     - Adding type suffix (e.g., 'datagov-opendata', 'datagov-geo')
+     - Using more specific domain-based IDs
+  e. Update the 'id' field in the YAML file
+
+Example fix:
+  Before: id: datagov
+  After:  id: datagovus (for US) or datagovuk (for UK)
+
+
+2. DUPLICATE NAMES
+--------------------------------------------------------------------------------
+Problem: Multiple files share the same 'name' field value.
+Impact: Names can legitimately be the same, but duplicates might indicate:
+  - Same catalog listed multiple times
+  - Missing distinguishing information in the name
+
+How to fix:
+  a. Review if the catalogs are actually the same
+  b. If same: Merge or remove duplicates
+  c. If different: Add distinguishing information:
+     - Add location: 'Data.gov (United States)' vs 'Data.gov (United Kingdom)'
+     - Add organization: 'Open Data Portal (City of Boston)'
+     - Add type: 'Geoportal (Federal)' vs 'Geoportal (State)'
+  d. Update the 'name' field in the YAML file
+
+
+3. DUPLICATE UIDs
+--------------------------------------------------------------------------------
+Problem: Multiple files share the same 'uid' field value.
+Impact: UIDs should be unique identifiers (likely from an external system).
+
+How to fix:
+  a. Check if UIDs come from an external system (e.g., CDI)
+  b. If UIDs are from external system: Contact system administrator
+  c. If UIDs are generated locally: Generate new unique UIDs
+  d. UID format should be consistent (e.g., 'cdi00000914')
+  e. Update the 'uid' field in the YAML file
+
+
+4. ANOMALOUS NAMES
+--------------------------------------------------------------------------------
+Problem: Names contain unusual patterns, characters, or formatting issues.
+
+How to fix by issue type:
+
+  a. Very long names (>200 chars):
+     - Shorten to essential information
+     - Move detailed description to 'description' field
+
+  b. Very short names (<3 chars):
+     - Expand with more descriptive information
+
+  c. Unusual characters:
+     - Remove or replace with standard characters
+     - Use Unicode normalization if needed
+
+  d. Multiple consecutive spaces:
+     - Replace with single space
+     - Use: name.replace('  ', ' ')
+
+  e. Leading/trailing whitespace:
+     - Use: name.strip()
+
+  f. Looks like URL or path:
+     - Extract actual catalog name from URL
+     - Use domain name or organization name instead
+
+  g. Contains file extension:
+     - Remove file extension from name
+
+  h. All uppercase (long):
+     - Convert to title case or sentence case
+     - Use: name.title() or name.capitalize()
+
+  i. All lowercase (might need capitalization):
+     - Apply proper capitalization
+     - Use: name.title() for title case
+
+
+5. ANOMALOUS IDs
+--------------------------------------------------------------------------------
+Problem: IDs contain unusual patterns or don't follow conventions.
+
+How to fix by issue type:
+
+  a. Contains spaces:
+     - Replace spaces with hyphens or underscores
+     - Use: id.replace(' ', '-')
+
+  b. Contains uppercase letters:
+     - Convert to lowercase
+     - Use: id.lower()
+
+  c. Unusual characters:
+     - Remove or replace with allowed characters (a-z, 0-9, -, _, .)
+     - Use: re.sub(r'[^a-z0-9\-_.]', '', id.lower())
+
+  d. Very long IDs (>100 chars):
+     - Shorten while keeping uniqueness
+     - Use domain name or key words
+
+  e. Very short IDs (<3 chars):
+     - Expand with more context
+
+  f. Starts/ends with special characters:
+     - Remove leading/trailing special characters
+     - Use: id.strip('-_.')
+
+  g. Multiple consecutive special characters:
+     - Replace with single character
+     - Use: re.sub(r'[-_.]{2,}', '-', id)
+
+
+6. GENERAL BEST PRACTICES
+--------------------------------------------------------------------------------
+  - IDs should be: lowercase, alphanumeric with hyphens/underscores, unique
+  - Names should be: descriptive, properly capitalized, no special formatting
+  - UIDs should be: unique, follow external system format if applicable
+  - Always validate YAML syntax after making changes
+  - Test that the file loads correctly: python -c "import yaml; yaml.safe_load(open('file.yaml'))"
+
+
+7. AUTOMATED FIXING SCRIPT
+--------------------------------------------------------------------------------
+You can create a script to automatically fix common issues:
+  - Trim whitespace
+  - Normalize case
+  - Remove unusual characters
+  - Fix consecutive spaces/special characters
+
+However, manual review is recommended for:
+  - Duplicate IDs/names/UIDs (requires domain knowledge)
+  - Very long names (requires judgment on what to keep)
+  - Names that look like URLs (requires extracting proper name)
+

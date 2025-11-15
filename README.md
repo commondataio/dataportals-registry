@@ -101,6 +101,28 @@ Datasets kept in *data/datasets* folder, right now it's catalogs.jsonl file gene
 Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jsonl file from YAML files.
 
 
+## Data Quality and Validation
+
+The repository includes tools for analyzing and validating data quality:
+
+- **Duplicate Detection**: Scripts to identify duplicate UID's and ID's across all records
+- **Schema Validation**: Validation against JSON schemas in `data/schemes/`
+- **Data Quality Reports**: Analysis reports available in the `devdocs/` directory
+
+To run data quality analysis:
+
+```bash
+python devdocs/analyze_duplicates_and_errors.py
+```
+
+This generates comprehensive reports on:
+- Duplicate UID's and ID's
+- Missing required fields
+- Filename mismatches
+- Empty files and parsing errors
+
+See `devdocs/duplicates_and_errors_report.md` for detailed findings.
+
 ## How to contribute?
 
 If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/commondataio/dataportals-registry/pulls) or write an [issue](https://github.com/commondataio/dataportals-registry/issues).
