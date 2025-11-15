@@ -1,0 +1,201 @@
+{
+  "id": {
+    "type": "string",
+    "empty": false,
+    "required": true
+  },
+  "name": {
+    "type": "string",
+    "empty": false,
+    "required": true
+  },
+  "type": {
+    "type": "string",
+    "allowed": ["Software"],
+    "required": true
+  },
+  "category": {
+    "type": "string",
+    "empty": false,
+    "required": true
+  },
+  "website": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "datatypes": {
+    "type": "dict",
+    "required": true,
+    "schema": {
+      "datasets": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+      },
+      "fields": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+      },
+      "organizations": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+      },
+      "resources": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+      },
+      "topics": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Unknown", "Uncertain", "Compatible", "Generated"]
+      }
+    }
+  },
+  "has_api": {
+    "type": "string",
+    "allowed": ["Yes", "No", "Uncertain"],
+    "required": true
+  },
+  "has_bulk": {
+    "type": "string",
+    "allowed": ["Yes", "No", "Uncertain"],
+    "required": true
+  },
+  "metadata_support": {
+    "type": "dict",
+    "required": true,
+    "schema": {
+      "ckan_api": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "csw": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "custom_api": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "dcat": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "oai-pmh": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "ogcrecords": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "openaire": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "opensearch": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "schema-org": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "sdmx": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "stac": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "swordapi": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "wcs": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "wfs": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "wms": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      }
+    }
+  },
+  "pid_support": {
+    "type": "dict",
+    "required": true,
+    "schema": {
+      "has_doi": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only"]
+      },
+      "persistent_dataset_url": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain", "Plugin only"]
+      }
+    }
+  },
+  "rights_management": {
+    "type": "dict",
+    "required": true,
+    "schema": {
+      "licensing_type": {
+        "type": "string",
+        "allowed": ["Per dataset", "Global", "Uncertain", "Not applicable"]
+      },
+      "supports_licenses": {
+        "type": "string",
+        "allowed": ["Yes", "No", "Uncertain"]
+      },
+      "tos_url": {
+        "type": "string",
+        "required": false
+      },
+      "privacy_policy_url": {
+        "type": "string",
+        "required": false
+      }
+    }
+  },
+  "storage_type": {
+    "type": "string",
+    "allowed": ["Both", "Raw", "Structured"],
+    "required": true
+  }
+}
+

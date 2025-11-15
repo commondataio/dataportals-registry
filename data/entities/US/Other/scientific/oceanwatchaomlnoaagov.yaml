@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map_layer
+coverage:
+- description: A repository for Atlantic Ocean datasets from NOAA AOML OceanWatch
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ERDDAP data portal providing access to Atlantic Ocean datasets managed
+  by NOAA's Atlantic Oceanographic and Meteorological Laboratory (AOML) OceanWatch
+  program, offering easier access to scientific data in common file formats with standardized
+  time formats.
+endpoints:
+- type: erddap:index
+  url: https://oceanwatch.aoml.noaa.gov/erddap/index.json
+- type: erddap:datasets
+  url: https://oceanwatch.aoml.noaa.gov/erddap/info/index.json
+- type: opensearch
+  url: https://oceanwatch.aoml.noaa.gov/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://oceanwatch.aoml.noaa.gov/erddap/sitemap.xml
+id: oceanwatchaomlnoaagov
+langs:
+- id: EN
+  name: English
+link: https://oceanwatch.aoml.noaa.gov/erddap/index.html
+name: NOAA AOML OceanWatch ERDDAP
+owner:
+  link: https://www.aoml.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Atlantic Oceanographic and Meteorological Laboratory
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: Erddap
+status: active
+tags:
+- ocean
+- environment
+- oceanography
+- marine data
+- ERDDAP
+- Atlantic Ocean
+- scientific data
+- OceanWatch
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00010305

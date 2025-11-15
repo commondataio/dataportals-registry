@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map_layer
+coverage:
+- description: A repository for SYROCO (SYstem of ROmanians COastal monitoring) forecasts
+    and coastal monitoring data for Romanian coastal areas
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: ERDDAP data portal providing access to SYROCO (SYstem of ROmanians COastal
+  monitoring) raw forecasts and coastal monitoring datasets. The system is built and
+  maintained jointly by seamod.ro and the National Institute for Marine Research and
+  Development (NIMRD) of Romania, with support from the Copernicus Marine Programme.
+endpoints:
+- type: erddap:index
+  url: http://seamod.ro:8080/erddap/index.json
+- type: erddap:datasets
+  url: http://seamod.ro:8080/erddap/info/index.json
+- type: opensearch
+  url: http://seamod.ro:8080/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: http://seamod.ro:8080/erddap/sitemap.xml
+id: seamodsyrocoerddap
+langs:
+- id: EN
+  name: English
+link: http://seamod.ro:8080/erddap/index.html
+name: SEAMOD SYROCO ERDDAP
+owner:
+  link: http://www.rmri.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: National Institute for Marine Research and Development
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: Erddap
+status: active
+tags:
+- ocean
+- environment
+- oceanography
+- marine data
+- ERDDAP
+- Romania
+- coastal monitoring
+- SYROCO
+- forecasting
+- Copernicus
+- scientific data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00010338

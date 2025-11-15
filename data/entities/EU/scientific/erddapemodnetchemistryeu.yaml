@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+description: ERDDAP data portal providing access to oceanographic chemistry datasets
+  from the European Marine Observation and Data Network (EMODnet) Chemistry thematic
+  lot, offering easier access to scientific data in common file formats with standardized
+  time formats.
+endpoints:
+- type: erddap:index
+  url: https://erddap.emodnet-chemistry.eu/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.emodnet-chemistry.eu/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.emodnet-chemistry.eu/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.emodnet-chemistry.eu/erddap/sitemap.xml
+id: erddapemodnetchemistryeu
+langs:
+- id: EN
+  name: English
+link: https://erddap.emodnet-chemistry.eu/erddap/index.html
+name: EMODnet Chemistry ERDDAP
+owner:
+  link: https://emodnet.ec.europa.eu/en/chemistry
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Marine Observation and Data Network (EMODnet)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: Erddap
+status: active
+tags:
+- scientific
+- marine data
+- chemistry
+- oceanography
+- ERDDAP
+- ocean chemistry
+- water quality
+- nutrients
+- contaminants
+- metadata
+topics:
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00010364

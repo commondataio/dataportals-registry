@@ -9,7 +9,9 @@ from iterable.helpers.detect import open_iterable
 import os
 from io import StringIO
 
-PERPLEXITY_API_KEY = os.getenv('PERPLEXITY_API_KEY', )
+PERPLEXITY_API_KEY = os.getenv(
+    "PERPLEXITY_API_KEY",
+)
 
 
 # This is the prompt we use for getting chat gpt 4o to convert documents into our silver training data
@@ -30,7 +32,6 @@ def build_openai_silver_data_prompt(base_text: str) -> str:
 class EnrichmentResponse:
     primary_language: Optional[str]
     natural_text: Optional[str]
-
 
 
 def openai_response_format_schema() -> dict:
@@ -60,8 +61,17 @@ def openai_response_format_schema() -> dict:
                     "owner_type": {
                         "type": ["string", "null"],
                         "description": "Type of the owner according owner_type_reference",
-                        "enum": ["Central government", "Regional government", "Local government", "Business", "Academy", "Civil society", "Community", "International"]
-                    }, 
+                        "enum": [
+                            "Central government",
+                            "Regional government",
+                            "Local government",
+                            "Business",
+                            "Academy",
+                            "Civil society",
+                            "Community",
+                            "International",
+                        ],
+                    },
                     "owner_country_iso2": {
                         "type": ["string", "null"],
                         "description": "ISO2 code of the country of the owner of this data catalog if ISO2 code known overwise empty",
@@ -78,43 +88,35 @@ def openai_response_format_schema() -> dict:
                         "type": ["string", "null"],
                         "description": "Name of the country of the owner of this data catalog from ISO3166-2 vocbulary",
                     },
-
                     "data_themes": {
                         "type": ["array", "null"],
                         "description": "Data catalog primary themes according to EU data theme vocabulary associated with Data Catalog Vocabulary application profile (DCAT-AP)",
                         "maxItems": 10,
-                        "items": {
-                             "type": "string"
-                        }
+                        "items": {"type": "string"},
                     },
                     "geotopics": {
                         "type": ["array", "null"],
                         "description": "Data catalog ISO19115 Topic Categories",
                         "maxItems": 10,
-                        "items": {
-                             "type": "string"
-                        }
-                    }, 
-                    "tags":  {
+                        "items": {"type": "string"},
+                    },
+                    "tags": {
                         "type": ["array", "null"],
-                        "description" : "Tags associated with data catalogs",
+                        "description": "Tags associated with data catalogs",
                         "maxItems": 10,
-                        "items": {
-                             "type": "string"
-                        }
-                    }
+                        "items": {"type": "string"},
+                    },
                 },
                 "additionalProperties": False,
                 "required": [
                     "name",
                     "description",
-                    "owner_name", 
+                    "owner_name",
                     "owner_website",
-                    "owner_type"
-                    "owner_country",
+                    "owner_type" "owner_country",
                     "topic",
                     "geotopic",
-                    "tags"
+                    "tags",
                 ],
             },
             "strict": True,
@@ -145,52 +147,65 @@ def extract_raw_text(prompt: str) -> str:
     else:
         raise ValueError("Prompt does not contain raw text")
 
+
 def get_profile(url):
     api_url = "https://api.perplexity.ai/chat/completions"
     headers = {"Authorization": f"Bearer {PERPLEXITY_API_KEY}"}
     payload = {
         "model": "sonar",
         "messages": [
-            {"role": "system", "content": "Be precise and concise, provide data output only CSV or JSON, accrording to request"},
-            {"role": "user", "content": (
-                build_openai_silver_data_prompt(url))},
+            {
+                "role": "system",
+                "content": "Be precise and concise, provide data output only CSV or JSON, accrording to request",
+            },
+            {"role": "user", "content": (build_openai_silver_data_prompt(url))},
         ],
-        "response_format": openai_response_format_schema()
+        "response_format": openai_response_format_schema(),
     }
     resp = requests.post(api_url, headers=headers, json=payload)
-    response = resp.json()     
+    response = resp.json()
     return response["choices"][0]["message"]["content"]
 
 
 def build_markdown_from_record(item):
- #   api_url = "https://api.perplexity.ai/chat/completions"
+    #   api_url = "https://api.perplexity.ai/chat/completions"
     api_url = "http://127.0.0.1:1234/v1/chat/completions"
     headers = {"Authorization": f"Bearer {PERPLEXITY_API_KEY}"}
     payload = {
         "model": "sonar",
         "messages": [
-            {"role": "system", "content": "Be precise and concise, provide data output only Markdown text"},
-            {"role": "user", "content": ("Return following data as markdown\n" + str(item))}
-        ]
+            {
+                "role": "system",
+                "content": "Be precise and concise, provide data output only Markdown text",
+            },
+            {
+                "role": "user",
+                "content": ("Return following data as markdown\n" + str(item)),
+            },
+        ],
     }
     resp = requests.post(api_url, headers=headers, json=payload)
-    response = resp.json()     
+    response = resp.json()
     return response["choices"][0]["message"]["content"]
 
 
 def generate_markdown():
     import tqdm
-    iterable = open_iterable('../data/datasets/full.jsonl.zst', mode='r')
+
+    iterable = open_iterable("../data/datasets/full.jsonl.zst", mode="r")
     for item in tqdm.tqdm(iterable):
         fname = f'docs/{item["uid"]}.md'
-        if os.path.exists(fname): continue
+        if os.path.exists(fname):
+            continue
 
         doc = build_markdown_from_record(item)
-        f = open(fname, 'w')
+        f = open(fname, "w")
         f.write(doc)
         f.close()
+
+
 #        print(doc)
 
 if __name__ == "__main__":
-#    get_profile(sys.argv[1])
+    #    get_profile(sys.argv[1])
     generate_markdown()

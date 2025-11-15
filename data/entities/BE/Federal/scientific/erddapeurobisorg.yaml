@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map_layer
+coverage:
+- description: A repository for European Ocean Biodiversity Information System data,
+    including datasets from African regions
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- description: Coverage includes marine biodiversity data from African regions
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 20
+description: ERDDAP data portal providing access to European Ocean Biodiversity Information
+  System (EurOBIS) datasets managed by the Flanders Marine Institute (VLIZ), including
+  marine biodiversity data from European and African regions, offering easier access
+  to scientific data in common file formats with standardized time formats.
+endpoints:
+- type: erddap:index
+  url: https://erddap.eurobis.org/erddap/index.json
+- type: erddap:datasets
+  url: https://erddap.eurobis.org/erddap/info/index.json
+- type: opensearch
+  url: https://erddap.eurobis.org/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://erddap.eurobis.org/erddap/sitemap.xml
+id: erddapeurobisorg
+langs:
+- id: EN
+  name: English
+link: https://erddap.eurobis.org/erddap/index.html
+name: EurOBIS ERDDAP
+owner:
+  link: https://www.vliz.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Flanders Marine Institute (VLIZ)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: Erddap
+status: active
+tags:
+- ocean
+- environment
+- oceanography
+- marine data
+- ERDDAP
+- biodiversity
+- marine biodiversity
+- Europe
+- Africa
+- scientific data
+- EurOBIS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: cdi00010324

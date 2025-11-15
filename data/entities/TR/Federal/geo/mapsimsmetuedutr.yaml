@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- description: A geoportal providing access to marine and oceanographic GIS services
+    from the Institute of Marine Sciences
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST Services Directory providing access to marine and oceanographic
+  GIS services, including BRIDGE model outputs, MarmodFaz2, MarmodFaz3, and various
+  oceanographic datasets (chlorophyll, sea surface temperature, etc.) from the Middle
+  East Technical University Institute of Marine Sciences.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.ims.metu.edu.tr:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.ims.metu.edu.tr:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.ims.metu.edu.tr:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.ims.metu.edu.tr:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.ims.metu.edu.tr:6443/arcgis/rest/services?f=geositemap
+id: mapsimsmetuedutr
+langs:
+- id: EN
+  name: English
+- id: TR
+  name: Turkish
+link: https://maps.ims.metu.edu.tr:6443/arcgis/rest/services
+name: METU IMS ArcGIS REST Services
+owner:
+  link: https://ims.metu.edu.tr
+  location:
+    country:
+      id: TR
+      name: Turkey
+    level: 20
+  name: Middle East Technical University Institute of Marine Sciences
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- geospatial
+- marine data
+- oceanography
+- GIS
+- scientific data
+- BRIDGE
+- MarmodFaz
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00010366

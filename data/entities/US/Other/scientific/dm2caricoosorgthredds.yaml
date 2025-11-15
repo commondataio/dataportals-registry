@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- description: A repository for oceanographic and meteorological data from the Caribbean
+    region, including Puerto Rico and U.S. Virgin Islands
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: THREDDS Data Server providing access to real-time and historical oceanographic
+  and meteorological data from the Caribbean Coastal Ocean Observing System (CARICOOS),
+  including WindNet data, Rincon WaveRider Buoy data, and High-Frequency Radar (HFR)
+  surface current velocities for the U.S. Caribbean region. This is a redundant server
+  (dm2) providing backup access to the same datasets as dm1, offering metadata and
+  data access for scientific datasets in NetCDF format.
+endpoints:
+- type: thredds:catalog
+  url: http://dm2.caricoos.org/thredds/catalog.xml
+- type: thredds:info
+  url: http://dm2.caricoos.org/thredds/serverInfo.xml
+id: dm2caricoosorgthredds
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: http://dm2.caricoos.org/thredds/catalog.html
+name: CARICOOS THREDDS Data Server (dm2)
+owner:
+  link: https://www.caricoos.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+  name: Caribbean Coastal Ocean Observing System
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: thredds
+  name: Thredds
+status: active
+tags:
+- ocean
+- environment
+- oceanography
+- marine data
+- THREDDS
+- Caribbean
+- Puerto Rico
+- coastal observing
+- scientific data
+- NetCDF
+- wind
+- waves
+- radar
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00010318

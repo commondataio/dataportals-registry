@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+- map_layer
+coverage:
+- description: A repository for oceanographic data from the Institute of Polar Sciences
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ERDDAP data portal providing access to oceanographic datasets managed
+  by the Institute of Polar Sciences (CNR-ISP), offering easier access to scientific
+  data in common file formats with standardized time formats.
+endpoints:
+- type: erddap:index
+  url: https://bo.isp.cnr.it/erddap/index.json
+- type: erddap:datasets
+  url: https://bo.isp.cnr.it/erddap/info/index.json
+- type: opensearch
+  url: https://bo.isp.cnr.it/erddap/opensearch1.1/description.xml
+- type: sitemap
+  url: https://bo.isp.cnr.it/erddap/sitemap.xml
+id: ispcnriterddap
+langs:
+- id: EN
+  name: English
+link: https://bo.isp.cnr.it/erddap/index.html
+name: ISP - ERDDAP
+owner:
+  link: https://www.isp.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: CNR - Institute of Polar Sciences
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: erddap
+  name: Erddap
+status: active
+tags:
+- ocean
+- environment
+- oceanography
+- marine data
+- ERDDAP
+- Italy
+- polar sciences
+- scientific data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00010333
