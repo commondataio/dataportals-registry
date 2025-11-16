@@ -571,7 +571,6 @@ def _add_single_entry(
         detect_single(
             record_id,
             dryrun=False,
-            replace_endpoints=True,
             mode="scheduled" if scheduled else "entries",
         )
 
@@ -637,6 +636,8 @@ def add_list(
     f = open(filename, "r", encoding="utf8")
     for line in f:
         line = line.strip()
+        if not line:
+            continue
         _add_single_entry(
             line,
             software,
