@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+endpoints:
+- type: ckan
+  url: http://opendata.vilanova.cat/api/3
+- type: ckan
+  url: http://opendata.vilanova.cat/api/3/action/package_list
+- type: opendatasoft
+  url: http://opendata.vilanova.cat/api/v2/catalog
+- type: socrata
+  url: http://opendata.vilanova.cat/api/views
+- type: dcatap201
+  url: http://opendata.vilanova.cat/api/feed/dcat
+- type: dcat
+  url: http://opendata.vilanova.cat/catalog.xml
+- type: dcatap
+  url: http://opendata.vilanova.cat/catalog.rdf
+- type: dcat:jsonld
+  url: http://opendata.vilanova.cat/catalog.jsonld
+- type: sitemap
+  url: http://opendata.vilanova.cat/sitemap.xml
+id: opendatavilanovacatdataset
+langs:
+- id: CA
+  name: Catalan
+link: http://opendata.vilanova.cat/dataset
+name: Ajuntament de Vilanova i la Geltrú - Open Data
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Ajuntament de Vilanova i la Geltrú
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010877

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+    subregion: &id003
+      id: ES-AR
+      name: Aragón
+description: El icono + / - abre y cierra items
+endpoints:
+- type: ckan
+  url: https://opendata.aragon.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.aragon.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.aragon.es/api/3/action/package_list
+  version: '3'
+id: opendataaragonesdatoscatalogo
+langs:
+- id: ES
+  name: Spanish
+link: https://opendata.aragon.es
+name: Aragón Open Data
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+    subregion: *id003
+  name: Aragón Open Data
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010664

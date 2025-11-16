@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: GMU-CSISS Catalogue Service for Unidata providing geospatial metadata
+  services for atmospheric and earth science data.
+endpoints:
+- type: csw202
+  url: http://cube.csiss.gmu.edu/srv/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://cube.csiss.gmu.edu/srv/csw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: cubecsissgmuedu
+langs:
+- id: EN
+  name: English
+link: http://cube.csiss.gmu.edu/srv/csw
+name: GMU-CSISS Catalogue Service for Unidata
+owner:
+  link: https://csiss.gmu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: George Mason University - Center for Spatial Information Science and Systems
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- atmospheric
+- earth science
+- Unidata
+- GMU
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: temp00010012
+

@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+    subregion: &id003
+      id: ES-AN
+      name: Andalucía
+description: La computación en la nube se consolida como infraestructura esencial
+  para una transformación digital segura, sostenible y soberana en Europa
+endpoints:
+- type: ckan
+  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.juntadeandalucia.es/datosabiertos/portal/api/3/action/package_list
+  version: '3'
+id: juntadeandaluciaesdatosabiertosportalhtml
+langs:
+- id: ES
+  name: Spanish
+link: https://www.juntadeandalucia.es/datosabiertos/portal
+name: Datos abiertos de la junta de Andalucía
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+    subregion: *id003
+  name: Datos abiertos de la junta de Andalucía
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010663

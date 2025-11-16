@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+endpoints:
+- type: dcat
+  url: https://datosabiertos.dip-badajoz.es/catalog.xml
+- type: dcatap
+  url: https://datosabiertos.dip-badajoz.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://datosabiertos.dip-badajoz.es/catalog.jsonld
+- type: ckan
+  url: https://datosabiertos.dip-badajoz.es/api/3
+  version: '3'
+id: datosabiertosdipbadajozesdataset
+langs:
+- id: ES
+  name: Spanish
+link: https://datosabiertos.dip-badajoz.es/dataset
+name: Portal  de Datos Abiertos Diputación de Badajoz
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Portal  de Datos Abiertos Diputación de Badajoz
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010798

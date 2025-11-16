@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 20
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Datos abiertos del Gobierno de España para la apertura de la información
+  pública y desarrollo de servicios avanzados basados en datos. Es promovida por el
+  Ministerio para la Transformación Digital y de la Función Pública y la Entidad Pública
+  Empresarial Red.es.
+endpoints:
+- type: ckan
+  url: https://datos.gob.es/api/3
+- type: sitemap
+  url: https://datos.gob.es/sitemap.xml
+id: datosgobesescatalogo
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://datos.gob.es/es/catalogo
+name: Datos.gob.es
+owner:
+  location:
+    country: *id001
+    level: 20
+    macroregion: *id002
+  name: Datos.gob.es
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010880

@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 0
+description: MS4W (MapServer for Windows) PyCSW instance providing geospatial metadata
+  catalog services.
+endpoints:
+- type: csw300
+  url: https://ms4w.dev/pycsw?service=CSW&version=3.0.0&request=GetCapabilities
+  version: 3.0.0
+- type: oaipmh20
+  url: https://ms4w.dev/pycsw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: ms4wdev
+langs:
+- id: EN
+  name: English
+link: https://ms4w.dev
+name: MS4W PyCSW Catalog
+owner:
+  link: https://ms4w.dev
+  location:
+    country:
+      id: World
+      name: World
+    level: 0
+  name: MS4W Project
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- mapserver
+- MS4W
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00010539

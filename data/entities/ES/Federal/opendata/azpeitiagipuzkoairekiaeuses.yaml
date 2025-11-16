@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Isunak kalifikazioaren (arina, larria edo oso larria) arabera. Isunak
+  kale eta ordainduta ala ez ordainduta dauden arabera banatzen dira, ere bai.
+endpoints:
+- type: ckan
+  url: http://azpeitia.gipuzkoairekia.eus/api/3
+- type: ckan
+  url: http://azpeitia.gipuzkoairekia.eus/api/3/action/package_list
+- type: opendatasoft
+  url: http://azpeitia.gipuzkoairekia.eus/api/v2/catalog
+- type: socrata
+  url: http://azpeitia.gipuzkoairekia.eus/api/views
+- type: dcatap201
+  url: http://azpeitia.gipuzkoairekia.eus/api/feed/dcat
+- type: dcat
+  url: http://azpeitia.gipuzkoairekia.eus/catalog.xml
+- type: dcatap
+  url: http://azpeitia.gipuzkoairekia.eus/catalog.rdf
+- type: dcat:jsonld
+  url: http://azpeitia.gipuzkoairekia.eus/catalog.jsonld
+- type: sitemap
+  url: http://azpeitia.gipuzkoairekia.eus/sitemap.xml
+id: azpeitiagipuzkoairekiaeuses
+langs:
+- id: EU
+  name: Basque
+link: http://azpeitia.gipuzkoairekia.eus/es
+name: Open Data gunea. Azpeitia
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Open Data gunea. Azpeitia
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010832

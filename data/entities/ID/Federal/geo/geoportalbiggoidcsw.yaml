@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Badan Informasi Geospasial (BIG) Geoportal PyCSW catalog providing geospatial
+  metadata services for Indonesian national geospatial data.
+endpoints:
+- type: csw202
+  url: https://geoportal.big.go.id/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.big.go.id/csw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: geoportalbiggoidcsw
+langs:
+- id: ID
+  name: Indonesian
+- id: EN
+  name: English
+link: https://geoportal.big.go.id/csw
+name: BIG Geoportal PyCSW Catalog
+owner:
+  link: https://www.big.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: Badan Informasi Geospasial
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- Indonesia
+- BIG
+- national mapping
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00010642

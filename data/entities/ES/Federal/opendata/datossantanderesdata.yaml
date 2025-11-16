@@ -1,0 +1,54 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Tramos de Carril Bici desplegados en el Municipio de Santander
+endpoints:
+- type: ckan
+  url: https://datos.santander.es/api/3
+- type: ckan
+  url: https://datos.santander.es/api/3/action/package_list
+- type: opendatasoft
+  url: https://datos.santander.es/api/v2/catalog
+- type: socrata
+  url: https://datos.santander.es/api/views
+- type: dcatap201
+  url: https://datos.santander.es/api/feed/dcat
+id: datossantanderesdata
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.santander.es/data/
+name: Portal Datos Abiertos de Santander
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Portal Datos Abiertos de Santander
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010757

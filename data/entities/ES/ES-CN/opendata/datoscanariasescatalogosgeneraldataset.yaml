@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+    subregion: &id003
+      id: ES-CN
+      name: Canarias
+endpoints:
+- type: ckan
+  url: https://datos.canarias.es/catalogos/general/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.canarias.es/catalogos/general/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.canarias.es/catalogos/general/api/3/action/package_list
+  version: '3'
+id: datoscanariasescatalogosgeneraldataset
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.canarias.es/catalogos/general
+name: Open Data del Gobierno de Canarias
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+    subregion: *id003
+  name: Open Data del Gobierno de Canarias
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010671

@@ -18,13 +18,13 @@ description: A data catalog providing access to quantitative and qualitative str
   datasets, accessible via http://ipt.ugrasu.ru:8080/. All determinations are available
   at http://bioportal.ugrasu.ru.
 endpoints:
+- type: dcat:ttl
+  url: http://ipt.ugrasu.ru:8080/dcat
 - type: ipt:dataset
   url: http://ipt.ugrasu.ru:8080/inventory/dataset
 - type: rss
   url: http://ipt.ugrasu.ru:8080/rss.do
   version: '2.0'
-- type: dcat:ttl
-  url: http://ipt.ugrasu.ru:8080/dcat
 id: iptugrasuru
 langs:
 - id: RU
@@ -32,13 +32,13 @@ langs:
 link: http://ipt.ugrasu.ru:8080/
 name: Yugra University IPT Server
 owner:
-  link: https://en.ugrasu.ru
+  link: https://mukhrinostation.com/research/ysu-bc/
   location:
     country:
       id: RU
       name: Russian Federation
     level: 20
-  name: Yugra University
+  name: Yugra State University Biological Collection (YSU BC)
   type: Academy
 properties:
   has_doi: true
@@ -54,11 +54,18 @@ software:
   name: IPT
 status: active
 tags:
+- GBIF
+- IPT
 - biodiversity
-- structure
-- qualitative
-- quantitative
+- data publishing
+- has_api
 topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 - id: TECH
   name: Science and technology
   type: eudatatheme

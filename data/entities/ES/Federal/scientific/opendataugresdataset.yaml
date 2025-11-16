@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+endpoints:
+- type: ckan
+  url: https://opendata.ugr.es/api/3
+- type: ckan
+  url: https://opendata.ugr.es/api/3/action/package_list
+- type: dcat
+  url: https://opendata.ugr.es/catalog.xml
+- type: dcatap
+  url: https://opendata.ugr.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://opendata.ugr.es/catalog.jsonld
+- type: ckan
+  url: https://opendata.ugr.es/api/3
+  version: '3'
+id: opendataugresdataset
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://opendata.ugr.es/dataset
+name: Open Data Universidad de Granada
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Open Data Universidad de Granada
+  type: University
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00010931

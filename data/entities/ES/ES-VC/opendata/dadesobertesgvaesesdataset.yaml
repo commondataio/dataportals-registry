@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+    subregion: &id003
+      id: ES-VC
+      name: Valencia
+endpoints:
+- type: ckan
+  url: https://dadesobertes.gva.es/api/3
+- type: ckan
+  url: https://dadesobertes.gva.es/api/3/action/package_list
+- type: dcat
+  url: https://dadesobertes.gva.es/catalog.xml
+- type: dcatap
+  url: https://dadesobertes.gva.es/catalog.rdf
+- type: ckan
+  url: https://dadesobertes.gva.es/api/3
+  version: '3'
+id: dadesobertesgvaesesdataset
+langs:
+- id: ES
+  name: Spanish
+link: https://dadesobertes.gva.es/es/dataset
+name: Dades Obertes de la Generalitat Valenciana
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+    subregion: *id003
+  name: Dades Obertes de la Generalitat Valenciana
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010670

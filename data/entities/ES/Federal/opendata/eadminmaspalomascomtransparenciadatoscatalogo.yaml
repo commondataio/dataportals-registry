@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: 1138. CONTRATOS ADJUDICADOS. PUBLICADOS A PARTIR DE SEPTIEMBRE DE 2018
+  , 2019 Y HASTA EL 05/07/2020.
+endpoints:
+- type: ckan
+  url: https://eadmin.maspalomas.com/api/3
+- type: ckan
+  url: https://eadmin.maspalomas.com/api/3/action/package_list
+- type: opendatasoft
+  url: https://eadmin.maspalomas.com/api/v2/catalog
+- type: socrata
+  url: https://eadmin.maspalomas.com/api/views
+- type: dcatap201
+  url: https://eadmin.maspalomas.com/api/feed/dcat
+id: eadminmaspalomascomtransparenciadatoscatalogo
+langs:
+- id: EN
+  name: English
+link: https://eadmin.maspalomas.com/transparencia/datos/catalogo
+name: Catálogo de datos abiertos del Ayuntamiento de San Bartolomé de Tirajana
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Catálogo de datos abiertos del Ayuntamiento de San Bartolomé de Tirajana
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010902

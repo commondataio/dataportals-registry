@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: La Universidad Rey Juan Carlos (por sus siglas, URJC) es una universidad
+  pública española con sede en la Comunidad de Madrid. Cuenta con campus en Alcorcón,
+  Aranjuez, Fuenlabrada, Madrid y Móstoles. Fundada en 1996, es la segunda universidad
+  de Madrid por número de alumnos matriculados.
+endpoints:
+- type: ckan
+  url: https://www.universidata.es/api/3/action/package_list
+- type: dcat
+  url: https://www.universidata.es/catalog.xml
+- type: ckan
+  url: https://www.universidata.es/api/3
+  version: '3'
+id: universidataesuniversidadesuniversidadreyjuancarlo
+langs:
+- id: ES
+  name: Spanish
+link: https://www.universidata.es/universidades/universidad-rey-juan-carlos-urjc
+name: Datos abiertos Universidad Rey Juan Carlos - URJC- UniversiDATA
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Datos abiertos Universidad Rey Juan Carlos - URJC- UniversiDATA
+  type: University
+software:
+  id: dkan
+  name: DKAN
+status: active
+tags:
+- dkan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00010927

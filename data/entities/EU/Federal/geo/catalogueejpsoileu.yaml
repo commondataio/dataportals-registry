@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+description: EJP Soil (European Joint Programme on Soil) catalogue providing geospatial
+  metadata services for soil-related research data across Europe.
+endpoints:
+- type: csw202
+  url: https://catalogue.ejpsoil.eu/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://catalogue.ejpsoil.eu/?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: catalogueejpsoileu
+langs:
+- id: EN
+  name: English
+link: https://catalogue.ejpsoil.eu
+name: EJP Soil Catalogue
+owner:
+  link: https://ejpsoil.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Joint Programme on Soil
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- soil
+- agriculture
+- research
+- Europe
+- EJP Soil
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00010943

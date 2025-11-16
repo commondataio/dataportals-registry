@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 20
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: 'Sitio web del Ministerio de Trabajo y Econom&iacute;a Social: Contiene
+  la p&aacute;gina principal del sitio web del Ministerio: Datos Abiertos'
+endpoints:
+- type: ckan
+  url: https://www.mites.gob.es/api/3
+- type: ckan
+  url: https://www.mites.gob.es/api/3/action/package_list
+- type: opendatasoft
+  url: https://www.mites.gob.es/api/v2/catalog
+- type: socrata
+  url: https://www.mites.gob.es/api/views
+- type: dcatap201
+  url: https://www.mites.gob.es/api/feed/dcat
+- type: dcat
+  url: https://www.mites.gob.es/catalog.xml
+- type: dcatap
+  url: https://www.mites.gob.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://www.mites.gob.es/catalog.jsonld
+- type: sitemap
+  url: https://www.mites.gob.es/sitemap.xml
+id: mitesgobesesdatosabiertosindexhtm
+langs:
+- id: ES
+  name: Spanish
+link: https://www.mites.gob.es/es/datosabiertos/index.htm
+name: Datos Abiertos Ministerio de Trabajo y Economía Social
+owner:
+  location:
+    country: *id001
+    level: 20
+    macroregion: *id002
+  name: Datos Abiertos Ministerio de Trabajo y Economía Social
+  type: Central government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00010711

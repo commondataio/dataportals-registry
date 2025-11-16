@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+endpoints:
+- type: ckan
+  url: http://www.getxo.eus/api/3
+- type: ckan
+  url: http://www.getxo.eus/api/3/action/package_list
+- type: opendatasoft
+  url: http://www.getxo.eus/api/v2/catalog
+- type: socrata
+  url: http://www.getxo.eus/api/views
+- type: dcatap201
+  url: http://www.getxo.eus/api/feed/dcat
+- type: sitemap
+  url: http://www.getxo.eus/sitemap.xml
+id: getxoeusesgobiernoabiertoopndata
+langs:
+- id: ES
+  name: Spanish
+link: http://www.getxo.eus/es/gobierno-abierto/opndata
+name: Getxo Opendata
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Getxo Opendata
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010916

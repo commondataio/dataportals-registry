@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: UK Government Publishing Service PyCSW catalog providing geospatial metadata
+  services for UK government geospatial data.
+endpoints:
+- type: csw202
+  url: https://ckan.publishing.service.gov.uk/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://ckan.publishing.service.gov.uk/csw/?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: ckanpublishingservicegovukcsw
+langs:
+- id: EN
+  name: English
+link: https://ckan.publishing.service.gov.uk/csw
+name: UK Government Publishing Service PyCSW Catalog
+owner:
+  link: https://www.gov.uk/government/organisations/government-publishing-service
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Government Publishing Service
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- UK
+- government
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00010577

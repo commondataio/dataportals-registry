@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Gardentasuna, partaidetza, eraginkortasuna eta integritate instituzionala,
+  gure gobernantzaren giltzarri
+endpoints:
+- type: ckan
+  url: http://azkoitia.gipuzkoairekia.eus/api/3
+- type: ckan
+  url: http://azkoitia.gipuzkoairekia.eus/api/3/action/package_list
+- type: opendatasoft
+  url: http://azkoitia.gipuzkoairekia.eus/api/v2/catalog
+- type: socrata
+  url: http://azkoitia.gipuzkoairekia.eus/api/views
+- type: dcatap201
+  url: http://azkoitia.gipuzkoairekia.eus/api/feed/dcat
+- type: dcat
+  url: http://azkoitia.gipuzkoairekia.eus/catalog.xml
+- type: dcatap
+  url: http://azkoitia.gipuzkoairekia.eus/catalog.rdf
+- type: dcat:jsonld
+  url: http://azkoitia.gipuzkoairekia.eus/catalog.jsonld
+- type: sitemap
+  url: http://azkoitia.gipuzkoairekia.eus/sitemap.xml
+id: azkoitiagipuzkoairekiaeusesdatuirekienkatalogoa
+langs:
+- id: EU
+  name: Basque
+link: http://azkoitia.gipuzkoairekia.eus/es/datu-irekien-katalogoa
+name: Repositorio de Datos Públicos de Azkoitia
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Repositorio de Datos Públicos de Azkoitia
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010861

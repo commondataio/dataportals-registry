@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: The connection was denied because this country is blocked in the Geolocation
+  settings.
+endpoints:
+- type: ckan
+  url: http://datosabiertos.torrent.es/api/3
+- type: ckan
+  url: http://datosabiertos.torrent.es/api/3/action/package_list
+- type: opendatasoft
+  url: http://datosabiertos.torrent.es/api/v2/catalog
+- type: socrata
+  url: http://datosabiertos.torrent.es/api/views
+- type: dcatap201
+  url: http://datosabiertos.torrent.es/api/feed/dcat
+- type: dcat
+  url: http://datosabiertos.torrent.es/catalog.xml
+- type: dcatap
+  url: http://datosabiertos.torrent.es/catalog.rdf
+- type: dcat:jsonld
+  url: http://datosabiertos.torrent.es/catalog.jsonld
+- type: sitemap
+  url: http://datosabiertos.torrent.es/sitemap.xml
+id: datosabiertostorrentesesdataset
+langs:
+- id: EN
+  name: English
+link: http://datosabiertos.torrent.es/es/dataset
+name: Portal Open Data Ajuntament de Torrent
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Portal Open Data Ajuntament de Torrent
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010778

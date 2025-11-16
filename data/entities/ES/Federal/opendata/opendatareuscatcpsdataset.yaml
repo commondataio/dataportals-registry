@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: En compliment de la Llei 34/2002, d’11 de juliol, de serveis de la societat
+  de la informació i de comerç electrònic, informem sobre l’ús de galetes en aquesta
+  web.
+endpoints:
+- type: ckan
+  url: https://opendata.reus.cat/api/3
+- type: ckan
+  url: https://opendata.reus.cat/api/3/action/package_list
+- type: dcat
+  url: https://opendata.reus.cat/catalog.xml
+- type: dcatap
+  url: https://opendata.reus.cat/catalog.rdf
+- type: dcat:jsonld
+  url: https://opendata.reus.cat/catalog.jsonld
+- type: ckan
+  url: https://opendata.reus.cat/api/3
+  version: '3'
+id: opendatareuscatcpsdataset
+langs:
+- id: CA
+  name: Catalan
+link: https://opendata.reus.cat/cps_dataset
+name: Ajuntament de Reus - Open Data
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Ajuntament de Reus
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010693

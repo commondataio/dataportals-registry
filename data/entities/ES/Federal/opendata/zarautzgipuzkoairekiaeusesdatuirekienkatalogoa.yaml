@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Udalaren aurrekontuko likidazioaren datuak. Partiden arabera ematen dira
+  datuak
+endpoints:
+- type: ckan
+  url: http://zarautz.gipuzkoairekia.eus/api/3
+- type: ckan
+  url: http://zarautz.gipuzkoairekia.eus/api/3/action/package_list
+- type: opendatasoft
+  url: http://zarautz.gipuzkoairekia.eus/api/v2/catalog
+- type: socrata
+  url: http://zarautz.gipuzkoairekia.eus/api/views
+- type: dcatap201
+  url: http://zarautz.gipuzkoairekia.eus/api/feed/dcat
+- type: dcat
+  url: http://zarautz.gipuzkoairekia.eus/catalog.xml
+- type: dcatap
+  url: http://zarautz.gipuzkoairekia.eus/catalog.rdf
+- type: dcat:jsonld
+  url: http://zarautz.gipuzkoairekia.eus/catalog.jsonld
+- type: sitemap
+  url: http://zarautz.gipuzkoairekia.eus/sitemap.xml
+id: zarautzgipuzkoairekiaeusesdatuirekienkatalogoa
+langs:
+- id: EU
+  name: Basque
+link: http://zarautz.gipuzkoairekia.eus/es/datu-irekien-katalogoa
+name: Portal de Gobierno Abierto de Zarautz
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Portal de Gobierno Abierto de Zarautz
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010793

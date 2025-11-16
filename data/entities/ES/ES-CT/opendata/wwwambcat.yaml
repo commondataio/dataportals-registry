@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -48,10 +48,11 @@ software:
   name: Custom software
 status: active
 tags:
-- public
-- open data
-- regional
 - catalunya
+- has_api
+- open data
+- public
+- regional
 topics:
 - id: REGI
   name: Regions and cities
@@ -60,3 +61,12 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: cdi00010193
+endpoints:
+- type: dcat
+  url: https://www.amb.cat/catalog.xml
+- type: dcatap
+  url: https://www.amb.cat/catalog.rdf
+- type: dcat:jsonld
+  url: https://www.amb.cat/catalog.jsonld
+- type: sitemap
+  url: https://www.amb.cat/sitemap.xml

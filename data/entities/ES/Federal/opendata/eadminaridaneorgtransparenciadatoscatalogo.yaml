@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Sede electrÃ³nica del grupo ATM-Maggioli
+endpoints:
+- type: ckan
+  url: https://eadmin.aridane.org/api/3
+- type: ckan
+  url: https://eadmin.aridane.org/api/3/action/package_list
+- type: opendatasoft
+  url: https://eadmin.aridane.org/api/v2/catalog
+- type: socrata
+  url: https://eadmin.aridane.org/api/views
+- type: dcatap201
+  url: https://eadmin.aridane.org/api/feed/dcat
+- type: dcat
+  url: https://eadmin.aridane.org/catalog.xml
+- type: dcatap
+  url: https://eadmin.aridane.org/catalog.rdf
+- type: dcat:jsonld
+  url: https://eadmin.aridane.org/catalog.jsonld
+- type: sitemap
+  url: https://eadmin.aridane.org/sitemap.xml
+id: eadminaridaneorgtransparenciadatoscatalogo
+langs:
+- id: ES
+  name: Spanish
+link: https://eadmin.aridane.org/transparencia/datos/catalogo
+name: Catálogo de datos abiertos del Ayuntamiento de Los Llanos de Aridane
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Catálogo de datos abiertos del Ayuntamiento de Los Llanos de Aridane
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010729

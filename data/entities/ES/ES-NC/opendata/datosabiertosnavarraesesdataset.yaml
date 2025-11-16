@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+    subregion: &id003
+      id: ES-NC
+      name: Navarra
+endpoints:
+- type: ckan
+  url: https://datosabiertos.navarra.es/api/3
+- type: ckan
+  url: https://datosabiertos.navarra.es/api/3/action/package_list
+- type: dcatap
+  url: https://datosabiertos.navarra.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://datosabiertos.navarra.es/catalog.jsonld
+id: datosabiertosnavarraesesdataset
+langs:
+- id: ES
+  name: Spanish
+link: https://datosabiertos.navarra.es/es/dataset
+name: Portal de Gobierno Abierto de la Comunidad Foral de Navarra
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+    subregion: *id003
+  name: Portal de Gobierno Abierto de la Comunidad Foral de Navarra
+  type: Regional government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00010662

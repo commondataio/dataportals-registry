@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Discovery Metadata System, British Antarctic Survey providing geospatial
+  metadata services for Antarctic research data and datasets.
+endpoints:
+- type: csw202
+  url: https://api.bas.ac.uk/data/metadata/csw/v1?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://api.bas.ac.uk/data/metadata/csw/v1?mode=oaipmh&verb=Identify
+  version: '2.0'
+id: apibasacukdatametadatacsw
+langs:
+- id: EN
+  name: English
+link: https://api.bas.ac.uk/data/metadata/csw/v1
+name: Discovery Metadata System, British Antarctic Survey
+owner:
+  link: https://www.bas.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: British Antarctic Survey
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- geospatial
+- metadata
+- pycsw
+- Antarctic
+- research
+- BAS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00010576

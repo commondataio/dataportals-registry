@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 20
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Desde esta Sección podrá consultar la información que el Ministerio de
+  Justicia pública, en el marco de la Ley 37/2007 sobre reutilización de la información
+  del Sector Público, para el ámbito del Sector Público Estatal.
+endpoints:
+- type: ckan
+  url: https://sede.mjusticia.gob.es/api/3
+- type: ckan
+  url: https://sede.mjusticia.gob.es/api/3/action/package_list
+- type: opendatasoft
+  url: https://sede.mjusticia.gob.es/api/v2/catalog
+- type: socrata
+  url: https://sede.mjusticia.gob.es/api/views
+- type: dcatap201
+  url: https://sede.mjusticia.gob.es/api/feed/dcat
+- type: dcat
+  url: https://sede.mjusticia.gob.es/catalog.xml
+- type: dcatap
+  url: https://sede.mjusticia.gob.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://sede.mjusticia.gob.es/catalog.jsonld
+- type: sitemap
+  url: https://sede.mjusticia.gob.es/sitemap.xml
+id: sedemjusticiagobesesinformacionayudadatosabiertosm
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: https://sede.mjusticia.gob.es/es/informacion-ayuda/datos-abiertos-ministerio
+name: Portal Datos Abiertos del Ministerio de Justicia
+owner:
+  location:
+    country: *id001
+    level: 20
+    macroregion: *id002
+  name: Portal Datos Abiertos del Ministerio de Justicia
+  type: Central government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010841

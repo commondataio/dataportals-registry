@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion: &id002
+      id: 039
+      name: Southern Europe
+description: Sede electrÃ³nica del grupo ATM-Maggioli
+endpoints:
+- type: ckan
+  url: https://sede.teguise.es/api/3
+- type: ckan
+  url: https://sede.teguise.es/api/3/action/package_list
+- type: opendatasoft
+  url: https://sede.teguise.es/api/v2/catalog
+- type: socrata
+  url: https://sede.teguise.es/api/views
+- type: dcatap201
+  url: https://sede.teguise.es/api/feed/dcat
+- type: dcat
+  url: https://sede.teguise.es/catalog.xml
+- type: dcatap
+  url: https://sede.teguise.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://sede.teguise.es/catalog.jsonld
+- type: sitemap
+  url: https://sede.teguise.es/sitemap.xml
+id: sedeteguiseestransparenciadatoscatalogo
+langs:
+- id: ES
+  name: Spanish
+link: https://sede.teguise.es/transparencia/datos/catalogo
+name: Datos abiertos Teguise
+owner:
+  location:
+    country: *id001
+    level: 30
+    macroregion: *id002
+  name: Datos abiertos Teguise
+  type: Local government
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010788
