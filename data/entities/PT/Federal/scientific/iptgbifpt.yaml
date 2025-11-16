@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: GBIF Portugal provider hosted at the Instituto Superior de Agronomia
   (ISA)
 endpoints:
+- type: dcat:ttl
+  url: http://ipt.gbif.pt/ipt/dcat
+- type: ipt:dataset
+  url: http://ipt.gbif.pt/ipt/inventory/dataset
 - type: rss
   url: http://ipt.gbif.pt/ipt/rss.do
   version: '2.0'
@@ -24,7 +28,7 @@ id: iptgbifpt
 langs:
 - id: PT
   name: Portugal
-link: http://ipt.gbif.pt
+link: http://ipt.gbif.pt/ipt
 name: GBIF Portugal IPT
 owner:
   link: http://www.isa.ulisboa.pt/

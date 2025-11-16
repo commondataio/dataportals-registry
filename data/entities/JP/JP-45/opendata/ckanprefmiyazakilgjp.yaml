@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-45
+      name: Miyazaki
+description: Miyazaki Prefecture Disaster Prevention Clearing House (宮崎県防災クリアリングハウス),
+  an open data portal powered by CKAN providing disaster prevention and emergency
+  management datasets including evacuation centers, damage information, and related
+  data.
+endpoints:
+- type: ckan
+  url: https://ckan.pref.miyazaki.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.pref.miyazaki.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.pref.miyazaki.lg.jp/api/3/action/package_list
+  version: '3'
+id: ckanprefmiyazakilgjp
+langs:
+- id: JA
+  name: Japanese
+link: https://ckan.pref.miyazaki.lg.jp
+name: Miyazaki Prefecture Disaster Prevention Clearing House
+owner:
+  link: https://pref.miyazaki.lg.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-45
+      name: Miyazaki
+  name: Prefecture Miyazaki
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- disaster prevention
+- emergency management
+- evacuation
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00010989

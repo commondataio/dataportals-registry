@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,10 @@ description: Integrated Publishing Toolkit installation at the Institute of Bios
   the frame of the Italian ITINERIS-PNRR Project and endorsed by the DiSSCo European
   Research Infrastructure.
 endpoints:
+- type: dcat:ttl
+  url: https://ipt.ibbr.cnr.it/ipt/dcat
+- type: ipt:dataset
+  url: https://ipt.ibbr.cnr.it/ipt/inventory/dataset
 - type: rss
   url: https://ipt.ibbr.cnr.it/ipt/rss.do
   version: '2.0'
@@ -26,7 +30,7 @@ id: iptibbrcnrit
 langs:
 - id: IT
   name: Italian
-link: https://ipt.ibbr.cnr.it
+link: https://ipt.ibbr.cnr.it/ipt
 name: Institute of Biosciences and Bioresources CNR-IBBR, Bari, Italy
 owner:
   link: https://www.disba.cnr.it/

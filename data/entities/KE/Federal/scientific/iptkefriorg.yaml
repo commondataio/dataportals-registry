@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -25,6 +25,10 @@ description: "KEFRI undertakes research and provides technologies and informatio
   \ and Environment Management (BEM), Forest Products Development (FPD), Socio-Economic\
   \ Policy and Governance (SPG) and Forestry Research and Support Services (FRSS)."
 endpoints:
+- type: dcat:ttl
+  url: http://ipt.kefri.org:8086/ipt/dcat
+- type: ipt:dataset
+  url: http://ipt.kefri.org:8086/ipt/inventory/dataset
 - type: rss
   url: http://ipt.kefri.org:8086/ipt/rss.do
   version: '2.0'
@@ -32,7 +36,7 @@ id: iptkefriorg
 langs:
 - id: EN
   name: English
-link: http://ipt.kefri.org:8086
+link: http://ipt.kefri.org:8086/ipt
 name: Kenya Forestry Research Institute IPT
 owner:
   link: https://www.kefri.org

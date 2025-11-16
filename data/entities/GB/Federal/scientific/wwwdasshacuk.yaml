@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Northern Europe
 description: GBIF IPT for the Marine Biological Association of the United Kingdom
 endpoints:
+- type: dcat:ttl
+  url: https://www.dassh.ac.uk/ipt/dcat
+- type: ipt:dataset
+  url: https://www.dassh.ac.uk/ipt/inventory/dataset
 - type: rss
   url: https://www.dassh.ac.uk/ipt/rss.do
   version: '2.0'
@@ -23,7 +27,7 @@ id: wwwdasshacuk
 langs:
 - id: EN
   name: English
-link: https://www.dassh.ac.uk
+link: https://www.dassh.ac.uk/ipt
 name: MBA GBIF IPT
 owner:
   link: https://www.mba.ac.uk

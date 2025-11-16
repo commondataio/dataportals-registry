@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Eastern Asia
 description: KBIF(Korean Biodiversity Information Facility) IPT
 endpoints:
+- type: dcat:ttl
+  url: https://naris.science.go.kr/kbif/dcat
+- type: ipt:dataset
+  url: https://naris.science.go.kr/kbif/inventory/dataset
 - type: rss
   url: https://naris.science.go.kr/kbif/rss.do
   version: '2.0'
@@ -23,7 +27,7 @@ id: narissciencegokr
 langs:
 - id: KO
   name: Korean
-link: https://naris.science.go.kr
+link: https://naris.science.go.kr/kbif
 name: KBIF IPT
 owner:
   link: http://www.naris.go.kr/v2_en/

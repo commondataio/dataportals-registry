@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -29,14 +29,18 @@ description: 'Institute of Biology of Komi Scientific Centre of the Ural Branch 
   of biological resources of the European North-East with the use of remote sensing
   and GIS technologies.'
 endpoints:
+- type: dcat:ttl
+  url: http://ib.komisc.ru:8088/dcat
+- type: ipt:dataset
+  url: http://ib.komisc.ru:8088/inventory/dataset
 - type: rss
-  url: http://ib.komisc.ru:8088/ipt/rss.do
+  url: http://ib.komisc.ru:8088/rss.do
   version: '2.0'
 id: ibkomiscru
 langs:
 - id: RU
   name: Russian
-link: http://ib.komisc.ru:8088/ipt/
+link: http://ib.komisc.ru:8088
 name: Institute of Biology (Syktyvkar, Russia) Integrated Publishing Toolkit (IPT)
   Installation
 owner:

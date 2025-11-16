@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-LA
+      name: Louisiana
+description: Web Map Service for NetCDF data focused on visualization of flood-related
+  datasets, providing access to georegistered map images from environmental and hydrological
+  datasets.
+endpoints:
+- type: wms111
+  url: https://ncs.flood.lsu.edu/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+  version: 1.1.1
+- type: wms130
+  url: https://ncs.flood.lsu.edu/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: ncsfloodlsuedu
+langs:
+- id: EN
+  name: English
+link: https://ncs.flood.lsu.edu/
+name: LSU Flood ncWMS
+owner:
+  link: https://www.lsu.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-LA
+      name: Louisiana
+  name: Louisiana State University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: ncwms
+  name: ncWMS
+status: active
+tags:
+- geospatial
+- WMS
+- flood
+- NetCDF
+- Environmental Data
+- Hydrology
+- Climate
+- Visualization
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: ClimatologyMeteorologyAtmosphere
+  name: Climatology Meteorology Atmosphere
+  type: iso19115
+uid: cdi00010952

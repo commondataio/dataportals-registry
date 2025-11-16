@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: IPT hosting the data gathered within the Italian National Recovery and
   Resilience Plan (funded from the European Union - NextGenerationEU)
 endpoints:
+- type: dcat:ttl
+  url: http://ipt.unical.it:8080/ipt/dcat
+- type: ipt:dataset
+  url: http://ipt.unical.it:8080/ipt/inventory/dataset
 - type: rss
   url: http://ipt.unical.it:8080/ipt/rss.do
   version: '2.0'
@@ -24,7 +28,7 @@ id: iptunicalit
 langs:
 - id: IT
   name: Italian
-link: http://ipt.unical.it:8080
+link: http://ipt.unical.it:8080/ipt
 name: IPT-UNICAL
 owner:
   link: https://www.unical.it/portale/strutture/dipartimenti_240/dibest/

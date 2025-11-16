@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -22,6 +22,8 @@ description: "An Autonomous Institution of Ministry of Environment, Forests & Cl
   \ related issues.\r\n\r\nThe Institute's idyllic campus that has been carefully\
   \ developed to create state of the art infrastructure encourages scholarly work."
 endpoints:
+- type: dcat:ttl
+  url: https://ibif.gov.in:8443/ipt/dcat
 - type: rss
   url: https://ibif.gov.in:8443/ipt/rss.do
   version: '2.0'
@@ -29,7 +31,7 @@ id: ibifgovin
 langs:
 - id: EN
   name: English
-link: https://ibif.gov.in:8443
+link: https://ibif.gov.in:8443/ipt
 name: Wildlife Institute of India
 owner:
   link: http://www.wii.gov.in

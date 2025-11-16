@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: East Asia Biodiversity Conservation Network's IPT updated as version
   2.7.2
 endpoints:
+- type: dcat:ttl
+  url: http://61.82.48.86:8080/ipt-2.4.2/dcat
+- type: ipt:dataset
+  url: http://61.82.48.86:8080/ipt-2.4.2/inventory/dataset
 - type: rss
   url: http://61.82.48.86:8080/ipt-2.4.2/rss.do
   version: '2.0'
@@ -24,7 +28,7 @@ id: '61824886'
 langs:
 - id: KO
   name: Korean
-link: http://61.82.48.86:8080
+link: http://61.82.48.86:8080/ipt-2.4.2
 name: East Asia Biodiversity Conservation Network
 owner:
   link: http://www.eabcn.net

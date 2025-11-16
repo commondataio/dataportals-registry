@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Eastern Asia
 description: OBIS Korea IPT
 endpoints:
+- type: dcat:ttl
+  url: https://www.mbris.kr/ipt/dcat
+- type: ipt:dataset
+  url: https://www.mbris.kr/ipt/inventory/dataset
 - type: rss
   url: https://www.mbris.kr/ipt/rss.do
   version: '2.0'
@@ -23,7 +27,7 @@ id: wwwmbriskr
 langs:
 - id: KO
   name: Korean
-link: https://www.mbris.kr
+link: https://www.mbris.kr/ipt
 name: OBIS Korea IPT
 owner:
   link: https://www.mabik.re.kr/html/en/

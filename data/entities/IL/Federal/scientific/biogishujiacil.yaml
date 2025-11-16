@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,8 @@ coverage:
       name: Western Asia
 description: Israel Biodiversity Information System
 endpoints:
+- type: ipt:dataset
+  url: https://biogis.huji.ac.il/ipt/inventory/dataset
 - type: rss
   url: https://biogis.huji.ac.il/ipt/rss.do
   version: '2.0'
@@ -23,7 +25,7 @@ id: biogishujiacil
 langs:
 - id: HE
   name: Hebrew
-link: https://biogis.huji.ac.il
+link: https://biogis.huji.ac.il/ipt
 name: BioGIS
 owner:
   link: http://www.biogis.huji.ac.il/

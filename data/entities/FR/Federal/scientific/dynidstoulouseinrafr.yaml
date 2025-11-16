@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Western Europe
 description: IPT UMR 1201 Dynafor
 endpoints:
+- type: dcat:ttl
+  url: http://dynids.toulouse.inra.fr:8180/ipt/dcat
+- type: ipt:dataset
+  url: http://dynids.toulouse.inra.fr:8180/ipt/inventory/dataset
 - type: rss
   url: http://dynids.toulouse.inra.fr:8180/ipt/rss.do
   version: '2.0'
@@ -23,7 +27,7 @@ id: dynidstoulouseinrafr
 langs:
 - id: FR
   name: French
-link: http://dynids.toulouse.inra.fr:8180
+link: http://dynids.toulouse.inra.fr:8180/ipt
 name: IPT Dynafor
 owner:
   link: http://institut.inra.fr/Organisation/Dispositifs-et-infrastructures/Tous-les-dossiers/Ressources-genetiques-et-biologiques

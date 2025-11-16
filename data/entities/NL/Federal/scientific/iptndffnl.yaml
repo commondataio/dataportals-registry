@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -28,6 +28,10 @@ description: 'The Dutch National Database Flora and Fauna (NDFF) is the data war
   daily basis by over 20.000 volunteers, including members of species organizations
   (like Sovon, De Vlinderstichting, RAVON and other voluntary and professional observers).'
 endpoints:
+- type: dcat:ttl
+  url: https://ipt.ndff.nl/ipt/dcat
+- type: ipt:dataset
+  url: https://ipt.ndff.nl/ipt/inventory/dataset
 - type: rss
   url: https://ipt.ndff.nl/ipt/rss.do
   version: '2.0'
@@ -35,7 +39,7 @@ id: iptndffnl
 langs:
 - id: NL
   name: Dutch
-link: https://ipt.ndff.nl
+link: https://ipt.ndff.nl/ipt
 name: NDFF
 owner:
   link: https://www.ndff.nl

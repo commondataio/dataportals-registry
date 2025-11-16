@@ -16,13 +16,18 @@ coverage:
       name: Northern Europe
 description: IPT installation hosted by GBIF-Sweden.
 endpoints:
-- type: sitemap
-  url: https://www.gbif.se/sitemap.xml
+- type: dcat:ttl
+  url: https://www.gbif.se/ipt/dcat
+- type: ipt:dataset
+  url: https://www.gbif.se/ipt/inventory/dataset
+- type: rss
+  url: https://www.gbif.se/ipt/rss.do
+  version: '2.0'
 id: wwwgbifse
 langs:
 - id: SV
   name: Swedish
-link: https://www.gbif.se
+link: https://www.gbif.se/ipt
 name: IPT GBIF-Sweden
 owner:
   link: null

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: This is a default IPT hosted by National Museum of Nature and Science,
   Japan.
 endpoints:
+- type: dcat:ttl
+  url: http://science-net.kahaku.go.jp/ipt2/dcat
+- type: ipt:dataset
+  url: http://science-net.kahaku.go.jp/ipt2/inventory/dataset
 - type: rss
   url: http://science-net.kahaku.go.jp/ipt2/rss.do
   version: '2.0'
@@ -24,7 +28,7 @@ id: sciencenetkahakugojp
 langs:
 - id: JA
   name: Japanese
-link: http://science-net.kahaku.go.jp
+link: http://science-net.kahaku.go.jp/ipt2
 name: IPT Installation by National Museum of Nature and Science, Japan
 owner:
   link: http://www.kahaku.go.jp/english/
