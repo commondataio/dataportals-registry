@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OH
+      name: Ohio
+description: This is the base URL for Stark County, Ohio's public ArcGIS REST services,
+  providing access to geospatial data layers and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://scgisa.starkcountyohio.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://scgisa.starkcountyohio.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://scgisa.starkcountyohio.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://scgisa.starkcountyohio.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://scgisa.starkcountyohio.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://scgisa.starkcountyohio.gov/arcgis/rest/services?f=kmz
+id: scgisastarkcountyohiogov
+langs:
+- id: EN
+  name: English
+link: https://scgisa.starkcountyohio.gov/arcgis/rest/services
+name: Stark County GIS REST Services Catalog
+owner:
+  link: https://scgisa.starkcountyohio.gov/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: Stark County GIS Department
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- rest
+- services
+- spatial data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: temp00004408

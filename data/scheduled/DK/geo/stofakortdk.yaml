@@ -1,61 +1,58 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: DK
-      name: Denmark
-    level: 20
-    macroregion:
-      id: '154'
-      name: Northern Europe
-description: 'Data catalog endpoint providing access to various services and datasets,
-  likely related to geospatial or infrastructure data, as common with REST service
-  endpoints of this nature. Note: No explicit owner or theme information is available
-  on the provided page in the search results.'
+  - location:
+      country:
+        id: DK
+        name: Denmark
+      level: 20
+      macroregion:
+        id: '154'
+        name: Northern Europe
+description: 'Data catalog endpoint providing access to various services and datasets, likely related to geospatial or infrastructure data, as common with REST service endpoints of this nature. Note: No explicit owner or theme information is available on the provided page in the search results.'
 endpoints:
-- type: arcgis:rest:info
-  url: https://stofakort.dk/stofaserver/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://stofakort.dk/stofaserver/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://stofakort.dk/stofaserver/services?wsdl
-- type: arcgis:sitemap
-  url: https://stofakort.dk/stofaserver/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://stofakort.dk/stofaserver/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://stofakort.dk/stofaserver/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://stofakort.dk/stofaserver/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://stofakort.dk/stofaserver/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://stofakort.dk/stofaserver/services?wsdl
+  - type: arcgis:sitemap
+    url: https://stofakort.dk/stofaserver/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://stofakort.dk/stofaserver/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://stofakort.dk/stofaserver/rest/services?f=kmz
 id: stofakortdk
 langs:
-- id: DA
-  name: Danish
+  - id: DA
+    name: Danish
 link: https://stofakort.dk/stofaserver/rest/services
 name: stofakort.dk/stofaserver/rest/services
 owner:
-  link: null
+  link: https://stofakort.dk
   location:
     country:
       id: DK
       name: Denmark
     level: 20
-  name: ''
+  name: 'Government of Denmark'
   type: Central government
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server

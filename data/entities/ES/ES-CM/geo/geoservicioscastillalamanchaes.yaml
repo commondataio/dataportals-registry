@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CM
+      name: Castilla-La Mancha
+description: ArcGIS REST services endpoint for geo data in Castilla-La Mancha region
+endpoints:
+- type: arcgis:rest:info
+  url: http://geoservicios.castillalamancha.es/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://geoservicios.castillalamancha.es/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://geoservicios.castillalamancha.es/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://geoservicios.castillalamancha.es/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://geoservicios.castillalamancha.es/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://geoservicios.castillalamancha.es/arcgis/rest/services?f=kmz
+id: geoservicioscastillalamanchaes
+langs:
+- id: ES
+  name: Spanish
+link: http://geoservicios.castillalamancha.es/arcgis/rest/services
+name: geoservicios.castillalamancha.es/arcgis/rest/services
+owner:
+  link: http://geoservicios.castillamancha.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CM
+      name: Castilla-La Mancha
+  name: Castilla-La Mancha
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- Spatial data
+- REST API
+- Geodata catalog
+topics: []
+uid: temp00001441

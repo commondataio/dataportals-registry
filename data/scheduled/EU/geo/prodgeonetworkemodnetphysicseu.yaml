@@ -1,39 +1,35 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: EU
-      name: European Union
-    level: 20
-description: The EMODnet Physics catalog gathers oceanographic data for public dissemination,
-  integrating data from European and global marine infrastructures, including platforms
-  such as EuroGOOS, Copernicus Marine Service, SeaDataNet, ICES, PANGAEA, and more.
-  It provides comprehensive in-situ ocean physics data, supporting machine-to-machine
-  interaction and offering datasets in various formats.
+  - location:
+      country:
+        id: EU
+        name: European Union
+      level: 20
+description: The EMODnet Physics catalog gathers oceanographic data for public dissemination, integrating data from European and global marine infrastructures, including platforms such as EuroGOOS, Copernicus Marine Service, SeaDataNet, ICES, PANGAEA, and more. It provides comprehensive in-situ ocean physics data, supporting machine-to-machine interaction and offering datasets in various formats.
 endpoints:
-- type: geonetwork:query
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/api/records
-- type: openapi
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/q
+  - type: geonetwork:records
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/api/records
+  - type: openapi
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://prod-geonetwork.emodnet-physics.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: prodgeonetworkemodnetphysicseu
 langs: []
 link: https://prod-geonetwork.emodnet-physics.eu/geonetwork
@@ -46,32 +42,32 @@ owner:
       name: European Union
     level: 20
   name: European Marine Observation and Data Network (EMODnet)
-  type: International
+  type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
 tags:
-- physics
-- oceanography
-- in-situ
-- marine
-- observations
-- datasets
+  - physics
+  - oceanography
+  - in-situ
+  - marine
+  - observations
+  - datasets
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Oceans
-  name: Oceans
-  type: iso19115
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: Oceans
+    name: Oceans
+    type: iso19115
 uid: temp00003608

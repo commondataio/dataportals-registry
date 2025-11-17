@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: CR-SJ
+      name: San Jose
+description: A data catalog for spatial services and datasets maintained by the Escazú
+  Municipality.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.escazu.go.cr/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.escazu.go.cr/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.escazu.go.cr/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.escazu.go.cr/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.escazu.go.cr/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.escazu.go.cr/server/rest/services?f=kmz
+id: gisescazugocr
+langs:
+- id: ES
+  name: Spanish
+link: https://gis.escazu.go.cr/server/rest/services
+name: GIS Portal, Escazú Municipality
+owner:
+  link: https://gis.escazu.go.cr
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 30
+    subregion:
+      id: CR-SJ
+      name: San Jose
+  name: Escazú Municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- municipal
+- spatial data
+- services
+- Escazú
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005869

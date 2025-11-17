@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+description: Open data catalog providing discoverable and downloadable geospatial
+  datasets, including boundaries, basemaps, transport networks, and more, for Northern
+  Ireland.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.spatialni.gov.uk/opendata/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.spatialni.gov.uk/opendata/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://services.spatialni.gov.uk/opendata/services?wsdl
+- type: arcgis:sitemap
+  url: https://services.spatialni.gov.uk/opendata/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://services.spatialni.gov.uk/opendata/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://services.spatialni.gov.uk/opendata/rest/services?f=kmz
+id: servicesspatialnigovuk
+langs:
+- id: EN
+  name: English
+link: https://services.spatialni.gov.uk/opendata/services
+name: services.spatialni.gov.uk
+owner:
+  link: https://spatialni.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+  name: Ordnance Survey of Northern Ireland (OSNI)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- opendata
+- boundaries
+- transport
+- elevation
+- imagery
+- statistics
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: temp00005045

@@ -1,74 +1,72 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: EU
-      name: European Union
-    level: 20
-description: 'This map includes a compilation of global and European water datasets:
-  Global Monitoring stations, Major River Basins of the World, River discharge monitoring
-  stations, and various river, watershed, and subbasin layers.'
+  - location:
+      country:
+        id: EU
+        name: European Union
+      level: 20
+description: 'This map includes a compilation of global and European water datasets: Global Monitoring stations, Major River Basins of the World, River discharge monitoring stations, and various river, watershed, and subbasin layers.'
 endpoints:
-- type: arcgis:rest:info
-  url: https://water.discomap.eea.europa.eu/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://water.discomap.eea.europa.eu/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://water.discomap.eea.europa.eu/arcgis/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://water.discomap.eea.europa.eu/arcgis/services?wsdl
+  - type: arcgis:sitemap
+    url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://water.discomap.eea.europa.eu/arcgis/rest/services?f=kmz
 id: waterdiscomapeeaeuropaeu
 langs:
-- id: EN
-  name: English
+  - id: EN
+    name: English
 link: https://water.discomap.eea.europa.eu/arcgis/rest/services
 name: Water/WaterGlobal_Dyna_WM (MapServer)
 owner:
-  link: https://www.eea.europa.eu/
+  link: https://eea.europa.eu
   location:
     country:
       id: EU
       name: European Union
     level: 20
-  name: European Environment Agency (EEA)
-  type: International
+  name: Eurpopean Environment Agency
+  type: Central government
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
 tags:
-- Water resources
-- Monitoring stations
-- Hydrography
-- River basins
+  - Water resources
+  - Monitoring stations
+  - Hydrography
+  - River basins
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: Environment
+    name: Environment
+    type: iso19115
+  - id: Inland Waters
+    name: Inland Waters
+    type: iso19115
 uid: temp00001480

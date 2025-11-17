@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-NIR
+      name: Northern Ireland
+description: GeoNode is an Open Source, Content Management System (CMS) for geospatial
+  data. It is a web-based application and platform for developing geospatial information
+  systems and sharing geospatial data, including datasets, maps, documents, GeoStories,
+  and dashboards. Data can be uploaded as vector (e.g., Shapefile, KML, JSON, CSV)
+  or raster (e.g., GeoTIFF) formats, with metadata following ISO 19115/19139 standards.
+endpoints:
+- type: geonode:layers
+  url: https://geonode.gis.qub.ac.uk/api/layers/
+- type: geonode:documents
+  url: https://geonode.gis.qub.ac.uk/api/documents/
+- type: wms111
+  url: https://geonode.gis.qub.ac.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.gis.qub.ac.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.gis.qub.ac.uk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.gis.qub.ac.uk/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.gis.qub.ac.uk/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geonode.gis.qub.ac.uk/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.gis.qub.ac.uk/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geonodegisqubacuk
+langs:
+- id: EN
+  name: English
+link: https://geonode.gis.qub.ac.uk
+name: geonode.gis.qub.ac.uk
+owner:
+  link: https://www.qub.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Queen's University Belfast
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- opendata
+- geospatial
+- catalogue
+- QUB
+- GeoNode
+- gis
+topics: []
+uid: temp00000314

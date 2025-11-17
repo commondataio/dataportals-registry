@@ -1,59 +1,58 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: PE
-      name: Peru
-    level: 20
-    macroregion:
-      id: '005'
-      name: South America
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+  - location:
+      country:
+        id: PE
+        name: Peru
+      level: 20
+      macroregion:
+        id: '005'
+        name: South America
+description: This is a temporary record with some data collected but it should be updated befor adding to the index
 endpoints:
-- type: arcgis:rest:info
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/services?wsdl
+  - type: arcgis:sitemap
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services?f=kmz
 id: geocatminappingemmetgobpe
 langs:
-- id: ES
-  name: Spanish
+  - id: ES
+    name: Spanish
 link: https://geocatminapp.ingemmet.gob.pe/arcgis/rest/services
 name: geocatminapp.ingemmet.gob.pe
 owner:
-  link: null
+  link: https://ingemmet.gob.pe
   location:
     country:
       id: PE
       name: Peru
     level: 20
-  name: ''
+  name: 'Government of Peru'
   type: Central government
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server

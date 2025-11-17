@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OR
+      name: Oregon
+description: ArcGIS REST Services providing spatial datasets and services for Jackson
+  County.
+endpoints:
+- type: arcgis:rest:info
+  url: https://spatial.jacksoncounty.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://spatial.jacksoncounty.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://spatial.jacksoncounty.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://spatial.jacksoncounty.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://spatial.jacksoncounty.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://spatial.jacksoncounty.org/arcgis/rest/services?f=kmz
+id: spatialjacksoncountyorg
+langs: []
+link: https://spatial.jacksoncounty.org/arcgis/rest/services
+name: Jackson County Spatial Data Catalog
+owner:
+  link: https://spatial.jacksoncounty.org/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OR
+      name: Oregon
+  name: Local Government of ArcGIS
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- geospatial
+- REST
+- datasets
+- services
+topics: []
+uid: temp00004072

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: Rest services provided by Geoportal of Constance
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.gis.konstanz.digital/geoportal/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.gis.konstanz.digital/geoportal/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://services.gis.konstanz.digital/geoportal/services?wsdl
+- type: arcgis:sitemap
+  url: https://services.gis.konstanz.digital/geoportal/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://services.gis.konstanz.digital/geoportal/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://services.gis.konstanz.digital/geoportal/rest/services?f=kmz
+id: servicesgiskonstanzdigital
+langs: []
+link: https://services.gis.konstanz.digital/geoportal/rest/services
+name: services.gis.konstanz.digital
+owner:
+  link: https://konstanz.digital
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: Kreisstadt Konstanz
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- rest
+- services
+- OGC
+- GIS
+- spatial data
+- open data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005378

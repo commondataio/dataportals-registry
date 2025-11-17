@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MD
+      name: Maryland
+description: Collection of GIS web services provided by Harford County
+endpoints:
+- type: arcgis:rest:info
+  url: https://hcggis.harfordcountymd.gov/eg/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://hcggis.harfordcountymd.gov/eg/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://hcggis.harfordcountymd.gov/eg/services?wsdl
+- type: arcgis:sitemap
+  url: https://hcggis.harfordcountymd.gov/eg/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://hcggis.harfordcountymd.gov/eg/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://hcggis.harfordcountymd.gov/eg/rest/services?f=kmz
+id: hcggisharfordcountymdgov
+langs:
+- id: EN
+  name: English
+link: https://hcggis.harfordcountymd.gov/eg/rest/services
+name: Harford County REST GIS Services
+owner:
+  link: https://hcggis.harfordcountymd.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
+  name: Harford County Department of Planning and Zoning
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Rest API
+- geospatial data
+- county
+- Maryland
+- USA
+topics: []
+uid: temp00004351

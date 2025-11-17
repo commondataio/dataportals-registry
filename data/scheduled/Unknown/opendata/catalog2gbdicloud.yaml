@@ -1,33 +1,30 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Open data portal
 content_types:
-- dataset
+  - dataset
 coverage:
-- location:
-    country:
-      id: GB
-      name: United Kingdom
-    level: 20
-    macroregion:
-      id: '154'
-      name: Northern Europe
-description: No information was scraped or provided from the actual website content
-  at https://catalog2.gbdi.cloud. Without access to the raw HTML, metadata, or structured
-  content from the provided URL, it is not possible to extract or infer data catalog
-  information such as owner types, data themes, or geo topic categories as required.
+  - location:
+      country:
+        id: GB
+        name: United Kingdom
+      level: 20
+      macroregion:
+        id: '154'
+        name: Northern Europe
+description: No information was scraped or provided from the actual website content at https://catalog2.gbdi.cloud. Without access to the raw HTML, metadata, or structured content from the provided URL, it is not possible to extract or infer data catalog information such as owner types, data themes, or geo topic categories as required.
 endpoints:
-- type: ckan
-  url: https://catalog2.gbdi.cloud/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://catalog2.gbdi.cloud/api/3/action/package_search
-  version: '3'
-- type: ckan:package-list
-  url: https://catalog2.gbdi.cloud/api/3/action/package_list
-  version: '3'
+  - type: ckan
+    url: https://catalog2.gbdi.cloud/api/3
+    version: '3'
+  - type: ckan:package-search
+    url: https://catalog2.gbdi.cloud/api/3/action/package_search
+    version: '3'
+  - type: ckan:package-list
+    url: https://catalog2.gbdi.cloud/api/3/action/package_list
+    version: '3'
 id: catalog2gbdicloud
 langs: []
 link: https://catalog2.gbdi.cloud
@@ -36,18 +33,18 @@ owner:
   link: Unknown
   location:
     country:
-      id: GB
-      name: United Kingdom
+      id: Unknown
+      name: Unknown
     level: 20
   name: Unknown
   type: Central government
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: ckan
   name: CKAN

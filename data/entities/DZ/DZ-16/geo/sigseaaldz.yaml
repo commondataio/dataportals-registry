@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 30
+    macroregion:
+      id: '015'
+      name: Northern Africa
+    subregion:
+      id: DZ-16
+      name: Alger
+description: Rest services for data catalog at SEAAL.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.seaal.dz/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sig.seaal.dz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.seaal.dz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.seaal.dz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.seaal.dz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.seaal.dz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.seaal.dz/server/rest/services?f=kmz
+id: sigseaaldz
+langs:
+- id: AR
+  name: Arabic
+link: https://sig.seaal.dz/server/rest/services
+name: SEAAL Data Catalog
+owner:
+  link: https://sig.seaal.dz/server/rest/services
+  location:
+    country:
+      id: DZ
+      name: Algeria
+    level: 30
+    subregion:
+      id: DZ-16
+      name: Alger
+  name: SEAAL
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00001429

@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Data catalog and web map service for astronomical data, operated by Observatoire
+  de Paris (Paris Observatory)
+endpoints:
+- type: wms111
+  url: http://voparis-vespa-hips-wms.obspm.fr:8080/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: http://voparis-vespa-hips-wms.obspm.fr:8080/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: http://voparis-vespa-hips-wms.obspm.fr:8080/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: http://voparis-vespa-hips-wms.obspm.fr:8080/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: voparisvespahipswmsobspmfr
+langs:
+- id: FR
+  name: French
+link: http://voparis-vespa-hips-wms.obspm.fr:8080
+name: voparis-vespa-hips-wms.obspm.fr:8080
+owner:
+  link: https://www.obspm.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+  name: Observatoire de Paris
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: Mapproxy
+status: active
+tags:
+- astronomy
+- sky survey
+- web map service
+- HiPS
+- WMS
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00002467

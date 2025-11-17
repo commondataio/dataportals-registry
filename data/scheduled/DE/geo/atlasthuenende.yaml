@@ -1,86 +1,83 @@
 access_mode:
-- open
+  - open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: DE
-      name: Germany
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: Open geospatial data portal based on GeoNode, providing access to maps
-  (WMS), vector data (WFS), raster data (WCS), and metadata via CSW; supports scientific
-  and policy applications in agriculture, environment, and related fields. Includes
-  harmonized datasets such as organic soils map of Germany.
+  - location:
+      country:
+        id: DE
+        name: Germany
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: Open geospatial data portal based on GeoNode, providing access to maps (WMS), vector data (WFS), raster data (WCS), and metadata via CSW; supports scientific and policy applications in agriculture, environment, and related fields. Includes harmonized datasets such as organic soils map of Germany.
 endpoints:
-- type: geonode:layers
-  url: https://atlas.thuenen.de/api/layers/
-- type: geonode:documents
-  url: https://atlas.thuenen.de/api/documents/
-- type: wms111
-  url: https://atlas.thuenen.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: wfs110
-  url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs111
-  url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
-  version: 1.1.1
-- type: csw202
-  url: https://atlas.thuenen.de/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://atlas.thuenen.de/catalogue/csw?mode=oaipmh&verb=Identify
-  version: '2.0'
-- type: opensearch
-  url: https://atlas.thuenen.de/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-  version: '1.0'
-- type: geonode:datasets
-  url: https://atlas.thuenen.de/api/datasets/
-- type: wmts100
-  url: https://atlas.thuenen.de/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wms130
-  url: https://atlas.thuenen.de/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-  version: 1.3.0
-- type: wfs100
-  url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wfs200
-  url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
-  version: 2.0.0
-- type: wcs100
-  url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: wcs110
-  url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
-  version: 1.1.0
-- type: wcs11
-  url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
-  version: '1.1'
-- type: wcs201
-  url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-- type: wps100
-  url: https://atlas.thuenen.de/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
-  version: 1.0.0
-- type: tms100
-  url: https://atlas.thuenen.de/geoserver/gwc/service/tms/1.0.0
-  version: 1.0.0
-- type: wms-c111
-  url: https://atlas.thuenen.de/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
-  version: 1.1.1
+  - type: geonode:layers
+    url: https://atlas.thuenen.de/api/layers/
+  - type: geonode:documents
+    url: https://atlas.thuenen.de/api/documents/
+  - type: wms111
+    url: https://atlas.thuenen.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+    version: 1.1.1
+  - type: wfs110
+    url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+    version: 1.1.0
+  - type: wcs111
+    url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+    version: 1.1.1
+  - type: csw202
+    url: https://atlas.thuenen.de/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+    version: 2.0.2
+  - type: oaipmh20
+    url: https://atlas.thuenen.de/catalogue/csw?mode=oaipmh&verb=Identify
+    version: '2.0'
+  - type: opensearch
+    url: https://atlas.thuenen.de/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+    version: '1.0'
+  - type: geonode:datasets
+    url: https://atlas.thuenen.de/api/datasets/
+  - type: wmts100
+    url: https://atlas.thuenen.de/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+    version: 1.0.0
+  - type: wms130
+    url: https://atlas.thuenen.de/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+    version: 1.3.0
+  - type: wfs100
+    url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+    version: 1.0.0
+  - type: wfs200
+    url: https://atlas.thuenen.de/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+    version: 2.0.0
+  - type: wcs100
+    url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+    version: 1.0.0
+  - type: wcs110
+    url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+    version: 1.1.0
+  - type: wcs11
+    url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+    version: '1.1'
+  - type: wcs201
+    url: https://atlas.thuenen.de/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+    version: 2.0.1
+  - type: wps100
+    url: https://atlas.thuenen.de/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+    version: 1.0.0
+  - type: tms100
+    url: https://atlas.thuenen.de/geoserver/gwc/service/tms/1.0.0
+    version: 1.0.0
+  - type: wms-c111
+    url: https://atlas.thuenen.de/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+    version: 1.1.1
 id: atlasthuenende
 langs:
-- id: DE
-  name: German
+  - id: DE
+    name: German
 link: https://atlas.thuenen.de
 name: atlas.thuenen.de
 owner:
@@ -90,42 +87,42 @@ owner:
       id: DE
       name: Germany
     level: 20
-  name: Thünen Institute
+  name: Johann Heinrich von Thünen-Institut
   type: Academy
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: geonode
   name: GeoNode
 status: scheduled
 tags:
-- open data
-- geospatial
-- agriculture
-- environment
-- soil
-- peatland
-- Germany
-- GeoNode
-- WMS
-- WFS
-- WCS
-- CSW
+  - open data
+  - geospatial
+  - agriculture
+  - environment
+  - soil
+  - peatland
+  - Germany
+  - GeoNode
+  - WMS
+  - WFS
+  - WCS
+  - CSW
 topics:
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
+  - id: AGRI
+    name: Agriculture, fisheries, forestry and food
+    type: eudatatheme
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: Environment
+    name: Environment
+    type: iso19115
 uid: temp00000194

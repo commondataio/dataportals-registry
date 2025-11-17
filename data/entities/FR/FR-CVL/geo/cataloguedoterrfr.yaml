@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Geonetwork-based data catalogue
+endpoints:
+- type: geonetwork:query
+  url: https://catalogue.doterr.fr/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://catalogue.doterr.fr/geonetwork/srv/api/records
+- type: openapi
+  url: https://catalogue.doterr.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://catalogue.doterr.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalogue.doterr.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalogue.doterr.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: cataloguedoterrfr
+langs:
+- id: FR
+  name: French
+link: https://catalogue.doterr.fr/geonetwork
+name: catalogue.doterr.fr/geonetwork
+owner:
+  link: https://www.doterr.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-CVL
+      name: Centre-Val de Loire
+  name: Do.TeRR
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- catalogue
+- geonetwork
+- doterr.fr
+topics: []
+uid: temp00002729

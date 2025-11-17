@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: ArcGIS REST API endpoint for map and feature services
+endpoints:
+- type: arcgis:rest:info
+  url: http://gate.smp.kurgan-med.ru:8888/ArcGIS/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gate.smp.kurgan-med.ru:8888/ArcGIS/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gate.smp.kurgan-med.ru:8888/ArcGIS/services?wsdl
+- type: arcgis:sitemap
+  url: http://gate.smp.kurgan-med.ru:8888/ArcGIS/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gate.smp.kurgan-med.ru:8888/ArcGIS/rest/services?f=geositemap
+id: gatesmpkurganmedru
+langs:
+- id: RU
+  name: Russian
+link: http://gate.smp.kurgan-med.ru:8888/ArcGIS/rest/services
+name: gate.smp.kurgan-med.ru:8888
+owner:
+  link: https://www.kurganobl.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 30
+    subregion:
+      id: RU-KGN
+      name: Kurganskaya oblast
+  name: Kurganskaya oblast Administration
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00005797

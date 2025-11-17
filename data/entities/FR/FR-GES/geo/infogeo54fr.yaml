@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand Est
+endpoints:
+- type: csw202
+  url: https://data.infogeo54.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://data.infogeo54.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://data.infogeo54.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://data.infogeo54.fr/geonetwork/srv/api/site
+id: infogeo54fr
+langs:
+- id: FR
+  name: French
+link: https://data.infogeo54.fr/geonetwork
+name: Meurthe-et-Moselle
+owner:
+  link: https://www.meurthe-et-moselle.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 40
+    subregion:
+      id: FR-GES
+      name: Grand Est
+  name: Meurthe-et-Moselle
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- open data
+- France
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011058

@@ -1,79 +1,77 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: AU
-      name: Australia
-    level: 20
-    macroregion:
-      id: '053'
-      name: Australia and New Zealand
-description: GeoNetwork data catalogue, which contains descriptions of many Marine
-  National Facility (MNF) and Oceans and Atmosphere (O&A) datasets (not just those
-  held by the Data Centre).
+  - location:
+      country:
+        id: AU
+        name: Australia
+      level: 20
+      macroregion:
+        id: '053'
+        name: Australia and New Zealand
+description: GeoNetwork data catalogue, which contains descriptions of many Marine National Facility (MNF) and Oceans and Atmosphere (O&A) datasets (not just those held by the Data Centre).
 endpoints:
-- type: openapi
-  url: http://www.marlin.csiro.au/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: http://www.marlin.csiro.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: http://www.marlin.csiro.au/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: http://www.marlin.csiro.au/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: openapi
+    url: http://www.marlin.csiro.au/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: http://www.marlin.csiro.au/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: http://www.marlin.csiro.au/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: http://www.marlin.csiro.au/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: wwwmarlincsiroau
 langs:
-- id: EN
-  name: English
+  - id: EN
+    name: English
 link: http://www.marlin.csiro.au/geonetwork
 name: Marlin GeoNetwork Data Catalogue (CSIRO NCMI)
 owner:
-  link: https://research.csiro.au/ncmi-idc/
+  link: https://www.csiro.au
   location:
     country:
       id: AU
       name: Australia
     level: 20
-  name: CSIRO National Collections and Marine Infrastructure (NCMI)
+  name: CSIRO
   type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
 tags:
-- Marine data
-- Research
-- Australia
-- Spatial data
-- Catalog
-- GeoNetwork
+  - Marine data
+  - Research
+  - Australia
+  - Spatial data
+  - Catalog
+  - GeoNetwork
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: Oceans
-  name: Oceans
-  type: iso19115
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: TECH
+    name: Science and technology
+    type: eudatatheme
+  - id: Oceans
+    name: Oceans
+    type: iso19115
 uid: temp00003385

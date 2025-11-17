@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NC
+      name: North Carolina
+description: Geospatial Information Services (GIS) is a computer system for storing,
+  manipulating, maintaining, analyzing, and displaying geographic/geospatial data
+  for real property found within Moore County. All data is compiled from recorded
+  deeds, plats, and other public records.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.moorecountync.gov/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.moorecountync.gov/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.moorecountync.gov/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.moorecountync.gov/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.moorecountync.gov/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.moorecountync.gov/server/rest/services?f=kmz
+id: gismoorecountyncgov
+langs:
+- id: EN
+  name: English
+link: https://gis.moorecountync.gov/server/rest/services
+name: Moore County, NC GIS Services
+owner:
+  link: https://gis.moorecountync.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
+  name: Moore County, NC
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Mapping
+- Parcels
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00004322

@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: This URL is the root of the San Francisco Planning Department's ArcGIS
+  REST Services Directory, providing GIS services including layers and maps related
+  to planning, zoning, and property information.
+endpoints:
+- type: arcgis:rest:info
+  url: http://sfplanninggis.org/arcgiswa/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://sfplanninggis.org/arcgiswa/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://sfplanninggis.org/arcgiswa/services?wsdl
+- type: arcgis:sitemap
+  url: http://sfplanninggis.org/arcgiswa/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sfplanninggis.org/arcgiswa/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://sfplanninggis.org/arcgiswa/rest/services?f=kmz
+id: sfplanninggisorg
+langs: []
+link: http://sfplanninggis.org/arcgiswa/rest/services
+name: sfplanninggis.org
+owner:
+  link: https://sfplanninggis.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: San Francisco Planning Department
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- Planning
+- Zoning
+- Map
+- San Francisco
+- REST API
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00004067

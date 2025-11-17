@@ -1,37 +1,34 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: Unknown
-      name: Unknown
-    level: 20
-    macroregion:
-      id: World
-      name: World
-description: No explicit metadata information or structured catalog description is
-  available from the provided URL content. The URL points to a REST services endpoint,
-  not a human-readable catalog page or machine-readable metadata endpoint (e.g., direct
-  DCAT-AP, DCAT-US, or ISO19115 metadata).
+  - location:
+      country:
+        id: Unknown
+        name: Unknown
+      level: 20
+      macroregion:
+        id: World
+        name: World
+description: No explicit metadata information or structured catalog description is available from the provided URL content. The URL points to a REST services endpoint, not a human-readable catalog page or machine-readable metadata endpoint (e.g., direct DCAT-AP, DCAT-US, or ISO19115 metadata).
 endpoints:
-- type: arcgis:rest:info
-  url: https://maps2.cattco.org/arcgiswebadaptor/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://maps2.cattco.org/arcgiswebadaptor/services?wsdl
-- type: arcgis:sitemap
-  url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://maps2.cattco.org/arcgiswebadaptor/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://maps2.cattco.org/arcgiswebadaptor/services?wsdl
+  - type: arcgis:sitemap
+    url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=kmz
 id: maps2cattcoorg
 langs: []
 link: https://maps2.cattco.org/arcgiswebadaptor/rest/services
@@ -43,17 +40,17 @@ owner:
       id: Unknown
       name: Unknown
     level: 20
-  name: ''
+  name: 'Cattco'
   type: Business
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server

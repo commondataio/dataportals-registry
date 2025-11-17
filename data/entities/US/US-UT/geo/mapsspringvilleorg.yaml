@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-UT
+      name: Utah
+description: Official GIS data catalog for Springville City, accessible via REST services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://maps.springville.org/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://maps.springville.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.springville.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.springville.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.springville.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.springville.org/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.springville.org/server/rest/services?f=kmz
+id: mapsspringvilleorg
+langs:
+- id: EN
+  name: English
+link: https://maps.springville.org/server/rest/services
+name: Springville City GIS Data Catalog
+owner:
+  link: https://maps.springville.org/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-UT
+      name: Utah
+  name: Springville City
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Open Data
+- REST API
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002225

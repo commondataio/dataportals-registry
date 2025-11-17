@@ -1,53 +1,52 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: AT
-      name: Austria
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+  - location:
+      country:
+        id: AT
+        name: Austria
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: This is a temporary record with some data collected but it should be updated befor adding to the index
 endpoints:
-- type: csw202
-  url: https://metadata.savegreen.at/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: oaipmh20
-  url: https://metadata.savegreen.at/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: csw202
+    url: https://metadata.savegreen.at/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: oaipmh20
+    url: https://metadata.savegreen.at/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: metadatasavegreenat
 langs:
-- id: DE
-  name: German
+  - id: DE
+    name: German
 link: https://metadata.savegreen.at/geonetwork
 name: metadata.savegreen.at
 owner:
-  link: null
+  link: https://savegreen.at
   location:
     country:
       id: AT
       name: Austria
     level: 20
-  name: ''
+  name: 'Government of Austria'
   type: Central government
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork

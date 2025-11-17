@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-IDF
+      name: Ile-de-France
+description: Data catalog for Solid Earth sciences, managed by the Institut de Physique
+  du Globe de Paris, providing access to geoscientific datasets including seismological,
+  GNSS, and volcanological data.
+endpoints:
+- type: geonetwork:query
+  url: https://catalogue-terresolide.ipgp.fr/geonetwork/srv/eng/q
+- type: openapi
+  url: https://catalogue-terresolide.ipgp.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://catalogue-terresolide.ipgp.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalogue-terresolide.ipgp.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalogue-terresolide.ipgp.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: catalogueterresolideipgpfr
+langs:
+- id: FR
+  name: French
+link: https://catalogue-terresolide.ipgp.fr/geonetwork
+name: Catalogue Solid Earth - Geonetwork
+owner:
+  link: https://www.ipgp.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Institut de physique du globe de Paris
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geology
+- seismology
+- volcanology
+- geodesy
+- data_catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00002730

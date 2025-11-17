@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Geoportal providing ArcGIS-based map and data services for the city of
+  Lünen
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.luenen.de/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.luenen.de/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.luenen.de/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.luenen.de/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.luenen.de/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.luenen.de/arcgis/rest/services?f=kmz
+id: geoportalluenende
+langs:
+- id: DE
+  name: German
+link: https://geoportal.luenen.de/arcgis/services
+name: Geoportal Lünen - ArcGIS Services
+owner:
+  link: https://geoportal.luenen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: City of Lünen
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geodata
+- ArcGIS
+- geoportal
+- municipal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003501

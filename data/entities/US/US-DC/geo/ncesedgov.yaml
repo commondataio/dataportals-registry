@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: A data catalog providing geospatial datasets via REST services, supporting
+  education statistics and related geographic data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://nces.ed.gov/opengis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://nces.ed.gov/opengis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://nces.ed.gov/opengis/services?wsdl
+- type: arcgis:sitemap
+  url: https://nces.ed.gov/opengis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://nces.ed.gov/opengis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://nces.ed.gov/opengis/rest/services?f=kmz
+id: ncesedgov
+langs:
+- id: EN
+  name: English
+link: https://nces.ed.gov/opengis/rest/services
+name: NCES OpenGIS REST Services
+owner:
+  link: https://nces.ed.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: National Center for Education Statistics
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Education
+- Government
+- REST
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00004395

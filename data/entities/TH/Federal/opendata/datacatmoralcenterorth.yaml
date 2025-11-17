@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Data catalog powered by CKAN for the Moral Center organization in Thailand.
+endpoints:
+- type: ckan
+  url: https://datacat.moralcenter.or.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datacat.moralcenter.or.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datacat.moralcenter.or.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://datacat.moralcenter.or.th/catalog.n3
+- type: dcat:ttl
+  url: https://datacat.moralcenter.or.th/catalog.ttl
+- type: dcat:xml
+  url: https://datacat.moralcenter.or.th/catalog.xml
+- type: dcat:jsonld
+  url: https://datacat.moralcenter.or.th/catalog.jsonld
+id: datacatmoralcenterorth
+langs:
+- id: TH
+  name: Thai
+link: https://datacat.moralcenter.or.th
+name: Moral Center Data Catalog (Thailand)
+owner:
+  link: https://moralcenter.or.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Moral Center (Thailand)
+  type: Non-profit
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- ckan
+topics: []
+uid: cdi00011093

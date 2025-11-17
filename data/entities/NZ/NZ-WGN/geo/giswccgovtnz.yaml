@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-WGN
+      name: Wellington
+description: Spatial data services used for public web mapping and GIS projects, accessible
+  via ArcGIS REST endpoint.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.wcc.govt.nz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.wcc.govt.nz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.wcc.govt.nz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.wcc.govt.nz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.wcc.govt.nz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.wcc.govt.nz/arcgis/rest/services?f=kmz
+id: giswccgovtnz
+langs:
+- id: EN
+  name: English
+link: https://gis.wcc.govt.nz/arcgis/services
+name: GIS REST services from Wellington City Council
+owner:
+  link: https://wellington.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-WGN
+      name: Wellington
+  name: Wellington City Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- gis
+- spatial
+- arcgis
+- open data
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00005289

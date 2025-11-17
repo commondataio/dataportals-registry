@@ -1,59 +1,58 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: MK
-      name: Makedonia
-    level: 20
-    macroregion:
-      id: 039
-      name: Southern Europe
-description: This URL represents a data catalog endpoint providing access to multiple
-  datasets available as ArcGIS REST services.
+  - location:
+      country:
+        id: MK
+        name: Republic of North Macedonia
+      level: 20
+      macroregion:
+        id: 039
+        name: Southern Europe
+description: This URL represents a data catalog endpoint providing access to multiple datasets available as ArcGIS REST services.
 endpoints:
-- type: arcgis:rest:info
-  url: https://portal.app.gov.mk/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://portal.app.gov.mk/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://portal.app.gov.mk/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://portal.app.gov.mk/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://portal.app.gov.mk/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://portal.app.gov.mk/arcgis/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://portal.app.gov.mk/arcgis/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://portal.app.gov.mk/arcgis/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://portal.app.gov.mk/arcgis/services?wsdl
+  - type: arcgis:sitemap
+    url: https://portal.app.gov.mk/arcgis/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://portal.app.gov.mk/arcgis/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://portal.app.gov.mk/arcgis/rest/services?f=kmz
 id: portalappgovmk
 langs:
-- id: MK
-  name: Makedonian
+  - id: MK
+    name: Makedonian
 link: https://portal.app.gov.mk/arcgis/rest/services
 name: portal.app.gov.mk
 owner:
-  link: null
+  link: https://www.app.gov.mk
   location:
     country:
       id: MK
-      name: Makedonia
+      name: Republic of North Macedonia
     level: 20
-  name: ''
+  name: 'Government of Republic of North Macedonia'
   type: Central government
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server

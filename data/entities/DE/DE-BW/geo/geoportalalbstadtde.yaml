@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: A catalog of geospatial data services provided by the city of Albstadt.
+endpoints:
+- type: arcgis:portals:self
+  url: https://geoportal.albstadt.de/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://geoportal.albstadt.de/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.albstadt.de/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.albstadt.de/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.albstadt.de/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.albstadt.de/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.albstadt.de/server/rest/services?f=kmz
+id: geoportalalbstadtde
+langs:
+- id: DE
+  name: German
+link: https://geoportal.albstadt.de/server/rest/services
+name: Albstadt Geoportal REST Services
+owner:
+  link: https://geoportal.albstadt.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: City of Albstadt
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- rest
+- opendata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003216

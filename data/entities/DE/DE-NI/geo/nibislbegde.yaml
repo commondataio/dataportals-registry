@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: GeoNetwork data catalog managed by the LBEG (Lower Saxony State Office
+  for Mining, Energy and Geology), providing access to and integrated use of spatial
+  data.
+endpoints:
+- type: geonetwork:query
+  url: https://nibis.lbeg.de/geonetwork/srv/eng/q
+- type: openapi
+  url: https://nibis.lbeg.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://nibis.lbeg.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://nibis.lbeg.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://nibis.lbeg.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: nibislbegde
+langs:
+- id: DE
+  name: German
+link: https://nibis.lbeg.de/geonetwork
+name: LBEG GeoNetwork Catalogue
+owner:
+  link: https://nibis.lbeg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: LBEG
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- spatial data
+- metadata
+- geospatial
+- Germany
+- LBEG
+topics: []
+uid: temp00003517

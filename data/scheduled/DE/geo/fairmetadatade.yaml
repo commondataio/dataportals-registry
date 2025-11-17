@@ -1,72 +1,70 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: DE
-      name: Germany
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: Data catalog for managing, publishing and searching geospatial and non-geospatial
-  metadata records. Supports metadata standards like ISO19115 and Dublin Core, and
-  provides online metadata editing, validation, and search capabilities.
+  - location:
+      country:
+        id: DE
+        name: Germany
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: Data catalog for managing, publishing and searching geospatial and non-geospatial metadata records. Supports metadata standards like ISO19115 and Dublin Core, and provides online metadata editing, validation, and search capabilities.
 endpoints:
-- type: geonetwork:query
-  url: https://fair-metadata.de/geonetwork/srv/eng/q
-- type: openapi
-  url: https://fair-metadata.de/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://fair-metadata.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://fair-metadata.de/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://fair-metadata.de/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://fair-metadata.de/geonetwork/srv/eng/q
+  - type: openapi
+    url: https://fair-metadata.de/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://fair-metadata.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://fair-metadata.de/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://fair-metadata.de/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: fairmetadatade
 langs:
-- id: DE
-  name: German
+  - id: DE
+    name: German
 link: https://fair-metadata.de/geonetwork
 name: fair-metadata.de/geonetwork
 owner:
-  link: UNKNOWN
+  link: Unknown
   location:
     country:
-      id: DE
-      name: Germany
+      id: Unknown
+      name: Unknown
     level: 20
-  name: UNKNOWN
-  type: Civil society
+  name: Unknown
+  type: Central government
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
 tags:
-- geospatial catalog
-- metadata
-- ISO19115
-- Dublin Core
-- web map viewer
-- OGC services
+  - geospatial catalog
+  - metadata
+  - ISO19115
+  - Dublin Core
+  - web map viewer
+  - OGC services
 topics: []
 uid: temp00003495

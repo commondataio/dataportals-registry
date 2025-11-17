@@ -1,84 +1,83 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: NZ
-      name: New Zealand
-    level: 20
-    macroregion:
-      id: '053'
-      name: Australia and New Zealand
-description: Data catalog offering New Zealand's climate, freshwater, and marine data
-  via web services, GIS, and APIs.
+  - location:
+      country:
+        id: NZ
+        name: New Zealand
+      level: 20
+      macroregion:
+        id: '053'
+        name: Australia and New Zealand
+description: Data catalog offering New Zealand's climate, freshwater, and marine data via web services, GIS, and APIs.
 endpoints:
-- type: arcgis:rest:info
-  url: https://gis.niwa.co.nz/server/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://gis.niwa.co.nz/server/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://gis.niwa.co.nz/server/services?wsdl
-- type: arcgis:sitemap
-  url: https://gis.niwa.co.nz/server/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://gis.niwa.co.nz/server/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://gis.niwa.co.nz/server/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://gis.niwa.co.nz/server/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://gis.niwa.co.nz/server/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://gis.niwa.co.nz/server/services?wsdl
+  - type: arcgis:sitemap
+    url: https://gis.niwa.co.nz/server/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://gis.niwa.co.nz/server/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://gis.niwa.co.nz/server/rest/services?f=kmz
 id: gisniwaconz
 langs:
-- id: EN
-  name: English
+  - id: EN
+    name: English
 link: https://gis.niwa.co.nz/server/services
 name: NIWA Data Services
 owner:
-  link: https://www.niwa.co.nz
+  link: http://www.niwa.co.nz/
   location:
     country:
       id: NZ
       name: New Zealand
     level: 20
-  name: National Institute of Water and Atmospheric Research
+  name: The National Institute of Water and Atmospheric Research (NIWA)
   type: Academy
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: scheduled
 tags:
-- climate
-- freshwater
-- marine
-- GIS
-- web services
-- API
+  - climate
+  - freshwater
+  - marine
+  - GIS
+  - web services
+  - API
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: Environment
-  name: Environment
-  type: iso19115
-- id: Inland Waters
-  name: Inland Waters
-  type: iso19115
-- id: Oceans
-  name: Oceans
-  type: iso19115
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: TECH
+    name: Science and technology
+    type: eudatatheme
+  - id: Environment
+    name: Environment
+    type: iso19115
+  - id: Inland Waters
+    name: Inland Waters
+    type: iso19115
+  - id: Oceans
+    name: Oceans
+    type: iso19115
 uid: temp00005287

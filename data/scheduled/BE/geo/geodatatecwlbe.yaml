@@ -1,59 +1,58 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: BE
-      name: Belgium
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+  - location:
+      country:
+        id: BE
+        name: Belgium
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: This is a temporary record with some data collected but it should be updated befor adding to the index
 endpoints:
-- type: arcgis:rest:info
-  url: https://geodata.tec-wl.be/arcgis/rest/info?f=pjson
-- type: arcgis:rest:services
-  url: https://geodata.tec-wl.be/arcgis/rest/services?f=pjson
-- type: arcgis:soap
-  url: https://geodata.tec-wl.be/arcgis/services?wsdl
-- type: arcgis:sitemap
-  url: https://geodata.tec-wl.be/arcgis/rest/services?f=sitemap
-- type: arcgis:geositemap
-  url: https://geodata.tec-wl.be/arcgis/rest/services?f=geositemap
-- type: arcgis:kmz
-  url: https://geodata.tec-wl.be/arcgis/rest/services?f=kmz
+  - type: arcgis:rest:info
+    url: https://geodata.tec-wl.be/arcgis/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://geodata.tec-wl.be/arcgis/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://geodata.tec-wl.be/arcgis/services?wsdl
+  - type: arcgis:sitemap
+    url: https://geodata.tec-wl.be/arcgis/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://geodata.tec-wl.be/arcgis/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://geodata.tec-wl.be/arcgis/rest/services?f=kmz
 id: geodatatecwlbe
 langs:
-- id: FR
-  name: French
+  - id: FR
+    name: French
 link: https://geodata.tec-wl.be/arcgis/rest/services
 name: geodata.tec-wl.be
 owner:
-  link: null
+  link: https://tec-wl.be
   location:
     country:
       id: BE
       name: Belgium
     level: 20
-  name: ''
+  name: 'Regional Government of Tec Wl'
   type: Regional government
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: global
-  tos_url: null
+  tos_url:
 software:
   id: arcgisserver
   name: ArcGIS Server

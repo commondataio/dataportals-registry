@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: REST endpoint providing GIS data and map services for the Taranaki region.
+endpoints:
+- type: arcgis:rest:info
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/services?f=kmz
+id: extranettrcgovtnz
+langs:
+- id: EN
+  name: English
+link: https://extranet.trc.govt.nz/getgis_ssl/arcgis/rest/services
+name: Taranaki Regional Council GIS REST Services
+owner:
+  link: https://www.trc.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-TKI
+      name: Taranaki
+  name: Taranaki Regional Council
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- rest
+- ArcGIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00005596

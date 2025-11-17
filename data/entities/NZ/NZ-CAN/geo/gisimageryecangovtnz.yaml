@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+description: Geoportal providing imagery and geospatial data services for Canterbury
+  region
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisimagery.ecan.govt.nz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisimagery.ecan.govt.nz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisimagery.ecan.govt.nz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisimagery.ecan.govt.nz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisimagery.ecan.govt.nz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisimagery.ecan.govt.nz/arcgis/rest/services?f=kmz
+id: gisimageryecangovtnz
+langs:
+- id: EN
+  name: English
+link: https://gisimagery.ecan.govt.nz/arcgis/rest/services
+name: gisimagery.ecan.govt.nz/arcgis/rest/services
+owner:
+  link: gisimagery.ecan.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-CAN
+      name: Canterbury
+  name: Environment Canterbury
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- imagery
+- environment
+- regional
+- New Zealand
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005413

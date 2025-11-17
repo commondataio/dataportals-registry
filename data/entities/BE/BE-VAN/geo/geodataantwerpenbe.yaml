@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: BE-VAN
+      name: Antwerpen
+description: The official ArcGIS REST API endpoint for spatial data services provided
+  by City of Antwerp. This directory provides access to various geospatial datasets
+  and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geodata.antwerpen.be/arcgissql/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodata.antwerpen.be/arcgissql/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodata.antwerpen.be/arcgissql/services?wsdl
+- type: arcgis:sitemap
+  url: https://geodata.antwerpen.be/arcgissql/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geodata.antwerpen.be/arcgissql/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geodata.antwerpen.be/arcgissql/rest/services?f=kmz
+id: geodataantwerpenbe
+langs:
+- id: FR
+  name: French
+link: https://geodata.antwerpen.be/arcgissql/rest/services
+name: geodata.antwerpen.be - ArcGIS REST Services Directory
+owner:
+  link: https://portaal-stadantwerpen.opendata.arcgis.com
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-VAN
+      name: Antwerpen
+  name: Stad Antwerpen
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- GIS
+- open data
+- Antwerp
+- mapping
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00003393

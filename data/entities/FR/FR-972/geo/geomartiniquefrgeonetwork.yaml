@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-972
+      name: Martinique
+endpoints:
+- type: csw202
+  url: http://www.geomartinique.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://www.geomartinique.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: http://www.geomartinique.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: http://www.geomartinique.fr/geonetwork/srv/api/site
+- type: opensearch
+  url: http://www.geomartinique.fr/portal.opensearch
+id: geomartiniquefrgeonetwork
+langs:
+- id: FR
+  name: French
+link: http://www.geomartinique.fr/geonetwork/
+name: GéoMartinique
+owner:
+  link: null
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-972
+      name: Martinique
+  name: GéoMartinique
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- open data
+- France
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00011008

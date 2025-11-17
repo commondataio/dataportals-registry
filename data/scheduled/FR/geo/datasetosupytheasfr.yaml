@@ -1,60 +1,60 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: FR
-      name: France
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
+  - location:
+      country:
+        id: FR
+        name: France
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
 description: GeoNetwork-based data catalog
 endpoints:
-- type: geonetwork:query
-  url: https://dataset.osupytheas.fr/geonetwork/srv/eng/q
-- type: openapi
-  url: https://dataset.osupytheas.fr/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://dataset.osupytheas.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://dataset.osupytheas.fr/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://dataset.osupytheas.fr/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://dataset.osupytheas.fr/geonetwork/srv/eng/q
+  - type: openapi
+    url: https://dataset.osupytheas.fr/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://dataset.osupytheas.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://dataset.osupytheas.fr/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://dataset.osupytheas.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: datasetosupytheasfr
 langs:
-- id: FR
-  name: French
+  - id: FR
+    name: French
 link: https://dataset.osupytheas.fr/geonetwork
 name: dataset.osupytheas.fr/geonetwork
 owner:
-  link: null
+  link: https://osupytheas.fr
   location:
     country:
       id: FR
       name: France
     level: 20
-  name: ''
+  name: 'Institut Pythéas'
   type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork

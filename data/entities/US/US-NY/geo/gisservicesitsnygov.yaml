@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NY
+      name: New York
+description: A data catalog for GIS services offered by New York Department of Information
+  Technology Services
+endpoints:
+- type: arcgis:rest:info
+  url: http://gisservices.its.ny.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gisservices.its.ny.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gisservices.its.ny.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gisservices.its.ny.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gisservices.its.ny.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://gisservices.its.ny.gov/arcgis/rest/services?f=kmz
+id: gisservicesitsnygov
+langs:
+- id: EN
+  name: English
+link: http://gisservices.its.ny.gov/arcgis/rest/services
+name: gisservices.its.ny.gov/arcgis/rest/services
+owner:
+  link: http://gisservices.its.ny.gov/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NY
+      name: New York
+  name: New York Department of Information Technology Services (ITS)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- ArcGIS
+topics: []
+uid: temp00004338

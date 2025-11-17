@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Zentraler Katalog für Metadaten, Geodatensätze, Geodatendienste und Geodatenanwendungen
+  im Verbandsgebiet des Regionalverbands Ruhr (RVR), der auch kommunale Daten bereitstellt
+  und – wo nötig – INSPIRE-gerecht aufbereitet.
+endpoints:
+- type: geonetwork:query
+  url: https://daten.geoportal.ruhr/srv/eng/q
+- type: openapi
+  url: https://daten.geoportal.ruhr/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://daten.geoportal.ruhr/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://daten.geoportal.ruhr/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://daten.geoportal.ruhr/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: datengeoportalruhr
+langs:
+- id: DE
+  name: German
+link: https://daten.geoportal.ruhr
+name: Geodatenkatalog / Geonetzwerk.metropoleRuhr
+owner:
+  link: https://www.rvr.ruhr
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: Projektbüro Digitale Metropole Ruhr
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- metadata
+- geodata
+- GIS
+- INSPIRE
+topics: []
+uid: temp00003036

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NJ
+      name: New Jersey
+description: Official ArcGIS REST services endpoint for New Jersey state maps and
+  spatial data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.nj.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.nj.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.nj.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.nj.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.nj.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.nj.gov/arcgis/rest/services?f=kmz
+id: mapsnjgov
+langs:
+- id: EN
+  name: English
+link: https://maps.nj.gov/arcgis/rest/services
+name: NJ Maps ArcGIS REST Services
+owner:
+  link: https://maps.nj.gov/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NJ
+      name: New Jersey
+  name: New Jersey Department of Environmental Protection (NJDEP)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- maps
+- New Jersey
+- NJDEP
+- geospatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: temp00004388

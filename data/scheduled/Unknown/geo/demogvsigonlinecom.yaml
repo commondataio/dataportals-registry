@@ -1,36 +1,36 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: Unknown
-      name: Unknown
-    level: 20
-    macroregion:
-      id: World
-      name: World
+  - location:
+      country:
+        id: Unknown
+        name: Unknown
+      level: 20
+      macroregion:
+        id: World
+        name: World
 description: Data catalog interface
 endpoints:
-- type: geonetwork:query
-  url: https://demo.gvsigonline.com/geonetwork/srv/eng/q
-- type: openapi
-  url: https://demo.gvsigonline.com/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://demo.gvsigonline.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://demo.gvsigonline.com/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://demo.gvsigonline.com/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://demo.gvsigonline.com/geonetwork/srv/eng/q
+  - type: openapi
+    url: https://demo.gvsigonline.com/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://demo.gvsigonline.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://demo.gvsigonline.com/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://demo.gvsigonline.com/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: demogvsigonlinecom
 langs: []
 link: https://demo.gvsigonline.com/geonetwork
@@ -42,17 +42,17 @@ owner:
       id: Unknown
       name: Unknown
     level: 20
-  name: ''
+  name: 'Gvsigonline'
   type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork

@@ -503,6 +503,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "pxweb": "Indicators catalog",
     "invenio": "Scientific data repository",
     "ipt": "Scientific data repository",
+    "linkahead": "Scientific data repository",
     "mytardis": "Scientific data repository",
     "omegapsir": "Scientific data repository",
     "pure": "Scientific data repository",

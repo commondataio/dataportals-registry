@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Chelmsford City Council geospatial data REST services
+endpoints:
+- type: arcgis:rest:info
+  url: https://r.chelmsford.gov.uk/ccc/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://r.chelmsford.gov.uk/ccc/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://r.chelmsford.gov.uk/ccc/services?wsdl
+- type: arcgis:sitemap
+  url: https://r.chelmsford.gov.uk/ccc/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://r.chelmsford.gov.uk/ccc/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://r.chelmsford.gov.uk/ccc/rest/services?f=kmz
+id: rchelmsfordgovuk
+langs:
+- id: EN
+  name: English
+link: https://r.chelmsford.gov.uk/ccc/rest/services
+name: r.chelmsford.gov.uk
+owner:
+  link: https://www.chelmsford.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Chelmsford City Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- rest
+- geo
+- api
+- chelmsford
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00005392

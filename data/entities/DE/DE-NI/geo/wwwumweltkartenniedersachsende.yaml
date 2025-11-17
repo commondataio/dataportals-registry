@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+description: Geoportal for environmental maps and geospatial data services for Lower
+  Saxony, Germany.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.umweltkarten-niedersachsen.de/arcgis/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://www.umweltkarten-niedersachsen.de/inspire/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.umweltkarten-niedersachsen.de/inspire/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.umweltkarten-niedersachsen.de/inspire/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.umweltkarten-niedersachsen.de/inspire/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.umweltkarten-niedersachsen.de/inspire/rest/services?f=geositemap
+id: wwwumweltkartenniedersachsende
+langs:
+- id: DE
+  name: German
+link: https://www.umweltkarten-niedersachsen.de/inspire/rest/services
+name: www.umweltkarten-niedersachsen.de
+owner:
+  link: https://umweltkarten-niedersachsen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NI
+      name: Niedersachsen
+  name: Government of Niedersachsen
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geoportal
+- inspire
+- environmental maps
+- Lower Saxony
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00001418

@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: GeoServer REST endpoint serving spatial data services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisent.cloca.com/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisent.cloca.com/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisent.cloca.com/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisent.cloca.com/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisent.cloca.com/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisent.cloca.com/server/rest/services?f=kmz
+id: gisentclocacom
+langs: []
+link: https://gisent.cloca.com/server/rest/services
+name: gisent.cloca.com
+owner:
+  link: https://www.cloca.com
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: Central Lake Ontario Conservation Authority
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GeoServer
+- GIS
+- REST
+- Spatial
+- Open Data
+- Web Service
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: temp00005628

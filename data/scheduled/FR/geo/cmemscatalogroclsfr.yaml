@@ -1,82 +1,81 @@
 access_mode:
-- open
+  - open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: FR
-      name: France
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: Ocean product catalogue, to download or visualize data across nearly
-  15 variables, including hindcast, current and forecast data.
+  - location:
+      country:
+        id: FR
+        name: France
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: Ocean product catalogue, to download or visualize data across nearly 15 variables, including hindcast, current and forecast data.
 endpoints:
-- type: geonetwork:query
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/q
-- type: geonetwork:records
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/api/records
-- type: openapi
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/q
+  - type: geonetwork:records
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/api/records
+  - type: openapi
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://cmems-catalog-ro.cls.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: cmemscatalogroclsfr
 langs:
-- id: FR
-  name: French
+  - id: FR
+    name: French
 link: https://cmems-catalog-ro.cls.fr/geonetwork
 name: cmems-catalog-ro.cls.fr
 owner:
   link: https://marine.copernicus.eu
   location:
     country:
-      id: FR
-      name: France
+      id: EU
+      name: European Union
     level: 20
-  name: Copernicus Marine Service (CMEMS)
-  type: International
+  name: Copernicus Marine Service
+  type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
 tags:
-- marine
-- satellite
-- insitu
-- forecast
-- hindcast
-- oceanography
+  - marine
+  - satellite
+  - insitu
+  - forecast
+  - hindcast
+  - oceanography
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: ENVI
-  name: Environment
-  type: eudatatheme
-- id: Oceans
-  name: Oceans
-  type: iso19115
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: ENVI
+    name: Environment
+    type: eudatatheme
+  - id: Oceans
+    name: Oceans
+    type: iso19115
 uid: temp00001989

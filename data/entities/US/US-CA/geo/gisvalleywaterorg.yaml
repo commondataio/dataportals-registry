@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: GIS data catalog for Santa Clara Valley Water District, featuring REST
+  services and spatial datasets for creeks, watersheds, flood zones, service areas,
+  and more.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.valleywater.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.valleywater.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.valleywater.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.valleywater.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.valleywater.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.valleywater.org/arcgis/rest/services?f=kmz
+id: gisvalleywaterorg
+langs: []
+link: https://gis.valleywater.org/arcgis/rest/services
+name: Santa Clara Valley Water District GIS Data Catalog
+owner:
+  link: https://gis.valleywater.org/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: Santa Clara Valley Water District
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- water
+- flood
+- watershed
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00005633

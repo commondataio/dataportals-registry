@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PK
+      name: Pakistan
+    level: 30
+    macroregion:
+      id: '034'
+      name: Southern Asia
+    subregion:
+      id: PK-JK
+      name: Azad Jammu and Kashmir
+description: Official data catalog for GIS services and spatial datasets under Land
+  Use Planning Section, Planning and Development Department, Azad Jammu & Kashmir
+  (AJK). The portal provides REST services for accessing various GIS datasets.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services?f=kmz
+id: wwwajkgisportallupajkgovpk
+langs:
+- id: EN
+  name: English
+link: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services
+name: www.ajkgisportal.lupajk.gov.pk
+owner:
+  link: https://www.ajkgisportal.lupajk.gov.pk/server/rest/services
+  location:
+    country:
+      id: PK
+      name: Pakistan
+    level: 30
+    subregion:
+      id: PK-JK
+      name: Azad Jammu and Kashmir
+  name: Land Use Planning Section, Planning and Development Department, AJK
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Spatial data
+- AJK
+- Pakistan
+- REST services
+topics: []
+uid: temp00002006

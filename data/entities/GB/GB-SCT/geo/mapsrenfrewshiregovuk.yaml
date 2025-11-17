@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Data catalog providing access to various datasets related to the Renfrewshire
+  area in Scotland, managed by Renfrewshire Council. The platform is designed to support
+  open access to information for the community, supporting planning, decision-making,
+  service delivery, and innovation.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.renfrewshire.gov.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.renfrewshire.gov.uk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.renfrewshire.gov.uk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.renfrewshire.gov.uk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.renfrewshire.gov.uk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.renfrewshire.gov.uk/arcgis/rest/services?f=kmz
+id: mapsrenfrewshiregovuk
+langs:
+- id: EN
+  name: English
+link: https://maps.renfrewshire.gov.uk/arcgis/services
+name: Renfrewshire Open Data Platform
+owner:
+  link: https://www.renfrewshire.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: Renfrewshire Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- opendata
+- local government
+- datasets
+- Scotland
+topics: []
+uid: temp00005032

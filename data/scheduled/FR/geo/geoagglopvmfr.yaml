@@ -1,41 +1,40 @@
 access_mode:
-- open
+  - open
 api: false
 api_status: uncertain
 catalog_type: Geoportal
 content_types:
-- dataset
-- map_layer
+  - dataset
+  - map_layer
 coverage:
-- location:
-    country:
-      id: FR
-      name: France
-    level: 20
-    macroregion:
-      id: '155'
-      name: Western Europe
-description: GeoNetwork Data Catalog for managing spatially referenced resources,
-  providing metadata editing, search, and web map viewer.
+  - location:
+      country:
+        id: FR
+        name: France
+      level: 20
+      macroregion:
+        id: '155'
+        name: Western Europe
+description: GeoNetwork Data Catalog for managing spatially referenced resources, providing metadata editing, search, and web map viewer.
 endpoints:
-- type: geonetwork:query
-  url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/q
-- type: openapi
-  url: https://geo.agglo-pvm.fr/geonetwork/srv/v2/api-docs
-  version: '2'
-- type: csw202
-  url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
-- type: opensearch
-  url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/portal.opensearch
-  version: '1.0'
-- type: oaipmh20
-  url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/oaipmh?verb=Identify
-  version: '2.0'
+  - type: geonetwork:query
+    url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/q
+  - type: openapi
+    url: https://geo.agglo-pvm.fr/geonetwork/srv/v2/api-docs
+    version: '2'
+  - type: csw202
+    url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+    version: 2.0.2
+  - type: opensearch
+    url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/portal.opensearch
+    version: '1.0'
+  - type: oaipmh20
+    url: https://geo.agglo-pvm.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+    version: '2.0'
 id: geoagglopvmfr
 langs:
-- id: FR
-  name: French
+  - id: FR
+    name: French
 link: https://geo.agglo-pvm.fr/geonetwork
 name: geo.agglo-pvm.fr/geonetwork
 owner:
@@ -45,24 +44,24 @@ owner:
       id: FR
       name: France
     level: 20
-  name: ''
+  name: 'Local Government of metadata'
   type: Local government
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
   rights_type: granular
-  tos_url: null
+  tos_url:
 software:
   id: geonetwork
   name: Geonetwork
 status: scheduled
 tags:
-- metadata
-- geospatial
-- catalog
+  - metadata
+  - geospatial
+  - catalog
 topics: []
 uid: temp00002737

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 30
+    macroregion:
+      id: '054'
+      name: Melanesia
+    subregion:
+      id: PG-NCD
+      name: National Capital District (Port Moresby)
+description: Portal providing access to geospatial services and data managed by the
+  Mineral Resources Authority (MRA) of Papua New Guinea, mainly covering mineral,
+  geological, and cadastre information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://portal.mra.gov.pg/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portal.mra.gov.pg/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portal.mra.gov.pg/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://portal.mra.gov.pg/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portal.mra.gov.pg/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portal.mra.gov.pg/arcgis/rest/services?f=kmz
+id: portalmragovpg
+langs:
+- id: EN
+  name: English
+link: https://portal.mra.gov.pg/arcgis/rest/services
+name: portal.mra.gov.pg/arcgis/rest/services
+owner:
+  link: https://mra.gov.pg
+  location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 30
+    subregion:
+      id: PG-NCD
+      name: National Capital District (Port Moresby)
+  name: Mineral Resources Authority (MRA), Papua New Guinea
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- mining
+- geology
+- cadastre
+- Papua New Guinea
+- exploration
+- geo
+- government
+topics: []
+uid: temp00005800

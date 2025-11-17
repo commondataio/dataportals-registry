@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GIS data catalog for Växjö Municipality, Sweden, providing ArcGIS REST
+  API access to various spatial datasets and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis1.vaxjo.se/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis1.vaxjo.se/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis1.vaxjo.se/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis1.vaxjo.se/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis1.vaxjo.se/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis1.vaxjo.se/arcgis/rest/services?f=kmz
+id: gis1vaxjose
+langs:
+- id: SV
+  name: Swedish
+link: https://gis1.vaxjo.se/arcgis/rest/services
+name: Växjö Kommun GIS Services
+owner:
+  link: https://www.vaxjo.se
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 30
+    subregion:
+      id: SE-G
+      name: Kronobergs lan
+  name: Växjökommun
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- municipal services
+topics: []
+uid: temp00005613

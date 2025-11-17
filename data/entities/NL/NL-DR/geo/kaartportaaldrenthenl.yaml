@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-DR
+      name: Drenthe
+description: Service catalog for geospatial data services in Drenthe, Netherlands.
+endpoints:
+- type: arcgis:rest:info
+  url: https://kaartportaal.drenthe.nl/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://kaartportaal.drenthe.nl/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://kaartportaal.drenthe.nl/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://kaartportaal.drenthe.nl/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://kaartportaal.drenthe.nl/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://kaartportaal.drenthe.nl/server/rest/services?f=kmz
+id: kaartportaaldrenthenl
+langs:
+- id: NL
+  name: Dutch
+link: https://kaartportaal.drenthe.nl/server/services
+name: kaartportaal.drenthe.nl
+owner:
+  link: https://www.drenthe.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-DR
+      name: Drenthe
+  name: Provincie Drenthe (Province of Drenthe)
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geodata
+- map
+- spatial services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00005272

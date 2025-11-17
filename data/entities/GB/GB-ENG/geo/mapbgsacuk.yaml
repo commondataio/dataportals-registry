@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Spatial data catalogue and geoscience data services from the British
+  Geological Survey.
+endpoints:
+- type: arcgis:rest:info
+  url: https://map.bgs.ac.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://map.bgs.ac.uk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://map.bgs.ac.uk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://map.bgs.ac.uk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://map.bgs.ac.uk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://map.bgs.ac.uk/arcgis/rest/services?f=kmz
+id: mapbgsacuk
+langs:
+- id: EN
+  name: English
+link: https://map.bgs.ac.uk/arcgis/rest/services
+name: British Geological Survey Map Services
+owner:
+  link: https://www.bgs.ac.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: British Geological Survey
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geology
+- spatial data
+- map services
+- geoscience
+- environmental monitoring
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00001528

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: NL-DR
+      name: Drenthe
+description: ArcGIS REST services for spatial data and maps hosted by the municipality
+  of Assen, Netherlands.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.assen.nl/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.assen.nl/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.assen.nl/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.assen.nl/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.assen.nl/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.assen.nl/arcgis/rest/services?f=kmz
+id: gisassennl
+langs:
+- id: NL
+  name: Dutch
+link: https://gis.assen.nl/arcgis/rest/services
+name: Assen GIS Data
+owner:
+  link: https://www.assen.nl/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-DR
+      name: Drenthe
+  name: Gemeente Assen
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- spatial data
+- maps
+- ArcGIS
+- REST services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00003829

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+description: GIS data portal operated by the Bogotá Habitat Secretariat
+endpoints:
+- type: arcgis:rest:info
+  url: https://portalgis.habitatbogota.gov.co/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portalgis.habitatbogota.gov.co/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portalgis.habitatbogota.gov.co/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://portalgis.habitatbogota.gov.co/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portalgis.habitatbogota.gov.co/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portalgis.habitatbogota.gov.co/arcgis/rest/services?f=kmz
+id: portalgishabitatbogotagovco
+langs:
+- id: ES
+  name: Spanish
+link: https://portalgis.habitatbogota.gov.co/arcgis/rest/services
+name: portalgis.habitatbogota.gov.co
+owner:
+  link: https://portalgis.habitatbogota.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-DC
+      name: Distrito Capital de Bogota
+  name: Habitat Bogotá
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Bogotá
+- portal
+topics: []
+uid: temp00003479

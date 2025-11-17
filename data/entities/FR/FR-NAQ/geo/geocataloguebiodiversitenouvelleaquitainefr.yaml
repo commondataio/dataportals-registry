@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+description: Catalog of geographic and biodiversity data for Nouvelle-Aquitaine region,
+  France.
+endpoints:
+- type: geonetwork:query
+  url: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/eng/q
+- type: openapi
+  url: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geocataloguebiodiversitenouvelleaquitainefr
+langs:
+- id: FR
+  name: French
+link: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr/geonetwork/srv/rus/catalog.search;jsessionid=AE97793DFB472351A2DDE5164F206D6B
+name: geocatalogue.biodiversite-nouvelle-aquitaine.fr
+owner:
+  link: http://geocatalogue.biodiversite-nouvelle-aquitaine.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NAQ
+      name: Nouvelle-Aquitaine
+  name: geocatalogue.biodiversite-nouvelle-aquitaine.fr
+  type: Regional government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geo
+- biodiversity
+- Nouvelle-Aquitaine
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00000295

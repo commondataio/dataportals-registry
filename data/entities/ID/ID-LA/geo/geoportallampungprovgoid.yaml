@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-LA
+      name: Lampung
+description: Geoportal providing GIS services for Lampung Province
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.lampungprov.go.id/gis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.lampungprov.go.id/gis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.lampungprov.go.id/gis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.lampungprov.go.id/gis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.lampungprov.go.id/gis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.lampungprov.go.id/gis/rest/services?f=kmz
+id: geoportallampungprovgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.lampungprov.go.id/gis/rest/services
+name: Geoportal Lampung Province Data Catalog
+owner:
+  link: https://geoportal.lampungprov.go.id/gis/rest/services
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-LA
+      name: Lampung
+  name: Lampung Province Government
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Open Data
+- Spatial Data
+topics: []
+uid: temp00005396

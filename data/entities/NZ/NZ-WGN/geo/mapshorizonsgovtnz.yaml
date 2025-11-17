@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-WGN
+      name: Wellington
+description: ArcGIS REST Services endpoint providing access to geospatial data catalogues
+  and services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.horizons.govt.nz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.horizons.govt.nz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.horizons.govt.nz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.horizons.govt.nz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.horizons.govt.nz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.horizons.govt.nz/arcgis/rest/services?f=kmz
+id: mapshorizonsgovtnz
+langs:
+- id: EN
+  name: English
+link: https://maps.horizons.govt.nz/arcgis/rest/services
+name: maps.horizons.govt.nz/arcgis/rest/services
+owner:
+  link: https://maps.horizons.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion:
+      id: NZ-WGN
+      name: Wellington
+  name: Horizons Regional Council
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- ArcGIS
+- REST
+- open data
+- regional council
+- environmental data
+- government services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: temp00006001

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,8 @@ coverage:
       name: Western Europe
 description: IPT installation of FLORON Plant Conservation Netherlands
 endpoints:
+- type: ipt:dataset
+  url: https://www.verspreidingsatlas.nl/ipt/inventory/dataset
 - type: rss
   url: https://www.verspreidingsatlas.nl/ipt/rss.do
   version: '2.0'
@@ -23,7 +25,7 @@ id: wwwverspreidingsatlasnl
 langs:
 - id: NL
   name: Dutch
-link: https://www.verspreidingsatlas.nl
+link: https://www.verspreidingsatlas.nl/ipt
 name: FLORON IPT
 owner:
   link: http://www.floron.nl

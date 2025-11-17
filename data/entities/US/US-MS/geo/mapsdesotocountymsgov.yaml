@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MS
+      name: Mississippi
+description: GIS maps and spatial data services for DeSoto County.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.desotocountyms.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.desotocountyms.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.desotocountyms.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.desotocountyms.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.desotocountyms.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.desotocountyms.gov/arcgis/rest/services?f=kmz
+id: mapsdesotocountymsgov
+langs:
+- id: EN
+  name: English
+link: https://maps.desotocountyms.gov/arcgis/rest/services
+name: maps.desotocountyms.gov
+owner:
+  link: https://maps.desotocountyms.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MS
+      name: Mississippi
+  name: DeSoto County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- maps
+- spatial data
+- County
+- Mississippi
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00002812

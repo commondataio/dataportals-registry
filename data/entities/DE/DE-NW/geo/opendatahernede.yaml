@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+description: Open data catalog for the city of Herne, Germany. Contains datasets from
+  local government bodies.
+endpoints:
+- type: geonetwork:query
+  url: https://opendata.herne.de/katalogopendata/srv/eng/q
+- type: geonetwork:records
+  url: https://opendata.herne.de/katalogopendata/srv/api/records
+- type: openapi
+  url: https://opendata.herne.de/katalogopendata/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://opendata.herne.de/katalogopendata/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://opendata.herne.de/katalogopendata/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://opendata.herne.de/katalogopendata/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: opendatahernede
+langs:
+- id: DE
+  name: German
+link: https://opendata.herne.de/katalogopendata
+name: opendata.herne.de/katalogopendata
+owner:
+  link: https://opendata.herne.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-NW
+      name: Nordrhein-Westfalen
+  name: City of Herne (Local Government)
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- open data
+- public sector
+- datasets
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00003149

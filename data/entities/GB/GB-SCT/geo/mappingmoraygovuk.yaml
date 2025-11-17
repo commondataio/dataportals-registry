@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Data catalog for Moray Council providing geospatial and tabular datasets,
+  including car parks, cemeteries, play parks, recycling, polling places, and school
+  catchment areas.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapping.moray.gov.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapping.moray.gov.uk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapping.moray.gov.uk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapping.moray.gov.uk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapping.moray.gov.uk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapping.moray.gov.uk/arcgis/rest/services?f=kmz
+id: mappingmoraygovuk
+langs:
+- id: EN
+  name: English
+link: https://mapping.moray.gov.uk/arcgis/services
+name: mapping.moray.gov.uk
+owner:
+  link: https://www.moray.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-SCT
+      name: Scotland
+  name: Moray Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- car parks
+- cemeteries
+- play parks
+- recycling centers
+- polling places
+- school catchments
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00005020

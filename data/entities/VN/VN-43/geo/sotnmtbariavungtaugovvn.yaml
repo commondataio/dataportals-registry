@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: VN-43
+      name: Ba Ria - Vung Tau
+description: ''
+endpoints:
+- type: arcgis:rest:info
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services?f=kmz
+id: sotnmtbariavungtaugovvn
+langs:
+- id: VN
+  name: Vietnamese
+link: http://sotnmt.baria-vungtau.gov.vn:8080/arcgis/rest/services
+name: sotnmt.baria-vungtau.gov.vn:8080
+owner:
+  link: http://baria-vungtau.gov.vn
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 30
+    subregion:
+      id: VN-43
+      name: Ba Ria - Vung Tau
+  name: Local Government of Rest API
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Rest API
+- services
+topics: []
+uid: temp00001097
