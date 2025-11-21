@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: &id001
+      id: '053'
+      name: Australia and New Zealand
+description: ArcGIS REST Services endpoint providing geospatial data for National
+  Environmental Standards for Plantation Forestry, including erosion susceptibility
+  and related forestry datasets.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/services?f=kmz
+id: mpinescloudeaglegisconz
+langs:
+- id: EN
+  name: English
+link: https://mpi_nes.cloud.eaglegis.co.nz/arcgis/rest/services
+name: mpi_nes.cloud.eaglegis.co.nz
+owner:
+  link: https://www.mpi.govt.nz/
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: *id001
+  name: MPI (Ministry for Primary Industries)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- forestry
+- erosion
+- geospatial
+- ArcGIS
+- NES-PF
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: temp00005421

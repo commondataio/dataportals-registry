@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The Enterprise Data Catalog allows access to EPA's Open Data resources.
+  You can find metadata, information describing the characteristics of data, on geospatial
+  and non-geospatial resources (e.g., data, Web services, or tools) through Data.gov.
+endpoints:
+- type: arcgis:rest:info
+  url: https://echo.epa.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://echo.epa.gov/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://echo.epa.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://echo.epa.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://echo.epa.gov/arcgis/rest/services?f=kmz
+id: echoepagov
+langs:
+- id: EN
+  name: English
+link: https://echo.epa.gov/arcgis/rest/services
+name: Enterprise Data Catalog | US EPA
+owner:
+  link: https://www.epa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: United States Environmental Protection Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- open data
+- metadata
+- EPA
+- Data.gov
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005670

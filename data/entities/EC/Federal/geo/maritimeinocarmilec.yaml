@@ -1,0 +1,94 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: &id001
+      id: '005'
+      name: South America
+description: Maritime geospatial data portal providing access to oceanographic, hydrographic,
+  nautical, and Antarctic research data from the Ecuadorian Oceanographic and Antarctic
+  Institute of the Navy through ArcGIS REST services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maritime.inocar.mil.ec/inocar/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maritime.inocar.mil.ec/inocar/services?wsdl
+- type: arcgis:sitemap
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maritime.inocar.mil.ec/inocar/rest/services?f=kmz
+id: maritimeinocarmilec
+langs:
+- id: ES
+  name: Spanish
+link: https://maritime.inocar.mil.ec/inocar/rest/services
+name: INOCAR Maritime Geospatial Services Portal
+owner:
+  link: https://www.inocar.mil.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: *id001
+  name: Instituto Oceanográfico y Antártico de la Armada del Ecuador (INOCAR)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- maritime
+- oceanography
+- hydrography
+- REST API
+- ArcGIS
+- nautical
+- Antarctic
+- Ecuador
+- Navy
+- research
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: temp00001931

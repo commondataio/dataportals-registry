@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS REST services for gridded population and demography data from
+  WorldPop.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.worldpop.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.worldpop.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.worldpop.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.worldpop.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.worldpop.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.worldpop.org/arcgis/rest/services?f=kmz
+id: gisworldpoporg
+langs: []
+link: https://gis.worldpop.org/arcgis/rest/services
+name: WorldPop Data Catalog (GIS API)
+owner:
+  link: https://www.worldpop.org
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: WorldPop
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- population
+- demography
+- geospatial
+- open data
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00005636

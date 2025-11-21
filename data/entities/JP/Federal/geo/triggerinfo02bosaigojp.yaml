@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Geospatial portal operated by the National Research Institute for Earth
+  Science and Disaster Resilience (NIED) providing disaster prevention and mitigation
+  data through ArcGIS REST services. Includes earthquake, tsunami, and natural disaster
+  information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://trigger-info02.bosai.go.jp/webgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://trigger-info02.bosai.go.jp/webgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://trigger-info02.bosai.go.jp/webgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://trigger-info02.bosai.go.jp/webgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://trigger-info02.bosai.go.jp/webgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://trigger-info02.bosai.go.jp/webgis/rest/services?f=kmz
+id: triggerinfo02bosaigojp
+langs:
+- id: JA
+  name: Japanese
+link: https://trigger-info02.bosai.go.jp/webgis/rest/services
+name: NIED Disaster Prevention Geospatial Portal
+owner:
+  link: https://www.bosai.go.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: National Research Institute for Earth Science and Disaster Resilience
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- disaster prevention
+- geospatial
+- GIS
+- earthquake
+- tsunami
+- natural disasters
+- ArcGIS
+- Japan
+- NIED
+- research
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005950

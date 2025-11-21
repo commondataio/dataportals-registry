@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Geospatial web services provided by the United Nations for visualization,
+  analysis, and data sharing worldwide.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoservices.un.org/arcgis/rest/info?f=pjson
+- type: arcgis:soap
+  url: https://geoservices.un.org/arcgis/services?wsdl
+id: geoservicesunorg
+langs: []
+link: https://geoservices.un.org/arcgis/rest/services
+name: United Nations ArcGIS Geospatial Services
+owner:
+  link: https://geoservices.un.org/arcgis/rest/services
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: United Nations
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- maps
+- analytics
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003970

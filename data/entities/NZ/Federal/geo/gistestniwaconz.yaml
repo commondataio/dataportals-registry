@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: &id001
+      id: '053'
+      name: Australia and New Zealand
+description: NIWA's public platform for exploring and downloading open science data,
+  such as data on climate, freshwater, and oceans. The catalog is used for environmental,
+  atmospheric, and marine research and application.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gistest.niwa.co.nz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gistest.niwa.co.nz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gistest.niwa.co.nz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gistest.niwa.co.nz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gistest.niwa.co.nz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gistest.niwa.co.nz/server/rest/services?f=kmz
+id: gistestniwaconz
+langs:
+- id: EN
+  name: English
+link: https://gistest.niwa.co.nz/server/services
+name: gistest.niwa.co.nz
+owner:
+  link: https://gistest.niwa.co.nz/server/services
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: *id001
+  name: National Institute of Water and Atmospheric Research
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- environment
+- climate
+- freshwater
+- marine
+- geospatial
+- data
+topics: []
+uid: temp00005288

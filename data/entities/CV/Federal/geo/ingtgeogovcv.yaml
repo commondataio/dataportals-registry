@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: Geospatial data catalog providing access to GIS services via ArcGIS
+  REST API from the National Institute for Territory Management and Geography (INGTGEO)
+  of Cabo Verde.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ingtgeo.gov.cv/arcgisingt/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ingtgeo.gov.cv/arcgisingt/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ingtgeo.gov.cv/arcgisingt/services?wsdl
+- type: arcgis:sitemap
+  url: https://ingtgeo.gov.cv/arcgisingt/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ingtgeo.gov.cv/arcgisingt/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ingtgeo.gov.cv/arcgisingt/rest/services?f=kmz
+id: ingtgeogovcv
+langs:
+- id: PT
+  name: Portugal
+link: https://ingtgeo.gov.cv/arcgisingt/rest/services
+name: INGTGEO Geoportal ArcGIS REST Services
+owner:
+  link: https://ingtgeo.gov.cv
+  location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+  name: Instituto Nacional de Gestão do Território e Geografia
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- GIS
+- ArcGIS
+- REST API
+- geoportal
+- territory management
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00001379

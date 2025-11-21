@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: No description available from provided data.
+endpoints:
+- type: geonetwork:query
+  url: http://infomar.cedex.es:8080/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: http://infomar.cedex.es:8080/geonetwork/srv/api/records
+- type: openapi
+  url: http://infomar.cedex.es:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://infomar.cedex.es:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://infomar.cedex.es:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://infomar.cedex.es:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: infomarcedexes
+langs:
+- id: ES
+  name: Spanish
+link: http://infomar.cedex.es:8080/geonetwork
+name: infomar.cedex.es:8080/geonetwork
+owner:
+  link: http://cedex.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Government of Spain
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Spain
+- geonetwork
+- geoportal
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001986

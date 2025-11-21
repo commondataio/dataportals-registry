@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion: &id001
+      id: '154'
+      name: Northern Europe
+description: FactMaps contain information regarding petroleum activities on the Norwegian
+  Continental Shelf, including structural elements, borders, areas, and various geospatial
+  data layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://factmaps.npd.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://factmaps.npd.no/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://factmaps.npd.no/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://factmaps.npd.no/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://factmaps.npd.no/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://factmaps.npd.no/arcgis/rest/services?f=kmz
+id: factmapsnpdno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: https://factmaps.npd.no/arcgis/rest/services
+name: FactMaps (Norwegian Offshore Directorate)
+owner:
+  link: https://factmaps.sodir.no/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion: *id001
+  name: Norwegian Offshore Directorate
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Petroleum
+- Offshore
+- Maps
+- Geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00001627

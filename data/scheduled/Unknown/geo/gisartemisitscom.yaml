@@ -1,63 +1,65 @@
 access_mode:
-  - open
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
-  - dataset
-  - map_layer
+- dataset
+- map_layer
 coverage:
-  - location:
-      country:
-        id: Unknown
-        name: Unknown
-      level: 20
-      macroregion:
-        id: World
-        name: World
-description: This is a temporary record with some data collected but it should be updated befor adding to the index
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: Geospatial data catalog providing geonode via gis.artemis-its.com:8443
 endpoints:
-  - type: geonode:layers
-    url: https://gis.artemis-its.com:8443/api/layers/
-  - type: geonode:documents
-    url: https://gis.artemis-its.com:8443/api/documents/
-  - type: csw202
-    url: https://gis.artemis-its.com:8443/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
-    version: 2.0.2
-  - type: oaipmh20
-    url: https://gis.artemis-its.com:8443/catalogue/csw?mode=oaipmh&verb=Identify
-    version: '2.0'
-  - type: opensearch
-    url: https://gis.artemis-its.com:8443/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
-    version: '1.0'
+- type: geonode:layers
+  url: https://gis.artemis-its.com:8443/api/layers/
+- type: geonode:documents
+  url: https://gis.artemis-its.com:8443/api/documents/
+- type: csw202
+  url: https://gis.artemis-its.com:8443/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://gis.artemis-its.com:8443/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://gis.artemis-its.com:8443/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
 id: gisartemisitscom
 langs:
-  - id: EN
-    name: English
+- id: EN
+  name: English
 link: https://gis.artemis-its.com:8443
 name: gis.artemis-its.com:8443
 owner:
-  link: https://artemis-its.com
+  link: https://artemis-its.com:8443
   location:
     country:
       id: Unknown
       name: Unknown
     level: 20
-  name: 'Artemis Its'
+  name: Artemis Its
   type: Business
 properties:
   has_doi: false
 rights:
-  license_id:
-  license_name:
-  license_url:
-  privacy_policy_url:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
   rights_type: global
-  tos_url:
+  tos_url: null
 software:
   id: geonode
   name: GeoNode
-status: scheduled
-tags: []
+status: active
+tags:
+- geonode
+- geospatial
 topics: []
 uid: temp00000791

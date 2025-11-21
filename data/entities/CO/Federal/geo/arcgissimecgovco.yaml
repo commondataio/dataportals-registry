@@ -1,0 +1,102 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: REST endpoint for ArcGIS services, acting as a data catalog for geospatial
+  datasets
+endpoints:
+- type: arcgis:rest:info
+  url: http://arcgis.simec.gov.co:6080/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://arcgis.simec.gov.co:6080/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://arcgis.simec.gov.co:6080/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://arcgis.simec.gov.co:6080/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://arcgis.simec.gov.co:6080/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://arcgis.simec.gov.co:6080/arcgis/rest/services?f=kmz
+id: arcgissimecgovco
+langs:
+- id: ES
+  name: Spanish
+link: http://arcgis.simec.gov.co:6080/arcgis/rest/services
+name: arcgis.simec.gov.co:6080/arcgis/rest/services
+owner:
+  link: http://arcgis.simec.gov.co:6080
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Not specified in text
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Colombia
+- arcgis
+- arcgisserver
+- colombia
+- geospatial
+- rest
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: temp00001374

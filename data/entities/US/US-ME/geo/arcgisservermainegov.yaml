@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-ME
+      name: Maine
+description: Official geospatial data services portal for City of Maine providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgisserver.maine.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgisserver.maine.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgisserver.maine.gov/arcgis/services?wsdl
+id: arcgisservermainegov
+langs:
+- id: EN
+  name: English
+link: https://arcgisserver.maine.gov/arcgis/rest/services
+name: City of Maine GIS Portal
+owner:
+  link: https://arcgisserver.maine.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-ME
+      name: Maine
+  name: City of Maine
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- city government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012264

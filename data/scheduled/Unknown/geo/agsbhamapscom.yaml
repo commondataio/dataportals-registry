@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via ags.bhamaps.com
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags.bhamaps.com/arcgisserver/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags.bhamaps.com/arcgisserver/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ags.bhamaps.com/arcgis/services?wsdl
+id: agsbhamapscom
+langs:
+- id: EN
+  name: English
+link: https://ags.bhamaps.com/arcgisserver/rest/services
+name: Bhamaps Geoportal
+owner:
+  link: https://ags.bhamaps.com
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Bhamaps
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

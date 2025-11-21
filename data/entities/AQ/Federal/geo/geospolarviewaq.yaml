@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AQ
+      name: Antarctic
+    level: 20
+    macroregion:
+      id: '010'
+      name: Antarctica
+description: A web-based geospatial data catalog and management application for accessing
+  and visualizing geospatial data, particularly for the Polar regions.
+endpoints:
+- type: wfs100
+  url: https://geos.polarview.aq/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geos.polarview.aq/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geos.polarview.aq/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wps100
+  url: https://geos.polarview.aq/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geos.polarview.aq/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://geos.polarview.aq/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: wmts100
+  url: https://geos.polarview.aq/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
+id: geospolarviewaq
+langs:
+- id: EN
+  name: English
+link: https://geos.polarview.aq/geoserver/web/
+name: Geoserver (PolarView)
+owner:
+  link: https://www.polarview.aq/
+  location:
+    country:
+      id: AQ
+      name: Antarctic
+    level: 20
+  name: PolarView
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- Antarctica
+- Arctic
+- GIS
+- remote sensing
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00000790

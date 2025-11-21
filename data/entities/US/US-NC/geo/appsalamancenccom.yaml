@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NC
+      name: North Carolina
+description: Official geospatial data services portal for Alamance , North Carolina
+  providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://apps.alamance-nc.com/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://apps.alamance-nc.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://apps.alamance-nc.com/arcgis/services?wsdl
+id: appsalamancenccom
+langs:
+- id: EN
+  name: English
+link: https://apps.alamance-nc.com/arcgis/rest/services
+name: Alamance , North Carolina GIS Portal
+owner:
+  link: https://apps.alamance-nc.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NC
+      name: North Carolina
+  name: Alamance , North Carolina
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- north carolina
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012293

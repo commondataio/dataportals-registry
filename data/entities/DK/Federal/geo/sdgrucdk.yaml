@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Catalog of spatial data and related metadata managed by Roskilde University.
+endpoints:
+- type: geonetwork:query
+  url: https://sdg.ruc.dk/geonetwork/srv/eng/q
+- type: openapi
+  url: https://sdg.ruc.dk/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://sdg.ruc.dk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://sdg.ruc.dk/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://sdg.ruc.dk/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: sdgrucdk
+langs:
+- id: DA
+  name: Danish
+link: https://sdg.ruc.dk/geonetwork
+name: RUC Geo-Data catalogue - Roskilde University - sdg
+owner:
+  link: https://sdg.ruc.dk
+  location:
+    country: *id001
+    level: 20
+  name: Roskilde University
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Denmark
+- geonetwork
+- geoportal
+- geospatial
+- GIS
+- metadata
+- SDG
+- spatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001985

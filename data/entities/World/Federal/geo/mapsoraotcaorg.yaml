@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: ''
+endpoints:
+- type: geonode:documents
+  url: https://maps.oraotca.org/api/documents/
+- type: csw202
+  url: https://maps.oraotca.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://maps.oraotca.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://maps.oraotca.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wps100
+  url: https://maps.oraotca.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geoserver:version
+  url: https://maps.oraotca.org/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://maps.oraotca.org/geoserver/rest/settings
+- type: opensearch
+  url: https://maps.oraotca.org/catalogue/opensearch
+id: mapsoraotcaorg
+langs:
+- id: EN
+  name: English
+link: https://maps.oraotca.org
+name: Oraotca Maps Data Catalog
+owner:
+  link: https://maps.oraotca.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: unknown
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- maps
+- geospatial
+topics: []
+uid: temp00000815

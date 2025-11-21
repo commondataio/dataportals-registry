@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Spatial data catalog for Earth observation resources (using GeoNetwork).
+endpoints:
+- type: geonetwork:query
+  url: https://ts.dlr.de/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://ts.dlr.de/geonetwork/srv/api/records
+- type: openapi
+  url: https://ts.dlr.de/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://ts.dlr.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://ts.dlr.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://ts.dlr.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: tsdlrde
+langs:
+- id: DE
+  name: German
+link: https://ts.dlr.de/geonetwork
+name: ts.dlr.de/geonetwork
+owner:
+  link: https://www.dlr.de/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: German Aerospace Center (DLR)
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Germany
+- earth observation
+- geonetwork
+- geospatial
+- metadata catalog
+- spatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00004950

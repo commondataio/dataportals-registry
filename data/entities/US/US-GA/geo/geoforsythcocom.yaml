@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-GA
+      name: Georgia
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  County level server for Forsyth County, Georgia.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.forsythco.com/gis/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.forsythco.com/gis/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.forsythco.com/arcgis/services?wsdl
+id: geoforsythcocom
+langs:
+- id: EN
+  name: English
+link: https://geo.forsythco.com/gis/arcgis/rest/services
+name: Forsyth County GIS Portal
+owner:
+  link: https://www.forsythco.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: Forsyth County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- Forsyth County
+- Georgia
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013370

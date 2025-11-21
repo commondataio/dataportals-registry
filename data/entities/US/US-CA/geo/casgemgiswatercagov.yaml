@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: Official geospatial data services portal for City of Ca, California providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://casgemgis.water.ca.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://casgemgis.water.ca.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://casgemgis.water.ca.gov/arcgis/services?wsdl
+id: casgemgiswatercagov
+langs:
+- id: EN
+  name: English
+link: https://casgemgis.water.ca.gov/arcgis/rest/services
+name: City of Ca, California GIS Portal
+owner:
+  link: https://casgemgis.water.ca.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of Ca, California
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012446

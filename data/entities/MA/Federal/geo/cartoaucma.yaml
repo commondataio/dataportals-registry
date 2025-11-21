@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MA
+      name: Morocco
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: Geospatial data catalog providing ArcGIS REST services for urban planning
+  and development in Casablanca, managed by the Agence Urbaine de Casablanca (AUC).
+endpoints:
+- type: arcgis:rest:info
+  url: https://carto.auc.ma/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://carto.auc.ma/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://carto.auc.ma/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://carto.auc.ma/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://carto.auc.ma/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://carto.auc.ma/server/rest/services?f=kmz
+id: cartoaucma
+langs:
+- id: AR
+  name: Arabic
+link: https://carto.auc.ma/server/rest/services
+name: Agence Urbaine de Casablanca - Geospatial Data Catalog
+owner:
+  link: https://carto.auc.ma
+  location:
+    country:
+      id: MA
+      name: Morocco
+    level: 20
+  name: Agence Urbaine de Casablanca (AUC)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- REST services
+- urban planning
+- Casablanca
+- Morocco
+- geospatial
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005963

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for Charlotte County, Florida. County level server offering geospatial datasets
+  and map layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://agis3.charlottecountyfl.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agis3.charlottecountyfl.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agis3.charlottecountyfl.gov/arcgis/services?wsdl
+id: agis3charlottecountyflgov
+langs:
+- id: EN
+  name: English
+link: https://agis3.charlottecountyfl.gov/arcgis/rest/services
+name: agis3.charlottecountyfl.gov ArcGIS Server
+owner:
+  link: https://www.charlottecountyfl.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Charlotte County, Florida
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- Florida
+- Local government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012394

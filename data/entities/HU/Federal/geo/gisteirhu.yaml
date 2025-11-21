@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: GIS services provided via ArcGIS at TEIR
+endpoints:
+- type: arcgis:rest:info
+  url: http://gis.teir.hu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis.teir.hu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gis.teir.hu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gis.teir.hu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gis.teir.hu/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://gis.teir.hu/arcgis/rest/services?f=kmz
+id: gisteirhu
+langs:
+- id: HU
+  name: Hungarian
+link: http://gis.teir.hu/arcgis/services
+name: GIS TEIR ArcGIS Services
+owner:
+  link: http://gis.teir.hu/
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: TEIR
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- arcgisserver
+- geoportal
+- geospatial
+- GIS
+- Hungary
+- services
+- TEIR
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003735

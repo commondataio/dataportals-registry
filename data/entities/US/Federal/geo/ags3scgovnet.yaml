@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  State level server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags3.scgov.net/agsfed/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags3.scgov.net/agsfed/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ags3.scgov.net/arcgis/services?wsdl
+id: ags3scgovnet
+langs:
+- id: EN
+  name: English
+link: https://ags3.scgov.net/agsfed/arcgis/rest/services
+name: ags3.scgov.net ArcGIS Server
+owner:
+  link: https://ags3.scgov.net
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Ags3.Scgov
+  type: Unknown
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012766

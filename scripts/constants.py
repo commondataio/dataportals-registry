@@ -471,6 +471,7 @@ MAP_CATALOG_TYPE_SUBDIR = {
     "Machine learning catalog": "ml",
     "Data search engines": "search",
     "Indicators catalog": "indicators",
+    "Microdata catalog": "microdata",
 }
 
 MAP_SOFTWARE_OWNER_CATALOG_TYPE = {

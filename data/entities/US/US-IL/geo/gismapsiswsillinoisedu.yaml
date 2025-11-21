@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IL
+      name: Illinois
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for the Illinois State Water Survey (ISWS) at the University of Illinois. Provides
+  access to geospatial datasets including water resources, climate, and environmental
+  data for Illinois.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gismaps.isws.illinois.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gismaps.isws.illinois.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gismaps.isws.illinois.edu/arcgis/services?wsdl
+id: gismapsiswsillinoisedu
+langs:
+- id: EN
+  name: English
+link: https://gismaps.isws.illinois.edu/arcgis/rest/services
+name: Illinois State Water Survey GIS Server
+owner:
+  link: https://www.isws.illinois.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-IL
+      name: Illinois
+  name: Illinois State Water Survey
+  type: Higher education
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- university
+- Illinois
+- water resources
+- ISWS
+- state water survey
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012119

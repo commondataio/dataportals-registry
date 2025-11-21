@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Extract owner type, data theme, and ISO19115 theme from specified data
+  catalog using given vocabularies.
+endpoints:
+- type: ckan
+  url: https://ckan.perpusnas.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.perpusnas.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.perpusnas.go.id/api/3/action/package_list
+  version: '3'
+id: ckanperpusnasgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://ckan.perpusnas.go.id
+name: Use Vocabularies for Data Catalog Extraction
+owner:
+  link: https://ckan.perpusnas.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: Perpusnas
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- Indonesia
+- CKAN
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00004670

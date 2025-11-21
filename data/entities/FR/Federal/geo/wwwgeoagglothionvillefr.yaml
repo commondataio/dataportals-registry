@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork data catalog hosted by GeoAgglo Thionville
+endpoints:
+- type: geonetwork:query
+  url: http://www.geoagglo-thionville.fr:8080/geonetwork/srv/eng/q
+- type: openapi
+  url: http://www.geoagglo-thionville.fr:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://www.geoagglo-thionville.fr:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://www.geoagglo-thionville.fr:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://www.geoagglo-thionville.fr:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwgeoagglothionvillefr
+langs:
+- id: FR
+  name: French
+link: http://www.geoagglo-thionville.fr:8080/geonetwork
+name: geoagglo-thionville.fr:8080/geonetwork
+owner:
+  link: http://www.geoagglo-thionville.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: GeoAgglo Thionville
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- France
+- geonetwork
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002749

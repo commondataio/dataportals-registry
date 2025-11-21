@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WI
+      name: Wisconsin
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  County level server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://apps.vernoncounty.org/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://apps.vernoncounty.org/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://apps.vernoncounty.org/arcgis/services?wsdl
+id: appsvernoncountyorg
+langs:
+- id: EN
+  name: English
+link: https://apps.vernoncounty.org/server/arcgis/rest/services
+name: Vernon County, Wisconsin ArcGIS Server
+owner:
+  link: https://vernoncounty.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WI
+      name: Wisconsin
+  name: Vernon County Government
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- Vernon County
+- Wisconsin
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012125

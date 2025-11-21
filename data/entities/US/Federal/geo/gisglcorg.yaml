@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GIS services from the Great Lakes Commission, including REST endpoints
+  for spatial data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.glc.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.glc.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.glc.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.glc.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.glc.org/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.glc.org/server/rest/services?f=kmz
+id: gisglcorg
+langs: []
+link: https://gis.glc.org/server/rest/services
+name: GIS GLC Server Data Catalog
+owner:
+  link: https://gis.glc.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Great Lakes Commission
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- REST
+- GIS
+- spatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003987

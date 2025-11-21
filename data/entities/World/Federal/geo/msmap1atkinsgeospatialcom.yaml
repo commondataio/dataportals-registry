@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: A GeoServer instance providing spatial data services.
+endpoints:
+- type: wms111
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wps100
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: wmts100
+  url: http://msmap1.atkinsgeospatial.com:8080/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
+id: msmap1atkinsgeospatialcom
+langs:
+- id: EN
+  name: English
+link: http://msmap1.atkinsgeospatial.com:8080/geoserver
+name: msmap1.atkinsgeospatial.com:8080
+owner:
+  link: http://msmap1.atkinsgeospatial.com
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Atkins Geospatial
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial
+- WMS
+- WFS
+- GeoServer
+topics: []
+uid: temp00001750

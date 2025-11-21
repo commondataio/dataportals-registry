@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Catalog of photography resources provided by EPURES.
+endpoints:
+- type: geonetwork:query
+  url: http://phototheque.epures.com/catalog/srv/eng/q
+- type: openapi
+  url: http://phototheque.epures.com/catalog/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://phototheque.epures.com/catalog/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://phototheque.epures.com/catalog/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://phototheque.epures.com/catalog/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: photothequeepurescom
+langs: []
+link: http://phototheque.epures.com/catalog
+name: Phototheque EPURES Catalog
+owner:
+  link: http://phototheque.epures.com/catalog
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: EPURES
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Photography
+- Catalog
+- Images
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00002770

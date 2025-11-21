@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Catalog for geospatial data and services, hosted by ISPRA (Italian Institute
+  for Environmental Protection and Research).
+endpoints:
+- type: arcgis:rest:info
+  url: https://sinacloud.isprambiente.it/arcgisgeo/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sinacloud.isprambiente.it/arcgisgeo/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sinacloud.isprambiente.it/arcgisgeo/services?wsdl
+- type: arcgis:sitemap
+  url: https://sinacloud.isprambiente.it/arcgisgeo/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sinacloud.isprambiente.it/arcgisgeo/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sinacloud.isprambiente.it/arcgisgeo/rest/services?f=kmz
+id: sinacloudisprambienteit
+langs:
+- id: IT
+  name: Italian
+link: https://sinacloud.isprambiente.it/arcgisgeo/rest/services
+name: sinacloud.isprambiente.it data catalog
+owner:
+  link: https://www.isprambiente.gov.it/
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: ISPRA (Istituto Superiore per la Protezione e la Ricerca Ambientale)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Italy
+- REST
+- arcgisserver
+- environmental data
+- geoportal
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001584

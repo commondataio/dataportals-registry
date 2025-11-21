@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Catálogo de metadados da Infraestrutura de Dados Espaciais da Secretaria
+  de Finanças da Prefeitura de Fortaleza. GeoNetwork é utilizado para melhorar o acesso
+  e o uso integrado de dados e informações espaciais.
+endpoints:
+- type: geonetwork:query
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/api/records
+- type: openapi
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geonetworksefinfortalezacegovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://geonetwork.sefin.fortaleza.ce.gov.br/geonetwork
+name: Catálogo de Metadados da IDE-SEFIN
+owner:
+  link: https://geonetwork.sefin.fortaleza.ce.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: SEFIN - Secretaria de Finanças da Prefeitura de Fortaleza
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Brazil
+- catalog
+- geodata
+- geonetwork
+- geospatial
+- metadata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00003416

@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National metadata discovery and search service for geospatial data sets,
+  services, and maps in Finland, operated by the National Land Survey of Finland.
+endpoints:
+- type: geonetwork:query
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/api/records
+- type: openapi
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.paikkatietohakemisto.fi/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwpaikkatietohakemistofi
+langs:
+- id: FI
+  name: Finnish
+link: https://www.paikkatietohakemisto.fi/geonetwork
+name: Paikkatietohakemisto
+owner:
+  link: https://www.paikkatietohakemisto.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: National Land Survey of Finland
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Finland
+- discovery
+- geonetwork
+- geospatial
+- metadata
+- national portal
+- spatial data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00003626

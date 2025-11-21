@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: 'Extraction of data catalog information from provided URL, mapped to
+  vocabularies as requested. Note: Only publicly available fields from the provided
+  REST endpoint are mapped, as the site does not provide explicit metadata for owner,
+  data_theme, or iso19115_theme.'
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.efsedge.com/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.efsedge.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.efsedge.com/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.efsedge.com/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.efsedge.com/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.efsedge.com/arcgis/rest/services?f=kmz
+id: wwwefsedgecom
+langs: []
+link: https://www.efsedge.com/arcgis/rest/services
+name: Extraction from https://www.efsedge.com/arcgis/rest/services
+owner:
+  link: https://www.efsedge.com
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: efsedge.com
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS REST Services Directory
+topics: []
+uid: temp00004087

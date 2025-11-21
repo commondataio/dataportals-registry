@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-UT
+      name: Utah
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for University of Utah Facilities Management.
+endpoints:
+- type: arcgis:rest:info
+  url: https://fmags.fm.utah.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://fmags.fm.utah.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://fmags.fm.utah.edu/arcgis/services?wsdl
+id: fmagsfmutahedu
+langs:
+- id: EN
+  name: English
+link: https://fmags.fm.utah.edu/arcgis/rest/services
+name: University of Utah Facilities Management ArcGIS Server
+owner:
+  link: https://www.utah.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-UT
+      name: Utah
+  name: University of Utah
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- University
+- Facilities Management
+- Utah
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013311

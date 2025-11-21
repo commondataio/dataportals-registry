@@ -1,7 +1,7 @@
 access_mode:
 - open
 api: true
-api_status: uncertain
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,43 +15,51 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: A distributed archive of standardized geoscience information for the
-  Nation, providing access to more than 100,000 geologic maps and other types of geoscience
-  reports and data published from the early 1800s.
+description: Official geospatial data services portal for U.S. Geological Survey providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ngmdb.usgs.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ngmdb.usgs.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ngmdb.usgs.gov/arcgis/services?wsdl
 id: ngmdbusgsgov
 langs:
 - id: EN
   name: English
-link: https://ngmdb.usgs.gov
-name: National Geologic Map Database
+link: https://ngmdb.usgs.gov/arcgis/rest/services
+name: U.S. Geological Survey GIS Portal
 owner:
-  link: https://www.usgs.gov
+  link: https://ngmdb.usgs.gov
   location:
     country:
       id: US
       name: United States
     level: 20
   name: U.S. Geological Survey
-  type: Central government
+  type: Federal government
 properties:
-  has_doi: true
+  has_doi: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: arcgisserver
+  name: ArcGIS Server
 status: active
 tags:
-- geospatial
-- has_api
-- geology
-- maps
-- geoscience
-- USGS
-- NGMDB
-uid: cdi00004537
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- federal government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012982

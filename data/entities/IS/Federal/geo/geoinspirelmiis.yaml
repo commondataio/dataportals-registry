@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoNetwork-based metadata catalog operated by Landmælingar Íslands (National
+  Land Survey of Iceland) for managing spatially referenced resources with metadata
+  editing and search functions, compliant with INSPIRE directive requirements.
+endpoints:
+- type: csw202
+  url: https://geoinspire.lmi.is/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoinspire.lmi.is/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geoinspirelmiis
+langs:
+- id: IS
+  name: Icelandic
+link: https://geoinspire.lmi.is/geonetwork
+name: INSPIRE GeoNetwork Catalog - National Land Survey of Iceland
+owner:
+  link: https://lmi.is
+  location:
+    country: *id001
+    level: 20
+  name: Landmælingar Íslands (National Land Survey of Iceland)
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- spatial data
+- metadata
+- geoportal
+- INSPIRE
+- GeoNetwork
+- cadastral
+- topographic
+- Iceland
+- National Land Survey
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00003760

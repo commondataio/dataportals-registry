@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: Data catalog providing access to Fauquier County, VA GIS data services
+  via ArcGIS Server REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://agol.gis.fauquiercounty.gov:6443/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agol.gis.fauquiercounty.gov:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agol.gis.fauquiercounty.gov:6443/arcgis/services?wsdl
+id: agolgisfauquiercountygov6443
+langs:
+- id: EN
+  name: English
+link: https://agol.gis.fauquiercounty.gov:6443/arcgis/rest/services
+name: Fauquier County GIS ArcGIS Server
+owner:
+  link: https://www.fauquiercounty.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: Fauquier County, Virginia
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Fauquier County
+- public sector
+- ArcGIS
+- REST
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012549

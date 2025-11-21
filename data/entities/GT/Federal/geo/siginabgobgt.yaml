@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Data catalog service endpoint for the National Institute of Forests (INAB)
+  of Guatemala.
+endpoints:
+- type: arcgis:portals:self
+  url: https://sig.inab.gob.gt/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://sig.inab.gob.gt/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sig.inab.gob.gt/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sig.inab.gob.gt/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://sig.inab.gob.gt/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sig.inab.gob.gt/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sig.inab.gob.gt/server/rest/services?f=kmz
+id: siginabgobgt
+langs:
+- id: ES
+  name: Spanish
+link: https://sig.inab.gob.gt/server/rest/services
+name: INAB GIS Services
+owner:
+  link: https://sig.inab.gob.gt
+  location:
+    country:
+      id: GT
+      name: Guatemala
+    level: 20
+  name: Instituto Nacional de Bosques (INAB)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- forestry
+- geospatial
+- land cover
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001183

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS REST endpoint providing geospatial web services managed by Thailand's
+  Department of Mineral Resources (DMR)
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.dmr.go.th/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.dmr.go.th/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.dmr.go.th/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.dmr.go.th/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.dmr.go.th/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.dmr.go.th/arcgis/rest/services?f=kmz
+id: gisdmrgoth
+langs:
+- id: TH
+  name: Thai
+link: https://gis.dmr.go.th/arcgis/rest/services
+name: gis.dmr.go.th/arcgis/rest/services
+owner:
+  link: https://www.dmr.go.th/en/
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: Department of Mineral Resources, Thailand
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geology
+- mineral resources
+- earth science
+- geospatial
+- Web Map Service
+- ArcGIS
+- Thailand
+- arcgisserver
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005427

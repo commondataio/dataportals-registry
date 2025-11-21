@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: '---'
+      name: '---'
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: Web-based platform for sharing geospatial data, maps, and information
+  on biodiversity and protected areas in West Africa, supporting conservation strategies
+  and natural resource management, based on GeoNode technology and part of the BIOPAMA
+  Reference Information System.
+endpoints:
+- type: geonode:layers
+  url: https://geonode.obapao.org/api/layers/
+- type: geonode:documents
+  url: https://geonode.obapao.org/api/documents/
+- type: wms111
+  url: https://geonode.obapao.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.obapao.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.obapao.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.obapao.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.obapao.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geonode.obapao.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.obapao.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geonodeobapaoorg
+langs:
+- id: EN
+  name: English
+link: https://geonode.obapao.org/
+name: Obapao Geoportal
+owner:
+  link: www.biopama.org
+  location:
+    country:
+      id: '---'
+      name: '---'
+    level: 20
+  name: Obapao
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- protected areas
+- biodiversity
+- natural resource management
+- map
+- data sharing
+- geonode
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00000781

@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-GA
+      name: Georgia
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for coastal hazards and oceanographic data. Operated by the Skidaway Institute of
+  Oceanography at the University of Georgia.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gchp.skio.uga.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gchp.skio.uga.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gchp.skio.uga.edu/arcgis/services?wsdl
+id: gchpskiougaedu
+langs:
+- id: EN
+  name: English
+link: https://gchp.skio.uga.edu/arcgis/rest/services
+name: Georgia Coastal Hazards Portal (GCHP) ArcGIS Server
+owner:
+  link: https://www.uga.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-GA
+      name: Georgia
+  name: University of Georgia
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- coastal hazards
+- oceanography
+- Georgia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013365

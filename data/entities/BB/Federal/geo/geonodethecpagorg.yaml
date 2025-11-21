@@ -1,0 +1,116 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BB
+      name: Barbados
+    level: 20
+    macroregion:
+      id: 029
+      name: Caribbean
+description: Web-based information system for protected areas across all ACP Caribbean
+  countries.
+endpoints:
+- type: geonode:documents
+  url: https://geonode.thecpag.org/api/documents/
+- type: wms111
+  url: https://geonode.thecpag.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.thecpag.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.thecpag.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.thecpag.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.thecpag.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geonode.thecpag.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geonode.thecpag.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://geonode.thecpag.org/api/datasets/
+- type: wms130
+  url: https://geonode.thecpag.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geonode.thecpag.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geonode.thecpag.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geonode.thecpag.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geonode.thecpag.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geonode.thecpag.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geonode.thecpag.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geonode.thecpag.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: geonodethecpagorg
+langs:
+- id: EN
+  name: English
+link: https://geonode.thecpag.org
+name: Caribbean Protected Areas Gateway (CPAG) Geospatial Datasets
+owner:
+  link: https://geonode.thecpag.org
+  location:
+    country:
+      id: BB
+      name: Barbados
+    level: 20
+  name: Caribbean Protected Areas Gateway (CERMES, University of the West Indies,
+    Cavehill, St. Michael)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Protected areas
+- GIS
+- Caribbean
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00000782

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+description: Web map service catalogue of the EEA, allowing users to search and view
+  all the WMS published by the EEA on biodiversity and related environmental topics.
+endpoints:
+- type: arcgis:rest:info
+  url: https://bio.discomap.eea.europa.eu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://bio.discomap.eea.europa.eu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://bio.discomap.eea.europa.eu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://bio.discomap.eea.europa.eu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://bio.discomap.eea.europa.eu/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://bio.discomap.eea.europa.eu/arcgis/rest/services?f=kmz
+id: biodiscomapeeaeuropaeu
+langs:
+- id: EN
+  name: English
+link: https://bio.discomap.eea.europa.eu/arcgis/rest/services
+name: EEA DiscoMap - BIO
+owner:
+  link: https://www.eea.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Environment Agency (EEA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- European Union
+- GIS
+- Web Map Service
+- arcgisserver
+- environmental data
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001467

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Web services for geospatial data published by Infofer S.A.
+endpoints:
+- type: arcgis:rest:info
+  url: https://inspire.infofer.ro/gisinfofer2019/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://inspire.infofer.ro/gisinfofer2019/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://inspire.infofer.ro/gisinfofer2019/services?wsdl
+- type: arcgis:sitemap
+  url: https://inspire.infofer.ro/gisinfofer2019/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://inspire.infofer.ro/gisinfofer2019/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://inspire.infofer.ro/gisinfofer2019/rest/services?f=kmz
+id: inspireinfoferro
+langs:
+- id: RO
+  name: Romanian
+link: https://inspire.infofer.ro/gisinfofer2019/rest/services
+name: inspire.infofer.ro
+owner:
+  link: https://inspire.infofer.ro/
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: Infofer S.A.
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- gis
+- railways
+- Romania
+topics: []
+uid: temp00005608

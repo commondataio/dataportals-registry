@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: &id001
+      id: '005'
+      name: South America
+description: Online mapping and geospatial services portal of Imbabura Province providing
+  access to local geographic information, administrative boundaries, infrastructure,
+  and territorial planning data through ArcGIS REST services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapasonline.imbabura.gob.ec/servergis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapasonline.imbabura.gob.ec/servergis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapasonline.imbabura.gob.ec/servergis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapasonline.imbabura.gob.ec/servergis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapasonline.imbabura.gob.ec/servergis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapasonline.imbabura.gob.ec/servergis/rest/services?f=kmz
+id: mapasonlineimbaburagobec
+langs:
+- id: ES
+  name: Spanish
+link: https://mapasonline.imbabura.gob.ec/servergis/rest/services
+name: Mapas Online - Gobierno Provincial de Imbabura
+owner:
+  link: https://mapasonline.imbabura.gob.ec/
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: *id001
+  name: Gobierno Provincial de Imbabura
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- geospatial
+- provincial government
+- Imbabura
+- Ecuador
+- mapping
+- infrastructure
+- territorial planning
+- REST services
+- Mapas en Linea
+- REST Services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00001930

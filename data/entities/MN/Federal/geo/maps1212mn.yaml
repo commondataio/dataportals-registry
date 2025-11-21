@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+    macroregion: &id001
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST Services Directory for maps.1212.mn
+endpoints:
+- type: arcgis:rest:info
+  url: http://maps.1212.mn/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://maps.1212.mn/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: http://maps.1212.mn/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://maps.1212.mn/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://maps.1212.mn/arcgis/rest/services?f=kmz
+- type: arcgis:soap
+  url: http://maps.1212.mn/arcgis/services?wsdl
+id: maps1212mn
+langs:
+- id: MN
+  name: Mongolian
+link: http://maps.1212.mn/arcgis/rest/services
+name: maps.1212.mn/arcgis/rest/services
+owner:
+  link: http://1212.mn
+  location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+    macroregion: *id001
+  name: Government of Mongolia
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- Services
+topics: []
+uid: temp00005969

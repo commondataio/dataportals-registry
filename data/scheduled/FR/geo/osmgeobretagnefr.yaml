@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: NZ-OTA
+      name: Otago
+description: MapProxy instance providing OpenStreetMap-based tile cache services for
+  the Bretagne (Brittany) region of France.
+endpoints:
+- type: wms111
+  url: https://osm.geobretagne.fr/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://osm.geobretagne.fr/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: https://osm.geobretagne.fr/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: https://osm.geobretagne.fr/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: osmgeobretagnefr
+langs:
+- id: FR
+  name: French
+link: https://osm.geobretagne.fr
+name: maps.orc.govt.nz/arcgis/rest/services
+owner:
+  link: https://maps.orc.govt.nz/
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    subregion: *id001
+  name: Otago Regional Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: Mapproxy
+status: active
+tags:
+- ArcGIS
+- Bretagne
+- Brittany
+- France
+- OpenStreetMap
+- geospatial
+- geospatial services
+- mapproxy
+- public
+- tile cache
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00006003

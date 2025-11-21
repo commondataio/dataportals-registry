@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CT
+      name: Connecticut
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for the University of Connecticut Center for Land Use Education and Research (CLEAR).
+  Provides access to Connecticut geospatial data layers and map services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://clear3.uconn.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://clear3.uconn.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://clear3.uconn.edu/arcgis/services?wsdl
+id: clear3uconnedu
+langs:
+- id: EN
+  name: English
+link: https://clear3.uconn.edu/arcgis/rest/services
+name: UConn CLEAR ArcGIS Server (clear3.uconn.edu)
+owner:
+  link: https://www.clear.uconn.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+  name: University of Connecticut Center for Land Use Education and Research (CLEAR)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Connecticut
+- UConn
+- CLEAR
+- Land use
+- Geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012423

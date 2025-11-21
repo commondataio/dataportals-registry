@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+    macroregion: &id001
+      id: '145'
+      name: Western Asia
+description: The URL points to the REST endpoint for services provided by a GI Services
+  GeoServer, which typically serves geospatial data via OGC compliant web services
+  such as WMS, WFS, WCS, etc. As a data catalog, it aggregates datasets (services)
+  rather than individual datasets as such, according to OGC standards.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisservices.ge/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisservices.ge/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisservices.ge/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisservices.ge/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisservices.ge/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisservices.ge/server/rest/services?f=kmz
+id: gisservicesge
+langs:
+- id: KA
+  name: Georgian
+link: https://gisservices.ge/server/rest/services
+name: GI Services GeoServer REST Services
+owner:
+  link: Not specified in the provided URL or text
+  location:
+    country:
+      id: GE
+      name: Georgia
+    level: 20
+    macroregion: *id001
+  name: Not specified in the provided URL or text
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- GeoServer
+- Georgia
+- OGC
+- REST
+- WCS
+- WFS
+- WMS
+- arcgisserver
+- geospatial
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005895

@@ -1,0 +1,101 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: &id001
+      id: '005'
+      name: South America
+description: Geospatial information system of the Empresa Eléctrica Regional Sur S.A.
+  (EERSSA) providing access to electrical infrastructure, power grid networks, service
+  areas, and utility management spatial data through ArcGIS REST services.
+endpoints:
+- type: arcgis:rest:info
+  url: http://sig.eerssa.gob.ec/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://sig.eerssa.gob.ec/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sig.eerssa.gob.ec/arcgis/rest/services?f=geositemap
+id: sigeerssagobec
+langs:
+- id: ES
+  name: Spanish
+link: http://sig.eerssa.gob.ec/ArcGIS/rest/services
+name: SIG EERSSA - Regional Electric Company South Ecuador
+owner:
+  link: http://sig.eerssa.gob.ec/
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: *id001
+  name: Empresa Eléctrica Regional Sur S.A. (EERSSA)
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geodata
+- services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: temp00001932

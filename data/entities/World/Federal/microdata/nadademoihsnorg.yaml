@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Microdata catalog
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: NADA is an open-source web-based data cataloging application. It is used
+  to create portals that allow readers to browse, search, compare, apply for access,
+  and download research data. NADA adheres to the DDI metadata standard and is designed
+  to improve the quality and availability of survey data, reducing inconsistencies
+  in analytical work and enabling more efficient access to survey information such
+  as reports, tables, and microdata.
+endpoints:
+- type: nada:catalog-search
+  url: https://nada-demo.ihsn.org/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://nada-demo.ihsn.org/index.php/catalog/export/csv?ps=5000&collection[]
+id: nadademoihsnorg
+langs: []
+link: https://nada-demo.ihsn.org
+name: NADA Data Catalog (Demo Instance)
+owner:
+  link: https://nada.ihsn.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: International Household Survey Network (IHSN)
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: nada
+  name: NADA
+status: active
+tags:
+- microdata
+- survey
+- research
+- catalog
+- DDI
+- metadata
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00004151

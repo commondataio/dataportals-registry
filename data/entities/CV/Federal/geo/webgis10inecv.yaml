@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: WebGIS platform providing geospatial data services via ArcGIS REST
+  API from the National Institute of Statistics (INE) of Cabo Verde. Offers access
+  to statistical and demographic geospatial datasets.
+endpoints:
+- type: arcgis:rest:info
+  url: https://webgis10.ine.cv/arcgisinecv/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webgis10.ine.cv/arcgisinecv/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://webgis10.ine.cv/arcgisinecv/services?wsdl
+- type: arcgis:sitemap
+  url: https://webgis10.ine.cv/arcgisinecv/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://webgis10.ine.cv/arcgisinecv/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://webgis10.ine.cv/arcgisinecv/rest/services?f=kmz
+id: webgis10inecv
+langs:
+- id: PT
+  name: Portugal
+link: https://webgis10.ine.cv/arcgisinecv/rest/services
+name: INE Cabo Verde WebGIS
+owner:
+  link: https://www.ine.cv
+  location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 20
+  name: Instituto Nacional de Estatística
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- GIS
+- ArcGIS
+- WebGIS
+- statistics
+- geoportal
+- demographics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001381

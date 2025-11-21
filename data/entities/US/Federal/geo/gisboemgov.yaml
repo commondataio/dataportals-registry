@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS REST services endpoint for Bureau of Ocean Energy Management (BOEM)
+  geospatial data and applications.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.boem.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.boem.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.boem.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.boem.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.boem.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.boem.gov/arcgis/rest/services?f=kmz
+id: gisboemgov
+langs:
+- id: EN
+  name: English
+link: https://gis.boem.gov/arcgis/rest/services
+name: gis.boem.gov
+owner:
+  link: https://www.boem.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Bureau of Ocean Energy Management (BOEM)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Energy
+- Offshore
+- GIS
+- Mapping
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: temp00004294

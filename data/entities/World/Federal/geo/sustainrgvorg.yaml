@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: No information available in provided results about this specific domain
+  or its purpose. Not able to confirm nature of catalog, owner, nor thematic content.
+  Hence unable to extract values for requested vocabularies.
+endpoints:
+- type: geonode:datasets
+  url: https://sustainrgv.org/api/datasets/
+- type: geonode:documents
+  url: https://sustainrgv.org/api/documents/
+- type: wms111
+  url: https://sustainrgv.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://sustainrgv.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://sustainrgv.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://sustainrgv.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://sustainrgv.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://sustainrgv.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: sustainrgvorg
+langs:
+- id: EN
+  name: English
+link: https://sustainrgv.org
+name: sustainrgv.org
+owner:
+  link: https://sustainrgv.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Sustainrgv
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags: []
+topics: []
+uid: temp00000842

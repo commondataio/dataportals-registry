@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion: &id001
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST Services endpoint for mapping and data services provided
+  by the Water Resources Agency, MOEA, Taiwan.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.wra.gov.tw/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.wra.gov.tw/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.wra.gov.tw/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.wra.gov.tw/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.wra.gov.tw/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.wra.gov.tw/arcgis/rest/services?f=kmz
+id: mapswragovtw
+langs:
+- id: ZH
+  name: Chinese
+link: https://maps.wra.gov.tw/arcgis/rest/services
+name: WRA ArcGIS REST Services
+owner:
+  link: https://www.wra.gov.tw/en/
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion: *id001
+  name: Water Resources Agency, MOEA, Taiwan
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- water resources
+- maps
+- Taiwan
+- government data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00005836

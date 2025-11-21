@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Geospatial data catalog provided via GeoServer infrastructure.
+endpoints:
+- type: wfs100
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://stadtplan.weimar.de/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://stadtplan.weimar.de/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://stadtplan.weimar.de/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: stadtplanweimarde
+langs:
+- id: DE
+  name: German
+link: https://stadtplan.weimar.de/geoserver
+name: stadtplan.weimar.de/geoserver
+owner:
+  link: https://weimar.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Not explicitly stated; assumed to be city administration of Weimar (communicate
+    with dateno@dateno.io if not)
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Germany
+- WMS
+- Weimar
+- city
+- geoportal
+- geoserver
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001410

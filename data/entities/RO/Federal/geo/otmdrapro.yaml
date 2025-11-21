@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Data catalog endpoint providing access to ArcGIS REST services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ot.mdrap.ro/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ot.mdrap.ro/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ot.mdrap.ro/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ot.mdrap.ro/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ot.mdrap.ro/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ot.mdrap.ro/arcgis/rest/services?f=kmz
+id: otmdrapro
+langs:
+- id: RO
+  name: Romanian
+link: https://ot.mdrap.ro/arcgis/rest/services
+name: ot.mdrap.ro
+owner:
+  link: Not provided
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: Not provided
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- services
+topics: []
+uid: temp00005610

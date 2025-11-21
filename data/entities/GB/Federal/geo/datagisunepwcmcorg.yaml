@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: A data catalog providing contemporary datasets on marine and coastal
+  protected areas and conservation measures, including habitat coverage statistics.
+endpoints:
+- type: arcgis:rest:info
+  url: https://data-gis.unep-wcmc.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://data-gis.unep-wcmc.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://data-gis.unep-wcmc.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://data-gis.unep-wcmc.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://data-gis.unep-wcmc.org/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://data-gis.unep-wcmc.org/server/rest/services?f=kmz
+id: datagisunepwcmcorg
+langs: []
+link: https://data-gis.unep-wcmc.org/server/rest/services
+name: Ocean Data Viewer / UNEP-WCMC GIS Portal
+owner:
+  link: https://data.unep-wcmc.org
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: UN Environment Programme World Conservation Monitoring Centre
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Protected Areas
+- Conservation
+- Marine
+- GIS
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005620

@@ -1,0 +1,137 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GIS and geospatial data catalog operated by Hochschule Weihenstephan-Triesdorf
+  (HSWT), a University of Applied Sciences.
+endpoints:
+- type: geonode:layers
+  url: https://geodaten.triesdorf.hswt.de/api/layers/
+- type: geonode:documents
+  url: https://geodaten.triesdorf.hswt.de/api/documents/
+- type: wms111
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geodaten.triesdorf.hswt.de/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodaten.triesdorf.hswt.de/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://geodaten.triesdorf.hswt.de/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://geodaten.triesdorf.hswt.de/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geonode:datasets
+  url: https://geodaten.triesdorf.hswt.de/api/datasets/
+- type: wms130
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geodaten.triesdorf.hswt.de/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geodaten.triesdorf.hswt.de/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://geodaten.triesdorf.hswt.de/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: geoserver:settings
+  url: https://geodaten.triesdorf.hswt.de/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://geodaten.triesdorf.hswt.de/geoserver/rest/layers
+id: geodatentriesdorfhswtde
+langs:
+- id: DE
+  name: German
+link: https://geodaten.triesdorf.hswt.de
+name: geodaten.triesdorf.hswt.de
+owner:
+  link: https://www.hswt.de/en/
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Hochschule Weihenstephan-Triesdorf
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- GIS
+- Germany
+- agriculture
+- environment
+- geodata
+- geonode
+- geospatial
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00000197

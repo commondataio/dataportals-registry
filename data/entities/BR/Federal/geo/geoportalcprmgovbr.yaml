@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Data catalog website for geospatial services and datasets hosted by CPRM
+  (Geological Survey of Brazil), likely providing various geoscientific and geological
+  data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geoportal.cprm.gov.br/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geoportal.cprm.gov.br/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geoportal.cprm.gov.br/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://geoportal.cprm.gov.br/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geoportal.cprm.gov.br/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geoportal.cprm.gov.br/server/rest/services?f=kmz
+id: geoportalcprmgovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://geoportal.cprm.gov.br/server/rest/services
+name: geoportal.cprm.gov.br/server/rest/services
+owner:
+  link: https://geoportal.cprm.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: CPRM (Geological Survey of Brazil, Brazil's Geological Service)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Brazil
+- GIS
+- Geology
+- Geospatial
+- arcgisserver
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003417

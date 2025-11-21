@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: &id001
+      id: JP-22
+      name: Shizuoka
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Open data portal for Shizuoka City providing access to municipal datasets
+  including administrative, statistical, and public service data through a CKAN-powered
+  catalog system.
+endpoints:
+- type: ckan
+  url: https://dataset.city.shizuoka.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dataset.city.shizuoka.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dataset.city.shizuoka.jp/api/3/action/package_list
+  version: '3'
+id: datasetcityshizuokajp
+langs:
+- id: JA
+  name: Japanese
+link: https://dataset.city.shizuoka.jp
+name: Shizuoka City Open Data Portal
+owner:
+  link: https://www.city.shizuoka.lg.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: City of Shizuoka
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- municipal
+- CKAN
+- Shizuoka
+- local government
+- Japan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00004718

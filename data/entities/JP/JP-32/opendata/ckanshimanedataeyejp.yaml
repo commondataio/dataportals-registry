@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: &id001
+      id: JP-32
+      name: Shimane
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Open data portal for Shimane Prefecture providing access to prefectural
+  datasets including administrative, statistical, and public service information through
+  a CKAN-powered catalog.
+endpoints:
+- type: ckan
+  url: https://ckan-shimane.dataeye.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan-shimane.dataeye.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan-shimane.dataeye.jp/api/3/action/package_list
+  version: '3'
+id: ckanshimanedataeyejp
+langs:
+- id: JA
+  name: Japanese
+link: https://ckan-shimane.dataeye.jp
+name: Shimane Prefecture Open Data Catalog
+owner:
+  link: https://www.pref.shimane.lg.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: Shimane Prefecture
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- prefecture
+- CKAN
+- Shimane
+- regional government
+- Japan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: temp00004714

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: &id001
+      id: JP-28
+      name: Hyogo
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Open data portal for Kobe City, Hyogo Prefecture, providing access to
+  municipal datasets including administrative, statistical, and public service data
+  through a CKAN-powered catalog.
+endpoints:
+- type: ckan
+  url: https://catalog.city.kobe.lg.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.city.kobe.lg.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.city.kobe.lg.jp/api/3/action/package_list
+  version: '3'
+id: catalogcitykobelgjp
+langs:
+- id: JA
+  name: Japanese
+link: https://catalog.city.kobe.lg.jp
+name: Kobe City Open Data Catalog
+owner:
+  link: https://www.city.kobe.lg.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: City of Kobe
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- municipal
+- CKAN
+- Kobe
+- local government
+- Japan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+uid: temp00004710

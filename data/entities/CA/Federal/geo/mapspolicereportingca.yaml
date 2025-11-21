@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GIS data services catalog available via ArcGIS REST API
+endpoints:
+- type: arcgis:rest:info
+  url: http://maps.policereporting.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://maps.policereporting.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://maps.policereporting.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://maps.policereporting.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:kmz
+  url: http://maps.policereporting.ca/arcgis/rest/services?f=kmz
+id: mapspolicereportingca
+langs:
+- id: EN
+  name: English
+link: http://maps.policereporting.ca/arcgis/rest/services
+name: policereporting.ca ArcGIS REST Services Catalog
+owner:
+  link: http://maps.policereporting.ca/
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Not explicitly stated in the text provided
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- Canada
+- GIS
+- REST
+- arcgisserver
+- geospatial
+- maps
+- police
+- reporting
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Intelligence / Military
+  name: Intelligence / Military
+  type: iso19115
+uid: temp00001333

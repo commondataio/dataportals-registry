@@ -1,0 +1,115 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Data catalog provided by the Swedish Board of Agriculture (SJV) for INSPIRE-related
+  spatial and environmental data.
+endpoints:
+- type: wms111
+  url: http://epub.sjv.se/inspire/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://epub.sjv.se/inspire/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://epub.sjv.se/inspire/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://epub.sjv.se/inspire/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://epub.sjv.se/inspire/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: http://epub.sjv.se/inspire/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://epub.sjv.se/inspire/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://epub.sjv.se/inspire/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: http://epub.sjv.se/inspire/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: http://epub.sjv.se/inspire/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: http://epub.sjv.se/inspire/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://epub.sjv.se/inspire/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: http://epub.sjv.se/inspire/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: wmts100
+  url: http://epub.sjv.se/inspire/gwc/service/wmts?REQUEST=GetCapabilities
+  version: 1.0.0
+id: epubsjvse
+langs:
+- id: SV
+  name: Swedish
+link: http://epub.sjv.se/inspire/web/
+name: epub.sjv.se
+owner:
+  link: http://www.jordbruksverket.se/
+  location:
+    country:
+      id: SE
+      name: Sweden
+    level: 20
+  name: Jordbruksverket (Swedish Board of Agriculture)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Agriculture
+- geoportal
+- geoserver
+- geospatial
+- INSPIRE
+- Spatial data
+- Sweden
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001164

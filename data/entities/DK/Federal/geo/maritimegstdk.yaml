@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Maritime and hydrographic datasets provided via ArcGIS REST Services
+  by the Danish Geodata Agency.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maritime.gst.dk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maritime.gst.dk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maritime.gst.dk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://maritime.gst.dk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maritime.gst.dk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maritime.gst.dk/arcgis/rest/services?f=kmz
+id: maritimegstdk
+langs:
+- id: DA
+  name: Danish
+link: https://maritime.gst.dk/arcgis/rest/services
+name: Danish Geodata Agency ArcGIS Services Catalog
+owner:
+  link: https://maritime.gst.dk/arcgis/rest/services
+  location:
+    country: *id001
+    level: 20
+  name: Danish Geodata Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- Denmark
+- geoportal
+- geospatial
+- GIS
+- hydrographic data
+- maritime data
+- nautical charts
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: temp00005881

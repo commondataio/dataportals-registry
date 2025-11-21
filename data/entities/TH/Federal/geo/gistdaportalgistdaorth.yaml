@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: GISTDA is a public organization responsible for space technology and
+  geo-informatics, providing remote sensing data and geo-information to support Thailand's
+  space and geospatial data services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gistdaportal.gistda.or.th/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gistdaportal.gistda.or.th/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gistdaportal.gistda.or.th/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gistdaportal.gistda.or.th/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gistdaportal.gistda.or.th/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gistdaportal.gistda.or.th/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gistdaportal.gistda.or.th/arcgis/rest/services?f=kmz
+id: gistdaportalgistdaorth
+langs:
+- id: TH
+  name: Thai
+link: https://gistdaportal.gistda.or.th/data/rest/services
+name: gistdaportal.gistda.or.th
+owner:
+  link: https://gistdaportal.gistda.or.th/
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: Geo-Informatics and Space Technology Development Agency (GISTDA), Thailand
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- satellite imagery
+- remote sensing
+- geospatial data
+- Thailand
+- arcgisserver
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00000678

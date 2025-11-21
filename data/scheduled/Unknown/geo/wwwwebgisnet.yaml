@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via www.webgis.net
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.webgis.net/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.webgis.net/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.webgis.net/arcgis/services?wsdl
+id: wwwwebgisnet
+langs:
+- id: EN
+  name: English
+link: https://www.webgis.net/arcgis/rest/services
+name: Webgis Geoportal
+owner:
+  link: https://www.webgis.net
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Webgis
+  type: Unknown
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

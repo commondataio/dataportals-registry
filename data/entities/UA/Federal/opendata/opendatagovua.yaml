@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Open data portal of Government of Ukraine providing access to public
+  datasets and government information through ckan.
+endpoints:
+- type: ckan
+  url: https://opendata.gov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.gov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.gov.ua/api/3/action/package_list
+  version: '3'
+id: opendatagovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://opendata.gov.ua
+name: Government of Ukraine Open Data Portal
+owner:
+  link: https://gov.ua
+  location:
+    country:
+      id: UA
+      name: Ukraine
+    level: 20
+  name: Government of Ukraine
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Ukraine
+- open data
+- ckan
+- government
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: temp00004777

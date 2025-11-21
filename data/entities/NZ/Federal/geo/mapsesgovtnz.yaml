@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: &id001
+      id: '053'
+      name: Australia and New Zealand
+description: ''
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.es.govt.nz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.es.govt.nz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.es.govt.nz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://maps.es.govt.nz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://maps.es.govt.nz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://maps.es.govt.nz/server/rest/services?f=kmz
+id: mapsesgovtnz
+langs:
+- id: EN
+  name: English
+link: https://maps.es.govt.nz/server/services
+name: maps.es.govt.nz
+owner:
+  link: https://es.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: *id001
+  name: Local Government of Es
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: temp00005292

@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: &id001
+      id: '005'
+      name: South America
+description: Municipal geospatial viewer and mapping services portal providing access
+  to local administrative boundaries, infrastructure, land use, urban planning, and
+  territorial information for Mera Municipality through ArcGIS REST services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://visor.municipiomera.gob.ec/mapas/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://visor.municipiomera.gob.ec/mapas/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://visor.municipiomera.gob.ec/mapas/services?wsdl
+- type: arcgis:sitemap
+  url: https://visor.municipiomera.gob.ec/mapas/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://visor.municipiomera.gob.ec/mapas/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://visor.municipiomera.gob.ec/mapas/rest/services?f=kmz
+id: visormunicipiomeragobec
+langs:
+- id: ES
+  name: Spanish
+link: https://visor.municipiomera.gob.ec/mapas/rest/services
+name: Visor Municipal - Mera Municipality Geoportal
+owner:
+  link: https://visor.municipiomera.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 20
+    macroregion: *id001
+  name: Gobierno Autónomo Descentralizado Municipal de Mera
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- maps
+- REST
+- GIS
+- ArcGIS
+- municipal
+- Mera
+- Ecuador
+- local government
+- urban planning
+- land use
+- infrastructure
+- rest
+- gis
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00001936

@@ -1,0 +1,115 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Standard-based, decentralized spatial information management system,
+  designed to enable access to geo-referenced databases, maps, and services. Provides
+  web interface for searching, publishing, and visualizing geospatial data across
+  multiple catalogs.
+endpoints:
+- type: geonetwork:query
+  url: https://catalogue.geospm.com/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://catalogue.geospm.com/geonetwork/srv/api/records
+- type: openapi
+  url: https://catalogue.geospm.com/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://catalogue.geospm.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://catalogue.geospm.com/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://catalogue.geospm.com/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: cataloguegeospmcom
+langs: []
+link: https://catalogue.geospm.com/geonetwork
+name: GeoNetwork OpenSource Data Catalog
+owner:
+  link: https://catalogue.geospm.com/geonetwork
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: GeoSPM
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- spatial data
+- catalog
+- metadata
+- OGC
+- ISO19115
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: temp00003937

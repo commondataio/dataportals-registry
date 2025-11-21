@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Data catalog hosted on GeoNetwork platform
+endpoints:
+- type: csw202
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://130.206.30.23:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: '1302063023'
+langs: []
+link: http://130.206.30.23:8080/geonetwork/srv/eng/catalog.search#/home
+name: 130.206.30.23:8080
+owner:
+  link: http://130.206.30.23:8080/geonetwork/srv/eng/catalog.search
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Not directly specified in input
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- metadata
+- data catalog
+- GeoNetwork
+topics: []
+uid: temp00000708

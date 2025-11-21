@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-KS
+      name: Kansas
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for the University of Kansas's Kansas Applied Remote Sensing (KARS) program. Provides
+  access to geospatial datasets including remote sensing and state-level mapping data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services.kars.geoplatform.ku.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://services.kars.geoplatform.ku.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://services.kars.geoplatform.ku.edu/arcgis/services?wsdl
+id: serviceskarsgeoplatformkuedu
+langs:
+- id: EN
+  name: English
+link: https://services.kars.geoplatform.ku.edu/arcgis/rest/services
+name: University of Kansas KARS GIS Server
+owner:
+  link: https://www.ku.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-KS
+      name: Kansas
+  name: University of Kansas
+  type: Higher education
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- university
+- Kansas
+- higher education
+- KARS
+- remote sensing
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012345

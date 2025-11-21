@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Data catalog providing geospatial services (ArcGIS REST) managed by the
+  Italian Ministry of the Environment and intended for public and institutional use.
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.pcn.minambiente.it/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.pcn.minambiente.it/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://www.pcn.minambiente.it/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://www.pcn.minambiente.it/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www.pcn.minambiente.it/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://www.pcn.minambiente.it/arcgis/rest/services?f=kmz
+id: wwwpcnminambienteit
+langs:
+- id: IT
+  name: Italian
+link: http://www.pcn.minambiente.it/arcgis/rest/services
+name: PCN - Ministero dell’Ambiente ArcGIS REST Services Directory
+owner:
+  link: http://www.pcn.minambiente.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Ministero dell’Ambiente e della Tutela del Territorio e del Mare
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- Italy
+- REST
+- arcgisserver
+- geoportal
+- geospatial
+- government
+- public
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001592

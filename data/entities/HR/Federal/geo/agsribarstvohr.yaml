@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Geoportal providing access to geospatial data and services related to fisheries and marine resources in Croatia. The portal offers ArcGIS REST Services for accessing spatial datasets, map layers, and geospatial catalog services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags.ribarstvo.hr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags.ribarstvo.hr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ags.ribarstvo.hr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://ags.ribarstvo.hr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ags.ribarstvo.hr/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ags.ribarstvo.hr/arcgis/rest/services?f=kmz
+id: agsribarstvohr
+langs:
+- id: HR
+  name: Croatian
+link: https://ags.ribarstvo.hr/arcgis/rest/services
+name: AGS Ribarstvo HR Geoportal
+owner:
+  link: https://ags.ribarstvo.hr
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+  name: Croatian Fisheries Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- fisheries
+- marine resources
+- GIS
+- spatial data
+- ArcGIS REST
+- geoportal
+- croatia
+- government
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005909

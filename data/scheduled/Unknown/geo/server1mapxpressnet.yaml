@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via server1.mapxpress.net
+endpoints:
+- type: arcgis:rest:info
+  url: https://server1.mapxpress.net/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://server1.mapxpress.net/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://server1.mapxpress.net/arcgis/services?wsdl
+id: server1mapxpressnet
+langs:
+- id: EN
+  name: English
+link: https://server1.mapxpress.net/arcgis/rest/services
+name: Server1.Mapxpress Geoportal
+owner:
+  link: https://server1.mapxpress.net
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Server1.Mapxpress
+  type: Unknown
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GIS REST services endpoint for areal data within Danmarks Miljøportal,
+  providing various environmental and geographical datasets.
+endpoints:
+- type: arcgis:rest:services
+  url: https://arealinformation.miljoeportal.dk/gis/rest/services?f=pjson
+  version: '1.0'
+id: arealinformationmiljoeportaldk
+langs:
+- id: DA
+  name: Danish
+link: https://arealinformation.miljoeportal.dk/gis/rest/services
+name: arealinformation.miljoeportal.dk/gis/rest/services
+owner:
+  link: https://miljoeportal.dk
+  location:
+    country: *id001
+    level: 20
+  name: Miljøportalens Sekretariat
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- areal
+- Denmark
+- environment
+- geoportal
+- geospatial
+- GIS
+- land data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001419

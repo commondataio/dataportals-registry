@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via gis.littleelm.org
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.littleelm.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.littleelm.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.littleelm.org/arcgis/services?wsdl
+id: gislittleelmorg
+langs:
+- id: EN
+  name: English
+link: https://gis.littleelm.org/arcgis/rest/services
+name: Littleelm Geoportal
+owner:
+  link: https://littleelm.org
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Littleelm
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OH
+      name: Ohio
+description: Official geospatial data services portal for Www2, Ohio providing GIS
+  data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www2.ci.lancaster.oh.us/webgis/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www2.ci.lancaster.oh.us/webgis/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www2.ci.lancaster.oh.us/arcgis/services?wsdl
+id: www2cilancasterohus
+langs:
+- id: EN
+  name: English
+link: https://www2.ci.lancaster.oh.us/webgis/arcgis/rest/services
+name: Www2, Ohio GIS Portal
+owner:
+  link: https://www2.ci.lancaster.oh.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OH
+      name: Ohio
+  name: Www2, Ohio
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012041

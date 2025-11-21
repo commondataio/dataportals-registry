@@ -1,41 +1,43 @@
 access_mode:
-  - open
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
-  - dataset
-  - map_layer
+- dataset
+- map_layer
 coverage:
-  - location:
-      country:
-        id: EU
-        name: European Union
-      level: 20
-description: A catalog for archiving, hosting, and disseminating high-quality data, state-of-the-art model systems, and well-tested tools for practical analysis in earth science & engineering, especially marine & coastal domains.
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+description: A catalog for archiving, hosting, and disseminating high-quality data,
+  state-of-the-art model systems, and well-tested tools for practical analysis in
+  earth science & engineering, especially marine & coastal domains.
 endpoints:
-  - type: geonetwork:query
-    url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/q
-  - type: openapi
-    url: https://deltaresdata.openearth.eu/geonetwork/srv/v2/api-docs
-    version: '2'
-  - type: csw202
-    url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-    version: 2.0.2
-  - type: opensearch
-    url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/portal.opensearch
-    version: '1.0'
-  - type: oaipmh20
-    url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/oaipmh?verb=Identify
-    version: '2.0'
+- type: geonetwork:query
+  url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/q
+- type: openapi
+  url: https://deltaresdata.openearth.eu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://deltaresdata.openearth.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: deltaresdataopeneartheu
 langs:
-  - id: EN
-    name: English
+- id: EN
+  name: English
 link: https://deltaresdata.openearth.eu/geonetwork/srv/rus/catalog.search#/home
-name: deltaresdata.openearth.eu
+name: Deltares Data Catalog
 owner:
-  link: https://www.deltares.nl
+  link: https://www.deltares.nl/
   location:
     country:
       id: NL
@@ -46,24 +48,33 @@ owner:
 properties:
   has_doi: true
 rights:
-  license_id:
-  license_name:
-  license_url:
-  privacy_policy_url:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
   rights_type: granular
-  tos_url:
+  tos_url: null
 software:
   id: geonetwork
   name: Geonetwork
-status: scheduled
+status: active
 tags:
-  - earth science
-  - marine
-  - coastal
-  - engineering
-  - open data
+- European Union
+- coastal
+- earth science
+- engineering
+- geonetwork
+- geospatial
+- marine
+- open data
 topics:
-  - id: ENVI
-    name: Environment
-    type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00000259

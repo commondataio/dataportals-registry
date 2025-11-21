@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: Official geospatial data services portal for City of Dekalbcountyga providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://dcgis.dekalbcountyga.gov/hosted/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://dcgis.dekalbcountyga.gov/hosted/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://dcgis.dekalbcountyga.gov/arcgis/services?wsdl
+id: dcgisdekalbcountygagov
+langs:
+- id: EN
+  name: English
+link: https://dcgis.dekalbcountyga.gov/hosted/arcgis/rest/services
+name: City of Dekalbcountyga GIS Portal
+owner:
+  link: https://dcgis.dekalbcountyga.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: City of Dekalbcountyga
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- city government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012254

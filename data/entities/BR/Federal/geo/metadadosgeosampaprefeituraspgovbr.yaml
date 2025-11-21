@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoNetwork-based data catalog for geospatial and metadata from the city
+  of São Paulo
+endpoints:
+- type: geonetwork:query
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/api/records
+- type: openapi
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: metadadosgeosampaprefeituraspgovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork
+name: geosampa_geonetwork
+owner:
+  link: https://prefeitura.sp.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Prefeitura de São Paulo
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Brazil
+- GIS
+- city planning
+- environmental data
+- geonetwork
+- geospatial
+- metadata
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00001980

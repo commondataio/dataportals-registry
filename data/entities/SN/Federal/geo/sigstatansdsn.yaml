@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: A data catalog hosted by the ANSD (Agence Nationale de la Statistique
+  et de la Démographie, Senegal) providing access to statistical and geospatial datasets
+  via the Geonetwork platform.
+endpoints:
+- type: csw202
+  url: http://sigstat.ansd.sn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://sigstat.ansd.sn/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://sigstat.ansd.sn/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: sigstatansdsn
+langs: []
+link: http://sigstat.ansd.sn/geonetwork
+name: SIGSTAT Geonetwork Data Catalog
+owner:
+  link: http://sigstat.ansd.sn/geonetwork
+  location:
+    country:
+      id: SN
+      name: Senegal
+    level: 20
+  name: Agence Nationale de la Statistique et de la Démographie (ANSD)
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- statistics
+- geospatial
+- Senegal
+topics: []
+uid: temp00001773

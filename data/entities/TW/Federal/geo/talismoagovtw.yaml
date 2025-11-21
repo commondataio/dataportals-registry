@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion: &id001
+      id: '030'
+      name: Eastern Asia
+description: No readable description found in source.
+endpoints:
+- type: arcgis:rest:info
+  url: https://talis.moa.gov.tw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://talis.moa.gov.tw/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://talis.moa.gov.tw/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://talis.moa.gov.tw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://talis.moa.gov.tw/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://talis.moa.gov.tw/server/rest/services?f=kmz
+id: talismoagovtw
+langs:
+- id: ZH
+  name: Chinese
+link: https://talis.moa.gov.tw/server/rest/services
+name: talis.moa.gov.tw
+owner:
+  link: https://moa.gov.tw
+  location:
+    country:
+      id: TW
+      name: Taiwan
+    level: 20
+    macroregion: *id001
+  name: Government of Taiwan
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags: []
+topics: []
+uid: temp00005837

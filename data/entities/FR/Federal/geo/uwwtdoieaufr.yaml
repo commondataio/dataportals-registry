@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Data catalog providing detailed information about urban waste water agglomerations,
+  treatment plants, discharged points and sensitive areas. It includes data on compliance,
+  treatment in place, and environmental pressure. It supports selection, display,
+  download of datasets, and offers statistics and interoperability features.
+endpoints:
+- type: geonetwork:query
+  url: https://uwwtd.oieau.fr/catalogue/srv/eng/q
+- type: csw202
+  url: https://uwwtd.oieau.fr/catalogue/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://uwwtd.oieau.fr/catalogue/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://uwwtd.oieau.fr/catalogue/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: uwwtdoieaufr
+langs:
+- id: FR
+  name: French
+link: https://uwwtd.oieau.fr/catalogue
+name: UWWTD SIIF Catalogue
+owner:
+  link: https://uwwtd.oieau.fr/catalogue
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Office International de l'Eau (OIEau)
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- EU
+- France
+- compliance
+- geonetwork
+- geospatial
+- statistics
+- treatment plant
+- waste water
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002747

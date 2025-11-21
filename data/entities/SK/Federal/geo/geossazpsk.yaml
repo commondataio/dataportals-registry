@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Web portal of a geospatial data catalog provided by the Slovak Environment
+  Agency (SAZP), offering access to datasets and data services.
+endpoints:
+- type: wfs100
+  url: https://geos.sazp.sk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geos.sazp.sk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geos.sazp.sk/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geos.sazp.sk/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geos.sazp.sk/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geos.sazp.sk/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: https://geos.sazp.sk/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geos.sazp.sk/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geos.sazp.sk/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: geossazpsk
+langs:
+- id: SK
+  name: Slovak
+link: https://geos.sazp.sk/geoserver/web/
+name: Geoserver Portal - SAZP SK
+owner:
+  link: https://www.sazp.sk/
+  location:
+    country:
+      id: SK
+      name: Slovakia
+    level: 20
+  name: Slovak Environment Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Slovakia
+- environment
+- geoserver
+- geospatial
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00000654

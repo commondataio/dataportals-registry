@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion: &id001
+      id: '154'
+      name: Northern Europe
+description: Data catalog providing various ArcGIS services
+endpoints:
+- type: arcgis:rest:info
+  url: http://arcgisproxy.dirnat.no/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://arcgisproxy.dirnat.no/arcgis/rest/services?f=pjson
+id: arcgisproxydirnatno
+langs:
+- id: 'NO'
+  name: Norwegian
+link: http://arcgisproxy.dirnat.no/arcgis/services
+name: arcgisproxy.dirnat.no/arcgis/services
+owner:
+  link: http://dirnat.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion: *id001
+  name: Government of Norway
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- services
+- Norway
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003842

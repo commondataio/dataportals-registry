@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  Research institution server operated by the Bureau of Economic Geology at the University
+  of Texas at Austin.
+endpoints:
+- type: arcgis:rest:info
+  url: https://coastal.beg.utexas.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://coastal.beg.utexas.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://coastal.beg.utexas.edu/arcgis/services?wsdl
+id: coastalbegutexasedu
+langs:
+- id: EN
+  name: English
+link: https://coastal.beg.utexas.edu/arcgis/rest/services
+name: Bureau of Economic Geology - Coastal ArcGIS Server
+owner:
+  link: https://www.beg.utexas.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Bureau of Economic Geology, University of Texas at Austin
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- research
+- university
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012539

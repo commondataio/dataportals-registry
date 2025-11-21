@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: ArcGIS REST API endpoint for geospatial services provided by the Hong
+  Kong Special Administrative Region (HKSAR) Government. This endpoint supports various
+  geospatial data queries and map services.
+endpoints:
+- type: arcgis:rest:info
+  url: http://www1.map.gov.hk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www1.map.gov.hk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://www1.map.gov.hk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://www1.map.gov.hk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www1.map.gov.hk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://www1.map.gov.hk/arcgis/rest/services?f=kmz
+id: www1mapgovhk
+langs:
+- id: ZH
+  name: Chinese
+link: http://www1.map.gov.hk/arcgis/rest/services
+name: GeoInfo Map Services (ArcGIS REST API)
+owner:
+  link: https://www.gov.hk
+  location:
+    country:
+      id: HK
+      name: Hong Kong
+    level: 20
+  name: Hong Kong Special Administrative Region (HKSAR) Government
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+  - ArcGIS
+  - REST
+  - geospatial
+  - geoportal
+  - Hong Kong
+  - government
+  - arcgisserver
+topics:
+  - id: REGI
+    name: Regions and cities
+    type: eudatatheme
+  - id: GOVE
+    name: Government and public sector
+    type: eudatatheme
+  - id: Location
+    name: Location
+    type: iso19115
+uid: temp00005907

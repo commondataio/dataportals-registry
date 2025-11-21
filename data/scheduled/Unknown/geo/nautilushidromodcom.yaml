@@ -1,66 +1,68 @@
 access_mode:
-  - open
+- open
 api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
-  - dataset
-  - map_layer
+- dataset
+- map_layer
 coverage:
-  - location:
-      country:
-        id: Unknown
-        name: Unknown
-      level: 20
-      macroregion:
-        id: World
-        name: World
-description: GeoNetwork data catalog
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: Geospatial data catalog providing geonetwork via nautilus.hidromod.com:8443
 endpoints:
-  - type: geonetwork:query
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/q
-  - type: geonetwork:records
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/api/records
-  - type: openapi
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/v2/api-docs
-    version: '2'
-  - type: csw202
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-    version: 2.0.2
-  - type: opensearch
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/portal.opensearch
-    version: '1.0'
-  - type: oaipmh20
-    url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/oaipmh?verb=Identify
-    version: '2.0'
+- type: geonetwork:query
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/api/records
+- type: openapi
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: nautilushidromodcom
 langs:
-  - id: EN
-    name: English
+- id: EN
+  name: English
 link: https://nautilus.hidromod.com:8443/geonetwork
-name: nautilus.hidromod.com:8443
+name: Hidromod Geoportal
 owner:
-  link: https://nautilus.hidromod.com:8443/geonetwork
+  link: https://nautilus.hidromod.com:8443
   location:
     country:
       id: Unknown
       name: Unknown
     level: 20
-  name: 'Hidromod'
+  name: Hidromod
   type: Business
 properties:
   has_doi: true
 rights:
-  license_id:
-  license_name:
-  license_url:
-  privacy_policy_url:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
   rights_type: granular
-  tos_url:
+  tos_url: null
 software:
   id: geonetwork
   name: Geonetwork
-status: scheduled
-tags: []
+status: active
+tags:
+- geonetwork
+- geospatial
 topics: []
 uid: temp00002012

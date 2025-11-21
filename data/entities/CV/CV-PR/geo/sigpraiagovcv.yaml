@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 30
+    macroregion:
+      id: '011'
+      name: Western Africa
+    subregion:
+      id: CV-PR
+      name: Praia
+description: Geospatial information system (SIG) providing geographic and urban
+  management web services for Praia, the capital city of Cabo Verde. Offers access
+  to geospatial datasets and map services via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sigpraia.gov.cv/servicossig/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sigpraia.gov.cv/servicossig/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sigpraia.gov.cv/servicossig/services?wsdl
+- type: arcgis:sitemap
+  url: https://sigpraia.gov.cv/servicossig/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://sigpraia.gov.cv/servicossig/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://sigpraia.gov.cv/servicossig/rest/services?f=kmz
+id: sigpraiagovcv
+langs:
+- id: PT
+  name: Portugal
+link: https://sigpraia.gov.cv/servicossig/rest/services
+name: SIG Praia Geoportal
+owner:
+  link: https://sigpraia.gov.cv
+  location:
+    country:
+      id: CV
+      name: Cabo Verde
+    level: 30
+    subregion:
+      id: CV-PR
+      name: Praia
+  name: Câmara Municipal da Praia
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- government
+- GIS
+- ArcGIS
+- web services
+- geoportal
+- urban planning
+- local government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00001380

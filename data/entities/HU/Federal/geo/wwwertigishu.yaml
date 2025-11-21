@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Catalog accessible via REST services endpoint, likely providing geospatial
+  and GIS data services.
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.ertigis.hu:8080/ertigiswa/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://www.ertigis.hu:8080/ertigiswa/services?wsdl
+- type: arcgis:sitemap
+  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://www.ertigis.hu:8080/ertigiswa/rest/services?f=kmz
+id: wwwertigishu
+langs:
+- id: HU
+  name: Hungarian
+link: http://www.ertigis.hu:8080/ertigiswa/rest/services
+name: ertigis.hu data catalog
+owner:
+  link: http://www.ertigis.hu
+  location:
+    country:
+      id: HU
+      name: Hungary
+    level: 20
+  name: Not specified in URL
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- data services
+- geoportal
+- geospatial
+- GIS
+- Hungary
+- REST API
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005914

@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: Data catalog published by the Department of Information Technology, Thailand.
+endpoints:
+- type: ckan
+  url: https://datacatalog.dit.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datacatalog.dit.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datacatalog.dit.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://datacatalog.dit.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://datacatalog.dit.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://datacatalog.dit.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://datacatalog.dit.go.th/catalog.jsonld
+id: datacatalogditgoth
+langs:
+- id: TH
+  name: Thai
+link: https://datacatalog.dit.go.th
+name: datacatalog.dit.go.th
+owner:
+  link: https://datacatalog.dit.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: Department of Information Technology (DIT), Thailand
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Thailand
+- Government data
+- Open data
+- ckan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: temp00000687

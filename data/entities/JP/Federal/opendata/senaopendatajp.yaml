@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Open data portal for the Sena region providing access to local government
+  datasets and public information through a CKAN-powered catalog system.
+endpoints:
+- type: ckan
+  url: https://ckan.sena-opendata.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.sena-opendata.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.sena-opendata.jp/api/3/action/package_list
+  version: '3'
+id: senaopendatajp
+langs:
+- id: JA
+  name: Japanese
+link: https://ckan.sena-opendata.jp
+name: Sena Open Data Portal
+owner:
+  link: https://sena-opendata.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Sena Regional Government
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- government
+- CKAN
+- local government
+- Sena
+- Japan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: temp00000399

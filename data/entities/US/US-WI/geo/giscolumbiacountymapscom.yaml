@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WI
+      name: Wisconsin
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for Columbia County, Wisconsin. Provides access to geospatial datasets including
+  parcels, zoning, infrastructure, and other county-level geographic information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.columbiacountymaps.com/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.columbiacountymaps.com/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.columbiacountymaps.com/arcgis/services?wsdl
+id: giscolumbiacountymapscom
+langs:
+- id: EN
+  name: English
+link: https://gis.columbiacountymaps.com/server/arcgis/rest/services
+name: Columbia County GIS Server
+owner:
+  link: https://www.co.columbia.wi.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-WI
+      name: Wisconsin
+  name: Columbia County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- Wisconsin
+- Columbia County
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012157

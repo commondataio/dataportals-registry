@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-SD
+      name: South Dakota
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for the University of South Dakota. Provides access to university geospatial datasets
+  including campus mapping, research data, and other geographic information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.usd.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.usd.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.usd.edu/arcgis/services?wsdl
+id: gisusdedu
+langs:
+- id: EN
+  name: English
+link: https://gis.usd.edu/arcgis/rest/services
+name: University of South Dakota GIS Server
+owner:
+  link: https://www.usd.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-SD
+      name: South Dakota
+  name: University of South Dakota
+  type: Higher education
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- university
+- South Dakota
+- higher education
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013320

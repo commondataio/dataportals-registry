@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Official geospatial data services portal for Peninsula Transportation
+  Regional Commission providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.ptrc.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.ptrc.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.ptrc.org/arcgis/services?wsdl
+id: mapsptrcorg
+langs:
+- id: EN
+  name: English
+link: https://maps.ptrc.org/arcgis/rest/services
+name: Peninsula Transportation Regional Commission GIS Portal
+owner:
+  link: https://ptrc.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Peninsula Transportation Regional Commission
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013009

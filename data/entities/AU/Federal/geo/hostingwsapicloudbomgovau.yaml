@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+    macroregion:
+      id: '053'
+      name: Australia and New Zealand
+description: ArcGIS REST Services endpoint providing meteorological, climatological,
+  and related data services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/services?f=kmz
+id: hostingwsapicloudbomgovau
+langs:
+- id: EN
+  name: English
+link: https://hosting.wsapi.cloud.bom.gov.au/arcgis/rest/services
+name: Bureau of Meteorology Data Catalog (hosting.wsapi.cloud.bom.gov.au)
+owner:
+  link: http://www.bom.gov.au
+  location:
+    country:
+      id: AU
+      name: Australia
+    level: 20
+  name: Bureau of Meteorology
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- weather
+- climate
+- rainfall
+- water
+- marine
+- forecast
+- API
+- ArcGIS
+- meteorology
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: temp00004884

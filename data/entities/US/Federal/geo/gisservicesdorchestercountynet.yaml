@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: A comprehensive web mapping application that contains multiple layers
+  from various sources. Includes evacuation zones, critical area zones, floodplain
+  zones, protected lands, zoning, and parcel boundaries. Also features Dorchester
+  County Council District Map, Zoning Map, Critical Area Map, Floodplain Map, Survey
+  Benchmarks Map, Protected Lands Map, Addressing Hub, Dorchester RoadView, and access
+  to GIS data downloads.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisservices.dorchestercounty.net/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisservices.dorchestercounty.net/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisservices.dorchestercounty.net/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisservices.dorchestercounty.net/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisservices.dorchestercounty.net/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisservices.dorchestercounty.net/arcgis/rest/services?f=kmz
+id: gisservicesdorchestercountynet
+langs: []
+link: https://gisservices.dorchestercounty.net/arcgis/rest/services
+name: gisservices.dorchestercounty.net
+owner:
+  link: https://dorchestercountymd.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Dorchester County Government
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- layers
+- maps
+- floodplain
+- zoning
+- roads
+- protected lands
+- survey
+- evacuation zones
+- critical area
+- parcel boundaries
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+uid: temp00003995

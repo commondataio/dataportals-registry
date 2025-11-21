@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WA
+      name: Washington
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  City level server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://apps.issaquahwa.gov/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://apps.issaquahwa.gov/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://apps.issaquahwa.gov/arcgis/services?wsdl
+id: appsissaquahwagov
+langs:
+- id: EN
+  name: English
+link: https://apps.issaquahwa.gov/server/arcgis/rest/services
+name: City of Issaquah ArcGIS Server
+owner:
+  link: https://www.issaquahwa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WA
+      name: Washington
+  name: City of Issaquah
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- City
+- Municipal
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012183

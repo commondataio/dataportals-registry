@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Data catalog hosted on GeoNetwork platform, commonly used for geospatial
+  metadata management and discovery
+endpoints:
+- type: geonetwork:query
+  url: http://tomcat.medchm.net/geonetwork/srv/eng/q
+- type: openapi
+  url: http://tomcat.medchm.net/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://tomcat.medchm.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://tomcat.medchm.net/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://tomcat.medchm.net/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: tomcatmedchmnet
+langs: []
+link: http://tomcat.medchm.net/geonetwork
+name: tomcat.medchm.net/geonetwork
+owner:
+  link: http://tomcat.medchm.net/geonetwork
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Not specified in raw text
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geonetwork
+- catalog
+topics: []
+uid: temp00002771

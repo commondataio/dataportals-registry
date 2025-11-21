@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: GeoNetwork data catalog
+endpoints:
+- type: geonetwork:query
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/api/records
+- type: openapi
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://nautilus.hidromod.com:8443/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: nautilushidromodcom
+langs:
+- id: EN
+  name: English
+link: https://nautilus.hidromod.com:8443/geonetwork
+name: nautilus.hidromod.com:8443
+owner:
+  link: https://nautilus.hidromod.com:8443/geonetwork
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Hidromod
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags: []
+topics: []
+uid: temp00002012

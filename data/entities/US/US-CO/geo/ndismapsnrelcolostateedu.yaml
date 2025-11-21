@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for Colorado State University's Natural Resource Ecology Laboratory (NREL). Provides
+  access to geospatial datasets including natural resources, ecology, and research
+  data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ndismaps.nrel.colostate.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ndismaps.nrel.colostate.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ndismaps.nrel.colostate.edu/arcgis/services?wsdl
+id: ndismapsnrelcolostateedu
+langs:
+- id: EN
+  name: English
+link: https://ndismaps.nrel.colostate.edu/arcgis/rest/services
+name: Colorado State University NREL GIS Server
+owner:
+  link: https://www.nrel.colostate.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-CO
+      name: Colorado
+  name: Colorado State University
+  type: Higher education
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- university
+- Colorado
+- higher education
+- NREL
+- natural resources
+- ecology
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012486

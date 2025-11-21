@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: Official geospatial data services portal for Florida Srwmd providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: http://gis.srwmd.state.fl.us/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis.srwmd.state.fl.us/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gis.srwmd.state.fl.us/arcgis/services?wsdl
+id: gissrwmdstateflus
+langs:
+- id: EN
+  name: English
+link: http://gis.srwmd.state.fl.us/arcgis/rest/services
+name: Florida Srwmd GIS Portal
+owner:
+  link: https://www.fl.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Florida Srwmd
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- florida
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012378

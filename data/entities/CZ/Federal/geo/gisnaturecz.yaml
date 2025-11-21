@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Data catalog containing spatial data services provided by Nature Conservation
+  Agency of the Czech Republic
+endpoints:
+- type: arcgis:rest:info
+  url: http://gis.nature.cz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis.nature.cz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://gis.nature.cz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://gis.nature.cz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://gis.nature.cz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://gis.nature.cz/arcgis/rest/services?f=kmz
+id: gisnaturecz
+langs:
+- id: CS
+  name: Czech
+link: http://gis.nature.cz/arcgis/rest/services
+name: gis.nature.cz/arcgis/rest/services
+owner:
+  link: http://gis.nature.cz/arcgis/rest/services
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Nature Conservation Agency of the Czech Republic
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Czech Republic
+- GIS
+- arcgisserver
+- geospatial
+- nature conservation
+- protected areas
+- spatial data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001384

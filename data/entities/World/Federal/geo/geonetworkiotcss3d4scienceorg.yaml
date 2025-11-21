@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: GeoNetwork Open Source catalogue of datasets and services hosted by D4Science.
+  This catalog is accessible via the provided URL.
+endpoints:
+- type: geonetwork:query
+  url: http://geonetwork-iotcss3.d4science.org/geonetwork/srv/eng/q
+- type: csw202
+  url: http://geonetwork-iotcss3.d4science.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://geonetwork-iotcss3.d4science.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geonetworkiotcss3d4scienceorg
+langs: []
+link: http://geonetwork-iotcss3.d4science.org/geonetwork
+name: geonetwork-iotcss3.d4science.org/geonetwork
+owner:
+  link: http://geonetwork-iotcss3.d4science.org/geonetwork
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: D4Science
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- GIS
+- geospatial
+- metadata
+- open data
+- SDI
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00005350

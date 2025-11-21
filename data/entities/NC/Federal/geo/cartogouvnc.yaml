@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NC
+      name: New Caledonia
+    level: 20
+    macroregion:
+      id: '054'
+      name: Melanesia
+description: Public REST services catalog of geospatial data for New Caledonia, likely
+  maintained by local government entity.
+endpoints:
+- type: arcgis:rest:info
+  url: https://carto.gouv.nc:443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://carto.gouv.nc:443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://carto.gouv.nc:443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://carto.gouv.nc:443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://carto.gouv.nc:443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://carto.gouv.nc:443/arcgis/rest/services?f=kmz
+id: cartogouvnc
+langs: []
+link: https://carto.gouv.nc:443/public/rest/services
+name: CARTO GOUV NC Public Services
+owner:
+  link: https://carto.gouv.nc
+  location:
+    country:
+      id: NC
+      name: New Caledonia
+    level: 20
+  name: CARTO GOUV NC
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- public
+- REST
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00001703

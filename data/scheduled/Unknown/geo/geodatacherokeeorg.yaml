@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via geodata.cherokee.org
+endpoints:
+- type: arcgis:rest:info
+  url: http://geodata.cherokee.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: http://geodata.cherokee.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://geodata.cherokee.org/arcgis/services?wsdl
+id: geodatacherokeeorg
+langs:
+- id: EN
+  name: English
+link: http://geodata.cherokee.org/arcgis/rest/services
+name: Cherokee Geoportal
+owner:
+  link: http://geodata.cherokee.org
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Geocherokee
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Native_American
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

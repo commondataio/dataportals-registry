@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NJ
+      name: New Jersey
+description: Official geospatial data services portal for Morris County, New Jersey
+  providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://morrisgisapps.co.morris.nj.us/arcgis105/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://morrisgisapps.co.morris.nj.us/arcgis105/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://morrisgisapps.co.morris.nj.us/arcgis/services?wsdl
+id: morrisgisappscomorrisnjus
+langs:
+- id: EN
+  name: English
+link: https://morrisgisapps.co.morris.nj.us/arcgis105/rest/services
+name: Morris County, New Jersey GIS Portal
+owner:
+  link: https://morrisgisapps.co.morris.nj.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NJ
+      name: New Jersey
+  name: Morris County, New Jersey
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- new jersey
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012271

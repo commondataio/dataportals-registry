@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+description: Catalog application to manage spatially referenced resources. Provides
+  powerful metadata editing and search functions as well as an interactive web map
+  viewer.
+endpoints:
+- type: geonetwork:query
+  url: https://fast.openearth.eu/geonetwork/srv/eng/q
+- type: openapi
+  url: https://fast.openearth.eu/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://fast.openearth.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://fast.openearth.eu/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://fast.openearth.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: fastopeneartheu
+langs: []
+link: https://fast.openearth.eu/geonetwork
+name: GeoNetwork opensource
+owner:
+  link: https://geonetwork-opensource.org
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: GeoNetwork community and OSGeo
+  type: Civil society
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- European Union
+- FOSS
+- ISO19115
+- OGC
+- catalog
+- geonetwork
+- geospatial
+- metadata
+- open source
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003596

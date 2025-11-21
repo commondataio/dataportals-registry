@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Official geospatial data services portal for Newaygo County providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgisweb.countyofnewaygo.com/hosting/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgisweb.countyofnewaygo.com/hosting/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgisweb.countyofnewaygo.com/arcgis/services?wsdl
+id: arcgiswebcountyofnewaygocom
+langs:
+- id: EN
+  name: English
+link: https://arcgisweb.countyofnewaygo.com/hosting/rest/services
+name: Newaygo County GIS Portal
+owner:
+  link: https://arcgisweb.countyofnewaygo.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Newaygo County
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012617

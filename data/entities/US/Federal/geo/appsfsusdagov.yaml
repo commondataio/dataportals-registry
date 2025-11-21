@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Nationwide geospatial datasets published as map services, accessible
+  via ArcGIS and web applications. Contains various data layers related to forests,
+  land use, and resources.
+endpoints:
+- type: arcgis:rest:info
+  url: https://apps.fs.usda.gov/fsgisx01/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://apps.fs.usda.gov/fsgisx01/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://apps.fs.usda.gov/fsgisx01/services?wsdl
+- type: arcgis:sitemap
+  url: https://apps.fs.usda.gov/fsgisx01/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://apps.fs.usda.gov/fsgisx01/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://apps.fs.usda.gov/fsgisx01/rest/services?f=kmz
+id: appsfsusdagov
+langs:
+- id: EN
+  name: English
+link: https://apps.fs.usda.gov/fsgisx01/rest/services
+name: USDA Forest Service FSGeodata Clearinghouse Map Services
+owner:
+  link: https://www.fs.usda.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: US Forest Service
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- forest
+- geospatial
+- map services
+- ArcGIS
+- USDA
+- land use
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00004256

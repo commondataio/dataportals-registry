@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via gis.gscplanning.com
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.gscplanning.com/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.gscplanning.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.gscplanning.com/arcgis/services?wsdl
+id: gisgscplanningcom
+langs:
+- id: EN
+  name: English
+link: https://gis.gscplanning.com/arcgis/rest/services
+name: Gscplanning Geoportal
+owner:
+  link: https://gscplanning.com
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Gscplanning
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

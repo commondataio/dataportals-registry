@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+description: Dynamic collection of ArcGIS REST services maintained by the European
+  Environment Agency. Not a traditional 'data catalog' in metadata terms, but a service
+  endpoint providing access to map data via REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://trial.discomap.eea.europa.eu/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://trial.discomap.eea.europa.eu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://trial.discomap.eea.europa.eu/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://trial.discomap.eea.europa.eu/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://trial.discomap.eea.europa.eu/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://trial.discomap.eea.europa.eu/arcgis/rest/services?f=kmz
+id: trialdiscomapeeaeuropaeu
+langs: []
+link: https://trial.discomap.eea.europa.eu/arcgis/rest/services
+name: DiscoMap EEA REST Services
+owner:
+  link: https://www.eea.europa.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Environment Agency (EEA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- European Union
+- GIS
+- REST
+- WMS
+- arcgisserver
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005580

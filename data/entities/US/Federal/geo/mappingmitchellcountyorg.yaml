@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS REST Services directory for Mitchell County mapping services
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapping.mitchellcounty.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapping.mitchellcounty.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapping.mitchellcounty.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapping.mitchellcounty.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapping.mitchellcounty.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapping.mitchellcounty.org/arcgis/rest/services?f=kmz
+id: mappingmitchellcountyorg
+langs: []
+link: https://mapping.mitchellcounty.org/arcgis/rest/services
+name: Mitchell County Mapping Services REST API
+owner:
+  link: https://mapping.mitchellcounty.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Mitchell County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- mapping
+- public data
+- ArcGIS server
+topics: []
+uid: temp00004028

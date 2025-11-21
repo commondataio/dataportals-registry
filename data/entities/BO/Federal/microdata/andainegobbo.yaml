@@ -1,8 +1,7 @@
 access_mode:
 - open
-- limited
-api: true
-api_status: active
+api: false
+api_status: uncertain
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -15,31 +14,32 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Colección de bases de datos del Instituto Nacional de Estadística y otras
-  entidades del Sistema de Estadísticas Oficiales del Estado Plurinacional de Bolivia.
+description: El catálogo de microdatos es una colección de bases de datos del Instituto
+  Nacional de Estadística y otras entidades del Sistema de Estadísticas Oficiales
+  del Estado Plurinacional de Bolivia.
 endpoints:
 - type: nada:catalog-search
-  url: https://anda.ine.gob.bo/index.php/api/catalog/search
+  url: http://anda.ine.gob.bo/index.php/api/catalog/search
 - type: nada:csvexport
-  url: https://anda.ine.gob.bo/index.php/catalog/export/csv?ps=5000&collection[]
-id: andaineinegobbo
+  url: http://anda.ine.gob.bo/index.php/catalog/export/csv?ps=5000&collection[]
+id: andainegobbo
 langs:
-- id: EN
-  name: English
-link: https://anda.ine.gob.bo
+- id: ES
+  name: Spanish
+link: http://anda.ine.gob.bo
 name: Catálogo del Archivo Nacional de Datos (ANDA)
 owner:
-  link: https://www.ine.gob.bo
+  link: https://anda.ine.gob.bo
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
-  name: Instituto Nacional de Estadística (Bolivia)
+  name: Instituto Nacional de Estadística (INE) y otras entidades del Sistema de Estadísticas
+    Oficiales del Estado Plurinacional de Bolivia
   type: Central government
 properties:
   has_doi: false
-  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -52,37 +52,45 @@ software:
   name: NADA
 status: active
 tags:
-- government
-- has_api
+- ANDA
+- Bolivia
+- INE
 - microdata
-- Microdatos
-- Censos
-- Encuestas
-- Estadísticas Agregadas
-- Registros Estadísticos
+- nada
+- official
+- statistics
 topics:
 - id: SOCI
   name: Population and society
   type: eudatatheme
-- id: Society
-  name: Society
-  type: iso19115
 - id: ECON
   name: Economy and finance
   type: eudatatheme
-- id: REGI
-  name: Regions and cities
+- id: SOCI
+  name: Population and society
   type: eudatatheme
-- id: ENER
-  name: Energy
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: TRAN
-  name: Transport
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
   type: eudatatheme
 - id: Economy
   name: Economy
   type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 - id: Health
   name: Health
   type: iso19115
-uid: cdi00004387
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00003410

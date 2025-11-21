@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: A data catalog providing access to ArcGIS REST services, commonly used
+  for geospatial data sharing and integration.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gems.lm.doe.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gems.lm.doe.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gems.lm.doe.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gems.lm.doe.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gems.lm.doe.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gems.lm.doe.gov/arcgis/rest/services?f=kmz
+id: gemslmdoegov
+langs:
+- id: EN
+  name: English
+link: https://gems.lm.doe.gov/arcgis/rest/services
+name: GEMS Data Catalog - ArcGIS REST Services Directory
+owner:
+  link: https://gems.lm.doe.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Department of Energy, Office of Legacy Management
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- geospatial
+- U.S. DOE
+- geodata
+- public services
+- government data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00004278

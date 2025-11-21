@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Discover, analyze and download data from Jacobs Hive. Download in CSV,
+  KML, Zip, GeoJSON, GeoTIFF or PNG.
+endpoints:
+- type: wms111
+  url: https://geospatial.jacobs.com/service?REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://geospatial.jacobs.com/service?REQUEST=GetCapabilities&SERVICE=WMTS
+  version: 1.0.0
+- type: tms100
+  url: https://geospatial.jacobs.com/tms/1.0.0/
+  version: 1.0.0
+- type: wmts100
+  url: https://geospatial.jacobs.com/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+id: geospatialjacobscom
+langs:
+- id: EN
+  name: English
+link: https://geospatial.jacobs.com
+name: Jacobs Hive - ArcGIS Online
+owner:
+  link: https://jacobs-hive-jacobs.hub.arcgis.com/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Jacobs Hive
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: mapproxy
+  name: Mapproxy
+status: active
+tags: []
+topics: []
+uid: temp00002208

@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MT
+      name: Montana
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for Montana Tech. Provides access to university geospatial datasets including geological
+  and mining data, campus mapping, and other geographic information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mbmgmap.mtech.edu/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mbmgmap.mtech.edu/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mbmgmap.mtech.edu/arcgis/services?wsdl
+id: mbmgmapmtechedu
+langs:
+- id: EN
+  name: English
+link: https://mbmgmap.mtech.edu/server/arcgis/rest/services
+name: Montana Tech GIS Server
+owner:
+  link: https://www.mtech.edu
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-MT
+      name: Montana
+  name: Montana Tech
+  type: Higher education
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- university
+- Montana
+- higher education
+- geology
+- mining
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013374

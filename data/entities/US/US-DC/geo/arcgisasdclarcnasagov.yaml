@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-DC
+      name: District of Columbia
+description: ArcGIS REST services catalog for NASA's Atmospheric Science Data Center
+  (ASDC) at Langley Research Center, providing access to geospatial datasets related
+  to Earth science, including radiation budget, clouds, aerosols, and tropospheric
+  composition.
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcgis.asdc.larc.nasa.gov/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.asdc.larc.nasa.gov/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.asdc.larc.nasa.gov/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.asdc.larc.nasa.gov/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.asdc.larc.nasa.gov/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://arcgis.asdc.larc.nasa.gov/server/rest/services?f=kmz
+id: arcgisasdclarcnasagov
+langs:
+- id: EN
+  name: English
+link: https://arcgis.asdc.larc.nasa.gov/server/rest/services
+name: NASA ASDC ArcGIS REST Services Catalog
+owner:
+  link: https://asdc.larc.nasa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-DC
+      name: District of Columbia
+  name: NASA Langley Research Center
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- satellite imagery
+- remote sensing
+- climate
+- GIS
+- NASA
+- ASDC
+- ArcGIS REST services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: temp00005659

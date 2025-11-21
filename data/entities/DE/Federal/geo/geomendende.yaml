@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Data catalog hosting services
+endpoints:
+- type: arcgis:rest:info
+  url: https://geo.menden.de/hosting/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geo.menden.de/hosting/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geo.menden.de/hosting/services?wsdl
+- type: arcgis:sitemap
+  url: https://geo.menden.de/hosting/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geo.menden.de/hosting/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geo.menden.de/hosting/rest/services?f=kmz
+id: geomendende
+langs:
+- id: DE
+  name: German
+link: https://geo.menden.de/hosting/services
+name: geo.menden.de/hosting/services
+owner:
+  link: https://geo.menden.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: geo.menden.de (Menden)
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Germany
+- OpenGIS
+- SDI
+- WFS
+- WMS
+- arcgisserver
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00004936

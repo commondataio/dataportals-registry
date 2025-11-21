@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Catálogo de datos geoespaciales de Ministerio de Seguridad que proporciona
+  servicios web geográficos basados en estándares OGC.
+endpoints:
+- type: arcgis:rest:info
+  url: https://mapas.msm.gov.ar/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mapas.msm.gov.ar/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://mapas.msm.gov.ar/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://mapas.msm.gov.ar/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://mapas.msm.gov.ar/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://mapas.msm.gov.ar/arcgis/rest/services?f=kmz
+id: mapasmsmgovar
+langs:
+- id: ES
+  name: Spanish
+link: https://mapas.msm.gov.ar/arcgis/rest/services
+name: Ministerio de Seguridad Geoportal
+owner:
+  link: https://msm.gov.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Ministerio de Seguridad
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- arcgisserver
+- Argentina
+- government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: temp00005858

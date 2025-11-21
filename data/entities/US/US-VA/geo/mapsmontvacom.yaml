@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: Official geospatial data services portal for Mont, Virginia providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.montva.com/image/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.montva.com/image/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.montva.com/arcgis/services?wsdl
+id: mapsmontvacom
+langs:
+- id: EN
+  name: English
+link: https://maps.montva.com/image/arcgis/rest/services
+name: Mont, Virginia GIS Portal
+owner:
+  link: https://montva.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: Mont, Virginia
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- virginia
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012548

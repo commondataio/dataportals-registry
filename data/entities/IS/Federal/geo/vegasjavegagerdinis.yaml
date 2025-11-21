@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: ArcGIS Server REST services directory operated by Vegagerðin (Icelandic
+  Road and Coastal Administration) providing access to transportation and infrastructure
+  geospatial datasets through standard ArcGIS protocols.
+endpoints:
+- type: arcgis:rest:info
+  url: https://vegasja.vegagerdin.is/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://vegasja.vegagerdin.is/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://vegasja.vegagerdin.is/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://vegasja.vegagerdin.is/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://vegasja.vegagerdin.is/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://vegasja.vegagerdin.is/arcgis/rest/services?f=kmz
+id: vegasjavegagerdinis
+langs:
+- id: IS
+  name: Icelandic
+link: https://vegasja.vegagerdin.is/arcgis/rest/services/
+name: Vegagerðin ArcGIS Server
+owner:
+  link: https://vegagerdin.is
+  location:
+    country: *id001
+    level: 20
+  name: Vegagerðin (Icelandic Road and Coastal Administration)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- transportation
+- roads
+- infrastructure
+- Iceland
+- Vegagerðin
+- geospatial
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: temp00001562

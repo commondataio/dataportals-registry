@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: Open data portal for the Government Data Catalog (GD Catalog), operated
+  under established governance frameworks and guidelines, facilitating easy search
+  and retrieval of government data for both officials and the public.
+endpoints:
+- type: ckan
+  url: https://otp.gdcatalog.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://otp.gdcatalog.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://otp.gdcatalog.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://otp.gdcatalog.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://otp.gdcatalog.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://otp.gdcatalog.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://otp.gdcatalog.go.th/catalog.jsonld
+id: otpgdcataloggoth
+langs:
+- id: TH
+  name: Thai
+link: https://otp.gdcatalog.go.th
+name: otp.gdcatalog.go.th
+owner:
+  link: https://otp.gdcatalog.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: Office of Transport and Traffic Policy (OTP), Thailand
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- transport
+- government data
+- Thailand
+- ckan
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: temp00005323

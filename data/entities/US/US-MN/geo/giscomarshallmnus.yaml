@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MN
+      name: Minnesota
+description: Official geospatial data services portal for Marshall County, Minnesota
+  providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.co.marshall.mn.us/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.co.marshall.mn.us/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.co.marshall.mn.us/arcgis/services?wsdl
+id: giscomarshallmnus
+langs:
+- id: EN
+  name: English
+link: https://gis.co.marshall.mn.us/server/arcgis/rest/services
+name: Marshall County, Minnesota GIS Portal
+owner:
+  link: https://co.marshall.mn.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: Marshall County, Minnesota
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- minnesota
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013418

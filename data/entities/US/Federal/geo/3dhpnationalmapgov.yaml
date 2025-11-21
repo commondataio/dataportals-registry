@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: ArcGIS Server instance providing geospatial data services for USGS's
+  3D Elevation Program (3DEP), delivering high-quality topographic data and elevation
+  products for the United States.
+endpoints:
+- type: arcgis:rest:info
+  url: https://3dhp.nationalmap.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://3dhp.nationalmap.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://3dhp.nationalmap.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://3dhp.nationalmap.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://3dhp.nationalmap.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://3dhp.nationalmap.gov/arcgis/rest/services?f=kmz
+id: 3dhpnationalmapgov
+langs:
+- id: EN
+  name: English
+link: https://3dhp.nationalmap.gov/arcgis/rest/services
+name: USGS 3D Elevation Program (3DEP) ArcGIS Services
+owner:
+  link: https://www.usgs.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: U.S. Geological Survey
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- USGS
+- ArcGIS
+- REST
+- GIS
+- Federal
+- 3DEP
+- elevation
+- topographic
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00012754

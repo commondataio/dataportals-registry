@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Platform to access GIS data created, maintained, licensed, and stored
+  by Prince William County.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisweb.pwcgov.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisweb.pwcgov.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisweb.pwcgov.org/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisweb.pwcgov.org/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisweb.pwcgov.org/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisweb.pwcgov.org/arcgis/rest/services?f=kmz
+id: giswebpwcgovorg
+langs: []
+link: https://gisweb.pwcgov.org/arcgis/rest/services
+name: GIS Data Portal for Prince William County, Virginia
+owner:
+  link: https://gisweb.pwcgov.org/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Prince William County, Virginia
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geodata
+- government data
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00004002

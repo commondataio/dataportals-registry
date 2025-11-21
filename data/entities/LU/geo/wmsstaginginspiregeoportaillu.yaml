@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Geoserver WMS endpoint for INSPIRE Geoportal Luxembourg, providing access
+  to geographic datasets as per INSPIRE standards.
+endpoints:
+- type: wfs100
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wps100
+  url: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: wmsstaginginspiregeoportaillu
+langs:
+- id: FR
+  name: French
+link: https://wms.staging.inspire.geoportail.lu/geoserver
+name: INSPIRE Geoportal Luxembourg (Geoserver WMS)
+owner:
+  link: https://geoportail.lu
+  location:
+    country:
+      id: LU
+      name: Luxembourg
+    level: 20
+  name: Cadastral Administration and Topography (Administration du Cadastre et de
+    la Topographie)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Geoserver
+- INSPIRE
+- Luxembourg
+- WMS
+- geodata
+- geoportal
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001600

@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Geoportal providing geospatial data services and REST API for Kurikka
+  municipality in Finland.
+endpoints:
+- type: arcgis:rest:info
+  url: https://kurikka.dmcity.fi/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://kurikka.dmcity.fi/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://kurikka.dmcity.fi/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://kurikka.dmcity.fi/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://kurikka.dmcity.fi/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://kurikka.dmcity.fi/server/rest/services?f=kmz
+id: kurikkadmcityfi
+langs:
+- id: FI
+  name: Finnish
+link: https://kurikka.dmcity.fi/server/rest/services
+name: Kurikka Municipality Geoportal
+owner:
+  link: https://kurikka.dmcity.fi
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 20
+  name: Kurikka municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Finland
+- GIS
+- Kurikka
+- REST
+- arcgisserver
+- geospatial
+- local government
+- municipality
+- services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00004974

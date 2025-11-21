@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+description: Data catalog portal for INSPIRE geospatial services and datasets hosted
+  by the Romanian Waters Administration
+endpoints:
+- type: arcgis:rest:info
+  url: http://inspire.rowater.ro/inspire/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://inspire.rowater.ro/inspire/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://inspire.rowater.ro/inspire/services?wsdl
+- type: arcgis:sitemap
+  url: http://inspire.rowater.ro/inspire/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://inspire.rowater.ro/inspire/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://inspire.rowater.ro/inspire/rest/services?f=kmz
+id: inspirerowaterro
+langs:
+- id: RO
+  name: Romanian
+link: http://inspire.rowater.ro/inspire/rest/services
+name: Inspire Rowater Data Services Portal
+owner:
+  link: http://inspire.rowater.ro
+  location:
+    country:
+      id: RO
+      name: Romania
+    level: 20
+  name: Romanian Waters Administration
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- INSPIRE
+- water resources
+- geospatial data service
+- rest
+- EU Directive 2007/2/EC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: temp00005609

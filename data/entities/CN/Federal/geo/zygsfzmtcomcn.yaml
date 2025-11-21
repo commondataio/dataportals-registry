@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CN
+      name: China
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Data catalog endpoint for ArcGIS REST services
+endpoints:
+- type: arcgis:rest:info
+  url: http://zygs.fzmt.com.cn:6084/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://zygs.fzmt.com.cn:6084/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://zygs.fzmt.com.cn:6084/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://zygs.fzmt.com.cn:6084/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://zygs.fzmt.com.cn:6084/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://zygs.fzmt.com.cn:6084/arcgis/rest/services?f=kmz
+id: zygsfzmtcomcn
+langs:
+- id: ZH
+  name: Chinese
+link: http://zygs.fzmt.com.cn:6084/arcgis/rest/services
+name: zygs.fzmt.com.cn:6084
+owner:
+  link: http://fzmt.com.cn
+  location:
+    country:
+      id: CN
+      name: China
+    level: 20
+  name: Government of China
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- China
+- REST services
+- arcgisserver
+- geospatial
+- geospatial data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005791

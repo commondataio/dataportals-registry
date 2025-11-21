@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OH
+      name: Ohio
+description: ArcGIS Server instance providing geospatial data services via REST API
+  for Scioto County, Ohio. Provides access to county-level geospatial datasets including
+  engineering, infrastructure, parcels, and other geographic information.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.sciotocountyengineer.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.sciotocountyengineer.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.sciotocountyengineer.org/arcgis/services?wsdl
+id: wwwsciotocountyengineerorg
+langs:
+- id: EN
+  name: English
+link: https://www.sciotocountyengineer.org/arcgis/rest/services
+name: Scioto County Engineer GIS Server
+owner:
+  link: https://www.sciotocountyengineer.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 40
+    subdivision:
+      id: US-OH
+      name: Ohio
+  name: Scioto County Engineer
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- Ohio
+- Scioto County
+- engineering
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012006

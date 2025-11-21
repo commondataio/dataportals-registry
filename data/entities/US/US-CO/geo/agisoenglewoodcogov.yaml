@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CO
+      name: Colorado
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  City of Englewood, Colorado GIS portal.
+endpoints:
+- type: arcgis:rest:info
+  url: https://agiso.englewoodco.gov/public/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://agiso.englewoodco.gov/public/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://agiso.englewoodco.gov/arcgis/services?wsdl
+id: agisoenglewoodcogov
+langs:
+- id: EN
+  name: English
+link: https://agiso.englewoodco.gov/public/arcgis/rest/services
+name: agiso.englewoodco.gov ArcGIS Server
+owner:
+  link: https://www.englewoodco.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: City of Englewood
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- City
+- Local government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012478

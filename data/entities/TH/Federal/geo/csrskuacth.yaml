@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: A GeoServer web interface for data catalog, from Kasetsart University.
+endpoints:
+- type: wfs100
+  url: https://csrs.ku.ac.th/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://csrs.ku.ac.th/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://csrs.ku.ac.th/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wps100
+  url: https://csrs.ku.ac.th/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: csrskuacth
+langs:
+- id: TH
+  name: Thai
+link: https://csrs.ku.ac.th/geoserver/web/
+name: csrs.ku.ac.th/geoserver/web/
+owner:
+  link: https://csrs.ku.ac.th/
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: Kasetsart University
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geoserver
+- spatial data
+- geospatial catalog
+- Thailand
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00000664

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Catalogue cartographique de l’Agence française pour la biodiversité (AFB)/OFB
+endpoints:
+- type: csw202
+  url: https://cartographie.afbiodiversite.fr/catalogue/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://cartographie.afbiodiversite.fr/catalogue/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: cartographieafbiodiversitefr
+langs:
+- id: FR
+  name: French
+link: https://cartographie.afbiodiversite.fr/catalogue
+name: AFBiodiversité Cartographie Catalogue
+owner:
+  link: https://cartographie.afbiodiversite.fr/catalogue
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Agence française pour la biodiversité (AFB)/OFB
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- France
+- biodiversity
+- geonetwork
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002726

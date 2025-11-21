@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: &id001
+      id: World
+      name: World
+description: Catalog providing access, search and discovery of Energy and Environmental
+  related resources. Cataloging is powered by an OGC CSW and is part of GEOSS.
+endpoints:
+- type: csw202
+  url: http://geocatalog.webservice-energy.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://geocatalog.webservice-energy.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geocatalogwebserviceenergyorg
+langs: []
+link: http://geocatalog.webservice-energy.org/geonetwork
+name: geocatalog.webservice-energy.org
+owner:
+  link: https://www.webservice-energy.org
+  location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion: *id001
+  name: Webservice-Energy Platform
+  type: International
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Energy
+- Environment
+- OGC CSW
+- Web Services
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: temp00003038

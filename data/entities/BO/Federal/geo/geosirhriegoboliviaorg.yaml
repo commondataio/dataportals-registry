@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoServer deployment del Sistema de Información de Riego e Hidrología
+  (GeoSIRH) que publica infraestructura de riego, monitoreo hidrológico, límites de
+  sistemas productivos y otras capas para la gestión del agua en Bolivia.
+endpoints:
+- type: wms111
+  url: http://geosirh.riegobolivia.org:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://geosirh.riegobolivia.org:80/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: http://geosirh.riegobolivia.org:80/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://geosirh.riegobolivia.org:80/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: geosirhriegoboliviaorg
+langs:
+- id: ES
+  name: Spanish
+link: http://geosirh.riegobolivia.org:80/geoserver
+name: GeoSIRH Bolivia GeoServer
+owner:
+  link: http://www.riegobolivia.org
+  location:
+    country:
+      id: BO
+      name: Bolivia
+    level: 20
+  name: Viceministerio de Recursos Hídricos y Riego (VRHR)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geoserver
+- bolivia
+- sirh
+- water-resources
+- irrigation
+- hydrology
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+uid: temp00001726

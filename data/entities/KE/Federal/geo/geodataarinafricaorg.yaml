@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ARIN's geospatial data repository providing access to spatial data layers,
+  maps published and shared to help in the research process.
+endpoints:
+- type: geonode:layers
+  url: https://geodata.arin-africa.org/api/layers/
+- type: geonode:documents
+  url: https://geodata.arin-africa.org/api/documents/
+- type: csw202
+  url: https://geodata.arin-africa.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodata.arin-africa.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geodata.arin-africa.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geodataarinafricaorg
+langs: []
+link: https://geodata.arin-africa.org
+name: geodata.arin-africa.org
+owner:
+  link: https://www.arin-africa.org
+  location:
+    country:
+      id: KE
+      name: Kenya
+    level: 20
+  name: Africa Research and Impact Network (ARIN)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- research
+- Africa
+- ARIN
+- environment
+- policy
+- SDGs
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: temp00003961

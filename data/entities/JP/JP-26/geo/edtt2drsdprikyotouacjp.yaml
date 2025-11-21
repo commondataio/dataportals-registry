@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: &id001
+      id: JP-26
+      name: Kyoto
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Geospatial data portal operated by Kyoto University's Disaster Prevention
+  Research Institute (DPRI). Provides ArcGIS REST services for disaster-related geospatial
+  datasets and research data.
+endpoints:
+- type: arcgis:rest:info
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/services?f=kmz
+id: edtt2drsdprikyotouacjp
+langs:
+- id: JA
+  name: Japanese
+link: http://edtt2.drs.dpri.kyoto-u.ac.jp/arcgis/rest/services
+name: Kyoto University DPRI Geospatial Services
+owner:
+  link: http://www.dpri.kyoto-u.ac.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: Kyoto University Disaster Prevention Research Institute
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- disaster prevention
+- research
+- ArcGIS
+- Kyoto University
+- Japan
+- academic data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005949

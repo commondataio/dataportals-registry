@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: No information about the owner (central, regional, local government,
+  business, civil society, academy, international) or data theme or ISO19115 theme
+  could be extracted directly from the provided raw URL or the given context. Without
+  specific page content or metadata, it is not possible to provide a precise and complete
+  mapping using the requested vocabularies.
+endpoints:
+- type: geonetwork:query
+  url: http://idef.formosa.gob.ar/metadatos/srv/eng/q
+- type: openapi
+  url: http://idef.formosa.gob.ar/metadatos/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://idef.formosa.gob.ar/metadatos/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://idef.formosa.gob.ar/metadatos/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://idef.formosa.gob.ar/metadatos/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: idefformosagobar
+langs:
+- id: ES
+  name: Spanish
+link: http://idef.formosa.gob.ar/metadatos
+name: Gobierno de la Provincia de Formosa Geoportal
+owner:
+  link: http://formosa.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Gobierno de la Provincia de Formosa
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- geonetwork
+- Argentina
+- provincial government
+- provincial government
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: temp00003339

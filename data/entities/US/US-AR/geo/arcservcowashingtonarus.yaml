@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AR
+      name: Arkansas
+description: Official geospatial data services portal for Washington County, Arkansas
+  providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://arcserv.co.washington.ar.us/server/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcserv.co.washington.ar.us/server/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcserv.co.washington.ar.us/arcgis/services?wsdl
+id: arcservcowashingtonarus
+langs:
+- id: EN
+  name: English
+link: https://arcserv.co.washington.ar.us/server/arcgis/rest/services
+name: Washington County, Arkansas GIS Portal
+owner:
+  link: https://arcserv.co.washington.ar.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AR
+      name: Arkansas
+  name: Washington County, Arkansas
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- arkansas
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012221

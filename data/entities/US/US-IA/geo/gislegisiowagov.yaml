@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IA
+      name: Iowa
+description: ArcGIS REST Services provided by the Iowa Legislature for GIS mapping
+  and data access.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.legis.iowa.gov:443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.legis.iowa.gov:443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.legis.iowa.gov:443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.legis.iowa.gov:443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.legis.iowa.gov:443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.legis.iowa.gov:443/arcgis/rest/services?f=kmz
+id: gislegisiowagov
+langs:
+- id: EN
+  name: English
+link: https://gis.legis.iowa.gov:443/arcgis/rest/services
+name: arcgis/rest/services (Iowa Legislature GIS REST Services)
+owner:
+  link: https://gis.legis.iowa.gov:443/arcgis/rest/services
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IA
+      name: Iowa
+  name: Iowa Legislature
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  tos_url: null
+  privacy_policy_url: null
+  rights_type: global
+  license_id: null
+  license_name: null
+  license_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- Web Services
+- Iowa
+- Legislature
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: temp00004315

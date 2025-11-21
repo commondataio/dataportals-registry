@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Geoportal providing access to geospatial data and services related to
+  water resources, infrastructure, and water management in Honduras. Managed by SANAA
+  (Servicio Autónomo Nacional de Acueductos y Alcantarillados), the national water
+  and sanitation service.
+endpoints:
+- type: arcgis:rest:info
+  url: https://aguadehonduras.gob.hn/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://aguadehonduras.gob.hn/arcgis/rest/services?f=kmz
+id: aguadehondurasgobhn
+langs:
+- id: ES
+  name: Spanish
+link: https://aguadehonduras.gob.hn/arcgis/rest/services
+name: Agua de Honduras Geoportal
+owner:
+  link: https://aguadehonduras.gob.hn
+  location:
+    country:
+      id: HN
+      name: Honduras
+    level: 20
+  name: Servicio Autónomo Nacional de Acueductos y Alcantarillados (SANAA)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- water resources
+- hydrology
+- water infrastructure
+- sanitation
+- GIS
+- geospatial
+- open data
+- Honduras
+- water management
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: temp00005908

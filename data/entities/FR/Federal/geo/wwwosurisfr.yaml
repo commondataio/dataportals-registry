@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork data catalog managed by OSURIS.
+endpoints:
+- type: geonetwork:query
+  url: https://www.osuris.fr/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://www.osuris.fr/geonetwork/srv/api/records
+- type: openapi
+  url: https://www.osuris.fr/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.osuris.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.osuris.fr/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.osuris.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwosurisfr
+langs:
+- id: FR
+  name: French
+link: https://www.osuris.fr/geonetwork
+name: OSURIS GeoNetwork
+owner:
+  link: https://www.osuris.fr/geonetwork
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: OSURIS
+  type: Business
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- France
+- data catalog
+- geonetwork
+- geospatial
+- spatial data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002751

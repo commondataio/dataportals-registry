@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  County level server for Alachua County, Florida.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.alachuacounty.us/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.alachuacounty.us/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.alachuacounty.us/arcgis/services?wsdl
+id: gisalachuacountyus
+langs:
+- id: EN
+  name: English
+link: https://gis.alachuacounty.us/arcgis/rest/services
+name: Alachua County, Florida GIS Portal
+owner:
+  link: https://www.alachuacounty.us
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: Alachua County, Florida
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+- florida
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012395

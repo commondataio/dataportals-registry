@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Website hosting a service catalog, likely containing geographic or maritime
+  data services
+endpoints:
+- type: arcgis:rest:info
+  url: https://ide.dimar.mil.co/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ide.dimar.mil.co/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ide.dimar.mil.co/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://ide.dimar.mil.co/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ide.dimar.mil.co/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ide.dimar.mil.co/server/rest/services?f=kmz
+id: idedimarmilco
+langs:
+- id: ES
+  name: Spanish
+link: https://ide.dimar.mil.co/server/services
+name: ide.dimar.mil.co
+owner:
+  link: https://ide.dimar.mil.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: DIMAR (Dirección General Marítima, Colombia)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Colombia
+- arcgisserver
+- data services
+- geographic
+- geospatial
+- maritime
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00003476

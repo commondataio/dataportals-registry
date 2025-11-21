@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Official geospatial data services portal for San Jose Mapping providing
+  GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://sjmap.org/ArcGIS/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sjmap.org/ArcGIS/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://sjmap.org/arcgis/services?wsdl
+id: sjmaporg
+langs:
+- id: EN
+  name: English
+link: https://sjmap.org/ArcGIS/rest/services
+name: San Jose Mapping GIS Portal
+owner:
+  link: https://sjmap.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: San Jose Mapping
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012956

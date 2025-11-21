@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: &id001
+      id: '035'
+      name: South-eastern Asia
+description: Data catalog for ArcGIS REST API endpoints managed by the district office
+  of Bangkok.
+endpoints:
+- type: arcgis:rest:info
+  url: https://district.bangkok.go.th/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://district.bangkok.go.th/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://district.bangkok.go.th/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://district.bangkok.go.th/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://district.bangkok.go.th/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://district.bangkok.go.th/arcgis/rest/services?f=kmz
+id: districtbangkokgoth
+langs:
+- id: TH
+  name: Thai
+link: https://district.bangkok.go.th/arcgis/rest/services/
+name: district.bangkok.go.th/arcgis/rest/services/
+owner:
+  link: https://district.bangkok.go.th/arcgis/rest/services/
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion: *id001
+  name: District Office, Bangkok
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- Spatial data
+- Thailand
+- arcgisserver
+- Bangkok
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: temp00000666

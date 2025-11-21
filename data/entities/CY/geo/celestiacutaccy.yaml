@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Geoportal providing geospatial data services from Cyprus University of
+  Technology. This geoportal offers access to geographic datasets and map layers using
+  arcgis server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://celestia.cut.ac.cy/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://celestia.cut.ac.cy/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://celestia.cut.ac.cy/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://celestia.cut.ac.cy/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://celestia.cut.ac.cy/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://celestia.cut.ac.cy/server/rest/services?f=kmz
+id: celestiacutaccy
+langs:
+- id: EL
+  name: Greek
+link: https://celestia.cut.ac.cy/server/rest/services
+name: Celestia Geoportal - Cyprus University of Technology
+owner:
+  link: https://cut.ac.cy
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Cyprus University of Technology
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- Cyprus
+- arcgisserver
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005874

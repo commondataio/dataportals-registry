@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 20
+    macroregion: &id001
+      id: 039
+      name: Southern Europe
+description: Server/rest/services endpoint for GIS portal
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportal.rs/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.rs/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.rs/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.rs/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.rs/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisportal.rs/server/rest/services?f=kmz
+id: gisportalrs
+langs:
+- id: SR
+  name: Serbian
+link: https://gisportal.rs/server/rest/services
+name: gisportal.rs REST Services
+owner:
+  link: https://gisportal.rs
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 20
+    macroregion: *id001
+  name: Not specified
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- open data
+- services
+- REST
+- Serbia
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: temp00005811

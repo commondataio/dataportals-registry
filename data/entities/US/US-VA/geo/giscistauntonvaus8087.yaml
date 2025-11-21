@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: ArcGIS Server instance providing geospatial data services via REST API.
+  City level server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ci.staunton.va.us:8087/stagis/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ci.staunton.va.us:8087/stagis/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.ci.staunton.va.us:8087/arcgis/services?wsdl
+id: giscistauntonvaus8087
+langs:
+- id: EN
+  name: English
+link: https://gis.ci.staunton.va.us:8087/stagis/arcgis/rest/services
+name: City of Staunton, VA ArcGIS Server
+owner:
+  link: https://www.stauntonva.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: City of Staunton, VA
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- Staunton
+- Virginia
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012545

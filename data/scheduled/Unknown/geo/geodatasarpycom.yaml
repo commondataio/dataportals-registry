@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+description: Geospatial data catalog providing arcgis server via geodata.sarpy.com
+endpoints:
+- type: arcgis:rest:info
+  url: https://geodata.sarpy.com/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geodata.sarpy.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geodata.sarpy.com/arcgis/services?wsdl
+id: geodatasarpycom
+langs:
+- id: EN
+  name: English
+link: https://geodata.sarpy.com/arcgis/rest/services
+name: Sarpy Geoportal
+owner:
+  link: https://geodata.sarpy.com
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Geosarpy
+  type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- County
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115

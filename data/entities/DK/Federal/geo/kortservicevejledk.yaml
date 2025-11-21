@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GIS services offered by Vejle Municipality
+endpoints:
+- type: arcgis:rest:info
+  url: https://kortservice.vejle.dk/gis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://kortservice.vejle.dk/gis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://kortservice.vejle.dk/gis/services?wsdl
+- type: arcgis:sitemap
+  url: https://kortservice.vejle.dk/gis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://kortservice.vejle.dk/gis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://kortservice.vejle.dk/gis/rest/services?f=kmz
+id: kortservicevejledk
+langs:
+- id: DA
+  name: Danish
+link: https://kortservice.vejle.dk/gis/services
+name: Kortservice Vejle GIS Services
+owner:
+  link: https://kortservice.vejle.dk/gis/services
+  location:
+    country: *id001
+    level: 20
+  name: Vejle Municipality
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgisserver
+- Denmark
+- geo
+- geoportal
+- geospatial
+- GIS
+- maps
+- services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00004960

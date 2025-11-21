@@ -1,0 +1,105 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 30
+    macroregion: &id001
+      id: '053'
+      name: Australia and New Zealand
+    subregion:
+      id: NZ-OTA
+description: Website URL (Data Catalog)
+endpoints:
+- type: geonode:layers
+  url: https://data.otodc.govt.nz/api/layers/
+- type: geonode:documents
+  url: https://data.otodc.govt.nz/api/documents/
+- type: wfs110
+  url: https://data.otodc.govt.nz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://data.otodc.govt.nz/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://data.otodc.govt.nz/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://data.otodc.govt.nz/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://data.otodc.govt.nz/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://data.otodc.govt.nz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: dataotodcgovtnz
+langs:
+- id: EN
+  name: English
+link: https://data.otodc.govt.nz
+name: data.otodc.govt.nz
+owner:
+  link: https://data.otodc.govt.nz
+  location:
+    country:
+      id: NZ
+      name: New Zealand
+    level: 20
+    macroregion: *id001
+  name: Otodc Government
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- government
+- opendata
+- datacatalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003168
