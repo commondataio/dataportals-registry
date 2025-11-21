@@ -1184,5 +1184,448 @@ def update_terms(dryrun=False, mode="entities"):
                 logger.info("Updated %s", os.path.basename(filename).split(".", 1)[0])
 
 
+@app.command()
+def validate_countries(dryrun=False, mode="entities"):
+    """Validate and fix owner.location.country and coverage.location.country in all records"""
+    from constants import COUNTRIES
+    from pycountry import countries
+
+    root_dir = ROOT_DIR if mode == "entities" else SCHEDULED_DIR
+    
+    # Special country codes that are not ISO 3166-1 alpha-2 but are valid in our system
+    SPECIAL_COUNTRIES = {
+        "Unknown", "World", "EU", "Africa", "ASEAN", "Caribbean", 
+        "LatinAmerica", "Oceania", "AQ"  # AQ is Antarctic in our system
+    }
+    
+    # Country code mappings (normalizations)
+    COUNTRY_CODE_MAPPINGS = {
+        "UK": "GB",  # United Kingdom
+    }
+    
+    # Build reverse lookup: name -> code for COUNTRIES dict
+    countries_by_name = {v.upper(): k for k, v in COUNTRIES.items()}
+    
+    total_records = 0
+    updated_records = 0
+    owner_fixes = 0
+    coverage_fixes = 0
+    invalid_countries = set()
+    
+    def normalize_country_id(country_id):
+        """Normalize country ID (e.g., UK -> GB)"""
+        if not country_id:
+            return None
+        country_id = country_id.strip().upper()
+        return COUNTRY_CODE_MAPPINGS.get(country_id, country_id)
+    
+    def find_country_by_name(name):
+        """Try to find country code by name using pycountry and COUNTRIES"""
+        if not name:
+            return None
+        
+        name_upper = name.strip().upper()
+        
+        # First check COUNTRIES dictionary
+        if name_upper in countries_by_name:
+            return countries_by_name[name_upper]
+        
+        # Try pycountry lookup
+        try:
+            # Try exact match
+            country = countries.lookup(name)
+            if country:
+                return country.alpha_2
+        except (LookupError, AttributeError):
+            pass
+        
+        # Try fuzzy match in pycountry
+        try:
+            # Search by name
+            for country in countries:
+                if country.name and country.name.upper() == name_upper:
+                    return country.alpha_2
+        except (LookupError, AttributeError):
+            pass
+        
+        return None
+    
+    def validate_country(country_dict, context=""):
+        """Validate a country dictionary and fix if needed. Returns (is_valid, fixed_dict)"""
+        if not country_dict or not isinstance(country_dict, dict):
+            return False, {"id": "Unknown", "name": "Unknown"}
+        
+        country_id = country_dict.get("id")
+        country_name = country_dict.get("name")
+        
+        # Normalize country ID
+        if country_id:
+            country_id = normalize_country_id(country_id)
+        
+        # Handle special countries
+        if country_id and country_id in SPECIAL_COUNTRIES:
+            expected_name = COUNTRIES.get(country_id, country_id)
+            if country_name and country_name == expected_name:
+                return True, country_dict
+            else:
+                logger.info(
+                    "Fixing %s: special country id=%s name=%s -> %s",
+                    context,
+                    country_id,
+                    country_name or "None",
+                    expected_name,
+                )
+                return True, {"id": country_id, "name": expected_name}
+        
+        # Try to validate using pycountry (ISO 3166-1 alpha-2)
+        if country_id:
+            try:
+                pycountry_obj = countries.get(alpha_2=country_id)
+                if pycountry_obj:
+                    # Valid ISO code - use COUNTRIES dict name if available, otherwise pycountry name
+                    if country_id in COUNTRIES:
+                        expected_name = COUNTRIES[country_id]
+                    else:
+                        expected_name = pycountry_obj.name
+                    
+                    # Check if name matches
+                    if country_name and country_name == expected_name:
+                        return True, country_dict
+                    else:
+                        logger.info(
+                            "Fixing %s: country id=%s name=%s -> %s",
+                            context,
+                            country_id,
+                            country_name or "None",
+                            expected_name,
+                        )
+                        return True, {"id": country_id, "name": expected_name}
+            except (LookupError, AttributeError):
+                pass
+        
+        # If we have a name but invalid/missing ID, try to find the code
+        if country_name and not country_id:
+            found_id = find_country_by_name(country_name)
+            if found_id:
+                expected_name = COUNTRIES.get(found_id, country_name)
+                logger.info(
+                    "Fixing %s: found country code for name=%s -> id=%s name=%s",
+                    context,
+                    country_name,
+                    found_id,
+                    expected_name,
+                )
+                return True, {"id": found_id, "name": expected_name}
+        
+        # If we have an ID that's in COUNTRIES but not ISO, use it
+        if country_id and country_id in COUNTRIES:
+            expected_name = COUNTRIES[country_id]
+            if country_name and country_name == expected_name:
+                return True, country_dict
+            else:
+                logger.info(
+                    "Fixing %s: country id=%s name=%s -> %s",
+                    context,
+                    country_id,
+                    country_name or "None",
+                    expected_name,
+                )
+                return True, {"id": country_id, "name": expected_name}
+        
+        # Invalid country - mark for reporting
+        old_id = country_id or "None"
+        old_name = country_name or "None"
+        invalid_countries.add(f"{old_id}:{old_name}")
+        logger.warning(
+            "Invalid %s: country id=%s name=%s -> Unknown",
+            context,
+            old_id,
+            old_name,
+        )
+        return False, {"id": "Unknown", "name": "Unknown"}
+    
+    for root, dirs, files in os.walk(root_dir):
+        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
+        for filename in files:
+            total_records += 1
+            filepath = filename
+            try:
+                f = open(filepath, "r", encoding="utf8")
+                record = yaml.load(f, Loader=Loader)
+                f.close()
+            except Exception as e:
+                logger.error("Error reading file %s: %s", filepath, e)
+                continue
+            
+            if record is None:
+                continue
+            
+            changed = False
+            record_id = os.path.basename(filename).split(".", 1)[0]
+            
+            # Check owner.location.country
+            if "owner" in record.keys() and "location" in record["owner"].keys():
+                if "country" in record["owner"]["location"]:
+                    is_valid, fixed_country = validate_country(
+                        record["owner"]["location"]["country"],
+                        f"owner.location.country in {record_id}"
+                    )
+                    if not is_valid or fixed_country != record["owner"]["location"]["country"]:
+                        record["owner"]["location"]["country"] = fixed_country
+                        changed = True
+                        owner_fixes += 1
+            
+            # Check coverage.location.country
+            if "coverage" in record.keys() and isinstance(record["coverage"], list):
+                for idx, coverage_item in enumerate(record["coverage"]):
+                    if "location" in coverage_item and "country" in coverage_item["location"]:
+                        is_valid, fixed_country = validate_country(
+                            coverage_item["location"]["country"],
+                            f"coverage[{idx}].location.country in {record_id}"
+                        )
+                        if not is_valid or fixed_country != coverage_item["location"]["country"]:
+                            record["coverage"][idx]["location"]["country"] = fixed_country
+                            changed = True
+                            coverage_fixes += 1
+            
+            if changed:
+                updated_records += 1
+                if not dryrun:
+                    try:
+                        f = open(filepath, "w", encoding="utf8")
+                        f.write(yaml.safe_dump(record, allow_unicode=True))
+                        f.close()
+                    except Exception as e:
+                        logger.error("Error writing file %s: %s", filepath, e)
+    
+    logger.info(
+        "Validation complete: %d records processed, %d records updated",
+        total_records,
+        updated_records,
+    )
+    logger.info(
+        "Fixes: %d owner.location.country, %d coverage.location.country",
+        owner_fixes,
+        coverage_fixes,
+    )
+    if invalid_countries:
+        logger.warning(
+            "Found %d unique invalid country combinations: %s",
+            len(invalid_countries),
+            ", ".join(sorted(invalid_countries)[:20])  # Show first 20
+        )
+    if dryrun:
+        logger.info("DRYRUN mode - no files were modified")
+
+
+@app.command()
+def analyze_countries(mode="entities"):
+    """Analyze all owner.location.country and coverage.location.country values"""
+    from constants import COUNTRIES
+    from pycountry import countries
+    from collections import defaultdict, Counter
+
+    root_dir = ROOT_DIR if mode == "entities" else SCHEDULED_DIR
+    
+    # Special country codes
+    SPECIAL_COUNTRIES = {
+        "Unknown", "World", "EU", "Africa", "ASEAN", "Caribbean", 
+        "LatinAmerica", "Oceania", "AQ"
+    }
+    
+    COUNTRY_CODE_MAPPINGS = {
+        "UK": "GB",
+    }
+    
+    owner_countries = Counter()
+    coverage_countries = Counter()
+    invalid_owner = []
+    invalid_coverage = []
+    name_mismatches = []
+    missing_ids = []
+    missing_names = []
+    
+    total_records = 0
+    
+    def normalize_country_id(country_id):
+        """Normalize country ID"""
+        if not country_id:
+            return None
+        country_id = country_id.strip().upper()
+        return COUNTRY_CODE_MAPPINGS.get(country_id, country_id)
+    
+    for root, dirs, files in os.walk(root_dir):
+        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
+        for filename in files:
+            total_records += 1
+            filepath = filename
+            try:
+                f = open(filepath, "r", encoding="utf8")
+                record = yaml.load(f, Loader=Loader)
+                f.close()
+            except Exception as e:
+                logger.error("Error reading file %s: %s", filepath, e)
+                continue
+            
+            if record is None:
+                continue
+            
+            record_id = os.path.basename(filename).split(".", 1)[0]
+            
+            # Analyze owner.location.country
+            if "owner" in record.keys() and "location" in record["owner"].keys():
+                if "country" in record["owner"]["location"]:
+                    country_dict = record["owner"]["location"]["country"]
+                    country_id = country_dict.get("id") if isinstance(country_dict, dict) else None
+                    country_name = country_dict.get("name") if isinstance(country_dict, dict) else None
+                    
+                    if not country_id:
+                        missing_ids.append(("owner", record_id, country_name))
+                    if not country_name:
+                        missing_names.append(("owner", record_id, country_id))
+                    
+                    if country_id:
+                        country_id = normalize_country_id(country_id)
+                        owner_countries[country_id] += 1
+                        
+                        # Check validity
+                        is_valid = False
+                        if country_id in SPECIAL_COUNTRIES:
+                            is_valid = True
+                        elif country_id in COUNTRIES:
+                            is_valid = True
+                        else:
+                            try:
+                                pycountry_obj = countries.get(alpha_2=country_id)
+                                if pycountry_obj:
+                                    is_valid = True
+                            except (LookupError, AttributeError):
+                                pass
+                        
+                        if not is_valid:
+                            invalid_owner.append((record_id, country_id, country_name))
+                        
+                        # Check name consistency
+                        if country_id in COUNTRIES:
+                            expected_name = COUNTRIES[country_id]
+                            if country_name and country_name != expected_name:
+                                name_mismatches.append(("owner", record_id, country_id, country_name, expected_name))
+            
+            # Analyze coverage.location.country
+            if "coverage" in record.keys() and isinstance(record["coverage"], list):
+                for idx, coverage_item in enumerate(record["coverage"]):
+                    if "location" in coverage_item and "country" in coverage_item["location"]:
+                        country_dict = coverage_item["location"]["country"]
+                        country_id = country_dict.get("id") if isinstance(country_dict, dict) else None
+                        country_name = country_dict.get("name") if isinstance(country_dict, dict) else None
+                        
+                        if not country_id:
+                            missing_ids.append((f"coverage[{idx}]", record_id, country_name))
+                        if not country_name:
+                            missing_names.append((f"coverage[{idx}]", record_id, country_id))
+                        
+                        if country_id:
+                            country_id = normalize_country_id(country_id)
+                            coverage_countries[country_id] += 1
+                            
+                            # Check validity
+                            is_valid = False
+                            if country_id in SPECIAL_COUNTRIES:
+                                is_valid = True
+                            elif country_id in COUNTRIES:
+                                is_valid = True
+                            else:
+                                try:
+                                    pycountry_obj = countries.get(alpha_2=country_id)
+                                    if pycountry_obj:
+                                        is_valid = True
+                                except (LookupError, AttributeError):
+                                    pass
+                            
+                            if not is_valid:
+                                invalid_coverage.append((record_id, idx, country_id, country_name))
+                            
+                            # Check name consistency
+                            if country_id in COUNTRIES:
+                                expected_name = COUNTRIES[country_id]
+                                if country_name and country_name != expected_name:
+                                    name_mismatches.append((f"coverage[{idx}]", record_id, country_id, country_name, expected_name))
+    
+    # Print analysis report
+    logger.info("=" * 80)
+    logger.info("COUNTRY ANALYSIS REPORT")
+    logger.info("=" * 80)
+    logger.info("Total records processed: %d", total_records)
+    logger.info("")
+    
+    logger.info("OWNER LOCATION COUNTRIES:")
+    logger.info("-" * 80)
+    logger.info("Total unique countries: %d", len(owner_countries))
+    logger.info("Top 20 countries:")
+    for country_id, count in owner_countries.most_common(20):
+        country_name = COUNTRIES.get(country_id, "Unknown")
+        logger.info("  %s (%s): %d", country_id, country_name, count)
+    logger.info("")
+    
+    logger.info("COVERAGE LOCATION COUNTRIES:")
+    logger.info("-" * 80)
+    logger.info("Total unique countries: %d", len(coverage_countries))
+    logger.info("Top 20 countries:")
+    for country_id, count in coverage_countries.most_common(20):
+        country_name = COUNTRIES.get(country_id, "Unknown")
+        logger.info("  %s (%s): %d", country_id, country_name, count)
+    logger.info("")
+    
+    if invalid_owner:
+        logger.warning("INVALID OWNER COUNTRIES (%d):", len(invalid_owner))
+        for record_id, country_id, country_name in invalid_owner[:20]:
+            logger.warning("  %s: id=%s name=%s", record_id, country_id, country_name)
+        if len(invalid_owner) > 20:
+            logger.warning("  ... and %d more", len(invalid_owner) - 20)
+        logger.info("")
+    
+    if invalid_coverage:
+        logger.warning("INVALID COVERAGE COUNTRIES (%d):", len(invalid_coverage))
+        for record_id, idx, country_id, country_name in invalid_coverage[:20]:
+            logger.warning("  %s[%d]: id=%s name=%s", record_id, idx, country_id, country_name)
+        if len(invalid_coverage) > 20:
+            logger.warning("  ... and %d more", len(invalid_coverage) - 20)
+        logger.info("")
+    
+    if name_mismatches:
+        logger.warning("NAME MISMATCHES (%d):", len(name_mismatches))
+        for location, record_id, country_id, current_name, expected_name in name_mismatches[:20]:
+            logger.warning("  %s in %s: id=%s current='%s' expected='%s'", 
+                         location, record_id, country_id, current_name, expected_name)
+        if len(name_mismatches) > 20:
+            logger.warning("  ... and %d more", len(name_mismatches) - 20)
+        logger.info("")
+    
+    if missing_ids:
+        logger.warning("MISSING COUNTRY IDs (%d):", len(missing_ids))
+        for location, record_id, country_name in missing_ids[:20]:
+            logger.warning("  %s in %s: name=%s", location, record_id, country_name)
+        if len(missing_ids) > 20:
+            logger.warning("  ... and %d more", len(missing_ids) - 20)
+        logger.info("")
+    
+    if missing_names:
+        logger.warning("MISSING COUNTRY NAMES (%d):", len(missing_names))
+        for location, record_id, country_id in missing_names[:20]:
+            logger.warning("  %s in %s: id=%s", location, record_id, country_id)
+        if len(missing_names) > 20:
+            logger.warning("  ... and %d more", len(missing_names) - 20)
+        logger.info("")
+    
+    logger.info("=" * 80)
+    logger.info("SUMMARY:")
+    logger.info("  Invalid owner countries: %d", len(invalid_owner))
+    logger.info("  Invalid coverage countries: %d", len(invalid_coverage))
+    logger.info("  Name mismatches: %d", len(name_mismatches))
+    logger.info("  Missing IDs: %d", len(missing_ids))
+    logger.info("  Missing names: %d", len(missing_names))
+    logger.info("=" * 80)
+
+
 if __name__ == "__main__":
     app()
