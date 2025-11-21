@@ -7,6 +7,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-11-21
+
+### Added
+- **2,629 new data catalog records** across multiple countries and regions
+- **Thousands of ArcGIS Server instances** in the United States
+  - Major additions in US states: Minnesota (54), California (52), Wisconsin (42), Ohio (42), Texas (39), Oregon (34), Florida (34), Washington (26), Illinois (26)
+- **Hundreds of IPT (Integrated Publishing Toolkit) data catalogs**
+  - Added 78 new IPT-based scientific data repositories
+  - Updated API endpoints for existing IPT-based catalogs
+- **Regional data portals in India** (36 new records)
+- **Hundreds of French data catalogs** (108 new records)
+- **Netherlands data catalogs** (27 new records)
+- **Multiple data catalogs in Spain** (279 new records)
+- **World-level catalogs** (294 new records)
+- **Additional records** from various countries including:
+  - United Kingdom (19), South Africa (14), Brazil (13), Norway (12), Germany (12)
+  - Colombia (10), Argentina (10), Japan (9), Russia (8), New Zealand (8)
+  - And many other countries
+
+### Changed
+- Updated API endpoints for most IPT-based data catalogs
+- Improved metadata for hundreds of scheduled-to-add data catalogs
+- Enhanced metadata completeness across multiple records
+- Updated catalog endpoints and identifiers
+
+### Fixed
+- Multiple data errors and inconsistencies
+- Metadata gaps in existing records
+- Various catalog identifier issues
+- Endpoint validation and corrections
+
+### Statistics
+- **Total new records**: 2,629
+- **Total modified records**: 260
+- **Top software types added**:
+  - Custom/Unknown: 258
+  - IPT (Integrated Publishing Toolkit): 78
+  - CKAN: 38
+  - OpenDataSoft: 24
+  - ArcGIS Hub: 24
+  - GeoNetwork: 10
+  - DKAN: 9
+- **Top catalog types added**:
+  - Open data portal: 324
+  - Scientific data repository: 94
+  - Geoportal: 62
+  - Indicators catalog: 5
+- **Geographic coverage**: Records added across 20+ countries with focus on US (1,525), World-level (294), Spain (279), France (108), and India (36)
+
 ## [1.1.0] - 2025-11-15
 
 ### Added
