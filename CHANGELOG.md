@@ -10,27 +10,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2025-11-21
 
 ### Added
-- **2,629 new data catalog records** across multiple countries and regions
-- **Thousands of ArcGIS Server instances** in the United States
-  - Major additions in US states: Minnesota (54), California (52), Wisconsin (42), Ohio (42), Texas (39), Oregon (34), Florida (34), Washington (26), Illinois (26)
-- **Hundreds of IPT (Integrated Publishing Toolkit) data catalogs**
-  - Added 78 new IPT-based scientific data repositories
-  - Updated API endpoints for existing IPT-based catalogs
-- **Regional data portals in India** (36 new records)
-- **Hundreds of French data catalogs** (108 new records)
-- **Netherlands data catalogs** (27 new records)
-- **Multiple data catalogs in Spain** (279 new records)
-- **World-level catalogs** (294 new records)
-- **Additional records** from various countries including:
-  - United Kingdom (19), South Africa (14), Brazil (13), Norway (12), Germany (12)
-  - Colombia (10), Argentina (10), Japan (9), Russia (8), New Zealand (8)
-  - And many other countries
+- **1,993 new data catalog records** across multiple countries and regions
+- **1,515 ArcGIS Server instances** - massive expansion of geoportal coverage
+- **293 World-level catalogs** - international and global data repositories
+- **97 French data catalogs** - significant expansion of French open data coverage
+- **Geospatial infrastructure expansion**:
+  - 83 GeoServer instances
+  - 37 GeoNode installations
+  - 33 GeoNetwork catalogs
+  - 8 Lizmap instances
+  - 3 MapProxy instances
+  - 2 MapBender instances
+- **Open data platforms**:
+  - 47 OpenDataSoft instances
+  - 42 CKAN portals
+  - 5 DKAN installations
+- **Scientific data repositories**:
+  - 38 Figshare-based repositories
+  - 6 DSpace installations
+  - 6 NADA microdata catalogs
+- **Additional platforms**: 9 THREDDS servers, 5 Drupal-based catalogs, 3 DataFair instances
 
 ### Changed
-- Updated API endpoints for most IPT-based data catalogs
-- Improved metadata for hundreds of scheduled-to-add data catalogs
+- **363 records updated** with improved metadata
+- Updated API endpoints for IPT-based data catalogs
 - Enhanced metadata completeness across multiple records
-- Updated catalog endpoints and identifiers
+- Improved catalog endpoints and identifiers
+- Better geographic and administrative region coverage
 
 ### Fixed
 - Multiple data errors and inconsistencies
@@ -39,22 +45,89 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Endpoint validation and corrections
 
 ### Statistics
-- **Total new records**: 2,629
-- **Total modified records**: 260
-- **Top software types added**:
-  - Custom/Unknown: 258
-  - IPT (Integrated Publishing Toolkit): 78
-  - CKAN: 38
-  - OpenDataSoft: 24
-  - ArcGIS Hub: 24
-  - GeoNetwork: 10
-  - DKAN: 9
-- **Top catalog types added**:
-  - Open data portal: 324
-  - Scientific data repository: 94
-  - Geoportal: 62
-  - Indicators catalog: 5
-- **Geographic coverage**: Records added across 20+ countries with focus on US (1,525), World-level (294), Spain (279), France (108), and India (36)
+
+#### Record Changes
+- **New records**: 1,993
+- **Modified records**: 363
+- **Deleted records**: 0
+
+#### Software Types (Top 15)
+- ArcGIS Server: 1,515
+- Custom/Unknown: 89
+- GeoServer: 83
+- OpenDataSoft: 47
+- CKAN: 42
+- Figshare: 38
+- GeoNode: 37
+- GeoNetwork: 33
+- ArcGIS Hub: 26
+- THREDDS: 9
+- Lizmap: 8
+- DSpace: 6
+- NADA: 6
+- Drupal: 5
+- DKAN: 5
+
+#### Catalog Types
+- Geoportal: 1,726 (86.6%)
+- Open data portal: 181 (9.1%)
+- Scientific data repository: 68 (3.4%)
+- Microdata catalog: 7
+- Indicators catalog: 6
+- Datasets list: 3
+- Metadata catalog: 2
+
+#### Geographic Coverage
+
+**Countries (Top 20)**:
+- United States: 1,472
+- World-level: 293
+- France: 97
+- Netherlands: 11
+- Unknown/Unspecified: 11
+- Germany: 8
+- Italy: 8
+- South Africa: 8
+- Uganda: 7
+- United Kingdom: 6
+- Belarus: 5
+- Colombia: 5
+- Hong Kong: 4
+- Croatia: 4
+- Iceland: 4
+- Japan: 4
+- Brazil: 3
+- Spain: 3
+- European Union: 3
+- Thailand: 3
+
+**United States - State Breakdown (Top 20)**:
+- Minnesota: 54
+- California: 51
+- Wisconsin: 43
+- Ohio: 42
+- Texas: 39
+- Florida: 34
+- Oregon: 34
+- Illinois: 26
+- Washington: 26
+- District of Columbia: 25
+- North Carolina: 24
+- Virginia: 23
+- Pennsylvania: 20
+- Utah: 19
+- Colorado: 17
+- Indiana: 17
+- Michigan: 16
+- Georgia: 15
+- Missouri: 15
+- North Dakota: 12
+
+**Regional Coverage**:
+- Federal-level records: 1,138
+- US state-level records: 500+
+- French regions (Île-de-France): 25
+- Additional subregional coverage across multiple countries
 
 ## [1.1.0] - 2025-11-15
 
