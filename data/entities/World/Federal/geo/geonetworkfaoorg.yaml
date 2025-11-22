@@ -11,12 +11,15 @@ coverage:
     country:
       id: World
       name: World
-    level: 20
+    level: 10
     macroregion:
       id: World
       name: World
 description: FAO GeoNetwork provides Internet access to interactive maps, satellite
-  imagery and related spatial databases maintained by FAO and its partners.
+  imagery and related spatial databases maintained by FAO and its partners. A web-based
+  Geographic Data and Information Management System that improves access to and integrated
+  use of spatial data and information, supporting decision-making in agriculture, forestry,
+  fisheries, and food security.
 endpoints:
 - type: csw202
   url: http://geonetwork.fao.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -28,15 +31,17 @@ endpoints:
   url: http://geonetwork.fao.org/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: geonetworkfaoorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://geonetwork.fao.org/geonetwork
-name: geonetwork.fao.org
+name: FAO GeoNetwork
 owner:
   link: https://www.fao.org
   location:
     country:
-      id: World
-      name: World
+      id: IT
+      name: Italy
     level: 20
   name: Food and Agriculture Organization of the United Nations (FAO)
   type: International
@@ -64,6 +69,9 @@ tags:
 topics:
 - id: ENVI
   name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
   type: eudatatheme
 - id: Climatology / Meteorology / Atmosphere
   name: Climatology / Meteorology / Atmosphere

@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 10
+    macroregion:
+      id: World
+      name: World
+description: GeoNetwork metadata catalog for the Tuna Atlas project, providing access
+  to geospatial datasets focused on tuna-related resources and fisheries data. Part
+  of the D4Science research infrastructure, offering comprehensive metadata management
+  and discovery services for marine and fisheries research.
+endpoints:
+- type: geonetwork:query
+  url: http://geonetwork2-tunaatlas.d4science.org/geonetwork/srv/eng/q
+- type: csw202
+  url: http://geonetwork2-tunaatlas.d4science.org/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://geonetwork2-tunaatlas.d4science.org/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geonetwork2tunaatlasd4scienceorg
+langs:
+- id: EN
+  name: English
+link: http://geonetwork2-tunaatlas.d4science.org/geonetwork/srv/eng/catalog.search#/home
+name: Tuna Atlas GeoNetwork
+owner:
+  link: https://www.d4science.org
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: D4Science
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geonetwork
+- geospatial
+- tuna
+- fisheries
+- marine
+- D4Science
+- metadata catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00000769
+

@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: '039'
+      name: Southern Europe
+description: GeoNode-based geoportal for the Climate Justice Jean Monnet Centre of
+  Excellence, providing access to geospatial datasets related to climate justice research.
+  Powered by the Climate change, territories, diversity research group of the Civil,
+  Environmental and Architectural Engineering Department, Padova University (Italy).
+endpoints:
+- type: geonode:layers
+  url: https://research.climate-justice.earth/api/layers/
+- type: geonode:documents
+  url: https://research.climate-justice.earth/api/documents/
+- type: wms111
+  url: https://research.climate-justice.earth/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://research.climate-justice.earth/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://research.climate-justice.earth/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://research.climate-justice.earth/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://research.climate-justice.earth/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: wmts100
+  url: https://research.climate-justice.earth/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: opensearch
+  url: https://research.climate-justice.earth/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: opensearch
+  url: https://research.climate-justice.earth/catalogue/opensearch
+id: researchclimatejusticeearth
+langs:
+- id: EN
+  name: English
+- id: IT
+  name: Italian
+link: https://research.climate-justice.earth/
+name: Climate Justice Research Data Catalog
+owner:
+  link: https://www.unipd.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Climate Justice Jean Monnet Centre of Excellence - University of Padova
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geonode
+- geospatial
+- climate justice
+- Jean Monnet
+- University of Padova
+- research
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: temp00000831
+

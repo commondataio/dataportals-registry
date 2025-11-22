@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GeoNetwork is a catalog for geospatial datasets and services.
+endpoints:
+- type: geonetwork:query
+  url: http://206.12.92.143:8080/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: http://206.12.92.143:8080/geonetwork/srv/api/records
+- type: openapi
+  url: http://206.12.92.143:8080/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: http://206.12.92.143:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://206.12.92.143:8080/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://206.12.92.143:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: '2061292143'
+langs: 
+- id: EN
+  name: English
+link: http://206.12.92.143:8080/geonetwork
+name: BAM Geoportal
+owner:
+  link: http://www.borealbirds.ca/
+  location:
+    country:
+      id: CA
+      name: Canada  
+    level: 20
+  name: Boreal Avian Modelling Centre
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- metadata
+- open data
+- geonetwork
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: temp00003924
