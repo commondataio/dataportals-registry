@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: GIS services hosted by the Rwanda Environment Management Authority
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.rema.gov.rw/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.rema.gov.rw/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.rema.gov.rw/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.rema.gov.rw/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.rema.gov.rw/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.rema.gov.rw/server/rest/services?f=kmz
+id: gisremagovrw
+langs:
+- id: EN
+  name: English
+link: https://gis.rema.gov.rw/server/rest/services
+name: REMA GIS Portal REST Services
+owner:
+  link: https://gis.rema.gov.rw
+  location:
+    country:
+      id: RW
+      name: Rwanda
+    level: 20
+  name: REMA
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- REST
+- Environmental data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00005815

@@ -1,0 +1,69 @@
+access_mode:
+  - open
+api: false
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+  - dataset
+  - map_layer
+coverage:
+  - location:
+      country:
+        id: MY
+        name: Malaysia
+      level: 20
+      macroregion:
+        id: '035'
+        name: South-eastern Asia
+description: ArcGIS REST Services endpoint for various JUPEM geospatial datasets, providing access to mapping and geospatial data layers for Malaysia.
+endpoints:
+  - type: arcgis:rest:info
+    url: https://gismaps.jupem.gov.my/arcgis/rest/info?f=pjson
+  - type: arcgis:rest:services
+    url: https://gismaps.jupem.gov.my/arcgis/rest/services?f=pjson
+  - type: arcgis:soap
+    url: https://gismaps.jupem.gov.my/arcgis/services?wsdl
+  - type: arcgis:sitemap
+    url: https://gismaps.jupem.gov.my/arcgis/rest/services?f=sitemap
+  - type: arcgis:geositemap
+    url: https://gismaps.jupem.gov.my/arcgis/rest/services?f=geositemap
+  - type: arcgis:kmz
+    url: https://gismaps.jupem.gov.my/arcgis/rest/services?f=kmz
+id: gismapsjupemgovmy
+langs:
+  - id: MS
+    name: Malay
+link: https://gismaps.jupem.gov.my/arcgis/rest/services
+name: JUPEM GIS Maps REST Services
+owner:
+  link: https://www.jupem.gov.my
+  location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+  name: Ministry of Natural Resources, Environment and Climate Change (Malaysia)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id:
+  license_name:
+  license_url:
+  privacy_policy_url:
+  rights_type: global
+  tos_url:
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+  - geospatial
+  - survey
+  - maps
+  - Malaysia
+  - JUPEM
+  - GIS
+  - ArcGIS REST
+topics: []
+uid: temp00005990

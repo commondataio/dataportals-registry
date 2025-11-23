@@ -12,28 +12,34 @@ coverage:
       name: United Kingdom
     level: 20
     macroregion:
-      id: World
-      name: World
-description: Data catalog at tandf.figshare.com
+      id: '154'
+      name: Northern Europe
+description: Taylor & Francis Figshare repository provides a platform for researchers to publish, share, and discover research datasets and supplementary materials associated with Taylor & Francis publications. The repository supports open data sharing and FAIR data principles, enabling researchers to make their research data openly accessible and citable with DOIs.
 endpoints:
 - type: sitemap
   url: https://tandf.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://tandf.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: tandffigsharecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://tandf.figshare.com
-name: tandf.figshare.com
+name: Taylor & Francis Figshare Repository
 owner:
-  link: https://figshare.com
+  link: https://www.taylorfrancis.com
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Figshare LLC.
+  name: Taylor & Francis Group
   type: Business
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -45,6 +51,32 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- academic publishing
+- Taylor & Francis
+- publisher repository
+- figshare
+- FAIR data
+- open access
+- dataset
+- supplementary materials
+- research outputs
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00004248

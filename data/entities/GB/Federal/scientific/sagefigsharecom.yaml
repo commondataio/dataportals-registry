@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -12,25 +12,34 @@ coverage:
       name: United Kingdom
     level: 20
     macroregion:
-      id: World
-      name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+      id: '154'
+      name: Northern Europe
+description: SAGE Publishing Figshare repository provides a platform for researchers to publish, share, and discover research datasets and supplementary materials associated with SAGE publications. SAGE is a leading academic publisher. The repository supports open data sharing and FAIR data principles, enabling researchers to make their research data openly accessible and citable with DOIs.
+endpoints:
+- type: sitemap
+  url: https://sage.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://sage.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: sagefigsharecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://sage.figshare.com
-name: sage.figshare.com
+name: SAGE Publishing Figshare Repository
 owner:
-  link: https://figshare.com
+  link: https://us.sagepub.com
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Figshare LLC.
+  name: SAGE Publishing
   type: Business
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -42,6 +51,29 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- academic publishing
+- SAGE Publishing
+- publisher repository
+- UK
+- figshare
+- FAIR data
+- open access
+- dataset
+- supplementary materials
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
 uid: temp00004241

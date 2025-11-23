@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -11,22 +11,47 @@ coverage:
     country:
       id: World
       name: World
-    level: 20
+    level: 10
     macroregion:
       id: World
       name: World
-description: A geospatial data server that allows access to FAO's spatial data layers
-  and services.
+description: FAO GeoServer provides access to geospatial data layers and services maintained by the Food and Agriculture Organization of the United Nations. The server hosts spatial datasets related to agriculture, forestry, fisheries, food security, land use, water resources, climate, and related environmental themes. GeoServer enables access to FAO's spatial data through standard OGC web services including WMS, WFS, and WCS.
+endpoints:
+- type: wms111
+  url: https://io.apps.fao.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://io.apps.fao.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://io.apps.fao.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://io.apps.fao.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://io.apps.fao.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: ioappsfaoorg
-langs: []
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+- id: FR
+  name: French
+- id: AR
+  name: Arabic
+- id: ZH
+  name: Chinese
 link: https://io.apps.fao.org/geoserver
-name: io.apps.fao.org
+name: FAO GeoServer
 owner:
   link: https://www.fao.org
   location:
     country:
-      id: World
-      name: World
+      id: IT
+      name: Italy
     level: 20
   name: Food and Agriculture Organization of the United Nations (FAO)
   type: International
@@ -37,7 +62,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
@@ -46,9 +71,20 @@ status: active
 tags:
 - WMS
 - WFS
+- WCS
 - geospatial
 - FAO
 - GIS
+- agriculture
+- forestry
+- fisheries
+- food security
+- land use
+- water resources
+- climate
+- geoportal
+- OGC services
+- United Nations
 topics:
 - id: ENVI
   name: Environment
@@ -56,9 +92,9 @@ topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food
   type: eudatatheme
-- id: AGRI
-  name: Agriculture, fisheries, forestry and food
-  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
 - id: Inland Waters
   name: Inland Waters
   type: iso19115
@@ -70,5 +106,11 @@ topics:
   type: iso19115
 - id: Geoscientific Information
   name: Geoscientific Information
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Biota
+  name: Biota
   type: iso19115
 uid: temp00005363

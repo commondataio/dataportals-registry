@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Dimensions Figshare repository provides access to research datasets, articles, and collections sourced from repositories including DataCite and Figshare. Dimensions is a research information database developed by Digital Science. The repository supports open data sharing and FAIR data principles.
+endpoints:
+- type: sitemap
+  url: https://dimensions.figshare.com/sitemap/siteindex.xml
+  url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://dimensions.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
+id: dimensionsfigsharecom
+langs:
+- id: EN
+  name: English
+link: https://dimensions.figshare.com
+name: Dimensions Figshare Repository
+owner:
+  link: https://www.dimensions.ai
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Digital Science (Dimensions)
+  type: Business
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://figshare.com/privacy
+  rights_type: granular
+  tos_url: https://figshare.com/terms
+software:
+  id: figshare
+  name: Figshare
+status: active
+tags:
+- scientific
+- research data
+- research information
+- Dimensions
+- Digital Science
+- UK
+- figshare
+- FAIR data
+- open access
+- dataset
+- repository
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00004223
+

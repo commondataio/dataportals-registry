@@ -12,32 +12,34 @@ coverage:
       name: United Kingdom
     level: 20
     macroregion:
-      id: World
-      name: World
-description: Undisclosed (no description extractable from URL alone)
+      id: '154'
+      name: Northern Europe
+description: University of Sheffield Figshare repository provides a platform for researchers to publish, share, and discover research datasets and supplementary materials. The repository supports open data sharing and FAIR data principles, enabling researchers to make their research data openly accessible and citable with DOIs.
 endpoints:
 - type: sitemap
   url: https://sheffield.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
-- type: sitemap
-  url: https://orda.shef.ac.uk/sitemap/siteindex.xml
+- type: figshare:graphql
+  url: https://sheffield.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: sheffieldfigsharecom
 langs:
 - id: EN
   name: English
 link: https://sheffield.figshare.com
-name: sheffield.figshare.com
+name: University of Sheffield Figshare Repository
 owner:
-  link: https://figshare.com
+  link: https://www.sheffield.ac.uk
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Figshare LLC.
-  type: Business
+  name: University of Sheffield
+  type: Academy
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -49,6 +51,32 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- multidisciplinary
+- University of Sheffield
+- UK
+- academy
+- figshare
+- FAIR data
+- open access
+- academic repository
+- dataset
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00002153

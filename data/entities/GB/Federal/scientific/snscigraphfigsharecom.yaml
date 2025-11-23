@@ -12,29 +12,34 @@ coverage:
       name: United Kingdom
     level: 20
     macroregion:
-      id: World
-      name: World
-description: Data catalog under figshare platform, likely hosting scientific and research
-  datasets.
+      id: '154'
+      name: Northern Europe
+description: Springer Nature SciGraph Figshare repository provides access to research datasets and supplementary materials. Springer Nature SciGraph is a knowledge graph of scholarly publications and research data. The repository supports open data sharing and FAIR data principles.
 endpoints:
 - type: sitemap
   url: https://sn-scigraph.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://sn-scigraph.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: snscigraphfigsharecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://sn-scigraph.figshare.com
-name: sn-scigraph.figshare.com
+name: Springer Nature SciGraph Figshare Repository
 owner:
-  link: https://figshare.com
+  link: https://www.springernature.com
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Figshare LLC.
+  name: Springer Nature
   type: Business
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -47,7 +52,22 @@ software:
   name: Figshare
 status: active
 tags:
+- scientific
+- research data
+- academic publishing
+- Springer Nature
+- SciGraph
+- knowledge graph
+- UK
 - figshare
-- scientific data
-topics: []
+- FAIR data
+- open access
+- dataset
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 uid: temp00004245

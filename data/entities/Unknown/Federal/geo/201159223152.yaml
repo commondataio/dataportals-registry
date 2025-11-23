@@ -1,0 +1,130 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: GeoNode-based geoportal providing access to geospatial datasets and map layers through OGC web services. The platform integrates GeoServer for map services and includes a metadata catalog supporting CSW, OAI-PMH, and OpenSearch protocols. Provides access to spatial data through WMS, WFS, WCS, WMTS, and WPS services.
+endpoints:
+- type: geonode:layers
+  url: http://201.159.223.152/api/layers/
+- type: geonode:documents
+  url: http://201.159.223.152/api/documents/
+- type: dcatus11
+  url: http://201.159.223.152/data.json
+- type: wms111
+  url: http://201.159.223.152/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://201.159.223.152/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: http://201.159.223.152/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: http://201.159.223.152/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: http://201.159.223.152/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: http://201.159.223.152/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: http://201.159.223.152/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: http://201.159.223.152/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: http://201.159.223.152/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: http://201.159.223.152/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wmts100
+  url: http://201.159.223.152/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: http://201.159.223.152/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: csw202
+  url: http://201.159.223.152/catalogue/csw?service=CSW&version=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: http://201.159.223.152/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: http://201.159.223.152/catalogue/opensearch
+  version: '1.0'
+- type: geoserver:rest
+  url: http://201.159.223.152/geoserver/rest
+id: '201159223152'
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: http://201.159.223.152
+name: GeoNode Geoportal (201.159.223.152)
+owner:
+  link: http://201.159.223.152
+  location:
+    country:
+      id: Unknown
+      name: Unknown
+    level: 20
+  name: Not specified
+  type: Unknown
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- open data
+- gobierno
+- geonode
+- geospatial
+- geoportal
+- GeoServer
+- WMS
+- WFS
+- WCS
+- OGC services
+- CSW
+- metadata catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00002763
+

@@ -11,23 +11,23 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: 'Figshare research data repository for ''hirjibehedin-research'' group
-  or collection. Hosts datasets, code, figures, and other research outputs, with metadata
-  compliant with DataCite and other standards, allowing mapping to broader schemas
-  such as DCAT-AP and ISO19115. Note: Specific content/metadata is not extracted from
-  the page, so further site-specific or dataset-specific fields are not available
-  in this output.'
+description: Hirji Behedin Research Figshare repository provides a platform for sharing research datasets, code, figures, and other research outputs. The repository supports open data sharing and FAIR data principles, with metadata compliant with DataCite and other standards, allowing mapping to broader schemas such as DCAT-AP and ISO19115.
 endpoints:
 - type: sitemap
   url: https://hirjibehedin-research.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://hirjibehedin-research.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: hirjibehedinresearchfigsharecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://hirjibehedin-research.figshare.com
-name: hirjibehedin-research.figshare.com
+name: Hirji Behedin Research Figshare Repository
 owner:
   link: https://hirjibehedin-research.figshare.com
   location:
@@ -35,11 +35,11 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
-  name: hirjibehedin-research
+  name: Hirji Behedin Research
   type: Academy
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -51,6 +51,17 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- figshare
+- FAIR data
+- open access
+- dataset
+- research outputs
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00004228
+

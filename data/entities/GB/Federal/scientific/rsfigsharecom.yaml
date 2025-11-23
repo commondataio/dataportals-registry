@@ -12,30 +12,34 @@ coverage:
       name: United Kingdom
     level: 20
     macroregion:
-      id: World
-      name: World
-description: Figshare institutional data repository for research outputs.
+      id: '154'
+      name: Northern Europe
+description: The Royal Society Figshare repository provides a platform for researchers to publish, share, and discover research datasets and supplementary materials associated with Royal Society publications. The repository supports open data sharing and FAIR data principles, enabling researchers to make their research data openly accessible and citable with DOIs. The Royal Society is the UK's national academy of sciences, promoting excellence in science.
 endpoints:
 - type: sitemap
   url: https://rs.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://rs.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: rsfigsharecom
 langs:
 - id: EN
   name: English
 link: https://rs.figshare.com
-name: rs.figshare.com
+name: Royal Society Figshare Repository
 owner:
-  link: https://figshare.com
+  link: https://royalsociety.org
   location:
     country:
       id: GB
       name: United Kingdom
     level: 20
-  name: Figshare LLC.
-  type: Business
+  name: The Royal Society
+  type: Academy
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -47,6 +51,33 @@ software:
   id: figshare
   name: Figshare
 status: active
-tags: []
-topics: []
+tags:
+- scientific
+- research data
+- Royal Society
+- UK
+- academy
+- figshare
+- FAIR data
+- open access
+- academic repository
+- dataset
+- supplementary materials
+- research outputs
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00002152

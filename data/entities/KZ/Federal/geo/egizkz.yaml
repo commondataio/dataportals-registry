@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+    macroregion:
+      id: '143'
+      name: Central Asia
+description: ArcGIS REST Services Directory providing access to orthophoto imagery,
+  administrative boundaries, population data, and other geospatial services for Kazakhstan.
+endpoints:
+- type: arcgis:rest:info
+  url: https://egiz.kz/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://egiz.kz/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://egiz.kz/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://egiz.kz/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://egiz.kz/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://egiz.kz/server/rest/services?f=kmz
+id: egizkz
+langs:
+- id: KZ
+  name: Kazakh
+- id: RU
+  name: Russian
+link: https://egiz.kz/server/rest/services
+name: EGIZ ArcGIS Server
+owner:
+  link: https://egiz.kz
+  location:
+    country:
+      id: KZ
+      name: Kazakhstan
+    level: 20
+  name: EGIZ
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- orthophoto
+- imagery
+- administrative boundaries
+- population
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery Base Maps Earth Cover
+  name: Imagery Base Maps Earth Cover
+  type: iso19115
+

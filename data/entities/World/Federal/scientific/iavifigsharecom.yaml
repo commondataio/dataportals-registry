@@ -11,30 +11,35 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: International AIDS Vaccine Initiative research repository on Figshare
+description: International AIDS Vaccine Initiative (IAVI) Figshare repository provides a platform for researchers to publish, share, and discover research datasets and supplementary materials related to HIV/AIDS vaccine research. IAVI is a global nonprofit organization. The repository supports open data sharing and FAIR data principles, enabling researchers to make their research data openly accessible and citable with DOIs.
 endpoints:
 - type: sitemap
   url: https://iavi.figshare.com/sitemap/siteindex.xml
   url_pattern: /articles/dataset/
+- type: figshare:graphql
+  url: https://iavi.figshare.com/api/graphql?thirdPartyCookies=true&type=current&operation=advancedSearch
+  version: '1.0'
 id: iavifigsharecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://iavi.figshare.com
-name: iavi.figshare.com
+name: International AIDS Vaccine Initiative Figshare Repository
 owner:
-  link: https://iavi.figshare.com
+  link: https://www.iavi.org
   location:
     country:
       id: World
       name: World
     level: 10
-    macroregion: *id001
-  name: International AIDS Vaccine Initiative
+  name: International AIDS Vaccine Initiative (IAVI)
   type: International
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -47,10 +52,18 @@ software:
   name: Figshare
 status: active
 tags:
+- scientific
+- research data
 - HIV
 - vaccine
 - AIDS
-- research
+- IAVI
+- international
+- figshare
+- FAIR data
+- open access
+- dataset
+- health research
 topics:
 - id: HEAL
   name: Health
@@ -59,3 +72,4 @@ topics:
   name: Health
   type: iso19115
 uid: temp00004230
+
