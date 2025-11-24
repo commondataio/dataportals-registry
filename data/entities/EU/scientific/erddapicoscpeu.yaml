@@ -5,14 +5,21 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
       id: EU
       name: European Union
     level: 20
-description: ERDDAP is a data server that gives you a simple, consistent way to download
-  subsets of scientific datasets in common file formats and make graphs and maps.
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ERDDAP data server providing access to oceanographic and atmospheric datasets
+  from the Integrated Carbon Observation System (ICOS) Carbon Portal. This ERDDAP installation
+  offers easier access to scientific data in common file formats with standardized time formats,
+  including data from satellites and buoys, with a focus on greenhouse gas observations,
+  carbon cycle research, and climate monitoring.
 endpoints:
 - type: erddap:index
   url: https://erddap.icos-cp.eu/erddap/index.json
@@ -23,9 +30,11 @@ endpoints:
 - type: sitemap
   url: https://erddap.icos-cp.eu/erddap/sitemap.xml
 id: erddapicoscpeu
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://erddap.icos-cp.eu/erddap/index.html
-name: ICOS ERDDAP
+name: ICOS Carbon Portal ERDDAP
 owner:
   link: https://www.icos-cp.eu
   location:
@@ -49,13 +58,17 @@ software:
   name: ERDDAP
 status: active
 tags:
-- scientific
-- Scientific data
-- Dataset
-- Oceanography
-- Atmosphere
-- Climate
-- Greenhouse gases
+- ocean
+- environment
+- ERDDAP
+- oceanography
+- climate
+- atmosphere
+- greenhouse gases
+- carbon cycle
+- ICOS
+- marine data
+- scientific data
 topics:
 - id: Oceans
   name: Oceans

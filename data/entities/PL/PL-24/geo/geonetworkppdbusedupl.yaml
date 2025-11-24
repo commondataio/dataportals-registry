@@ -1,0 +1,87 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: PL-24
+      name: Silesia
+description: GeoNetwork catalog published by the University of Silesia's PPDB (Polish
+  Platform for Air Quality) program, exposing atmospheric and environmental datasets
+  along with downloadable map layers for the Silesian region.
+endpoints:
+- type: geonetwork:search
+  url: https://ppdb.us.edu.pl/geonetwork/srv/eng/catalog.search
+- type: geonetwork:query
+  url: https://ppdb.us.edu.pl/geonetwork/srv/eng/q
+- type: openapi
+  url: https://ppdb.us.edu.pl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://ppdb.us.edu.pl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://ppdb.us.edu.pl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://ppdb.us.edu.pl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+id: geonetworkppdbusedupl
+langs:
+- id: EN
+  name: English
+- id: PL
+  name: Polish
+link: https://ppdb.us.edu.pl/geonetwork/srv/eng/catalog.search#/home
+name: PPDB GeoNetwork Catalog
+owner:
+  link: https://us.edu.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-24
+      name: Silesia
+  name: Uniwersytet Śląski w Katowicach
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- GeoNetwork
+- atmosphere
+- environmental data
+- Silesia
+- PPDB
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00013482

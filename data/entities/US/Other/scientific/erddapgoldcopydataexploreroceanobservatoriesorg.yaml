@@ -14,23 +14,27 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: ERDDAP Gold Copy is a data catalog providing access to oceanographic
-  and environmental datasets through standardized services and formats.
+description: ERDDAP Gold Copy data server hosted by Ocean Observatories Initiative (OOI), providing
+  access to scientific datasets, primarily oceanographic and environmental data. The
+  main interface is a list of datasets with OPeNDAP, file downloads, and metadata
+  capabilities. Dataset types cover time series, gridded, and tabular data related
+  to ocean properties. This is the gold copy (production) version of the OOI ERDDAP
+  server.
 endpoints:
 - type: erddap:index
-  url: http://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.json
+  url: https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.json
 - type: erddap:datasets
-  url: http://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/info/index.json
+  url: https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/info/index.json
 - type: opensearch
-  url: http://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/opensearch1.1/description.xml
+  url: https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/opensearch1.1/description.xml
 - type: sitemap
-  url: http://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/sitemap.xml
+  url: https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/sitemap.xml
 id: erddapgoldcopydataexploreroceanobservatoriesorg
 langs:
 - id: EN
   name: English
-link: http://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html
-name: ERDDAP Gold Copy - Ocean Observatories Data Explorer
+link: https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html
+name: OOI ERDDAP Gold Copy Data Explorer
 owner:
   link: https://oceanobservatories.org
   location:
@@ -38,7 +42,7 @@ owner:
       id: US
       name: United States
     level: 20
-  name: ' Ocean Observatories Initiative'
+  name: Ocean Observatories Initiative
   type: Academy
 properties:
   has_doi: false

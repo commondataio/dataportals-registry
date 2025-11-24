@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,13 +19,17 @@ description: 'NASA''s Level-1 and Atmosphere Archive and Distribution System Dis
   products from the MODIS instrument aboard the Terra and Aqua platforms, and the
   VIIRS instrument aboard the Suomi NPP and JPSS platforms. It archives and distributes
   MODIS products: Level 1 products (calibrated radiances and geolocation) and Level
-  2 and 3 atmosphere and land products.'
+  2 and 3 atmosphere and land products. The OPeNDAP Hyrax server provides programmatic
+  access to these datasets via the Data Access Protocol (DAP).'
+endpoints:
+- type: opendap:catalog
+  url: https://ladsweb.modaps.eosdis.nasa.gov/opendap/
 id: ladswebmodapseosdisnasagov
 langs:
 - id: EN
   name: English
-link: https://ladsweb.modaps.eosdis.nasa.gov
-name: LAADS DAAC
+link: https://ladsweb.modaps.eosdis.nasa.gov/opendap/
+name: LAADS DAAC OPeNDAP Server
 owner:
   link: https://www.nasa.gov
   location:
@@ -43,8 +47,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: opendap
+  name: OPeNDAP
 status: active
 tags:
 - MODIS
@@ -53,10 +57,10 @@ tags:
 - earth observation
 - remote sensing
 - atmosphere
+- OPeNDAP
+- satellite data
+- NetCDF
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

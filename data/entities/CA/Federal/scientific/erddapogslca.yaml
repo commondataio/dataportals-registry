@@ -5,6 +5,7 @@ api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -14,10 +15,11 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: A data catalog providing access to scientific gridded and tabular datasets
-  through ERDDAP, hosted by the Ocean and Ecosystem Sciences Division (OGSL) of Fisheries
-  and Oceans Canada (DFO). No explicit owner_type_reference available in the metadata,
-  but DFO is a Canadian federal government agency.
+description: ERDDAP data server providing access to oceanographic datasets shared by
+  partners of the St. Lawrence Global Observatory (OGSL/SLGO), the St. Lawrence regional
+  association of CIOOS (Canadian Integrated Ocean Observing System). The server offers
+  easier access to scientific data in common file formats with standardized time formats,
+  including data from satellites and buoys.
 endpoints:
 - type: erddap:index
   url: https://erddap.ogsl.ca/erddap/index.json
@@ -32,15 +34,15 @@ langs:
 - id: EN
   name: English
 link: https://erddap.ogsl.ca/erddap/index.html
-name: ERDDAP OGSLa Data Catalog
+name: OGSL ERDDAP Server
 owner:
-  link: https://www.ogsl.ca
+  link: https://ogsl.ca
   location:
     country:
       id: CA
       name: Canada
     level: 20
-  name: St. Lawrence Global Observatory
+  name: St. Lawrence Global Observatory (OGSL/SLGO)
   type: Academy
 properties:
   has_doi: false
@@ -62,6 +64,10 @@ tags:
 - oceanography
 - climate
 - marine
+- St. Lawrence
+- CIOOS
+- marine data
+- scientific data
 topics:
 - id: TECH
   name: Science and technology

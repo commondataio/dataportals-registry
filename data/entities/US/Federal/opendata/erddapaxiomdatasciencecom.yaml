@@ -2,7 +2,7 @@ access_mode:
 - open
 api: true
 api_status: active
-catalog_type: Open data portal
+catalog_type: Scientific data repository
 content_types:
 - dataset
 coverage:
@@ -14,19 +14,27 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: ERDDAP server providing access to scientific datasets for subsetting,
-  visualization, and download.
+description: ERDDAP data server hosted by Axiom Data Science, providing access to
+  scientific datasets for subsetting, visualization, and download. The server offers
+  oceanographic and environmental datasets with OPeNDAP, file downloads, and metadata
+  capabilities.
 endpoints:
 - type: erddap:index
+  url: http://erddap.axiomdatascience.com/erddap/index.json
+- type: erddap:datasets
   url: http://erddap.axiomdatascience.com/erddap/info/index.json
+- type: opensearch
+  url: http://erddap.axiomdatascience.com/erddap/opensearch1.1/description.xml
 - type: sitemap
   url: http://erddap.axiomdatascience.com/erddap/sitemap.xml
 id: erddapaxiomdatasciencecom
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://erddap.axiomdatascience.com/erddap/index.html
-name: erddap.axiomdatascience.com
+name: Axiom Data Science ERDDAP
 owner:
-  link: http://erddap.axiomdatascience.com
+  link: https://www.axiomdatascience.com
   location:
     country:
       id: US
@@ -48,10 +56,12 @@ software:
   name: ERDDAP
 status: active
 tags:
+- oceans
+- seas
+- environment
 - oceanography
-- climate
 - environmental data
-- science
+- OPeNDAP
 topics:
 - id: ENVI
   name: Environment
