@@ -18,6 +18,12 @@ description: DSpace institutional repository of Saint Petersburg State Universit
   (SPbU), providing access to research outputs, datasets, theses, and academic publications
   from the university community.
 endpoints:
+- type: dspace
+  url: https://api.dspace.spbu.ru/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://api.dspace.spbu.ru/server/api/discover/search/objects
+  version: '7'
 - type: sitemap
   url: https://dspace.spbu.ru/sitemap_index.xml
 id: dspacespburu
