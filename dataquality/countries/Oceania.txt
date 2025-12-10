@@ -1,0 +1,858 @@
+DATA QUALITY REPORT - COUNTRY: Oceania
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: Oceania
+Total Records with Issues: 16
+Total Issues Found: 92
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: Oceania/opendata/prdrse4allspcint.yaml
+Record ID: prdrse4allspcint
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: Oceania/opendata/pacificdataspreporg.yaml
+Record ID: pacificdataspreporg
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[COVERAGE_NORMALIZATION]
+Count: 14
+Priority: IMPORTANT
+
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Record ID: microdatapacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/opendata/prdrse4allspcint.yaml
+Record ID: prdrse4allspcint
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/opendata/pacificdataspreporg.yaml
+Record ID: pacificdataspreporg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/opendata/pacificdataorg.yaml
+Record ID: pacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Record ID: tdspacificdataorgncwms
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/mahimahispcintncwms.yaml
+Record ID: mahimahispcintncwms
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Record ID: mapsdigitalearthpacificorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/geo/mappacificdataorg.yaml
+Record ID: mappacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Oceania/scientific/mahimahispcint.yaml
+Record ID: mahimahispcint
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: World/scientific/tdspacificdataorg.yaml
+Record ID: tdspacificdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Oceania', 'name': 'Oceania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[ENDPOINT_TO_VERIFY]
+Count: 40
+Priority: LOW
+
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Record ID: microdatapacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://microdata.pacificdata.org/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Record ID: microdatapacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://microdata.pacificdata.org/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://stats-nsi-stable.pacificdata.org/rest/dataflow
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://stats-nsi-stable.pacificdata.org/rest/datastructure
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://stats-nsi-stable.pacificdata.org/rest/codelist
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://stats-nsi-stable.pacificdata.org/rest/conceptscheme
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://stats-sfs.pacificdata.org/api/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/opendata/prdrse4allspcint.yaml
+Record ID: prdrse4allspcint
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://prdrse4all.spc.int/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/opendata/pacificdataspreporg.yaml
+Record ID: pacificdataspreporg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://pacific-data.sprep.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/opendata/pacificdataorg.yaml
+Record ID: pacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://pacificdata.org/data/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoserver.pacificdata.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoserver.pacificdata.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoserver.pacificdata.org/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Record ID: tdspacificdataorgncwms
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://tds.pacificdata.org/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Record ID: tdspacificdataorgncwms
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://tds.pacificdata.org/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/mahimahispcintncwms.yaml
+Record ID: mahimahispcintncwms
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://mahi-mahi.spc.int/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/mahimahispcintncwms.yaml
+Record ID: mahimahispcintncwms
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://mahi-mahi.spc.int/ncWMS/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://nexus.pacificdata.org/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://nexus.pacificdata.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://nexus.pacificdata.org/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://nexus.pacificdata.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://nexus.pacificdata.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://nexus.pacificdata.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://nexus.pacificdata.org/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://nexus.pacificdata.org/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Record ID: mapsdigitalearthpacificorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://raw.githubusercontent.com/digitalearthpacific/dep-maps/main/dep.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/geo/mappacificdataorg.yaml
+Record ID: mappacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://map.pacificdata.org/config.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/scientific/mahimahispcint.yaml
+Record ID: mahimahispcint
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://mahi-mahi.spc.int/thredds/catalog.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Oceania/scientific/mahimahispcint.yaml
+Record ID: mahimahispcint
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://mahi-mahi.spc.int/thredds/info/serverInfo.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: World/scientific/tdspacificdataorg.yaml
+Record ID: tdspacificdataorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://tds.pacificdata.org/thredds/catalog/catalog.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_IDENTIFIERS]
+Count: 16
+Priority: IMPORTANT
+
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Record ID: microdatapacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/opendata/prdrse4allspcint.yaml
+Record ID: prdrse4allspcint
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/opendata/pacificdataspreporg.yaml
+Record ID: pacificdataspreporg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/opendata/pacificdataorg.yaml
+Record ID: pacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Record ID: tdspacificdataorgncwms
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/mahimahispcintncwms.yaml
+Record ID: mahimahispcintncwms
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Record ID: mapsdigitalearthpacificorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/geo/mappacificdataorg.yaml
+Record ID: mappacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Oceania/scientific/mahimahispcint.yaml
+Record ID: mahimahispcint
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: FJ/geo/fijipopgisspcint.yaml
+Record ID: fijipopgisspcint
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: World/scientific/tdspacificdataorg.yaml
+Record ID: tdspacificdataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: CK/geo/cookspopgisspcint.yaml
+Record ID: cookspopgisspcint
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 16
+Priority: IMPORTANT
+
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Record ID: microdatapacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Record ID: statsnsistablepacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/opendata/prdrse4allspcint.yaml
+Record ID: prdrse4allspcint
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/opendata/pacificdataspreporg.yaml
+Record ID: pacificdataspreporg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/opendata/pacificdataorg.yaml
+Record ID: pacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Record ID: geoserverpacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Record ID: tdspacificdataorgncwms
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/mahimahispcintncwms.yaml
+Record ID: mahimahispcintncwms
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/nexuspacificdataorg.yaml
+Record ID: nexuspacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Record ID: mapsdigitalearthpacificorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/geo/mappacificdataorg.yaml
+Record ID: mappacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Oceania/scientific/mahimahispcint.yaml
+Record ID: mahimahispcint
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: FJ/geo/fijipopgisspcint.yaml
+Record ID: fijipopgisspcint
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: World/scientific/tdspacificdataorg.yaml
+Record ID: tdspacificdataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: CK/geo/cookspopgisspcint.yaml
+Record ID: cookspopgisspcint
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: CK/geo/cookspopgisspcint.yaml
+Record ID: cookspopgisspcint
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: PopGIS Cook Islands
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[URL_HOST_MISMATCH]
+Count: 2
+Priority: MEDIUM
+
+File: Oceania/indicators/statspacificdataorg.yaml
+Record ID: statspacificdataorg
+Issue: URL_HOST_MISMATCH
+Field: endpoints[0].url
+Current Value: link=https://stats.pacificdata.org, endpoint=https://stats-sfs.pacificdata.org/api/search
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Record ID: mapsdigitalearthpacificorg
+Issue: URL_HOST_MISMATCH
+Field: endpoints[0].url
+Current Value: link=https://maps.digitalearthpacific.org, endpoint=https://raw.githubusercontent.com/digitalearthpacific/dep-maps/main/dep.json
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 3 issues
+COVERAGE_NORMALIZATION: 14 issues
+ENDPOINT_TO_VERIFY: 40 issues
+MISSING_IDENTIFIERS: 16 issues
+MISSING_LICENSE: 16 issues
+SHORT_DESCRIPTION: 1 issues
+URL_HOST_MISMATCH: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: nexuspacificdataorg
+File: Oceania/geo/nexuspacificdataorg.yaml
+Issue Count: 21
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: statsnsistablepacificdataorg
+File: Oceania/indicators/statsnsistablepacificdataorg.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: statspacificdataorg
+File: Oceania/indicators/statspacificdataorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - URL_HOST_MISMATCH: endpoints[0].url
+
+Record ID: geoserverpacificdataorg
+File: Oceania/geo/geoserverpacificdataorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: microdatapacificdataorg
+File: Oceania/microdata/microdatapacificdataorg.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: prdrse4allspcint
+File: Oceania/opendata/prdrse4allspcint.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: pacificdataspreporg
+File: Oceania/opendata/pacificdataspreporg.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: tdspacificdataorgncwms
+File: Oceania/geo/tdspacificdataorgncwms.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: mahimahispcintncwms
+File: Oceania/geo/mahimahispcintncwms.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: mapsdigitalearthpacificorg
+File: Oceania/geo/mapsdigitalearthpacificorg.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - URL_HOST_MISMATCH: endpoints[0].url
+
+Record ID: mahimahispcint
+File: Oceania/scientific/mahimahispcint.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: pacificdataorg
+File: Oceania/opendata/pacificdataorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: mappacificdataorg
+File: Oceania/geo/mappacificdataorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: tdspacificdataorg
+File: World/scientific/tdspacificdataorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: cookspopgisspcint
+File: CK/geo/cookspopgisspcint.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - SHORT_DESCRIPTION: description

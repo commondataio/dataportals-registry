@@ -1,0 +1,140 @@
+DATA QUALITY REPORT - COUNTRY: TD
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: TD
+Total Records with Issues: 2
+Total Issues Found: 12
+
+=== ISSUES BY TYPE ===
+
+[ENDPOINT_TO_VERIFY]
+Count: 7
+Priority: LOW
+
+File: TD/geo/wis2meteotchadorg.yaml
+Record ID: wis2meteotchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wis2.meteotchad.org/oapi/openapi
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/geo/wis2meteotchadorg.yaml
+Record ID: wis2meteotchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wis2.meteotchad.org/oapi/collections/?f=json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://reseau-tchad.org:8080/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://reseau-tchad.org:8080/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://reseau-tchad.org:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://reseau-tchad.org:8080/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://reseau-tchad.org:8080/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 1
+Priority: CRITICAL
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000832
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 2
+Priority: IMPORTANT
+
+File: TD/geo/wis2meteotchadorg.yaml
+Record ID: wis2meteotchadorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 2
+Priority: IMPORTANT
+
+File: TD/geo/wis2meteotchadorg.yaml
+Record ID: wis2meteotchadorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: TD/Federal/geo/reseautchadorg.yaml
+Record ID: reseautchadorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+ENDPOINT_TO_VERIFY: 7 issues
+INVALID_UID: 1 issues
+MISSING_IDENTIFIERS: 2 issues
+MISSING_LICENSE: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: reseautchadorg
+File: TD/Federal/geo/reseautchadorg.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - INVALID_UID: uid
+
+Record ID: wis2meteotchadorg
+File: TD/geo/wis2meteotchadorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url

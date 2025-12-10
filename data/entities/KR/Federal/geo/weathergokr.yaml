@@ -71,3 +71,12 @@ topics:
   name: Environment
   type: iso19115
 uid: cdi00001043
+endpoints:
+- type: wms130
+  url: https://weather.go.kr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://weather.go.kr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: sitemap
+  url: https://weather.go.kr/sitemap.xml

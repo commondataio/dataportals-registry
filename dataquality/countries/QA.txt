@@ -1,0 +1,685 @@
+DATA QUALITY REPORT - COUNTRY: QA
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: QA
+Total Records with Issues: 11
+Total Issues Found: 75
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 5
+Priority: IMPORTANT
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 47
+Priority: LOW
+
+File: OM/indicators/dpmarsagccstatorg.yaml
+Record ID: dpmarsagccstatorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dp.marsa.gccstat.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://sdg-en-psaqatar.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://sdg-en-psaqatar.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://sdg-en-psaqatar.opendata.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://sdg-en-psaqatar.opendata.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://sdg-en-psaqatar.opendata.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://qspace.qu.edu.qa/rest/items
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://qspace.qu.edu.qa/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://qspace.qu.edu.qa/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://qspace.qu.edu.qa/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://qspace.qu.edu.qa/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://qspace.qu.edu.qa/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://qspace.qu.edu.qa:443/open-search/description.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Record ID: wwwpsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://www.psa.gov.qa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Record ID: wwwpsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.psa.gov.qa:443/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/opendata/datagovqa.yaml
+Record ID: datagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.data.gov.qa/api
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/opendata/datagovqa.yaml
+Record ID: datagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.data.gov.qa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoportal.manateq.qa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoportal.manateq.qa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoportal.manateq.qa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoportal.manateq.qa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoportal.manateq.qa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoportal.manateq.qa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://myschool.edu.gov.qa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://myschool.edu.gov.qa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://myschool.edu.gov.qa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://myschool.edu.gov.qa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://myschool.edu.gov.qa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://myschool.edu.gov.qa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.psa.gov.qa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.psa.gov.qa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.psa.gov.qa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.psa.gov.qa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.psa.gov.qa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.psa.gov.qa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://services.gisqatar.org.qa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://services.gisqatar.org.qa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://services.gisqatar.org.qa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://services.gisqatar.org.qa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://services.gisqatar.org.qa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://services.gisqatar.org.qa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://agis.ashghal.gov.qa/gisserver/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_IDENTIFIERS]
+Count: 9
+Priority: IMPORTANT
+
+File: OM/indicators/sdmxmarsagccstatorg.yaml
+Record ID: sdmxmarsagccstatorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Record ID: wwwpsagovqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/opendata/datagovqa.yaml
+Record ID: datagovqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 11
+Priority: IMPORTANT
+
+File: OM/indicators/dpmarsagccstatorg.yaml
+Record ID: dpmarsagccstatorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: OM/indicators/sdmxmarsagccstatorg.yaml
+Record ID: sdmxmarsagccstatorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Record ID: sdgenpsaqataropendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Record ID: wwwpsagovqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/opendata/datagovqa.yaml
+Record ID: datagovqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Record ID: geoportalmanateqqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/geo/myschooledugovqa.yaml
+Record ID: myschooledugovqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/geo/gispsagovqa.yaml
+Record ID: gispsagovqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Record ID: servicesgisqatarorgqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Record ID: agisashghalgovqa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: QA/Federal/opendata/datagovqa.yaml
+Record ID: datagovqa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[URL_HOST_MISMATCH]
+Count: 2
+Priority: MEDIUM
+
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Record ID: qspacequeduqa
+Issue: URL_HOST_MISMATCH
+Field: endpoints[6].url
+Current Value: link=https://qspace.qu.edu.qa, endpoint=https://qspace.qu.edu.qa:443/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Record ID: wwwpsagovqa
+Issue: URL_HOST_MISMATCH
+Field: endpoints[1].url
+Current Value: link=https://www.psa.gov.qa/en/statistics1/Pages/default.aspx, endpoint=https://www.psa.gov.qa:443/sitemap.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 5 issues
+ENDPOINT_TO_VERIFY: 47 issues
+MISSING_IDENTIFIERS: 9 issues
+MISSING_LICENSE: 11 issues
+MISSING_TOPICS: 1 issues
+URL_HOST_MISMATCH: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: qspacequeduqa
+File: QA/QA-DA/scientific/qspacequeduqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - URL_HOST_MISMATCH: endpoints[6].url
+
+Record ID: geoportalmanateqqa
+File: QA/Federal/geo/geoportalmanateqqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: myschooledugovqa
+File: QA/Federal/geo/myschooledugovqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: gispsagovqa
+File: QA/Federal/geo/gispsagovqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: servicesgisqatarorgqa
+File: QA/Federal/geo/servicesgisqatarorgqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: agisashghalgovqa
+File: QA/Federal/geo/agisashghalgovqa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: sdgenpsaqataropendataarcgiscom
+File: QA/QA-DA/geo/sdgenpsaqataropendataarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: wwwpsagovqa
+File: QA/Federal/indicators/wwwpsagovqa.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - URL_HOST_MISMATCH: endpoints[1].url
+
+Record ID: datagovqa
+File: QA/Federal/opendata/datagovqa.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url

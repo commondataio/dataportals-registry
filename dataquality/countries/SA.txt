@@ -1,0 +1,1284 @@
+DATA QUALITY REPORT - COUNTRY: SA
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: SA
+Total Records with Issues: 22
+Total Issues Found: 142
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Record ID: terriamapsaudicom
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: SA/Federal/scientific/srbsdledusa.yaml
+Record ID: srbsdledusa
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Open data portal, software.id=esploro
+Suggested Action: Update catalog_type to 'Scientific data repository' to match software.id
+
+[ENDPOINT_TO_VERIFY]
+Count: 85
+Priority: LOW
+
+File: OM/indicators/dpmarsagccstatorg.yaml
+Record ID: dpmarsagccstatorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dp.marsa.gccstat.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-01/opendata/alriyadhgovsa.yaml
+Record ID: alriyadhgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://alriyadh.gov.sa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.alhasa.gov.sa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.alhasa.gov.sa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.alhasa.gov.sa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.alhasa.gov.sa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.alhasa.gov.sa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.alhasa.gov.sa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis2.qassim.gov.sa:6443/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://sdi.holymakkah.gov.sa/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://maps.holymakkah.gov.sa/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/indicators/databasestatsgovsa.yaml
+Record ID: databasestatsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://database.stats.gov.sa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/opendata/seuedusa.yaml
+Record ID: seuedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://seu.edu.sa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/opendata/oddatagovsa.yaml
+Record ID: oddatagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://od.data.gov.sa/Data/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/opendata/oddatagovsa.yaml
+Record ID: oddatagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://od.data.gov.sa/Data/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/opendata/zatcagovsa.yaml
+Record ID: zatcagovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://zatca.gov.sa/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.sgs.gov.sa/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.sgs.gov.sa/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.sgs.gov.sa/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.sgs.gov.sa/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.sgs.gov.sa/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.sgs.gov.sa/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://egis.tbc.sa/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://egis.tbc.sa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://egis.tbc.sa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://egis.tbc.sa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://egis.tbc.sa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://egis.tbc.sa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://egis.tbc.sa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Record ID: terriamapsaudicom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://terria.mapsaudi.com/config.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://vmaps.address.gov.sa/agserver/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://vmaps.address.gov.sa/agserver/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://vmaps.address.gov.sa/agserver/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://vmaps.address.gov.sa/agserver/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://vmaps.address.gov.sa/agserver/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://vmaps.address.gov.sa/agserver/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.kaust.edu.sa/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.kaust.edu.sa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.kaust.edu.sa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.kaust.edu.sa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.kaust.edu.sa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.kaust.edu.sa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://gis.kaust.edu.sa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geoportal.tabaqat.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.geoportal.sa/hosting/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.geoportal.sa/hosting/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.geoportal.sa/hosting/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.geoportal.sa/hosting/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.geoportal.sa/hosting/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.geoportal.sa/hosting/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoportal.moe.gov.sa/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoportal.moe.gov.sa/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoportal.moe.gov.sa/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoportal.moe.gov.sa/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoportal.moe.gov.sa/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoportal.moe.gov.sa/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Record ID: datasourcekapsarcorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://datasource.kapsarc.org/api
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Record ID: datasourcekapsarcorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://datasource.kapsarc.org/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/scientific/srbsdledusa.yaml
+Record ID: srbsdledusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://srb.sdl.edu.sa/esplorows/rest/research/simpleSearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SA/Federal/scientific/srbsdledusa.yaml
+Record ID: srbsdledusa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://srb.sdl.edu.sa/view/google/siteindex.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: None
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_IDENTIFIERS]
+Count: 21
+Priority: IMPORTANT
+
+File: OM/indicators/sdmxmarsagccstatorg.yaml
+Record ID: sdmxmarsagccstatorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: World/indicators/jodidborg.yaml
+Record ID: jodidborg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/SA-01/opendata/alriyadhgovsa.yaml
+Record ID: alriyadhgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/indicators/databasestatsgovsa.yaml
+Record ID: databasestatsgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/opendata/seuedusa.yaml
+Record ID: seuedusa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/opendata/oddatagovsa.yaml
+Record ID: oddatagovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/opendata/zatcagovsa.yaml
+Record ID: zatcagovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Record ID: terriamapsaudicom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Record ID: datasourcekapsarcorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SA/Federal/scientific/srbsdledusa.yaml
+Record ID: srbsdledusa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 22
+Priority: IMPORTANT
+
+File: OM/indicators/dpmarsagccstatorg.yaml
+Record ID: dpmarsagccstatorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: OM/indicators/sdmxmarsagccstatorg.yaml
+Record ID: sdmxmarsagccstatorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: World/indicators/jodidborg.yaml
+Record ID: jodidborg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/SA-01/opendata/alriyadhgovsa.yaml
+Record ID: alriyadhgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Record ID: gisalhasagovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Record ID: gis2qassimgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Record ID: sdiholymakkahgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Record ID: mapsholymakkahgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/indicators/databasestatsgovsa.yaml
+Record ID: databasestatsgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/opendata/seuedusa.yaml
+Record ID: seuedusa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/opendata/oddatagovsa.yaml
+Record ID: oddatagovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/opendata/zatcagovsa.yaml
+Record ID: zatcagovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/gissgsgovsa.yaml
+Record ID: gissgsgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/egistbcsa.yaml
+Record ID: egistbcsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Record ID: terriamapsaudicom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/giskaustedusa.yaml
+Record ID: giskaustedusa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Record ID: geoportalmoegovsa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Record ID: datasourcekapsarcorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SA/Federal/scientific/srbsdledusa.yaml
+Record ID: srbsdledusa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 6
+Priority: LOW
+
+File: SA/Federal/opendata/seuedusa.yaml
+Record ID: seuedusa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Record ID: terriamapsaudicom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Record ID: vmapsaddressgovsa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SA/Federal/geo/geoportalsa.yaml
+Record ID: wwwgeoportalsa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Record ID: datasourcekapsarcorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: SA/SA-01/opendata/alriyadhgovsa.yaml
+Record ID: alriyadhgovsa
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Riyadh Municipality Datasets
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Record ID: geoportaltabaqatnet
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Geospatial data catalog and geoportal
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 3 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 85 issues
+MISSING_DESCRIPTION: 1 issues
+MISSING_IDENTIFIERS: 21 issues
+MISSING_LICENSE: 22 issues
+MISSING_TAGS: 1 issues
+MISSING_TOPICS: 6 issues
+SHORT_DESCRIPTION: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geoportaltabaqatnet
+File: SA/Federal/geo/geoportaltabaqatnet.yaml
+Issue Count: 16
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: vmapsaddressgovsa
+File: SA/Federal/geo/vmapsaddressgovsa.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: egistbcsa
+File: SA/Federal/geo/egistbcsa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: giskaustedusa
+File: SA/Federal/geo/giskaustedusa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: wwwgeoportalsa
+File: SA/Federal/geo/geoportalsa.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: gisalhasagovsa
+File: SA/SA-04/geo/gisalhasagovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: gis2qassimgovsa
+File: SA/SA-05/geo/gis2qassimgovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: sdiholymakkahgovsa
+File: SA/SA-02/geo/sdiholymakkahgovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: mapsholymakkahgovsa
+File: SA/SA-02/geo/mapsholymakkahgovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: gissgsgovsa
+File: SA/Federal/geo/gissgsgovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: geoportalmoegovsa
+File: SA/Federal/geo/geoportalmoegovsa.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: terriamapsaudicom
+File: SA/Federal/geo/terriamapsaudicom.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datasourcekapsarcorg
+File: SA/Federal/scientific/datasourcekapsarcorg.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: srbsdledusa
+File: SA/Federal/scientific/srbsdledusa.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: alriyadhgovsa
+File: SA/SA-01/opendata/alriyadhgovsa.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: seuedusa
+File: SA/Federal/opendata/seuedusa.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: oddatagovsa
+File: SA/Federal/opendata/oddatagovsa.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: databasestatsgovsa
+File: SA/Federal/indicators/databasestatsgovsa.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: zatcagovsa
+File: SA/Federal/opendata/zatcagovsa.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

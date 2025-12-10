@@ -1,0 +1,201 @@
+DATA QUALITY REPORT - COUNTRY: BJ
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: BJ
+Total Records with Issues: 4
+Total Issues Found: 18
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Record ID: wwwgeobeninbj
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[ENDPOINT_TO_VERIFY]
+Count: 7
+Priority: LOW
+
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Record ID: wwwgeobeninbj
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.geobenin.bj/geosource/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Record ID: wwwgeobeninbj
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.geobenin.bj/geosource/srv/api
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://ipt.gbifbenin.org/dcat
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://ipt.gbifbenin.org/inventory/dataset
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://ipt.gbifbenin.org/rss.do
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/scientific/datacrecbj.yaml
+Record ID: datacrecbj
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.crec.bj/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BJ/Federal/scientific/datacrecbj.yaml
+Record ID: datacrecbj
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.crec.bj/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_IDENTIFIERS]
+Count: 4
+Priority: IMPORTANT
+
+File: BJ/Federal/microdata/nadainsaebj.yaml
+Record ID: nadainsaebj
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Record ID: wwwgeobeninbj
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: BJ/Federal/scientific/datacrecbj.yaml
+Record ID: datacrecbj
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 4
+Priority: IMPORTANT
+
+File: BJ/Federal/microdata/nadainsaebj.yaml
+Record ID: nadainsaebj
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Record ID: wwwgeobeninbj
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: BJ/Federal/scientific/datacrecbj.yaml
+Record ID: datacrecbj
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: BJ/Federal/scientific/datacrecbj.yaml
+Record ID: datacrecbj
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Record ID: iptgbifbeninorg
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: IPT for the GBIF Benin Node
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 7 issues
+MISSING_IDENTIFIERS: 4 issues
+MISSING_LICENSE: 4 issues
+MISSING_TOPICS: 1 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: iptgbifbeninorg
+File: BJ/Federal/scientific/iptgbifbeninorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: wwwgeobeninbj
+File: BJ/Federal/geo/wwwgeobeninbj.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: datacrecbj
+File: BJ/Federal/scientific/datacrecbj.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url

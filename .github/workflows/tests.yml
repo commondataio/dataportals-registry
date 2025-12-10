@@ -27,10 +27,8 @@ jobs:
         pip install -r requirements.txt
     
     - name: Run tests
-      working-directory: ${{ github.workspace }}
       run: |
-        cd scripts
-        python -m pytest ../tests -v --cov=scripts --cov-report=xml --cov-report=term
+        python -m pytest tests -v --cov=scripts --cov-report=xml --cov-report=term
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3

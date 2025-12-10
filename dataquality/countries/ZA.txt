@@ -1,0 +1,2711 @@
+DATA QUALITY REPORT - COUNTRY: ZA
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: ZA
+Total Records with Issues: 66
+Total Issues Found: 452
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 20
+Priority: IMPORTANT
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Record ID: medatsamrcacza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/wwwafrigiscoza.yaml
+Record ID: wwwafrigiscoza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/odpcctegisopendataarcgiscom.yaml
+Record ID: odpcctegisopendataarcgiscom
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/sungis08stbsunacza.yaml
+Record ID: sungis08stbsunacza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Record ID: geoserver1mapcoza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=8
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Record ID: imageryesrisouthafricacom
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/scientific/mandelafigsharecom.yaml
+Record ID: mandelafigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/hungumutfigsharecom.yaml
+Record ID: hungumutfigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/aduiptuctacza.yaml
+Record ID: aduiptuctacza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/scientific/energydatauctacza.yaml
+Record ID: energydatauctacza
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/smuzafigsharecom.yaml
+Record ID: smuzafigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/unisafigsharecom.yaml
+Record ID: unisafigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/wsufigsharecom.yaml
+Record ID: wsufigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/ufsfigsharecom.yaml
+Record ID: ufsfigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/iptbayworldsaiabacza.yaml
+Record ID: iptbayworldsaiabacza
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: ZA/Federal/scientific/southafricafigsharecom.yaml
+Record ID: southafricafigsharecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: Africa/geo/digitalearthafrica.yaml
+Record ID: digitalearthafrica
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: Africa/geo/mapsdigitalearthafrica.yaml
+Record ID: mapsdigitalearthafrica
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: ZA/Federal/scientific/energydatauctacza.yaml
+Record ID: energydatauctacza
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+[COVERAGE_NORMALIZATION]
+Count: 2
+Priority: IMPORTANT
+
+File: Africa/geo/digitalearthafrica.yaml
+Record ID: digitalearthafrica
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Africa', 'name': 'Africa'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: Africa/geo/mapsdigitalearthafrica.yaml
+Record ID: mapsdigitalearthafrica
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'Africa', 'name': 'Africa'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[DUPLICATE_TAGS]
+Count: 1
+Priority: LOW
+
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Record ID: wwwdatafirstuctacza
+Issue: DUPLICATE_TAGS
+Field: tags[3]
+Current Value: Microdata
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 271
+Priority: LOW
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.benguelacc.org/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.benguelacc.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geodata.benguelacc.org/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geodata.benguelacc.org/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geodata.benguelacc.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geodata.benguelacc.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geodata.benguelacc.org/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geodata.benguelacc.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geodata.benguelacc.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://geodata.benguelacc.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[18].url
+Current Value: https://geodata.benguelacc.org/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[19].url
+Current Value: https://geodata.benguelacc.org/geoserver/rest/about/version
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[20].url
+Current Value: https://geodata.benguelacc.org/geoserver/rest/settings
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[21].url
+Current Value: https://geodata.benguelacc.org/geoserver/rest/layers
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[22].url
+Current Value: https://geodata.benguelacc.org/catalogue/opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://mines.gouv.ci.cadastreminier.org/arcgis/rest/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wcg-opendataportal-westerncapegov.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wcg-opendataportal-westerncapegov.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://wcg-opendataportal-westerncapegov.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://wcg-opendataportal-westerncapegov.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://wcg-opendataportal-westerncapegov.hub.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-EC/geo/amatholegisgovza.yaml
+Record ID: amatholegisgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://amatholegis.gov.za/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-EC/geo/amatholegisgovza.yaml
+Record ID: amatholegisgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://amatholegis.gov.za/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.ekurhuleni.gov.za/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Record ID: medatsamrcacza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://medat.samrc.ac.za/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Record ID: medatsamrcacza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://medat.samrc.ac.za/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/dataahriorg.yaml
+Record ID: dataahriorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.ahri.org/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Record ID: wwwdatafirstuctacza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.datafirst.uct.ac.za/dataportal/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Record ID: wwwdatafirstuctacza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://datafirst.uct.ac.za/dataportal/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/microdata/dataagincourtcoza.yaml
+Record ID: dataagincourtcoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.agincourt.co.za/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Record ID: ocimscsircoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://marcosouth.org/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Record ID: ocimscsircoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://marcosouth.org/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Record ID: dataopenuporgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.openup.org.za/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Record ID: dataopenuporgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.openup.org.za/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Record ID: dataopenuporgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.openup.org.za/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/dataoceangovza.yaml
+Record ID: dataoceangovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.ocean.gov.za/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/datavulekamaligovza.yaml
+Record ID: datavulekamaligovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.vulekamali.gov.za/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/datavulekamaligovza.yaml
+Record ID: datavulekamaligovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.vulekamali.gov.za/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Record ID: politicaleconomyorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://politicaleconomy.org.za/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Record ID: politicaleconomyorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://politicaleconomy.org.za/sitemap.rss
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Record ID: politicaleconomyorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://politicaleconomy.org.za/sitemap_index.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://bdm.georams.co.za/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://maps.geoscience.org.za/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://maps.geoscience.org.za/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://maps.geoscience.org.za/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://maps.geoscience.org.za/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://maps.geoscience.org.za/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://maps.geoscience.org.za/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://maps.geoscience.org.za/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.sagns.gov.za/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.sagns.gov.za/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.sagns.gov.za/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.sagns.gov.za/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.sagns.gov.za/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.sagns.gov.za/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://www.sagns.gov.za/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://gis.orasecom.org/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://gis.orasecom.org/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://gis.orasecom.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: http://gis.orasecom.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: http://gis.orasecom.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: http://gis.orasecom.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: http://gis.orasecom.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+... and 171 more records with this issue
+
+[INVALID_UID]
+Count: 15
+Priority: CRITICAL
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001115
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/opendatadurbancartocom.yaml
+Record ID: opendatadurbancartocom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000827
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001123
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000796
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/prhgeonas01upacza.yaml
+Record ID: prhgeonas01upacza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001120
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/metadatasanbiorg.yaml
+Record ID: metadatasanbiorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000819
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/odpcctegisopendataarcgiscom.yaml
+Record ID: odpcctegisopendataarcgiscom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000823
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/sungis08stbsunacza.yaml
+Record ID: sungis08stbsunacza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00004454
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/staginggeonodekartozacom.yaml
+Record ID: staginggeonodekartozacom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000841
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Record ID: geoserver1mapcoza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001116
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Record ID: imageryesrisouthafricacom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005638
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/scientific/reposadilarorg.yaml
+Record ID: reposadilarorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00002150
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00002158
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: ZA/Federal/scientific/curationhsrcacza.yaml
+Record ID: curationhsrcacza
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001131
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: Africa/Federal/geo/atlasnepadorg.yaml
+Record ID: atlasnepadorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000727
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 59
+Priority: IMPORTANT
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/ZA-WC/geo/cityimgcapetowngovza.yaml
+Record ID: cityimgcapetowngovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/ZA-EC/geo/amatholegisgovza.yaml
+Record ID: amatholegisgovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Record ID: medatsamrcacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/microdata/dataagincourtcoza.yaml
+Record ID: dataagincourtcoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Record ID: ocimscsircoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Record ID: dataopenuporgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/spatialtaxdataorgza.yaml
+Record ID: spatialtaxdataorgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/dataoceangovza.yaml
+Record ID: dataoceangovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/datavulekamaligovza.yaml
+Record ID: datavulekamaligovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Record ID: politicaleconomyorgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/opendatadurbancartocom.yaml
+Record ID: opendatadurbancartocom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/spatialhubmdbsaopendataarcgiscom.yaml
+Record ID: spatialhubmdbsaopendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/mapsppforgza.yaml
+Record ID: mapsppforgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/prhgeonas01upacza.yaml
+Record ID: prhgeonas01upacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/wwwgreaterkrugerlandscapecoza.yaml
+Record ID: wwwgreaterkrugerlandscapecoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/wisweathersacoza.yaml
+Record ID: wisweathersacoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/wwwafrigiscoza.yaml
+Record ID: wwwafrigiscoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/metadatasanbiorg.yaml
+Record ID: metadatasanbiorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/odpcctegisopendataarcgiscom.yaml
+Record ID: odpcctegisopendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/sungis08stbsunacza.yaml
+Record ID: sungis08stbsunacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/staginggeonodekartozacom.yaml
+Record ID: staginggeonodekartozacom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/egisenvironmentgovza.yaml
+Record ID: egisenvironmentgovza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Record ID: geoserver1mapcoza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Record ID: imageryesrisouthafricacom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/iptkznmsaiabacza.yaml
+Record ID: iptkznmsaiabacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/mandelafigsharecom.yaml
+Record ID: mandelafigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/yabelanaukznacza.yaml
+Record ID: yabelanaukznacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/hungumutfigsharecom.yaml
+Record ID: hungumutfigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/aduiptuctacza.yaml
+Record ID: aduiptuctacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/energydatauctacza.yaml
+Record ID: energydatauctacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/reposadilarorg.yaml
+Record ID: reposadilarorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/smuzafigsharecom.yaml
+Record ID: smuzafigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/daytanwuacza.yaml
+Record ID: daytanwuacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/researchdataruacza.yaml
+Record ID: researchdataruacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/iptsanbiorgza.yaml
+Record ID: iptsanbiorgza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/iptsaiabacza.yaml
+Record ID: iptsaiabacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/unisafigsharecom.yaml
+Record ID: unisafigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/wsufigsharecom.yaml
+Record ID: wsufigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/repositoryujacza.yaml
+Record ID: repositoryujacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/curationhsrcacza.yaml
+Record ID: curationhsrcacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/ufsfigsharecom.yaml
+Record ID: ufsfigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/iptbayworldsaiabacza.yaml
+Record ID: iptbayworldsaiabacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/southafricafigsharecom.yaml
+Record ID: southafricafigsharecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/cataloguesaeonacza.yaml
+Record ID: cataloguesaeonacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/Federal/scientific/cmrmandelaacza.yaml
+Record ID: cmrmandelaacza
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: ZA/ZA-KZN/opendata/edgedurban.yaml
+Record ID: edgedurban
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Africa/geo/digitalearthafrica.yaml
+Record ID: digitalearthafrica
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Africa/geo/mapsdigitalearthafrica.yaml
+Record ID: mapsdigitalearthafrica
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Africa/Federal/geo/atlasnepadorg.yaml
+Record ID: atlasnepadorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Record ID: imageryesrisouthafricacom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_LICENSE]
+Count: 66
+Priority: IMPORTANT
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: NA/geo/geodatabenguelaccorg.yaml
+Record ID: geodatabenguelaccorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/ZA-WC/geo/cityimgcapetowngovza.yaml
+Record ID: cityimgcapetowngovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/ZA-EC/geo/amatholegisgovza.yaml
+Record ID: amatholegisgovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Record ID: gisekurhulenigovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Record ID: medatsamrcacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/microdata/dataahriorg.yaml
+Record ID: dataahriorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Record ID: wwwdatafirstuctacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/microdata/dataagincourtcoza.yaml
+Record ID: dataagincourtcoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Record ID: ocimscsircoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Record ID: dataopenuporgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/spatialtaxdataorgza.yaml
+Record ID: spatialtaxdataorgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/dataoceangovza.yaml
+Record ID: dataoceangovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/datavulekamaligovza.yaml
+Record ID: datavulekamaligovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Record ID: politicaleconomyorgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Record ID: mapsgeoscienceorgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/opendatadurbancartocom.yaml
+Record ID: opendatadurbancartocom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Record ID: wwwsagnsgovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Record ID: gisorasecomorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/spatialhubmdbsaopendataarcgiscom.yaml
+Record ID: spatialhubmdbsaopendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/mapsppforgza.yaml
+Record ID: mapsppforgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/prhgeonas01upacza.yaml
+Record ID: prhgeonas01upacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/wwwgreaterkrugerlandscapecoza.yaml
+Record ID: wwwgreaterkrugerlandscapecoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/wisweathersacoza.yaml
+Record ID: wisweathersacoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/wwwafrigiscoza.yaml
+Record ID: wwwafrigiscoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/metadatasanbiorg.yaml
+Record ID: metadatasanbiorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/odpcctegisopendataarcgiscom.yaml
+Record ID: odpcctegisopendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/sungis08stbsunacza.yaml
+Record ID: sungis08stbsunacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/staginggeonodekartozacom.yaml
+Record ID: staginggeonodekartozacom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/egisenvironmentgovza.yaml
+Record ID: egisenvironmentgovza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Record ID: geoserver1mapcoza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Record ID: imageryesrisouthafricacom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/iptkznmsaiabacza.yaml
+Record ID: iptkznmsaiabacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/mandelafigsharecom.yaml
+Record ID: mandelafigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/yabelanaukznacza.yaml
+Record ID: yabelanaukznacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/hungumutfigsharecom.yaml
+Record ID: hungumutfigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/aduiptuctacza.yaml
+Record ID: aduiptuctacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/energydatauctacza.yaml
+Record ID: energydatauctacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/reposadilarorg.yaml
+Record ID: reposadilarorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/smuzafigsharecom.yaml
+Record ID: smuzafigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/daytanwuacza.yaml
+Record ID: daytanwuacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/researchdataruacza.yaml
+Record ID: researchdataruacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/esangocputacza.yaml
+Record ID: esangocputacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/iptsanbiorgza.yaml
+Record ID: iptsanbiorgza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/iptsaiabacza.yaml
+Record ID: iptsaiabacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/unisafigsharecom.yaml
+Record ID: unisafigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/wsufigsharecom.yaml
+Record ID: wsufigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/repositoryujacza.yaml
+Record ID: repositoryujacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/curationhsrcacza.yaml
+Record ID: curationhsrcacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/zivahubuctacza.yaml
+Record ID: zivahubuctacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/scholardatasunacza.yaml
+Record ID: scholardatasunacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/ufsfigsharecom.yaml
+Record ID: ufsfigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/iptbayworldsaiabacza.yaml
+Record ID: iptbayworldsaiabacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/southafricafigsharecom.yaml
+Record ID: southafricafigsharecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/researchdataupacza.yaml
+Record ID: researchdataupacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/cataloguesaeonacza.yaml
+Record ID: cataloguesaeonacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/kikapuuwcacza.yaml
+Record ID: kikapuuwcacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/Federal/scientific/cmrmandelaacza.yaml
+Record ID: cmrmandelaacza
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: ZA/ZA-KZN/opendata/edgedurban.yaml
+Record ID: edgedurban
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Africa/geo/digitalearthafrica.yaml
+Record ID: digitalearthafrica
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Africa/geo/mapsdigitalearthafrica.yaml
+Record ID: mapsdigitalearthafrica
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Africa/Federal/geo/atlasnepadorg.yaml
+Record ID: atlasnepadorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 2
+Priority: LOW
+
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Record ID: bdmgeoramscoza
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: ZA/Federal/scientific/iptkznmsaiabacza.yaml
+Record ID: iptkznmsaiabacza
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 6
+Priority: LOW
+
+File: NA/opendata/databenguelaccorg.yaml
+Record ID: databenguelaccorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZA/Federal/geo/opendatadurbancartocom.yaml
+Record ID: opendatadurbancartocom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZA/Federal/geo/metadatasanbiorg.yaml
+Record ID: metadatasanbiorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZA/Federal/geo/staginggeonodekartozacom.yaml
+Record ID: staginggeonodekartozacom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Record ID: geoserver1mapcoza
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 3
+Priority: MEDIUM
+
+File: ZA/Federal/microdata/dataahriorg.yaml
+Record ID: dataahriorg
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: AHRI Data Repository and Data Catalog
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: ZA/Federal/scientific/iptsanbiorgza.yaml
+Record ID: iptsanbiorgza
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: South African National Parks
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: ZA/ZA-KZN/opendata/edgedurban.yaml
+Record ID: edgedurban
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Not provided
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[URL_HOST_MISMATCH]
+Count: 4
+Priority: MEDIUM
+
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Record ID: wwwdatafirstuctacza
+Issue: URL_HOST_MISMATCH
+Field: endpoints[1].url
+Current Value: link=https://www.datafirst.uct.ac.za/dataportal/index.php, endpoint=https://datafirst.uct.ac.za/dataportal/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Record ID: ocimscsircoza
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=ocimscsircoza, link=https://marcosouth.org
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: ZA/Federal/scientific/reposadilarorg.yaml
+Record ID: reposadilarorg
+Issue: URL_HOST_MISMATCH
+Field: endpoints[5].url
+Current Value: link=https://repo.sadilar.org, endpoint=http://repo.sadilar.org:80/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Record ID: uctfigsharecom
+Issue: URL_HOST_MISMATCH
+Field: endpoints[1].url
+Current Value: link=https://uct.figshare.com, endpoint=https://zivahub.uct.ac.za/sitemap/siteindex.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 20 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+COVERAGE_NORMALIZATION: 2 issues
+DUPLICATE_TAGS: 1 issues
+ENDPOINT_TO_VERIFY: 271 issues
+INVALID_UID: 15 issues
+MISSING_IDENTIFIERS: 59 issues
+MISSING_LANGS: 1 issues
+MISSING_LICENSE: 66 issues
+MISSING_OWNER_LINK: 2 issues
+MISSING_TAGS: 1 issues
+MISSING_TOPICS: 6 issues
+SHORT_DESCRIPTION: 3 issues
+URL_HOST_MISMATCH: 4 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: cataloguesaeonacza
+File: ZA/Federal/scientific/cataloguesaeonacza.yaml
+Issue Count: 44
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - ENDPOINT_TO_VERIFY: endpoints[21].url
+  - ENDPOINT_TO_VERIFY: endpoints[22].url
+  - ENDPOINT_TO_VERIFY: endpoints[23].url
+  - ENDPOINT_TO_VERIFY: endpoints[24].url
+  - ENDPOINT_TO_VERIFY: endpoints[25].url
+  - ENDPOINT_TO_VERIFY: endpoints[26].url
+  - ENDPOINT_TO_VERIFY: endpoints[27].url
+  - ENDPOINT_TO_VERIFY: endpoints[28].url
+  - ENDPOINT_TO_VERIFY: endpoints[29].url
+  - ENDPOINT_TO_VERIFY: endpoints[30].url
+  - ENDPOINT_TO_VERIFY: endpoints[31].url
+  - ENDPOINT_TO_VERIFY: endpoints[32].url
+  - ENDPOINT_TO_VERIFY: endpoints[33].url
+  - ENDPOINT_TO_VERIFY: endpoints[34].url
+  - ENDPOINT_TO_VERIFY: endpoints[35].url
+  - ENDPOINT_TO_VERIFY: endpoints[36].url
+  - ENDPOINT_TO_VERIFY: endpoints[37].url
+  - ENDPOINT_TO_VERIFY: endpoints[38].url
+  - ENDPOINT_TO_VERIFY: endpoints[39].url
+  - ENDPOINT_TO_VERIFY: endpoints[40].url
+  - ENDPOINT_TO_VERIFY: endpoints[41].url
+
+Record ID: gisorasecomorg
+File: ZA/Federal/geo/gisorasecomorg.yaml
+Issue Count: 26
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - ENDPOINT_TO_VERIFY: endpoints[21].url
+  - ENDPOINT_TO_VERIFY: endpoints[22].url
+  - INVALID_UID: uid
+
+Record ID: geodatabenguelaccorg
+File: NA/geo/geodatabenguelaccorg.yaml
+Issue Count: 25
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - ENDPOINT_TO_VERIFY: endpoints[21].url
+  - ENDPOINT_TO_VERIFY: endpoints[22].url
+
+Record ID: sungis08stbsunacza
+File: ZA/Federal/geo/sungis08stbsunacza.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: bdmgeoramscoza
+File: ZA/Federal/geo/bdmgeoramscoza.yaml
+Issue Count: 16
+Issues:
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - INVALID_UID: uid
+
+Record ID: prhgeonas01upacza
+File: ZA/Federal/geo/prhgeonas01upacza.yaml
+Issue Count: 13
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - INVALID_UID: uid
+
+Record ID: staginggeonodekartozacom
+File: ZA/Federal/geo/staginggeonodekartozacom.yaml
+Issue Count: 13
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - INVALID_UID: uid
+
+Record ID: geoserver1mapcoza
+File: ZA/Federal/geo/geoserver1mapcoza.yaml
+Issue Count: 13
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - INVALID_UID: uid
+
+Record ID: imageryesrisouthafricacom
+File: ZA/Federal/geo/imageryesrisouthafricacom.yaml
+Issue Count: 11
+Issues:
+  - MISSING_LANGS: langs
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwsagnsgovza
+File: ZA/Federal/geo/wwwsagnsgovza.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - INVALID_UID: uid
+
+Record ID: reposadilarorg
+File: ZA/Federal/scientific/reposadilarorg.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - URL_HOST_MISMATCH: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: mapsgeoscienceorgza
+File: ZA/Federal/geo/mapsgeoscienceorgza.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: atlasnepadorg
+File: Africa/Federal/geo/atlasnepadorg.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: gisekurhulenigovza
+File: ZA/ZA-GP/geo/gisekurhulenigovza.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: metadatasanbiorg
+File: ZA/Federal/geo/metadatasanbiorg.yaml
+Issue Count: 8
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - INVALID_UID: uid
+
+Record ID: energydatauctacza
+File: ZA/Federal/scientific/energydatauctacza.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: uctfigsharecom
+File: ZA/Federal/scientific/uctfigsharecom.yaml
+Issue Count: 8
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - URL_HOST_MISMATCH: endpoints[1].url
+  - INVALID_UID: uid
+
+Record ID: wcgopendataportalwesterncapegovhubarcgiscom
+File: ZA/ZA-WC/geo/wcgopendataportalwesterncapegovhubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: spatialhubmdbsaopendataarcgiscom
+File: ZA/Federal/geo/spatialhubmdbsaopendataarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: mapsppforgza
+File: ZA/Federal/geo/mapsppforgza.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: wwwgreaterkrugerlandscapecoza
+File: ZA/Federal/geo/wwwgreaterkrugerlandscapecoza.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: databenguelaccorg
+File: NA/opendata/databenguelaccorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: iptkznmsaiabacza
+File: ZA/Federal/scientific/iptkznmsaiabacza.yaml
+Issue Count: 6
+Issues:
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: minesgouvcicadastreminierorg
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: medatsamrcacza
+File: ZA/Federal/microdata/medatsamrcacza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: wwwdatafirstuctacza
+File: ZA/Federal/microdata/wwwdatafirstuctacza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - DUPLICATE_TAGS: tags[3]
+  - URL_HOST_MISMATCH: endpoints[1].url
+
+Record ID: ocimscsircoza
+File: ZA/Federal/opendata/ocimscsircoza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: dataopenuporgza
+File: ZA/Federal/opendata/dataopenuporgza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: politicaleconomyorgza
+File: ZA/Federal/opendata/politicaleconomyorgza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: odpcctegisopendataarcgiscom
+File: ZA/Federal/geo/odpcctegisopendataarcgiscom.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: iptsanbiorgza
+File: ZA/Federal/scientific/iptsanbiorgza.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: edgedurban
+File: ZA/ZA-KZN/opendata/edgedurban.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: digitalearthafrica
+File: Africa/geo/digitalearthafrica.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: mapsdigitalearthafrica
+File: Africa/geo/mapsdigitalearthafrica.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: amatholegisgovza
+File: ZA/ZA-EC/geo/amatholegisgovza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: datavulekamaligovza
+File: ZA/Federal/opendata/datavulekamaligovza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: opendatadurbancartocom
+File: ZA/Federal/geo/opendatadurbancartocom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: wisweathersacoza
+File: ZA/Federal/geo/wisweathersacoza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: wwwafrigiscoza
+File: ZA/Federal/geo/wwwafrigiscoza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: mandelafigsharecom
+File: ZA/Federal/scientific/mandelafigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: hungumutfigsharecom
+File: ZA/Federal/scientific/hungumutfigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: aduiptuctacza
+File: ZA/Federal/scientific/aduiptuctacza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: smuzafigsharecom
+File: ZA/Federal/scientific/smuzafigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: daytanwuacza
+File: ZA/Federal/scientific/daytanwuacza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: iptsaiabacza
+File: ZA/Federal/scientific/iptsaiabacza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: unisafigsharecom
+File: ZA/Federal/scientific/unisafigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: wsufigsharecom
+File: ZA/Federal/scientific/wsufigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: ufsfigsharecom
+File: ZA/Federal/scientific/ufsfigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: iptbayworldsaiabacza
+File: ZA/Federal/scientific/iptbayworldsaiabacza.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: southafricafigsharecom
+File: ZA/Federal/scientific/southafricafigsharecom.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

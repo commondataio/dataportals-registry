@@ -1,0 +1,894 @@
+DATA QUALITY REPORT - COUNTRY: MZ
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: MZ
+Total Records with Issues: 11
+Total Issues Found: 99
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 5
+Priority: IMPORTANT
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Record ID: catalogocollectpdegovmz
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=5
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 62
+Priority: LOW
+
+File: MZ/microdata/mozdatainegovmz.yaml
+Record ID: mozdatainegovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://mozdata.ine.gov.mz/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/microdata/mozdatainegovmz.yaml
+Record ID: mozdatainegovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://mozdata.ine.gov.mz/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://41.94.86.11/Censo2017/api/v1/en/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Record ID: catalogocollectpdegovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://catalogo.collect.pde.gov.mz/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Record ID: catalogocollectpdegovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://catalogo.collect.pde.gov.mz/geonetwork/srv/api
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.fnds.gov.mz/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.fnds.gov.mz/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.fnds.gov.mz/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.fnds.gov.mz/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.fnds.gov.mz/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.fnds.gov.mz/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://gis.fnds.gov.mz/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dev.mozgis.gov.mz/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://dev.mozgis.gov.mz/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://dev.mozgis.gov.mz/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://dev.mozgis.gov.mz/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://dev.mozgis.gov.mz/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://dev.mozgis.gov.mz/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.mozgis.gov.mz/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.mozgis.gov.mz/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.mozgis.gov.mz/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.mozgis.gov.mz/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.mozgis.gov.mz/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.mozgis.gov.mz/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://www.mozgis.gov.mz/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://madico.terrafirma.co.mz/api/datasets/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://madico.terrafirma.co.mz/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://madico.terrafirma.co.mz/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://madico.terrafirma.co.mz/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://madico.terrafirma.co.mz/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[18].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[19].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/rest/settings
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[20].url
+Current Value: https://madico.terrafirma.co.mz/geoserver/rest/layers
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.fndsgis.gov.mz/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.fndsgis.gov.mz/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.fndsgis.gov.mz/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.fndsgis.gov.mz/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.fndsgis.gov.mz/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.fndsgis.gov.mz/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://mozambique-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://mozambique-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://mozambique-sdg.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://mozambique-sdg.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://mozambique-sdg.hub.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://licenses.inami.gov.mz/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://licenses.inami.gov.mz/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://licenses.inami.gov.mz/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://licenses.inami.gov.mz/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://licenses.inami.gov.mz/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 4
+Priority: CRITICAL
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000491
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005975
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005985
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005978
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 11
+Priority: IMPORTANT
+
+File: MZ/microdata/mozdatainegovmz.yaml
+Record ID: mozdatainegovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Record ID: catalogocollectpdegovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MZ/Federal/scientific/1972496202.yaml
+Record ID: 1972496202
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 11
+Priority: IMPORTANT
+
+File: MZ/microdata/mozdatainegovmz.yaml
+Record ID: mozdatainegovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Record ID: catalogocollectpdegovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/devmozgisgovmz.yaml
+Record ID: devmozgisgovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/wwwmozgisgovmz.yaml
+Record ID: wwwmozgisgovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Record ID: wwwfndsgisgovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Record ID: mozambiquesdghubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MZ/Federal/scientific/1972496202.yaml
+Record ID: 1972496202
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 4
+Priority: LOW
+
+File: MZ/microdata/mozdatainegovmz.yaml
+Record ID: mozdatainegovmz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MZ/indicators/41948611.yaml
+Record ID: 41948611
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MZ/geo/gisfndsgovmz.yaml
+Record ID: gisfndsgovmz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: MZ/geo/madicoterrafirmacomz.yaml
+Record ID: madicoterrafirmacomz
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Data catalog website
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 5 issues
+ENDPOINT_TO_VERIFY: 62 issues
+INVALID_UID: 4 issues
+MISSING_IDENTIFIERS: 11 issues
+MISSING_LICENSE: 11 issues
+MISSING_TAGS: 1 issues
+MISSING_TOPICS: 4 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: madicoterrafirmacomz
+File: MZ/geo/madicoterrafirmacomz.yaml
+Issue Count: 25
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: gisfndsgovmz
+File: MZ/geo/gisfndsgovmz.yaml
+Issue Count: 11
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - INVALID_UID: uid
+
+Record ID: devmozgisgovmz
+File: MZ/geo/devmozgisgovmz.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwfndsgisgovmz
+File: MZ/geo/wwwfndsgisgovmz.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwmozgisgovmz
+File: MZ/geo/wwwmozgisgovmz.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: licensesinamigovmz
+File: MZ/geo/licensesinamigovmz.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - INVALID_UID: uid
+
+Record ID: mozambiquesdghubarcgiscom
+File: MZ/geo/mozambiquesdghubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: 41948611
+File: MZ/indicators/41948611.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: mozdatainegovmz
+File: MZ/microdata/mozdatainegovmz.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: catalogocollectpdegovmz
+File: MZ/geo/catalogocollectpdegovmz.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2025-12-10
+
+### Added
+- Zstandard-compressed exports for `catalogs.jsonl`, `software.jsonl`, `scheduled.jsonl`, and `full.jsonl` plus a `datasets.duckdb` snapshot for analytics-friendly queries
+- New scientific and API catalogs across Switzerland, EU, France, Germany, Great Britain, and Italy (e.g., Agroportal, TechnoPortal HEVS, EarthPortal, W3C Linked Open Vocabularies, BiodivPortal, MATPortal, OLS4)
+- New API registry entry for `api.gov.it` and additional international research repositories
+
+### Changed
+- Refreshed and expanded metadata for hundreds of catalog records across Americas, Europe, Asia, and Oceania
+- Rebuilt JSONL/Parquet exports and type/software slices (12,281 catalogs; 134 software platforms; 749 scheduled sources; 13,030 combined records)
+- Simplified CI test invocation to run from the repository root in `tests.yml`
+
 ## [1.2.0] - 2025-11-21
 
 ### Added

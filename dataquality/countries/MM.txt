@@ -1,0 +1,651 @@
+DATA QUALITY REPORT - COUNTRY: MM
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: MM
+Total Records with Issues: 7
+Total Issues Found: 72
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=12
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=12
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[DUPLICATE_TAGS]
+Count: 2
+Priority: LOW
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: DUPLICATE_TAGS
+Field: tags[9]
+Current Value: geoserver
+Suggested Action: Remove duplicate tag
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: DUPLICATE_TAGS
+Field: tags[10]
+Current Value: geospatial
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 48
+Priority: LOW
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.mmanalytics.org/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.mmanalytics.org/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.mmanalytics.org/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geonode.themimu.info/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geonode.themimu.info/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geonode.themimu.info/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geonode.themimu.info/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geonode.themimu.info/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geonode.themimu.info/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geonode.themimu.info/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://geonode.themimu.info/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[18].url
+Current Value: https://geonode.themimu.info/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[19].url
+Current Value: https://geonode.themimu.info/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[20].url
+Current Value: https://geonode.themimu.info/catalogue/opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://data.opendevelopmentmyanmar.net/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geoserver.opendevelopmentmekong.net/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 2
+Priority: CRITICAL
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003946
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003321
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 7
+Priority: IMPORTANT
+
+File: MM/indicators/wwwmmsisgovmm.yaml
+Record ID: wwwmmsisgovmm
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MM/opendata/wwwmyanmarbiodiversityorg.yaml
+Record ID: wwwmyanmarbiodiversityorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MM/opendata/openjadedataorg.yaml
+Record ID: openjadedataorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_LICENSE]
+Count: 7
+Priority: IMPORTANT
+
+File: MM/indicators/wwwmmsisgovmm.yaml
+Record ID: wwwmmsisgovmm
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MM/opendata/wwwmyanmarbiodiversityorg.yaml
+Record ID: wwwmyanmarbiodiversityorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MM/opendata/openjadedataorg.yaml
+Record ID: openjadedataorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MM/geo/geonodethemimuinfo.yaml
+Record ID: geonodethemimuinfo
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Record ID: dataopendevelopmentmyanmarnet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Record ID: geoserveropendevelopmentmekongnet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: MM/opendata/wwwmyanmarbiodiversityorg.yaml
+Record ID: wwwmyanmarbiodiversityorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: MM/opendata/datammanalyticsorg.yaml
+Record ID: datammanalyticsorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 3 issues
+DUPLICATE_TAGS: 2 issues
+ENDPOINT_TO_VERIFY: 48 issues
+INVALID_UID: 2 issues
+MISSING_IDENTIFIERS: 7 issues
+MISSING_LANGS: 1 issues
+MISSING_LICENSE: 7 issues
+MISSING_TOPICS: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geonodethemimuinfo
+File: MM/geo/geonodethemimuinfo.yaml
+Issue Count: 23
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+
+Record ID: geoserveropendevelopmentmekongnet
+File: TH/Federal/geo/geoserveropendevelopmentmekongnet.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - DUPLICATE_TAGS: tags[9]
+  - DUPLICATE_TAGS: tags[10]
+  - INVALID_UID: uid
+
+Record ID: dataopendevelopmentmyanmarnet
+File: MM/Federal/geo/dataopendevelopmentmyanmarnet.yaml
+Issue Count: 17
+Issues:
+  - MISSING_LANGS: langs
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - INVALID_UID: uid
+
+Record ID: datammanalyticsorg
+File: MM/opendata/datammanalyticsorg.yaml
+Issue Count: 7
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: wwwmyanmarbiodiversityorg
+File: MM/opendata/wwwmyanmarbiodiversityorg.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*

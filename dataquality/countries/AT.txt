@@ -1,0 +1,2680 @@
+DATA QUALITY REPORT - COUNTRY: AT
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: AT
+Total Records with Issues: 58
+Total Issues Found: 449
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 18
+Priority: IMPORTANT
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=13
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=5
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/gisgeologieacat.yaml
+Record ID: gisgeologieacat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=12
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/geodateninnogeoat.yaml
+Record ID: geodateninnogeoat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/gisgeosphereat.yaml
+Record ID: gisgeosphereat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/serviceemikatat.yaml
+Record ID: serviceemikatat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/srvdorisat.yaml
+Record ID: srvdorisat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/geo/geogisagesat.yaml
+Record ID: geogisagesat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/scientific/archeacdhoeawacat.yaml
+Record ID: archeacdhoeawacat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/Federal/scientific/dareiiasaacat.yaml
+Record ID: dareiiasaacat
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: AT/AT-3/geo/geonoegvat.yaml
+Record ID: geonoegvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: AT/Federal/scientific/datacccaacat.yaml
+Record ID: datacccaacat
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+[ENDPOINT_TO_VERIFY]
+Count: 276
+Priority: LOW
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.vorarlbergnetz.at/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/api/records
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://vogis.cnv.at/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://vogis.cnv.at/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.bgld.gv.at/gisbgld/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.bgld.gv.at/gisbgld/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.bgld.gv.at/gisbgld/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.bgld.gv.at/gisbgld/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.bgld.gv.at/gisbgld/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.bgld.gv.at/gisbgld/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvatgeoportal.yaml
+Record ID: gisstmkgvatgeoportal
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.stmk.gv.at/geoportal/csw
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvatgeoportal.yaml
+Record ID: gisstmkgvatgeoportal
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.stmk.gv.at/geoportal/openSearchDescription
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geodaten.graz.at/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geodaten.graz.at/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geodaten.graz.at/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geodaten.graz.at/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geodaten.graz.at/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geodaten.graz.at/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geodaten.graz.at/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geodaten.graz.at/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geodaten.graz.at/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geodaten.graz.at/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geodaten.graz.at/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geodaten.graz.at/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://geodaten.graz.at/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.stmk.gv.at/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.stmk.gv.at/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.stmk.gv.at/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.stmk.gv.at/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.stmk.gv.at/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.stmk.gv.at/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.tirol.gv.at/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.tirol.gv.at/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.tirol.gv.at/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.tirol.gv.at/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.tirol.gv.at/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.tirol.gv.at/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://service.salzburg.gv.at/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://service.salzburg.gv.at/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://service.salzburg.gv.at/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://service.salzburg.gv.at/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://service.salzburg.gv.at/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Record ID: wwwstatistikat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.statistik.at/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Record ID: wwwstatistikat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.statistik.at/en/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.opendataportal.at/katalog/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.opendataportal.at/katalog/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.opendataportal.at/katalog/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.opendataportal.at/katalog/catalog.n3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.opendataportal.at/katalog/catalog.ttl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.opendataportal.at/katalog/catalog.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://www.opendataportal.at/katalog/catalog.jsonld
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://www.opendataportal.at/katalog/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://www.opendataportal.at/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.hub.zamg.ac.at/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.hub.zamg.ac.at/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.hub.zamg.ac.at/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://data.hub.zamg.ac.at/catalog.n3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://data.hub.zamg.ac.at/catalog.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://data.hub.zamg.ac.at/catalog.jsonld
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://data.hub.zamg.ac.at/catalog.ttl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/labsonbacat.yaml
+Record ID: labsonbacat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://labs.onb.ac.at/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.data.gv.at/katalog/catalog.rdf
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.gv.at/katalog/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.gv.at/katalog/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://data.gv.at/katalog/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.data.gv.at/katalog/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.data.gv.at/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://metadata.savegreen.at/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://metadata.savegreen.at/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://maps.openstreetmap.at/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://maps.openstreetmap.at/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://maps.openstreetmap.at/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://maps.openstreetmap.at/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/gisktngvat.yaml
+Record ID: gisktngvat
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.ktn.gv.at/ogd/custom/stac_cat_ktn/catalog.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.statistik.at/gn-inspire/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.statistik.at/gn-inspire/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.statistik.at/gn-inspire/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.statistik.at/gn-inspire/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.statistik.at/gn-inspire/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.statistik.at/gn-inspire/srv/api/selections
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+... and 176 more records with this issue
+
+[INVALID_UID]
+Count: 25
+Priority: CRITICAL
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005863
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003351
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Record ID: geodatenbgldgvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003287
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003288
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00004873
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001224
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00004874
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/opendata/labsonbacat.yaml
+Record ID: labsonbacat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000040
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003352
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003126
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/gisgeologieacat.yaml
+Record ID: gisgeologieacat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001223
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/geodateninnogeoat.yaml
+Record ID: geodateninnogeoat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005862
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/gisgeosphereat.yaml
+Record ID: gisgeosphereat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005446
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/serviceemikatat.yaml
+Record ID: serviceemikatat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005447
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/sdigeofreeaustrocontrolat.yaml
+Record ID: sdigeofreeaustrocontrolat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003353
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/srvdorisat.yaml
+Record ID: srvdorisat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005864
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/geonodelebensraumvernetzungat.yaml
+Record ID: geonodelebensraumvernetzungat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000035
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/geogisagesat.yaml
+Record ID: geogisagesat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001222
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/gisgbageologieacat.yaml
+Record ID: gisgbageologieacat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000036
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/geo/mapcentropemaporg.yaml
+Record ID: mapcentropemaporg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005753
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/scientific/datatethysat.yaml
+Record ID: datatethysat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000043
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/scientific/iiasaacat.yaml
+Record ID: iiasaacat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000044
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/Federal/scientific/wwwtethysat.yaml
+Record ID: wwwtethysat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000046
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005445
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: AT/AT-3/geo/geonoegvat.yaml
+Record ID: geonoegvat
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003350
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: AT/Federal/geo/geometadatenlfrzat.yaml
+Record ID: geometadatenlfrzat
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: None
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: None
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: MEDIUM
+
+File: AT/Federal/indicators/statcubeat.yaml
+Record ID: statcubeat
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[MISSING_IDENTIFIERS]
+Count: 51
+Priority: IMPORTANT
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Record ID: geodatenbgldgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-6/opendata/datasteiermarkat.yaml
+Record ID: datasteiermarkat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-6/geo/gisstmkgvatgeoportal.yaml
+Record ID: gisstmkgvatgeoportal
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-9/opendata/datawuacat.yaml
+Record ID: datawuacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Record ID: wwwstatistikat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/indicators/statcubeat.yaml
+Record ID: statcubeat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/opendata/datastatistikgvat.yaml
+Record ID: datastatistikgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/opendata/labsonbacat.yaml
+Record ID: labsonbacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/gisktngvat.yaml
+Record ID: gisktngvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/catalogzamgacat.yaml
+Record ID: catalogzamgacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/gisgeologieacat.yaml
+Record ID: gisgeologieacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geodateninnogeoat.yaml
+Record ID: geodateninnogeoat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/gisgeosphereat.yaml
+Record ID: gisgeosphereat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geometadatensucheinspiregvat.yaml
+Record ID: geometadatensucheinspiregvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/serviceemikatat.yaml
+Record ID: serviceemikatat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geometadatenlfrzat.yaml
+Record ID: geometadatenlfrzat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/sdigeofreeaustrocontrolat.yaml
+Record ID: sdigeofreeaustrocontrolat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/opendatasynergishubarcgiscom.yaml
+Record ID: opendatasynergishubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geonetworklebensraumvernetzungat.yaml
+Record ID: geonetworklebensraumvernetzungat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/srvdorisat.yaml
+Record ID: srvdorisat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geonodelebensraumvernetzungat.yaml
+Record ID: geonodelebensraumvernetzungat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/catalogoscearthcodeeoxat.yaml
+Record ID: catalogoscearthcodeeoxat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/geogisagesat.yaml
+Record ID: geogisagesat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/databevgvat.yaml
+Record ID: databevgvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/gisgbageologieacat.yaml
+Record ID: gisgbageologieacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/geo/mapcentropemaporg.yaml
+Record ID: mapcentropemaporg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/archeacdhoeawacat.yaml
+Record ID: archeacdhoeawacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/datatethysat.yaml
+Record ID: datatethysat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/pureiiasaacat.yaml
+Record ID: pureiiasaacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/dareiiasaacat.yaml
+Record ID: dareiiasaacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/iiasaacat.yaml
+Record ID: iiasaacat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/unisalzburgelsevierpurecom.yaml
+Record ID: unisalzburgelsevierpurecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/wwwtethysat.yaml
+Record ID: wwwtethysat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/Federal/scientific/collectorybiodiversityatlasat.yaml
+Record ID: collectorybiodiversityatlasat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-2/geo/zapitest.yaml
+Record ID: zapitest
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-2/geo/alsrasterkaernten2023.yaml
+Record ID: alsrasterkaernten2023
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-3/opendata/opendatanoegvat.yaml
+Record ID: opendatanoegvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AT/AT-3/geo/geonoegvat.yaml
+Record ID: geonoegvat
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 58
+Priority: IMPORTANT
+
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Record ID: gisvorarlbergnetzat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-8/geo/vogiscnvat.yaml
+Record ID: vogiscnvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Record ID: gisbgldgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Record ID: geodatenbgldgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-6/opendata/datasteiermarkat.yaml
+Record ID: datasteiermarkat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-6/geo/gisstmkgvatgeoportal.yaml
+Record ID: gisstmkgvatgeoportal
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-6/geo/geodatengrazat.yaml
+Record ID: geodatengrazat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Record ID: gisstmkgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-9/opendata/datawuacat.yaml
+Record ID: datawuacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Record ID: servicesalzburggvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Record ID: wwwstatistikat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/indicators/statcubeat.yaml
+Record ID: statcubeat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Record ID: wwwopendataportalat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/opendata/datastatistikgvat.yaml
+Record ID: datastatistikgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Record ID: datahubzamgacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/opendata/labsonbacat.yaml
+Record ID: labsonbacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Record ID: metadatasavegreenat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Record ID: mapsopenstreetmapat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/gisktngvat.yaml
+Record ID: gisktngvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/catalogzamgacat.yaml
+Record ID: catalogzamgacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/gisgeologieacat.yaml
+Record ID: gisgeologieacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geodateninnogeoat.yaml
+Record ID: geodateninnogeoat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/gisgeosphereat.yaml
+Record ID: gisgeosphereat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geometadatensucheinspiregvat.yaml
+Record ID: geometadatensucheinspiregvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/serviceemikatat.yaml
+Record ID: serviceemikatat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geometadatenlfrzat.yaml
+Record ID: geometadatenlfrzat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/sdigeofreeaustrocontrolat.yaml
+Record ID: sdigeofreeaustrocontrolat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/opendatasynergishubarcgiscom.yaml
+Record ID: opendatasynergishubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geonetworklebensraumvernetzungat.yaml
+Record ID: geonetworklebensraumvernetzungat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/srvdorisat.yaml
+Record ID: srvdorisat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geonodelebensraumvernetzungat.yaml
+Record ID: geonodelebensraumvernetzungat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/catalogoscearthcodeeoxat.yaml
+Record ID: catalogoscearthcodeeoxat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/geogisagesat.yaml
+Record ID: geogisagesat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/databevgvat.yaml
+Record ID: databevgvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/gisgbageologieacat.yaml
+Record ID: gisgbageologieacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/geo/mapcentropemaporg.yaml
+Record ID: mapcentropemaporg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/archeacdhoeawacat.yaml
+Record ID: archeacdhoeawacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/datatethysat.yaml
+Record ID: datatethysat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/pureiiasaacat.yaml
+Record ID: pureiiasaacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/researchdatauibkacat.yaml
+Record ID: researchdatauibkacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/dareiiasaacat.yaml
+Record ID: dareiiasaacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/dataaussdaat.yaml
+Record ID: dataaussdaat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/researchdatatuwienacat.yaml
+Record ID: researchdatatuwienacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/repositorytugrazat.yaml
+Record ID: repositorytugrazat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/iiasaacat.yaml
+Record ID: iiasaacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/unisalzburgelsevierpurecom.yaml
+Record ID: unisalzburgelsevierpurecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/datacccaacat.yaml
+Record ID: datacccaacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/wwwtethysat.yaml
+Record ID: wwwtethysat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/collectorybiodiversityatlasat.yaml
+Record ID: collectorybiodiversityatlasat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/Federal/scientific/researchexploreristaacat.yaml
+Record ID: researchexploreristaacat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-2/geo/zapitest.yaml
+Record ID: zapitest
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-2/geo/alsrasterkaernten2023.yaml
+Record ID: alsrasterkaernten2023
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-3/opendata/opendatanoegvat.yaml
+Record ID: opendatanoegvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AT/AT-3/geo/geonoegvat.yaml
+Record ID: geonoegvat
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: AT/Federal/geo/gisktngvat.yaml
+Record ID: gisktngvat
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: AT/AT-3/opendata/opendatanoegvat.yaml
+Record ID: opendatanoegvat
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 4
+Priority: LOW
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Record ID: wwwstatistikatinspire
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AT/Federal/geo/geonetworklebensraumvernetzungat.yaml
+Record ID: geonetworklebensraumvernetzungat
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AT/Federal/geo/geogisagesat.yaml
+Record ID: geogisagesat
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: AT/AT-7/geo/gistirolgvat.yaml
+Record ID: gistirolgvat
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Land Tirol ArcGIS REST online catalog
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Record ID: wwwstatistikat
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Austria Statistics official website
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[TAG_HYGIENE]
+Count: 2
+Priority: MEDIUM
+
+File: AT/Federal/scientific/repositorytugrazat.yaml
+Record ID: repositorytugrazat
+Issue: TAG_HYGIENE
+Field: tags[14]
+Current Value: CC
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Record ID: geokaerntennetzat
+Issue: TAG_HYGIENE
+Field: tags[0]
+Current Value: 
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+[URL_HOST_MISMATCH]
+Count: 6
+Priority: MEDIUM
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: URL_HOST_MISMATCH
+Field: endpoints[0].url
+Current Value: link=https://data.gv.at, endpoint=https://www.data.gv.at/katalog/catalog.rdf
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: URL_HOST_MISMATCH
+Field: endpoints[4].url
+Current Value: link=https://data.gv.at, endpoint=https://www.data.gv.at/katalog/sitemap.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: AT/Federal/opendata/datagvat.yaml
+Record ID: datagvat
+Issue: URL_HOST_MISMATCH
+Field: endpoints[5].url
+Current Value: link=https://data.gv.at, endpoint=https://www.data.gv.at/sitemap.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: AT/AT-2/geo/zapitest.yaml
+Record ID: zapitest
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=zapitest, link=https://gis.ktn.gv.at/osgdi/stac/
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: AT/AT-2/geo/alsrasterkaernten2023.yaml
+Record ID: alsrasterkaernten2023
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=alsrasterkaernten2023, link=https://gis.ktn.gv.at/ogd/custom/stac_cat_ktn/STAC_2023/kagis-catalog/catalog.json
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: AT/AT-3/opendata/opendatanoegvat.yaml
+Record ID: opendatanoegvat
+Issue: URL_HOST_MISMATCH
+Field: endpoints[0].url
+Current Value: link=http://open-data.noe.gv.at/noe/Open-Government-Data/Bestandsliste.html, endpoint=http://noe.gv.at/sitemap/sitemap.index
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 18 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 276 issues
+INVALID_UID: 25 issues
+MISSING_DESCRIPTION: 2 issues
+MISSING_ENDPOINTS: 1 issues
+MISSING_IDENTIFIERS: 51 issues
+MISSING_LICENSE: 58 issues
+MISSING_OWNER_LINK: 1 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 4 issues
+SHORT_DESCRIPTION: 2 issues
+TAG_HYGIENE: 2 issues
+URL_HOST_MISMATCH: 6 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geogisagesat
+File: AT/Federal/geo/geogisagesat.yaml
+Issue Count: 19
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: mapsopenstreetmapat
+File: AT/Federal/geo/mapsopenstreetmapat.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: geonoegvat
+File: AT/AT-3/geo/geonoegvat.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: geodatengrazat
+File: AT/AT-6/geo/geodatengrazat.yaml
+Issue Count: 17
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - INVALID_UID: uid
+
+Record ID: geokaerntennetzat
+File: AT/AT-2/geo/geokaerntennetzat.yaml
+Issue Count: 17
+Issues:
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - TAG_HYGIENE: tags[0]
+  - INVALID_UID: uid
+
+Record ID: gisgeologieacat
+File: AT/Federal/geo/gisgeologieacat.yaml
+Issue Count: 16
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - INVALID_UID: uid
+
+Record ID: serviceemikatat
+File: AT/Federal/geo/serviceemikatat.yaml
+Issue Count: 15
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - INVALID_UID: uid
+
+Record ID: gistirolgvat
+File: AT/AT-7/geo/gistirolgvat.yaml
+Issue Count: 13
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: wwwstatistikatinspire
+File: AT/Federal/geo/wwwstatistikatinspire.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+
+Record ID: geometadatensucheinspiregvat
+File: AT/Federal/geo/geometadatensucheinspiregvat.yaml
+Issue Count: 12
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+
+Record ID: geonodelebensraumvernetzungat
+File: AT/Federal/geo/geonodelebensraumvernetzungat.yaml
+Issue Count: 12
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - INVALID_UID: uid
+
+Record ID: wwwopendataportalat
+File: AT/Federal/opendata/wwwopendataportalat.yaml
+Issue Count: 11
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+
+Record ID: geonetworklebensraumvernetzungat
+File: AT/Federal/geo/geonetworklebensraumvernetzungat.yaml
+Issue Count: 11
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: pureiiasaacat
+File: AT/Federal/scientific/pureiiasaacat.yaml
+Issue Count: 11
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+
+Record ID: gisvorarlbergnetzat
+File: AT/AT-8/geo/gisvorarlbergnetzat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: vogiscnvat
+File: AT/AT-8/geo/vogiscnvat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: gisbgldgvat
+File: AT/AT-1/geo/gisbgldgvat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: gisstmkgvat
+File: AT/AT-6/geo/gisstmkgvat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: datagvat
+File: AT/Federal/opendata/datagvat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - URL_HOST_MISMATCH: endpoints[0].url
+  - URL_HOST_MISMATCH: endpoints[4].url
+  - URL_HOST_MISMATCH: endpoints[5].url
+
+Record ID: geodateninnogeoat
+File: AT/Federal/geo/geodateninnogeoat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: gisgeosphereat
+File: AT/Federal/geo/gisgeosphereat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: srvdorisat
+File: AT/Federal/geo/srvdorisat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: catalogoscearthcodeeoxat
+File: AT/Federal/geo/catalogoscearthcodeeoxat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: databevgvat
+File: AT/Federal/geo/databevgvat.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: servicesalzburggvat
+File: AT/AT-5/geo/servicesalzburggvat.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - INVALID_UID: uid
+
+Record ID: datahubzamgacat
+File: AT/Federal/opendata/datahubzamgacat.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: catalogzamgacat
+File: AT/Federal/geo/catalogzamgacat.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: geometadatenlfrzat
+File: AT/Federal/geo/geometadatenlfrzat.yaml
+Issue Count: 9
+Issues:
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: gisgbageologieacat
+File: AT/Federal/geo/gisgbageologieacat.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: opendatasynergishubarcgiscom
+File: AT/Federal/geo/opendatasynergishubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: metadatasavegreenat
+File: AT/Federal/geo/metadatasavegreenat.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - INVALID_UID: uid
+
+Record ID: unisalzburgelsevierpurecom
+File: AT/Federal/scientific/unisalzburgelsevierpurecom.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+
+Record ID: wwwstatistikat
+File: AT/Federal/indicators/wwwstatistikat.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: opendatanoegvat
+File: AT/AT-3/opendata/opendatanoegvat.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - URL_HOST_MISMATCH: endpoints[0].url
+
+Record ID: gisstmkgvatgeoportal
+File: AT/AT-6/geo/gisstmkgvatgeoportal.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: labsonbacat
+File: AT/Federal/opendata/labsonbacat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: gisktngvat
+File: AT/Federal/geo/gisktngvat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: archeacdhoeawacat
+File: AT/Federal/scientific/archeacdhoeawacat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: dareiiasaacat
+File: AT/Federal/scientific/dareiiasaacat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: dataaussdaat
+File: AT/Federal/scientific/dataaussdaat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: datacccaacat
+File: AT/Federal/scientific/datacccaacat.yaml
+Issue Count: 4
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: zapitest
+File: AT/AT-2/geo/zapitest.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: alsrasterkaernten2023
+File: AT/AT-2/geo/alsrasterkaernten2023.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: geodatenbgldgvat
+File: AT/AT-1/geo/geodatenbgldgvat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: statcubeat
+File: AT/Federal/indicators/statcubeat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_ENDPOINTS: endpoints
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+
+Record ID: sdigeofreeaustrocontrolat
+File: AT/Federal/geo/sdigeofreeaustrocontrolat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: mapcentropemaporg
+File: AT/Federal/geo/mapcentropemaporg.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: datatethysat
+File: AT/Federal/scientific/datatethysat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: repositorytugrazat
+File: AT/Federal/scientific/repositorytugrazat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - TAG_HYGIENE: tags[14]
+
+Record ID: iiasaacat
+File: AT/Federal/scientific/iiasaacat.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid

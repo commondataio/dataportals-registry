@@ -1,0 +1,1967 @@
+DATA QUALITY REPORT - COUNTRY: LV
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: LV
+Total Records with Issues: 38
+Total Issues Found: 254
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 7
+Priority: IMPORTANT
+
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Record ID: datatstatgovlv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Record ID: servisilgiagovlv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=13
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/tapisgovlv.yaml
+Record ID: tapisgovlv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=13
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LV/Federal/geo/gispublvcelilv.yaml
+Record ID: gispublvcelilv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Geoportal, software.id=wordpress
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+[COVERAGE_NORMALIZATION]
+Count: 1
+Priority: IMPORTANT
+
+File: EU/LV-RIX/opendata/vloclarineu.yaml
+Record ID: vloclarineu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'EU', 'name': 'European Union'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[ENDPOINT_TO_VERIFY]
+Count: 144
+Priority: LOW
+
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Record ID: gisportalmadonasudenslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gisportal.madonasudens.lv/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Record ID: gisportalmadonasudenslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gisportal.madonasudens.lv/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Record ID: gisportalmadonasudenslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gisportal.madonasudens.lv/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://georiga.eu/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://georiga.eu/sitemap.xml.gz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://georiga.eu/wp-sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://portals.daugavpilsnovads.lv/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://portals.daugavpilsnovads.lv/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Record ID: datatstatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.stat.gov.lv/api/v1/en
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/indicators/statistikaspkcgovlv.yaml
+Record ID: statistikaspkcgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://statistika.spkc.gov.lv/api/v1/en
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/indicators/statistikaspkcgovlv.yaml
+Record ID: statistikaspkcgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://statistika.spkc.gov.lv/api/v1/en/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.gov.lv/dati/catalog.rdf
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.gov.lv/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data.gov.lv/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://data.gov.lv/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/opendata/dataopendatalv.yaml
+Record ID: dataopendatalv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.opendata.lv/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Record ID: servisilgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://servisi.lgia.gov.lv/lksopen/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://kartes.lgia.gov.lv/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://services.lgia.gov.lv/arcfree/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://services.lgia.gov.lv/arcfree/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://services.lgia.gov.lv/arcfree/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://services.lgia.gov.lv/arcfree/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://services.lgia.gov.lv/arcfree/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://services.lgia.gov.lv/arcfree/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geodata.lvgmc.lv/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geodata.lvgmc.lv/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geodata.lvgmc.lv/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geodata.lvgmc.lv/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geodata.lvgmc.lv/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://etportal.gis.lv/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://etportal.gis.lv/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://etportal.gis.lv/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://etportal.gis.lv/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://etportal.gis.lv/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://inspire.stat.gov.lv/pycsw/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://inspire.stat.gov.lv/pycsw/oaipmh
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://inspire.stat.gov.lv/pycsw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://inspire.stat.gov.lv/pycsw/csw
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://inspire.stat.gov.lv/pycsw/opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://inspire.stat.gov.lv/pycsw/sru
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geoserver.lvgmc.lv/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://lvmgeoserver.lvm.lv/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.environment.lv/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.environment.lv/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.environment.lv/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.environment.lv/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.environment.lv/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://ozols.gov.lv/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://ozols.gov.lv/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://ozols.gov.lv/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://ozols.gov.lv/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://ozols.gov.lv/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://ozols.gov.lv/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geoserver.rgp.lv/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geoserver.rgp.lv/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://geoserver.rgp.lv/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://geoserver.rgp.lv/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LV/Federal/geo/tapisgovlv.yaml
+Record ID: tapisgovlv
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://tapis.gov.lv/izpl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+... and 44 more records with this issue
+
+[INVALID_UID]
+Count: 13
+Priority: CRITICAL
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000473
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Record ID: servisilgiagovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003812
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000471
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005962
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000467
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003811
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000472
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000470
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/tapisgovlv.yaml
+Record ID: tapisgovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001601
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/gispublvcelilv.yaml
+Record ID: gispublvcelilv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000468
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Record ID: imswebvvdgovlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000469
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LV/Federal/scientific/repositoryclarinlv.yaml
+Record ID: repositoryclarinlv
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000475
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: EU/LV-RIX/opendata/vloclarineu.yaml
+Record ID: vloclarineu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00002066
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 34
+Priority: IMPORTANT
+
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Record ID: gisportalmadonasudenslv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/indicators/statdbbanklv.yaml
+Record ID: statdbbanklv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/indicators/statgovlv.yaml
+Record ID: statgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Record ID: datatstatgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/indicators/statistikaspkcgovlv.yaml
+Record ID: statistikaspkcgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/opendata/dataopendatalv.yaml
+Record ID: dataopendatalv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Record ID: servisilgiagovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geostatgovlv.yaml
+Record ID: geostatgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/proxygdsvissgovlv.yaml
+Record ID: proxygdsvissgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geometadativissgovlv.yaml
+Record ID: geometadativissgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/geolatvijalv.yaml
+Record ID: geolatvijalv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/tapisgovlv.yaml
+Record ID: tapisgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/gispublvcelilv.yaml
+Record ID: gispublvcelilv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Record ID: imswebvvdgovlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/scientific/sciencersulv.yaml
+Record ID: sciencersulv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/scientific/baltic100valv.yaml
+Record ID: baltic100valv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/scientific/repositoryclarinlv.yaml
+Record ID: repositoryclarinlv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/Federal/scientific/dudatabiologylv.yaml
+Record ID: dudatabiologylv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LV/LV-111/geo/portalsaugsdaugavasnovadslv.yaml
+Record ID: portalsaugsdaugavasnovadslv
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Unknown/geo/opendatasetslsospsdghubarcgiscom.yaml
+Record ID: opendatasetslsospsdghubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: EU/LV-RIX/opendata/vloclarineu.yaml
+Record ID: vloclarineu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 38
+Priority: IMPORTANT
+
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Record ID: gisportalmadonasudenslv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Record ID: portalsdaugavpilsnovadslv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/indicators/statdbbanklv.yaml
+Record ID: statdbbanklv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/indicators/statgovlv.yaml
+Record ID: statgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Record ID: datatstatgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/indicators/statistikaspkcgovlv.yaml
+Record ID: statistikaspkcgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/opendata/datagovlv.yaml
+Record ID: datagovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/opendata/dataopendatalv.yaml
+Record ID: dataopendatalv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Record ID: servisilgiagovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Record ID: karteslgiagovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Record ID: serviceslgiagovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Record ID: geodatalvgmclv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/etportalgislv.yaml
+Record ID: etportalgislv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Record ID: inspirestatgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geostatgovlv.yaml
+Record ID: geostatgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Record ID: geoserverlvgmclv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Record ID: lvmgeoserverlvmlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Record ID: gisenvironmentlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/ozolsgovlv.yaml
+Record ID: ozolsgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/proxygdsvissgovlv.yaml
+Record ID: proxygdsvissgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geometadativissgovlv.yaml
+Record ID: geometadativissgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/geolatvijalv.yaml
+Record ID: geolatvijalv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/tapisgovlv.yaml
+Record ID: tapisgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/gispublvcelilv.yaml
+Record ID: gispublvcelilv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Record ID: imswebvvdgovlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/ortusrtulv.yaml
+Record ID: ortusrtulv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/sciencersulv.yaml
+Record ID: sciencersulv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/baltic100valv.yaml
+Record ID: baltic100valv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/dataversersulv.yaml
+Record ID: dataversersulv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/repositoryclarinlv.yaml
+Record ID: repositoryclarinlv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/dudatabiologylv.yaml
+Record ID: dudatabiologylv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/Federal/scientific/dvdataverselv.yaml
+Record ID: dvdataverselv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LV/LV-111/geo/portalsaugsdaugavasnovadslv.yaml
+Record ID: portalsaugsdaugavasnovadslv
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Unknown/geo/opendatasetslsospsdghubarcgiscom.yaml
+Record ID: opendatasetslsospsdghubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: EU/LV-RIX/opendata/vloclarineu.yaml
+Record ID: vloclarineu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: LV/Federal/scientific/dvdataverselv.yaml
+Record ID: dvdataverselv
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: LV/Federal/scientific/ortusrtulv.yaml
+Record ID: ortusrtulv
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 5
+Priority: LOW
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: LV/Federal/opendata/dataopendatalv.yaml
+Record ID: dataopendatalv
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: LV/Federal/geo/geostatgovlv.yaml
+Record ID: geostatgovlv
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: LV/Federal/geo/geolatvijalv.yaml
+Record ID: geolatvijalv
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 4
+Priority: MEDIUM
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Riga city geodata catalog
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: LV/Federal/indicators/statgovlv.yaml
+Record ID: statgovlv
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Latvia official statistics
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Data catalog via Geoserver interface.
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: LV/Federal/scientific/dudatabiologylv.yaml
+Record ID: dudatabiologylv
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Daugavpils University IPT
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[TAG_HYGIENE]
+Count: 2
+Priority: MEDIUM
+
+File: LV/Federal/geo/geoserverrgplv.yaml
+Record ID: geoserverrgplv
+Issue: TAG_HYGIENE
+Field: tags[3]
+Current Value: LV
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: LV/Federal/geo/gispublvcelilv.yaml
+Record ID: gispublvcelilv
+Issue: TAG_HYGIENE
+Field: tags[3]
+Current Value: LV
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+[URL_HOST_MISMATCH]
+Count: 3
+Priority: MEDIUM
+
+File: LV/LV-RIX/geo/georigalv.yaml
+Record ID: georigalv
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=georigalv, link=https://georiga.eu
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Record ID: datatstatgovlv
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=datatstatgovlv, link=https://data.stat.gov.lv/pxweb
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: LV/Federal/scientific/repositoryclarinlv.yaml
+Record ID: repositoryclarinlv
+Issue: URL_HOST_MISMATCH
+Field: endpoints[0].url
+Current Value: link=https://repository.clarin.lv/repository/xmlui/, endpoint=https://repository.clarin.lv:443/repository/xmlui/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 7 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+COVERAGE_NORMALIZATION: 1 issues
+ENDPOINT_TO_VERIFY: 144 issues
+INVALID_UID: 13 issues
+MISSING_IDENTIFIERS: 34 issues
+MISSING_LICENSE: 38 issues
+MISSING_OWNER_LINK: 1 issues
+MISSING_TAGS: 1 issues
+MISSING_TOPICS: 5 issues
+SHORT_DESCRIPTION: 4 issues
+TAG_HYGIENE: 2 issues
+URL_HOST_MISMATCH: 3 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: lvmgeoserverlvmlv
+File: LV/Federal/geo/lvmgeoserverlvmlv.yaml
+Issue Count: 17
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - INVALID_UID: uid
+
+Record ID: geoserverrgplv
+File: LV/Federal/geo/geoserverrgplv.yaml
+Issue Count: 17
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - TAG_HYGIENE: tags[3]
+
+Record ID: tapisgovlv
+File: LV/Federal/geo/tapisgovlv.yaml
+Issue Count: 17
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - INVALID_UID: uid
+
+Record ID: geoserverlvgmclv
+File: LV/Federal/geo/geoserverlvgmclv.yaml
+Issue Count: 15
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - INVALID_UID: uid
+
+Record ID: gispublvcelilv
+File: LV/Federal/geo/gispublvcelilv.yaml
+Issue Count: 11
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - TAG_HYGIENE: tags[3]
+  - INVALID_UID: uid
+
+Record ID: portalsdaugavpilsnovadslv
+File: LV/LV-DGV/geo/portalsdaugavpilsnovadslv.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - INVALID_UID: uid
+
+Record ID: serviceslgiagovlv
+File: LV/Federal/geo/serviceslgiagovlv.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: georigalv
+File: LV/LV-RIX/geo/georigalv.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+  - SHORT_DESCRIPTION: description
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: karteslgiagovlv
+File: LV/Federal/geo/karteslgiagovlv.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: ozolsgovlv
+File: LV/Federal/geo/ozolsgovlv.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: inspirestatgovlv
+File: LV/Federal/geo/inspirestatgovlv.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+
+Record ID: geodatalvgmclv
+File: LV/Federal/geo/geodatalvgmclv.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: etportalgislv
+File: LV/Federal/geo/etportalgislv.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: gisenvironmentlv
+File: LV/Federal/geo/gisenvironmentlv.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: sciencersulv
+File: LV/Federal/scientific/sciencersulv.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: portalsaugsdaugavasnovadslv
+File: LV/LV-111/geo/portalsaugsdaugavasnovadslv.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: opendatasetslsospsdghubarcgiscom
+File: Unknown/geo/opendatasetslsospsdghubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: dudatabiologylv
+File: LV/Federal/scientific/dudatabiologylv.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: gisportalmadonasudenslv
+File: LV/LV-059/geo/gisportalmadonasudenslv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: datatstatgovlv
+File: LV/Federal/indicators/datatstatgovlv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: datagovlv
+File: LV/Federal/opendata/datagovlv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+
+Record ID: servisilgiagovlv
+File: LV/Federal/geo/servisilgiagovlv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: ismantojumslv
+File: LV/Federal/geo/ismantojumslv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: repositoryclarinlv
+File: LV/Federal/scientific/repositoryclarinlv.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - URL_HOST_MISMATCH: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: vloclarineu
+File: EU/LV-RIX/opendata/vloclarineu.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - INVALID_UID: uid
+
+Record ID: statistikaspkcgovlv
+File: LV/Federal/indicators/statistikaspkcgovlv.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: dataopendatalv
+File: LV/Federal/opendata/dataopendatalv.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: dataversersulv
+File: LV/Federal/scientific/dataversersulv.yaml
+Issue Count: 4
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: dvdataverselv
+File: LV/Federal/scientific/dvdataverselv.yaml
+Issue Count: 4
+Issues:
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: statgovlv
+File: LV/Federal/indicators/statgovlv.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - SHORT_DESCRIPTION: description
+
+Record ID: geostatgovlv
+File: LV/Federal/geo/geostatgovlv.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+
+Record ID: geolatvijalv
+File: LV/Federal/geo/geolatvijalv.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+
+Record ID: imswebvvdgovlv
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: baltic100valv
+File: LV/Federal/scientific/baltic100valv.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

@@ -1,0 +1,503 @@
+DATA QUALITY REPORT - COUNTRY: SO
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: SO
+Total Records with Issues: 4
+Total Issues Found: 53
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 35
+Priority: LOW
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://geoportalofhargeisa.org/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://geoportalofhargeisa.org/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://geoportalofhargeisa.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://geoportalofhargeisa.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://geoportalofhargeisa.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://geoportalofhargeisa.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: http://geoportalofhargeisa.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: http://geoportalofhargeisa.org/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: http://geoportalofhargeisa.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: http://geoportalofhargeisa.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/microdata/microdatanbsgovso.yaml
+Record ID: microdatanbsgovso
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://microdata.nbs.gov.so/index.php/catalog/export/csv?ps=5000&collection[]
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/microdata/microdatanbsgovso.yaml
+Record ID: microdatanbsgovso
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://microdata.nbs.gov.so/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.data.gov.so/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.data.gov.so/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://spatial.faoswalim.org/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://spatial.faoswalim.org/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://spatial.faoswalim.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://spatial.faoswalim.org/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://spatial.faoswalim.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://spatial.faoswalim.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://spatial.faoswalim.org/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://spatial.faoswalim.org/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[18].url
+Current Value: https://spatial.faoswalim.org/geoserver/rest/about/version
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[19].url
+Current Value: https://spatial.faoswalim.org/geoserver/rest/settings
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[20].url
+Current Value: https://spatial.faoswalim.org/geoserver/rest/layers
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 3
+Priority: CRITICAL
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000787
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00004860
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000840
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 4
+Priority: IMPORTANT
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SO/microdata/microdatanbsgovso.yaml
+Record ID: microdatanbsgovso
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_LICENSE]
+Count: 4
+Priority: IMPORTANT
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SO/microdata/microdatanbsgovso.yaml
+Record ID: microdatanbsgovso
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Record ID: spatialfaoswalimorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Record ID: geoportalofhargeisaorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Record ID: wwwdatagovso
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Data catalog for open government data.
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 35 issues
+INVALID_UID: 3 issues
+MISSING_IDENTIFIERS: 4 issues
+MISSING_LANGS: 1 issues
+MISSING_LICENSE: 4 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: spatialfaoswalimorg
+File: SO/Federal/geo/spatialfaoswalimorg.yaml
+Issue Count: 24
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - INVALID_UID: uid
+
+Record ID: geoportalofhargeisaorg
+File: SO/SO-WO/geo/geoportalofhargeisaorg.yaml
+Issue Count: 15
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - INVALID_UID: uid
+
+Record ID: wwwdatagovso
+File: SO/Federal/opendata/wwwdatagovso.yaml
+Issue Count: 10
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: microdatanbsgovso
+File: SO/microdata/microdatanbsgovso.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url

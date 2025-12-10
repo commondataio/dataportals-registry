@@ -1,0 +1,545 @@
+DATA QUALITY REPORT - COUNTRY: MA
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: MA
+Total Records with Issues: 9
+Total Issues Found: 57
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 31
+Priority: LOW
+
+File: MA/opendata/wwwdatagovma.yaml
+Record ID: wwwdatagovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://www.data.gov.ma/data/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/opendata/wwwdatagovma.yaml
+Record ID: wwwdatagovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://www.data.gov.ma/data/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/opendata/wwwdatagovma.yaml
+Record ID: wwwdatagovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://www.data.gov.ma/data/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/wis2boxmarocmeteoma.yaml
+Record ID: wis2boxmarocmeteoma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wis2box.marocmeteo.ma/oapi/openapi
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/wis2boxmarocmeteoma.yaml
+Record ID: wis2boxmarocmeteoma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wis2box.marocmeteo.ma/oapi/collections/?f=json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geonedd.environnement.gov.ma:9876/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geonedd.environnement.gov.ma:9876/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/geo/wis2africamarocmeteoma.yaml
+Record ID: wis2africamarocmeteoma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wis2africa.marocmeteo.ma/oapi/openapi
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://siresarcgis.environnement.gov.ma:6443/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://carto.auc.ma/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://carto.auc.ma/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://carto.auc.ma/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://carto.auc.ma/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://carto.auc.ma/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://carto.auc.ma/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.casasig.ma/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.casasig.ma/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.casasig.ma/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.casasig.ma/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.casasig.ma/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.casasig.ma/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 5
+Priority: CRITICAL
+
+File: MA/Federal/indicators/bdshcpma.yaml
+Record ID: bdshcpma
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000476
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MA/Federal/indicators/plateformeoddhcpma.yaml
+Record ID: plateformeoddhcpma
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000477
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005964
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005963
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005965
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 8
+Priority: IMPORTANT
+
+File: MA/geo/wis2boxmarocmeteoma.yaml
+Record ID: wis2boxmarocmeteoma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/geo/wis2africamarocmeteoma.yaml
+Record ID: wis2africamarocmeteoma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/Federal/indicators/bdshcpma.yaml
+Record ID: bdshcpma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/Federal/indicators/plateformeoddhcpma.yaml
+Record ID: plateformeoddhcpma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 9
+Priority: IMPORTANT
+
+File: MA/opendata/wwwdatagovma.yaml
+Record ID: wwwdatagovma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/geo/wis2boxmarocmeteoma.yaml
+Record ID: wis2boxmarocmeteoma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/geo/geoneddenvironnementgovma.yaml
+Record ID: geoneddenvironnementgovma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/geo/wis2africamarocmeteoma.yaml
+Record ID: wis2africamarocmeteoma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/Federal/indicators/bdshcpma.yaml
+Record ID: bdshcpma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/Federal/indicators/plateformeoddhcpma.yaml
+Record ID: plateformeoddhcpma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Record ID: siresarcgisenvironnementgovma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/Federal/geo/cartoaucma.yaml
+Record ID: cartoaucma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: MA/Federal/geo/wwwcasasigma.yaml
+Record ID: wwwcasasigma
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: MA/opendata/wwwdatagovma.yaml
+Record ID: wwwdatagovma
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 3 issues
+ENDPOINT_TO_VERIFY: 31 issues
+INVALID_UID: 5 issues
+MISSING_IDENTIFIERS: 8 issues
+MISSING_LICENSE: 9 issues
+MISSING_TOPICS: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: siresarcgisenvironnementgovma
+File: MA/Federal/geo/siresarcgisenvironnementgovma.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: cartoaucma
+File: MA/Federal/geo/cartoaucma.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwcasasigma
+File: MA/Federal/geo/wwwcasasigma.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: geoneddenvironnementgovma
+File: MA/geo/geoneddenvironnementgovma.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: wwwdatagovma
+File: MA/opendata/wwwdatagovma.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: wis2boxmarocmeteoma
+File: MA/geo/wis2boxmarocmeteoma.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: wis2africamarocmeteoma
+File: MA/geo/wis2africamarocmeteoma.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: bdshcpma
+File: MA/Federal/indicators/bdshcpma.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: plateformeoddhcpma
+File: MA/Federal/indicators/plateformeoddhcpma.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid

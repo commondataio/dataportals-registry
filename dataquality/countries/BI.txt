@@ -1,0 +1,184 @@
+DATA QUALITY REPORT - COUNTRY: BI
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: BI
+Total Records with Issues: 3
+Total Issues Found: 15
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_TAGS]
+Count: 1
+Priority: LOW
+
+File: BI/microdata/iwacuburundiorg.yaml
+Record ID: iwacuburundiorg
+Issue: DUPLICATE_TAGS
+Field: tags[2]
+Current Value: Burundi
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 6
+Priority: LOW
+
+File: BI/microdata/isteebubi.yaml
+Record ID: isteebubi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://isteebu.bi/nada/index.php/api/catalog/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BI/microdata/iwacuburundiorg.yaml
+Record ID: iwacuburundiorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://iwacu-burundi.org/opendata/en/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BI/microdata/iwacuburundiorg.yaml
+Record ID: iwacuburundiorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://iwacu-burundi.org/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://ipt-burundi.gbif.fr/dcat
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://ipt-burundi.gbif.fr/inventory/dataset
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://ipt-burundi.gbif.fr/rss.do
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_IDENTIFIERS]
+Count: 3
+Priority: IMPORTANT
+
+File: BI/microdata/isteebubi.yaml
+Record ID: isteebubi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: BI/microdata/iwacuburundiorg.yaml
+Record ID: iwacuburundiorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_LICENSE]
+Count: 2
+Priority: IMPORTANT
+
+File: BI/microdata/isteebubi.yaml
+Record ID: isteebubi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Record ID: iptburundigbiffr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: IPT for data publishers from Burundi
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_TAGS: 1 issues
+ENDPOINT_TO_VERIFY: 6 issues
+MISSING_IDENTIFIERS: 3 issues
+MISSING_LANGS: 1 issues
+MISSING_LICENSE: 2 issues
+MISSING_OWNER_LINK: 1 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: iptburundigbiffr
+File: BI/Federal/scientific/iptburundigbiffr.yaml
+Issue Count: 8
+Issues:
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: iwacuburundiorg
+File: BI/microdata/iwacuburundiorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - DUPLICATE_TAGS: tags[2]
+
+Record ID: isteebubi
+File: BI/microdata/isteebubi.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

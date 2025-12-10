@@ -1,0 +1,890 @@
+DATA QUALITY REPORT - COUNTRY: PA
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: PA
+Total Records with Issues: 9
+Total Issues Found: 97
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Open data portal, software.id=geonetwork
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+[DUPLICATE_TAGS]
+Count: 1
+Priority: LOW
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: DUPLICATE_TAGS
+Field: tags[5]
+Current Value: Geospatial
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 66
+Priority: LOW
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://datosabiertos.gob.pa/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://datosabiertos.gob.pa/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://datosabiertos.gob.pa/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://datos-geomupa.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://datos-geomupa.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://datos-geomupa.opendata.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://datos-geomupa.opendata.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://datos-geomupa.opendata.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://ciencia-ciudadana-pa-geofsu.hub.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geo-01.innovacion.gob.pa/api/layers/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geo-01.innovacion.gob.pa/api/documents/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geo-01.innovacion.gob.pa/data.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geo-01.innovacion.gob.pa/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geo-01.innovacion.gob.pa/catalogue/csw?mode=oaipmh&verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://geo-01.innovacion.gob.pa/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[15].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[16].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[17].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[18].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[19].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[20].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/rest/about/version
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[21].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/rest/settings
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[22].url
+Current Value: https://geo-01.innovacion.gob.pa/geoserver/rest/layers
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap?format=rdf
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://geo-01.innovacion.gob.pa/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geo-01.innovacion.gob.pa/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geo-01.innovacion.gob.pa/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://stridata-si.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://stridata-si.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://stridata-si.opendata.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://stridata-si.opendata.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://stridata-si.opendata.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://panama-1-sdg.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://panama-1-sdg.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://panama-1-sdg.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://panama-1-sdg.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://panama-1-sdg.hub.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://portal-de-datos-y-servicios-igntg-ignpanama.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: None
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_IDENTIFIERS]
+Count: 9
+Priority: IMPORTANT
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 9
+Priority: IMPORTANT
+
+File: PA/opendata/datosabiertosgobpa.yaml
+Record ID: datosabiertosgobpa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Record ID: datosgeomupaopendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Record ID: stridatasiopendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Record ID: panama1sdghubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TOPICS]
+Count: 4
+Priority: LOW
+
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Record ID: geo01innovaciongobpageonode
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Record ID: geo01innovaciongobpageonetwork
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Geonetwork (Panama Government)
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[URL_HOST_MISMATCH]
+Count: 3
+Priority: MEDIUM
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=geo01innovactiongobpa, link=https://geo-01.innovacion.gob.pa/geonetwork
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: URL_HOST_MISMATCH
+Field: endpoints[6].url
+Current Value: link=https://geo-01.innovacion.gob.pa/geonetwork, endpoint=https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: PA/geo/geo01innovactiongobpa.yaml
+Record ID: geo01innovactiongobpa
+Issue: URL_HOST_MISMATCH
+Field: endpoints[7].url
+Current Value: link=https://geo-01.innovacion.gob.pa/geonetwork, endpoint=https://geo-01.innovacion.gob.pa:80/geonetwork/srv/eng/portal.sitemap?format=rdf
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+DUPLICATE_TAGS: 1 issues
+ENDPOINT_TO_VERIFY: 66 issues
+MISSING_DESCRIPTION: 1 issues
+MISSING_IDENTIFIERS: 9 issues
+MISSING_LICENSE: 9 issues
+MISSING_OWNER_LINK: 1 issues
+MISSING_TOPICS: 4 issues
+SHORT_DESCRIPTION: 1 issues
+URL_HOST_MISMATCH: 3 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geo01innovaciongobpageonode
+File: PA/geo/geo01innovaciongobpageonode.yaml
+Issue Count: 27
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - ENDPOINT_TO_VERIFY: endpoints[15].url
+  - ENDPOINT_TO_VERIFY: endpoints[16].url
+  - ENDPOINT_TO_VERIFY: endpoints[17].url
+  - ENDPOINT_TO_VERIFY: endpoints[18].url
+  - ENDPOINT_TO_VERIFY: endpoints[19].url
+  - ENDPOINT_TO_VERIFY: endpoints[20].url
+  - ENDPOINT_TO_VERIFY: endpoints[21].url
+  - ENDPOINT_TO_VERIFY: endpoints[22].url
+
+Record ID: geo01innovactiongobpa
+File: PA/geo/geo01innovactiongobpa.yaml
+Issue Count: 16
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+  - URL_HOST_MISMATCH: id vs link
+  - URL_HOST_MISMATCH: endpoints[6].url
+  - URL_HOST_MISMATCH: endpoints[7].url
+
+Record ID: geo01innovaciongobpageonetwork
+File: PA/geo/geo01innovaciongobpageonetwork.yaml
+Issue Count: 11
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: cienciaciudadanapageofsuhubarcgiscom
+File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: stridatasiopendataarcgiscom
+File: PA/geo/stridatasiopendataarcgiscom.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - DUPLICATE_TAGS: tags[5]
+
+Record ID: datosgeomupaopendataarcgiscom
+File: PA/geo/datosgeomupaopendataarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: panama1sdghubarcgiscom
+File: Unknown/geo/panama1sdghubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: datosabiertosgobpa
+File: PA/opendata/datosabiertosgobpa.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: portaldedatosyserviciosigntgignpanamahubarcgiscom
+File: Unknown/geo/portaldedatosyserviciosigntgignpanamahubarcgiscom.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url

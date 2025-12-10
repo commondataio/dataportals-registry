@@ -1,0 +1,137 @@
+DATA QUALITY REPORT - COUNTRY: unknown
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: unknown
+Total Records with Issues: 1
+Total Issues Found: 11
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 6
+Priority: LOW
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://gis.pgatlas.com/pgatlas/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://gis.pgatlas.com/pgatlas/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://gis.pgatlas.com/pgatlas/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://gis.pgatlas.com/pgatlas/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://gis.pgatlas.com/pgatlas/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://gis.pgatlas.com/pgatlas/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 1
+Priority: CRITICAL
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003994
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 1
+Priority: IMPORTANT
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_LICENSE]
+Count: 1
+Priority: IMPORTANT
+
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Record ID: gispgatlascom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 6 issues
+INVALID_UID: 1 issues
+MISSING_IDENTIFIERS: 1 issues
+MISSING_LANGS: 1 issues
+MISSING_LICENSE: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gispgatlascom
+File: Unknown/Federal/geo/gispgatlascom.yaml
+Issue Count: 11
+Issues:
+  - MISSING_LANGS: langs
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid

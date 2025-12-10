@@ -1,0 +1,781 @@
+DATA QUALITY REPORT - COUNTRY: SI
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: SI
+Total Records with Issues: 16
+Total Issues Found: 82
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 9
+Priority: IMPORTANT
+
+File: SI/indicators/pxwebstatsi.yaml
+Record ID: pxwebstatsi
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/geo/sentinelhub.yaml
+Record ID: sentinelhub
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Record ID: metadataizrkzrcsazusi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: SI/scientific/repozitorijuniljsi.yaml
+Record ID: repozitorijuniljsi
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 36
+Priority: LOW
+
+File: SI/indicators/pxwebstatsi.yaml
+Record ID: pxwebstatsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://pxweb.stat.si/SiStatData/api/v1/en
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/opendata/podatkigovsi.yaml
+Record ID: podatkigovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://podatki.gov.si/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/opendata/podatkigovsi.yaml
+Record ID: podatkigovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://podatki.gov.si/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/opendata/podatkigovsi.yaml
+Record ID: podatkigovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://podatki.gov.si/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://eprostor.gov.si/imps/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://eprostor.gov.si/imps/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://eprostor.gov.si/imps/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://eprostor.gov.si/imps/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://eprostor.gov.si/imps/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/sentinelhub.yaml
+Record ID: sentinelhub
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://services.sentinel-hub.com/api/v1/catalog/1.0.0/
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Record ID: metadataizrkzrcsazusi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://metadata.izrk.zrc-sazu.si/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Record ID: metadataizrkzrcsazusi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://metadata.izrk.zrc-sazu.si/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://prostor.celje.si/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://prostor.celje.si/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://prostor.celje.si/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://egeologija.si/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://egeologija.si/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://egeologija.si/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://egeologija.si/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://prostor.maribor.si/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://prostor.maribor.si/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://prostor.maribor.si/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://prostor.maribor.si/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://prostor.maribor.si/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
+Record ID: dataverseadpfdvuniljsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dataverse.adp.fdv.uni-lj.si/api/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
+Record ID: dataverseadpfdvuniljsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://dataverse.adp.fdv.uni-lj.si/oai?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://pobude.ljubljana.si/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://pobude.ljubljana.si/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://pobude.ljubljana.si/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://pobude.ljubljana.si/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://pobude.ljubljana.si/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://pobude.ljubljana.si/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.clarin.si/repository/xmlui/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.clarin.si/repository/xmlui/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.clarin.si:443/repository/xmlui/open-search/description.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SI/scientific/repozitorijuniljsi.yaml
+Record ID: repozitorijuniljsi
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://repozitorij.uni-lj.si/oai/oai2.php?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 2
+Priority: CRITICAL
+
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003897
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005826
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 14
+Priority: IMPORTANT
+
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/indicators/pxwebstatsi.yaml
+Record ID: pxwebstatsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/indicators/pxbsisi.yaml
+Record ID: pxbsisi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/sentinelhub.yaml
+Record ID: sentinelhub
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Record ID: metadataizrkzrcsazusi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/scientific/wwwopensciencesi.yaml
+Record ID: wwwopensciencesi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/scientific/repozitorijuniljsi.yaml
+Record ID: repozitorijuniljsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SI/scientific/wwwadpfdvuniljsi.yaml
+Record ID: wwwadpfdvuniljsi
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 16
+Priority: IMPORTANT
+
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/indicators/pxwebstatsi.yaml
+Record ID: pxwebstatsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/indicators/pxbsisi.yaml
+Record ID: pxbsisi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/opendata/podatkigovsi.yaml
+Record ID: podatkigovsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/eprostorgovsi.yaml
+Record ID: eprostorgovsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/sentinelhub.yaml
+Record ID: sentinelhub
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Record ID: metadataizrkzrcsazusi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/prostorceljesi.yaml
+Record ID: prostorceljesi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/egeologijasi.yaml
+Record ID: egeologijasi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/geo/prostormariborsi.yaml
+Record ID: prostormariborsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
+Record ID: dataverseadpfdvuniljsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Record ID: pobudeljubljanasi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/scientific/wwwopensciencesi.yaml
+Record ID: wwwopensciencesi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/scientific/repozitorijuniljsi.yaml
+Record ID: repozitorijuniljsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SI/scientific/wwwadpfdvuniljsi.yaml
+Record ID: wwwadpfdvuniljsi
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
+Record ID: dataverseadpfdvuniljsi
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: SI/indicators/pxbsisi.yaml
+Record ID: pxbsisi
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[TAG_HYGIENE]
+Count: 2
+Priority: MEDIUM
+
+File: SI/indicators/pxwebstatsi.yaml
+Record ID: pxwebstatsi
+Issue: TAG_HYGIENE
+Field: tags[7]
+Current Value: PX
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: SI/indicators/pxbsisi.yaml
+Record ID: pxbsisi
+Issue: TAG_HYGIENE
+Field: tags[7]
+Current Value: PX
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+[URL_HOST_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: SI/scientific/wwwclarinsi.yaml
+Record ID: wwwclarinsi
+Issue: URL_HOST_MISMATCH
+Field: endpoints[2].url
+Current Value: link=https://www.clarin.si/repository/xmlui/, endpoint=https://www.clarin.si:443/repository/xmlui/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 9 issues
+ENDPOINT_TO_VERIFY: 36 issues
+INVALID_UID: 2 issues
+MISSING_IDENTIFIERS: 14 issues
+MISSING_LICENSE: 16 issues
+MISSING_OWNER_LINK: 1 issues
+MISSING_TOPICS: 1 issues
+TAG_HYGIENE: 2 issues
+URL_HOST_MISMATCH: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: pobudeljubljanasi
+File: SI/SI-061/geo/pobudeljubljanasi.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: eprostorgovsi
+File: SI/geo/eprostorgovsi.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: prostormariborsi
+File: SI/geo/prostormariborsi.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: egeologijasi
+File: SI/geo/egeologijasi.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+
+Record ID: prostorceljesi
+File: SI/geo/prostorceljesi.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: wwwclarinsi
+File: SI/scientific/wwwclarinsi.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - URL_HOST_MISMATCH: endpoints[2].url
+
+Record ID: pxwebstatsi
+File: SI/indicators/pxwebstatsi.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - TAG_HYGIENE: tags[7]
+
+Record ID: metadataizrkzrcsazusi
+File: SI/geo/metadataizrkzrcsazusi.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: pxbsisi
+File: SI/indicators/pxbsisi.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - TAG_HYGIENE: tags[7]
+
+Record ID: podatkigovsi
+File: SI/opendata/podatkigovsi.yaml
+Issue Count: 4
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: sentinelhub
+File: SI/geo/sentinelhub.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: dataverseadpfdvuniljsi
+File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
+Issue Count: 4
+Issues:
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: repozitorijuniljsi
+File: SI/scientific/repozitorijuniljsi.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: podatkinijzsi
+File: SI/indicators/podatkinijzsi.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid

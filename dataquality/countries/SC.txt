@@ -1,0 +1,93 @@
+DATA QUALITY REPORT - COUNTRY: SC
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: SC
+Total Records with Issues: 2
+Total Issues Found: 7
+
+=== ISSUES BY TYPE ===
+
+[ENDPOINT_TO_VERIFY]
+Count: 2
+Priority: LOW
+
+File: SC/geo/wis2meteosc.yaml
+Record ID: wis2meteosc
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wis2.meteo.sc/oapi/openapi
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: SC/geo/wis2meteosc.yaml
+Record ID: wis2meteosc
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wis2.meteo.sc/oapi/collections/?f=json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[MISSING_IDENTIFIERS]
+Count: 2
+Priority: IMPORTANT
+
+File: SC/geo/wis2meteosc.yaml
+Record ID: wis2meteosc
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: SC/geo/webgisgovsc.yaml
+Record ID: webgisgovsc
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 2
+Priority: IMPORTANT
+
+File: SC/geo/wis2meteosc.yaml
+Record ID: wis2meteosc
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: SC/geo/webgisgovsc.yaml
+Record ID: webgisgovsc
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: SC/geo/wis2meteosc.yaml
+Record ID: wis2meteosc
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: WIS 2.0 Seychelles
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+ENDPOINT_TO_VERIFY: 2 issues
+MISSING_IDENTIFIERS: 2 issues
+MISSING_LICENSE: 2 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: wis2meteosc
+File: SC/geo/wis2meteosc.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - SHORT_DESCRIPTION: description

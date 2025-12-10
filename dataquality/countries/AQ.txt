@@ -1,0 +1,254 @@
+DATA QUALITY REPORT - COUNTRY: AQ
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: AQ
+Total Records with Issues: 3
+Total Issues Found: 25
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=7
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 17
+Priority: LOW
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geos.polarview.aq/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geos.polarview.aq/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geos.polarview.aq/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geos.polarview.aq/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geos.polarview.aq/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geos.polarview.aq/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://geos.polarview.aq/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Record ID: iptbiodiversityaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://ipt.biodiversity.aq/dcat
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Record ID: iptbiodiversityaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://ipt.biodiversity.aq/inventory/dataset
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Record ID: iptbiodiversityaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://ipt.biodiversity.aq/rss.do
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://iandc.pnra.aq/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://iandc.pnra.aq/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://iandc.pnra.aq/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://iandc.pnra.aq/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://iandc.pnra.aq/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://iandc.pnra.aq/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://iandc.pnra.aq/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 1
+Priority: CRITICAL
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000790
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 3
+Priority: IMPORTANT
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Record ID: iptbiodiversityaq
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 3
+Priority: IMPORTANT
+
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Record ID: geospolarviewaq
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Record ID: iptbiodiversityaq
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: IT/Federal/geo/iandcpnraaq.yaml
+Record ID: iandcpnraaq
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+ENDPOINT_TO_VERIFY: 17 issues
+INVALID_UID: 1 issues
+MISSING_IDENTIFIERS: 3 issues
+MISSING_LICENSE: 3 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geospolarviewaq
+File: AQ/Federal/geo/geospolarviewaq.yaml
+Issue Count: 11
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - INVALID_UID: uid
+
+Record ID: iandcpnraaq
+File: IT/Federal/geo/iandcpnraaq.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+
+Record ID: iptbiodiversityaq
+File: AQ/Federal/scientific/iptbiodiversityaq.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url

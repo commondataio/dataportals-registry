@@ -1,0 +1,2810 @@
+DATA QUALITY REPORT - COUNTRY: KR
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: KR
+Total Records with Issues: 71
+Total Issues Found: 427
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 14
+Priority: IMPORTANT
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=15
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/giskofpiorkr.yaml
+Record ID: giskofpiorkr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/wwwspaceplanetcokr.yaml
+Record ID: wwwspaceplanetcokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/servicekoshaorkr.yaml
+Record ID: servicekoshaorkr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=13
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Record ID: eiaresearchkeirekr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=13
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/geo/weathergokr.yaml
+Record ID: weathergokr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: KR/Federal/geo/wwwwamisgokr.yaml
+Record ID: wwwwamisgokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/scientific/kbifnarisgokr.yaml
+Record ID: kbifnarisgokr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 5
+Priority: CRITICAL
+
+File: KR/Federal/geo/joisskr.yaml
+Record ID: joisskr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geonetwork
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+File: KR/Federal/geo/weathergokr.yaml
+Record ID: weathergokr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geoserver
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+File: KR/Federal/geo/videonifsgokr.yaml
+Record ID: videonifsgokr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geonetwork
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+File: KR/Federal/geo/floodmapgokr.yaml
+Record ID: floodmapgokr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geoserver
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+[DUPLICATE_TAGS]
+Count: 1
+Priority: LOW
+
+File: KR/Federal/opendata/datagokr.yaml
+Record ID: datagokr
+Issue: DUPLICATE_TAGS
+Field: tags[3]
+Current Value: Government
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 227
+Priority: LOW
+
+File: KR/KR-43/opendata/datachungbukgokr.yaml
+Record ID: datachungbukgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.chungbuk.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/opendata/databusangokr.yaml
+Record ID: databusangokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.busan.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://gis.bdna.or.kr:4443/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://gis.bdna.or.kr:4443/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://gis.bdna.or.kr:4443/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://gis.bdna.or.kr:4443/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/opendata/datajeonjugokr.yaml
+Record ID: datajeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.jeonju.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[14].url
+Current Value: http://lxgis.jeonju.go.kr/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datagdgokr.yaml
+Record ID: datagdgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.gd.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datagurogokr.yaml
+Record ID: datagurogokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.guro.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/dataseoulgokr.yaml
+Record ID: dataseoulgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.seoul.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datayongsangokr.yaml
+Record ID: datayongsangokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.yongsan.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datanowongokr.yaml
+Record ID: datanowongokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.nowon.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datasdgokr.yaml
+Record ID: datasdgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.sd.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datayangcheongokr.yaml
+Record ID: datayangcheongokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.yangcheon.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datagwangjingokr.yaml
+Record ID: datagwangjingokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.gwangjin.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/opendata/datagangnamgokr.yaml
+Record ID: datagangnamgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.gangnam.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://bigdata.dongjak.go.kr/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.gjcity.go.kr/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.gjcity.go.kr/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.gjcity.go.kr/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.gjcity.go.kr/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.gjcity.go.kr/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.gjcity.go.kr/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-27/opendata/datadaegugokr.yaml
+Record ID: datadaegugokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.daegu.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data-esrikrmkt.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data-esrikrmkt.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://data-esrikrmkt.opendata.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://data-esrikrmkt.opendata.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://data-esrikrmkt.opendata.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/KR-31/opendata/dataulsangokr.yaml
+Record ID: dataulsangokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.ulsan.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datamfdsgokr.yaml
+Record ID: datamfdsgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.mfds.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datakmagokr.yaml
+Record ID: datakmagokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.kma.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datansdigokr.yaml
+Record ID: datansdigokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://data.nsdi.go.kr/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datansdigokr.yaml
+Record ID: datansdigokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://data.nsdi.go.kr/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datansdigokr.yaml
+Record ID: datansdigokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://data.nsdi.go.kr/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datanecgokr.yaml
+Record ID: datanecgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://data.nec.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datamolitgokr.yaml
+Record ID: datamolitgokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.molit.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/opendatamofagokr.yaml
+Record ID: opendatamofagokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://opendata.mofa.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/datagokr.yaml
+Record ID: datagokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.go.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/opendata/opendatahiraorkr.yaml
+Record ID: opendatahiraorkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://opendata.hira.or.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/marketplace/wwwbigdataenvironmentkr.yaml
+Record ID: wwwbigdataenvironmentkr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.bigdata-environment.kr/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://www.weather.go.kr/wgis-geos/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://www.weather.go.kr/wgis-geos/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://www.weather.go.kr/wgis-geos/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://www.weather.go.kr/wgis-geos/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: http://hpai.kware.co.kr/opengxt/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+... and 127 more records with this issue
+
+[INVALID_UID]
+Count: 19
+Priority: CRITICAL
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000411
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001596
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001594
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005952
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/microdata/mdiskostatgokr.yaml
+Record ID: mdiskostatgokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000421
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/opendata/wwwodagokr.yaml
+Record ID: wwwodagokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000422
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000416
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000412
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/giskofpiorkr.yaml
+Record ID: giskofpiorkr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005953
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/wwwspaceplanetcokr.yaml
+Record ID: wwwspaceplanetcokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000415
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/servicekoshaorkr.yaml
+Record ID: servicekoshaorkr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000413
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Record ID: eiaresearchkeirekr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000407
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/wwwnsdigokr.yaml
+Record ID: wwwnsdigokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003139
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/geo/wwwwamisgokr.yaml
+Record ID: wwwwamisgokr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005955
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/scientific/climatedataibsrekr.yaml
+Record ID: climatedataibsrekr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003804
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/scientific/datakigamrekr.yaml
+Record ID: datakigamrekr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000423
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00004739
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/scientific/drbrorkr.yaml
+Record ID: drbrorkr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000424
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: KR/Federal/scientific/kpdckoprirekr.yaml
+Record ID: kpdckoprirekr
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000425
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: KR/KR-11/opendata/datagwangjingokr.yaml
+Record ID: datagwangjingokr
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: None
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_IDENTIFIERS]
+Count: 65
+Priority: IMPORTANT
+
+File: KR/KR-43/opendata/datachungbukgokr.yaml
+Record ID: datachungbukgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-26/opendata/databusangokr.yaml
+Record ID: databusangokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-45/opendata/datajeonjugokr.yaml
+Record ID: datajeonjugokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datagdgokr.yaml
+Record ID: datagdgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datagurogokr.yaml
+Record ID: datagurogokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datayongsangokr.yaml
+Record ID: datayongsangokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datanowongokr.yaml
+Record ID: datanowongokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datasdgokr.yaml
+Record ID: datasdgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datayangcheongokr.yaml
+Record ID: datayangcheongokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datagwangjingokr.yaml
+Record ID: datagwangjingokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/opendata/datagangnamgokr.yaml
+Record ID: datagangnamgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-27/opendata/datadaegugokr.yaml
+Record ID: datadaegugokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/microdata/mdiskostatgokr.yaml
+Record ID: mdiskostatgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/kesskedirekr.yaml
+Record ID: kesskedirekr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/wwwkesisnet.yaml
+Record ID: wwwkesisnet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/sgiskostatgokr.yaml
+Record ID: sgiskostatgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/ecosbokorkr.yaml
+Record ID: ecosbokorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/epsiskpxorkr.yaml
+Record ID: epsiskpxorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/kosiskr.yaml
+Record ID: kosiskr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/datakostatgokr.yaml
+Record ID: datakostatgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/indicators/houstathfgokr.yaml
+Record ID: houstathgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datamfdsgokr.yaml
+Record ID: datamfdsgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datakmagokr.yaml
+Record ID: datakmagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datansdigokr.yaml
+Record ID: datansdigokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datanecgokr.yaml
+Record ID: datanecgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datamolitgokr.yaml
+Record ID: datamolitgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/opendatamofagokr.yaml
+Record ID: opendatamofagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/datagokr.yaml
+Record ID: datagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/wwwodagokr.yaml
+Record ID: wwwodagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/opendata/opendatahiraorkr.yaml
+Record ID: opendatahiraorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/marketplace/wwwbigdataenvironmentkr.yaml
+Record ID: wwwbigdataenvironmentkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/marketplace/wwwbigdatatransportationkr.yaml
+Record ID: wwwbigdatatransportationkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/giskofpiorkr.yaml
+Record ID: giskofpiorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/wwwspaceplanetcokr.yaml
+Record ID: wwwspaceplanetcokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/servicekoshaorkr.yaml
+Record ID: servicekoshaorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Record ID: eiaresearchkeirekr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/wis2boxkmagokr.yaml
+Record ID: wis2boxkmagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/weathergokr.yaml
+Record ID: weathergokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/wwwnsdigokr.yaml
+Record ID: wwwnsdigokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/wwwwamisgokr.yaml
+Record ID: wwwwamisgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/dcpcnmsckmagokr.yaml
+Record ID: dcpcnmsckmagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/videonifsgokr.yaml
+Record ID: videonifsgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/geo/floodmapgokr.yaml
+Record ID: floodmapgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/ml/aihuborkr.yaml
+Record ID: aihuborkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/wwwmbriskr.yaml
+Record ID: wwwmbriskr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/climatedataibsrekr.yaml
+Record ID: climatedataibsrekr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/khuelsevierpurecom.yaml
+Record ID: khuelsevierpurecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/datakigamrekr.yaml
+Record ID: datakigamrekr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/dgistelsevierpurecom.yaml
+Record ID: dgistelsevierpurecom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/kbifnarisgokr.yaml
+Record ID: kbifnarisgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/noscgokropendap.yaml
+Record ID: noscgokropendap
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/drbrorkr.yaml
+Record ID: drbrorkr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/narissciencegokr.yaml
+Record ID: narissciencegokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/kpdckoprirekr.yaml
+Record ID: kpdckoprirekr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/61824886.yaml
+Record ID: 61824886
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/Federal/scientific/datardagokr.yaml
+Record ID: datardagokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: KR/KR-48/opendata/bigdatagyeongnamgokr.yaml
+Record ID: bigdatagyeongnamgokr
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 71
+Priority: IMPORTANT
+
+File: KR/KR-43/opendata/datachungbukgokr.yaml
+Record ID: datachungbukgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-26/opendata/databusangokr.yaml
+Record ID: databusangokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Record ID: gisbdnaorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-45/opendata/datajeonjugokr.yaml
+Record ID: datajeonjugokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datagdgokr.yaml
+Record ID: datagdgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datagurogokr.yaml
+Record ID: datagurogokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/dataseoulgokr.yaml
+Record ID: dataseoulgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datayongsangokr.yaml
+Record ID: datayongsangokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datanowongokr.yaml
+Record ID: datanowongokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datasdgokr.yaml
+Record ID: datasdgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datayangcheongokr.yaml
+Record ID: datayangcheongokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datagwangjingokr.yaml
+Record ID: datagwangjingokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/opendata/datagangnamgokr.yaml
+Record ID: datagangnamgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Record ID: bigdatadongjakgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-27/opendata/datadaegugokr.yaml
+Record ID: datadaegugokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-31/opendata/dataulsangokr.yaml
+Record ID: dataulsangokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/microdata/mdiskostatgokr.yaml
+Record ID: mdiskostatgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/kesskedirekr.yaml
+Record ID: kesskedirekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/wwwkesisnet.yaml
+Record ID: wwwkesisnet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/sgiskostatgokr.yaml
+Record ID: sgiskostatgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/ecosbokorkr.yaml
+Record ID: ecosbokorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/epsiskpxorkr.yaml
+Record ID: epsiskpxorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/kosiskr.yaml
+Record ID: kosiskr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/datakostatgokr.yaml
+Record ID: datakostatgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/indicators/houstathfgokr.yaml
+Record ID: houstathgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datamfdsgokr.yaml
+Record ID: datamfdsgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datakmagokr.yaml
+Record ID: datakmagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datansdigokr.yaml
+Record ID: datansdigokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datanecgokr.yaml
+Record ID: datanecgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datamolitgokr.yaml
+Record ID: datamolitgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/opendatamofagokr.yaml
+Record ID: opendatamofagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/datagokr.yaml
+Record ID: datagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/wwwodagokr.yaml
+Record ID: wwwodagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/opendata/opendatahiraorkr.yaml
+Record ID: opendatahiraorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/marketplace/wwwbigdataenvironmentkr.yaml
+Record ID: wwwbigdataenvironmentkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/marketplace/wwwbigdatatransportationkr.yaml
+Record ID: wwwbigdatatransportationkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/giskofpiorkr.yaml
+Record ID: giskofpiorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/joisskr.yaml
+Record ID: joisskr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/wwwspaceplanetcokr.yaml
+Record ID: wwwspaceplanetcokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/servicekoshaorkr.yaml
+Record ID: servicekoshaorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Record ID: eiaresearchkeirekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/wis2boxkmagokr.yaml
+Record ID: wis2boxkmagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/weathergokr.yaml
+Record ID: weathergokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/wwwnsdigokr.yaml
+Record ID: wwwnsdigokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/wwwwamisgokr.yaml
+Record ID: wwwwamisgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/dcpcnmsckmagokr.yaml
+Record ID: dcpcnmsckmagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/videonifsgokr.yaml
+Record ID: videonifsgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/geo/floodmapgokr.yaml
+Record ID: floodmapgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/ml/aihuborkr.yaml
+Record ID: aihuborkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/dataonkistirekr.yaml
+Record ID: dataonkistirekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/wwwmbriskr.yaml
+Record ID: wwwmbriskr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/climatedataibsrekr.yaml
+Record ID: climatedataibsrekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/khuelsevierpurecom.yaml
+Record ID: khuelsevierpurecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/datakigamrekr.yaml
+Record ID: datakigamrekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/dgistelsevierpurecom.yaml
+Record ID: dgistelsevierpurecom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/kbifnarisgokr.yaml
+Record ID: kbifnarisgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/noscgokropendap.yaml
+Record ID: noscgokropendap
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/drbrorkr.yaml
+Record ID: drbrorkr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/narissciencegokr.yaml
+Record ID: narissciencegokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/kpdckoprirekr.yaml
+Record ID: kpdckoprirekr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/61824886.yaml
+Record ID: 61824886
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/Federal/scientific/datardagokr.yaml
+Record ID: datardagokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-47/opendata/datagbgokr.yaml
+Record ID: datagbgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-48/opendata/bigdatagyeongnamgokr.yaml
+Record ID: bigdatagyeongnamgokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: KR/KR-41/opendata/datagggokr.yaml
+Record ID: datagggokr
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 10
+Priority: LOW
+
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Record ID: lxgisjeonjugokr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Record ID: dataesrikrmktopendataarcgiscom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/opendata/datanecgokr.yaml
+Record ID: datanecgokr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/geo/wwwweathergokr.yaml
+Record ID: wwwweathergokr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Record ID: eiaresearchkeirekr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/ml/aihuborkr.yaml
+Record ID: aihuborkr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/scientific/climatedataibsrekr.yaml
+Record ID: climatedataibsrekr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/scientific/datapknuackr.yaml
+Record ID: datapknuackr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: KR/Federal/scientific/drbrorkr.yaml
+Record ID: drbrorkr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 5
+Priority: MEDIUM
+
+File: KR/KR-45/opendata/datajeonjugokr.yaml
+Record ID: datajeonjugokr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Jeonju city open data portal
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: KR/KR-11/opendata/datagurogokr.yaml
+Record ID: datagurogokr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: 카탈로그 목록 서비스
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: KR/KR-11/opendata/datagangnamgokr.yaml
+Record ID: datagangnamgokr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Data catalog of Gangnam district
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Record ID: gisgjcitygokr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Gwangju ArcGIS REST Services Directory
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: KR/Federal/scientific/wwwmbriskr.yaml
+Record ID: wwwmbriskr
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: OBIS Korea IPT
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[TAG_HYGIENE]
+Count: 4
+Priority: MEDIUM
+
+File: KR/Federal/opendata/opendatahiraorkr.yaml
+Record ID: opendatahiraorkr
+Issue: TAG_HYGIENE
+Field: tags[6]
+Current Value: KR
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Record ID: hpaikwarecokr
+Issue: TAG_HYGIENE
+Field: tags[2]
+Current Value: AI
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: KR/Federal/ml/aihuborkr.yaml
+Record ID: aihuborkr
+Issue: TAG_HYGIENE
+Field: tags[0]
+Current Value: ai
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+File: KR/Federal/ml/aihuborkr.yaml
+Record ID: aihuborkr
+Issue: TAG_HYGIENE
+Field: tags[1]
+Current Value: ml
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+[URL_HOST_MISMATCH]
+Count: 3
+Priority: MEDIUM
+
+File: KR/Federal/indicators/houstathfgokr.yaml
+Record ID: houstathgokr
+Issue: URL_HOST_MISMATCH
+Field: id vs link
+Current Value: id=houstathgokr, link=https://houstat.hf.go.kr
+Suggested Action: Verify id matches link domain pattern or update id to match
+
+File: KR/Federal/geo/joisskr.yaml
+Record ID: joisskr
+Issue: URL_HOST_MISMATCH
+Field: endpoints[6].url
+Current Value: link=https://joiss.kr/geonetwork, endpoint=https://joiss.kr:443/geonetwork/srv/eng/portal.sitemap
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: KR/Federal/geo/joisskr.yaml
+Record ID: joisskr
+Issue: URL_HOST_MISMATCH
+Field: endpoints[7].url
+Current Value: link=https://joiss.kr/geonetwork, endpoint=https://joiss.kr:443/geonetwork/srv/eng/portal.sitemap?format=rdf
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 14 issues
+CATALOG_SOFTWARE_MISMATCH: 5 issues
+DUPLICATE_TAGS: 1 issues
+ENDPOINT_TO_VERIFY: 227 issues
+INVALID_UID: 19 issues
+MISSING_DESCRIPTION: 1 issues
+MISSING_IDENTIFIERS: 65 issues
+MISSING_LICENSE: 71 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 10 issues
+SHORT_DESCRIPTION: 5 issues
+TAG_HYGIENE: 4 issues
+URL_HOST_MISMATCH: 3 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: lxgisjeonjugokr
+File: KR/KR-45/geo/lxgisjeonjugokr.yaml
+Issue Count: 20
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - INVALID_UID: uid
+
+Record ID: wwwweathergokr
+File: KR/Federal/geo/wwwweathergokr.yaml
+Issue Count: 20
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: hpaikwarecokr
+File: KR/Federal/geo/hpaikwarecokr.yaml
+Issue Count: 19
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - TAG_HYGIENE: tags[2]
+  - INVALID_UID: uid
+
+Record ID: gisbdnaorkr
+File: KR/KR-26/geo/gisbdnaorkr.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: bigdatadongjakgokr
+File: KR/KR-11/geo/bigdatadongjakgokr.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: eiaresearchkeirekr
+File: KR/Federal/geo/eiaresearchkeirekr.yaml
+Issue Count: 18
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - INVALID_UID: uid
+
+Record ID: floodmapgokr
+File: KR/Federal/geo/floodmapgokr.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - ENDPOINT_TO_VERIFY: endpoints[14].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: servicekoshaorkr
+File: KR/Federal/geo/servicekoshaorkr.yaml
+Issue Count: 17
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - INVALID_UID: uid
+
+Record ID: wwwspaceplanetcokr
+File: KR/Federal/geo/wwwspaceplanetcokr.yaml
+Issue Count: 15
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - INVALID_UID: uid
+
+Record ID: joisskr
+File: KR/Federal/geo/joisskr.yaml
+Issue Count: 13
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+  - URL_HOST_MISMATCH: endpoints[6].url
+  - URL_HOST_MISMATCH: endpoints[7].url
+
+Record ID: gisgjcitygokr
+File: KR/KR-29/geo/gisgjcitygokr.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: videonifsgokr
+File: KR/Federal/geo/videonifsgokr.yaml
+Issue Count: 12
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: giskofpiorkr
+File: KR/Federal/geo/giskofpiorkr.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwwamisgokr
+File: KR/Federal/geo/wwwwamisgokr.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: dataesrikrmktopendataarcgiscom
+File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: datapknuackr
+File: KR/Federal/scientific/datapknuackr.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+  - INVALID_UID: uid
+
+Record ID: weathergokr
+File: KR/Federal/geo/weathergokr.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api_status
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - CATALOG_SOFTWARE_MISMATCH: catalog_type
+
+Record ID: khuelsevierpurecom
+File: KR/Federal/scientific/khuelsevierpurecom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: dgistelsevierpurecom
+File: KR/Federal/scientific/dgistelsevierpurecom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: wwwmbriskr
+File: KR/Federal/scientific/wwwmbriskr.yaml
+Issue Count: 6
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: climatedataibsrekr
+File: KR/Federal/scientific/climatedataibsrekr.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - INVALID_UID: uid
+
+Record ID: datansdigokr
+File: KR/Federal/opendata/datansdigokr.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: dcpcnmsckmagokr
+File: KR/Federal/geo/dcpcnmsckmagokr.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: aihuborkr
+File: KR/Federal/ml/aihuborkr.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - TAG_HYGIENE: tags[0]
+  - TAG_HYGIENE: tags[1]
+
+Record ID: narissciencegokr
+File: KR/Federal/scientific/narissciencegokr.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: 61824886
+File: KR/Federal/scientific/61824886.yaml
+Issue Count: 5
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+
+Record ID: datajeonjugokr
+File: KR/KR-45/opendata/datajeonjugokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: datagurogokr
+File: KR/KR-11/opendata/datagurogokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: datagwangjingokr
+File: KR/KR-11/opendata/datagwangjingokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datagangnamgokr
+File: KR/KR-11/opendata/datagangnamgokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: datanecgokr
+File: KR/Federal/opendata/datanecgokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datagokr
+File: KR/Federal/opendata/datagokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - DUPLICATE_TAGS: tags[3]
+
+Record ID: opendatahiraorkr
+File: KR/Federal/opendata/opendatahiraorkr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - TAG_HYGIENE: tags[6]
+
+Record ID: wis2boxkmagokr
+File: KR/Federal/geo/wis2boxkmagokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: kbifnarisgokr
+File: KR/Federal/scientific/kbifnarisgokr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: drbrorkr
+File: KR/Federal/scientific/drbrorkr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: kpdckoprirekr
+File: KR/Federal/scientific/kpdckoprirekr.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: datachungbukgokr
+File: KR/KR-43/opendata/datachungbukgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: databusangokr
+File: KR/KR-26/opendata/databusangokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datagdgokr
+File: KR/KR-11/opendata/datagdgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datayongsangokr
+File: KR/KR-11/opendata/datayongsangokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datanowongokr
+File: KR/KR-11/opendata/datanowongokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datasdgokr
+File: KR/KR-11/opendata/datasdgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datayangcheongokr
+File: KR/KR-11/opendata/datayangcheongokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datadaegugokr
+File: KR/KR-27/opendata/datadaegugokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: mdiskostatgokr
+File: KR/Federal/microdata/mdiskostatgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: houstathgokr
+File: KR/Federal/indicators/houstathfgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - URL_HOST_MISMATCH: id vs link
+
+Record ID: datamfdsgokr
+File: KR/Federal/opendata/datamfdsgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datakmagokr
+File: KR/Federal/opendata/datakmagokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datamolitgokr
+File: KR/Federal/opendata/datamolitgokr.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

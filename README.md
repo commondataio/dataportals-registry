@@ -100,6 +100,19 @@ Datasets kept in *data/datasets* folder, right now it's catalogs.jsonl file gene
 
 Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jsonl file from YAML files.
 
+## Data exports
+
+Latest snapshot (2025-12-10):
+
+- `data/datasets/catalogs.jsonl` (+ `.zst`): 12,281 catalog records
+- `data/datasets/software.jsonl` (+ `.zst`): 134 software/platform definitions
+- `data/datasets/scheduled.jsonl` (+ `.zst`): 749 scheduled sources to crawl
+- `data/datasets/full.jsonl` (+ `.zst`): 13,030 combined catalog + software entries
+- `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
+- `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
+
+All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB exports can be queried directly with `duckdb` or Python's `duckdb` package.
+
 
 ## Data Quality and Validation
 

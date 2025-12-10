@@ -1,0 +1,1150 @@
+DATA QUALITY REPORT - COUNTRY: LU
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: LU
+Total Records with Issues: 17
+Total Issues Found: 127
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 6
+Priority: IMPORTANT
+
+File: LU/indicators/granderegionlu.yaml
+Record ID: granderegionlu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=8
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=10
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[DUPLICATE_TAGS]
+Count: 2
+Priority: LOW
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: DUPLICATE_TAGS
+Field: tags[3]
+Current Value: Geospatial
+Suggested Action: Remove duplicate tag
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: DUPLICATE_TAGS
+Field: tags[5]
+Current Value: Government
+Suggested Action: Remove duplicate tag
+
+[ENDPOINT_TO_VERIFY]
+Count: 78
+Priority: LOW
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://open-data-esri-belux-esribeluxdata.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://open-data-esri-belux-esribeluxdata.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://open-data-esri-belux-esribeluxdata.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://open-data-esri-belux-esribeluxdata.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://open-data-esri-belux-esribeluxdata.hub.arcgis.com/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/indicators/lustatstateclu.yaml
+Record ID: lustatstateclu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://lustat.statec.lu/api/search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/indicators/granderegionlu.yaml
+Record ID: granderegionlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://www.grande-region.lu/pxweb/api/v1/fr
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/opendata/datapubliclu.yaml
+Record ID: datapubliclu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.public.lu/api/1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/opendata/datapubliclu.yaml
+Record ID: datapubliclu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.public.lu/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://maps.vdl.lu/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://maps.vdl.lu/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://maps.vdl.lu/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://maps.vdl.lu/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://maps.vdl.lu/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://maps.vdl.lu/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://arcweb.liser.lu/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://arcweb.liser.lu/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://arcweb.liser.lu/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://arcweb.liser.lu/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://arcweb.liser.lu/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://arcweb.liser.lu/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://wms.staging.inspire.geoportail.lu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geocatalog.geoportal.lu/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geocatalog.geoportal.lu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geocatalog.geoportal.lu/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geocatalog.geoportal.lu/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geocatalog.geoportal.lu/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geocatalog.geoportal.lu/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmts1geoportaillu.yaml
+Record ID: wmts1geoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://wmts1.geoportail.lu/asis/service?REQUEST=GetCapabilities&SERVICE=WMTS
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://geo2.uni.lu:6080/arcgis/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://geo2.uni.lu:6080/arcgis/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://geo2.uni.lu:6080/arcgis/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://geo2.uni.lu:6080/arcgis/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://geo2.uni.lu:6080/arcgis/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://geo2.uni.lu:6080/arcgis/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://wms.inspire.geoportail.lu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/api/records
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://catalog.inspire.geoportail.lu/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://catalog.inspire.geoportail.lu/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geocatalogue.geoportail.lu/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://geocatalogue.gis-gr.eu/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://geocatalogue.gis-gr.eu/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://geocatalogue.gis-gr.eu/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/Federal/scientific/gbifmnhnlu.yaml
+Record ID: gbifmnhnlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gbif.mnhn.lu/ipt/rss.do
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/datacatalogelixirluxembourgorg.yaml
+Record ID: datacatalogelixirluxembourgorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://datacatalog.elixir-luxembourg.org/static/public/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/datacatalogelixirluxembourgorg.yaml
+Record ID: datacatalogelixirluxembourgorg
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://datacatalog.elixir-luxembourg.org
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://researchportal.lih.lu/ws/oai?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://researchportal.lih.lu/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://researchportal.lih.lu/sitemap/datasets.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://researchportal.lih.lu/en/datasets/?export=xls
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://researchportal.lih.lu/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 7
+Priority: CRITICAL
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003809
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005960
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001600
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/wmts1geoportaillu.yaml
+Record ID: wmts1geoportaillu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00002197
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005961
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000466
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000465
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 16
+Priority: IMPORTANT
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/indicators/lustatstateclu.yaml
+Record ID: lustatstateclu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/indicators/granderegionlu.yaml
+Record ID: granderegionlu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/wmts1geoportaillu.yaml
+Record ID: wmts1geoportaillu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/Federal/scientific/gbifmnhnlu.yaml
+Record ID: gbifmnhnlu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/scientific/datacatalogelixirluxembourgorg.yaml
+Record ID: datacatalogelixirluxembourgorg
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 17
+Priority: IMPORTANT
+
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/indicators/lustatstateclu.yaml
+Record ID: lustatstateclu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/indicators/granderegionlu.yaml
+Record ID: granderegionlu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/opendata/datapubliclu.yaml
+Record ID: datapubliclu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/mapsvdllu.yaml
+Record ID: mapsvdllu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/arcwebliserlu.yaml
+Record ID: arcwebliserlu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Record ID: wmsstaginginspiregeoportaillu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/geocataloggeoportallu.yaml
+Record ID: geocataloggeoportallu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/wmts1geoportaillu.yaml
+Record ID: wmts1geoportaillu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/geo2unilu.yaml
+Record ID: geo2unilu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Record ID: wmsinspiregeoportaillu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Record ID: cataloginspiregeoportaillu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/geocataloguegeoportaillu.yaml
+Record ID: geocataloguegeoportaillu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/Federal/scientific/gbifmnhnlu.yaml
+Record ID: gbifmnhnlu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/scientific/datacatalogelixirluxembourgorg.yaml
+Record ID: datacatalogelixirluxembourgorg
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: LU/scientific/researchportallihlu.yaml
+Record ID: researchportallihlu
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: LU/geo/geocataloguegisgreu.yaml
+Record ID: geocataloguegisgreu
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Geocatalogue of GIS-GR
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 6 issues
+DUPLICATE_TAGS: 2 issues
+ENDPOINT_TO_VERIFY: 78 issues
+INVALID_UID: 7 issues
+MISSING_IDENTIFIERS: 16 issues
+MISSING_LICENSE: 17 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: wmsinspiregeoportaillu
+File: LU/geo/wmsinspiregeoportaillu.yaml
+Issue Count: 14
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - INVALID_UID: uid
+
+Record ID: wmsstaginginspiregeoportaillu
+File: LU/geo/wmsstaginginspiregeoportaillu.yaml
+Issue Count: 12
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - INVALID_UID: uid
+
+Record ID: mapsvdllu
+File: LU/geo/mapsvdllu.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: arcwebliserlu
+File: LU/geo/arcwebliserlu.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: geocataloggeoportallu
+File: LU/geo/geocataloggeoportallu.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - DUPLICATE_TAGS: tags[3]
+  - DUPLICATE_TAGS: tags[5]
+
+Record ID: geo2unilu
+File: LU/geo/geo2unilu.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: cataloginspiregeoportaillu
+File: LU/geo/cataloginspiregeoportaillu.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: geocataloguegisgreu
+File: LU/geo/geocataloguegisgreu.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: opendataesribeluxesribeluxdatahubarcgiscom
+File: BE/Federal/geo/opendataesribeluxesribeluxdatahubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: geocataloguegeoportaillu
+File: LU/geo/geocataloguegeoportaillu.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - INVALID_UID: uid
+
+Record ID: researchportallihlu
+File: LU/scientific/researchportallihlu.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: granderegionlu
+File: LU/indicators/granderegionlu.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: wmts1geoportaillu
+File: LU/geo/wmts1geoportaillu.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - INVALID_UID: uid
+
+Record ID: datacatalogelixirluxembourgorg
+File: LU/scientific/datacatalogelixirluxembourgorg.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: lustatstateclu
+File: LU/indicators/lustatstateclu.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datapubliclu
+File: LU/opendata/datapubliclu.yaml
+Issue Count: 3
+Issues:
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: gbifmnhnlu
+File: LU/Federal/scientific/gbifmnhnlu.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url

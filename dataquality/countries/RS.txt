@@ -1,0 +1,1561 @@
+DATA QUALITY REPORT - COUNTRY: RS
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: RS
+Total Records with Issues: 24
+Total Issues Found: 173
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 6
+Priority: IMPORTANT
+
+File: RS/Federal/indicators/askdatarksgovnet.yaml
+Record ID: askdatarksgovnet
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=14
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 87
+Priority: LOW
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://radar.ibiss.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://radar.ibiss.bg.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://radar.ibiss.bg.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://srsrb-gis-hub-srsrb.hub.arcgis.com/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/indicators/askdatarksgovnet.yaml
+Record ID: askdatarksgovnet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://askdata.rks-gov.net/api/v1/en
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://data.sepa.gov.rs/api/3
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://data.sepa.gov.rs/api/3/action/package_search
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://data.sepa.gov.rs/api/3/action/package_list
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/opendata/datagovrs.yaml
+Record ID: datagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://data.gov.rs/api/1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/opendata/datagovrs.yaml
+Record ID: datagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://data.gov.rs/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://www.nrizgis.sepa.gov.rs/ser/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/eng/q
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/v2/api-docs
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/api/records
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://dip.lter-europe.net/geonetwork/srv/api/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://dip.lter-europe.net/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://gis.sremgas.rs/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[11].url
+Current Value: https://gis.sremgas.rs/geoserver/gwc/service/tms/1.0.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[12].url
+Current Value: https://gis.sremgas.rs/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[13].url
+Current Value: https://gis.sremgas.rs/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.ni.rs/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.ni.rs/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.ni.rs/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.ni.rs/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.ni.rs/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.ni.rs/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: http://osgl.grf.bg.ac.rs/geonetwork/srv/eng/oaipmh?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://osgl.grf.bg.ac.rs/portal.opensearch
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gisportal.rs/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gisportal.rs/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gisportal.rs/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gisportal.rs/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gisportal.rs/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gisportal.rs/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://cherry.chem.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://cherry.chem.bg.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://cherry.chem.bg.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://cherry.chem.bg.ac.rs/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://cherry.chem.bg.ac.rs/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://cherry.chem.bg.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://dais.sanu.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://dais.sanu.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://dais.sanu.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://dais.sanu.ac.rs/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://dais.sanu.ac.rs/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://dais.sanu.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://cer.ihtm.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://cer.ihtm.bg.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://cer.ihtm.bg.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://cer.ihtm.bg.ac.rs/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://cer.ihtm.bg.ac.rs/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://vet-erinar.vet.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://aspace.agrif.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://aspace.agrif.bg.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://aspace.agrif.bg.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: http://aspace.agrif.bg.ac.rs/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://aspace.agrif.bg.ac.rs/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://aspace.agrif.bg.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://vinar.vin.bg.ac.rs/rest/items
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://vinar.vin.bg.ac.rs/oai/request?verb=Identify
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://vinar.vin.bg.ac.rs/feed/rss_2.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://vinar.vin.bg.ac.rs/feed/atom_1.0/site
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: http://vinar.vin.bg.ac.rs/sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: http://vinar.vin.bg.ac.rs/htmlmap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 17
+Priority: CRITICAL
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001882
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/indicators/datastatgovrs.yaml
+Record ID: datastatgovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003032
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/opendata/opendatampngovrs.yaml
+Record ID: opendatampngovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000604
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003035
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/opendata/datapoverenikrs.yaml
+Record ID: datapoverenikrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003034
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003033
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/opendata/opendatastatgovrs.yaml
+Record ID: opendatastatgovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000605
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005812
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00000603
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00003871
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005810
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00005811
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001881
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001879
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001883
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001878
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001884
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_IDENTIFIERS]
+Count: 22
+Priority: IMPORTANT
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/indicators/askdatarksgovnet.yaml
+Record ID: askdatarksgovnet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/indicators/datastatgovrs.yaml
+Record ID: datastatgovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/opendata/opendatampngovrs.yaml
+Record ID: opendatampngovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/opendata/datapoverenikrs.yaml
+Record ID: datapoverenikrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/opendata/opendatastatgovrs.yaml
+Record ID: opendatastatgovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/hoverfbiosenserhcloudcom.yaml
+Record ID: hoverfbiosenserhcloudcom
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 24
+Priority: IMPORTANT
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/indicators/askdatarksgovnet.yaml
+Record ID: askdatarksgovnet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/indicators/datastatgovrs.yaml
+Record ID: datastatgovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/opendatampngovrs.yaml
+Record ID: opendatampngovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/datasepagovrs.yaml
+Record ID: datasepagovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/datapoverenikrs.yaml
+Record ID: datapoverenikrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/opendatastatgovrs.yaml
+Record ID: opendatastatgovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/opendata/datagovrs.yaml
+Record ID: datagovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Record ID: wwwnrizgissepagovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/dipltereuropenet.yaml
+Record ID: dipltereuropenet
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/gissremgasrs.yaml
+Record ID: gissremgasrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/gisnirs.yaml
+Record ID: gisnirs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/hoverfbiosenserhcloudcom.yaml
+Record ID: hoverfbiosenserhcloudcom
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Record ID: cerihtmbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Record ID: vinarvinbgacrs
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 8
+Priority: LOW
+
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Record ID: radaribissbgacrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Record ID: srsrbgishubsrsrbhubarcgiscom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Record ID: datakragujevacrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/opendata/datagovrs.yaml
+Record ID: datagovrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 2
+Priority: MEDIUM
+
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Record ID: osglgrfbgacrs
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Geonetwork data catalog
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Record ID: veterinarvetbgacrs
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Not provided in source
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+[URL_HOST_MISMATCH]
+Count: 3
+Priority: MEDIUM
+
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Record ID: cherrychembgacrs
+Issue: URL_HOST_MISMATCH
+Field: endpoints[5].url
+Current Value: link=https://cherry.chem.bg.ac.rs, endpoint=http://cherry.chem.bg.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: RS/Federal/scientific/daissanuacrs.yaml
+Record ID: daissanuacrs
+Issue: URL_HOST_MISMATCH
+Field: endpoints[5].url
+Current Value: link=https://dais.sanu.ac.rs, endpoint=http://dais.sanu.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Record ID: aspaceagrifbgacrs
+Issue: URL_HOST_MISMATCH
+Field: endpoints[5].url
+Current Value: link=https://aspace.agrif.bg.ac.rs, endpoint=http://aspace.agrif.bg.ac.rs:80/open-search/description.xml
+Suggested Action: Verify endpoint host matches main link host or document why it differs
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 6 issues
+ENDPOINT_TO_VERIFY: 87 issues
+INVALID_UID: 17 issues
+MISSING_DESCRIPTION: 2 issues
+MISSING_IDENTIFIERS: 22 issues
+MISSING_LICENSE: 24 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 8 issues
+SHORT_DESCRIPTION: 2 issues
+URL_HOST_MISMATCH: 3 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gissremgasrs
+File: RS/Federal/geo/gissremgasrs.yaml
+Issue Count: 18
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - ENDPOINT_TO_VERIFY: endpoints[11].url
+  - ENDPOINT_TO_VERIFY: endpoints[12].url
+  - ENDPOINT_TO_VERIFY: endpoints[13].url
+  - INVALID_UID: uid
+
+Record ID: daissanuacrs
+File: RS/Federal/scientific/daissanuacrs.yaml
+Issue Count: 11
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - URL_HOST_MISMATCH: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: wwwnrizgissepagovrs
+File: RS/Federal/geo/wwwnrizgissepagovrs.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: dipltereuropenet
+File: RS/Federal/geo/dipltereuropenet.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+
+Record ID: gisnirs
+File: RS/Federal/geo/gisnirs.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: gisportalrs
+File: RS/Federal/geo/gisportalrs.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: aspaceagrifbgacrs
+File: RS/Federal/scientific/aspaceagrifbgacrs.yaml
+Issue Count: 10
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - URL_HOST_MISMATCH: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: cherrychembgacrs
+File: RS/Federal/scientific/cherrychembgacrs.yaml
+Issue Count: 9
+Issues:
+  - MISSING_TAGS: tags
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - URL_HOST_MISMATCH: endpoints[5].url
+
+Record ID: vinarvinbgacrs
+File: RS/Federal/scientific/vinarvinbgacrs.yaml
+Issue Count: 9
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - INVALID_UID: uid
+
+Record ID: osglgrfbgacrs
+File: RS/Federal/geo/osglgrfbgacrs.yaml
+Issue Count: 8
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - SHORT_DESCRIPTION: description
+
+Record ID: cerihtmbgacrs
+File: RS/Federal/scientific/cerihtmbgacrs.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - INVALID_UID: uid
+
+Record ID: radaribissbgacrs
+File: RS/RS-00/geo/radaribissbgacrs.yaml
+Issue Count: 7
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - INVALID_UID: uid
+
+Record ID: srsrbgishubsrsrbhubarcgiscom
+File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
+Issue Count: 7
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+
+Record ID: datasepagovrs
+File: RS/Federal/opendata/datasepagovrs.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - INVALID_UID: uid
+
+Record ID: datakragujevacrs
+File: RS/Federal/opendata/datakragujevacrs.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: veterinarvetbgacrs
+File: RS/Federal/scientific/veterinarvetbgacrs.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: gismregovrs
+File: RS/Federal/geo/gismregovrs.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_DESCRIPTION: description
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: askdatarksgovnet
+File: RS/Federal/indicators/askdatarksgovnet.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+
+Record ID: datagovrs
+File: RS/Federal/opendata/datagovrs.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+
+Record ID: datastatgovrs
+File: RS/Federal/indicators/datastatgovrs.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: opendatampngovrs
+File: RS/Federal/opendata/opendatampngovrs.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: datapoverenikrs
+File: RS/Federal/opendata/datapoverenikrs.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid
+
+Record ID: opendatastatgovrs
+File: RS/Federal/opendata/opendatastatgovrs.yaml
+Issue Count: 3
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - INVALID_UID: uid

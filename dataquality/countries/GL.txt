@@ -1,0 +1,474 @@
+DATA QUALITY REPORT - COUNTRY: GL
+================================================================================
+Generated: 2025-12-10 12:33:13
+Country Code: GL
+Total Records with Issues: 5
+Total Issues Found: 50
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 4
+Priority: IMPORTANT
+
+File: GL/indicators/bankstatgl.yaml
+Record ID: bankstatgl
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=11
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=7
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=7
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[ENDPOINT_TO_VERIFY]
+Count: 31
+Priority: LOW
+
+File: GL/indicators/bankstatgl.yaml
+Record ID: bankstatgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://bank.stat.gl/api/v1/en
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[7].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[8].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[9].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[10].url
+Current Value: https://gis.govmin.gl/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://rba.eamra.gl/api/feed/dcat-ap/2.0.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://rba.eamra.gl/api/feed/dcat-us/1.1.json
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://rba.eamra.gl/api/feed/rss/2.0
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://rba.eamra.gl/api/search/v1
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://rba.eamra.gl/sitemap.xml
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://kort.nunagis.gl/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://kort.nunagis.gl/server/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://kort.nunagis.gl/server/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://kort.nunagis.gl/server/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://kort.nunagis.gl/server/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://kort.nunagis.gl/server/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://kort.nunagis.gl/server/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[0].url
+Current Value: https://portal.nukissiorfiit.gl/portal/sharing/rest/portals/self?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[1].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/rest/info?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[2].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/rest/services?f=pjson
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[3].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/services?wsdl
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[4].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/rest/services?f=sitemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[5].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/rest/services?f=geositemap
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: ENDPOINT_TO_VERIFY
+Field: endpoints[6].url
+Current Value: https://portal.nukissiorfiit.gl/arcgisserver/rest/services?f=kmz
+Suggested Action: Verify endpoint is reachable and returns expected response
+
+[INVALID_UID]
+Count: 3
+Priority: CRITICAL
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001533
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001534
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: INVALID_UID
+Field: uid
+Current Value: temp00001535
+Suggested Action: UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')
+
+[MISSING_IDENTIFIERS]
+Count: 5
+Priority: IMPORTANT
+
+File: GL/indicators/bankstatgl.yaml
+Record ID: bankstatgl
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: MISSING_IDENTIFIERS
+Field: identifiers
+Current Value: []
+Suggested Action: Add identifiers (e.g., wikidata, doi) if available
+
+[MISSING_LICENSE]
+Count: 5
+Priority: IMPORTANT
+
+File: GL/indicators/bankstatgl.yaml
+Record ID: bankstatgl
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: GL/geo/rbaeamragl.yaml
+Record ID: rbaeamragl
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: GL/geo/kortnunagisgl.yaml
+Record ID: kortnunagisgl
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: MISSING_LICENSE
+Field: rights.license_*
+Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
+Suggested Action: Add license information (license_id, license_name, or license_url)
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: GL/geo/gisgovmingl.yaml
+Record ID: gisgovmingl
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SHORT_DESCRIPTION]
+Count: 1
+Priority: MEDIUM
+
+File: GL/geo/portalnukissiorfiitgl.yaml
+Record ID: portalnukissiorfiitgl
+Issue: SHORT_DESCRIPTION
+Field: description
+Current Value: Geospatial data catalog for Greenland
+Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 4 issues
+ENDPOINT_TO_VERIFY: 31 issues
+INVALID_UID: 3 issues
+MISSING_IDENTIFIERS: 5 issues
+MISSING_LICENSE: 5 issues
+MISSING_TOPICS: 1 issues
+SHORT_DESCRIPTION: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gisgovmingl
+File: GL/geo/gisgovmingl.yaml
+Issue Count: 16
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - ENDPOINT_TO_VERIFY: endpoints[7].url
+  - ENDPOINT_TO_VERIFY: endpoints[8].url
+  - ENDPOINT_TO_VERIFY: endpoints[9].url
+  - ENDPOINT_TO_VERIFY: endpoints[10].url
+  - INVALID_UID: uid
+
+Record ID: portalnukissiorfiitgl
+File: GL/geo/portalnukissiorfiitgl.yaml
+Issue Count: 12
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - SHORT_DESCRIPTION: description
+  - INVALID_UID: uid
+
+Record ID: kortnunagisgl
+File: GL/geo/kortnunagisgl.yaml
+Issue Count: 11
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
+  - ENDPOINT_TO_VERIFY: endpoints[6].url
+  - INVALID_UID: uid
+
+Record ID: rbaeamragl
+File: GL/geo/rbaeamragl.yaml
+Issue Count: 7
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: bankstatgl
+File: GL/indicators/bankstatgl.yaml
+Issue Count: 4
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - API_STATUS_MISMATCH: api
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
