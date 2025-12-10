@@ -113,6 +113,35 @@ def compress_jsonl(input_path, output_path, compression_level=19):
     )
 
 
+def verify_both_formats_exist(jsonl_filename):
+    """Verify that both JSONL and JSONL.zst files exist"""
+    jsonl_path = os.path.join(DATASETS_DIR, jsonl_filename)
+    jsonl_zst_path = os.path.join(DATASETS_DIR, jsonl_filename + ".zst")
+    
+    jsonl_exists = os.path.exists(jsonl_path)
+    jsonl_zst_exists = os.path.exists(jsonl_zst_path)
+    
+    if jsonl_exists and jsonl_zst_exists:
+        logger.info(
+            "Verified both formats exist: %s and %s",
+            os.path.basename(jsonl_filename),
+            os.path.basename(jsonl_filename + ".zst"),
+        )
+        return True
+    else:
+        missing = []
+        if not jsonl_exists:
+            missing.append(os.path.basename(jsonl_filename))
+        if not jsonl_zst_exists:
+            missing.append(os.path.basename(jsonl_filename + ".zst"))
+        logger.warning(
+            "Missing files for %s: %s",
+            os.path.basename(jsonl_filename),
+            ", ".join(missing),
+        )
+        return False
+
+
 def build_dataset(datapath, dataset_filename):
     # Collect all YAML files first
     all_files = []
@@ -178,6 +207,7 @@ def build():
     
     logger.info("Compressing software dataset")
     compress_jsonl("software.jsonl", "software.jsonl.zst")
+    verify_both_formats_exist("software.jsonl")
     
     logger.info("Started building catalogs dataset")
     build_dataset(ROOT_DIR, "catalogs.jsonl")
@@ -188,6 +218,7 @@ def build():
     
     logger.info("Compressing catalogs dataset")
     compress_jsonl("catalogs.jsonl", "catalogs.jsonl.zst")
+    verify_both_formats_exist("catalogs.jsonl")
     
     logger.info("Started building scheduled dataset")
     build_dataset(SCHEDULED_DIR, "scheduled.jsonl")
@@ -198,6 +229,7 @@ def build():
     
     logger.info("Compressing scheduled dataset")
     compress_jsonl("scheduled.jsonl", "scheduled.jsonl.zst")
+    verify_both_formats_exist("scheduled.jsonl")
     
     merge_datasets(["catalogs.jsonl", "scheduled.jsonl"], "full.jsonl")
     logger.info(
@@ -208,6 +240,7 @@ def build():
     
     logger.info("Compressing full dataset")
     compress_jsonl("full.jsonl", "full.jsonl.zst")
+    verify_both_formats_exist("full.jsonl")
     
     # Build DuckDB database
     db_path = os.path.join(DATASETS_DIR, "datasets.duckdb")

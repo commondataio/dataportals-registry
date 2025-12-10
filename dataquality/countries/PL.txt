@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: PL
 ================================================================================
-Generated: 2025-12-10 12:33:13
+Generated: 2025-12-10 13:17:17
 Country Code: PL
 Total Records with Issues: 110
-Total Issues Found: 741
+Total Issues Found: 737
 
 === ISSUES BY TYPE ===
 
@@ -2661,38 +2661,6 @@ Field: description
 Current Value: No description available in input.
 Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
 
-[SOFTWARE_NAME_MISMATCH]
-Count: 4
-Priority: IMPORTANT
-
-File: PL/Federal/scientific/hyraxigfedupl.yaml
-Record ID: hyraxigfedupl
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=opendap, name=OPeNDAP Hyrax
-Suggested Action: Update software.name to 'OPeNDAP' to match software.id
-
-File: PL/PL-24/geo/geonetworkppdbusedupl.yaml
-Record ID: geonetworkppdbusedupl
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=geonetwork, name=GeoNetwork
-Suggested Action: Update software.name to 'Geonetwork' to match software.id
-
-File: PL/PL-24/scientific/threddsppdbusedupl.yaml
-Record ID: threddsppdbusedupl
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=thredds, name=THREDDS Data Server
-Suggested Action: Update software.name to 'Thredds' to match software.id
-
-File: PL/PL-24/scientific/opendapppdbusedupl.yaml
-Record ID: opendapppdbusedupl
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=opendap, name=OPeNDAP Hyrax
-Suggested Action: Update software.name to 'OPeNDAP' to match software.id
-
 [URL_HOST_MISMATCH]
 Count: 8
 Priority: MEDIUM
@@ -2764,7 +2732,6 @@ MISSING_IDENTIFIERS: 99 issues
 MISSING_LICENSE: 110 issues
 MISSING_OWNER_LINK: 1 issues
 SHORT_DESCRIPTION: 3 issues
-SOFTWARE_NAME_MISMATCH: 4 issues
 URL_HOST_MISMATCH: 8 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
@@ -3334,20 +3301,6 @@ Issues:
   - ENDPOINT_TO_VERIFY: endpoints[4].url
   - INVALID_UID: uid
 
-Record ID: geonetworkppdbusedupl
-File: PL/PL-24/geo/geonetworkppdbusedupl.yaml
-Issue Count: 9
-Issues:
-  - MISSING_IDENTIFIERS: identifiers
-  - MISSING_LICENSE: rights.license_*
-  - ENDPOINT_TO_VERIFY: endpoints[0].url
-  - ENDPOINT_TO_VERIFY: endpoints[1].url
-  - ENDPOINT_TO_VERIFY: endpoints[2].url
-  - ENDPOINT_TO_VERIFY: endpoints[3].url
-  - ENDPOINT_TO_VERIFY: endpoints[4].url
-  - ENDPOINT_TO_VERIFY: endpoints[5].url
-  - SOFTWARE_NAME_MISMATCH: software.name
-
 Record ID: metadanepodgikpl
 File: PL/Federal/geo/metadanepodgikpl.yaml
 Issue Count: 8
@@ -3399,6 +3352,19 @@ Issues:
   - ENDPOINT_TO_VERIFY: endpoints[2].url
   - ENDPOINT_TO_VERIFY: endpoints[3].url
   - ENDPOINT_TO_VERIFY: endpoints[4].url
+
+Record ID: geonetworkppdbusedupl
+File: PL/PL-24/geo/geonetworkppdbusedupl.yaml
+Issue Count: 8
+Issues:
+  - MISSING_IDENTIFIERS: identifiers
+  - MISSING_LICENSE: rights.license_*
+  - ENDPOINT_TO_VERIFY: endpoints[0].url
+  - ENDPOINT_TO_VERIFY: endpoints[1].url
+  - ENDPOINT_TO_VERIFY: endpoints[2].url
+  - ENDPOINT_TO_VERIFY: endpoints[3].url
+  - ENDPOINT_TO_VERIFY: endpoints[4].url
+  - ENDPOINT_TO_VERIFY: endpoints[5].url
 
 Record ID: danegovpl
 File: PL/Federal/opendata/danegovpl.yaml
