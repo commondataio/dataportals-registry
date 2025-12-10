@@ -135,6 +135,7 @@ This generates comprehensive reports on:
 - Empty files and parsing errors
 
 See `devdocs/duplicates_and_errors_report.md` for detailed findings.
+Generated reports and per-country breakouts are stored in `dataquality/` alongside a summary `data_quality_report.txt`. Helper scripts (`scripts/fix_*_issues.py`) can be used to apply automated fixes based on the reported priorities.
 
 ## How to contribute?
 
