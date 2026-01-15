@@ -196,6 +196,94 @@
     "type": "string",
     "allowed": ["Both", "Raw", "Structured"],
     "required": true
+  },
+  "version": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "plugins": {
+    "type": "list",
+    "required": false,
+    "nullable": true,
+    "schema": {
+      "type": "dict",
+      "schema": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "description": {
+          "type": "string",
+          "required": false,
+          "nullable": true
+        },
+        "url": {
+          "type": "string",
+          "required": false,
+          "nullable": true
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "type": "list",
+    "required": false,
+    "nullable": true,
+    "schema": {
+      "type": "string"
+    }
+  },
+  "export_formats": {
+    "type": "list",
+    "required": false,
+    "nullable": true,
+    "schema": {
+      "type": "string"
+    }
+  },
+  "release_date": {
+    "type": "string",
+    "required": false,
+    "nullable": true,
+    "regex": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "license": {
+    "type": "dict",
+    "required": false,
+    "nullable": true,
+    "schema": {
+      "type": {
+        "type": "string",
+        "required": true
+      },
+      "url": {
+        "type": "string",
+        "required": false,
+        "nullable": true
+      }
+    }
+  },
+  "repository_url": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "documentation_url": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "changelog_url": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "last_updated": {
+    "type": "string",
+    "required": false,
+    "nullable": true,
+    "regex": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(Z|[+-]\\d{2}:\\d{2})$"
   }
 }
 

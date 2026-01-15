@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,11 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Open data portal
+description: Open data portal providing comprehensive access to government financial
+  transparency and spending data in Germany. The portal enables public access to detailed
+  information about public sector expenditures, budget allocations, and financial transactions,
+  supporting accountability and transparency in government spending through structured datasets
+  accessible via CKAN API.
 endpoints:
 - type: ckan
   url: https://katalog.unsere-gelder.de/api/3
@@ -26,6 +30,10 @@ endpoints:
   url: https://katalog.unsere-gelder.de/api/3/action/package_list
   version: '3'
 id: katalogunseregelderde
+identifiers:
+- id: url
+  url: https://katalog.unsere-gelder.de
+  value: katalog.unsere-gelder.de
 langs:
 - id: DE
   name: German
@@ -42,8 +50,8 @@ owner:
   type: Regional government
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Data license varies by dataset (granular licensing)
+  license_url: https://www.govdata.de/dl-de/by-2-0
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -55,5 +63,14 @@ tags:
 - Germany
 - Open data portal
 - ckan
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 uid: temp00004621

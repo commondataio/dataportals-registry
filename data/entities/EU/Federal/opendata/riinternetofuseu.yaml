@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -11,7 +11,15 @@ coverage:
       id: EU
       name: European Union
     level: 20
-description: ''
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Research infrastructure data portal providing access to datasets and
+  resources from the Internet of Us (IoU) project, a European initiative focused on
+  human-centric data spaces and digital services for research and innovation. The
+  portal enables discovery, access, and reuse of research datasets through a CKAN-based
+  open data platform, supporting the IoU ecosystem's mission to create citizen-centric
+  digital services and data-driven solutions for societal challenges.
 endpoints:
 - type: ckan
   url: https://ri.internetofus.eu/api/3
@@ -23,7 +31,10 @@ endpoints:
   url: https://ri.internetofus.eu/api/3/action/package_list
   version: '3'
 id: riinternetofuseu
-langs: []
+identifiers: []
+langs:
+- id: EN
+  name: English
 link: https://ri.internetofus.eu
 name: ri.internetofus.eu
 owner:
@@ -49,5 +60,17 @@ status: active
 tags:
 - European Union
 - ckan
-topics: []
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 uid: temp00004652

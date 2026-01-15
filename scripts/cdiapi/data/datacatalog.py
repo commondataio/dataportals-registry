@@ -33,3 +33,12 @@ class DataCatalog(BaseModel):
     software: Software = Field(..., examples=[{"id": "ckan", "name": "CKAN"}])
     status: str = Field(..., examples=["uncertain"])
     topics: Optional[List[Topic]] = Field([], examples=[])
+    trust_score: Optional[float] = Field(None, ge=0, le=100, examples=[85.5])
+    trust_score_components: Optional[Dict] = Field(None, examples=[{
+        "owner_type_score": 40,
+        "catalog_type_score": 10,
+        "license_score": 15,
+        "re3data_score": 20,
+        "additional_factors_score": 10,
+        "base_score": 95
+    }])

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: (Not provided in input)
+description: GeoServer instance providing geospatial web services for the Municipality of Fano, Italy. Offers comprehensive OGC-compliant web services including WMS (Web Map Service), WFS (Web Feature Service), WCS (Web Coverage Service), WPS (Web Processing Service), and TMS (Tile Map Service) for accessing municipal geospatial datasets, map layers, and spatial data resources. The service enables integration with GIS applications and supports various data formats for urban planning, infrastructure management, and public service delivery.
 endpoints:
 - type: wms111
   url: http://geoserver.comune.fano.pu.it:8090/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,21 +60,26 @@ langs:
 link: http://geoserver.comune.fano.pu.it:8090/geoserver
 name: geoserver.comune.fano.pu.it:8090/geoserver
 owner:
+  link: https://www.comune.fano.pu.it
   location:
     country:
       id: IT
       name: Italy
     level: 20
-  name: (Not provided in input)
+  name: Comune di Fano
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/geoserver-comune-fano-pu-it
+  value: geoserver-comune-fano-pu-it
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Italian Open Data License (IODL 2.0) / Varies by dataset
+  license_url: https://www.dati.gov.it/content/italian-open-data-license-v20
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver

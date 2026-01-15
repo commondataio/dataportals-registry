@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -34,7 +34,11 @@ endpoints:
 - type: arcgis:kmz
   url: https://agsc.nicecotedazur.org/arcgis/rest/services?f=kmz
 id: agscnicecotedazurorg
-langs: []
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
 link: https://agsc.nicecotedazur.org/arcgis/rest/services
 name: ArcGIS REST Services (Nice Côte d'Azur AGS Catalog)
 owner:
@@ -51,12 +55,16 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://agsc.nicecotedazur.org/arcgis/rest/services
+  value: https://agsc.nicecotedazur.org/arcgis/rest/services
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: etalab-2.0
+  license_name: Etalab Open License 2.0
+  license_url: https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: arcgisserver
@@ -67,5 +75,38 @@ tags:
 - Geographic Information System
 - GIS
 - Open Data
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00005431

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Geonetwork-based data catalogue
+description: GeoNetwork-based geospatial data catalogue for Centre-Val de Loire region, providing access to datasets and map layers through multiple API endpoints including CSW, OAI-PMH, and OpenSearch protocols. The catalogue enables discovery and access to regional geospatial resources with comprehensive metadata management and supports various OGC standards for interoperability.
 endpoints:
 - type: geonetwork:query
   url: https://catalogue.doterr.fr/geonetwork/srv/eng/q
@@ -53,10 +53,14 @@ owner:
   type: Local government
 properties:
   has_doi: true
+identifiers:
+- id: url
+  url: https://catalogue.doterr.fr/geonetwork
+  value: https://catalogue.doterr.fr/geonetwork
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: etalab-2.0
+  license_name: Etalab Open License 2.0
+  license_url: https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -68,5 +72,32 @@ tags:
 - catalogue
 - geonetwork
 - doterr.fr
-topics: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00002729

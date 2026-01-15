@@ -128,6 +128,22 @@ To run data quality analysis:
 python devdocs/analyze_duplicates_and_errors.py
 ```
 
+## Re3data Enrichment
+
+Catalogs with re3data identifiers can be automatically enriched with metadata from [re3data.org](https://www.re3data.org). The enrichment adds a `_re3data` field containing keywords, content types, contact information, persistent identifiers, software information, and more.
+
+To enrich catalogs:
+
+```bash
+# Preview enrichment (dry run)
+python scripts/re3data_enrichment.py enrich --dry-run
+
+# Apply enrichment
+python scripts/re3data_enrichment.py enrich
+```
+
+See [devdocs/re3data_enrichment.md](devdocs/re3data_enrichment.md) for detailed documentation.
+
 This generates comprehensive reports on:
 - Duplicate UID's and ID's
 - Missing required fields

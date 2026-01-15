@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -57,7 +57,9 @@ endpoints:
   url: http://geoserver.sortirdunucleaire.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: geoserversortirdunucleaireorg
-langs: []
+langs:
+- id: FR
+  name: French
 link: http://geoserver.sortirdunucleaire.org/geoserver
 name: geoserver.sortirdunucleaire.org/geoserver
 owner:
@@ -69,6 +71,7 @@ owner:
     level: 20
   name: sortirdunucleaire.org
   type: Civil society
+identifiers: []
 properties:
   has_doi: false
 rights:
@@ -76,7 +79,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
@@ -86,5 +89,17 @@ tags:
 - spatial data
 - GeoServer
 - data portal
-topics: []
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: temp00003326

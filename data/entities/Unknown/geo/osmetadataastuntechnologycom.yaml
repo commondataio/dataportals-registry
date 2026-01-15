@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,13 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog for geospatial metadata
+description: Geospatial metadata catalog providing comprehensive discovery and access
+  to geospatial datasets and map layers through standard OGC CSW (Catalog Service
+  for the Web) and OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting)
+  interfaces. Hosted by Astun Technology, this GeoNetwork-based catalog enables users
+  to search, discover, browse, and access geospatial metadata records following ISO
+  19115 standards. The portal supports metadata management, spatial data discovery,
+  and facilitates interoperability across geospatial information systems.
 endpoints:
 - type: csw202
   url: https://osmetadata.astuntechnology.com/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -24,7 +30,10 @@ endpoints:
   url: https://osmetadata.astuntechnology.com/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: osmetadataastuntechnologycom
-langs: []
+identifiers: []
+langs:
+- id: EN
+  name: English
 link: https://osmetadata.astuntechnology.com/geonetwork
 name: osmetadata.astuntechnology.com
 owner:
@@ -52,6 +61,24 @@ status: active
 tags:
 - geonetwork
 - metadata
-- catalog 
-topics: []
+- catalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
 uid: cdi00004170

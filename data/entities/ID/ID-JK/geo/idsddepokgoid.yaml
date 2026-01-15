@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,7 @@ coverage:
     subregion:
       id: ID-JK
       name: Jakarta Raya
-description: ''
+description: Geoportal providing comprehensive geospatial data and services for Kota Depok, a city in Jakarta Raya, Indonesia. The portal offers ArcGIS REST services for accessing geographic datasets and map layers covering administrative boundaries, infrastructure, transportation networks, urban planning, cadastral information, and other spatial data for the city. The portal serves as a spatial data infrastructure (SDI) platform enabling data discovery, visualization, and integration for municipal planning, public services, and urban development. It provides RESTful API endpoints for programmatic access to geospatial resources, supporting both web mapping applications and data integration workflows.
 endpoints:
 - type: arcgis:rest:info
   url: http://idsd.depok.go.id/arcgis/rest/info?f=pjson
@@ -50,12 +50,16 @@ owner:
       name: Jakarta Raya
   name: Kota Depok
   type: Local government
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/idsd-depok-go-id
+  value: idsd-depok-go-id
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data (granular licensing per dataset)
+  license_url: http://idsd.depok.go.id/
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -63,6 +67,67 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- ArcGIS
+- geospatial
+- GIS
+- government
+- Indonesia
+- Depok
+- infrastructure
+- administrative
+- city
+- municipal
+- spatial data
+- ArcGIS Server
+- REST API
+- has_api
+- SDI
+- urban planning
+- boundaries
+- cadastre
+- transportation
+- public services
+- local government
+- Jakarta Raya
+- geoportal
+- map services
+- spatial data infrastructure
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
 uid: temp00005918

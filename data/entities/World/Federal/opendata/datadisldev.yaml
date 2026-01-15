@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,8 +14,10 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: A CKAN-based open data portal hosted by Disl that provides access to
+  datasets through a web interface and RESTful API. The portal offers programmatic
+  access to datasets via CKAN API v3 endpoints, enabling developers and researchers
+  to discover, access, and integrate open data resources.
 endpoints:
 - type: ckan
   url: https://data.disl.dev/api/3
@@ -27,7 +29,9 @@ endpoints:
   url: https://data.disl.dev/api/3/action/package_list
   version: '3'
 id: datadisldev
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://data.disl.dev
 name: data.disl.dev
 owner:
@@ -51,6 +55,35 @@ software:
   id: ckan
   name: CKAN
 status: active
-tags: []
-topics: []
+tags:
+- ckan
+- open-data
+- api
+- restful
+- datasets
+- has_api
+- programmatic
+- catalog
+- data-discovery
+- developers
+- research
+- ckan-api
+- rest-api
+- data-portal
+- open-access
+- data-integration
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+identifiers: []
 uid: temp00004803

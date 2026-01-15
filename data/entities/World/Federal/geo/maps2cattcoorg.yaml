@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,9 +33,11 @@ endpoints:
 - type: arcgis:kmz
   url: https://maps2.cattco.org/arcgiswebadaptor/rest/services?f=kmz
 id: maps2cattcoorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://maps2.cattco.org/arcgiswebadaptor/rest/services
-name: No metadata extraction possible with current input
+name: Cattco ArcGIS Server Geoportal
 owner:
   link: https://maps2.cattco.org/arcgiswebadaptor/rest/services
   location:
@@ -48,17 +50,54 @@ owner:
   type: Business
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://maps2.cattco.org/arcgiswebadaptor/rest/services
+  value: https://maps2.cattco.org/arcgiswebadaptor/rest/services
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- geoportal
+- arcgis
+- geospatial
+- REST services
+- maps
+- Cattco
+- GIS
+- web services
+- ArcGIS Server
+- spatial data
+- map services
+- business
+- commercial
+- has_api
+- spatial services
+- map layers
+- datasets
+- commercial geoportal
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00004033

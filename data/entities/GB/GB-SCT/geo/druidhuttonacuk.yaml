@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,13 @@ coverage:
     subregion:
       id: GB-SCT
       name: Scotland
-description: ''
+description: ArcGIS REST Services catalog providing geospatial datasets and map layers from
+  the James Hutton Institute, a Scottish research organization focused on agriculture,
+  environment, and land use. The portal offers access to research data and geospatial
+  services supporting agricultural and environmental research in Scotland. The catalog
+  includes datasets covering soil science, crop research, environmental monitoring,
+  land use planning, and natural resource management, accessible through standard
+  ArcGIS REST API endpoints for integration with GIS applications.
 endpoints:
 - type: arcgis:rest:info
   url: http://druid.hutton.ac.uk/arcgis/rest/info?f=pjson
@@ -52,12 +58,16 @@ owner:
   type: Academy
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: http://druid.hutton.ac.uk/arcgis/rest/services
+  value: http://druid.hutton.ac.uk/arcgis/rest/services
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Varies by dataset
+  license_url: http://www.hutton.ac.uk/about/terms-and-conditions
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: arcgisserver
@@ -67,5 +77,29 @@ tags:
 - ArcGIS REST Services
 - geospatial data
 - research data
-topics: []
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00003694

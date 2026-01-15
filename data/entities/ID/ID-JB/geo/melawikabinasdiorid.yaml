@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,15 @@ coverage:
     subregion:
       id: ID-JB
       name: Jawa Barat
-description: A GeoServer-based data catalog
+description: GeoServer-based geoportal providing comprehensive geospatial data and
+  map services for West Java (Jawa Barat), Indonesia. This platform offers OGC-compliant
+  web services including Web Map Service (WMS), Web Feature Service (WFS), Web Coverage
+  Service (WCS), Web Processing Service (WPS), Web Map Tile Service (WMTS), and Tile
+  Map Service (TMS) for accessing and sharing regional geospatial datasets, map layers,
+  and spatial analysis capabilities. The portal is part of Indonesia's National Spatial
+  Data Infrastructure (INA-SDI) initiative, supporting government agencies, researchers,
+  and the public in accessing authoritative geospatial information for planning, decision-making,
+  and development purposes.
 endpoints:
 - type: wms111
   url: http://melawikab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -82,10 +90,17 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: http://melawikab.ina-sdi.or.id/geoserver
+  value: http://melawikab.ina-sdi.or.id/geoserver
+- id: ina-sdi
+  url: http://ina-sdi.or.id
+  value: melawikab
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data (granular licensing per dataset)
+  license_url: http://ina-sdi.or.id
   privacy_policy_url: null
   rights_type: inapplicable
   tos_url: null
@@ -98,5 +113,32 @@ tags:
 - SDI
 - geospatial
 - Indonesia
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005182

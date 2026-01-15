@@ -1,38 +1,50 @@
 access_mode:
-  - open
-api: false
-api_status: uncertain
+- open
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
-  - dataset
-  - map_layer
+- dataset
+- map_layer
 coverage:
-  - location:
-      country:
-        id: MY
-        name: Malaysia
-      level: 20
-      macroregion:
-        id: '035'
-        name: South-eastern Asia
-description: ''
+- location:
+    country:
+      id: MY
+      name: Malaysia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS REST services geoportal providing comprehensive geospatial data
+  and mapping services for agricultural and plant-related information in Malaysia.
+  Operated by the Department of Agriculture Malaysia (DOA), this geoportal offers
+  access to agricultural datasets, crop mapping layers, and geospatial services related
+  to plant cultivation, agricultural planning, crop monitoring, and land management.
+  The portal serves as a primary source for agricultural spatial information, land
+  use data, soil information, crop distribution maps, and geographic reference materials
+  essential for agricultural research, planning, policy development, and sustainable
+  farming practices in Malaysia. The portal enables stakeholders to discover, visualize,
+  and access geospatial resources through standardized REST API endpoints and web
+  mapping services for agricultural applications. This geoportal supports precision
+  agriculture, food security initiatives, and evidence-based decision making for Malaysia's
+  agricultural sector through open access to authoritative geospatial data and services.
 endpoints:
-  - type: arcgis:rest:info
-    url: https://geotanaman.doa.gov.my/mygeosvr/rest/info?f=pjson
-  - type: arcgis:rest:services
-    url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=pjson
-  - type: arcgis:soap
-    url: https://geotanaman.doa.gov.my/mygeosvr/services?wsdl
-  - type: arcgis:sitemap
-    url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=sitemap
-  - type: arcgis:geositemap
-    url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=geositemap
-  - type: arcgis:kmz
-    url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=kmz
+- type: arcgis:rest:info
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geotanaman.doa.gov.my/mygeosvr/services?wsdl
+- type: arcgis:sitemap
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/services?f=kmz
 id: geotanamandoagovmy
 langs:
-  - id: MS
-    name: Malay
+- id: MS
+  name: Malay
 link: https://geotanaman.doa.gov.my/mygeosvr/rest/services
 name: geotanaman.doa.gov.my/mygeosvr/rest/services
 owner:
@@ -42,21 +54,90 @@ owner:
       id: MY
       name: Malaysia
     level: 20
-  name: 'Government of Malaysia'
+  name: Government of Malaysia
   type: Central government
+identifiers:
+- id: url
+  url: https://geotanaman.doa.gov.my/mygeosvr/rest/services
+  value: https://geotanaman.doa.gov.my/mygeosvr/rest/services
+- id: domain
+  url: https://geotanaman.doa.gov.my
+  value: geotanaman.doa.gov.my
 properties:
   has_doi: false
 rights:
-  license_id:
-  license_name:
-  license_url:
-  privacy_policy_url:
+  license_id: null
+  license_name: Public sector information
+  license_url: https://www.data.gov.my/terms-of-use
+  privacy_policy_url: null
   rights_type: global
-  tos_url:
+  tos_url: null
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- agriculture
+- crops
+- plants
+- geospatial
+- GIS
+- ArcGIS
+- government
+- Malaysia
+- geoportal
+- DOA
+- Department of Agriculture
+- agricultural-planning
+- crop-mapping
+- land-use
+- soil-information
+- farming
+- agricultural-research
+- plant-cultivation
+- crop-monitoring
+- REST-services
+- spatial-data
+- agricultural-data
+- federal-government
+- ArcGIS-Server
+- mapping-services
+- geospatial-services
+- has_api
+- rest-api
+- agricultural-monitoring
+- precision-agriculture
+- sustainable-farming
+- land-management
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00005987

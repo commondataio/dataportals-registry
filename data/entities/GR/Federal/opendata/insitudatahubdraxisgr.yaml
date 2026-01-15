@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,11 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: No description available from input
+description: Open data geoportal providing access to geospatial datasets and research data
+  from DRAXIS Environmental S.A., a Greek environmental consulting and research organization.
+  The portal uses CKAN software to enable discovery, access, and reuse of open datasets for
+  research and public use. It serves as a comprehensive repository for environmental and
+  geoscientific information, supporting scientific research and data-driven decision making.
 endpoints:
 - type: ckan
   url: http://insitu-datahub.draxis.gr/api/3
@@ -26,23 +30,28 @@ endpoints:
   url: http://insitu-datahub.draxis.gr/api/3/action/package_list
   version: '3'
 id: insitudatahubdraxisgr
+identifiers:
+- id: dataportals.org
+  url: https://dataportals.org/search?q=insitu-datahub.draxis.gr
+  value: insitudatahubdraxisgr
 langs:
 - id: EL
   name: Greek
 link: http://insitu-datahub.draxis.gr
-name: Insitu-datahub Geoportal - Not available
+name: Insitu-datahub Geoportal
 owner:
+  link: https://www.draxis.gr
   location:
     country:
       id: GR
       name: Greece
     level: 20
-  name: Not available
+  name: DRAXIS
   type: Academy
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Varies by dataset
+  license_url: http://insitu-datahub.draxis.gr
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -53,5 +62,32 @@ status: active
 tags:
 - Greece
 - ckan
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00004540

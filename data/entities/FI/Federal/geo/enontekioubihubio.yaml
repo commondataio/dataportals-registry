@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: ''
+description: GeoServer geoportal providing geospatial data services for Enontekiö municipality in Finland. Offers access to geographic datasets and map layers covering environment, transport, boundaries, elevation, imagery, and inland waters through OGC web services (WMS, WFS, WCS, WPS, WMTS, TMS, CSW).
 endpoints:
 - type: wms111
   url: https://enontekio.ubihub.io/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,7 +63,9 @@ endpoints:
   url: https://enontekio.ubihub.io/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 id: enontekioubihubio
-langs: []
+langs:
+- id: FI
+  name: Finnish
 link: https://enontekio.ubihub.io/geoserver
 name: Enontekiö GeoServer Data Catalog
 owner:
@@ -77,12 +79,16 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q488844
+  value: Q488844
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,7 @@ coverage:
     subregion:
       id: CO-DC
       name: Distrito Capital de Bogota
-description: Not provided in input
+description: Geospatial information system providing cadastral data and mapping services for Bogotá, Colombia through ArcGIS Server. The portal offers comprehensive property and land registry information, spatial datasets, and interactive mapping tools for urban planning, property management, and administrative purposes in the capital district. Operated by the Unidad Administrativa Especial de Catastro Distrital (UAECD), this geoportal serves as the primary source for cadastral information, property boundaries, land use data, and spatial reference materials essential for urban development, real estate transactions, tax assessment, and municipal planning activities in Bogotá. The system enables access to detailed property records, cadastral maps, land parcel information, building footprints, property valuations, and administrative boundaries, supporting both public administration and citizen access to official cadastral documentation.
 endpoints:
 - type: arcgis:rest:info
   url: https://sig.catastrobogota.gov.co/arcgis/rest/info?f=pjson
@@ -39,6 +39,7 @@ langs:
 link: https://sig.catastrobogota.gov.co/arcgis/services
 name: sig.catastrobogota.gov.co
 owner:
+  link: https://www.catastrobogota.gov.co
   location:
     country:
       id: CO
@@ -47,14 +48,29 @@ owner:
     subregion:
       id: CO-DC
       name: Distrito Capital de Bogota
-  name: Not provided in input
+  name: Unidad Administrativa Especial de Catastro Distrital (UAECD)
   type: Local government
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/sigcatastrobogotagovco
+  value: sigcatastrobogotagovco
+- id: url
+  value: https://sig.catastrobogota.gov.co/arcgis/services
+  url: https://sig.catastrobogota.gov.co/arcgis/services
+- id: domain
+  value: sig.catastrobogota.gov.co
+  url: https://sig.catastrobogota.gov.co
+- id: oid
+  value: sigcatastrobogotagovco
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2541
+  value: Q2541
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: colombia-ogdl
+  license_name: Open Government Data License - Colombia
+  license_url: https://www.datos.gov.co/normatividad
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -62,6 +78,94 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- cadastre
+- GIS
+- ArcGIS
+- Bogotá
+- Colombia
+- property
+- land registry
+- mapping
+- urban planning
+- cadastral data
+- spatial data
+- property management
+- administrative
+- registry
+- real estate
+- land administration
+- district capital
+- UAECD
+- geoportal
+- ArcGIS Server
+- property boundaries
+- land use
+- tax assessment
+- municipal planning
+- urban development
+- spatial reference
+- open data
+- government
+- local government
+- capital district
+- cadastral system
+- land parcels
+- property records
+- urban infrastructure
+- spatial analysis
+- cadastral mapping
+- property valuation
+- building footprints
+- administrative boundaries
+- property documentation
+- cadastral registry
+- land ownership
+- real estate data
+- urban cadastre
+- district cadastre
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
 uid: temp00004927

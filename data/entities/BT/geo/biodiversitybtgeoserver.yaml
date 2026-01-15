@@ -15,7 +15,14 @@ coverage:
     macroregion:
       id: '034'
       name: Southern Asia
-description: Bhutan Biodiversity Portal geoserver
+description: GeoServer instance providing comprehensive geospatial web services for
+  the Bhutan Biodiversity Portal, managed by the National Biodiversity Centre. The
+  portal offers standardized OGC web services including WMS (Web Map Service), WFS
+  (Web Feature Service), WCS (Web Coverage Service), WPS (Web Processing Service),
+  TMS (Tile Map Service), and WMTS (Web Map Tile Service) endpoints. These services
+  enable access to biodiversity datasets, species distribution maps, conservation
+  areas, and environmental monitoring data for Bhutan, supporting research, conservation
+  planning, and environmental management initiatives.
 endpoints:
 - type: wms111
   url: https://biodiversity.bt/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,7 +73,7 @@ langs:
 link: https://biodiversity.bt/geoserver/web/
 name: Bhutan Biodiversity Portal geoserver
 owner:
-  link: null
+  link: https://biodiversity.bt
   location:
     country:
       id: BT
@@ -76,17 +83,61 @@ owner:
   type: Academy
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://biodiversity.bt/geoserver/web/
+  value: https://biodiversity.bt/geoserver/web/
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- biodiversity
+- geoportal
+- Bhutan
+- geoserver
+- WMS
+- WFS
+- WCS
+- WPS
+- TMS
+- WMTS
+- conservation
+- species
+- OGC
+- web services
+- environmental monitoring
+- National Biodiversity Centre
+- map layers
+- datasets
+topics:
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: cdi00004463

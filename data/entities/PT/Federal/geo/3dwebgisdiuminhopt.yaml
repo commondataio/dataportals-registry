@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,11 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Web-based 3D GIS platform
+description: Web-based 3D GIS platform developed by University of Minho providing
+  comprehensive geospatial data services through OGC standards including WMS, WFS,
+  WCS, and WPS protocols for spatial data visualization, analysis, and 3D mapping
+  capabilities. The platform enables access to geospatial datasets and map layers
+  through standardized web services.
 endpoints:
 - type: wms111
   url: http://3dwebgis.di.uminho.pt/geoserver3D/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -75,10 +79,10 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data (Academic Use)
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
@@ -86,8 +90,36 @@ software:
 status: active
 tags:
 - GIS
-- 3D
-- Web
+- Web Mapping Services
 - Open Source
-topics: []
+- geospatial
+- 3D visualization
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Web Services
+  name: Web Services
+  type: iso19115
+- id: OGC Standards
+  name: OGC Standards
+  type: iso19115
 uid: temp00000586

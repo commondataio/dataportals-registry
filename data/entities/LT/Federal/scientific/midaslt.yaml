@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,11 +16,15 @@ coverage:
       name: Northern Europe
 description: 'MIDAS is a national research data repository managed by Vilnius University.
   The aim of MIDAS is to collect, process, store and analyze research data and other
-  relevant information in all fields of knowledge, enabling free, easy and convenient
+  relevant information in all fields of knowledge,   enabling free, easy and convenient
   access to the data via the Internet. MIDAS provides services for registered and
   unregistered users: students, listeners, academics, researchers, scientists, research
   administrators, other actors of the research and studies ecosystem, and all individuals
   interested in research data.'
+endpoints:
+- type: oaipmh20
+  url: https://midas.lt/web/action/oaipmh?verb=Identify
+  version: '2.0'
 id: midaslt
 langs:
 - id: LT

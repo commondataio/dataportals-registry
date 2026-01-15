@@ -14,7 +14,15 @@ coverage:
     macroregion:
       id: World
       name: World
-description: ''
+description: Open data portal of the University of Girona (Universitat de Girona),
+  a public university located in Catalonia, Spain. The portal provides comprehensive
+  access to institutional datasets, research data, academic information, and administrative
+  records. Built on CKAN software, it offers datasets covering university activities
+  including student enrollment, research projects, publications, financial data, facilities
+  management, and institutional statistics. The portal supports open science initiatives
+  and data reuse for research, analysis, and transparency purposes. Datasets are available
+  in various formats (CSV, JSON, XLSX) and can be accessed via API endpoints for programmatic
+  access.
 endpoints:
 - type: ckan
   url: https://odata.udg.edu/api/3
@@ -26,7 +34,11 @@ endpoints:
   url: https://odata.udg.edu/api/3/action/package_list
   version: '3'
 id: odataudgedu
-langs: []
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
 link: https://odata.udg.edu
 name: odata.udg.edu
 owner:
@@ -45,10 +57,57 @@ rights:
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q11908934
+  value: Q11908934
 software:
   id: ckan
   name: CKAN
 status: active
-tags: []
-topics: []
+tags:
+- education
+- university
+- open data
+- research
+- academic datasets
+- higher education
+- ckan
+- spain
+- girona
+- catalonia
+- institutional data
+- research data
+- administrative data
+- open science
+- public sector
+- has_api
+- university portal
+- academic research
+- data transparency
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Education
+  name: Education
+  type: iso19115
 uid: temp00004844

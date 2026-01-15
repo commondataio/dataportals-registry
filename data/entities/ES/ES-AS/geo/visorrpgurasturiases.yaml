@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,15 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: GeoServer-based geoportal operated by the Government of Asturias (Principado
+  de Asturias) providing comprehensive geospatial data services as part of the regional
+  spatial data infrastructure (IDE). The portal offers OGC-compliant web services including
+  WMS (versions 1.1.1 and 1.3.0), WFS (versions 1.0.0, 1.1.0, and 2.0.0), WCS (versions
+  1.0.0, 1.1.0, 1.1.1, and 2.0.1), WPS (version 1.0.0), TMS, and WMTS endpoints for accessing
+  regional spatial datasets, map layers, and geospatial processing capabilities. Supports
+  multiple service versions and tiled map services (GeoWebCache) for efficient data access
+  and visualization. The infrastructure enables discovery, access, and reuse of geospatial
+  data for regional planning, environmental management, and public administration purposes.
 endpoints:
 - type: wms111
   url: http://visorrpgur.asturias.es:8090/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -78,19 +85,70 @@ owner:
       name: Asturias, Principado de
   name: Gobierno del Principado de Asturias
   type: Regional government
+identifiers: []
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data License (Spanish Public Sector)
+  license_url: https://www.boe.es/buscar/act.php?id=BOE-A-2007-19823
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: global
   tos_url: null
 software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- Asturias
+- Principado de Asturias
+- WCS
+- WFS
+- WMS
+- WMTS
+- WPS
+- TMS
+- geoserver
+- geospatial
+- geoportal
+- government
+- has_api
+- map_layer
+- OGC services
+- regional
+- spatial data infrastructure
+- IDE
+- Spain
+- web services
+- GeoWebCache
+- tiled services
+- geospatial processing
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00001459

@@ -303,5 +303,166 @@
   }, 
   "catalog_export": {
     "type": "string"
+  },
+  "trust_score": {
+    "type": "number",
+    "min": 0,
+    "max": 100,
+    "required": false
+  },
+  "trust_score_components": {
+    "type": "dict",
+    "empty": false,
+    "required": false,
+    "schema": {
+      "owner_type_score": {
+        "type": "number"
+      },
+      "catalog_type_score": {
+        "type": "number"
+      },
+      "license_score": {
+        "type": "number"
+      },
+      "re3data_score": {
+        "type": "number"
+      },
+      "additional_factors_score": {
+        "type": "number"
+      },
+      "base_score": {
+        "type": "number"
+      }
+    }
+  },
+  "_re3data": {
+    "type": "dict",
+    "empty": false,
+    "required": false,
+    "schema": {
+      "keywords": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "content_type": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "contact_email": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "persistent_identifiers": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "software": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "versioning": {
+        "type": "boolean"
+      },
+      "institutions": {
+        "type": "list",
+        "schema": {
+          "type": "dict",
+          "schema": {
+            "name": {"type": "string"},
+            "url": {"type": "string"}
+          }
+        }
+      },
+      "repository_type": {
+        "type": "string"
+      },
+      "re3data_id": {
+        "type": "string"
+      },
+      "last_updated": {
+        "type": "string"
+      },
+      "subjects": {
+        "type": "list",
+        "schema": {
+          "type": "dict",
+          "schema": {
+            "id": {"type": "string"},
+            "name": {"type": "string"},
+            "path": {"type": "list", "schema": {"type": "string"}}
+          }
+        }
+      },
+      "database_access": {
+        "type": "string"
+      },
+      "data_access": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "open_access": {
+        "type": "boolean"
+      },
+      "database_licenses": {
+        "type": "list",
+        "schema": {
+          "type": "dict",
+          "schema": {
+            "name": {"type": "string"},
+            "url": {"type": "string"}
+          }
+        }
+      },
+      "data_policy": {
+        "type": "dict",
+        "schema": {
+          "name": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      },
+      "privacy_policy": {
+        "type": "dict",
+        "schema": {
+          "name": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      },
+      "standards": {
+        "type": "list",
+        "schema": {
+          "type": "dict",
+          "schema": {
+            "type": {"type": "string"},
+            "name": {"type": "string"}
+          }
+        }
+      },
+      "certifications": {
+        "type": "list",
+        "schema": {"type": "string"}
+      },
+      "repository_size": {
+        "type": "string"
+      },
+      "launch_date": {
+        "type": "string"
+      },
+      "apis": {
+        "type": "list",
+        "schema": {
+          "type": "dict",
+          "schema": {
+            "type": {"type": "string"},
+            "url": {"type": "string"}
+          }
+        }
+      },
+      "protocols": {
+        "type": "list",
+        "schema": {"type": "string"}
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -54,7 +54,11 @@ endpoints:
   url: https://inspire.ruokavirasto-awsa.com/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: inspireruokavirastoawsacom
-langs: []
+langs:
+- id: FI
+  name: Finnish
+- id: EN
+  name: English
 link: https://inspire.ruokavirasto-awsa.com/geoserver
 name: Data Catalog Extraction Example
 owner:
@@ -68,10 +72,14 @@ owner:
   type: Central government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://inspire.ruokavirasto-awsa.com/geoserver
+  value: https://inspire.ruokavirasto-awsa.com/geoserver
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
   rights_type: inapplicable
   tos_url: null
@@ -85,5 +93,20 @@ tags:
 - open data
 - Finnish Food Authority
 - datacatalog
-topics: []
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005550

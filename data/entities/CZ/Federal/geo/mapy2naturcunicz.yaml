@@ -15,7 +15,11 @@ coverage:
     macroregion:
       id: '151'
       name: Eastern Europe
-description: Data catalog via GeoNetwork
+description: GeoNetwork-based geospatial data catalog hosted by Charles University
+  Faculty of Natural Sciences, providing comprehensive access to geographic datasets
+  and map layers for research and educational purposes. The catalog supports multiple
+  standards including CSW, OGC services, and OpenSearch, enabling discovery and access
+  to geospatial resources for academic research, teaching, and scientific collaboration.
 endpoints:
 - type: geonetwork:query
   url: http://mapy2.natur.cuni.cz:8080/geonetwork/srv/eng/q
@@ -41,21 +45,33 @@ langs:
   name: Czech
 link: http://mapy2.natur.cuni.cz:8080/geonetwork
 name: mapy2.natur.cuni.cz:8080
+identifiers:
+- id: domain
+  value: mapy2.natur.cuni.cz
+  url: http://mapy2.natur.cuni.cz:8080
+- id: url
+  value: http://mapy2.natur.cuni.cz:8080/geonetwork
+  url: http://mapy2.natur.cuni.cz:8080/geonetwork
+- id: oid
+  value: mapy2naturcunicz
+- id: wikidata
+  value: Q2989774
+  url: https://www.wikidata.org/wiki/Q2989774
 owner:
-  link: null
+  link: https://www.natur.cuni.cz/
   location:
     country:
       id: CZ
       name: Czech Republic
     level: 20
-  name: mapy2.natur.cuni.cz:8080
+  name: Charles University Faculty of Natural Sciences
   type: Academy
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -63,6 +79,42 @@ software:
   id: geonetwork
   name: Geonetwork
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- geonetwork
+- geoportal
+- academic
+- Czech Republic
+- has_api
+- metadata
+- research
+- university
+- education
+- Charles University
+- faculty
+- natural sciences
+- geographic datasets
+- map layers
+- CSW
+- OGC services
+- OpenSearch
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
 uid: cdi00004136

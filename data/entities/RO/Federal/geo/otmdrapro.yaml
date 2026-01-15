@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -36,19 +36,26 @@ langs:
 link: https://ot.mdrap.ro/arcgis/rest/services
 name: ot.mdrap.ro
 owner:
+  link: https://www.mdrap.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: Not provided
+  name: Ministerul Dezvoltării Rurale și Agriculturii
   type: Central government
+identifiers:
+- id: url
+  url: https://ot.mdrap.ro/arcgis/rest/services
+  value: https://ot.mdrap.ro/arcgis/rest/services
+- id: domain
+  value: ot.mdrap.ro
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Government License
+  license_url: https://www.mdrap.ro
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -60,5 +67,32 @@ tags:
 - ArcGIS
 - REST
 - services
-topics: []
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00005610

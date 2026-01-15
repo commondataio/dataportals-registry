@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,15 +15,19 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: ArcGIS Server-based geoportal providing geospatial datasets and map
+  layers through REST and SOAP API endpoints. The OneMapServer service offers open
+  access to geographic information services, enabling programmatic access to spatial
+  data and mapping capabilities for integration into applications and analysis workflows.
 endpoints:
 - type: arcgis:rest:info
   url: http://221.180.204.25/OneMapServer/rest/info?f=pjson
 - type: arcgis:soap
   url: http://221.180.204.25/OneMapServer/services?wsdl
 id: '22118020425'
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://221.180.204.25/OneMapServer/rest/services
 name: 221.180.204.25
 owner:
@@ -38,6 +42,7 @@ owner:
   type: Business
 properties:
   has_doi: false
+identifiers: []
 rights:
   license_id: null
   license_name: null
@@ -51,5 +56,29 @@ software:
 status: active
 tags:
 - ArcGIS REST API endpoint
-topics: []
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005794

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -60,7 +60,13 @@ endpoints:
   url: https://durazno.gvsigonline.com/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: duraznogvsigonlinecom
-langs: []
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/durazno-gvsigonline-com
+  value: durazno-gvsigonline-com
+langs:
+- id: ES
+  name: Spanish
 link: https://durazno.gvsigonline.com/geoserver
 name: Durazno Geoserver Catalog
 owner:
@@ -79,10 +85,10 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data License (per dataset)
+  license_url: https://durazno.gvsigonline.com/geoserver
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
@@ -95,5 +101,26 @@ tags:
 - spatial data
 - catalog
 - open data
-topics: []
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00003953

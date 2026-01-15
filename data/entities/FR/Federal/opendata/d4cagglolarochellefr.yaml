@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,13 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: ''
+description: Open data portal of the La Rochelle agglomeration (communauté d'agglomération
+  de La Rochelle), providing comprehensive access to public datasets from the local
+  government covering municipal services, urban planning, transportation, infrastructure,
+  public administration, environment, and social services. The portal is built on CKAN
+  platform and offers RESTful API access for developers and researchers, enabling data
+  discovery, download, and reuse of public sector information for transparency and
+  innovation purposes.
 endpoints:
 - type: ckan
   url: https://d4c.agglo-larochelle.fr/api/3
@@ -26,6 +32,10 @@ endpoints:
   url: https://d4c.agglo-larochelle.fr/api/3/action/package_list
   version: '3'
 id: d4cagglolarochellefr
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2822399
+  value: Q2822399
 langs:
 - id: FR
   name: French
@@ -41,9 +51,9 @@ owner:
   name: Local Government of Agglo Larochelle
   type: Local government
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: LO-2.0
+  license_name: Licence Ouverte / Open Licence 2.0
+  license_url: https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -54,5 +64,35 @@ status: active
 tags:
 - France
 - ckan
-topics: []
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00004657

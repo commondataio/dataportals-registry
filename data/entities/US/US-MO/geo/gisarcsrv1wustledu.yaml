@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,7 +33,16 @@ endpoints:
 - type: arcgis:kmz
   url: https://gis-arcsrv1.wustl.edu/arcgis/rest/services?f=kmz
 id: gisarcsrv1wustledu
-langs: []
+identifiers:
+- id: url
+  url: https://gis-arcsrv1.wustl.edu/arcgis/rest/services
+  value: https://gis-arcsrv1.wustl.edu/arcgis/rest/services
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q777717
+  value: Q777717
+langs:
+- id: EN
+  name: English
 link: https://gis-arcsrv1.wustl.edu/arcgis/rest/services
 name: gis-arcsrv1.wustl.edu/arcgis/rest/services
 owner:
@@ -46,7 +55,7 @@ owner:
     subregion:
       id: US-MO
       name: Missouri
-  name: ArcGIS
+  name: Washington University in St. Louis
   type: Academy
 properties:
   has_doi: false
@@ -54,9 +63,9 @@ rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
   rights_type: global
-  tos_url: null
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -66,5 +75,32 @@ tags:
 - ArcGIS
 - REST
 - Spatial Data
-topics: []
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
 uid: temp00003980

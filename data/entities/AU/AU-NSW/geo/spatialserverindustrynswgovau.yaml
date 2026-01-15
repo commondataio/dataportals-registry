@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,11 @@ coverage:
     subregion:
       id: AU-NSW
       name: New South Wales
-description: ArcGIS Server services catalog
+description: ArcGIS Server services catalog providing comprehensive access to geospatial
+  data services and map layers for the NSW Department of Industry. This geoportal enables
+  discovery and access to spatial datasets through REST, SOAP, and other standard protocols,
+  supporting various industry-related geospatial applications including resource management,
+  infrastructure planning, and economic development initiatives across New South Wales.
 endpoints:
 - type: arcgis:rest:info
   url: https://spatial-server.industry.nsw.gov.au/arcgis/rest/info?f=pjson
@@ -33,6 +37,10 @@ endpoints:
 - type: arcgis:kmz
   url: https://spatial-server.industry.nsw.gov.au/arcgis/rest/services?f=kmz
 id: spatialserverindustrynswgovau
+identifiers:
+- id: url
+  url: https://spatial-server.industry.nsw.gov.au/arcgis/services
+  value: https://spatial-server.industry.nsw.gov.au/arcgis/services
 langs:
 - id: EN
   name: English
@@ -53,9 +61,9 @@ owner:
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: cc-by
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -68,5 +76,29 @@ tags:
 - services
 - spatial
 - catalog
-topics: []
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00004898

@@ -160,8 +160,14 @@ def infer_endpoints(record):
             ])
         elif software_id == "geoserver":
             endpoints.extend([
+                # Standard GeoServer paths
                 {"type": "wms130", "url": f"{base_url}/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities", "version": "1.3.0"},
                 {"type": "wfs200", "url": f"{base_url}/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities", "version": "2.0.0"},
+                {"type": "wcs111", "url": f"{base_url}/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"},
+                # Non-standard GeoServer paths (e.g., /geo/wms instead of /ows)
+                {"type": "wms130", "url": f"{base_url}/geoserver/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities", "version": "1.3.0"},
+                {"type": "wfs200", "url": f"{base_url}/geoserver/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities", "version": "2.0.0"},
+                {"type": "wcs111", "url": f"{base_url}/geoserver/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"},
             ])
         elif software_id == "arcgisserver":
             endpoints.extend([

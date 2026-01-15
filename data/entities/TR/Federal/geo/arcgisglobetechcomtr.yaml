@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,13 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: ArcGIS REST Services Directory
+description: ArcGIS REST Services Directory providing comprehensive access to geospatial
+  datasets, map layers, and feature services through standardized REST API endpoints.
+  This geoportal hosted by Globetech enables discovery, integration, and utilization
+  of various spatial data resources for mapping, visualization, and GIS applications
+  across Turkey. The service supports multiple data formats and protocols including
+  REST, SOAP, and OGC standards, facilitating seamless integration with desktop and
+  web-based geographic information systems.
 endpoints:
 - type: arcgis:portals:self
   url: https://arcgis.globetech.com.tr/portal/sharing/rest/portals/self?f=pjson
@@ -46,6 +52,10 @@ owner:
     level: 20
   name: Globetech
   type: Business
+identifiers:
+- id: url
+  url: https://arcgis.globetech.com.tr/server/rest/services
+  value: https://arcgis.globetech.com.tr/server/rest/services
 properties:
   has_doi: false
 rights:
@@ -54,11 +64,67 @@ rights:
   license_url: null
   privacy_policy_url: null
   rights_type: global
-  tos_url: null
+  tos_url: https://www.globetech.com.tr
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- arcgis
+- geoportal
+- geospatial
+- REST
+- GIS
+- services
+- arcgisserver
+- Turkey
+- map layers
+- spatial data
+- web services
+- Globetech
+- feature services
+- datasets
+- REST API
+- mapping
+- visualization
+- OGC
+- SOAP
+- geospatial data
+- spatial datasets
+- map services
+- geographic information systems
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
 uid: cdi00004692

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,11 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Open data portal
+description: Open data portal for dairy farming management, providing datasets and resources
+  related to agricultural data and farm management practices in Italy. The portal offers
+  comprehensive data collections focused on dairy production, livestock management, and
+  agricultural sustainability, supporting research and decision-making in the Italian
+  agricultural sector.
 endpoints:
 - type: ckan:package-search
   url: https://data.tdm-project.it/api/3/action/package_search
@@ -23,6 +27,10 @@ endpoints:
   url: https://data.tdm-project.it/api/3/action/package_list
   version: '3'
 id: datatdmprojectit
+identifiers:
+- id: url
+  url: https://data.tdm-project.it
+  value: https://data.tdm-project.it
 langs:
 - id: IT
   name: Italian
@@ -39,8 +47,8 @@ owner:
   type: Business
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Varies by dataset
+  license_url: https://data.tdm-project.it
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -54,8 +62,8 @@ tags:
 - dairy
 - farming
 - management
-- open data
-- IT
+- open-data
+- agriculture
 topics:
 - id: TECH
   name: Science and technology

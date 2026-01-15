@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: GeoServer-based spatial data catalog
+description: GeoServer-based spatial data catalog providing comprehensive environmental and air quality monitoring data from ATMOSUD, the regional air quality monitoring association for Provence-Alpes-Côte d'Azur. The portal offers access to real-time and historical air quality measurements, pollution indicators, meteorological data, and environmental monitoring datasets through standard OGC web services including WMS, WFS, WCS, WPS, WMTS, and TMS protocols.
 endpoints:
 - type: wms111
   url: https://xpr-geoservices.atmosud.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,7 +60,13 @@ endpoints:
   url: https://xpr-geoservices.atmosud.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: xprgeoservicesatmosudorg
-langs: []
+identifiers:
+- id: url
+  url: https://xpr-geoservices.atmosud.org/geoserver
+  value: https://xpr-geoservices.atmosud.org/geoserver
+langs:
+- id: FR
+  name: French
 link: https://xpr-geoservices.atmosud.org/geoserver
 name: xpr-geoservices.atmosud.org/geoserver
 owner:
@@ -75,11 +81,11 @@ owner:
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: etalab-2.0
+  license_name: Licence Ouverte / Open Licence 2.0
+  license_url: https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver

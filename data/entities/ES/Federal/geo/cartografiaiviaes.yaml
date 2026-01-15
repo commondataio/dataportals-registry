@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Not provided
+description: GeoServer-based geospatial data portal providing access to cartographic and geographic datasets from IVIA (Instituto Valenciano de Investigaciones Agrarias), offering multiple OGC web services including WMS, WFS, WCS, WPS, WMTS, and CSW for agricultural research data.
 endpoints:
 - type: wms111
   url: http://cartografia.ivia.es:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,18 +63,20 @@ endpoints:
   url: http://cartografia.ivia.es:8080/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 id: cartografiaiviaes
+identifiers: []
 langs:
 - id: ES
   name: Spanish
 link: http://cartografia.ivia.es:8080/geoserver
-name: Not provided
+name: IVIA Cartography GeoServer
 owner:
+  link: https://www.ivia.es
   location:
     country:
       id: ES
       name: Spain
     level: 20
-  name: Not provided
+  name: Instituto Valenciano de Investigaciones Agrarias (IVIA)
   type: Academy
 properties:
   has_doi: false
@@ -83,7 +85,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: unknown
   tos_url: null
 software:
   id: geoserver

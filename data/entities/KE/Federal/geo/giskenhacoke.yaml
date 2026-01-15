@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -32,7 +32,11 @@ endpoints:
 - type: arcgis:kmz
   url: https://gis.kenha.co.ke/arcgis/rest/services?f=kmz
 id: giskenhacoke
-langs: []
+langs:
+- id: EN
+  name: English
+- id: SW
+  name: Swahili
 link: https://gis.kenha.co.ke/arcgis/rest/services
 name: KeNHA ArcGIS REST Services
 owner:
@@ -44,12 +48,16 @@ owner:
     level: 20
   name: Kenya National Highways Authority
   type: Central government
+identifiers:
+- id: url
+  url: https://gis.kenha.co.ke/arcgis/rest/services
+  value: https://gis.kenha.co.ke/arcgis/rest/services
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Data
+  license_url: https://opendefinition.org/licenses/odc-odbl/
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -63,5 +71,23 @@ tags:
 - infrastructure
 - GIS
 - public sector
-topics: []
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
 uid: temp00001728

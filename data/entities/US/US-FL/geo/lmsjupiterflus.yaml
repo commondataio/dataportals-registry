@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -52,10 +52,17 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://lms.jupiter.fl.us/arcgis/rest/services
+  value: https://lms.jupiter.fl.us/arcgis/rest/services
+- id: arcgis-server
+  url: https://lms.jupiter.fl.us/arcgis/rest/services
+  value: lms.jupiter.fl.us
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: public-domain
+  license_name: Public Domain
+  license_url: https://www.usa.gov/public-domain
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -63,6 +70,43 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- arcgis
+- geoportal
+- rest-api
+- geospatial
+- maps
+- gis
+- jupiter
+- florida
+- local-government
+- arcgis-server
+- web-services
+- spatial-data
+- government-data
+- public-data
+- cadastre
+- planning
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00004364

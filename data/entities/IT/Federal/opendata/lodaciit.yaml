@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,7 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: Data catalog website
+description: Open data portal of Automobile Club d'Italia (ACI) providing access to transportation and automotive-related datasets through DKAN platform. The portal offers datasets covering vehicle registration, road infrastructure, traffic statistics, and mobility data for Italy, supporting research and analysis in transportation planning and automotive industry insights.
 endpoints:
 - type: ckan:package-list
   url: http://lod.aci.it/api/3/action/package_list
@@ -22,6 +22,10 @@ endpoints:
 - type: dcatus11
   url: http://lod.aci.it/data.json
 id: lodaciit
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/lod-aci-it
+  value: lod-aci-it
 langs:
 - id: IT
   name: Italian
@@ -40,8 +44,8 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Varies by dataset
+  license_url: http://lod.aci.it
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -53,5 +57,11 @@ tags:
 - Italy
 - dkan
 - open data
-topics: []
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00001999

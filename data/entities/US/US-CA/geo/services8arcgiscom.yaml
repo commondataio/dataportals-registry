@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -23,7 +23,11 @@ endpoints:
 - type: arcgis:rest:services
   url: https://services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services?f=pjson
 id: services8arcgiscom
-langs: []
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
 link: https://services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services
 name: services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services
 owner:
@@ -40,10 +44,17 @@ owner:
   type: Business
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services
+  value: https://services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services
+- id: arcgis
+  url: https://services8.arcgis.com/bMJGuZFuHOfBi47l/ArcGIS/rest/services
+  value: services8.arcgis.com
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: esri-mla
+  license_name: Esri Master License Agreement
+  license_url: https://www.esri.com/en-us/legal/terms
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -51,6 +62,49 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- ArcGIS
+- REST
+- geospatial
+- GIS
+- services
+- arcgisserver
+- geoportal
+- has_api
+- Esri
+- map services
+- feature services
+- image services
+- metadata
+- REST API
+- geospatial services
+- spatial data
+- mapping
+- California
+- US-CA
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00005434

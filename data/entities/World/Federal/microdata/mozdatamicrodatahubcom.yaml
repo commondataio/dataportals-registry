@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -14,13 +14,18 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Microdata catalog providing access to statistical datasets and survey
+  data related to Mozambique. The catalog enables browsing, searching, and downloading
+  study metadata and microdata datasets through a NADA-based platform hosted by Microdatahub.
 endpoints:
 - type: nada:csvexport
   url: http://mozdata.microdatahub.com/index.php/catalog/export/csv?ps=5000&collection[]
 id: mozdatamicrodatahubcom
-langs: []
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
 link: http://mozdata.microdatahub.com
 name: mozdata.microdatahub.com
 owner:
@@ -35,6 +40,13 @@ owner:
   type: Academy
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: http://mozdata.microdatahub.com
+  value: http://mozdata.microdatahub.com
+- id: dataportals.org
+  url: http://dataportals.org/portal/mozdata-microdatahub-com
+  value: mozdata-microdatahub-com
 rights:
   license_id: null
   license_name: null
@@ -46,6 +58,55 @@ software:
   id: nada
   name: NADA
 status: active
-tags: []
-topics: []
+tags:
+- microdata
+- statistics
+- survey
+- Mozambique
+- has_api
+- NADA
+- dataset
+- research
+- census
+- demographic
+- household survey
+- official statistics
+- data archive
+- statistical data
+- survey data
+- microdata catalog
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00004150

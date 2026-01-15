@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,11 @@ coverage:
     subregion:
       id: CH-BE
       name: Bern
-description: Gemeinde Köniz geoportal (ArcGIS)
+description: Geoportal providing ArcGIS REST services for geospatial data and mapping
+  services for the municipality of Köniz in the canton of Bern, Switzerland. The portal
+  offers access to various geospatial datasets, map layers, and web mapping services
+  through standard ArcGIS Server REST API endpoints, supporting both JSON and SOAP
+  protocols for integration with GIS applications.
 endpoints:
 - type: arcgis:rest:info
   url: https://map.koeniz.ch/server/rest/info?f=pjson
@@ -50,6 +54,10 @@ owner:
       name: Bern
   name: Gemeinde Köniz
   type: Local government
+identifiers:
+- id: wikidata
+  url: https://wikidata.org/wiki/Q64072
+  value: Q64072
 properties:
   has_doi: false
 rights:
@@ -63,7 +71,21 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
+tags:
+- geoportal
+- arcgis
+- gis
+- geodata
+- geospatial
+- has_api
+- köniz
+- bern
+- switzerland
+- local government
+- municipality
+- mapping services
+- rest services
+- web mapping
 topics:
 - id: REGI
   name: Regions and cities

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Catalog of geospatial data services
+description: Geoportal providing comprehensive geospatial data services and map layers for NAMA electricity company operations in Oman. The catalog includes datasets and map layers covering electricity infrastructure, transmission networks, power facilities, and utility assets accessible through ArcGIS Server REST API endpoints. Supports multiple service formats including REST, SOAP, sitemap, and KMZ for integration with various GIS applications.
 endpoints:
 - type: arcgis:rest:info
   url: https://mzgisportal.mzec.co.om/server/rest/info?f=pjson
@@ -46,10 +46,11 @@ owner:
   type: Business
 properties:
   has_doi: false
+identifiers: []
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Terms of Service
+  license_url: https://namaservices.om
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -61,5 +62,20 @@ tags:
 - geospatial
 - services
 - GIS
-topics: []
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
 uid: cdi00004239

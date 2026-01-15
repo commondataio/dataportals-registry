@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,23 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: Data catalog interface
+description: Demo instance of gvSIG Online geoportal providing comprehensive access
+  to geospatial datasets and map layers through a GeoNetwork-based metadata catalog.
+  The platform supports multiple standard protocols including CSW (Catalog Service
+  for the Web), OpenSearch, OAI-PMH (Open Archives Initiative Protocol for Metadata
+  Harvesting), and OpenAPI. This demonstration instance showcases the capabilities
+  of gvSIG Online, an open-source web-based GIS platform for managing, sharing, and
+  visualizing geospatial data and services. The portal enables users to discover,
+  access, and integrate spatial information through standardized web services and
+  APIs, supporting both ISO 19115 metadata standards and OGC service protocols for
+  interoperability. Users can search, browse, and access geospatial resources including
+  vector and raster datasets, web map services (WMS), web feature services (WFS),
+  and other OGC-compliant services. The platform facilitates metadata management,
+  data discovery, and spatial data infrastructure (SDI) implementation through its
+  comprehensive cataloging and service capabilities. This demo portal serves as a
+  reference implementation for organizations seeking to deploy gvSIG Online for geospatial
+  data management, offering full-featured access to metadata catalogs, spatial data
+  services, and web-based mapping tools.
 endpoints:
 - type: geonetwork:query
   url: https://demo.gvsigonline.com/geonetwork/srv/eng/q
@@ -32,7 +48,11 @@ endpoints:
   url: https://demo.gvsigonline.com/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: demogvsigonlinecom
-langs: []
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
 link: https://demo.gvsigonline.com/geonetwork
 name: demo.gvsigonline.com
 owner:
@@ -48,9 +68,9 @@ owner:
 properties:
   has_doi: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: GPL-3.0
+  license_name: GNU General Public License v3.0
+  license_url: https://www.gnu.org/licenses/gpl-3.0.html
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -58,6 +78,85 @@ software:
   id: geonetwork
   name: Geonetwork
 status: active
-tags: []
-topics: []
+tags:
+- geonetwork
+- geoportal
+- geospatial
+- metadata catalog
+- open data
+- gvsigonline
+- demo
+- demonstration
+- csw
+- catalog service for the web
+- opensearch
+- oai-pmh
+- open archives initiative
+- openapi
+- rest api
+- web gis
+- spatial data infrastructure
+- sdi
+- iso19115
+- iso metadata standards
+- ogc standards
+- ogc services
+- wms
+- wfs
+- gis
+- spatial data
+- metadata
+- catalog service
+- web services
+- open source
+- gpl-3.0
+- vector data
+- raster data
+- map layers
+- geospatial datasets
+- geonetwork-based
+- web-based gis
+- metadata management
+- data discovery
+- interoperability
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
 uid: temp00003948

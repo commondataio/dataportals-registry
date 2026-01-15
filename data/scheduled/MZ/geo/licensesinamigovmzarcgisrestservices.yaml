@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 20
+description: 'ArcGIS Server instance providing geospatial services. Associated with
+  Spatial Dimension portal: https://portals.landfolio.com/mozambique'
+endpoints:
+- type: arcgis:rest:info
+  url: https://licenses.inami.gov.mz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://licenses.inami.gov.mz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=kmz
+id: licensesinamigovmzarcgisrestservices
+langs:
+- id: EN
+  name: English
+link: https://licenses.inami.gov.mz/arcgis/rest/services
+name: ArcGIS Server - licenses.inami.gov.mz
+owner:
+  location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 20
+  name: Spatial Dimension
+  type: Business
+  link: https://www.spatialdimension.com
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- arcgisserver
+- geospatial
+- GIS
+- REST
+- Spatial Dimension
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme

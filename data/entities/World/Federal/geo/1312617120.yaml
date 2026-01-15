@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,15 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: Geonetwork data catalog website
+description: GeoNetwork-based geospatial data catalog and geoportal providing comprehensive
+  access to geographic datasets, map layers, and spatial metadata through multiple standard
+  protocols including CSW (Catalog Service for the Web), OpenSearch, OAI-PMH (Open Archives
+  Initiative Protocol for Metadata Harvesting), and OpenAPI. Supports ISO 19115/19119 metadata
+  standards and enables discovery, access, and sharing of geospatial resources for research,
+  government, and public use. The platform facilitates interoperability through OGC-compliant
+  services and provides a centralized repository for geospatial information discovery and access.
+  Features include metadata harvesting, spatial data discovery, web service integration, and
+  standards-based data exchange capabilities for global geospatial data infrastructure.
 endpoints:
 - type: geonetwork:query
   url: https://13.126.17.120:8085/geonetwork/srv/eng/q
@@ -32,7 +40,9 @@ endpoints:
   url: https://13.126.17.120:8085/geonetwork/srv/eng/oaipmh?verb=Identify
   version: '2.0'
 id: '1312617120'
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://13.126.17.120:8085/geonetwork
 name: 13.126.17.120:8085/geonetwork
 owner:
@@ -47,10 +57,19 @@ owner:
   type: Central government
 properties:
   has_doi: true
+identifiers:
+- id: url
+  value: https://13.126.17.120:8085/geonetwork
+  url: https://13.126.17.120:8085/geonetwork
+- id: ip
+  value: 13.126.17.120
+- id: doi
+  value: 10.5281/zenodo.1312617120
+  url: https://doi.org/10.5281/zenodo.1312617120
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: public-domain
+  license_name: Public domain (government data)
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -58,6 +77,75 @@ software:
   id: geonetwork
   name: Geonetwork
 status: active
-tags: []
-topics: []
+tags:
+- geonetwork
+- geoportal
+- geospatial
+- metadata-catalog
+- metadata
+- catalog
+- csw
+- opensearch
+- oai-pmh
+- openapi
+- ogc
+- standards
+- sdi
+- spatial-data-infrastructure
+- iso19115
+- iso19119
+- has_api
+- government
+- open-data
+- research
+- discovery
+- sharing
+- web-services
+- data-discovery
+- spatial-data
+- geographic-information
+- interoperability
+- metadata-harvesting
+- data-exchange
+- global-data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geospatial
+  name: Geospatial
+  type: iso19115
+- id: Maps
+  name: Maps
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Data
+  name: Data
+  type: iso19115
+- id: Web Services
+  name: Web Services
+  type: iso19115
 uid: temp00000709

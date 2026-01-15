@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: GeoServer Data Catalog
+description: TERRASIGNA GeoServer instance providing comprehensive geospatial web services including WMS, WFS, WCS, WPS, WMTS, and CSW endpoints for environmental and geoscientific data covering Romania. The portal offers standardized OGC web services for accessing and visualizing geospatial datasets related to environmental monitoring, earth observation, and scientific research applications.
 endpoints:
 - type: wms111
   url: https://geoserver.deap.terrasigna.io/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -63,7 +63,18 @@ endpoints:
   url: https://geoserver.deap.terrasigna.io/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 id: geoserverdeapterrasignaio
-langs: []
+identifiers:
+- id: url
+  url: https://geoserver.deap.terrasigna.io/geoserver
+  value: https://geoserver.deap.terrasigna.io/geoserver
+- id: dataportals.org
+  url: http://dataportals.org/portal/geoserver-deap-terrasigna-io
+  value: geoserver-deap-terrasigna-io
+langs:
+- id: RO
+  name: Romanian
+- id: EN
+  name: English
 link: https://geoserver.deap.terrasigna.io/geoserver
 name: geoserver.deap.terrasigna.io/geoserver
 owner:
@@ -79,11 +90,11 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Terms of Service apply
+  license_url: https://www.terrasigna.com/
   privacy_policy_url: null
-  rights_type: inapplicable
-  tos_url: null
+  rights_type: global
+  tos_url: https://www.terrasigna.com/
 software:
   id: geoserver
   name: GeoServer

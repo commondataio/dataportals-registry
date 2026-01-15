@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -14,7 +14,7 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: Data catalog CKAN portal example.
+description: Beta testing instance of CKAN open data portal software. This is a demonstration and testing environment for CKAN features and functionality, showcasing the capabilities of the CKAN data catalog platform. The portal serves as a sandbox for testing new CKAN features, API endpoints, and user interface improvements before they are released to production environments. It provides developers and administrators with a preview of upcoming CKAN functionality and allows for experimentation with data catalog management workflows. This beta portal enables users to explore CKAN's open data cataloging capabilities, test API integrations, and evaluate the platform's metadata management features in a safe testing environment.
 endpoints:
 - type: ckan
   url: https://beta.ckan.org/api/3
@@ -26,7 +26,9 @@ endpoints:
   url: https://beta.ckan.org/api/3/action/package_list
   version: '3'
 id: betackanorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://beta.ckan.org
 name: beta.ckan.org
 owner:
@@ -40,9 +42,9 @@ owner:
   name: Government of Unknown
   type: Central government
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: AGPL-3.0
+  license_name: AGPL-3.0
+  license_url: https://www.gnu.org/licenses/agpl-3.0.html
   privacy_policy_url: null
   rights_type: granular
   tos_url: null
@@ -50,6 +52,51 @@ software:
   id: ckan
   name: CKAN
 status: active
-tags: []
-topics: []
+tags:
+- CKAN
+- Open data
+- Demo
+- Test
+- Beta
+- has_api
+- software
+- metadata
+- data catalog
+- testing environment
+- sandbox
+- demonstration
+- development
+- API
+- open source
+- portal
+- catalog platform
+- features
+- functionality
+- preview
+- experimentation
+topics:
+- id: opendata
+  name: Open data
+  type: custom
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: INTR
+  name: International issues
+  type: eudatatheme
+identifiers:
+- id: url
+  value: https://beta.ckan.org
+- id: github
+  url: https://github.com/ckan/ckan
+  value: ckan/ckan
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1055841
+  value: Q1055841
 uid: temp00004783

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,11 @@ coverage:
     macroregion:
       id: '151'
       name: 'Eastern Europe '
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Romanian geospatial data portal operated by Megagis providing geographic
+  datasets and map layers covering Romania. The portal offers ArcGIS Server REST services
+  for accessing geospatial data, including WMS, WFS, and other OGC-compliant web services.
+  Users can discover and access various geographic information system (GIS) datasets
+  and interactive map layers through standardized API endpoints.
 endpoints:
 - type: arcgis:rest:info
   url: https://date.megagis.ro/arcgis/rest/info?f=pjson
@@ -45,6 +48,12 @@ owner:
     level: 20
   name: Megagis
   type: Business
+identifiers:
+- id: url
+  url: https://date.megagis.ro/arcgis/rest/services
+  value: https://date.megagis.ro/arcgis/rest/services
+- id: domain
+  value: date.megagis.ro
 properties:
   has_doi: false
 rights:
@@ -52,12 +61,58 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- geoportal
+- geospatial
+- ArcGIS
+- Romania
+- GIS
+- WMS
+- WFS
+- OGC
+- REST API
+- ArcGIS Server
+- map layers
+- geographic datasets
+- web services
+- has_api
+- spatial data
+- interactive maps
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
 uid: temp00005806

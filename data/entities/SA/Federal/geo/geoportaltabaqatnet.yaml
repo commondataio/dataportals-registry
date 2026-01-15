@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Geospatial data catalog and geoportal
+description: Comprehensive geospatial data catalog and geoportal operated by Map Saudi, providing open access to diverse geospatial datasets and map layers covering Saudi Arabia. The platform utilizes GeoServer to deliver OGC-compliant web services including Web Map Service (WMS), Web Feature Service (WFS), Web Coverage Service (WCS), and Web Processing Service (WPS) protocols, enabling standardized access to geographic information for mapping, analysis, and integration purposes.
 endpoints:
 - type: wms111
   url: https://geoportal.tabaqat.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -65,6 +65,13 @@ owner:
     level: 20
   name: Map Saudi
   type: Business
+identifiers:
+- id: url
+  url: https://geoportal.tabaqat.net/geoserver/web
+  value: https://geoportal.tabaqat.net/geoserver/web
+- id: url
+  url: https://geoportal.tabaqat.net
+  value: https://geoportal.tabaqat.net
 properties:
   has_doi: false
 rights:
@@ -82,5 +89,26 @@ tags:
 - geospatial
 - GIS
 - data catalog
-topics: []
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
 uid: cdi00004684

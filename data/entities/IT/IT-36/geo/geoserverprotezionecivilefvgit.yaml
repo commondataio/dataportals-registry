@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,14 @@ coverage:
     subregion:
       id: IT-36
       name: Friuli Venezia Giulia
-description: Friuli Venezia Giulia geoserver
+description: GeoServer instance managed by Regione Autonoma Friuli Venezia Giulia
+  providing geospatial data services for civil protection and emergency management.
+  The service offers comprehensive access to geographic information through standard
+  OGC web services including WMS, WFS, WCS, WPS, WMTS, and TMS protocols, enabling
+  discovery and access to map layers and datasets for regional civil protection activities.
+  This geoportal supports disaster risk assessment, emergency response planning, and
+  real-time monitoring of natural hazards and critical infrastructure across the Friuli
+  Venezia Giulia region.
 endpoints:
 - type: wms111
   url: http://geoserver.protezionecivile.fvg.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -80,12 +87,16 @@ owner:
       name: Friuli Venezia Giulia
   name: Regione Autonoma Friuli Venezia Giulia
   type: Regional government
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/geoserver-protezionecivile-fvg-it
+  value: geoserver-protezionecivile-fvg-it
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Italian Open Data License (IODL 2.0) / CC-BY 4.0
+  license_url: https://www.dati.gov.it/content/italian-open-data-license-v20
   privacy_policy_url: null
   rights_type: inapplicable
   tos_url: null
@@ -93,7 +104,29 @@ software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
+tags:
+- geospatial
+- GIS
+- geoportal
+- geoserver
+- Italy
+- Friuli Venezia Giulia
+- civil protection
+- emergency management
+- disaster management
+- regional government
+- government
+- WMS
+- WFS
+- WCS
+- WPS
+- WMTS
+- TMS
+- web services
+- map layers
+- infrastructure
+- hazards
+- risk assessment
 topics:
 - id: REGI
   name: Regions and cities

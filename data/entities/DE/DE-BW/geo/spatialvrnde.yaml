@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,13 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Geospatial data portal of the Verkehrsverbund Rhein-Neckar (VRN), providing
+  comprehensive access to ArcGIS Server map services and spatial datasets for public
+  transport services in the Rhine-Neckar metropolitan region. The portal offers REST
+  services, SOAP services, and various export formats (KMZ, GeoJSON, etc.) for geospatial
+  data related to transportation infrastructure, routes, stops, stations, timetables,
+  and mobility services. Enables developers and researchers to integrate public transport
+  geodata into applications and analysis workflows.
 endpoints:
 - type: arcgis:rest:info
   url: https://spatial.vrn.de/data/rest/info?f=pjson
@@ -50,13 +55,20 @@ owner:
   type: Regional government
 properties:
   has_doi: false
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/spatial-vrn-de
+  value: spatial-vrn-de
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2512015
+  value: Q2512015
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
-  tos_url: null
+  rights_type: granular
+  tos_url: https://www.vrn.de/impressum/
 software:
   id: arcgisserver
   name: ArcGIS Server
@@ -66,5 +78,26 @@ tags:
 - services
 - spatial
 - vrn
-topics: []
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00004949

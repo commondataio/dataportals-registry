@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: ArcGIS REST services data catalog
+description: ArcGIS Server REST services catalog hosted on di-pgc.img.arcgis.com providing comprehensive geospatial datasets and map layers through standard ArcGIS REST API endpoints. The portal offers multiple access formats including REST JSON, SOAP, XML sitemap, geositemap, and KMZ for integration with various GIS applications and web mapping services. This geoportal enables developers and GIS professionals to discover and integrate various map layers, imagery, and spatial data for mapping, visualization, and spatial analysis applications across web and mobile platforms. The service provides access to diverse geospatial content including base maps, imagery services, feature services, tile services, and other spatial datasets that support geographic information systems, web mapping applications, and location-based services.
 endpoints:
 - type: arcgis:rest:info
   url: https://di-pgc.img.arcgis.com/arcgis/rest/info?f=pjson
@@ -30,7 +30,17 @@ endpoints:
 - type: arcgis:kmz
   url: https://di-pgc.img.arcgis.com/arcgis/rest/services?f=kmz
 id: dipgcimgarcgiscom
-langs: []
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+- id: FR
+  name: French
+- id: DE
+  name: German
+- id: ZH
+  name: Chinese
 link: https://di-pgc.img.arcgis.com/arcgis/rest/services
 name: di-pgc.img.arcgis.com Services
 owner:
@@ -45,17 +55,94 @@ owner:
   type: Business
 properties:
   has_doi: false
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/di-pgc-img-arcgis-com
+  value: di-pgc-img-arcgis-com
+- id: url
+  url: https://di-pgc.img.arcgis.com/arcgis/rest/services
+  value: https://di-pgc.img.arcgis.com/arcgis/rest/services
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
-  privacy_policy_url: null
+  license_id: esri-mla
+  license_name: Esri Master License Agreement
+  license_url: https://www.esri.com/en-us/legal/terms
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
   rights_type: global
-  tos_url: null
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- arcgis
+- rest
+- services
+- geospatial
+- geoportal
+- maps
+- api
+- has_api
+- arcgis-server
+- gis
+- datasets
+- map-layers
+- soap
+- sitemap
+- kmz
+- web-services
+- spatial-data
+- Esri
+- REST API
+- map services
+- feature services
+- tile services
+- imagery
+- cartography
+- spatial analysis
+- geodata
+- mapping
+- web-mapping
+- location-based-services
+- geographic-information-systems
+- base-maps
+- satellite-imagery
+- geospatial-data
+- spatial-datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
 uid: temp00003951

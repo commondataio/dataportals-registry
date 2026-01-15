@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,14 @@ coverage:
     subregion:
       id: US-CO
       name: Colorado
-description: Jefferson County ArcGIS REST Services
+description: Jefferson County ArcGIS REST Services provides comprehensive access to
+  geospatial datasets and map layers for Jefferson County, Colorado through ArcGIS Server
+  REST API endpoints. This geoportal offers a wide range of geographic information including
+  administrative boundaries, infrastructure, land use, transportation networks, and environmental
+  data. The service enables developers, researchers, and citizens to discover, access,
+  and integrate county geospatial resources into their applications and analyses. The platform
+  supports multiple service formats including REST, SOAP, and various export formats, making
+  it accessible for diverse use cases in GIS analysis, web mapping, and data integration.
 endpoints:
 - type: arcgis:rest:info
   url: https://mapservices2.jeffco.us/arcgis/rest/info?f=pjson
@@ -48,14 +55,18 @@ owner:
     subregion:
       id: US-CO
       name: Colorado
-  name: 'Jefferson County'
+  name: Jefferson County
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://mapservices2.jeffco.us/arcgis/rest/services
+  value: https://mapservices2.jeffco.us/arcgis/rest/services
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: cc-pdm
+  license_name: Public Domain
+  license_url: https://creativecommons.org/publicdomain/mark/1.0/
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -63,6 +74,57 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- Jefferson County
+- Colorado
+- ArcGIS
+- REST
+- geoportal
+- geospatial
+- GIS
+- map services
+- local government
+- ArcGIS Server
+- geospatial data
+- spatial data
+- web services
+- county data
+- open data
+- API
+- administrative boundaries
+- infrastructure
+- land use
+- transportation
+- environmental data
+- SOAP
+- web mapping
+- spatial analysis
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Planning Cadastre
+  name: Planning Cadastre
+  type: iso19115
 uid: temp00004380

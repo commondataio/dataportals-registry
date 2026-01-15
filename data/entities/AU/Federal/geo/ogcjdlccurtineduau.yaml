@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '053'
       name: Australia and New Zealand
-description: Geospatial data catalog via GeoServer
+description: GeoServer instance hosted by Curtin University's John de Laeter Centre (JDLC) providing comprehensive access to geospatial datasets and map layers via standard OGC protocols. The service supports multiple versions of Web Map Service (WMS 1.1.1, 1.3.0), Web Feature Service (WFS 1.0.0, 1.1.0, 2.0.0), Web Coverage Service (WCS 1.0.0, 1.1.0, 1.1.1, 2.0.1), Web Processing Service (WPS 1.0.0), Web Map Tile Service (WMTS 1.0.0), and Tile Map Service (TMS 1.0.0) protocols. This infrastructure enables researchers, educators, and students to discover, access, and integrate geospatial data for academic research, teaching, and collaborative projects across various disciplines including earth sciences, geography, environmental studies, and spatial analysis.
 endpoints:
 - type: wms111
   url: http://ogc-jdlc.curtin.edu.au:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -76,10 +76,17 @@ owner:
   type: Academy
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: http://ogc-jdlc.curtin.edu.au:80/geoserver
+  value: http://ogc-jdlc.curtin.edu.au:80/geoserver
+- id: ror
+  url: https://ror.org/02jz4aj89
+  value: 02jz4aj89
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
   rights_type: inapplicable
   tos_url: null
@@ -90,5 +97,29 @@ status: active
 tags:
 - geospatial
 - OGC
-topics: []
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
 uid: temp00005454

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -23,7 +23,19 @@ endpoints:
 - type: arcgis:rest:services
   url: https://services-eu1.arcgis.com/2ypUQspLVcN0KOBE/arcgis/rest/services?f=pjson
 id: serviceseu1arcgiscom
-langs: []
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+- id: DE
+  name: German
+- id: ES
+  name: Spanish
+identifiers:
+- id: url
+  url: https://services-eu1.arcgis.com/2ypUQspLVcN0KOBE/arcgis/rest/services
+  value: https://services-eu1.arcgis.com/2ypUQspLVcN0KOBE/arcgis/rest/services
 link: https://services-eu1.arcgis.com/2ypUQspLVcN0KOBE/arcgis/rest/services
 name: ArcGIS REST Services Directory
 owner:
@@ -38,9 +50,9 @@ owner:
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: esri-mla
+  license_name: Esri Master License Agreement
+  license_url: https://www.esri.com/en-us/legal/terms
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -49,10 +61,21 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- GIS
-- REST
-- EU
+- Geographic Information System
+- REST API
 - arcgisserver
 - geospatial
-topics: []
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00005377

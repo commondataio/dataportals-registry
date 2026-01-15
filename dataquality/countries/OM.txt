@@ -1,163 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: OM
 ================================================================================
-Generated: 2025-12-10 13:17:17
+Generated: 2026-01-15 16:35:15
 Country Code: OM
-Total Records with Issues: 5
-Total Issues Found: 22
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[API_STATUS_MISMATCH]
-Count: 2
-Priority: IMPORTANT
-
-File: OM/geo/nsdig2gappsncsigovom.yaml
-Record ID: nsdig2gappsncsigovom
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=6
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[ENDPOINT_TO_VERIFY]
-Count: 9
-Priority: LOW
-
-File: OM/indicators/dpmarsagccstatorg.yaml
-Record ID: dpmarsagccstatorg
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[0].url
-Current Value: https://dp.marsa.gccstat.org/data.json
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/indicators/datagovom.yaml
-Record ID: datagovom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[0].url
-Current Value: https://data.gov.om/OpenSearch.xml
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/nsdig2gappsncsigovom.yaml
-Record ID: nsdig2gappsncsigovom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[0].url
-Current Value: http://nsdig2gapps.ncsi.gov.om:8080/sitemap.xml
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[0].url
-Current Value: https://mzgisportal.mzec.co.om/server/rest/info?f=pjson
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[1].url
-Current Value: https://mzgisportal.mzec.co.om/server/rest/services?f=pjson
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[2].url
-Current Value: https://mzgisportal.mzec.co.om/server/services?wsdl
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[3].url
-Current Value: https://mzgisportal.mzec.co.om/server/rest/services?f=sitemap
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[4].url
-Current Value: https://mzgisportal.mzec.co.om/server/rest/services?f=geositemap
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: ENDPOINT_TO_VERIFY
-Field: endpoints[5].url
-Current Value: https://mzgisportal.mzec.co.om/server/rest/services?f=kmz
-Suggested Action: Verify endpoint is reachable and returns expected response
-
-[MISSING_IDENTIFIERS]
-Count: 3
-Priority: IMPORTANT
-
-File: OM/indicators/sdmxmarsagccstatorg.yaml
-Record ID: sdmxmarsagccstatorg
-Issue: MISSING_IDENTIFIERS
-Field: identifiers
-Current Value: []
-Suggested Action: Add identifiers (e.g., wikidata, doi) if available
-
-File: OM/geo/nsdig2gappsncsigovom.yaml
-Record ID: nsdig2gappsncsigovom
-Issue: MISSING_IDENTIFIERS
-Field: identifiers
-Current Value: []
-Suggested Action: Add identifiers (e.g., wikidata, doi) if available
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: MISSING_IDENTIFIERS
-Field: identifiers
-Current Value: []
-Suggested Action: Add identifiers (e.g., wikidata, doi) if available
-
-[MISSING_LICENSE]
-Count: 5
-Priority: IMPORTANT
-
-File: OM/indicators/dpmarsagccstatorg.yaml
-Record ID: dpmarsagccstatorg
-Issue: MISSING_LICENSE
-Field: rights.license_*
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
-Suggested Action: Add license information (license_id, license_name, or license_url)
-
-File: OM/indicators/datagovom.yaml
-Record ID: datagovom
-Issue: MISSING_LICENSE
-Field: rights.license_*
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
-Suggested Action: Add license information (license_id, license_name, or license_url)
-
-File: OM/indicators/sdmxmarsagccstatorg.yaml
-Record ID: sdmxmarsagccstatorg
-Issue: MISSING_LICENSE
-Field: rights.license_*
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
-Suggested Action: Add license information (license_id, license_name, or license_url)
-
-File: OM/geo/nsdig2gappsncsigovom.yaml
-Record ID: nsdig2gappsncsigovom
-Issue: MISSING_LICENSE
-Field: rights.license_*
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
-Suggested Action: Add license information (license_id, license_name, or license_url)
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: MISSING_LICENSE
-Field: rights.license_*
-Current Value: {'license_id': None, 'license_name': None, 'license_url': None}
-Suggested Action: Add license information (license_id, license_name, or license_url)
-
 [MISSING_TOPICS]
-Count: 2
+Count: 1
 Priority: LOW
 
 File: OM/geo/nsdig2gappsncsigovom.yaml
@@ -166,59 +17,8 @@ Issue: MISSING_TOPICS
 Field: topics
 Current Value: []
 Suggested Action: Add relevant topics based on catalog_type and description
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: OM/geo/mzgisportalmzeccoom.yaml
-Record ID: mzgisportalmzeccoom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog of geospatial data services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 2 issues
-ENDPOINT_TO_VERIFY: 9 issues
-MISSING_IDENTIFIERS: 3 issues
-MISSING_LICENSE: 5 issues
-MISSING_TOPICS: 2 issues
-SHORT_DESCRIPTION: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: mzgisportalmzeccoom
-File: OM/geo/mzgisportalmzeccoom.yaml
-Issue Count: 11
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_IDENTIFIERS: identifiers
-  - MISSING_LICENSE: rights.license_*
-  - API_STATUS_MISMATCH: api
-  - ENDPOINT_TO_VERIFY: endpoints[0].url
-  - ENDPOINT_TO_VERIFY: endpoints[1].url
-  - ENDPOINT_TO_VERIFY: endpoints[2].url
-  - ENDPOINT_TO_VERIFY: endpoints[3].url
-  - ENDPOINT_TO_VERIFY: endpoints[4].url
-  - ENDPOINT_TO_VERIFY: endpoints[5].url
-  - SHORT_DESCRIPTION: description
-
-Record ID: nsdig2gappsncsigovom
-File: OM/geo/nsdig2gappsncsigovom.yaml
-Issue Count: 5
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_IDENTIFIERS: identifiers
-  - MISSING_LICENSE: rights.license_*
-  - API_STATUS_MISMATCH: api_status
-  - ENDPOINT_TO_VERIFY: endpoints[0].url
+MISSING_TOPICS: 1 issues

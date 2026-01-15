@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,24 +24,33 @@ endpoints:
 - type: arcgis:rest:services
   url: https://tiledimageservices8.arcgis.com/O5dJJKQg5b6RjO3d/arcgis/rest/services?f=pjson
 id: tiledimageservices8arcgiscom
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://tiledimageservices8.arcgis.com/O5dJJKQg5b6RjO3d/arcgis/rest/services
 name: tiledimageservices8.arcgis.com
 owner:
-  link: null
+  link: https://www.esri.com
   location:
     country:
       id: World
       name: World
     level: 0
-  name: tiledimageservices8
+  name: Esri
   type: Business
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://tiledimageservices8.arcgis.com/O5dJJKQg5b6RjO3d/arcgis/rest/services
+  value: https://tiledimageservices8.arcgis.com/O5dJJKQg5b6RjO3d/arcgis/rest/services
+- id: dataportals.org
+  url: http://dataportals.org/portal/tiledimageservices8-arcgis-com
+  value: tiledimageservices8-arcgis-com
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: esri-mla
+  license_name: Esri Master License Agreement
+  license_url: https://www.esri.com/en-us/legal/terms
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -58,5 +67,23 @@ tags:
 - arcgisserver
 - geospatial
 - ArcGIS Online
-topics: []
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: temp00005652

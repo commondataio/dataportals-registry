@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -45,12 +45,18 @@ owner:
     macroregion: *id001
   name: Government of Taiwan
   type: Central government
+identifiers:
+- id: url
+  url: https://talis.moa.gov.tw/server/rest/services
+  value: https://talis.moa.gov.tw/server/rest/services
+- id: domain
+  value: talis.moa.gov.tw
 properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Government Data License
+  license_url: https://data.gov.tw/license
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -58,6 +64,38 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- geoportal
+- agriculture
+- Taiwan
+- ArcGIS
+- geospatial
+- GIS
+- government
+- ArcGIS Server
+- REST API
+- map services
+- spatial data
+- Ministry of Agriculture
+- Taiwan government
+- open data
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
 uid: temp00005837

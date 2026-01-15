@@ -1,10 +1,11 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
-catalog_type: Open data portal
+api: true
+api_status: active
+catalog_type: Data search engine
 content_types:
 - dataset
+- map_layer
 coverage:
 - location:
     country:
@@ -14,15 +15,21 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: GeoSeer is a search engine for spatial (GIS) data. You can use it to
-  find WMS, WFS, WCS, and WMTS datasets, covering over 4.6 million datasets from public
-  OGC services.
+description: GeoSeer is a specialized geospatial search engine that indexes OGC-compliant
+  web services (WMS, WFS, WCS, WMTS) to provide centralized discovery of spatial datasets.
+  As of 2025, it indexes over 3.7 million distinct datasets from 4,374 active hosts
+  across 95 countries. The platform uses web crawlers to discover services, retrieves
+  GetCapabilities documents, and processes them to clean data, remove duplicates, and
+  determine spatial extents.
+endpoints:
+- type: custom_api
+  url: https://www.geoseer.net/api.php
 id: wwwgeoseernet
 langs:
 - id: EN
   name: English
 link: https://www.geoseer.net
-name: www.geoseer.net
+name: GeoSeer
 owner:
   link: https://www.geoseer.net
   location:
@@ -33,6 +40,15 @@ owner:
     macroregion: *id001
   name: GeoSeer
   type: Business
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
 software:
   id: searchengine
   name: Searchengine

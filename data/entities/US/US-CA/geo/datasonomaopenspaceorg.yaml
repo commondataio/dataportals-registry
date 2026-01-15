@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: US-CA
       name: California
-description: Data catalog with ArcGIS REST services
+description: Comprehensive geospatial data catalog for Sonoma Open Space District
+  providing ArcGIS REST services for accessing datasets and map layers. The portal
+  offers detailed information about open space preserves, parks, trails, conservation
+  areas, natural resources, and land management features throughout Sonoma County,
+  California. Users can access interactive maps, download geospatial datasets, and
+  utilize REST API endpoints for integration with GIS applications.
 endpoints:
 - type: arcgis:rest:info
   url: http://data.sonomaopenspace.org/arcgis/rest/info?f=pjson
@@ -33,6 +38,7 @@ endpoints:
 - type: arcgis:kmz
   url: http://data.sonomaopenspace.org/arcgis/rest/services?f=kmz
 id: datasonomaopenspaceorg
+identifiers: []
 langs:
 - id: EN
   name: English
@@ -63,7 +69,27 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
+tags:
+- geoportal
+- arcgis
+- rest
+- gis
+- geospatial
+- services
+- sonoma
+- openspace
+- california
+- government
+- has_api
+- parks
+- conservation
+- trails
+- natural-resources
+- land-management
+- open-space
+- preserves
+- county
+- local-government
 topics:
 - id: GOVE
   name: Government and public sector

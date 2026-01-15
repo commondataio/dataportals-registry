@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,16 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: ''
+description: GeoServer-based geoportal providing comprehensive geospatial data services
+  for the Municipality of San Benito, Rio Negro Province, Argentina. This platform
+  offers OGC-compliant web services including Web Map Service (WMS), Web Feature Service
+  (WFS), Web Coverage Service (WCS), Web Processing Service (WPS), Web Map Tile Service
+  (WMTS), and Catalog Service for the Web (CSW). The geoportal enables access to geographic
+  datasets, map layers, and spatial data infrastructure supporting local government
+  operations, urban planning, environmental management, and public service delivery
+  for the San Benito community. The platform serves as a critical component of the
+  municipality's spatial data infrastructure, facilitating data discovery, visualization,
+  and integration for various municipal departments and public stakeholders.
 endpoints:
 - type: wms111
   url: https://geoserver.sanbenito.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -82,17 +91,74 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://geoserver.sanbenito.gob.ar/geoserver
+  value: https://geoserver.sanbenito.gob.ar/geoserver
+- id: geoserver
+  url: https://geoserver.sanbenito.gob.ar/geoserver
+  value: geoserver.sanbenito.gob.ar
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Public domain (government data)
+  license_url: https://www.sanbenito.gob.ar
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- geoserver
+- geoportal
+- geospatial
+- OGC services
+- WMS
+- WFS
+- WCS
+- WPS
+- WMTS
+- CSW
+- web services
+- Argentina
+- Rio Negro
+- San Benito
+- local government
+- municipality
+- map layers
+- spatial data
+- geographic information system
+- GIS
+- open standards
+- tile services
+- metadata catalog
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Planning Cadastre
+  name: Planning Cadastre
+  type: iso19115
 uid: temp00003286

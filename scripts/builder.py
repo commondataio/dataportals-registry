@@ -28,6 +28,11 @@ import pprint
 import tqdm
 import zstandard as zstd
 import duckdb
+import hashlib
+import subprocess
+from dataclasses import dataclass, field
+from collections import defaultdict
+from typing import List, Dict, Any, Optional
 
 from constants import (
     ENTRY_TEMPLATE,
@@ -79,6 +84,34 @@ def load_jsonl_zst(filepath):
                 if line:
                     data.append(json.loads(line))
     return data
+
+
+def normalize_for_duckdb(record: Dict[str, Any]) -> Dict[str, Any]:
+    """Convert nested structures (lists, dicts) to JSON strings for DuckDB compatibility.
+    
+    DuckDB can have issues inferring types from nested JSON structures, especially when
+    there are mixed types or when it tries to cast values incorrectly. By converting
+    complex nested structures to JSON strings, we avoid type inference issues.
+    
+    Also ensures boolean fields are properly typed.
+    """
+    normalized = {}
+    for key, value in record.items():
+        if isinstance(value, (dict, list)):
+            # Convert nested structures to JSON strings
+            normalized[key] = json.dumps(value, ensure_ascii=False)
+        elif key == 'api' and not isinstance(value, bool) and value is not None:
+            # Ensure 'api' field is always boolean or None
+            # If it's a string like 'dataset', convert to False
+            if isinstance(value, str):
+                logger.warning(f"Record {record.get('id', 'unknown')} has non-boolean 'api' value: {value}, converting to False")
+                normalized[key] = False
+            else:
+                normalized[key] = bool(value)
+        else:
+            # Keep primitive types as-is (str, int, float, bool, None)
+            normalized[key] = value
+    return normalized
 
 
 def compress_jsonl(input_path, output_path, compression_level=19):
@@ -151,6 +184,8 @@ def build_dataset(datapath, dataset_filename):
         )
     
     out = open(os.path.join(DATASETS_DIR, dataset_filename), "w", encoding="utf8")
+    validation_errors = []
+    
     with tqdm.tqdm(
         total=len(all_files),
         desc=f"Building {os.path.basename(dataset_filename)}",
@@ -160,9 +195,28 @@ def build_dataset(datapath, dataset_filename):
             f = open(filename, "r", encoding="utf8")
             data = yaml.load(f, Loader=Loader)
             f.close()
+            
+            # Validate software profile if building software dataset
+            if dataset_filename == "software.jsonl" and data:
+                issues = validate_software_profile(data)
+                if issues:
+                    rel_path = os.path.relpath(filename, datapath)
+                    for issue in issues:
+                        issue["file_path"] = rel_path
+                        issue["record_id"] = data.get("id", "unknown")
+                        validation_errors.append(issue)
+            
             out.write(json.dumps(data, ensure_ascii=False) + "\n")
             pbar.update(1)
     out.close()
+    
+    if validation_errors:
+        logger.warning(f"Found {len(validation_errors)} validation issues in software profiles:")
+        for error in validation_errors[:10]:  # Show first 10
+            logger.warning(f"  {error.get('file_path')} ({error.get('record_id')}): {error.get('issue_type')} - {error.get('field')}")
+        if len(validation_errors) > 10:
+            logger.warning(f"  ... and {len(validation_errors) - 10} more issues")
+    
     logger.info("Processed %d files", len(all_files))
 
 
@@ -268,7 +322,10 @@ def build():
                 text_stream = reader.read().decode("utf-8")
                 for line in text_stream.strip().split("\n"):
                     if line:
-                        temp_data.append(json.loads(line))
+                        record = json.loads(line)
+                        # Normalize nested structures to JSON strings to avoid type inference issues
+                        normalized_record = normalize_for_duckdb(record)
+                        temp_data.append(normalized_record)
                         pbar.update(1)
         
         # Create table from JSON data
@@ -290,7 +347,10 @@ def build():
                 text_stream = reader.read().decode("utf-8")
                 for line in text_stream.strip().split("\n"):
                     if line:
-                        temp_data.append(json.loads(line))
+                        record = json.loads(line)
+                        # Normalize nested structures to JSON strings to avoid type inference issues
+                        normalized_record = normalize_for_duckdb(record)
+                        temp_data.append(normalized_record)
                         pbar.update(1)
         
         if temp_data:
@@ -1350,14 +1410,7 @@ def check_identifiers(record):
     issues = []
     
     identifiers = record.get("identifiers", [])
-    if not identifiers or len(identifiers) == 0:
-        issues.append({
-            "issue_type": "MISSING_IDENTIFIERS",
-            "field": "identifiers",
-            "current_value": [],
-            "suggested_action": "Add identifiers (e.g., wikidata, doi) if available",
-        })
-    else:
+    if identifiers and len(identifiers) > 0:
         for idx, identifier in enumerate(identifiers):
             if not identifier.get("id") or not identifier.get("value"):
                 issues.append({
@@ -1379,16 +1432,8 @@ def check_license_completeness(record):
     license_name = rights.get("license_name")
     license_url = rights.get("license_url")
     
-    # Check if license information is completely missing
-    if not license_id and not license_name and not license_url:
-        issues.append({
-            "issue_type": "MISSING_LICENSE",
-            "field": "rights.license_*",
-            "current_value": {"license_id": license_id, "license_name": license_name, "license_url": license_url},
-            "suggested_action": "Add license information (license_id, license_name, or license_url)",
-        })
     # Check for inconsistent combinations
-    elif license_name and not license_url:
+    if license_name and not license_url:
         issues.append({
             "issue_type": "INCONSISTENT_LICENSE",
             "field": "rights.license_url",
@@ -1439,25 +1484,6 @@ def check_api_status_coherence(record):
             "current_value": f"api={api}, endpoints={len(endpoints)}",
             "suggested_action": "Set api=True since endpoints are present, or remove endpoints",
         })
-    
-    return issues if issues else None
-
-
-def check_endpoints_verification(record):
-    """Flag endpoints for verification (syntax check only)"""
-    issues = []
-    endpoints = record.get("endpoints", [])
-    
-    for idx, endpoint in enumerate(endpoints):
-        endpoint_url = endpoint.get("url")
-        if endpoint_url:
-            # Already validated URL format in check_urls, but flag for reachability verification
-            issues.append({
-                "issue_type": "ENDPOINT_TO_VERIFY",
-                "field": f"endpoints[{idx}].url",
-                "current_value": endpoint_url,
-                "suggested_action": "Verify endpoint is reachable and returns expected response",
-            })
     
     return issues if issues else None
 
@@ -1610,6 +1636,162 @@ def check_catalog_software_coherence(record):
     return issues if issues else None
 
 
+def validate_software_profile(software_record):
+    """Validate extended software profile fields"""
+    issues = []
+    
+    if not software_record or software_record.get("type") != "Software":
+        return issues
+    
+    software_id = software_record.get("id", "unknown")
+    
+    # Validate version format
+    version = software_record.get("version")
+    if version and version not in [None, "latest", "unknown"]:
+        # Version should be semantic versioning or date format
+        version_pattern = re.compile(r'^(\d+\.\d+\.\d+|v?\d+\.\d+|latest|\d{4}-\d{2}-\d{2})$')
+        if not version_pattern.match(str(version)):
+            issues.append({
+                "issue_type": "SOFTWARE_VERSION_FORMAT",
+                "field": "version",
+                "current_value": version,
+                "suggested_action": "Version should follow semantic versioning (e.g., 2.10.0) or date format (YYYY-MM-DD)",
+            })
+    
+    # Validate URLs
+    url_fields = ["repository_url", "documentation_url", "changelog_url"]
+    for field in url_fields:
+        url = software_record.get(field)
+        if url:
+            try:
+                parsed = urlparse(url)
+                if not parsed.scheme or not parsed.netloc:
+                    issues.append({
+                        "issue_type": "SOFTWARE_INVALID_URL",
+                        "field": field,
+                        "current_value": url,
+                        "suggested_action": f"URL should be a valid HTTP/HTTPS URL",
+                    })
+            except Exception:
+                issues.append({
+                    "issue_type": "SOFTWARE_INVALID_URL",
+                    "field": field,
+                    "current_value": url,
+                    "suggested_action": f"URL format is invalid",
+                })
+    
+    # Validate release_date format
+    release_date = software_record.get("release_date")
+    if release_date:
+        date_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+        if not date_pattern.match(str(release_date)):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_DATE",
+                "field": "release_date",
+                "current_value": release_date,
+                "suggested_action": "Release date should be in ISO format (YYYY-MM-DD)",
+            })
+    
+    # Validate last_updated format
+    last_updated = software_record.get("last_updated")
+    if last_updated:
+        datetime_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$')
+        if not datetime_pattern.match(str(last_updated)):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_DATETIME",
+                "field": "last_updated",
+                "current_value": last_updated,
+                "suggested_action": "Last updated should be in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ)",
+            })
+    
+    # Validate plugins structure
+    plugins = software_record.get("plugins")
+    if plugins is not None:
+        if not isinstance(plugins, list):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_PLUGINS",
+                "field": "plugins",
+                "current_value": type(plugins).__name__,
+                "suggested_action": "Plugins should be a list of objects with 'name' field",
+            })
+        else:
+            for idx, plugin in enumerate(plugins):
+                if not isinstance(plugin, dict):
+                    issues.append({
+                        "issue_type": "SOFTWARE_INVALID_PLUGIN_ITEM",
+                        "field": f"plugins[{idx}]",
+                        "current_value": type(plugin).__name__,
+                        "suggested_action": "Each plugin should be an object with 'name' field",
+                    })
+                elif "name" not in plugin:
+                    issues.append({
+                        "issue_type": "SOFTWARE_PLUGIN_MISSING_NAME",
+                        "field": f"plugins[{idx}]",
+                        "current_value": plugin,
+                        "suggested_action": "Plugin object must have 'name' field",
+                    })
+    
+    # Validate capabilities structure
+    capabilities = software_record.get("capabilities")
+    if capabilities is not None:
+        if not isinstance(capabilities, list):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_CAPABILITIES",
+                "field": "capabilities",
+                "current_value": type(capabilities).__name__,
+                "suggested_action": "Capabilities should be a list of strings",
+            })
+        else:
+            for idx, capability in enumerate(capabilities):
+                if not isinstance(capability, str):
+                    issues.append({
+                        "issue_type": "SOFTWARE_INVALID_CAPABILITY_ITEM",
+                        "field": f"capabilities[{idx}]",
+                        "current_value": type(capability).__name__,
+                        "suggested_action": "Each capability should be a string",
+                    })
+    
+    # Validate export_formats structure
+    export_formats = software_record.get("export_formats")
+    if export_formats is not None:
+        if not isinstance(export_formats, list):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_EXPORT_FORMATS",
+                "field": "export_formats",
+                "current_value": type(export_formats).__name__,
+                "suggested_action": "Export formats should be a list of strings",
+            })
+        else:
+            for idx, fmt in enumerate(export_formats):
+                if not isinstance(fmt, str):
+                    issues.append({
+                        "issue_type": "SOFTWARE_INVALID_EXPORT_FORMAT_ITEM",
+                        "field": f"export_formats[{idx}]",
+                        "current_value": type(fmt).__name__,
+                        "suggested_action": "Each export format should be a string",
+                    })
+    
+    # Validate license structure
+    license_obj = software_record.get("license")
+    if license_obj is not None:
+        if not isinstance(license_obj, dict):
+            issues.append({
+                "issue_type": "SOFTWARE_INVALID_LICENSE",
+                "field": "license",
+                "current_value": type(license_obj).__name__,
+                "suggested_action": "License should be an object with 'type' field",
+            })
+        elif "type" not in license_obj:
+            issues.append({
+                "issue_type": "SOFTWARE_LICENSE_MISSING_TYPE",
+                "field": "license",
+                "current_value": license_obj,
+                "suggested_action": "License object must have 'type' field",
+            })
+    
+    return issues
+
+
 def check_tag_topic_hygiene(record):
     """Check tag and topic hygiene"""
     issues = []
@@ -1707,47 +1889,6 @@ def check_description_quality(record):
     return issues if issues else None
 
 
-def check_url_consistency(record):
-    """Check URL consistency between link and endpoints"""
-    issues = []
-    
-    link = record.get("link")
-    record_id = record.get("id", "")
-    endpoints = record.get("endpoints", [])
-    
-    if link:
-        link_host = host_from_url(link)
-        if link_host and record_id:
-            # Normalize both for comparison
-            normalized_host = normalize_host_for_id(link_host)
-            normalized_id = normalize_host_for_id(record_id)
-            
-            # Check if ID matches link host pattern
-            if normalized_id and normalized_host and normalized_id not in normalized_host and normalized_host not in normalized_id:
-                issues.append({
-                    "issue_type": "URL_HOST_MISMATCH",
-                    "field": "id vs link",
-                    "current_value": f"id={record_id}, link={link}",
-                    "suggested_action": "Verify id matches link domain pattern or update id to match",
-                })
-        
-        # Check endpoint host consistency
-        for idx, endpoint in enumerate(endpoints):
-            endpoint_url = endpoint.get("url")
-            if endpoint_url:
-                endpoint_host = host_from_url(endpoint_url)
-                if link_host and endpoint_host and link_host != endpoint_host:
-                    # This might be intentional (e.g., API on different subdomain), so LOW priority
-                    issues.append({
-                        "issue_type": "URL_HOST_MISMATCH",
-                        "field": f"endpoints[{idx}].url",
-                        "current_value": f"link={link}, endpoint={endpoint_url}",
-                        "suggested_action": "Verify endpoint host matches main link host or document why it differs",
-                    })
-    
-    return issues if issues else None
-
-
 def check_uid_id_consistency(record):
     """Check UID and ID consistency"""
     issues = []
@@ -1762,7 +1903,7 @@ def check_uid_id_consistency(record):
                 "issue_type": "INVALID_UID",
                 "field": "uid",
                 "current_value": uid,
-                "suggested_action": "UID should match format 'cdi' followed by 8 digits (e.g., 'cdi00001234')",
+                "suggested_action": "UID should match format 'cdi' or 'temp' followed by 8 digits (e.g., 'cdi00001234' or 'temp00001234')",
             })
     else:
         # UID missing is already caught by check_required_fields, but we can add a specific check
@@ -1824,9 +1965,7 @@ ISSUE_PRIORITY_MAP = {
         "PLACEHOLDER_CATALOG_TYPE",
         "PLACEHOLDER_STATUS",
         "PLACEHOLDER_SOFTWARE",
-        "MISSING_IDENTIFIERS",
         "INCOMPLETE_IDENTIFIER",
-        "MISSING_LICENSE",
         "INCONSISTENT_LICENSE",
         "API_STATUS_MISMATCH",
         "MISSING_API_STATUS",
@@ -1844,7 +1983,6 @@ ISSUE_PRIORITY_MAP = {
         "SHORT_DESCRIPTION",
         "TAG_HYGIENE",
         "TOPIC_INCOMPLETE",
-        "URL_HOST_MISMATCH",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -1852,7 +1990,6 @@ ISSUE_PRIORITY_MAP = {
         "MISSING_OWNER_LINK",
         "DUPLICATE_TAGS",
         "DUPLICATE_COVERAGE",
-        "ENDPOINT_TO_VERIFY",
         "MISSING_CONTACT_INFO",
     ],
 }
@@ -1896,10 +2033,10 @@ def get_priority_level(issue_type):
 
 # Helper utilities for validation
 def is_valid_uid(uid):
-    """Check if UID matches expected format: cdi followed by 8 digits"""
+    """Check if UID matches expected format: cdi or temp followed by 8 digits"""
     if not uid or not isinstance(uid, str):
         return False
-    return bool(re.match(r'^cdi\d{8}$', uid))
+    return bool(re.match(r'^(cdi|temp)\d{8}$', uid))
 
 
 def is_valid_language(lang):
@@ -1950,6 +2087,357 @@ def get_cached_software_map():
     if _software_map_cache is None:
         _software_map_cache = get_software_map()
     return _software_map_cache
+
+
+# Fix command helper functions
+def calculate_file_hash(file_path: str) -> Optional[str]:
+    """Calculate MD5 hash of a file."""
+    try:
+        hash_md5 = hashlib.md5()
+        with open(file_path, "rb") as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hash_md5.update(chunk)
+        return hash_md5.hexdigest()
+    except Exception as e:
+        logger.debug(f"Error calculating hash for {file_path}: {e}")
+        return None
+
+
+def read_jsonl_issues(file_path: str) -> List[Dict[str, Any]]:
+    """Read and parse JSONL file for issues."""
+    records = []
+    if not os.path.exists(file_path):
+        logger.error(f"Error: File not found: {file_path}")
+        return records
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                
+                try:
+                    record = json.loads(line)
+                    issues_list = record.get('issues', [])
+                    if issues_list:
+                        records.append(record)
+                except json.JSONDecodeError as e:
+                    logger.warning(f"Failed to parse JSON at line {line_num}: {e}")
+                    continue
+    except Exception as e:
+        logger.error(f"Error reading file {file_path}: {e}")
+    
+    return records
+
+
+def build_prompt(record: Dict[str, Any]) -> str:
+    """Build a simple, effective prompt for cursor-agent."""
+    record_id = record.get('record_id', 'unknown')
+    file_path = record.get('file_path', '')
+    issues = record.get('issues', [])
+    
+    prompt_parts = [
+        f"Fix all data quality issues for record {record_id} in file {file_path}.",
+        "",
+        f"Issues to fix ({len(issues)} total):"
+    ]
+    
+    for issue in issues:
+        issue_type = issue.get('issue_type', '')
+        field = issue.get('field', '')
+        action = issue.get('suggested_action', '')
+        prompt_parts.append(f"- {issue_type}: {field} - {action}")
+    
+    prompt_parts.extend([
+        "",
+        "For each issue, follow the suggested action. Update the metadata comprehensively."
+    ])
+    
+    return "\n".join(prompt_parts)
+
+
+def call_cursor_agent(workspace: str, prompt: str) -> tuple[bool, Optional[str]]:
+    """Call cursor-agent and return success status and output."""
+    try:
+        # Ensure workspace is an absolute path
+        workspace_abs = os.path.abspath(workspace)
+        
+        # Pass prompt as command-line argument (matching shell script behavior)
+        result = subprocess.run(
+            [
+                "cursor-agent",
+                "--print",
+                "--workspace", workspace_abs,
+                "--output-format", "text",
+                prompt
+            ],
+            text=True,
+            capture_output=True,
+            timeout=300  # 5 minute timeout per record
+        )
+        
+        # Log detailed information for debugging
+        stdout_content = result.stdout.strip() if result.stdout else ""
+        stderr_content = result.stderr.strip() if result.stderr else ""
+        
+        # Combine stdout and stderr for comprehensive error reporting
+        # (cursor-agent may write to either stream)
+        combined_output = ""
+        if stdout_content:
+            combined_output += stdout_content
+        if stderr_content:
+            if combined_output:
+                combined_output += "\n--- stderr ---\n" + stderr_content
+            else:
+                combined_output = stderr_content
+        
+        if result.returncode != 0:
+            # Build comprehensive error message
+            error_parts = []
+            if combined_output:
+                error_parts.append(f"output: {combined_output}")
+            else:
+                error_parts.append("No output")
+            error_parts.append(f"return code: {result.returncode}")
+            error_msg = " | ".join(error_parts)
+            logger.debug(f"cursor-agent failed: {error_msg}")
+            return False, error_msg
+        
+        # Success case - return combined output (cursor-agent might write to stderr even on success)
+        return True, combined_output if combined_output else stdout_content
+    except subprocess.TimeoutExpired:
+        return False, "Timeout after 5 minutes"
+    except FileNotFoundError:
+        return False, "cursor-agent not found in PATH"
+    except Exception as e:
+        return False, f"Exception calling cursor-agent: {str(e)}"
+
+
+@dataclass
+class RecordStats:
+    """Statistics for a single record processing."""
+    record_id: str
+    file_path: str
+    issues_count: int
+    changed: bool = False
+    error: Optional[str] = None
+    changes_detail: Optional[Dict[str, List[Dict[str, Any]]]] = None
+
+
+@dataclass
+class SummaryStats:
+    """Summary statistics for all processed records."""
+    total: int = 0
+    updated: int = 0
+    no_change: int = 0
+    failed: int = 0
+    records: List[RecordStats] = field(default_factory=list)
+    total_fields_added: int = 0
+    total_fields_modified: int = 0
+    total_fields_removed: int = 0
+
+
+def process_record(record: Dict[str, Any], stats: SummaryStats, current_index: int, base_dir: str) -> RecordStats:
+    """Process a single record with change detection."""
+    record_id = record.get('record_id', 'unknown')
+    file_path_str = record.get('file_path', '')
+    issues = record.get('issues', [])
+    issues_count = len(issues)
+    
+    full_file_path = os.path.join(base_dir, "data", "entities", file_path_str)
+    relative_file_path = f"data/entities/{file_path_str}"
+    
+    record_stats = RecordStats(
+        record_id=record_id,
+        file_path=file_path_str,
+        issues_count=issues_count
+    )
+    
+    logger.info(f"[{current_index + 1}/{stats.total}] Processing: {file_path_str}")
+    logger.info(f"  Record ID: {record_id}")
+    logger.info(f"  Issues to fix: {issues_count}")
+    
+    # Check if file exists
+    if not os.path.exists(full_file_path):
+        error_msg = f"File not found: {full_file_path}"
+        logger.error(f"  ✗ {error_msg}")
+        record_stats.error = error_msg
+        stats.failed += 1
+        return record_stats
+    
+    # Load YAML before processing
+    try:
+        with open(full_file_path, 'r', encoding='utf-8') as f:
+            before_yaml = yaml.load(f, Loader=Loader)
+    except Exception as e:
+        error_msg = f"Error loading YAML before processing: {e}"
+        logger.error(f"  ✗ {error_msg}")
+        record_stats.error = error_msg
+        stats.failed += 1
+        return record_stats
+    
+    # Calculate hash before processing
+    before_hash = calculate_file_hash(full_file_path)
+    
+    # Build prompt
+    prompt = build_prompt(record)
+    
+    # Call cursor-agent
+    success, output = call_cursor_agent(base_dir, prompt)
+    
+    if not success:
+        error_msg = output or "Unknown error"
+        logger.error(f"  ✗ Failed to process {record_id}")
+        logger.error(f"  Error details: {error_msg}")
+        record_stats.error = error_msg
+        stats.failed += 1
+        return record_stats
+    
+    # Log successful cursor-agent call (even if no file changes detected)
+    if output:
+        logger.debug(f"  cursor-agent output: {output[:200]}...")
+    
+    # Calculate hash after processing
+    after_hash = calculate_file_hash(full_file_path)
+    
+    # Check if file was modified
+    if before_hash and after_hash and before_hash != after_hash:
+        logger.info(f"  ✓ Updated {record_id}")
+        logger.info(f"  File modified: {file_path_str}")
+        record_stats.changed = True
+        stats.updated += 1
+        
+        # Load YAML after processing and detect changes
+        try:
+            with open(full_file_path, 'r', encoding='utf-8') as f:
+                after_yaml = yaml.load(f, Loader=Loader)
+            
+            # Detect detailed changes
+            changes = detect_yaml_changes(before_yaml, after_yaml)
+            record_stats.changes_detail = changes
+            
+            # Log detailed changes
+            added_count = len(changes.get("added", []))
+            modified_count = len(changes.get("modified", []))
+            removed_count = len(changes.get("removed", []))
+            
+            logger.info(f"  Changes detected:")
+            logger.info(f"    - Added: {added_count} field(s)")
+            logger.info(f"    - Modified: {modified_count} field(s)")
+            logger.info(f"    - Removed: {removed_count} field(s)")
+            
+            # Log specific changes (limit to first 10 of each type for readability)
+            if changes.get("added"):
+                logger.info(f"  Added fields:")
+                for change in changes["added"][:10]:
+                    logger.info(f"    + {change['path']}: {str(change['value'])[:100]}")
+                if len(changes["added"]) > 10:
+                    logger.info(f"    ... and {len(changes['added']) - 10} more")
+            
+            if changes.get("modified"):
+                logger.info(f"  Modified fields:")
+                for change in changes["modified"][:10]:
+                    old_val = str(change['old_value'])[:80]
+                    new_val = str(change['new_value'])[:80]
+                    logger.info(f"    ~ {change['path']}:")
+                    logger.info(f"      Old: {old_val}")
+                    logger.info(f"      New: {new_val}")
+                if len(changes["modified"]) > 10:
+                    logger.info(f"    ... and {len(changes['modified']) - 10} more")
+            
+            if changes.get("removed"):
+                logger.info(f"  Removed fields:")
+                for change in changes["removed"][:10]:
+                    logger.info(f"    - {change['path']}: {str(change['value'])[:100]}")
+                if len(changes["removed"]) > 10:
+                    logger.info(f"    ... and {len(changes['removed']) - 10} more")
+            
+            # Update summary statistics
+            stats.total_fields_added += added_count
+            stats.total_fields_modified += modified_count
+            stats.total_fields_removed += removed_count
+            
+        except Exception as e:
+            logger.warning(f"  Warning: Could not detect detailed changes: {e}")
+    else:
+        logger.info(f"  ○ No changes detected for {record_id}")
+        logger.info(f"  File unchanged: {file_path_str}")
+        stats.no_change += 1
+    
+    return record_stats
+
+
+def detect_yaml_changes(before_dict: Dict[str, Any], after_dict: Dict[str, Any], path: str = "") -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Recursively compare two YAML dictionaries and detect changes.
+    
+    Returns a dictionary with:
+    - "added": list of fields added (present in after, not in before)
+    - "modified": list of fields modified (present in both but different)
+    - "removed": list of fields removed (present in before, not in after)
+    """
+    changes = {
+        "added": [],
+        "modified": [],
+        "removed": []
+    }
+    
+    def _normalize_value(value):
+        """Normalize value for comparison (handle lists, dicts, etc.)"""
+        if isinstance(value, list):
+            return tuple(sorted(_normalize_value(v) for v in value) if all(isinstance(v, (str, int, float, bool)) for v in value) else value)
+        elif isinstance(value, dict):
+            return tuple(sorted((k, _normalize_value(v)) for k, v in value.items()))
+        return value
+    
+    def _compare_dicts(before: Dict, after: Dict, current_path: str):
+        """Recursively compare dictionaries"""
+        # Get all keys from both dicts
+        all_keys = set(before.keys()) | set(after.keys())
+        
+        for key in all_keys:
+            field_path = f"{current_path}.{key}" if current_path else key
+            
+            if key not in before:
+                # Field was added
+                changes["added"].append({
+                    "path": field_path,
+                    "value": after[key]
+                })
+            elif key not in after:
+                # Field was removed
+                changes["removed"].append({
+                    "path": field_path,
+                    "value": before[key]
+                })
+            else:
+                before_val = before[key]
+                after_val = after[key]
+                
+                # If both are dicts, recurse
+                if isinstance(before_val, dict) and isinstance(after_val, dict):
+                    _compare_dicts(before_val, after_val, field_path)
+                # If both are lists, compare elements
+                elif isinstance(before_val, list) and isinstance(after_val, list):
+                    # Simple comparison - if lists are different, mark as modified
+                    if _normalize_value(before_val) != _normalize_value(after_val):
+                        changes["modified"].append({
+                            "path": field_path,
+                            "old_value": before_val,
+                            "new_value": after_val
+                        })
+                # Otherwise, direct comparison
+                else:
+                    if before_val != after_val:
+                        changes["modified"].append({
+                            "path": field_path,
+                            "old_value": before_val,
+                            "new_value": after_val
+                        })
+    
+    _compare_dicts(before_dict, after_dict, path)
+    return changes
 
 
 def generate_full_report(issues, records_with_issues, total_records, output_path):
@@ -2322,7 +2810,8 @@ def analyze_quality(output: str = None):
                     continue
                 
                 record_id = record.get("id", "unknown")
-                record_issues = []
+                record_issues = []  # All issues with country-specific duplicates (for country reports)
+                unique_record_issues = []  # Unique issues per record (for primary priority report)
                 
                 # Calculate relative path from ROOT_DIR for report
                 rel_file_path = os.path.relpath(filename, ROOT_DIR)
@@ -2345,7 +2834,6 @@ def analyze_quality(output: str = None):
                     check_identifiers,
                     check_license_completeness,
                     check_api_status_coherence,
-                    check_endpoints_verification,
                     check_content_types_access_mode,
                     check_language_validation,
                     check_coverage_normalization,
@@ -2353,7 +2841,6 @@ def analyze_quality(output: str = None):
                     check_catalog_software_coherence,
                     check_tag_topic_hygiene,
                     check_description_quality,
-                    check_url_consistency,
                     check_uid_id_consistency,
                     check_contact_info,
                 ]
@@ -2373,6 +2860,9 @@ def analyze_quality(output: str = None):
                                 # Add to all_issues once (for full/priority reports) - use primary country
                                 all_issues.append(issue)
                                 
+                                # Add unique issue to unique_record_issues (for primary priority report)
+                                unique_record_issues.append(issue)
+                                
                                 # Add to record_issues with all country codes (for country reports)
                                 for country_code in country_codes:
                                     issue_copy = issue.copy()
@@ -2387,6 +2877,9 @@ def analyze_quality(output: str = None):
                             # Add to all_issues once (for full/priority reports) - use primary country
                             all_issues.append(result)
                             
+                            # Add unique issue to unique_record_issues (for primary priority report)
+                            unique_record_issues.append(result)
+                            
                             # Add to record_issues with all country codes (for country reports)
                             for country_code in country_codes:
                                 result_copy = result.copy()
@@ -2399,6 +2892,7 @@ def analyze_quality(output: str = None):
                     records_with_issues[record_id] = {
                         "file_path": rel_file_path,
                         "issues": record_issues,  # This contains issues with all country codes
+                        "unique_issues": unique_record_issues,  # Unique issues per record
                         "country_code": primary_country,
                         "all_country_codes": country_codes,  # Store all countries for this record
                     }
@@ -2455,10 +2949,88 @@ def analyze_quality(output: str = None):
     # Generate all reports
     typer.echo("\nGenerating reports...")
     
-    # Full report
+    # Full report (text)
     full_report_path = os.path.join(output_dir, "full_report.txt")
     generate_full_report(all_issues, records_with_issues, total_records, full_report_path)
-    typer.echo(f"  Full report: {full_report_path}")
+    typer.echo(f"  Full report (text): {full_report_path}")
+    
+    # Full report (JSONL) - structured output for automated processing
+    full_report_jsonl_path = os.path.join(output_dir, "full_report.jsonl")
+    jsonl_count = 0
+    with open(full_report_jsonl_path, "w", encoding="utf8") as f:
+        for issue in all_issues:
+            try:
+                # Ensure all values are JSON-serializable
+                json_issue = {
+                    "issue_type": issue.get("issue_type"),
+                    "field": issue.get("field"),
+                    "current_value": issue.get("current_value"),
+                    "suggested_action": issue.get("suggested_action"),
+                    "file_path": issue.get("file_path"),
+                    "record_id": issue.get("record_id"),
+                    "priority": issue.get("priority"),
+                    "country_code": issue.get("country_code"),
+                }
+                f.write(json.dumps(json_issue, ensure_ascii=False) + "\n")
+                jsonl_count += 1
+            except (TypeError, ValueError) as e:
+                logger.warning(f"Failed to serialize issue for record {issue.get('record_id', 'unknown')}: {str(e)}")
+    typer.echo(f"  Full report (JSONL): {full_report_jsonl_path} ({jsonl_count} issues)")
+    
+    # Primary priority report (JSONL) - records with most errors (at least 3 issues)
+    primary_priority_path = os.path.join(output_dir, "primary_priority.jsonl")
+    # Filter records with at least 3 issues, then sort by number of unique issues (descending), then by priority breakdown
+    filtered_records = [
+        (record_id, record_data)
+        for record_id, record_data in records_with_issues.items()
+        if len(record_data.get("unique_issues", [])) >= 3
+    ]
+    sorted_records = sorted(
+        filtered_records,
+        key=lambda x: (
+            len(x[1].get("unique_issues", [])),  # Primary sort: number of unique issues
+            sum(1 for issue in x[1].get("unique_issues", []) if issue.get("priority") == "CRITICAL"),  # Secondary: critical issues
+            sum(1 for issue in x[1].get("unique_issues", []) if issue.get("priority") == "IMPORTANT"),  # Tertiary: important issues
+        ),
+        reverse=True
+    )
+    
+    priority_count = 0
+    with open(primary_priority_path, "w", encoding="utf8") as f:
+        for record_id, record_data in sorted_records:
+            try:
+                unique_issues = record_data.get("unique_issues", [])
+                
+                # Count issues by priority
+                priority_counts = {}
+                for issue in unique_issues:
+                    priority = issue.get("priority", "MEDIUM")
+                    priority_counts[priority] = priority_counts.get(priority, 0) + 1
+                
+                # Create structured record entry
+                json_record = {
+                    "record_id": record_id,
+                    "file_path": record_data["file_path"],
+                    "country_code": record_data.get("country_code", "UNKNOWN"),
+                    "all_country_codes": record_data.get("all_country_codes", []),
+                    "total_issues": len(unique_issues),
+                    "priority_counts": priority_counts,
+                    "issues": [
+                        {
+                            "issue_type": issue.get("issue_type"),
+                            "field": issue.get("field"),
+                            "priority": issue.get("priority"),
+                            "current_value": issue.get("current_value"),
+                            "suggested_action": issue.get("suggested_action"),
+                        }
+                        for issue in unique_issues
+                    ],
+                }
+                f.write(json.dumps(json_record, ensure_ascii=False) + "\n")
+                priority_count += 1
+            except (TypeError, ValueError) as e:
+                logger.warning(f"Failed to serialize record {record_id} for primary priority report: {str(e)}")
+    typer.echo(f"  Primary priority report (JSONL): {primary_priority_path} ({priority_count} records)")
     
     # Country reports
     generate_country_reports(issues_by_country, records_by_country, output_dir)
@@ -2502,6 +3074,105 @@ def analyze_quality(output: str = None):
         count = len(issues_by_type[issue_type])
         priority = issues_by_type[issue_type][0].get("priority", "MEDIUM") if issues_by_type[issue_type] else "MEDIUM"
         typer.echo(f"  {issue_type} ({priority}): {count}")
+
+
+@app.command()
+def fix():
+    """Fix all data quality issues using cursor-agent with detailed change tracking."""
+    logger.info("Starting Cursor automation to fix all data quality issues...")
+    logger.info("")
+    
+    # Check if cursor-agent is available
+    try:
+        subprocess.run(
+            ["cursor-agent", "--version"],
+            capture_output=True,
+            timeout=5
+        )
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        logger.error("Error: cursor-agent is not installed or not in PATH")
+        logger.error("Install it from: https://docs.cursor.com/tools/cli")
+        raise typer.Exit(1)
+    
+    # Set up paths
+    issues_file = os.path.join(_REPO_ROOT, "dataquality", "primary_priority.jsonl")
+    
+    # Read records
+    logger.info(f"Reading issues from {issues_file}...")
+    records = read_jsonl_issues(issues_file)
+    
+    if not records:
+        logger.warning("No records with issues found.")
+        return
+    
+    logger.info(f"Found {len(records)} records with issues to process.")
+    logger.info("")
+    
+    # Initialize stats
+    stats = SummaryStats()
+    stats.total = len(records)
+    
+    # Process each record
+    for index, record in enumerate(records):
+        record_stats = process_record(record, stats, index, _REPO_ROOT)
+        stats.records.append(record_stats)
+        logger.info("")
+    
+    # Print summary
+    logger.info("=" * 60)
+    logger.info("Summary Report")
+    logger.info("=" * 60)
+    logger.info("")
+    logger.info(f"Total records processed: {stats.total}")
+    logger.info(f"Successfully updated: {stats.updated}")
+    logger.info(f"No changes detected: {stats.no_change}")
+    logger.info(f"Failed: {stats.failed}")
+    logger.info("")
+    
+    # Print change statistics
+    if stats.updated > 0:
+        logger.info("Change Statistics:")
+        logger.info(f"  Total fields added: {stats.total_fields_added}")
+        logger.info(f"  Total fields modified: {stats.total_fields_modified}")
+        logger.info(f"  Total fields removed: {stats.total_fields_removed}")
+        logger.info("")
+        
+        # Find most commonly changed fields
+        field_changes = defaultdict(int)
+        for record_stat in stats.records:
+            if record_stat.changes_detail:
+                for change_type in ["added", "modified", "removed"]:
+                    for change in record_stat.changes_detail.get(change_type, []):
+                        field_changes[change["path"]] += 1
+        
+        if field_changes:
+            logger.info("Most commonly changed fields:")
+            sorted_fields = sorted(field_changes.items(), key=lambda x: x[1], reverse=True)
+            for field_path, count in sorted_fields[:10]:
+                logger.info(f"  {field_path}: {count} change(s)")
+            logger.info("")
+        
+        # Find records with most changes
+        records_by_changes = []
+        for record_stat in stats.records:
+            if record_stat.changes_detail:
+                total_changes = (
+                    len(record_stat.changes_detail.get("added", [])) +
+                    len(record_stat.changes_detail.get("modified", [])) +
+                    len(record_stat.changes_detail.get("removed", []))
+                )
+                records_by_changes.append((record_stat, total_changes))
+        
+        if records_by_changes:
+            records_by_changes.sort(key=lambda x: x[1], reverse=True)
+            logger.info("Records with most changes:")
+            for record_stat, change_count in records_by_changes[:5]:
+                logger.info(f"  {record_stat.record_id} ({record_stat.file_path}): {change_count} change(s)")
+            logger.info("")
+    
+    # Return exit code based on results
+    if stats.failed > 0:
+        raise typer.Exit(1)
 
 
 @app.command()

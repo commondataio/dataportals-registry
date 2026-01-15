@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,8 +18,9 @@ coverage:
     subregion:
       id: US-DC
       name: District of Columbia
-description: Extracted catalog information from the provided URL, structured according
-  to the specified vocabulary schema.
+description: Official geospatial data services portal for the District of Columbia
+  providing GIS data and map layers via ArcGIS REST API. Managed by DC Office of the
+  Chief Technology Officer (OCTO).
 endpoints:
 - type: arcgis:rest:info
   url: https://maps2.dcgis.dc.gov/dcgis/rest/info?f=pjson
@@ -53,10 +54,14 @@ owner:
   type: Local government
 properties:
   has_doi: false
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/district-of-columbia
+  value: district-of-columbia
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Public Domain
+  license_url: https://opendata.dc.gov/pages/terms-of-use
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -64,6 +69,47 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- ArcGIS
+- ArcGIS Server
+- GIS
+- geospatial
+- government
+- local-government
+- has_api
+- REST
+- washington-dc
+- district-of-columbia
+- geoportal
+- maps
+- geospatial-data
+- spatial-data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
 uid: temp00002803

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: ArcGIS REST services endpoint
+description: ArcGIS REST services endpoint providing comprehensive geospatial data and map services for Idaho, hosted by an academic institution. The portal offers access to environmental, geographic, and research datasets covering various aspects of Idaho's geography, ecology, and natural resources. Data is accessible through standard ArcGIS Server REST API interfaces, supporting multiple formats including JSON, SOAP, sitemap, and KMZ for integration with GIS applications and web mapping services.
 endpoints:
 - type: arcgis:rest:info
   url: https://insideidaho.org/arcgis/rest/info?f=pjson
@@ -30,7 +30,10 @@ endpoints:
 - type: arcgis:kmz
   url: https://insideidaho.org/arcgis/rest/services?f=kmz
 id: insideidahoorg
-langs: []
+identifiers: []
+langs:
+- id: EN
+  name: English
 link: https://insideidaho.org/arcgis/rest/services
 name: insideidaho.org/arcgis/rest/services
 owner:
@@ -46,11 +49,11 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Academic Use License
+  license_url: https://insideidaho.org/
   privacy_policy_url: null
-  rights_type: global
-  tos_url: null
+  rights_type: granular
+  tos_url: https://insideidaho.org/
 software:
   id: arcgisserver
   name: ArcGIS Server

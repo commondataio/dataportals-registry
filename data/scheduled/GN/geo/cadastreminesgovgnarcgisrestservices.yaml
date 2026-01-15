@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+description: 'ArcGIS Server instance providing geospatial services. Associated with
+  Spatial Dimension portal: https://guinee.cadastreminier.org/en/'
+endpoints:
+- type: arcgis:rest:info
+  url: https://cadastre.mines.gov.gn/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://cadastre.mines.gov.gn/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://cadastre.mines.gov.gn/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://cadastre.mines.gov.gn/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://cadastre.mines.gov.gn/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://cadastre.mines.gov.gn/arcgis/rest/services?f=kmz
+id: cadastreminesgovgnarcgisrestservices
+langs:
+- id: EN
+  name: English
+link: https://cadastre.mines.gov.gn/arcgis/rest/services
+name: ArcGIS Server - cadastre.mines.gov.gn
+owner:
+  location:
+    country:
+      id: GN
+      name: Guinea
+    level: 20
+  name: Spatial Dimension
+  type: Business
+  link: https://www.spatialdimension.com
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- arcgisserver
+- geospatial
+- GIS
+- REST
+- Spatial Dimension
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme

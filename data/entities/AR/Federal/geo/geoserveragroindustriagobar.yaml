@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,7 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: No description extracted from URL.
+description: GeoServer-based geoportal providing geospatial web services for Argentina's Ministry of Agroindustria. The platform offers OGC-compliant services including WMS, WFS, WCS, and WPS protocols for accessing agricultural and industrial geospatial datasets, supporting visualization, analysis, and integration of agroindustrial geographic information.
 endpoints:
 - type: wms111
   url: https://geoserver.agroindustria.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -56,7 +56,12 @@ langs:
   name: Spanish
 link: https://geoserver.agroindustria.gob.ar/geoserver
 name: Geoservicios Ministerio de Agroindustria
+identifiers:
+- id: url
+  url: https://geoserver.agroindustria.gob.ar/geoserver
+  value: https://geoserver.agroindustria.gob.ar/geoserver
 owner:
+  link: https://www.agroindustria.gob.ar
   location:
     country:
       id: AR
@@ -71,8 +76,8 @@ rights:
   privacy_policy_url: null
   rights_type: inapplicable
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Government Data
+  license_url: https://www.argentina.gob.ar/normativa/nacional/ley-27275-263396/texto
 software:
   id: geoserver
   name: GeoServer

@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: DE-MV
       name: Mecklenburg-Vorpommern
-description: Data catalog website
+description: Geospatial data catalog powered by GeoNetwork providing access to metadata
+  and geospatial datasets through CSW, OpenSearch, and OAI-PMH interfaces. The portal
+  offers comprehensive geospatial information services for the Warnemünde region in
+  Mecklenburg-Vorpommern, enabling discovery and access to spatial data resources
+  through standardized metadata protocols and web services. Supports ISO 19115 metadata
+  standards and INSPIRE directive compliance for European spatial data infrastructure.
 endpoints:
 - type: geonetwork:query
   url: http://kueno.io-warnemuende.de/geonetwork/srv/eng/q
@@ -40,6 +45,7 @@ langs:
 link: http://kueno.io-warnemuende.de/geonetwork
 name: kueno.io-warnemuende.de/geonetwork
 owner:
+  link: http://kueno.io-warnemuende.de
   location:
     country:
       id: DE
@@ -48,10 +54,14 @@ owner:
     subregion:
       id: DE-MV
       name: Mecklenburg-Vorpommern
-  name: Not specified in provided text
+  name: KUENO (Küstenforschung Nord-Ost)
   type: Local government
 properties:
   has_doi: true
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/kueno-io-warnemuende-de
+  value: kueno-io-warnemuende-de
 rights:
   license_id: null
   license_name: null
@@ -63,6 +73,52 @@ software:
   id: geonetwork
   name: Geonetwork
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- geoportal
+- geonetwork
+- metadata
+- Germany
+- DE-MV
+- Mecklenburg-Vorpommern
+- Warnemünde
+- has_api
+- csw
+- opensearch
+- oai-pmh
+- ISO19115
+- web-services
+- data-discovery
+- spatial-data-infrastructure
+- local-government
+- regional-data
+- INSPIRE
+- catalog-service
+- metadata-catalog
+- geospatial-services
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
 uid: cdi00004138

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,8 +15,10 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: This is a temporary record with some data collected but it should be
-  updated befor adding to the index
+description: Geospatial data services portal hosted by the University of Delaware
+  Delaware Geological Survey (DGS), providing GIS data and map layers via GeoServer
+  with support for multiple OGC web services including WMS, WFS, WCS, WPS, TMS, and
+  WMTS protocols for accessing geological and geospatial datasets.
 endpoints:
 - type: wms111
   url: http://maps.dgs.udel.edu:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -74,21 +76,75 @@ owner:
       name: World
     level: 10
     macroregion: *id001
-  name: Udel
+  name: University of Delaware
   type: Academy
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: http://maps.dgs.udel.edu:80/geoserver
+  value: http://maps.dgs.udel.edu:80/geoserver
+- id: owner_url
+  url: http://udel.edu
+  value: http://udel.edu
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q7894134
+  value: Q7894134
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Academic/Research Use (granular licensing per dataset)
+  license_url: http://www.dgs.udel.edu/data-and-publications/data-use-policy
   privacy_policy_url: null
-  rights_type: inapplicable
+  rights_type: granular
   tos_url: null
 software:
   id: geoserver
   name: GeoServer
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- GeoServer
+- GIS
+- academic
+- geology
+- geological-survey
+- OGC
+- web-services
+- WMS
+- WFS
+- WCS
+- WPS
+- TMS
+- WMTS
+- Delaware
+- University of Delaware
+- DGS
+- Delaware Geological Survey
+- map-layers
+- geospatial-data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00001745

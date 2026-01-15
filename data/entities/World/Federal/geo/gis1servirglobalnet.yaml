@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -30,7 +30,13 @@ endpoints:
 - type: arcgis:kmz
   url: https://gis1.servirglobal.net/arcgis/rest/services?f=kmz
 id: gis1servirglobalnet
-langs: []
+identifiers:
+- id: url
+  url: https://gis1.servirglobal.net/arcgis/rest/services
+  value: https://gis1.servirglobal.net/arcgis/rest/services
+langs:
+- id: EN
+  name: English
 link: https://gis1.servirglobal.net/arcgis/rest/services
 name: servirglobal.net GIS Data Catalog
 owner:
@@ -50,7 +56,7 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: global
+  rights_type: granular
   tos_url: null
 software:
   id: arcgisserver
@@ -62,5 +68,35 @@ tags:
 - SERVIR
 - REST
 - Spatial Data
-topics: []
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: INTR
+  name: International issues
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
 uid: temp00003973

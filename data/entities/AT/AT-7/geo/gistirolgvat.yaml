@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: AT-7
       name: Tirol
-description: 'Land Tirol ArcGIS REST online catalog'
+description: ArcGIS REST Services directory providing access to geospatial data services
+  and map layers from the regional government of Tirol, Austria. The geoportal offers
+  comprehensive geodata resources for various applications including administrative boundaries,
+  infrastructure planning, transportation networks, environmental data, and regional planning
+  initiatives. The service provides RESTful API endpoints for accessing map services, feature
+  services, and geospatial datasets covering the Tirol region.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.tirol.gv.at/arcgis/rest/info?f=pjson
@@ -48,14 +53,20 @@ owner:
     subregion:
       id: AT-7
       name: Tirol
-  name: 'Land Tirol'
+  name: Land Tirol
   type: Regional government
 properties:
   has_doi: false
+identifiers:
+- id: url
+  url: https://gis.tirol.gv.at/arcgis/rest/services
+  value: https://gis.tirol.gv.at/arcgis/rest/services
+- id: domain
+  value: gis.tirol.gv.at
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -63,6 +74,59 @@ software:
   id: arcgisserver
   name: ArcGIS Server
 status: active
-tags: []
-topics: []
+tags:
+- geospatial
+- GIS
+- ArcGIS
+- REST
+- RESTful
+- maps
+- geodata
+- government
+- has_api
+- Tirol
+- Austria
+- geoportal
+- administrative boundaries
+- infrastructure
+- regional planning
+- transportation
+- planning
+- cadastre
+- environmental data
+- feature services
+- map services
+- regional government
+- geospatial datasets
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: temp00001224

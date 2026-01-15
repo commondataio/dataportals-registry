@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,12 @@ coverage:
     macroregion: &id001
       id: World
       name: World
-description: Geospatial data services and datasets.
+description: GeoServer instance providing comprehensive geospatial data services including
+  WMS (Web Map Service), WFS (Web Feature Service), WCS (Web Coverage Service), WPS (Web
+  Processing Service), TMS (Tile Map Service), WMTS (Web Map Tile Service), and WMS-C
+  (Cached WMS) endpoints. This server enables access to map layers, feature data, and
+  coverage services through standardized OGC protocols, supporting geospatial data discovery,
+  visualization, and integration for mapping applications and GIS workflows.
 endpoints:
 - type: wms111
   url: http://129.194.205.10:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -60,7 +65,10 @@ endpoints:
   url: http://129.194.205.10:80/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: '12919420510'
-langs: []
+identifiers: []
+langs:
+- id: EN
+  name: English
 link: http://129.194.205.10:80/geoserver
 name: 129.194.205.10:80
 owner:

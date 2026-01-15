@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -31,7 +31,16 @@ endpoints:
 - type: arcgis:kmz
   url: https://elevation3d.arcgis.com/arcgis/rest/services?f=kmz
 id: elevation3darcgiscom
-langs: []
+identifiers:
+- id: url
+  url: https://elevation3d.arcgis.com/arcgis/rest/services
+  value: https://elevation3d.arcgis.com/arcgis/rest/services
+- id: wikidata
+  url: https://wikidata.org/wiki/Q170057
+  value: Q170057
+langs:
+- id: EN
+  name: English
 link: https://elevation3d.arcgis.com/arcgis/rest/services
 name: ArcGIS 3D Elevation Services
 owner:
@@ -46,9 +55,9 @@ owner:
 properties:
   has_doi: false
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: esri-mla
+  license_name: Esri Master License Agreement
+  license_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
   privacy_policy_url: null
   rights_type: global
   tos_url: null
@@ -57,11 +66,10 @@ software:
   name: ArcGIS Server
 status: active
 tags:
-- 3D
+- 3D Elevation
 - Elevation
 - GIS
-- REST
-- API
+- REST API
 topics:
 - id: Elevation
   name: Elevation

@@ -1014,6 +1014,77 @@ GEOSERVER_URLMAP = [
         "is_json": True,
         "version": None,
     },
+    # Non-standard GeoServer paths (e.g., /geo/wms instead of /ows)
+    {
+        "id": "wms111",
+        "url": "/geo/wms?service=WMS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms130",
+        "url": "/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wfs100",
+        "url": "/geo/wfs?service=WFS&version=1.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0.0",
+    },
+    {
+        "id": "wfs110",
+        "url": "/geo/wfs?service=WFS&version=1.1.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.0",
+    },
+    {
+        "id": "wfs200",
+        "url": "/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+    {
+        "id": "wcs100",
+        "url": "/geo/wms?service=WCS&version=1.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0.0",
+    },
+    {
+        "id": "wcs110",
+        "url": "/geo/wms?service=WCS&version=1.1.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.0",
+    },
+    {
+        "id": "wcs111",
+        "url": "/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wcs11",
+        "url": "/geo/wms?service=WCS&version=1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1",
+    },
+    {
+        "id": "wcs201",
+        "url": "/geo/wms?service=WCS&version=2.0.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.1",
+    },
 ]
 
 MAPPROXY_URLMAP = [
@@ -1673,6 +1744,30 @@ SDMXRI_URLMAP = [
 
 OPENDAP_URLMAP = []
 
+OPENDATAREG_URLMAP = [
+    {
+        "id": "opendatareg:catalog",
+        "url": "/catalog.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opendatareg:collections",
+        "url": "/collections",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opendatareg:stac",
+        "url": "/stac",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
 CUSTOM_URLMAP = [
     {
         "id": "dcatus11",
@@ -1717,6 +1812,70 @@ CUSTOM_URLMAP = [
         "expected_mime": XML_MIMETYPES,
         "is_json": False,
         "version": None,
+    },
+    # Generic OGC service detection for custom APIs (non-standard geoportals)
+    {
+        "id": "wms111",
+        "url": "/wms?service=WMS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms130",
+        "url": "/wms?service=WMS&version=1.3.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wfs200",
+        "url": "/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+    {
+        "id": "wcs111",
+        "url": "/wcs?service=WCS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms111",
+        "url": "/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms130",
+        "url": "/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wfs200",
+        "url": "/ows?service=WFS&version=2.0.0&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+    {
+        "id": "wcs111",
+        "url": "/ows?service=WCS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "csw202",
+        "url": "/csw?service=CSW&version=2.0.2&request=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
     },
 ]
 
@@ -2025,6 +2184,7 @@ CATALOGS_URLMAP = {
     "triplydb": TRIPLYDB_URLMAP,
     "ipt": IPT_URLMAP,
     "sdmxri": SDMXRI_URLMAP,
+    "opendatareg": OPENDATAREG_URLMAP,
 }
 
 
@@ -2079,124 +2239,144 @@ def api_identifier(
         website_url = URL_CLEANUP_MAP[software_id](website_url)
     else:
         website_url = website_url.rstrip("/")
+    
+    # For GeoServer, try multiple base URL variations to handle non-standard paths
+    base_urls = [website_url]
+    if software_id == "geoserver":
+        parsed = urlparse(website_url)
+        # If URL doesn't end with /geoserver, try adding it
+        if not website_url.endswith("/geoserver") and "/geoserver" not in parsed.path:
+            base_urls.append(website_url + "/geoserver")
+        # If URL ends with /geoserver, also try without it
+        if website_url.endswith("/geoserver"):
+            base_urls.append(website_url[:-10])  # Remove /geoserver
+    
     umap = url_map.copy()
     if software_id != "custom" and deep:
         umap.extend(CUSTOM_URLMAP)
-    for item in umap:
-        try:
-            request_url = website_url + item["url"]
-            logging.info(f"Requesting {request_url}")
-            if "post_params" in item.keys():
-                if "accept" in item.keys():
-                    response = s.post(
-                        request_url,
-                        verify=False,
-                        headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
-                        json=json.loads(item["post_params"]),
-                        timeout=(timeout, timeout),
-                    )
-                else:
-                    response = s.post(
-                        request_url,
-                        verify=False,
-                        headers={"User-Agent": USER_AGENT},
-                        json=json.loads(item["post_params"]),
-                        timeout=(timeout, timeout),
-                    )
-
-            else:
-                if "prefetch" in item and item["prefetch"]:
-                    #                    request_url = website_url
-                    prefeteched_data = s.get(
-                        request_url,
-                        headers={"User-Agent": USER_AGENT},
-                        timeout=(timeout, timeout),
-                    )
-                request_url = website_url + item["url"]
-                if "accept" in item.keys():
-                    response = s.get(
-                        request_url,
-                        verify=False,
-                        headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
-                        timeout=(timeout, timeout),
-                    )
-                else:
-                    response = s.get(
-                        request_url,
-                        verify=False,
-                        headers={"User-Agent": USER_AGENT},
-                        timeout=(timeout, timeout),
-                    )
-        except requests.exceptions.Timeout:
-            results.append({"url": request_url, "error": "Timeout"})
-            continue
-        except requests.exceptions.SSLError:
-            results.append({"url": request_url, "error": "SSL Error"})
-            continue
-        except ConnectionError:
-            results.append({"url": request_url, "error": "no connection"})
-            continue
-        except TooManyRedirects:
-            results.append({"url": request_url, "error": "no connection"})
-            continue
-        except ContentDecodingError:
-            results.append({"url": request_url, "error": "content error"})
-            continue
-        if response.status_code != 200:
-            results.append(
-                {
-                    "url": request_url,
-                    "status": response.status_code,
-                    "mime": (
-                        response.headers["Content-Type"].split(";", 1)[0].lower()
-                        if "content-type" in response.headers.keys()
-                        else ""
-                    ),
-                    "error": "Wrong status",
-                }
-            )
-            continue
-        logging.info(f"Finished request to {request_url}")
-        if (
-            "expected_mime" in item.keys()
-            and item["expected_mime"] is not None
-            and "Content-Type" in response.headers.keys()
-        ):
-            if verify_json:
-                if "is_json" in item.keys() and item["is_json"]:
-                    try:
-                        data = json.loads(response.content)
-                    except KeyError:
-                        results.append(
-                            {
-                                "url": request_url,
-                                "status": response.status_code,
-                                "mime": response.headers["Content-Type"]
-                                .split(";", 1)[0]
-                                .lower(),
-                                "error": "Error loading JSON",
-                            }
+    
+    # Track URLs we've already tried to avoid duplicates
+    tried_urls = set()
+    
+    for base_url in base_urls:
+        for item in umap:
+            try:
+                request_url = base_url + item["url"]
+                # Skip if we've already tried this URL
+                if request_url in tried_urls:
+                    continue
+                tried_urls.add(request_url)
+                logging.info(f"Requesting {request_url}")
+                if "post_params" in item.keys():
+                    if "accept" in item.keys():
+                        response = s.post(
+                            request_url,
+                            verify=False,
+                            headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
+                            json=json.loads(item["post_params"]),
+                            timeout=(timeout, timeout),
                         )
-                        continue
-            if (
-                response.headers["Content-Type"].split(";", 1)[0].lower()
-                not in item["expected_mime"]
-            ):
-                results.append(
-                    {
-                        "url": request_url,
-                        "status": response.status_code,
-                        "mime": response.headers["Content-Type"]
-                        .split(";", 1)[0]
-                        .lower(),
-                        "error": "Wrong content type",
-                    }
-                )
+                    else:
+                        response = s.post(
+                            request_url,
+                            verify=False,
+                            headers={"User-Agent": USER_AGENT},
+                            json=json.loads(item["post_params"]),
+                            timeout=(timeout, timeout),
+                        )
+                else:
+                    if "prefetch" in item and item["prefetch"]:
+                        #                    request_url = base_url
+                        prefeteched_data = s.get(
+                            request_url,
+                            headers={"User-Agent": USER_AGENT},
+                            timeout=(timeout, timeout),
+                        )
+                    # request_url already set above with base_url
+                    if "accept" in item.keys():
+                        response = s.get(
+                            request_url,
+                            verify=False,
+                            headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
+                            timeout=(timeout, timeout),
+                        )
+                    else:
+                        response = s.get(
+                            request_url,
+                            verify=False,
+                            headers={"User-Agent": USER_AGENT},
+                            timeout=(timeout, timeout),
+                        )
+                if response.status_code != 200:
+                    results.append(
+                        {
+                            "url": request_url,
+                            "status": response.status_code,
+                            "mime": (
+                                response.headers["Content-Type"].split(";", 1)[0].lower()
+                                if "content-type" in response.headers.keys()
+                                else ""
+                            ),
+                            "error": "Wrong status",
+                        }
+                    )
+                    continue
+            except requests.exceptions.Timeout:
+                results.append({"url": request_url, "error": "Timeout"})
                 continue
+            except requests.exceptions.SSLError:
+                results.append({"url": request_url, "error": "SSL Error"})
+                continue
+            except ConnectionError:
+                results.append({"url": request_url, "error": "no connection"})
+                continue
+            except TooManyRedirects:
+                results.append({"url": request_url, "error": "no connection"})
+                continue
+            except ContentDecodingError:
+                results.append({"url": request_url, "error": "content error"})
+                continue
+            logging.info(f"Finished request to {request_url}")
+            if (
+                "expected_mime" in item.keys()
+                and item["expected_mime"] is not None
+                and "Content-Type" in response.headers.keys()
+            ):
+                if verify_json:
+                    if "is_json" in item.keys() and item["is_json"]:
+                        try:
+                            data = json.loads(response.content)
+                        except KeyError:
+                            results.append(
+                                {
+                                    "url": request_url,
+                                    "status": response.status_code,
+                                    "mime": response.headers["Content-Type"]
+                                    .split(";", 1)[0]
+                                    .lower(),
+                                    "error": "Error loading JSON",
+                                }
+                            )
+                            continue
+                if (
+                    response.headers["Content-Type"].split(";", 1)[0].lower()
+                    not in item["expected_mime"]
+                ):
+                    results.append(
+                        {
+                            "url": request_url,
+                            "status": response.status_code,
+                            "mime": response.headers["Content-Type"]
+                            .split(";", 1)[0]
+                            .lower(),
+                            "error": "Wrong content type",
+                        }
+                    )
+                    continue
             api = {
                 "type": item["id"],
                 "url": (
-                    website_url + item["display_url"]
+                    base_url + item["display_url"]
                     if "display_url" in item.keys()
                     else request_url
                 ),
@@ -2210,7 +2390,7 @@ def api_identifier(
             api = {
                 "type": item["id"],
                 "url": (
-                    website_url + item["display_url"]
+                    base_url + item["display_url"]
                     if "display_url" in item.keys()
                     else request_url
                 ),
