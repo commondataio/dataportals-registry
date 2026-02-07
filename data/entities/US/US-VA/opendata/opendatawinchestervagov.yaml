@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,6 +18,16 @@ coverage:
       id: US-VA
       name: Virginia
 description: Open data portal for the City of Winchester, Virginia.
+endpoints:
+- type: ckan
+  url: https://opendata.winchesterva.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.winchesterva.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.winchesterva.gov/api/3/action/package_list
+  version: '3'
 id: opendatawinchestervagov
 langs:
 - id: EN
@@ -50,6 +61,7 @@ software:
 status: active
 tags:
 - government
+- has_api
 - open data
 topics:
 - id: GOVE

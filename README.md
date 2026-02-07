@@ -74,7 +74,7 @@ identifiers:
   value: r3d100010078
 - id: fairsharing
   url: https://fairsharing.org/FAIRsharing.6069e1
-  valye: FAIRsharing.6069e1
+  value: FAIRsharing.6069e1
 langs:
 - EN
 link: https://catalog.data.gov
@@ -113,6 +113,31 @@ Latest snapshot (2025-12-10):
 
 All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB exports can be queried directly with `duckdb` or Python's `duckdb` package.
 
+## Discovery
+
+How to find catalogs in this registry:
+
+**By geography**  
+- Entity YAMLs live under `data/entities/COUNTRY_CODE/` (e.g. `US`, `FR`, `BR`).  
+- Use `Federal/` for federal-level catalogs and subregion codes for states/regions (e.g. `US-CA`, `US-VA`, `BR-SP`).  
+- One YAML per catalog; filename is the catalog `id`.
+
+**By catalog type**  
+- Under each country (or `scheduled/`), type folders: `opendata/`, `geo/`, `scientific/`, `microdata/`, `indicators/`, `ml/`, `search/`, `api/`, `marketplace/`, `other/`.
+
+**From export artifacts**  
+- **catalogs.jsonl** / **full.jsonl**: line-delimited JSON (entities only, or entities + scheduled).  
+- **full.parquet**, **data/datasets/datasets.duckdb**: for analytics; query with DuckDB or pandas.  
+- **data/datasets/bytype/** and **data/datasets/bysoftware/**: pre-sliced JSONL by catalog type or software platform.
+
+Example DuckDB query (all CKAN catalogs in the US from the full export). The built DuckDB store normalizes nested fields to JSON strings, so filter on the `software` and `coverage` string columns:
+
+```sql
+SELECT id, name, link
+FROM catalogs
+WHERE software LIKE '%"id":"ckan"%'
+  AND coverage LIKE '%"id":"US"%';
+```
 
 ## Data Quality and Validation
 
@@ -120,13 +145,15 @@ The repository includes tools for analyzing and validating data quality:
 
 - **Duplicate Detection**: Scripts to identify duplicate UID's and ID's across all records
 - **Schema Validation**: Validation against JSON schemas in `data/schemes/`
-- **Data Quality Reports**: Analysis reports available in the `devdocs/` directory
+- **Data Quality Reports**: Analysis reports written to the `dataquality/` directory
 
 To run data quality analysis:
 
 ```bash
-python devdocs/analyze_duplicates_and_errors.py
+python scripts/builder.py analyze-quality
 ```
+
+Reports are written to `dataquality/` (e.g. `full_report.txt`, `primary_priority.jsonl`, and per-country/per-priority breakouts).
 
 ## Re3data Enrichment
 

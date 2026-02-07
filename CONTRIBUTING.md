@@ -40,7 +40,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 ### Project Structure
 
 - `data/entities/` - Verified data catalog records as individual YAML files
-- `data/scheduled/` - Unverified (scheduled) data catalog records
+- `data/scheduled/` - Unverified (scheduled) data catalog records (see [devdocs/scheduled-to-entities.md](devdocs/scheduled-to-entities.md) for promoting to entities)
 - `data/schemes/` - JSON schema definitions for validation
 - `data/software/` - Software/platform definitions
 - `data/reference/` - Reference data and vocabularies
@@ -308,6 +308,8 @@ For a complete example, see: `data/entities/US/Federal/opendata/catalogdatagov.y
 
 The complete schema definition is available in `data/schemes/catalog.json`. This file defines all valid fields, their types, and requirements.
 
+For recommended (optional) fields and quality rules, see [docs/metadata-quality.md](docs/metadata-quality.md).
+
 ## Validation
 
 ### Running Validation
@@ -373,12 +375,14 @@ When contributing code changes, add tests:
    python scripts/builder.py validate-yaml
    ```
 
-2. **Run tests:**
+2. **Optional – pre-commit:** For immediate feedback, you can run `validate-yaml` before each commit (e.g. via a git hook or your IDE). A future [pre-commit](https://pre-commit.com/) config could run `validate-yaml` and optionally `analyze-quality` on changed YAML files.
+
+3. **Run tests:**
    ```bash
    pytest
    ```
 
-3. **Check for duplicates:**
+4. **Check for duplicates:**
    - Ensure the catalog doesn't already exist
    - Check both `data/entities/` and `data/scheduled/`
 
@@ -461,10 +465,10 @@ Any additional context or information
 The project includes tools for analyzing data quality:
 
 ```bash
-python devdocs/analyze_duplicates_and_errors.py
+python scripts/builder.py analyze-quality
 ```
 
-This generates reports on:
+Reports are written to `dataquality/`. This generates reports on:
 - Duplicate UID's and ID's
 - Missing required fields
 - Filename mismatches

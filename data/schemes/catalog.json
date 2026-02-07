@@ -2,7 +2,8 @@
   "access_mode": {
     "type": "list",
     "schema": {
-            "type": "string"
+      "type": "string",
+      "allowed": ["open", "restricted"]
     },
     "required": true
   },
@@ -16,7 +17,20 @@
   },
   "catalog_type": {
     "type": "string",
-    "required": true
+    "required": true,
+    "allowed": [
+      "Open data portal",
+      "Geoportal",
+      "Scientific data repository",
+      "Indicators catalog",
+      "Microdata catalog",
+      "Machine learning catalog",
+      "Data search engines",
+      "API Catalog",
+      "Data marketplaces",
+      "Metadata catalog",
+      "Other"
+    ]
   },
   "content_types": {
     "type": "list",
@@ -109,8 +123,8 @@
   },
   "status": {
     "type": "string",
-    "required": true
-
+    "required": true,
+    "allowed": ["active", "inactive", "scheduled"]
   },
   "tags": {
     "type": "list",

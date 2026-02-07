@@ -39,6 +39,11 @@ Keep this managed block so 'openspec update' can refresh the instructions.
 - Generate or assign `uid` using `python scripts/builder.py assign`—do not set or edit `uid` directly in YAML.
 - Follow YAML conventions: 2 spaces, filename = `id`; see [CONTRIBUTING.md](CONTRIBUTING.md) and [openspec/project.md](openspec/project.md) for full conventions.
 
+**Agent tasks**
+- **Adding a catalog**: Prefer `python scripts/builder.py add-single ...`; or create the YAML under the correct `data/entities/COUNTRY/type/` (or `data/scheduled/`) path, then run `python scripts/builder.py assign` and `python scripts/builder.py validate-yaml`.
+- **Fixing quality**: Run `python scripts/builder.py analyze-quality`, then use `dataquality/primary_priority.jsonl` and the `scripts/fix_*_issues.py` scripts or Cursor with `scripts/generate_cursor_commands.py` / `fix_all_issues`; re-run `validate-yaml` and `analyze-quality` to verify. See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md).
+- **Schema or process changes**: Use OpenSpec; see [openspec/AGENTS.md](openspec/AGENTS.md).
+
 **References**
 - Full project conventions and domain context: [openspec/project.md](openspec/project.md).
 - Adding entries, validation, PR process: [CONTRIBUTING.md](CONTRIBUTING.md).
