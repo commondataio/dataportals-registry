@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-ON
+      name: Ontario
+description: The City of Toronto's Open Data Portal. An open source delivery tool
+  to bring people and data together. Contains datasets for app developers, citizens,
+  and students. Updated regularly with new datasets. In-house developed portal; backend
+  has used CKAN.
+endpoints:
+- type: ckan
+  url: https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_list
+  version: '3'
+id: opentorontoca
+langs:
+- id: EN
+  name: English
+link: https://open.toronto.ca
+name: City of Toronto Open Data Portal
+owner:
+  link: https://www.toronto.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-ON
+      name: Ontario
+  name: City of Toronto
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- municipal
+- city
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020138

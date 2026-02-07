@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: SAVeNoW open data catalog. SAVeNoW was a German research project (digital
+  twin for mobility in Ingolstadt) that published traffic and weather data as open
+  data; catalog hosts dataset metadata.
+endpoints:
+- type: ckan
+  url: http://catalog.savenow.de/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://catalog.savenow.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://catalog.savenow.de/api/3/action/package_list
+  version: '3'
+id: catalogsavenowde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: http://catalog.savenow.de
+name: SAVeNoW Catalog
+owner:
+  link: https://savenow.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: SAVeNoW
+  type: Other
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- mobility
+- traffic
+- research
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00020158

@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: Data portal on English-speaking Quebec (DESQ). Census and community data
+  for Quebec's English-speaking population. A project of QUESCREN at Concordia University.
+  Powered by CKAN.
+endpoints:
+- type: ckan
+  url: https://desq.quescren.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://desq.quescren.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://desq.quescren.ca/api/3/action/package_list
+  version: '3'
+id: desqquescrenca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://desq.quescren.ca
+name: Data Portal on English-Speaking Quebec
+owner:
+  link: https://www.concordia.ca/artsci/scpa/quescren.html
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: QUESCREN (Concordia University)
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- has_api
+- open data
+- census
+- language
+- Quebec
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020139

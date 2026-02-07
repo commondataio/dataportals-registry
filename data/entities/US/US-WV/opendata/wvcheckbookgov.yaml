@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WV
+      name: West Virginia
+description: West Virginia state transparency and checkbook portal. Provides financial
+  summaries, expense and revenue transactions, vendor payments, agency budgets, bond
+  ratings, and related fiscal data for state, local, and education entities. CKAN-based.
+endpoints:
+- type: ckan
+  url: https://www.wvcheckbook.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://www.wvcheckbook.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://www.wvcheckbook.gov/api/3/action/package_list
+  version: '3'
+id: wvcheckbookgov
+langs:
+- id: EN
+  name: English
+link: https://www.wvcheckbook.gov
+name: WV Checkbook
+owner:
+  link: https://www.wv.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WV
+      name: West Virginia
+  name: State of West Virginia
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- CKAN
+- has_api
+- government
+- open data
+- transparency
+- expenditures
+- public finance
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020130

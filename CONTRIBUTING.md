@@ -487,8 +487,17 @@ Reports are saved in `devdocs/` and `dataquality/` directories.
    python scripts/re3data_enrichment.py enrich --id <re3data_id>
    ```
    See [devdocs/re3data_enrichment.md](../devdocs/re3data_enrichment.md) for more information.
-7. **Include endpoints**: Add API endpoints if the catalog has an API
-8. **Write clear descriptions**: Provide helpful descriptions for users
+7. **CKAN Ecosystem Sync**: To discover and add CKAN sites from the official ecosystem dataset:
+   ```bash
+   # Preview what would be added
+   python scripts/sync_ckan_ecosystem.py --dry-run
+   
+   # Sync and add missing CKAN sites
+   python scripts/sync_ckan_ecosystem.py
+   ```
+   The script automatically detects duplicates and enriches metadata from both the dataset and web scraping.
+8. **Include endpoints**: Add API endpoints if the catalog has an API
+9. **Write clear descriptions**: Provide helpful descriptions for users
 
 ### Common Issues to Avoid
 

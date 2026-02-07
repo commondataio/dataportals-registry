@@ -144,6 +144,37 @@ python scripts/re3data_enrichment.py enrich
 
 See [devdocs/re3data_enrichment.md](devdocs/re3data_enrichment.md) for detailed documentation.
 
+## CKAN Ecosystem Synchronization
+
+CKAN websites can be automatically discovered and synchronized from the official [CKAN ecosystem dataset](https://ecosystem.ckan.org/dataset/ckan-sites-metadata). The sync script fetches CKAN site metadata, checks for duplicates, and adds missing sites to the registry with enriched metadata.
+
+To synchronize CKAN sites:
+
+```bash
+# Preview sync (dry run) - see what would be added
+python scripts/sync_ckan_ecosystem.py --dry-run
+
+# Sync and add to scheduled directory (default)
+python scripts/sync_ckan_ecosystem.py
+
+# Sync and add directly to entities directory
+python scripts/sync_ckan_ecosystem.py --entities
+
+# Customize delay between requests (seconds)
+python scripts/sync_ckan_ecosystem.py --delay 2.0
+
+# Disable web scraping enrichment
+python scripts/sync_ckan_ecosystem.py --no-enrich
+```
+
+The script automatically:
+- Fetches CKAN sites from ecosystem.ckan.org via CKAN API
+- Detects duplicates by URL/domain matching
+- Enriches metadata from both the dataset and web scraping
+- Adds missing sites using existing registry infrastructure
+
+See [devdocs/ckan_ecosystem_sync.md](devdocs/ckan_ecosystem_sync.md) for detailed documentation.
+
 This generates comprehensive reports on:
 - Duplicate UID's and ID's
 - Missing required fields
@@ -166,6 +197,7 @@ Following data sources used:
 * Dataverse Installations	https://iqss.github.io/dataverse-installations/data/data.json - done
 * Open Data Inception	https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/ - done
 * CKAN Portals across the world	https://datashades.info/ - done
+* CKAN Ecosystem Sites	https://ecosystem.ckan.org/dataset/ckan-sites-metadata - done (automated sync)
 * Geonetwork Showcase	https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv - done
 * PxWeb examples	https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/ - done
 * DKAN Community	https://getdkan.org/community - done
@@ -176,6 +208,7 @@ Following data sources used:
 * Elsevier Pure installations - https://www.elsevier.com/solutions/pure/pure-in-action - done
 * CoreTrustSeal Repositories https://amt.coretrustseal.org/certificates - done
 * GeoOrchestra installations https://www.georchestra.org/community.html - done
+* CKAN Ecosystem https://ecosystem.ckan.org
 * EUDAT Repositories	https://b2find.eudat.eu/organization/
 * Data.Europe.eu catalogues	https://data.europa.eu/data/catalogues?locale=en
 * Re3Data	https://www.re3data.org/

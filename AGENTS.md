@@ -16,3 +16,29 @@ Use `@/openspec/AGENTS.md` to learn:
 Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
+
+---
+
+## Project (dataportals-registry)
+
+**When to use OpenSpec vs direct work**
+- Open `@/openspec/AGENTS.md` for: proposals, specs, planning, breaking changes, architecture (per block above).
+- Work directly for: adding/editing single catalog entries (YAML), bug fixes, typos, validation fixes, CONTRIBUTING-style contributions.
+
+**Registry layout**
+- Entities: `data/entities/COUNTRY_CODE/` then by type (`opendata/`, `geo/`, `scientific/`, etc.).
+- Federal vs subregion: `Federal/` or subregion code (e.g. `US-CA/`) under country.
+- One YAML file per catalog; filename = `id` (lowercase, no special characters), e.g. `catalogdatagov.yaml` → `id: catalogdatagov`.
+
+**Schema and validation**
+- Schema: [data/schemes/catalog.json](data/schemes/catalog.json). Entries must validate.
+- Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, `coverage`.
+
+**Adding/editing entities**
+- Prefer `python scripts/builder.py add-single ...` for new entries when appropriate; otherwise create/edit YAML under the correct `data/entities/...` path.
+- Generate or assign `uid` using `python scripts/builder.py assign`—do not set or edit `uid` directly in YAML.
+- Follow YAML conventions: 2 spaces, filename = `id`; see [CONTRIBUTING.md](CONTRIBUTING.md) and [openspec/project.md](openspec/project.md) for full conventions.
+
+**References**
+- Full project conventions and domain context: [openspec/project.md](openspec/project.md).
+- Adding entries, validation, PR process: [CONTRIBUTING.md](CONTRIBUTING.md).

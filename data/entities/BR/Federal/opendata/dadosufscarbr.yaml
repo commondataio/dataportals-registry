@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal de Dados Abertos da UFSCar. O Plano de Dados Abertos da UFSCar
+  está disponível em https://www.ufscar.br/acesso-a-informacao/dados-abertos-1/plano-de-dados-abertos-ufscar.pdf
+endpoints:
+- type: ckan
+  url: https://dados.ufscar.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.ufscar.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.ufscar.br/api/3/action/package_list
+  version: '3'
+id: dadosufscarbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dados.ufscar.br
+name: Dados Abertos - UFSCar
+owner:
+  link: https://www.ufscar.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Universidade Federal de São Carlos (UFSCar)
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Brazil
+- ckan
+- open data
+- university
+- educação
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00020168

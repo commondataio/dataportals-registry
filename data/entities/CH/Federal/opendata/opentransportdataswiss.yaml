@@ -21,7 +21,13 @@ description: The data catalogue pages appear in a new layout and on a new platfo
   traffic data, charging stations, shared mobility, park & rail, and more.
 endpoints:
 - type: ckan
-  url: https://opentransportdata.swiss/api/3
+  url: https://data.opentransportdata.swiss/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.opentransportdata.swiss/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.opentransportdata.swiss/api/3/action/package_list
   version: '3'
 id: opentransportdataswiss
 langs:
@@ -29,7 +35,7 @@ langs:
   name: English
 - id: DE
   name: German
-link: https://opentransportdata.swiss
+link: https://data.opentransportdata.swiss
 name: Open data platform mobility Switzerland
 owner:
   link: https://www.bav.admin.ch
@@ -46,7 +52,7 @@ rights:
   license_url: null
   privacy_policy_url: null
   rights_type: granular
-  tos_url: https://opentransportdata.swiss/en/terms-of-use/
+  tos_url: https://data.opentransportdata.swiss/en/terms-of-use/
 software:
   id: ckan
   name: CKAN
@@ -66,4 +72,4 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
-uid: cdi00004808
+uid: cdi00020137

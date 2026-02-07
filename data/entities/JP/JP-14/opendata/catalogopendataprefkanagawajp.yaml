@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion:
+      id: JP-14
+      name: Kanagawa
+description: Kanagawa Prefecture Open Data Catalog (神奈川県オープンデータカタログサイト), providing
+  public datasets from prefectural bureaus including policy, health, education, environment,
+  infrastructure, and public safety.
+endpoints:
+- type: ckan
+  url: https://catalog.opendata.pref.kanagawa.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.opendata.pref.kanagawa.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.opendata.pref.kanagawa.jp/api/3/action/package_list
+  version: '3'
+id: catalogopendataprefkanagawajp
+langs:
+- id: JA
+  name: Japanese
+link: https://catalog.opendata.pref.kanagawa.jp
+name: Kanagawa Prefecture Open Data Catalog
+owner:
+  link: https://www.pref.kanagawa.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion:
+      id: JP-14
+      name: Kanagawa
+  name: Kanagawa Prefectural Government
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00020201

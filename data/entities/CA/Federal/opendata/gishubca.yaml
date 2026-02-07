@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: GIS Hub provides access to geospatial datasets from Canadian government
+  programs including ecosystem management, fisheries, marine mammals, environmental
+  layers and related spatial data. Powered by CKAN.
+endpoints:
+- type: ckan
+  url: https://gis-hub.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://gis-hub.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://gis-hub.ca/api/3/action/package_list
+  version: '3'
+id: gishubca
+langs:
+- id: EN
+  name: English
+link: https://gis-hub.ca
+name: GIS Hub
+owner:
+  link: https://canada.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 20
+  name: Government of Canada
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- has_api
+- open data
+- public sector
+- GIS
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00020140

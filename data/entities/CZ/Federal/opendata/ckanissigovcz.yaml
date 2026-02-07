@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: ISSI (Informační systém o území – Information System on Territory) data
+  catalog of the Czech Ministry of Interior. CKAN-based catalog with links to national
+  geodata sources including the National Geoportal, RÚIAN, Geoportal ČÚZK, and INSPIRE
+  Geoportal.
+endpoints:
+- type: ckan
+  url: https://ckan.issi.gov.cz/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.issi.gov.cz/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.issi.gov.cz/api/3/action/package_list
+  version: '3'
+id: ckanissigovcz
+langs:
+- id: CS
+  name: Czech
+link: https://ckan.issi.gov.cz
+name: ISSI – Informační systém o území
+owner:
+  link: https://www.mvcr.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Ministerstvo vnitra (Ministry of the Interior)
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- open data
+- CKAN
+- geodata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020142

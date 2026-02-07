@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal del sistema unificado de información energética de la Secretaría
+  de Energía.
+endpoints:
+- type: ckan
+  url: https://datos.energia.gob.ar/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.energia.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.energia.gob.ar/api/3/action/package_list
+  version: '3'
+id: datosenergiagobar
+langs:
+- id: ES
+  name: Spanish
+link: http://datos.energia.gob.ar
+name: Datos Energía
+owner:
+  link: https://www.argentina.gob.ar/energia
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Secretaría de Energía
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- has_api
+- open data
+- energy
+- government
+- Argentina
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00020147
