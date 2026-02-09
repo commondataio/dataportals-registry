@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.4.0] - 2026-02-09
 
+**GitHub Release**: [v1.4.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.4.0) - Published February 9, 2026
+
 ### Added
 - **208 new catalog entries** (12,489 total catalogs, up from 12,281)
 - **Many new CKAN data catalogs** from ecosystem.ckan.org synchronization
