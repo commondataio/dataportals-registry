@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-02-09
+
+### Added
+- **208 new catalog entries** (12,489 total catalogs, up from 12,281)
+- **Many new CKAN data catalogs** from ecosystem.ckan.org synchronization
+- **Reference data files** for validation and consistency:
+  - `data/reference/access_modes.yaml` - Standardized access mode values
+  - `data/reference/catalog_types.yaml` - Allowed catalog type values
+  - `data/reference/software_ids.yaml` - Comprehensive software ID mappings
+  - `data/reference/status.yaml` - Status value definitions
+- **New documentation**:
+  - `devdocs/quality-fix-workflow.md` - Guide for fixing data quality issues
+  - `devdocs/scheduled-to-entities.md` - Process for promoting scheduled entries to entities
+  - `docs/metadata-quality.md` - Metadata quality standards and guidelines
+- **OpenSpec proposal** for schema allowed values enhancement
+
+### Changed
+- **Schema validation enhanced** with allowed values validation for key fields (access_mode, catalog_type, software.id, status)
+- **Raw JSONL files restored** - Both compressed (.zst) and uncompressed versions now available
+- **Updated entity metadata** across multiple catalog entries
+- Rebuilt JSONL/Parquet exports and type/software slices (12,489 catalogs; 134 software platforms; 758 scheduled sources; 12,623 combined records)
+- **Documentation improvements**:
+  - Enhanced AGENTS.md with OpenSpec workflow instructions
+  - Expanded CONTRIBUTING.md with quality fix workflow and scheduled-to-entities process
+  - Updated README.md with latest statistics and data export information
+
+### Fixed
+- Various metadata gaps and inconsistencies in catalog entries
+- Improved data quality through enhanced validation rules
+
+### Removed
+- Legacy files cleaned up from repository
+
 ## [1.3.0] - 2025-12-10
 
 ### Added
