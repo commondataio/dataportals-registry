@@ -37,8 +37,10 @@ root = logging.getLogger()
 root.setLevel(logging.INFO)
 
 
-ENTRIES_DIR = "../data/entities"
-SCHEDULED_DIR = "../data/scheduled"
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_REPO_ROOT = os.path.dirname(_SCRIPT_DIR)
+ENTRIES_DIR = os.path.join(_REPO_ROOT, "data", "entities")
+SCHEDULED_DIR = os.path.join(_REPO_ROOT, "data", "scheduled")
 app = typer.Typer()
 
 DEFAULT_TIMEOUT = 5
@@ -1894,6 +1896,9 @@ def analyze_robots(root_url):
     except Exception as e:
         logger.error("Error analyzing robots.txt: %s", e)
         return []
+    if r.status_code != 200:
+        logger.info("robots.txt unavailable, status=%d", r.status_code)
+        return []
     parser = urllib.robotparser.RobotFileParser()
     parser.parse(r.text)
     sitemaps = parser.site_maps()
@@ -2049,10 +2054,6 @@ def analyze_root(root_url):
                 )
     scripts = document.xpath("//script[@type='application/ld+json']")
     for s in scripts:
-        p = urlparse(root_url)
-        f = open("temp/%s.json" % (p.hostname), "w", encoding="utf8")
-        f.write(s.text)
-        f.close()
         logger = logging.getLogger(__name__)
         logger.debug("ld+json script found")
         try:
@@ -2062,7 +2063,7 @@ def analyze_root(root_url):
                 if len(data) > 0:
                     data = data[0]
                 else:
-                    return output
+                    continue
             logger.debug("JSON-LD keys: %s", list(data.keys()))
             if "@graph" in data.keys() and data["@graph"] is not None:
                 logger.debug("graph found")
@@ -2106,24 +2107,24 @@ def analyze_root(root_url):
                         for entity in mainlist:
                             if "@type" not in entity.keys():
                                 continue
-                        if (
-                            isinstance(entity["@type"], list)
-                            and "DataCatalog" in entity["@type"]
-                        ):
-                            output.append(
-                                {"type": "schemaorg:datacatalog", "url": root_url}
-                            )
-                            found = True
-                            break
-                        elif (
-                            isinstance(entity["@type"], str)
-                            and entity["@type"] == "DataCatalog"
-                        ):
-                            found = True
-                            output.append(
-                                {"type": "schemaorg:datacatalog", "url": root_url}
-                            )
-                            break
+                            if (
+                                isinstance(entity["@type"], list)
+                                and "DataCatalog" in entity["@type"]
+                            ):
+                                output.append(
+                                    {"type": "schemaorg:datacatalog", "url": root_url}
+                                )
+                                found = True
+                                break
+                            elif (
+                                isinstance(entity["@type"], str)
+                                and entity["@type"] == "DataCatalog"
+                            ):
+                                found = True
+                                output.append(
+                                    {"type": "schemaorg:datacatalog", "url": root_url}
+                                )
+                                break
 
         except ValueError:
             continue
@@ -2190,7 +2191,7 @@ CATALOGS_URLMAP = {
 
 def geoserver_url_cleanup_func(url):
     url = url.rstrip("/")
-    if url[-3:] == "web":
+    if len(url) >= 4 and url.endswith("/web"):
         url = url[:-4]
     return url
 
@@ -2230,6 +2231,7 @@ URL_CLEANUP_MAP = {
 def api_identifier(
     website_url, software_id, verify_json=False, deep=False, timeout=DEFAULT_TIMEOUT
 ):
+    logger = logging.getLogger(__name__)
     url_map = CATALOGS_URLMAP[software_id]
     results = []
     found = []
@@ -2249,7 +2251,7 @@ def api_identifier(
             base_urls.append(website_url + "/geoserver")
         # If URL ends with /geoserver, also try without it
         if website_url.endswith("/geoserver"):
-            base_urls.append(website_url[:-10])  # Remove /geoserver
+            base_urls.append(website_url.removesuffix("/geoserver"))
     
     umap = url_map.copy()
     if software_id != "custom" and deep:
@@ -2266,7 +2268,7 @@ def api_identifier(
                 if request_url in tried_urls:
                     continue
                 tried_urls.add(request_url)
-                logging.info(f"Requesting {request_url}")
+                logger.info("Requesting %s", request_url)
                 if "post_params" in item.keys():
                     if "accept" in item.keys():
                         response = s.post(
@@ -2285,22 +2287,23 @@ def api_identifier(
                             timeout=(timeout, timeout),
                         )
                 else:
+                    response = None
                     if "prefetch" in item and item["prefetch"]:
-                        #                    request_url = base_url
-                        prefeteched_data = s.get(
+                        # Reuse prefetched response instead of issuing a duplicate request.
+                        response = s.get(
                             request_url,
                             headers={"User-Agent": USER_AGENT},
                             timeout=(timeout, timeout),
                         )
                     # request_url already set above with base_url
-                    if "accept" in item.keys():
+                    if response is None and "accept" in item.keys():
                         response = s.get(
                             request_url,
                             verify=False,
                             headers={"User-Agent": USER_AGENT, "Accept": item["accept"]},
                             timeout=(timeout, timeout),
                         )
-                    else:
+                    elif response is None:
                         response = s.get(
                             request_url,
                             verify=False,
@@ -2336,7 +2339,7 @@ def api_identifier(
             except ContentDecodingError:
                 results.append({"url": request_url, "error": "content error"})
                 continue
-            logging.info(f"Finished request to {request_url}")
+            logger.info("Finished request to %s", request_url)
             if (
                 "expected_mime" in item.keys()
                 and item["expected_mime"] is not None
@@ -2346,7 +2349,7 @@ def api_identifier(
                     if "is_json" in item.keys() and item["is_json"]:
                         try:
                             data = json.loads(response.content)
-                        except KeyError:
+                        except (json.JSONDecodeError, ValueError, TypeError):
                             results.append(
                                 {
                                     "url": request_url,
@@ -2358,9 +2361,12 @@ def api_identifier(
                                 }
                             )
                             continue
+                expected_mime = item["expected_mime"]
+                if isinstance(expected_mime, str):
+                    expected_mime = [expected_mime]
                 if (
                     response.headers["Content-Type"].split(";", 1)[0].lower()
-                    not in item["expected_mime"]
+                    not in expected_mime
                 ):
                     results.append(
                         {
@@ -2386,32 +2392,25 @@ def api_identifier(
             if "urlpat" in item.keys():
                 api["url_pattern"] = item["urlpat"]
             found.append(api)
-        else:
-            api = {
-                "type": item["id"],
-                "url": (
-                    base_url + item["display_url"]
-                    if "display_url" in item.keys()
-                    else request_url
-                ),
-            }
-            if item["version"]:
-                api["version"] = item["version"]
-            if "urlpat" in item.keys():
-                api["url_pattern"] = item["urlpat"]
-            found.append(api)
     if deep:
-        logging.info("Going deep")
+        logger.info("Going deep")
         for func in DEEP_SEARCH_FUNCTIONS:
             extracted = func(website_url)
             if len(extracted) > 0:
                 found.extend(extracted)
-    logging.info("Found: " + str(results))
+    logger.info("Failures: %s", results)
     return found
 
 
 def __detect_one(
-    filename, record, software, action, deep, filepath, timeout=DEFAULT_TIMEOUT
+    filename,
+    record,
+    software,
+    action,
+    deep,
+    filepath,
+    timeout=DEFAULT_TIMEOUT,
+    dryrun=False,
 ):
     logger = logging.getLogger(__name__)
     logger.info("Processing %s", os.path.basename(filename).split(".", 1)[0])
@@ -2448,12 +2447,76 @@ def __detect_one(
     if added > 0:
         record["api"] = True
         record["api_status"] = "active"
-        f = open(filepath, "w", encoding="utf8")
-        f.write(yaml.safe_dump(record, allow_unicode=True))
-        f.close()
-        logger.info("- updated profile")
+        if dryrun:
+            logger.info("- dryrun enabled, profile not updated")
+        else:
+            _save_record(filepath, record)
+            logger.info("- updated profile")
     else:
         logger.info("- no endpoints or no new endpoints, not updated")
+
+
+def _resolve_root_dir(mode):
+    return ENTRIES_DIR if mode == "entries" else SCHEDULED_DIR
+
+
+def _iter_yaml_files(root_dir):
+    for root, _, files in os.walk(root_dir):
+        for fi in files:
+            if fi.endswith(".yaml"):
+                yield os.path.join(root, fi)
+
+
+def _load_record(filepath):
+    with open(filepath, "r", encoding="utf8") as f:
+        return yaml.load(f, Loader=Loader)
+
+
+def _save_record(filepath, record):
+    with open(filepath, "w", encoding="utf8") as f:
+        f.write(yaml.safe_dump(record, allow_unicode=True))
+
+
+def _detect_record(
+    filename,
+    filepath,
+    record,
+    action,
+    deep,
+    timeout=DEFAULT_TIMEOUT,
+    dryrun=False,
+):
+    software = record["software"]["id"] if record["software"]["id"] in CATALOGS_URLMAP else "custom"
+    __detect_one(
+        filename,
+        record,
+        software,
+        action,
+        deep,
+        filepath,
+        timeout=timeout,
+        dryrun=dryrun,
+    )
+
+
+def _replace_detected_endpoints(
+    filepath, record, software_id, base_url=None, dryrun=False
+):
+    logger = logging.getLogger(__name__)
+    detection_base = base_url if base_url else record["link"].rstrip("/")
+    found = api_identifier(detection_base, software_id)
+    record["endpoints"] = []
+    for api in found:
+        logger.info("- %s %s", api["type"], api["url"])
+        record["endpoints"].append(api)
+    if len(record["endpoints"]) > 0:
+        if dryrun:
+            logger.info("- dryrun enabled, profile not updated")
+        else:
+            _save_record(filepath, record)
+            logger.info("- updated profile")
+    else:
+        logger.info("- no endpoints, not updated")
 
 
 @app.command()
@@ -2465,30 +2528,18 @@ def detect_software(
     deep: bool = False,
 ):
     """Enrich data catalogs with API endpoints by software"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    dirs = os.listdir(root_dir)
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["software"]["id"] == software:
-                if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                    __detect_one(
-                        filename,
-                        record,
-                        record["software"]["id"],
-                        action,
-                        deep,
-                        filepath,
-                    )
-                else:
-                    __detect_one(filename, record, "custom", action, deep, filepath)
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["software"]["id"] == software:
+            _detect_record(
+                filepath,
+                filepath,
+                record,
+                action,
+                deep,
+                dryrun=dryrun,
+            )
 
 
 @app.command()
@@ -2501,40 +2552,26 @@ def detect_single(
     timeout: int = DEFAULT_TIMEOUT,
 ):
     """Enrich single data catalog with API endpoints"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
+    root_dir = _resolve_root_dir(mode)
     found = False
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            #            print(filepath)
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            idkeys = []
-            for k in ["uid", "id", "link"]:
-                if k in record.keys():
-                    idkeys.append(record[k])
-            if uniqid not in idkeys:
-                continue
-            found = True
-            if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                __detect_one(
-                    filename,
-                    record,
-                    record["software"]["id"],
-                    action,
-                    deep,
-                    filepath,
-                    timeout=timeout,
-                )
-            else:
-                __detect_one(
-                    filename, record, "custom", action, deep, filepath, timeout=timeout
-                )
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        idkeys = []
+        for k in ["uid", "id", "link"]:
+            if k in record.keys():
+                idkeys.append(record[k])
+        if uniqid not in idkeys:
+            continue
+        found = True
+        _detect_record(
+            filepath,
+            filepath,
+            record,
+            action,
+            deep,
+            timeout=timeout,
+            dryrun=dryrun,
+        )
 
 
 @app.command()
@@ -2546,25 +2583,19 @@ def detect_country(
     deep: bool = False,
 ):
     """Enrich data catalogs with API endpoints by country"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["owner"]["location"]["country"]["id"] != country:
-                continue
-            if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                __detect_one(
-                    filename, record, record["software"]["id"], action, deep, filepath
-                )
-            else:
-                __detect_one(filename, record, "custom", action, deep, filepath)
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["owner"]["location"]["country"]["id"] != country:
+            continue
+        _detect_record(
+            filepath,
+            filepath,
+            record,
+            action,
+            deep,
+            dryrun=dryrun,
+        )
 
 
 @app.command()
@@ -2576,69 +2607,48 @@ def detect_cattype(
     deep: bool = False,
 ):
     """Enrich data catalogs with API endpoints by catalog type"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["catalog_type"] != catalogtype:
-                continue
-            if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                __detect_one(
-                    filename, record, record["software"]["id"], action, deep, filepath
-                )
-            else:
-                __detect_one(filename, record, "custom", action, deep, filepath)
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["catalog_type"] != catalogtype:
+            continue
+        _detect_record(
+            filepath,
+            filepath,
+            record,
+            action,
+            deep,
+            dryrun=dryrun,
+        )
 
 
 @app.command()
 def detect_ckan(dryrun=False, replace_endpoints=True, mode="entries"):
     """Enrich data catalogs with API endpoints by CKAN instance (special function to update all endpoints"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["software"]["id"] == "ckan":
-                logger = logging.getLogger(__name__)
-                logger.info(
-                    "Processing %s", os.path.basename(filename).split(".", 1)[0]
-                )
-                if "endpoints" in record.keys() and len(record["endpoints"]) > 1:
-                    logger.info(" - skip, we have more than 2 endpoints so we skip")
-                    continue
-                if (
-                    "endpoints"
-                    and len(record["endpoints"]) == 1
-                    and record["endpoints"][0]["type"] == "ckanapi"
-                ):
-                    base_url = record["endpoints"][0]["url"][0:-6]
-                else:
-                    base_url = record["link"].rstrip("/")
-                found = api_identifier(base_url, record["software"]["id"])
-                record["endpoints"] = []
-                for api in found:
-                    logger.info("- %s %s", api["type"], api["url"])
-                    record["endpoints"].append(api)
-                if len(record["endpoints"]) > 0:
-                    f = open(filepath, "w", encoding="utf8")
-                    f.write(yaml.safe_dump(record, allow_unicode=True))
-                    f.close()
-                    logger.info("- updated profile")
-                else:
-                    logger.info("- no endpoints, not updated")
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["software"]["id"] == "ckan":
+            logger = logging.getLogger(__name__)
+            logger.info("Processing %s", os.path.basename(filepath).split(".", 1)[0])
+            if "endpoints" in record.keys() and len(record["endpoints"]) > 1:
+                logger.info(" - skip, we have more than 2 endpoints so we skip")
+                continue
+            if (
+                "endpoints" in record.keys()
+                and len(record["endpoints"]) == 1
+                and record["endpoints"][0]["type"] == "ckanapi"
+            ):
+                base_url = record["endpoints"][0]["url"][0:-6]
+            else:
+                base_url = record["link"].rstrip("/")
+            _replace_detected_endpoints(
+                filepath,
+                record,
+                record["software"]["id"],
+                base_url=base_url,
+                dryrun=dryrun,
+            )
 
 
 @app.command()
@@ -2648,49 +2658,32 @@ def detect_all(
     mode="entries",
 ):
     """Detect all known API endpoints"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                if "endpoints" not in record.keys() or len(record["endpoints"]) == 0:
-                    if status == "undetected":
-                        logger = logging.getLogger(__name__)
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["software"]["id"] in CATALOGS_URLMAP.keys():
+            if "endpoints" not in record.keys() or len(record["endpoints"]) == 0:
+                if status == "undetected":
+                    logger = logging.getLogger(__name__)
+                    logger.info(
+                        "Processing catalog %s, software %s",
+                        os.path.basename(filepath).split(".", 1)[0],
+                        record["software"]["id"],
+                    )
+                    if (
+                        "endpoints" in record.keys()
+                        and len(record["endpoints"]) > 0
+                        and replace_endpoints is False
+                    ):
                         logger.info(
-                            "Processing catalog %s, software %s",
-                            os.path.basename(filename).split(".", 1)[0],
-                            record["software"]["id"],
+                            " - skip, we have endpoints already and no replace mode"
                         )
-                        if (
-                            "endpoints" in record.keys()
-                            and len(record["endpoints"]) > 0
-                            and replace_endpoints is False
-                        ):
-                            logger.info(
-                                " - skip, we have endpoints already and no replace mode"
-                            )
-                            continue
-                        found = api_identifier(
-                            record["link"].rstrip("/"), record["software"]["id"]
-                        )
-                        record["endpoints"] = []
-                        for api in found:
-                            logger.info("- %s %s", api["type"], api["url"])
-                            record["endpoints"].append(api)
-                        if len(record["endpoints"]) > 0:
-                            f = open(filepath, "w", encoding="utf8")
-                            f.write(yaml.safe_dump(record, allow_unicode=True))
-                            f.close()
-                            logger.info("- updated profile")
-                        else:
-                            logger.info("- no endpoints, not updated")
+                        continue
+                    _replace_detected_endpoints(
+                        filepath,
+                        record,
+                        record["software"]["id"],
+                    )
 
 
 @app.command()
@@ -2698,35 +2691,27 @@ def report(status="undetected", filename=None, mode="entries"):
     """Report data catalogs with undetected API endpoints"""
     out = sys.stdout if filename is None else open(filename, "w", encoding="utf8")
 
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
+    root_dir = _resolve_root_dir(mode)
 
     if status == "undetected":
-        out.write(",".join(["id", "uid", "link", "software_id" "status"]) + "\n")
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["software"]["id"] in CATALOGS_URLMAP.keys():
-                if "endpoints" not in record.keys() or len(record["endpoints"]) == 0:
-                    if status == "undetected":
-                        out.write(
-                            ",".join(
-                                [
-                                    record["id"],
-                                    record["uid"],
-                                    record["link"],
-                                    record["software"]["id"],
-                                    "undetected",
-                                ]
-                            )
-                            + "\n"
+        out.write(",".join(["id", "uid", "link", "software_id", "status"]) + "\n")
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["software"]["id"] in CATALOGS_URLMAP.keys():
+            if "endpoints" not in record.keys() or len(record["endpoints"]) == 0:
+                if status == "undetected":
+                    out.write(
+                        ",".join(
+                            [
+                                record["id"],
+                                record["uid"],
+                                record["link"],
+                                record["software"]["id"],
+                                "undetected",
+                            ]
                         )
+                        + "\n"
+                    )
     if filename is not None:
         out.close()
 
@@ -2738,49 +2723,32 @@ def update_broken_arcgis(
     mode="entries",
 ):
     """Detect all broken ArcGIS portals and update endpoints"""
-    if mode == "entries":
-        root_dir = ENTRIES_DIR
-    else:
-        root_dir = SCHEDULED_DIR
-    for root, dirs, files in os.walk(root_dir):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            filepath = filename
-            f = open(filepath, "r", encoding="utf8")
-            record = yaml.load(f, Loader=Loader)
-            f.close()
-            if record["software"]["id"] in ["arcgishub", "arcgisserver"]:
-                if "endpoints" not in record.keys() or len(record["endpoints"]) < 2:
-                    if status == "undetected":
-                        logger = logging.getLogger(__name__)
+    root_dir = _resolve_root_dir(mode)
+    for filepath in _iter_yaml_files(root_dir):
+        record = _load_record(filepath)
+        if record["software"]["id"] in ["arcgishub", "arcgisserver"]:
+            if "endpoints" not in record.keys() or len(record["endpoints"]) < 2:
+                if status == "undetected":
+                    logger = logging.getLogger(__name__)
+                    logger.info(
+                        "Processing catalog %s, software %s",
+                        os.path.basename(filepath).split(".", 1)[0],
+                        record["software"]["id"],
+                    )
+                    if (
+                        "endpoints" in record.keys()
+                        and len(record["endpoints"]) > 0
+                        and replace_endpoints is False
+                    ):
                         logger.info(
-                            "Processing catalog %s, software %s",
-                            os.path.basename(filename).split(".", 1)[0],
-                            record["software"]["id"],
+                            " - skip, we have endpoints already and no replace mode"
                         )
-                        if (
-                            "endpoints" in record.keys()
-                            and len(record["endpoints"]) > 0
-                            and replace_endpoints is False
-                        ):
-                            logger.info(
-                                " - skip, we have endpoints already and no replace mode"
-                            )
-                            continue
-                        found = api_identifier(
-                            record["link"].rstrip("/"), record["software"]["id"]
-                        )
-                        record["endpoints"] = []
-                        for api in found:
-                            logger.info("- %s %s", api["type"], api["url"])
-                            record["endpoints"].append(api)
-                        if len(record["endpoints"]) > 0:
-                            f = open(filepath, "w", encoding="utf8")
-                            f.write(yaml.safe_dump(record, allow_unicode=True))
-                            f.close()
-                            logger.info("- updated profile")
-                        else:
-                            logger.info("- no endpoints, not updated")
+                        continue
+                    _replace_detected_endpoints(
+                        filepath,
+                        record,
+                        record["software"]["id"],
+                    )
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ import json
 import tempfile
 import pytest
 import yaml
+import types
 from pathlib import Path
 
 # Import builder functions
@@ -229,3 +230,79 @@ class TestMergeDatasets:
         # Should raise YAMLError when processing invalid file
         with pytest.raises(yaml.YAMLError):
             build_dataset(yaml_dir, "output.jsonl")
+
+
+class TestBuilderApidetectIntegration:
+    """Integration tests for builder -> apidetect invocation path."""
+
+    def test_add_single_entry_calls_detect_single_scheduled(self, temp_dir, monkeypatch):
+        import builder
+
+        datasets_dir = os.path.join(temp_dir, "datasets")
+        scheduled_dir = os.path.join(temp_dir, "scheduled")
+        entries_dir = os.path.join(temp_dir, "entities")
+        os.makedirs(datasets_dir, exist_ok=True)
+        os.makedirs(scheduled_dir, exist_ok=True)
+        os.makedirs(entries_dir, exist_ok=True)
+
+        with open(os.path.join(datasets_dir, "software.jsonl"), "w", encoding="utf8") as f:
+            f.write('{"id": "ckan", "name": "CKAN"}\n')
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", datasets_dir)
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", scheduled_dir)
+        monkeypatch.setattr(builder, "ROOT_DIR", entries_dir)
+
+        calls = []
+
+        def _fake_detect_single(uniqid, dryrun=False, mode="entries", **kwargs):
+            calls.append((uniqid, dryrun, mode))
+
+        monkeypatch.setitem(
+            sys.modules, "apidetect", types.SimpleNamespace(detect_single=_fake_detect_single)
+        )
+
+        builder._add_single_entry(
+            url="https://catalog.example.org",
+            software="ckan",
+            country="US",
+            scheduled=True,
+            preloaded=[],
+        )
+
+        assert calls == [("catalogexampleorg", False, "scheduled")]
+
+    def test_add_single_entry_calls_detect_single_entries(self, temp_dir, monkeypatch):
+        import builder
+
+        datasets_dir = os.path.join(temp_dir, "datasets")
+        scheduled_dir = os.path.join(temp_dir, "scheduled")
+        entries_dir = os.path.join(temp_dir, "entities")
+        os.makedirs(datasets_dir, exist_ok=True)
+        os.makedirs(scheduled_dir, exist_ok=True)
+        os.makedirs(entries_dir, exist_ok=True)
+
+        with open(os.path.join(datasets_dir, "software.jsonl"), "w", encoding="utf8") as f:
+            f.write('{"id": "ckan", "name": "CKAN"}\n')
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", datasets_dir)
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", scheduled_dir)
+        monkeypatch.setattr(builder, "ROOT_DIR", entries_dir)
+
+        calls = []
+
+        def _fake_detect_single(uniqid, dryrun=False, mode="entries", **kwargs):
+            calls.append((uniqid, dryrun, mode))
+
+        monkeypatch.setitem(
+            sys.modules, "apidetect", types.SimpleNamespace(detect_single=_fake_detect_single)
+        )
+
+        builder._add_single_entry(
+            url="https://catalog.example.org",
+            software="ckan",
+            country="US",
+            scheduled=False,
+            preloaded=[],
+        )
+
+        assert calls == [("catalogexampleorg", False, "entries")]
