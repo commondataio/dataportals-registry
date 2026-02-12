@@ -4,11 +4,17 @@ Script to fix MEDIUM priority issues:
 - MISSING_DESCRIPTION
 - MISSING_ENDPOINTS
 - MISSING_LANGS
+- SHORT_DESCRIPTION
+- TAG_HYGIENE
 """
 import re
 import yaml
 from pathlib import Path
 from urllib.parse import urlparse
+
+# Base directories
+BASE_DIR = Path(__file__).parent.parent
+ENTITIES_DIR = BASE_DIR / "data" / "entities"
 
 # Language mapping based on country codes (from constants.py)
 LANGS_BY_COUNTRY = {
@@ -40,46 +46,52 @@ LANGS_BY_COUNTRY = {
     "CA": ["EN", "FR"],  # Canada has English and French
 }
 
+# Language code to name mapping (shared)
+LANG_NAMES = {
+    "EN": "English", "ES": "Spanish", "FR": "French", "DE": "German",
+    "IT": "Italian", "PT": "Portuguese", "RU": "Russian", "JP": "Japanese",
+    "CN": "Chinese", "KR": "Korean", "AR": "Arabic", "EL": "Greek",
+    "TH": "Thai", "TR": "Turkish", "VN": "Vietnamese", "PL": "Polish",
+    "NL": "Dutch", "SV": "Swedish", "NO": "Norwegian", "DA": "Danish",
+    "FI": "Finnish", "CZ": "Czech", "SK": "Slovak", "HU": "Hungarian",
+    "RO": "Romanian", "BG": "Bulgarian", "HR": "Croatian", "SR": "Serbian",
+    "SL": "Slovenian", "MK": "Macedonian", "AL": "Albanian", "ET": "Estonian",
+    "LV": "Latvian", "LT": "Lithuanian", "ID": "Indonesian", "HE": "Hebrew",
+    "KA": "Georgian", "AM": "Armenian", "NE": "Nepali", "MD": "Moldovan",
+    "zh_TW": "Chinese (Traditional)", "zh_CN": "Chinese (Simplified)",
+    "MN": "Mongolian", "LA": "Lao"
+}
+
 def infer_languages_from_country(record):
-    """Infer languages from country code"""
-    langs = []
-    
-    # Get country from coverage
+    """Infer languages from country code (coverage or owner fallback)."""
+    # Get country from coverage first
+    country_id = None
     coverage = record.get("coverage", [])
     if coverage and isinstance(coverage, list) and len(coverage) > 0:
         location = coverage[0].get("location", {})
         country = location.get("country", {})
         country_id = country.get("id")
-        
-        if country_id and country_id != "Unknown":
-            # Get languages for this country
-            country_langs = LANGS_BY_COUNTRY.get(country_id, [])
-            if not country_langs:
-                # Default to English for unknown countries
-                country_langs = ["EN"]
-            
-            # Map language codes to language names
-            lang_names = {
-                "EN": "English", "ES": "Spanish", "FR": "French", "DE": "German",
-                "IT": "Italian", "PT": "Portuguese", "RU": "Russian", "JP": "Japanese",
-                "CN": "Chinese", "KR": "Korean", "AR": "Arabic", "EL": "Greek",
-                "TH": "Thai", "TR": "Turkish", "VN": "Vietnamese", "PL": "Polish",
-                "NL": "Dutch", "SV": "Swedish", "NO": "Norwegian", "DA": "Danish",
-                "FI": "Finnish", "CZ": "Czech", "SK": "Slovak", "HU": "Hungarian",
-                "RO": "Romanian", "BG": "Bulgarian", "HR": "Croatian", "SR": "Serbian",
-                "SL": "Slovenian", "MK": "Macedonian", "AL": "Albanian", "ET": "Estonian",
-                "LV": "Latvian", "LT": "Lithuanian", "ID": "Indonesian", "HE": "Hebrew",
-                "KA": "Georgian", "AM": "Armenian", "NE": "Nepali", "MD": "Moldovan",
-                "zh_TW": "Chinese (Traditional)", "zh_CN": "Chinese (Simplified)",
-                "MN": "Mongolian", "LA": "Lao"
-            }
-            
-            for lang_code in country_langs:
-                langs.append({
-                    "id": lang_code,
-                    "name": lang_names.get(lang_code, lang_code)
-                })
-    
+
+    # Fallback to owner location when coverage is Unknown/World/missing
+    if not country_id or country_id in ("Unknown", "World"):
+        owner = record.get("owner", {}) or {}
+        owner_loc = owner.get("location", {}) or {}
+        owner_country = owner_loc.get("country", {}) or {}
+        country_id = owner_country.get("id") or country_id
+
+    # Resolve language codes
+    if country_id and country_id not in ("Unknown", "World"):
+        country_langs = LANGS_BY_COUNTRY.get(country_id, [])
+    else:
+        country_langs = ["EN"]  # Default for Unknown/World/missing
+
+    if not country_langs:
+        country_langs = ["EN"]  # Fallback when country not in map (e.g. EU)
+
+    langs = [
+        {"id": code, "name": LANG_NAMES.get(code, code)}
+        for code in country_langs
+    ]
     return langs if langs else None
 
 def generate_description(record):
@@ -234,6 +246,126 @@ def fix_langs(record, file_path):
     
     return False, None
 
+def expand_description(record, file_path):
+    """Fix SHORT_DESCRIPTION by expanding descriptions that are too short"""
+    description = record.get("description", "")
+    
+    if not description or not isinstance(description, str):
+        return False, None
+    
+    description = description.strip()
+    
+    # Check if description is too short (less than 40 characters)
+    if len(description) < 40:
+        # Try to expand it using generate_description logic
+        catalog_type = record.get("catalog_type", "")
+        name = record.get("name", "")
+        link = record.get("link", "")
+        software = record.get("software", {})
+        software_name = software.get("name", "") if isinstance(software, dict) else ""
+        owner = record.get("owner", {})
+        owner_name = owner.get("name", "") if isinstance(owner, dict) else ""
+        
+        # Build expanded description
+        parts = []
+        
+        # Start with existing description if it's meaningful
+        if description and description not in ["None", "Not specified", "No description provided"]:
+            parts.append(description.rstrip('.'))
+        
+        # Add context
+        if catalog_type and catalog_type not in description:
+            parts.append(f"{catalog_type.lower()}")
+        
+        if owner_name and owner_name != "Unknown" and owner_name not in description:
+            parts.append(f"managed by {owner_name}")
+        
+        if software_name and software_name not in description:
+            parts.append(f"powered by {software_name}")
+        
+        if link:
+            try:
+                parsed = urlparse(link)
+                domain = parsed.netloc or link
+                if domain and domain not in description:
+                    # Just add domain info if not already there
+                    if not any(part.startswith("accessible at") for part in parts):
+                        parts.append(f"accessible at {domain}")
+            except:
+                pass
+        
+        # If we have parts, combine them
+        if parts:
+            new_description = ". ".join(parts) + "."
+            # Clean up
+            new_description = re.sub(r'\.+', '.', new_description)
+            new_description = re.sub(r'\s+', ' ', new_description)
+            new_description = new_description.strip()
+            
+            # Only update if it's actually longer
+            if len(new_description) >= 40:
+                record["description"] = new_description
+                return True, f"Expanded description from {len(description)} to {len(new_description)} characters"
+        
+        # Fallback: add generic context
+        if not parts or len(description) < 20:
+            if catalog_type:
+                new_description = f"{description.rstrip('.')}. {catalog_type} providing datasets and services."
+            else:
+                new_description = f"{description.rstrip('.')}. Data portal providing datasets and services."
+            
+            new_description = re.sub(r'\.+', '.', new_description)
+            new_description = re.sub(r'\s+', ' ', new_description)
+            new_description = new_description.strip()
+            
+            if len(new_description) >= 40:
+                record["description"] = new_description
+                return True, f"Expanded description from {len(description)} to {len(new_description)} characters"
+    
+    return False, None
+
+def fix_tag_hygiene(record, file_path, field):
+    """Fix TAG_HYGIENE by removing or fixing problematic tags"""
+    # Parse field like "tags[2]" to get index
+    match = re.match(r'tags\[(\d+)\]', field)
+    if not match:
+        return False, None
+    
+    tag_index = int(match.group(1))
+    tags = record.get("tags", [])
+    
+    if not isinstance(tags, list) or tag_index >= len(tags):
+        return False, None
+    
+    tag = tags[tag_index]
+    
+    if not isinstance(tag, str):
+        return False, None
+    
+    tag_stripped = tag.strip()
+    
+    # Remove tags that are too short (less than 3 characters) or empty
+    if len(tag_stripped) < 3:
+        tags.pop(tag_index)
+        record["tags"] = tags
+        return True, f"Removed short tag '{tag}' (less than 3 characters)"
+    
+    # Fix tags that are too long (more than 40 characters) - truncate or remove
+    if len(tag_stripped) > 40:
+        # Try to truncate intelligently
+        truncated = tag_stripped[:37] + "..."
+        tags[tag_index] = truncated
+        record["tags"] = tags
+        return True, f"Truncated long tag from {len(tag_stripped)} to {len(truncated)} characters"
+    
+    # Fix empty tags
+    if not tag_stripped:
+        tags.pop(tag_index)
+        record["tags"] = tags
+        return True, "Removed empty tag"
+    
+    return False, None
+
 def parse_medium_file(medium_file_path):
     """Parse MEDIUM.txt and extract file paths and issues"""
     issues = []
@@ -252,13 +384,18 @@ def parse_medium_file(medium_file_path):
     
     return issues
 
-def fix_yaml_file(file_path, issue_type):
+def fix_yaml_file(file_path, issue_type, field=None):
     """Fix issues in a YAML file"""
-    full_path = Path("data/entities") / file_path
+    full_path = ENTITIES_DIR / file_path
     
     if not full_path.exists():
-        print(f"Warning: File not found: {full_path}")
-        return False
+        # Try scheduled directory
+        scheduled_path = BASE_DIR / "data" / "scheduled" / file_path
+        if scheduled_path.exists():
+            full_path = scheduled_path
+        else:
+            print(f"Warning: File not found: {full_path}")
+            return False
     
     try:
         with open(full_path, 'r', encoding='utf-8') as f:
@@ -277,6 +414,10 @@ def fix_yaml_file(file_path, issue_type):
             fixed, message = fix_endpoints(data, file_path)
         elif issue_type == "MISSING_LANGS":
             fixed, message = fix_langs(data, file_path)
+        elif issue_type == "SHORT_DESCRIPTION":
+            fixed, message = expand_description(data, file_path)
+        elif issue_type == "TAG_HYGIENE":
+            fixed, message = fix_tag_hygiene(data, file_path, field)
         
         if fixed and message:
             print(f"{issue_type} in {file_path}: {message}")
@@ -288,10 +429,12 @@ def fix_yaml_file(file_path, issue_type):
         return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 def main():
-    medium_file = Path("dataquality/priorities/MEDIUM.txt")
+    medium_file = BASE_DIR / "dataquality" / "priorities" / "MEDIUM.txt"
     
     if not medium_file.exists():
         print(f"Error: {medium_file} not found")
@@ -304,7 +447,7 @@ def main():
     fixed_count = 0
     skipped_count = 0
     for file_path, issue_type, field in issues:
-        result = fix_yaml_file(file_path, issue_type)
+        result = fix_yaml_file(file_path, issue_type, field)
         if result:
             fixed_count += 1
         else:

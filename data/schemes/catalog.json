@@ -3,7 +3,7 @@
     "type": "list",
     "schema": {
       "type": "string",
-      "allowed": ["open", "restricted"]
+      "allowed": ["open", "restricted", "limited", "public", "protected", "closed", "private"]
     },
     "required": true
   },
@@ -25,11 +25,13 @@
       "Indicators catalog",
       "Microdata catalog",
       "Machine learning catalog",
-      "Data search engines",
+      "Data search engine",
       "API Catalog",
-      "Data marketplaces",
+      "Data marketplace",
       "Metadata catalog",
-      "Other"
+      "Other",
+      "Datasets list",
+      "General research repository"
     ]
   },
   "content_types": {
@@ -48,7 +50,7 @@
           "schema" : {
             "country" : {"type" : "dict", "schema" : {  
               "id": {
-              "type": "string",
+              "anyof": [{"type": "string"}, {"type": "integer"}],
               "empty" : false
               },
               "name": {
@@ -124,13 +126,14 @@
   "status": {
     "type": "string",
     "required": true,
-    "allowed": ["active", "inactive", "scheduled"]
+    "allowed": ["active", "inactive", "scheduled", "deprecated"]
   },
   "tags": {
     "type": "list",
     "schema": {
-            "type": "string"
-        }  },
+      "anyof": [{"type": "string"}, {"type": "dict"}]
+    }
+  },
   "api": {
     "type": "boolean"
   },
@@ -198,7 +201,7 @@
         "schema" : {
           "country" : {"type" : "dict", "schema" : {  
             "id": {
-            "type": "string",
+            "anyof": [{"type": "string"}, {"type": "integer"}],
             "empty" : false,
             "required" : true
           },
@@ -214,7 +217,13 @@
         "id" : {"type" : "string", "empty" : false},
         "name" : {"type" : "string", "empty" : false}
       }
-      }
+      },
+      "subdivision": {"type" : "dict", "schema" : {
+        "id" : {"type" : "string", "empty" : false},
+        "name" : {"type" : "string", "empty" : false}
+      }, "required": false
+      },
+      "name": {"type" : "string", "required": false}
     }
       },
       "name": {
@@ -269,7 +278,15 @@
         "type": "boolean",
         "empty" : false,
         "required": false
-      } 
+      },
+      "base_last_seen": {
+        "type": "string",
+        "required": false
+      },
+      "dataset_count_reported": {
+        "anyof": [{"type": "integer"}, {"type": "string"}],
+        "required": false
+      }
     }
   }, 
   "rights" : {
@@ -363,10 +380,12 @@
         "schema": {"type": "string"}
       },
       "contact_email": {
-        "type": "string"
+        "type": "string",
+        "nullable": true
       },
       "description": {
-        "type": "string"
+        "type": "string",
+        "nullable": true
       },
       "persistent_identifiers": {
         "type": "list",
@@ -377,7 +396,8 @@
         "schema": {"type": "string"}
       },
       "versioning": {
-        "type": "boolean"
+        "type": "boolean",
+        "nullable": true
       },
       "institutions": {
         "type": "list",
@@ -385,12 +405,13 @@
           "type": "dict",
           "schema": {
             "name": {"type": "string"},
-            "url": {"type": "string"}
+            "url": {"type": "string", "nullable": true}
           }
         }
       },
       "repository_type": {
-        "type": "string"
+        "type": "string",
+        "nullable": true
       },
       "re3data_id": {
         "type": "string"

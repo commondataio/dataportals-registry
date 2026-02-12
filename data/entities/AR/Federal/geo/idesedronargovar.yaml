@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,10 @@ coverage:
 description: Geoportal providing spatial data services for the Secretaría de Políticas
   Integrales sobre Drogas de la Nación Argentina (SEDRONAR), supporting visualization
   and access to resources related to drug policies and services.
+endpoints:
+- type: wms130
+  url: http://ide.sedronar.gov.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: idesedronargovar
 langs:
 - id: ES

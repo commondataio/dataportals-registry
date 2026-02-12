@@ -1,84 +1,38 @@
 DATA QUALITY REPORT - COUNTRY: KE
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: KE
-Total Records with Issues: 4
-Total Issues Found: 6
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 2
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 3
+Priority: IMPORTANT
 
-File: KE/Federal/microdata/microdataportalaphrcorg.yaml
-Record ID: microdataportalaphrcorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: KE/Federal/geo/mapsvirtualkenyaorg.yaml
+Record ID: mapsvirtualkenyaorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: KE/Federal/geo/geodataarinafricaorg.yaml
-Record ID: geodataarinafricaorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: KE/Federal/scientific/datailriorg.yaml
+Record ID: datailriorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Record ID: tourismandculturekuniversityhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: KE/Federal/scientific/iptmuseumsorke.yaml
-Record ID: iptmuseumsorke
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Record ID: tourismandculturekuniversityhubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Record ID: tourismandculturekuniversityhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: Unknown/Other/opendata/genderopendataorg.yaml
+Record ID: genderopendataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 2 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: tourismandculturekuniversityhubarcgiscom
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues

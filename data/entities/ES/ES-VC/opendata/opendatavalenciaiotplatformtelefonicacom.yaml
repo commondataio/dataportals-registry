@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: Open data portal of Plataforma VLCi, managed by Valencia City Council.
+endpoints:
+- type: ckan
+  url: https://opendata-valencia.iotplatform.telefonica.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata-valencia.iotplatform.telefonica.com/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata-valencia.iotplatform.telefonica.com/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://opendata-valencia.iotplatform.telefonica.com/catalog.n3
+- type: dcat:ttl
+  url: https://opendata-valencia.iotplatform.telefonica.com/catalog.ttl
+- type: dcat:xml
+  url: https://opendata-valencia.iotplatform.telefonica.com/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata-valencia.iotplatform.telefonica.com/catalog.jsonld
+id: opendatavalenciaiotplatformtelefonicacom
+langs:
+- id: ES
+  name: Spanish
+link: https://opendata-valencia.iotplatform.telefonica.com
+name: Plataforma VLCi
+owner:
+  link: https://www.valencia.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Ayuntamiento de Valencia
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+- valencia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020304

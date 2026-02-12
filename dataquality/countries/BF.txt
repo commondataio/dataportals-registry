@@ -1,36 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: BF
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: BF
 Total Records with Issues: 1
-Total Issues Found: 2
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: LOW
+Priority: IMPORTANT
 
-File: BF/Federal/scientific/iptburkinafasogbiffr.yaml
-Record ID: iptburkinafasogbiffr
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: BF/Federal/scientific/iptburkinafasogbiffr.yaml
-Record ID: iptburkinafasogbiffr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT du Burkina Faso (SP/CONEDD-DCIME)
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: BF/Federal/opendata/wascaldataportalorg.yaml
+Record ID: wascaldataportalorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

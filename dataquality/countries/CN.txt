@@ -1,353 +1,115 @@
 DATA QUALITY REPORT - COUNTRY: CN
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: CN
-Total Records with Issues: 38
-Total Issues Found: 43
+Total Records with Issues: 14
+Total Issues Found: 14
 
 === ISSUES BY TYPE ===
 
-[COVERAGE_NORMALIZATION]
-Count: 2
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 14
 Priority: IMPORTANT
 
 File: CN/CN-GD/scientific/datasustecheducn.yaml
 Record ID: datasustecheducn
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-GD', 'name': 'Guangdong'}}
-Suggested Action: Add macroregion information to coverage location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
 File: CN/CN-AH/scientific/sdcustceducn.yaml
 Record ID: sdcustceducn
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-AH', 'name': 'Anhui'}}
-Suggested Action: Add macroregion information to coverage location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-[MISSING_LANGS]
-Count: 2
-Priority: MEDIUM
+File: CN/CN-FJ/geo/zsbsspfuzhougovcn.yaml
+Record ID: zsbsspfuzhougovcn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CN/Federal/geo/wwwbeijingcitylabcom.yaml
-Record ID: wwwbeijingcitylabcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: CN/Federal/geo/wwwzzchgovcn.yaml
+Record ID: wwwzzchgovcn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CN/Federal/geo/2186120106.yaml
-Record ID: 2186120106
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: CN/Federal/geo/mapyongxingovcn.yaml
+Record ID: mapyongxingovcn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
+File: CN/Federal/geo/tdtxyxinyugovcn.yaml
+Record ID: tdtxyxinyugovcn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CN/Federal/geo/onemapserverimgnet.yaml
-Record ID: onemapserverimgnet
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CN/Federal/scientific/instdbcasdccn.yaml
+Record ID: instdbcasdccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-File: CN/Federal/scientific/datacasearthcn.yaml
-Record ID: datacasearthcn
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CN/Federal/scientific/instdbgeneticsaccn.yaml
+Record ID: instdbgeneticsaccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-[MISSING_TAGS]
-Count: 4
-Priority: LOW
+File: CN/Federal/scientific/nbsdccn.yaml
+Record ID: nbsdccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-File: CN/CN-GD/opendata/datagzgovcn.yaml
-Record ID: datagzgovcn
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CN/Federal/opendata/wwwbzgongxiangcom.yaml
-Record ID: wwwbzgongxiangcom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CN/Federal/geo/wis2nodewiscmacn.yaml
-Record ID: wis2nodewiscmacn
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CN/Federal/ml/hyperaidatasets.yaml
-Record ID: hyperaidatasets
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 29
-Priority: LOW
-
-File: CN/CN-LN/geo/liaoningtianditugovcn.yaml
-Record ID: liaoningtianditugovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-JX/opendata/datajiangxigovcn.yaml
-Record ID: datajiangxigovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-GD/opendata/datagzgovcn.yaml
-Record ID: datagzgovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-GD/opendata/dbcngborg.yaml
-Record ID: dbcngborg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-FJ/opendata/datafuzhougovcn.yaml
-Record ID: datafuzhougovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-FJ/geo/mapshanghanggovcn.yaml
-Record ID: mapshanghanggovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-JS/opendata/opendatachangzhougovcn.yaml
-Record ID: opendatachangzhougovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/sjdjndagovcn.yaml
-Record ID: sjdjndagovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/wwwopendatachaincn.yaml
-Record ID: wwwopendatachaincn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/datazjzwfwgovcn.yaml
-Record ID: datazjzwfwgovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/opendatananjinggovcn.yaml
-Record ID: opendatananjinggovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/datazjtzgovcn.yaml
-Record ID: datazjtzgovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/portalqdioaccn.yaml
-Record ID: portalqdioaccn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/openkgcn.yaml
-Record ID: openkgcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/wwwbzgongxiangcom.yaml
-Record ID: wwwbzgongxiangcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/datawuhuagovcn.yaml
-Record ID: datawuhuagovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/opendata/opendatajiangovcn.yaml
-Record ID: opendatajiangovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/ml/tianchialiyuncom.yaml
-Record ID: tianchialiyuncom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/ml/hyperaidatasets.yaml
-Record ID: hyperaidatasets
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/ml/opendatalaborgcn.yaml
-Record ID: opendatalaborgcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/ml/wwwdatatangai.yaml
-Record ID: wwwdatatangai
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/scientific/kgockcestcn.yaml
-Record ID: kgockcestcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/Federal/scientific/nmdccn.yaml
-Record ID: nmdccn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CN/Federal/scientific/agridatacn.yaml
+Record ID: agridatacn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
 File: CN/Federal/scientific/memrceesaccn.yaml
 Record ID: memrceesaccn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-File: CN/Federal/scientific/datastarcloudpclaccn.yaml
-Record ID: datastarcloudpclaccn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CN/Federal/scientific/instdbiphyaccn.yaml
+Record ID: instdbiphyaccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-File: CN/Federal/scientific/vssonssdcaccn.yaml
-Record ID: vssonssdcaccn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CN/Federal/scientific/dataiscraccn.yaml
+Record ID: dataiscraccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
-File: CN/Federal/scientific/wwwchinageosscn.yaml
-Record ID: wwwchinageosscn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-ZJ/opendata/datajiaxinggovcn.yaml
-Record ID: datajiaxinggovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CN/CN-SD/opendata/dataqingdaogovcn.yaml
-Record ID: dataqingdaogovcn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 4
-Priority: MEDIUM
-
-File: CN/Federal/opendata/datawuhuagovcn.yaml
-Record ID: datawuhuagovcn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Extracted metadata for the catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CN/Federal/geo/servermars3dcn.yaml
-Record ID: servermars3dcn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Directory
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CN/Federal/geo/qlsnpcn.yaml
-Record ID: qlsnpcn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog of ArcGIS REST services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CN/Federal/ml/hyperaidatasets.yaml
-Record ID: hyperaidatasets
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Machine learning catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CN/Federal/scientific/datascsioaccn.yaml
+Record ID: datascsioaccn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'instdb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='instdb' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 2 issues
-MISSING_LANGS: 2 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 4 issues
-MISSING_TOPICS: 29 issues
-SHORT_DESCRIPTION: 4 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: hyperaidatasets
-File: CN/Federal/ml/hyperaidatasets.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SHORT_DESCRIPTION: description
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 14 issues

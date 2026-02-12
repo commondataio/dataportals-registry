@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Geospatial data catalog providing data via GeoServer, commonly used for
@@ -61,7 +61,9 @@ endpoints:
   url: https://rsistest.ramsar.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: rsistestramsarorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://rsistest.ramsar.org/geoserver
 name: rsistest.ramsar.org/geoserver
 owner:
@@ -71,7 +73,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 properties:

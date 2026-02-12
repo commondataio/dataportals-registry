@@ -1,69 +1,38 @@
 DATA QUALITY REPORT - COUNTRY: EE
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: EE
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: EE/Federal/scientific/gbifkeskkonnainfoee.yaml
-Record ID: gbifkeskkonnainfoee
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TOPICS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 3
-Priority: LOW
+Priority: IMPORTANT
 
-File: EE/Federal/geo/geoportaalmaaametee.yaml
-Record ID: geoportaalmaaametee
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: EE/Federal/indicators/statistikahaigekassaee.yaml
+Record ID: statistikahaigekassaee
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: EE/Federal/indicators/statistikatervisekassaee.yaml
+Record ID: statistikatervisekassaee
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
 File: EE/Federal/geo/inspiremaaametee.yaml
 Record ID: inspiremaaametee
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: Unknown/geo/keskkonnateadlikkaurhubarcgiscom.yaml
-Record ID: keskkonnateadlikkaurhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 2
-Priority: MEDIUM
-
-File: EE/Federal/geo/klspriaee.yaml
-Record ID: klspriaee
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog of geospatial datasets
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: EE/EE-74/geo/gissaaremaavaldee.yaml
-Record ID: gissaaremaavaldee
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoportal for Saaremaa municipality
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 3 issues
-SHORT_DESCRIPTION: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues

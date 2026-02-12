@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,12 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Geospatial data catalog and server
+description: Geospatial data catalog and server. This geoportal. managed by Ministerio
+  de Ambiente y Desarrollo Sostenible. provides access to datasets and resources.
+endpoints:
+- type: wms130
+  url: http://geo2.ambiente.gob.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: geo2ambientegobar
 langs:
 - id: ES

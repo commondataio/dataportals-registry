@@ -1,90 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: NG
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: NG
-Total Records with Issues: 6
-Total Issues Found: 9
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 4
-Priority: MEDIUM
-
-File: NG/Federal/opendata/sproutopencontentcom.yaml
-Record ID: sproutopencontentcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 2
+Priority: IMPORTANT
 
 File: NG/Federal/geo/gisaieehealthafricaorg.yaml
 Record ID: gisaieehealthafricaorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: NG/Federal/geo/gisgeoserverehealthafricaorg.yaml
-Record ID: gisgeoserverehealthafricaorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: NG/Federal/geo/geoservergridnigeriaorg.yaml
 Record ID: geoservergridnigeriaorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: NG/NG-OG/opendata/opendataedostategovng.yaml
-Record ID: opendataedostategovng
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: NG/Federal/opendata/grid3govng.yaml
-Record ID: grid3govng
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: NG/Federal/geo/gisaieehealthafricaorg.yaml
-Record ID: gisaieehealthafricaorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: NG/Federal/geo/geoservergridnigeriaorg.yaml
-Record ID: geoservergridnigeriaorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: NG/NG-OG/opendata/opendataedostategovng.yaml
-Record ID: opendataedostategovng
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Ogun State Government Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 4 issues
-MISSING_TOPICS: 4 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

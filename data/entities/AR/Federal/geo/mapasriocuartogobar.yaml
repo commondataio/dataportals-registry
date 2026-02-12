@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: South America
 description: GeoNetwork instance providing geospatial data catalog for Río Cuarto,
   Argentina
+endpoints:
+- type: geonetwork:query
+  url: http://mapasriocuarto.gob.ar:8080/geonetwork/srv/eng/q
 id: mapasriocuartogobar
 langs:
 - id: ES

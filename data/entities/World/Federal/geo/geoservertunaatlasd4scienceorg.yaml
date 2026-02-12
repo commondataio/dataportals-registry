@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: A data catalog providing geospatial datasets, particularly focused on
@@ -61,7 +61,9 @@ endpoints:
   url: http://geoserver-tunaatlas.d4science.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: geoservertunaatlasd4scienceorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://geoserver-tunaatlas.d4science.org/geoserver
 name: geoserver-tunaatlas.d4science.org
 owner:
@@ -71,7 +73,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: GeoServer Tuna Atlas (under D4Science)
   type: Academy
 properties:

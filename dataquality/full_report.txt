@@ -1,1553 +1,485 @@
 DATA QUALITY ANALYSIS REPORT
 ================================================================================
-Generated: 2026-01-15 16:35:15
-Total Records Analyzed: 12390
-Total Issues Found: 3465
-Records with Issues: 2729
+Generated: 2026-02-12 09:47:40
+Total Records Analyzed: 12604
+Total Issues Found: 966
+Records with Issues: 918
 
 === ISSUES BY TYPE ===
 
-[CATALOG_SOFTWARE_MISMATCH]
-Count: 1
-Priority: CRITICAL
-
-File: AT/AT-7/opendata/datatirisopendataarcgiscom.yaml
-Record ID: datatirisopendataarcgiscom
-Country: AT
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Open data portal, software.id=arcgishub
-Suggested Action: Update catalog_type to 'Geoportal' to match software.id
-
-[COVERAGE_NORMALIZATION]
-Count: 4
+[API_STATUS_MISMATCH]
+Count: 6
 Priority: IMPORTANT
 
-File: CN/CN-GD/scientific/datasustecheducn.yaml
-Record ID: datasustecheducn
-Country: CN
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-GD', 'name': 'Guangdong'}}
-Suggested Action: Add macroregion information to coverage location
+File: SK/Federal/opendata/datagovsk.yaml
+Record ID: datagovsk
+Country: SK
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: CN/CN-AH/scientific/sdcustceducn.yaml
-Record ID: sdcustceducn
-Country: CN
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-AH', 'name': 'Anhui'}}
-Suggested Action: Add macroregion information to coverage location
+File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
+Record ID: datasetscataloguedatagovdk
+Country: DK
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: Unknown/Other/geo/qwc2thelabsvorg.yaml
-Record ID: qwc2thelabsvorg
-Country: Unknown
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'Unknown', 'name': 'Unknown'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
+File: IE/Federal/geo/gisepaie.yaml
+Record ID: gisepaie
+Country: IE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: EU/geo/collectionseurodatacubecom.yaml
-Record ID: collectionseurodatacubecom
-Country: EU
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'EU', 'name': 'European Union'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Country: IE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=7
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-[DUPLICATE_TAGS]
-Count: 2
-Priority: LOW
+File: TR/TR-41/opendata/verikocaelibeltr.yaml
+Record ID: verikocaelibeltr
+Country: TR
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
-File: HR/Federal/scientific/datacrossdahr.yaml
-Record ID: datacrossdahr
-Country: HR
-Issue: DUPLICATE_TAGS
-Field: tags[2]
-Current Value: scientific
-Suggested Action: Remove duplicate tag
+File: TR/TR-34/geo/apiibbgovtr.yaml
+Record ID: apiibbgovtr
+Country: TR
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
-File: HR/Federal/scientific/datacrossdahr.yaml
-Record ID: datacrossdahr
-Country: HR
-Issue: DUPLICATE_TAGS
-Field: tags[3]
-Current Value: has_api
-Suggested Action: Remove duplicate tag
+[DUPLICATE_LINK]
+Count: 113
+Priority: MEDIUM
+
+File: US/US-WI/geo/mapsscowiscedu.yaml
+Record ID: mapsscowiscedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/mapsscowiscedu.yaml
+Record ID: mapsscowiscedu
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Other/scientific/tdsmarinerutgersedu.yaml
+Record ID: tdsmarinerutgersedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tds.marine.rutgers.edu/thredds/catalog.html', 'record_ids': ['tdsmarinerutgersedu', 'tdsmarinerutgersedu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-NJ/opendata/tdsmarinerutgersedu.yaml
+Record ID: tdsmarinerutgersedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tds.marine.rutgers.edu/thredds/catalog.html', 'record_ids': ['tdsmarinerutgersedu', 'tdsmarinerutgersedu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-NJ/opendata/healthdatanjgov.yaml
+Record ID: healthdatanjgov
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://healthdata.nj.gov', 'record_ids': ['healthdatanjgov', 'healthdatadatanjgov']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-NJ/opendata/healthdatadatanjgov.yaml
+Record ID: healthdatadatanjgov
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://healthdata.nj.gov', 'record_ids': ['healthdatanjgov', 'healthdatadatanjgov']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-NC/geo/datancdenropendataarcgiscom.yaml
+Record ID: datancdenropendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-ncdenr.opendata.arcgis.com', 'record_ids': ['datancdenropendataarcgiscom', 'datancdenropendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/datancdenropendataarcgiscom.yaml
+Record ID: datancdenropendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-ncdenr.opendata.arcgis.com', 'record_ids': ['datancdenropendataarcgiscom', 'datancdenropendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-AZ/geo/azgeoopendataagichubarcgiscom.yaml
+Record ID: azgeoopendataagichubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://azgeo-open-data-agic.hub.arcgis.com', 'record_ids': ['azgeoopendataagichubarcgiscom', 'azgeoopendataagichubarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/azgeoopendataagichubarcgiscom.yaml
+Record ID: azgeoopendataagichubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://azgeo-open-data-agic.hub.arcgis.com', 'record_ids': ['azgeoopendataagichubarcgiscom', 'azgeoopendataagichubarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-CA/geo/cecgiscaenergyopendataarcgiscom.yaml
+Record ID: cecgiscaenergyopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cecgis-caenergy.opendata.arcgis.com/', 'record_ids': ['cecgiscaenergyopendataarcgiscom', 'cecgiscaenergyopendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/cecgiscaenergyopendataarcgiscom.yaml
+Record ID: cecgiscaenergyopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cecgis-caenergy.opendata.arcgis.com/', 'record_ids': ['cecgiscaenergyopendataarcgiscom', 'cecgiscaenergyopendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-VA/geo/sitesgooglecom.yaml
+Record ID: sitesgooglecom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sites.google.com/t4w.com.br/cangooroo-doc/deprecated-api/rest/services', 'record_ids': ['sitesgooglecom', 'sitesgooglecom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/sitesgooglecom.yaml
+Record ID: sitesgooglecom
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sites.google.com/t4w.com.br/cangooroo-doc/deprecated-api/rest/services', 'record_ids': ['sitesgooglecom', 'sitesgooglecom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/csdcimmaporg.yaml
+Record ID: csdcimmaporg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/csdcimmaporg.yaml
+Record ID: csdcimmaporg
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/tilesarcgiscom.yaml
+Record ID: tilesarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/tilesarcgiscom.yaml
+Record ID: tilesarcgiscom
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/Federal/geo/dataalgeohubopendataarcgiscom.yaml
+Record ID: dataalgeohubopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-algeohub.opendata.arcgis.com', 'record_ids': ['dataalgeohubopendataarcgiscom', 'dataalgeohubopendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-AL/geo/dataalgeohubopendataarcgiscom.yaml
+Record ID: dataalgeohubopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-algeohub.opendata.arcgis.com', 'record_ids': ['dataalgeohubopendataarcgiscom', 'dataalgeohubopendataarcgiscom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-KY/geo/kygeoportalkygov.yaml
+Record ID: kygeoportalkygov
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: US/US-KY/geo/kygisportalserviceskygov.yaml
+Record ID: kygisportalserviceskygov
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MZ/geo/licensesinamigovmzarcgisrestservices.yaml
+Record ID: licensesinamigovmzarcgisrestservices
+Country: MZ
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Country: MZ
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DO/geo/ozfeconomiagobdo.yaml
+Record ID: ozfeconomiagobdo
+Country: DO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DO/Federal/geo/ozfeconomiagobdo.yaml
+Record ID: ozfeconomiagobdo
+Country: DO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DO/geo/mapageneralmineriagobdo.yaml
+Record ID: mapageneralmineriagobdo
+Country: DO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DO/Federal/geo/mapageneralmineriagobdo.yaml
+Record ID: mapageneralmineriagobdo
+Country: DO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MG/geo/protectedareasmg.yaml
+Record ID: protectedareasmg
+Country: MG
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MG/geo/artecmg.yaml
+Record ID: artecmg
+Country: MG
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/CO-DC/geo/geoportaljbbgovco.yaml
+Record ID: geoportaljbbgovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geoportal.jbb.gov.co/agc/rest/services', 'record_ids': ['geoportaljbbgovco', 'geoportaljbbgovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/Federal/geo/geoportaljbbgovco.yaml
+Record ID: geoportaljbbgovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geoportal.jbb.gov.co/agc/rest/services', 'record_ids': ['geoportaljbbgovco', 'geoportaljbbgovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/CO-DC/geo/wwwsecretariadeambientegovco.yaml
+Record ID: wwwsecretariadeambientegovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.secretariadeambiente.gov.co/arcgis/rest/services', 'record_ids': ['wwwsecretariadeambientegovco', 'wwwsecretariadeambientegovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/Federal/geo/wwwsecretariadeambientegovco.yaml
+Record ID: wwwsecretariadeambientegovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.secretariadeambiente.gov.co/arcgis/rest/services', 'record_ids': ['wwwsecretariadeambientegovco', 'wwwsecretariadeambientegovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/CO-VAC/geo/wsidesccaligovco.yaml
+Record ID: wsidesccaligovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ws-idesc.cali.gov.co:8081/geoserver', 'record_ids': ['wsidesccaligovco', 'wsidesccaligovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/Federal/geo/wsidesccaligovco.yaml
+Record ID: wsidesccaligovco
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ws-idesc.cali.gov.co:8081/geoserver', 'record_ids': ['wsidesccaligovco', 'wsidesccaligovco']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/Federal/opendata/unisimondigitalcommonsdatacom.yaml
+Record ID: unisimondigitalcommonsdatacom
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://unisimon.digitalcommonsdata.com', 'record_ids': ['unisimondigitalcommonsdatacom', 'unisimondigitalcommonsdatacom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CO/Federal/geo/unisimondigitalcommonsdatacom.yaml
+Record ID: unisimondigitalcommonsdatacom
+Country: CO
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://unisimon.digitalcommonsdata.com', 'record_ids': ['unisimondigitalcommonsdatacom', 'unisimondigitalcommonsdatacom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/IT-42/opendata/daticomunedigenovait.yaml
+Record ID: daticomunedigenovait
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://dati.comune.genova.it', 'record_ids': ['daticomunedigenovait', 'daticomunegenovait']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/IT-42/opendata/daticomunegenovait.yaml
+Record ID: daticomunegenovait
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://dati.comune.genova.it', 'record_ids': ['daticomunedigenovait', 'daticomunegenovait']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/Federal/geo/geoserver4d4scienceorg.yaml
+Record ID: geoserver4d4scienceorg
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver4.d4science.org/geoserver', 'record_ids': ['geoserver4d4scienceorg', 'geoserver4d4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/geoserver4d4scienceorg.yaml
+Record ID: geoserver4d4scienceorg
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver4.d4science.org/geoserver', 'record_ids': ['geoserver4d4scienceorg', 'geoserver4d4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
+Record ID: geoserverprotectedareaimpactmapsd4scienceorg
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver-protectedareaimpactmaps.d4science.org/geoserver', 'record_ids': ['geoserverprotectedareaimpactmapsd4scienceorg', 'geoserverprotectedareaimpactmapsd4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
+Record ID: geoserverprotectedareaimpactmapsd4scienceorg
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver-protectedareaimpactmaps.d4science.org/geoserver', 'record_ids': ['geoserverprotectedareaimpactmapsd4scienceorg', 'geoserverprotectedareaimpactmapsd4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/Federal/geo/geoserversdilabd4scienceorg.yaml
+Record ID: geoserversdilabd4scienceorg
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/geoserversdilabd4scienceorg.yaml
+Record ID: geoserversdilabd4scienceorg
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: IT/Federal/geo/geoserver2d4scienceorg.yaml
+Record ID: geoserver2d4scienceorg
+Country: IT
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver2.d4science.org/geoserver', 'record_ids': ['geoserver2d4scienceorg', 'geoserver2d4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: World/Federal/geo/geoserver2d4scienceorg.yaml
+Record ID: geoserver2d4scienceorg
+Country: World
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://geoserver2.d4science.org/geoserver', 'record_ids': ['geoserver2d4scienceorg', 'geoserver2d4scienceorg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CA/CA-BC/scientific/erddapdatacioospacificca.yaml
+Record ID: erddapdatacioospacificca
+Country: CA
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: CA/Federal/scientific/datacioospacificca.yaml
+Record ID: datacioospacificca
+Country: CA
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+... and 63 more records with this issue
 
 [MISSING_API_STATUS]
-Count: 28
+Count: 1
 Priority: IMPORTANT
 
-File: ES/ES-CB/scientific/webunicanesopendatapaginascatalogoaspx.yaml
-Record ID: webunicanesopendatapaginascatalogoaspx
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/ES-VC/opendata/bimcvcipfes.yaml
-Record ID: bimcvcipfes
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/centrodedescargascnigescentrodescargas.yaml
-Record ID: centrodedescargascnigescentrodescargas
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/fegaesesdatosabiertos.yaml
-Record ID: fegaesesdatosabiertos
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/opendatabizkaiaeusescatalogo.yaml
-Record ID: opendatabizkaiaeusescatalogo
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sederedgobesesdatosabiertoscatalogodatos.yaml
-Record ID: sederedgobesesdatosabiertoscatalogodatos
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/gironacatopendatadataset.yaml
-Record ID: gironacatopendatadataset
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sedepuertosgobespaginascatalogorispaspx.yaml
-Record ID: sedepuertosgobespaginascatalogorispaspx
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/observatorioreligioneselobservatoriohtml.yaml
-Record ID: observatorioreligioneselobservatoriohtml
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/vitoriagasteizorgopendata.yaml
-Record ID: vitoriagasteizorgopendata
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/aplicacionswebpaeriaeseopendatapublicweb.yaml
-Record ID: aplicacionswebpaeriaeseopendatapublicweb
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/segsocialeswpsportalwssinternetinformacionutil5962.yaml
-Record ID: segsocialeswpsportalwssinternetinformacionutil5962
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/datosabiertosdipucadizesdata.yaml
-Record ID: datosabiertosdipucadizesdata
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/seuecatwebolotdadesobertes.yaml
-Record ID: seuecatwebolotdadesobertes
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/datacnmcesbuscador.yaml
-Record ID: datacnmcesbuscador
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/fecytesdatosabiertos.yaml
-Record ID: fecytesdatosabiertos
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/administraciodigitalgencatcatcadadesdadesobertesin.yaml
-Record ID: administraciodigitalgencatcatcadadesdadesobertesin
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sedemineturgobesesesdatosabiertospaginasindexaspx.yaml
-Record ID: sedemineturgobesesesdatosabiertospaginasindexaspx
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sedeoepmgobesesededatoses.yaml
-Record ID: sedeoepmgobesesededatoses
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/datostenerifeesesdatosconjuntosdedatosfilter5bsear.yaml
-Record ID: datostenerifeesesdatosconjuntosdedatosfilter5bsear
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/porttarragonacatesautoridadportuariatarragonadatos.yaml
-Record ID: porttarragonacatesautoridadportuariatarragonadatos
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sepiesestransparencia.yaml
-Record ID: sepiesestransparencia
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/aemetesesdatosabiertoscatalogo.yaml
-Record ID: aemetesesdatosabiertoscatalogo
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/villanuevadelaserenaesconcejaliasayvdatosportaldet.yaml
-Record ID: villanuevadelaserenaesconcejaliasayvdatosportaldet
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/opendataturismoconilessearch.yaml
-Record ID: opendataturismoconilessearch
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/sedecatastrogobesaccesossecaccdescargadatosaspx.yaml
-Record ID: sedecatastrogobesaccesossecaccdescargadatosaspx
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/opendata/zaragozaesciudadrisp.yaml
-Record ID: zaragozaesciudadrisp
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: ES/Federal/scientific/zaguanunizarescollectionopendatalnesas1.yaml
-Record ID: zaguanunizarescollectionopendatalnesas1
-Country: ES
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-[MISSING_DESCRIPTION]
-Count: 219
-Priority: MEDIUM
-
-File: World/Federal/opendata/datatompsccom.yaml
-Record ID: datatompsccom
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/opendata/gimi9com.yaml
-Record ID: gimi9com
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/opendata/odataudgedu.yaml
-Record ID: odataudgedu
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/opendata/datanuevanacioncom.yaml
-Record ID: datanuevanacioncom
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/geo/gisartemisitscom.yaml
-Record ID: gisartemisitscom
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/geo/geonetworkothudatagrandlyoncom.yaml
-Record ID: geonetworkothudatagrandlyoncom
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/geo/mapsoraotcaorg.yaml
-Record ID: mapsoraotcaorg
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/geo/shareevk2cnrorg.yaml
-Record ID: shareevk2cnrorg
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: World/Federal/geo/atlasspincamnet.yaml
-Record ID: atlasspincamnet
-Country: World
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: RS/Federal/opendata/datakragujevacrs.yaml
-Record ID: datakragujevacrs
-Country: RS
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: RS/Federal/geo/gismregovrs.yaml
-Record ID: gismregovrs
-Country: RS
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: PT/PT-11/geo/oeiras30maismunicipiapt.yaml
-Record ID: oeiras30maismunicipiapt
-Country: PT
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: PT/Federal/opendata/cloud150ncgingridpt.yaml
-Record ID: cloud150ncgingridpt
-Country: PT
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: UY/Federal/geo/geoportalsietufadueduuy.yaml
-Record ID: geoportalsietufadueduuy
-Country: UY
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: UY/Federal/geo/geocorreocomuy.yaml
-Record ID: geocorreocomuy
-Country: UY
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: SG/geo/trsuatnparksgovsg.yaml
-Record ID: trsuatnparksgovsg
-Country: SG
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: PA/geo/geo01innovaciongobpageonode.yaml
-Record ID: geo01innovaciongobpageonode
-Country: PA
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: ML/indicators/pxwebinstatmalicom.yaml
-Record ID: pxwebinstatmalicom
-Country: ML
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BO/BO-L/geo/sitservicioslapazbo.yaml
-Record ID: sitservicioslapazbo
-Country: BO
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BO/Federal/geo/gtggeoportalumsabo.yaml
-Record ID: gtggeoportalumsabo
-Country: BO
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BO/Federal/geo/geonodeiigeoumsabo.yaml
-Record ID: geonodeiigeoumsabo
-Country: BO
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BO/Federal/geo/siipproducciongobbo.yaml
-Record ID: siipproducciongobbo
-Country: BO
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KR/KR-11/opendata/datagwangjingokr.yaml
-Record ID: datagwangjingokr
-Country: KR
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: GB/GB-NIR/opendata/nienetworksopendatasoftcom.yaml
-Record ID: nienetworksopendatasoftcom
-Country: GB
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: GB/Federal/opendata/icemnesstardataarchiveacuk.yaml
-Record ID: icemnesstardataarchiveacuk
-Country: GB
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: GB/Federal/opendata/ckanearlhamacuk.yaml
-Record ID: ckanearlhamacuk
-Country: GB
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: MY/Federal/geo/geoportalalamimy.yaml
-Record ID: geoportalalamimy
-Country: MY
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AR/Federal/geo/catalogoiglabgeotunseduar.yaml
-Record ID: catalogoiglabgeotunseduar
-Country: AR
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AR/AR-R/geo/saludsigrionegrogovar.yaml
-Record ID: saludsigrionegrogovar
-Country: AR
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BZ/indicators/appsiborgbz.yaml
-Record ID: appsiborgbz
-Country: BZ
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AU/AU-NSW/opendata/opendatanewcastlenswiaropendatasoftcom.yaml
-Record ID: opendatanewcastlenswiaropendatasoftcom
-Country: AU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AU/Federal/opendata/datamaintenanceorgau.yaml
-Record ID: datamaintenanceorgau
-Country: AU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AU/Federal/geo/portalauscopeorgau.yaml
-Record ID: portalauscopeorgau
-Country: AU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AU/AU-ACT/geo/actmapiactgovopendataarcgiscom.yaml
-Record ID: actmapiactgovopendataarcgiscom
-Country: AU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: HU/Federal/geo/geonetworkmfgihu.yaml
-Record ID: geonetworkmfgihu
-Country: HU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: HU/Federal/geo/arcgisserverlechnerkozponthu.yaml
-Record ID: arcgisserverlechnerkozponthu
-Country: HU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: HU/Federal/geo/geonetworkinspirefomihu.yaml
-Record ID: geonetworkinspirefomihu
-Country: HU
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KZ/Federal/geo/gisgharyshkz.yaml
-Record ID: gisgharyshkz
-Country: KZ
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KZ/KZ-27/geo/uralskmapgenplankz.yaml
-Record ID: uralskmapgenplankz
-Country: KZ
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KZ/KZ-19/geo/mapalmoblkz.yaml
-Record ID: mapalmoblkz
-Country: KZ
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BG/Federal/geo/8416227175.yaml
-Record ID: 8416227175
-Country: BG
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BG/Federal/geo/gisbgportsbg.yaml
-Record ID: gisbgportsbg
-Country: BG
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: BG/Federal/geo/rinfgeocustomersmapexbg.yaml
-Record ID: rinfgeocustomersmapexbg
-Country: BG
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: AT/Federal/geo/geometadatenlfrzat.yaml
-Record ID: geometadatenlfrzat
-Country: AT
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: MX/MX-CHP/opendata/transparenciachiapasgobmx.yaml
-Record ID: transparenciachiapasgobmx
-Country: MX
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-NW/geo/geoportalmekreismettmannde.yaml
-Record ID: geoportalmekreismettmannde
+File: DE/Federal/scientific/rdpcidatruhrunibochumde.yaml
+Record ID: rdpcidatruhrunibochumde
 Country: DE
-Issue: MISSING_DESCRIPTION
-Field: description
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-RP/geo/weinlagenlwkrlpde.yaml
-Record ID: weinlagenlwkrlpde
-Country: DE
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-HE/geo/wwwgeoportalhessende.yaml
-Record ID: wwwgeoportalhessende
-Country: DE
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
-Record ID: opendatarnvonlinede
-Country: DE
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-BW/opendata/fritzfreiburgde.yaml
-Record ID: fritzfreiburgde
-Country: DE
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-... and 169 more records with this issue
-
-[MISSING_ENDPOINTS]
-Count: 59
-Priority: MEDIUM
-
-File: SI/geo/collectionssentinelhubcom.yaml
-Record ID: collectionssentinelhubcom
-Country: SI
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: HR/Federal/metadata/webdzshrklasus.yaml
-Record ID: webdzshrklasus
-Country: HR
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: NL/NL-ZH/opendata/denhaagdataplatformnl.yaml
-Record ID: denhaagdataplatformnl
-Country: NL
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: NL/Federal/scientific/wwwchecklistbankorg.yaml
-Record ID: wwwchecklistbankorg
-Country: NL
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: AT/Federal/indicators/statcubeat.yaml
-Record ID: statcubeat
-Country: AT
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: NP/Federal/indicators/opendatanepalcom.yaml
-Record ID: nationaldatagovnp
-Country: NP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-OAX/opendata/wwwoaxacagobmx.yaml
-Record ID: wwwoaxacagobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-QUE/opendata/datosabiertosqueretarogobmx.yaml
-Record ID: datosabiertosqueretarogobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-CHH/opendata/datosmpiochihgobmx.yaml
-Record ID: datosmpiochihgobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-BCS/opendata/datosbcsgobmx.yaml
-Record ID: datosbcsgobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-JAL/opendata/datosjaliscogobmx.yaml
-Record ID: datosjaliscogobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/Federal/other/wwweconomiagobmxdatamexico.yaml
-Record ID: wwweconomiagobmxdatamexico
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/Federal/scientific/repositoriounammx.yaml
-Record ID: repositoriounammx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/Federal/scientific/wwwrepositorionacionalctimx.yaml
-Record ID: wwwrepositorionacionalctimx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-YUC/opendata/transparenciayucatangobmx.yaml
-Record ID: transparenciayucatangobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-CAM/opendata/datoscampechegobmx.yaml
-Record ID: datoscampechegobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-CHP/opendata/transparenciachiapasgobmx.yaml
-Record ID: transparenciachiapasgobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: MX/MX-HID/opendata/datosabiertoshidalgogobmx.yaml
-Record ID: datosabiertoshidalgogobmx
-Country: MX
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-RP/geo/geoportalrlpde.yaml
-Record ID: geoportalrlpde
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-BY/geo/geoportalbayernde.yaml
-Record ID: geoportalbayernde
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-HB/opendata/wwwtransparenzbremende.yaml
-Record ID: wwwtransparenzbremende
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-HE/geo/wwwgeoportalhessende.yaml
-Record ID: wwwgeoportalhessende
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-SL/geo/geoportalsaarlandde.yaml
-Record ID: geoportalsaarlandde
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/Federal/geo/downloadgeofabrikde.yaml
-Record ID: downloadgeofabrikde
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/Federal/scientific/databusdbpediaorg.yaml
-Record ID: databusdbpediaorg
-Country: DE
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DK/Federal/geo/geusegdi01geusdk.yaml
-Record ID: geusegdi01geusdk
-Country: DK
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: BR/Federal/opendata/dadosufprbr.yaml
-Record ID: dadosufprbr
-Country: BR
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: BR/Federal/other/databrazilio.yaml
-Record ID: databrazilio
-Country: BR
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-JA/opendata/satudatajambikotagoid.yaml
-Record ID: satudatajambikotagoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-KB/opendata/satudatabatamgoid.yaml
-Record ID: satudatabatamgoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-JB/opendata/opendatajabarprovgoid.yaml
-Record ID: opendatajabarprovgoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-JB/geo/satupetajabarprovgoid.yaml
-Record ID: satupetajabarprovgoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-JK/opendata/datajakartagoid.yaml
-Record ID: datajakartagoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-JK/geo/jakartasatujakartagoid.yaml
-Record ID: jakartasatujakartagoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ID/ID-BA/opendata/balisatudatabaliprovgoid.yaml
-Record ID: balisatudatabaliprovgoid
-Country: ID
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: FR/Federal/indicators/portailapiinseefr.yaml
-Record ID: portailapiinseefr
-Country: FR
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ES/Federal/opendata/intranetcaibesopendatacatalegdataset.yaml
-Record ID: intranetcaibesopendatacatalegdataset
-Country: ES
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: ES/Federal/geo/infoigmees.yaml
-Record ID: infoigmees
-Country: ES
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-41/opendata/wwwopendataportaljp.yaml
-Record ID: wwwopendataportaljp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-31/opendata/odppreftottoritoriinfocojp.yaml
-Record ID: odppreftottoritoriinfocojp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-36/opendata/opendatapreftokushimalgjp.yaml
-Record ID: opendatapreftokushimalgjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-37/opendata/opendataprefkagawalgjp.yaml
-Record ID: opendataprefkagawalgjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-18/opendata/datacitysabaelgjp.yaml
-Record ID: datacitysabaelgjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-26/opendata/datacitykyotolgjp.yaml
-Record ID: datacitykyotolgjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/Federal/scientific/metadbrikenjp.yaml
-Record ID: metadbrikenjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/Federal/scientific/adsnipracjp.yaml
-Record ID: adsnipracjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/Federal/scientific/integbiojp.yaml
-Record ID: integbiojp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/Federal/scientific/codhroisacjp.yaml
-Record ID: codhroisacjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: JP/JP-02/opendata/opendataprefaomorilgjp.yaml
-Record ID: opendataprefaomorilgjp
-Country: JP
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/geo/hubopeneoorg.yaml
-Record ID: hubopeneoorg
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-... and 9 more records with this issue
-
-[MISSING_LANGS]
-Count: 348
-Priority: MEDIUM
-
-File: US/US-CA/geo/services3arcgiscom.yaml
-Record ID: services3arcgiscom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/US-CA/geo/services6arcgiscom.yaml
-Record ID: services6arcgiscom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/wwwcivicdatacom.yaml
-Record ID: wwwcivicdatacom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/dataharvestportalorg.yaml
-Record ID: dataharvestportalorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/tdshycomorg.yaml
-Record ID: tdshycomorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/aquilausmedu.yaml
-Record ID: aquilausmedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/civicdatacom.yaml
-Record ID: civicdatacom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/erddapgcoosorg.yaml
-Record ID: erddapgcoosorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/datanativelandinfo.yaml
-Record ID: datanativelandinfo
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/oneclickcartodbcom.yaml
-Record ID: oneclickcartodbcom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/datahubhymarcorg.yaml
-Record ID: datahubhymarcorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/bmlscucdavisedu.yaml
-Record ID: bmlscucdavisedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/geoportusgsesipfedorg.yaml
-Record ID: geoportusgsesipfedorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/tdsscigwunidataucaredu.yaml
-Record ID: tdsscigwunidataucaredu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/threddsdemacudeledu.yaml
-Record ID: threddsdemacudeledu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/threddsawsunidataucaredu.yaml
-Record ID: threddsawsunidataucaredu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/tdsmaracoosorg.yaml
-Record ID: tdsmaracoosorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/dataamerigeossorg.yaml
-Record ID: dataamerigeossorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/wcshycomorg.yaml
-Record ID: wcshycomorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/iqviaopendatasoftcom.yaml
-Record ID: iqviaopendatasoftcom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/ncsshycomorg.yaml
-Record ID: ncsshycomorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/opendata/embedagingresearchgroup.yaml
-Record ID: embedagingresearchgroup
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/gisservicesdorchestercountynet.yaml
-Record ID: gisservicesdorchestercountynet
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/portalsuperiordcgisorg.yaml
-Record ID: portalsuperiordcgisorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/developersarcgiscom.yaml
-Record ID: developersarcgiscom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/maps3arcgisonlinecom.yaml
-Record ID: maps3arcgisonlinecom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/giswebpwcgovorg.yaml
-Record ID: giswebpwcgovorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/giswwwwestchestergovcom.yaml
-Record ID: giswwwwestchestergovcom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/oceanfloridamarineorg.yaml
-Record ID: oceanfloridamarineorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/mapservergisumnedu.yaml
-Record ID: mapservergisumnedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/cleargisuconnedu.yaml
-Record ID: cleargisuconnedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/cgsarcimageminesedu.yaml
-Record ID: cgsarcimageminesedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/emapsrcmrdorg.yaml
-Record ID: emapsrcmrdorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/geonodelabsecotrustorg.yaml
-Record ID: geonodelabsecotrustorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/gistwsorg.yaml
-Record ID: gistwsorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/basemapsarcgiscom.yaml
-Record ID: basemapsarcgiscom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/mapsorcityorg.yaml
-Record ID: mapsorcityorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/imagerysuperiordcgisorg.yaml
-Record ID: imagerysuperiordcgisorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/geoserversfeiorg.yaml
-Record ID: geoserversfeiorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/imagerypasdapsuedu.yaml
-Record ID: imagerypasdapsuedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/geoplatformspacesurcom.yaml
-Record ID: geoplatformspacesurcom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/arcgisracinecountycom.yaml
-Record ID: arcgisracinecountycom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/gisdatapgplanningorg.yaml
-Record ID: gisdatapgplanningorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/gisglcorg.yaml
-Record ID: gisglcorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/geocodeearth.yaml
-Record ID: geocodeearth
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/gislandscapeitreetoolsorg.yaml
-Record ID: gislandscapeitreetoolsorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/wwwmymanateeorg.yaml
-Record ID: wwwmymanateeorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/chukwaapacheorg.yaml
-Record ID: chukwaapacheorg
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/landsat2arcgiscom.yaml
-Record ID: landsat2arcgiscom
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: US/Federal/geo/geoserverlibuconnedu.yaml
-Record ID: geoserverlibuconnedu
-Country: US
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-... and 298 more records with this issue
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
 [MISSING_OWNER_LINK]
-Count: 519
+Count: 12
 Priority: LOW
-
-File: UG/Federal/opendata/opendatademossprojorg.yaml
-Record ID: opendatademossprojorg
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/opendata/mischooldatadatasocratacom.yaml
-Record ID: mischooldatadatasocratacom
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/geo/services7arcgiscom.yaml
-Record ID: services7arcgiscom
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
 
 File: UG/Federal/geo/19012973205.yaml
 Record ID: 19012973205
@@ -1565,14 +497,6 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: UG/Federal/geo/geocatsemidenet.yaml
-Record ID: geocatsemidenet
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
 File: UG/Federal/geo/1722692140.yaml
 Record ID: 1722692140
 Country: UG
@@ -1581,209 +505,9 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: UG/Federal/geo/ec25019218171compute1amazonawscom.yaml
-Record ID: ec25019218171compute1amazonawscom
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: PL/Federal/geo/rapprepozytoriumapp.yaml
-Record ID: rapprepozytoriumapp
-Country: PL
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/Other/scientific/scholarsharetempleedu.yaml
-Record ID: scholarsharetempleedu
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/gisnationsdihubarcgiscom.yaml
-Record ID: gisnationsdihubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/i15farmingtontosaltlakecityhdrhubarcgiscom.yaml
-Record ID: i15farmingtontosaltlakecityhdrhubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/gishubhgachubarcgiscom.yaml
-Record ID: gishubhgachubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/gishubgimsoh29opendataarcgiscom.yaml
-Record ID: gishubgimsoh29opendataarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/spcgisspchubarcgiscom.yaml
-Record ID: spcgisspchubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/ttmaysdgshubarcgiscom.yaml
-Record ID: ttmaysdgshubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/globilpandahubarcgiscom.yaml
-Record ID: globilpandahubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/testtemplatev1wildfirehubarcgiscom.yaml
-Record ID: testtemplatev1wildfirehubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/datahounderhubarcgiscom.yaml
-Record ID: datahounderhubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/configuredcatsdihubarcgiscom.yaml
-Record ID: configuredcatsdihubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/homeecgishubarcgiscom.yaml
-Record ID: homeecgishubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/datac3opendataarcgiscom.yaml
-Record ID: datac3opendataarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/geo/citizenproblemreporter2sidwellhubarcgiscom.yaml
-Record ID: citizenproblemreporter2sidwellhubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-MA/geo/opendatamedfordhubarcgiscom.yaml
-Record ID: opendatamedfordhubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-MO/opendata/rdxstldataorg.yaml
-Record ID: rdxstldataorg
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-MO/geo/gisandmapswentzvillehubarcgiscom.yaml
-Record ID: gisandmapswentzvillehubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-GA/geo/covidhubgiogeorgiagov.yaml
-Record ID: covidhubgiogeorgiagov
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-MI/geo/citizenproblemreporter1madisonheightshubarcgiscom.yaml
-Record ID: citizenproblemreporter1madisonheightshubarcgiscom
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: US/US-KY/geo/kyrasterkygov.yaml
-Record ID: kyrasterkygov
-Country: US
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UA/Federal/scientific/opendatanasgovua.yaml
-Record ID: opendatanasgovua
-Country: UA
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: GA/Federal/scientific/iptgabongbiffr.yaml
-Record ID: iptgabongbiffr
-Country: GA
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
 File: BY/Federal/geo/kartyhvalyabel.yaml
 Record ID: kartyhvalyabel
 Country: BY
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: HK/Federal/scientific/researchdatalibpolyueduhk.yaml
-Record ID: researchdatalibpolyueduhk
-Country: HK
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
@@ -1797,2510 +521,562 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: BE/geo/metadatatestdcjmbe.yaml
-Record ID: metadatatestdcjmbe
-Country: BE
+File: CO/geo/mgidesccaligovco.yaml
+Record ID: mgidesccaligovco
+Country: CO
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: BE/Federal/scientific/dataverseuliegebe.yaml
-Record ID: dataverseuliegebe
-Country: BE
+File: DE/Federal/geo/18517146157.yaml
+Record ID: 18517146157
+Country: DE
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Record ID: tourismandculturekuniversityhubarcgiscom
-Country: KE
+File: BR/BR-RJ/opendata/datario.yaml
+Record ID: datario
+Country: BR
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: KE/Federal/scientific/iptmuseumsorke.yaml
-Record ID: iptmuseumsorke
-Country: KE
+File: BR/Federal/opendata/19314442171.yaml
+Record ID: 19314442171
+Country: BR
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: NZ/Federal/geo/geodatanz.yaml
-Record ID: geodatanz
-Country: NZ
+File: ID/ID-JA/geo/jambiprovinasdiorid.yaml
+Record ID: jambiprovinasdiorid
+Country: ID
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: DO/microdata/andaonegobdo.yaml
-Record ID: andaonegobdo
-Country: DO
+File: Unknown/Federal/geo/19216821058.yaml
+Record ID: 19216821058
+Country: World
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: DO/Federal/scientific/iptvlizbe.yaml
-Record ID: iptvlizbe
-Country: DO
+File: Unknown/Federal/geo/1461189676.yaml
+Record ID: 1461189676
+Country: World
 Issue: MISSING_OWNER_LINK
 Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
-
-File: GR/geo/panthromicrolabntuagr.yaml
-Record ID: panthromicrolabntuagr
-Country: GR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Record ID: dl132madgikdiuoagr
-Country: GR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IR/Federal/geo/iransdinccgovir.yaml
-Record ID: iransdinccgovir
-Country: IR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CN/Federal/geo/onemapserverimgnet.yaml
-Record ID: onemapserverimgnet
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CN/Federal/scientific/datacasearthcn.yaml
-Record ID: datacasearthcn
-Country: CN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IN/IN-MN/opendata/manipurdatagovin.yaml
-Record ID: manipurdatagovin
-Country: IN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IN/IN-DH/opendata/dnhdddatagovin.yaml
-Record ID: dnhdddatagovin
-Country: IN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IN/IN-AP/opendata/apdatagovin.yaml
-Record ID: apdatagovin
-Country: IN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IN/IN-HP/opendata/ckanhimdataportalcom.yaml
-Record ID: ckanhimdataportalcom
-Country: IN
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-... and 469 more records with this issue
-
-[MISSING_OWNER_LOCATION]
-Count: 2
-Priority: IMPORTANT
-
-File: Unknown/Other/geo/qwc2thelabsvorg.yaml
-Record ID: qwc2thelabsvorg
-Country: Unknown
-Issue: MISSING_OWNER_LOCATION
-Field: owner.location
-Current Value: {'country': {'id': 'Unknown', 'name': 'Unknown'}, 'level': 20}
-Suggested Action: Add owner organization location with country information
-
-File: EU/Other/geo/qwccoasteyeeu.yaml
-Record ID: qwccoasteyeeu
-Country: Unknown
-Issue: MISSING_OWNER_LOCATION
-Field: owner.location
-Current Value: {'country': {'id': 'Unknown', 'name': 'Unknown'}, 'level': 20}
-Suggested Action: Add owner organization location with country information
-
-[MISSING_OWNER_NAME]
-Count: 1
-Priority: IMPORTANT
-
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Record ID: kartyhvalyabel
-Country: BY
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: Unknown
-Suggested Action: Add owner organization name
-
-[MISSING_OWNER_TYPE]
-Count: 1
-Priority: IMPORTANT
-
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Record ID: kartyhvalyabel
-Country: BY
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
 
 [MISSING_TAGS]
-Count: 366
+Count: 1
 Priority: LOW
 
-File: US/geo/globilpandahubarcgiscom.yaml
-Record ID: globilpandahubarcgiscom
-Country: US
+File: PT/geo/geoserverevolutiopt.yaml
+Record ID: geoserverevolutiopt
+Country: PT
 Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
-File: US/geo/remakelalahubopendataarcgiscom.yaml
-Record ID: remakelalahubopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/geo/datamcgovopendataarcgiscom.yaml
-Record ID: datamcgovopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NC/geo/alamancecountyalamancectygisopendataarcgiscom.yaml
-Record ID: alamancecountyalamancectygisopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NC/geo/rcgmpuncphubarcgiscom.yaml
-Record ID: rcgmpuncphubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NC/geo/datacharlottencgov.yaml
-Record ID: datacharlottencgov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-AZ/geo/geodataazmagopendataarcgiscom.yaml
-Record ID: geodataazmagopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-AZ/geo/arizonasuncloudagichubarcgiscom.yaml
-Record ID: arizonasuncloudagichubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NY/opendata/bronxlehmancunyedu.yaml
-Record ID: bronxlehmancunyedu
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NY/geo/putnampcgishubarcgiscom.yaml
-Record ID: putnampcgishubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-HI/geo/ormphawaiigov.yaml
-Record ID: ormphawaiigov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-DE/geo/wwwbounceforwardnccdeorg.yaml
-Record ID: wwwbounceforwardnccdeorg
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NE/geo/sarpycountytourismsarpyhubarcgiscom.yaml
-Record ID: sarpycountytourismsarpyhubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-NE/geo/hccityofgihubarcgiscom.yaml
-Record ID: hccityofgihubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-IN/geo/sbstatsouthbendhubarcgiscom.yaml
-Record ID: sbstatsouthbendhubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-OK/scientific/oufigsharecom.yaml
-Record ID: oufigsharecom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-FL/geo/mapsfdepopendataarcgiscom.yaml
-Record ID: mapsfdepopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-FL/geo/gis2fcgmdopendataarcgiscom.yaml
-Record ID: gis2fcgmdopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-IA/opendata/mydataiowagov.yaml
-Record ID: mydataiowagov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CT/geo/gisnorwalkopendataarcgiscom.yaml
-Record ID: gisnorwalkopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/opendata/corstatcoronacagov.yaml
-Record ID: corstatcoronacagov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/opendata/dataftbcagov.yaml
-Record ID: dataftbcagov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/pmorrisas430623gisanddataopendataarcgiscom.yaml
-Record ID: pmorrisas430623gisanddataopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/datachhsagencyopendataarcgiscom.yaml
-Record ID: datachhsagencyopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/sjcgisstjocogishubarcgiscom.yaml
-Record ID: sjcgisstjocogishubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/dataebrgisopendataarcgiscom.yaml
-Record ID: dataebrgisopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/opendatamryhubarcgiscom.yaml
-Record ID: opendatamryhubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CA/geo/gisbenicia1hubarcgiscom.yaml
-Record ID: gisbenicia1hubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CO/opendata/datacoloradospringsgov.yaml
-Record ID: datacoloradospringsgov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-CO/geo/hubeccountyhubarcgiscom.yaml
-Record ID: hubeccountyhubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-TX/opendata/midashboardstagingdemosocratacom.yaml
-Record ID: midashboardstagingdemosocratacom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-TX/opendata/kcperformancedemosocratacom.yaml
-Record ID: kcperformancedemosocratacom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-TX/geo/opendatabastrophubarcgiscom.yaml
-Record ID: opendatabastrophubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-VA/opendata/vdhrichmondcitydemosocratacom.yaml
-Record ID: vdhrichmondcitydemosocratacom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/opendata/urbandatatheurbaniscom.yaml
-Record ID: urbandatatheurbaniscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/opendata/stlouiscountyperformancedemosocratacom.yaml
-Record ID: stlouiscountyperformancedemosocratacom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/opendata/morenovalleydatasocratacom.yaml
-Record ID: morenovalleydatasocratacom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/opendata/codeforcaryopendatasoftcom.yaml
-Record ID: codeforcaryopendatasoftcom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/opendata/internalchattadataorg.yaml
-Record ID: internalchattadataorg
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/geo/premaplblgov.yaml
-Record ID: premaplblgov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/geo/labswaterdatausgsgov.yaml
-Record ID: labswaterdatausgsgov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/geo/gisarlingtonvaus.yaml
-Record ID: gisarlingtonvaus
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/geo/geospatialjacobscom.yaml
-Record ID: geospatialjacobscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/Federal/scientific/palltermarinerutgersedu.yaml
-Record ID: palltermarinerutgersedu
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-UT/geo/plpcodataresourceshubplpcohubarcgiscom.yaml
-Record ID: plpcodataresourceshubplpcohubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-SC/geo/datacharlestonscopendataarcgiscom.yaml
-Record ID: datacharlestonscopendataarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-MA/opendata/dataframinghammagov.yaml
-Record ID: dataframinghammagov
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-MA/geo/mapwellesleymahubarcgiscom.yaml
-Record ID: mapwellesleymahubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: US/US-MA/geo/stacysachdevarcgishubharvardcgahubarcgiscom.yaml
-Record ID: stacysachdevarcgishubharvardcgahubarcgiscom
-Country: US
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-... and 316 more records with this issue
-
-[MISSING_TOPICS]
-Count: 1462
-Priority: LOW
-
-File: US/Other/marketplace/awsamazon.yaml
-Record ID: awsamazon
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/marketplacedatabrickscom.yaml
-Record ID: marketplacedatabrickscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/wwwcloudquantcom.yaml
-Record ID: wwwcloudquantcom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/appsnowflakecom.yaml
-Record ID: appsnowflakecom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/consolecloudgooglecom.yaml
-Record ID: consolecloudgooglecom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/dataradecom.yaml
-Record ID: dataradecom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/marketplace/datanasdaqcom.yaml
-Record ID: datanasdaqcom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/gmutanttgmuedu.yaml
-Record ID: gmutanttgmuedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/coronavirusdisasterresponsehubarcgiscom.yaml
-Record ID: coronavirusdisasterresponsehubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/earthworksstanfordedu.yaml
-Record ID: earthworksstanfordedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/cugirlibrarycornelledu.yaml
-Record ID: cugirlibrarycornelledu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/cacgeoportalcom.yaml
-Record ID: cacgeoportalcom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/datagrid3org.yaml
-Record ID: datagrid3org
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/wwwgeoboundariesorg.yaml
-Record ID: wwwgeoboundariesorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/hglharvardedu.yaml
-Record ID: hglharvardedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geocoloradoedu.yaml
-Record ID: geocoloradoedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/earthrocksconcordorg.yaml
-Record ID: earthrocksconcordorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geoblacklightlibraryyaleedu.yaml
-Record ID: geoblacklightlibraryyaleedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geonyuedu.yaml
-Record ID: geonyuedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/datadryadorg.yaml
-Record ID: datadryadorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geodatawiscedu.yaml
-Record ID: geodatawiscedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/collectionsleventhalmaporg.yaml
-Record ID: collectionsleventhalmaporg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/mapsprincetonedu.yaml
-Record ID: mapsprincetonedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geobtaaorg.yaml
-Record ID: geobtaaorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/geodatamitedu.yaml
-Record ID: geodatamitedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/geo/greportalgmuedu.yaml
-Record ID: greportalgmuedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/ml/huggingfaceco.yaml
-Record ID: huggingfaceco
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/ml/dagshubcom.yaml
-Record ID: dagshubcom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/metadata/metadataregistryorg.yaml
-Record ID: metadataregistryorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/dataecosisorg.yaml
-Record ID: dataecosisorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/portalatnioosus.yaml
-Record ID: portalatnioosus
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/wileyfigsharecom.yaml
-Record ID: wileyfigsharecom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/cybercommonsdatahpcokstateedu.yaml
-Record ID: cybercommonsdatahpcokstateedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/researchrepositorydukeedu.yaml
-Record ID: researchrepositorydukeedu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/nsidcorg.yaml
-Record ID: nsidcorg
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/Other/scientific/academictorrents.yaml
-Record ID: academictorrents
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/US-AR/geo/mapsasgisopendataarcgiscom.yaml
-Record ID: mapsasgisopendataarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/US-AR/geo/mapsfayettevilleargov.yaml
-Record ID: mapsfayettevilleargov
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/US-NV/geo/web2nbmgunredu.yaml
-Record ID: web2nbmgunredu
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/US-NV/geo/nevadanationalguardj2afdcgshubarcgiscom.yaml
-Record ID: nevadanationalguardj2afdcgshubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/gisportalwpbgisopendataarcgiscom.yaml
-Record ID: gisportalwpbgisopendataarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/covid19censusgov.yaml
-Record ID: covid19censusgov
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/windsitet2odugishubarcgiscom.yaml
-Record ID: windsitet2odugishubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/shareopendatachangishubarcgiscom.yaml
-Record ID: shareopendatachangishubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/pruebaopendatageotecopendataarcgiscom.yaml
-Record ID: pruebaopendatageotecopendataarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/wcpagiswashcodpshubarcgiscom.yaml
-Record ID: wcpagiswashcodpshubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/datacosgishubarcgiscom.yaml
-Record ID: datacosgishubarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/datadcpwopendataarcgiscom.yaml
-Record ID: datadcpwopendataarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/giscapgov.yaml
-Record ID: giscapgov
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: US/geo/dataisdhopendataarcgiscom.yaml
-Record ID: dataisdhopendataarcgiscom
-Country: US
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-... and 1412 more records with this issue
-
-[SHORT_DESCRIPTION]
-Count: 442
-Priority: MEDIUM
-
-File: SK/Federal/opendata/dataslovenskosk.yaml
-Record ID: dataslovenskosk
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 833
+Priority: IMPORTANT
+
+File: SK/Federal/geo/sscrivupopsk.yaml
+Record ID: sscrivupopsk
 Country: SK
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Official Slovak Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/tilesgeopsazpsk.yaml
-Record ID: tilesgeopsazpsk
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
 Country: SK
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog listing various themes
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/tilesgeocloudsk.yaml
-Record ID: tilesgeocloudsk
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
 Country: SK
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not specified in provided text
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/nipisazpsk.yaml
+Record ID: nipisazpsk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/katasterskgeodesysk.yaml
+Record ID: katasterskgeodesysk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SB/geo/solomonspopgisspcint.yaml
+Record ID: solomonspopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
 
 File: SE/SE-S/indicators/pxwebkarlstadse.yaml
 Record ID: pxwebkarlstadse
 Country: SE
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Indicators catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: SE/Federal/geo/arcticsdilmse.yaml
-Record ID: arcticsdilmse
+File: SE/SE-AC/indicators/pxwebumease.yaml
+Record ID: pxwebumease
 Country: SE
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoserver web interface for Arctic SDI
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: SE/Federal/scientific/wwwgbifse.yaml
-Record ID: wwwgbifse
+File: SE/Federal/indicators/pxsocialstyrelsense.yaml
+Record ID: pxsocialstyrelsense
 Country: SE
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT installation hosted by GBIF-Sweden.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: UG/Federal/opendata/ppivalopendatasoftcom.yaml
-Record ID: ppivalopendatasoftcom
+File: SE/Federal/indicators/pxwebdemoscbse.yaml
+Record ID: pxwebdemoscbse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: SE/Federal/indicators/statistikjordbruksverketse.yaml
+Record ID: statistikjordbruksverketse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Record ID: neardbnearagingse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: SE/Federal/geo/geodatatorgetse.yaml
+Record ID: geodatatorgetse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: SE/Federal/geo/metadatakatalogennaturvardsverketse.yaml
+Record ID: metadatakatalogennaturvardsverketse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: ZM/geo/wwwnsdimlnrepgovzm.yaml
+Record ID: wwwnsdimlnrepgovzm
+Country: ZM
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: UG/Federal/opendata/opendatademossprojorg.yaml
+Record ID: opendatademossprojorg
 Country: UG
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: No description provided in source.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: UG/Federal/geo/19012973205.yaml
+Record ID: 19012973205
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: UG/Federal/geo/4625521167.yaml
+Record ID: 4625521167
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: UG/Federal/geo/geocatsemidenet.yaml
 Record ID: geocatsemidenet
 Country: UG
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoNetwork Opensource
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: UG/Federal/scientific/iptugandagbiffr.yaml
-Record ID: iptugandagbiffr
+File: UG/Federal/geo/1722692140.yaml
+Record ID: 1722692140
 Country: UG
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT GBIF Uganda
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: SC/geo/wis2meteosc.yaml
-Record ID: wis2meteosc
-Country: SC
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: WIS 2.0 Seychelles
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: PL/PL-02/opendata/opendatacuiwroclawpl.yaml
-Record ID: opendatacuiwroclawpl
+File: PL/PL-02/geo/geoportaldolnyslaskpl.yaml
+Record ID: geoportaldolnyslaskpl
 Country: PL
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open data catalog for Wrocław city.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
 
-File: PL/Federal/scientific/iptgbifpl.yaml
-Record ID: iptgbifpl
+File: PL/Federal/geo/serwiswrosippl.yaml
+Record ID: serwiswrosippl
 Country: PL
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT of the Polish GBIF Participant Node
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/mapygisumradompl.yaml
+Record ID: mapygisumradompl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/rapprepozytoriumapp.yaml
+Record ID: rapprepozytoriumapp
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/wms2geopozpoznanpl.yaml
+Record ID: wms2geopozpoznanpl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/geostatgovpl.yaml
+Record ID: geostatgovpl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/usipeswietokrzyskiepl.yaml
+Record ID: usipeswietokrzyskiepl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PL/Federal/scientific/fgbggbnlbglasygovpl.yaml
+Record ID: fgbggbnlbglasygovpl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PL/Federal/scientific/iptherbariumpomeranicumpl.yaml
+Record ID: iptherbariumpomeranicumpl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 File: PL/PL-24/geo/situmtychypl.yaml
 Record ID: situmtychypl
 Country: PL
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: No description available in input.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: PE/Federal/opendata/datosabiertossenacegobpe.yaml
-Record ID: datosabiertossenacegobpe
+File: PL/PL-14/opendata/wwweuslugimazowieckiepl.yaml
+Record ID: wwweuslugimazowieckiepl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
+
+File: VU/geo/vanuatupopgisspcint.yaml
+Record ID: vanuatupopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: PE/PE-CAJ/geo/metadatosregioncajamarcagobpe.yaml
+Record ID: metadatosregioncajamarcagobpe
 Country: PE
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog website of SENACE, Peru
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: ZW/Federal/scientific/1962710938.yaml
-Record ID: 1962710938
-Country: ZW
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Natural History Museum of Zimbabwe
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: PE/PE-LIM/geo/geoservermirafloresgobpe.yaml
+Record ID: geoservermirafloresgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: ZW/Federal/scientific/iptnhmbyozimcloudnsph.yaml
-Record ID: iptnhmbyozimcloudnsph
-Country: ZW
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Natural History Museum of Zimbabwe
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: PE/PE-LIM/geo/geoanagobpe.yaml
+Record ID: geoanagobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: US/US-ID/geo/mapcasedeqidahogov.yaml
-Record ID: mapcasedeqidahogov
+File: PE/Federal/opendata/datosabiertospjeastuscloudappazurecom.yaml
+Record ID: datosabiertospjeastuscloudappazurecom
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: PE/Federal/opendata/datosinsgobpe.yaml
+Record ID: datosinsgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: PE/Federal/geo/estadoconservacionsernanpgobpe.yaml
+Record ID: estadoconservacionsernanpgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PE/Federal/geo/mtcgeo2mtcgobpe.yaml
+Record ID: mtcgeo2mtcgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PE/Federal/geo/geosernanpgobpe.yaml
+Record ID: geosernanpgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PE/Federal/scientific/iptminamgobpe.yaml
+Record ID: iptminamgobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PE/PE-HUC/geo/iderregionhuanucogobpe.yaml
+Record ID: iderregionhuanucogobpe
+Country: PE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: US/US-OH/geo/wwwclevelandgisorg.yaml
+Record ID: wwwclevelandgisorg
 Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: A data catalog for GIS services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: US/US-LA/geo/atlas1galsuedu.yaml
-Record ID: atlas1galsuedu
+File: US/US-WI/opendata/wgnhswiscedu.yaml
+Record ID: wgnhswiscedu
 Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST services catalog at LSU
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: US/US-OR/opendata/dataoregongov.yaml
-Record ID: dataoregongov
+File: US/Other/other/datausaio.yaml
+Record ID: datausaiio
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'datawheel', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datawheel' is marked as API-capable in software definitions
+
+File: US/Other/geo/collectionsleventhalmaporg.yaml
+Record ID: collectionsleventhalmaporg
 Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Oregon's Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoblacklight', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoblacklight' is marked as API-capable in software definitions
 
-File: US/US-OR/geo/arcweldengineeringoregonstateedu.yaml
-Record ID: arcweldengineeringoregonstateedu
+File: US/Other/scientific/scholarworksiuedu.yaml
+Record ID: scholarworksiuedu
 Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Directory
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
 
-File: US/US-IL/opendata/dataillinoisgov.yaml
-Record ID: dataillinoisgov
+File: US/Other/scientific/usegalaxyorg.yaml
+Record ID: usegalaxyorg
 Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Illinois data catalog web portal.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-File: US/US-TN/opendata/datamemphistngov.yaml
-Record ID: datamemphistngov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Memphis, TN governmental data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-WA/opendata/dataredmondgov.yaml
-Record ID: dataredmondgov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open data portal for city datasets
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Other/scientific/dataecosisorg.yaml
-Record ID: dataecosisorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog at data.ecosis.org
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Other/scientific/expertsarizonaedu.yaml
-Record ID: expertsarizonaedu
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not available in provided text
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Other/scientific/oceanwatchpifscnoaagov.yaml
-Record ID: oceanwatchpifscnoaagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: OceanWatch - Central Pacific TDS
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-NC/opendata/lincosbmncgov.yaml
-Record ID: lincosbmncgov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog website
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-OK/opendata/codefortulsaopendatasoftcom.yaml
-Record ID: codefortulsaopendatasoftcom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Public data catalog for Tulsa
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-IA/opendata/dataiowagov.yaml
-Record ID: dataiowagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: State of Iowa's open data platform
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-IA/opendata/mydataiowagov.yaml
-Record ID: mydataiowagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for the State of Iowa
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-IA/geo/gissoriowadotgov.yaml
-Record ID: gissoriowadotgov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Iowa DOT GIS data catalog REST services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-CA/opendata/datastocktoncagov.yaml
-Record ID: datastocktoncagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: City of Stockton official data catalog.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-CA/geo/gisvtaorg.yaml
-Record ID: gisvtaorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GIS REST services hosted by VTA
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-CA/geo/gissantacruzcountyus.yaml
-Record ID: gissantacruzcountyus
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Santa Cruz County GIS rest services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-CA/geo/gismapscityofnapaorg.yaml
-Record ID: gismapscityofnapaorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GIS REST services for the City of Napa.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-RI/opendata/dataprovidencerigov.yaml
-Record ID: dataprovidencerigov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog website for Providence, RI
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-RI/geo/webgisprovidencerigov.yaml
-Record ID: webgisprovidencerigov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GIS REST Services for Providence, RI
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-TX/opendata/midashboardstagingdemosocratacom.yaml
-Record ID: midashboardstagingdemosocratacom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Demo Socrata data catalog website
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-VA/opendata/vdhrichmondcitydemosocratacom.yaml
-Record ID: vdhrichmondcitydemosocratacom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for Richmond City demo
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-VA/opendata/datavirginiagov.yaml
-Record ID: datavirginiagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Virginia Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/US-VA/geo/gisdataarlgisopendataarcgiscom.yaml
-Record ID: gisdataarlgisopendataarcgiscom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open Data Catalog from ARLGIS
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/opendata/wwwdatahubvagov.yaml
-Record ID: wwwdatahubvagov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Official VA data catalog.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/opendata/internalchattadataorg.yaml
-Record ID: internalchattadataorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Website of Chattadata data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/opendata/opendataeolorg.yaml
-Record ID: opendataeolorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: EOL Open Data portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Directory
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/geo/cartonationalmapgov.yaml
-Record ID: cartonationalmapgov
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: National Map ArcGIS REST Services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/scientific/iptmobotorg.yaml
-Record ID: iptmobotorg
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT Installation
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/scientific/plosfigsharecom.yaml
-Record ID: plosfigsharecom
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: PLOS Figshare repository
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/scientific/12811911222.yaml
-Record ID: 12811911222
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: www.eco.umass.edu
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: US/Federal/scientific/iptpeabodyyaleedu.yaml
-Record ID: iptpeabodyyaleedu
-Country: US
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Yale Peabody Museum GBIF IPT
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-... and 392 more records with this issue
-
-[TAG_HYGIENE]
-Count: 11
-Priority: MEDIUM
-
-File: US/Federal/geo/smartmapccomunhedu.yaml
-Record ID: smartmapccomunhedu
-Country: US
-Issue: TAG_HYGIENE
-Field: tags[0]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: VN/VN-30/opendata/csdlcntmgialaigovvn.yaml
-Record ID: csdlcntmgialaigovvn
-Country: VN
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: BY/Federal/indicators/dataportalbelstatgovby.yaml
-Record ID: dataportalbelstatgovby
-Country: BY
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: GR/Federal/geo/urbanlabpkmgovgr.yaml
-Record ID: urbanlabpkmgovgr
-Country: GR
-Issue: TAG_HYGIENE
-Field: tags[0]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: IT/IT-88/opendata/opendataregionesardegnait.yaml
-Record ID: opendataregionesardegnait
-Country: IT
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: RU/Federal/geo/metagiscmskwismecomru.yaml
-Record ID: metagiscmskwismecomru
-Country: RU
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: BA/Federal/opendata/opendataprijedorba.yaml
-Record ID: opendataprijedorba
-Country: BA
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: MX/Federal/geo/ideforcnfgobmx.yaml
-Record ID: ideforcnfgobmx
-Country: MX
-Issue: TAG_HYGIENE
-Field: tags[0]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: DE/DE-NW/geo/datenzefde.yaml
-Record ID: datenzefde
-Country: DE
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: DE/Federal/scientific/nomadlabeu.yaml
-Record ID: nomadlabeu
-Country: DE
-Issue: TAG_HYGIENE
-Field: tags[6]
-Current Value: AI
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: FR/FR-34/opendata/wwwheraultdataeu.yaml
-Record ID: wwwheraultdataeu
-Country: FR
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+... and 783 more records with this issue
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-CATALOG_SOFTWARE_MISMATCH (CRITICAL): 1 issues
-COVERAGE_NORMALIZATION (IMPORTANT): 4 issues
-DUPLICATE_TAGS (LOW): 2 issues
-MISSING_API_STATUS (IMPORTANT): 28 issues
-MISSING_DESCRIPTION (MEDIUM): 219 issues
-MISSING_ENDPOINTS (MEDIUM): 59 issues
-MISSING_LANGS (MEDIUM): 348 issues
-MISSING_OWNER_LINK (LOW): 519 issues
-MISSING_OWNER_LOCATION (IMPORTANT): 2 issues
-MISSING_OWNER_NAME (IMPORTANT): 1 issues
-MISSING_OWNER_TYPE (IMPORTANT): 1 issues
-MISSING_TAGS (LOW): 366 issues
-MISSING_TOPICS (LOW): 1462 issues
-SHORT_DESCRIPTION (MEDIUM): 442 issues
-TAG_HYGIENE (MEDIUM): 11 issues
+API_STATUS_MISMATCH (IMPORTANT): 6 issues
+DUPLICATE_LINK (MEDIUM): 113 issues
+MISSING_API_STATUS (IMPORTANT): 1 issues
+MISSING_OWNER_LINK (LOW): 12 issues
+MISSING_TAGS (LOW): 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): 833 issues
 
 === SUMMARY BY PRIORITY ===
 
-CRITICAL: 1 issues
-IMPORTANT: 36 issues
-MEDIUM: 1079 issues
-LOW: 2349 issues
+IMPORTANT: 840 issues
+MEDIUM: 113 issues
+LOW: 13 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: cacgeoportalcom
-File: US/Other/geo/cacgeoportalcom.yaml
-Country: US
-Issue Count: 9
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-
-Record ID: midashboardstagingdemosocratacom
-File: US/US-TX/opendata/midashboardstagingdemosocratacom.yaml
-Country: US
+Record ID: sdmxmarsagccstatorg
+File: OM/indicators/sdmxmarsagccstatorg.yaml
+Country: OM
 Issue Count: 6
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: datadownloadpageliberhubarcgiscom
-File: Unknown/geo/datadownloadpageliberhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: gisindustryhubarcgiscom
-File: Unknown/geo/gisindustryhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: atlastest1dwrhubarcgiscom
-File: Unknown/geo/atlastest1dwrhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: xaylorlcthp0dekkjdfivthubarcgiscom
-File: Unknown/geo/xaylorlcthp0dekkjdfivthubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: datafcmapsopendataarcgiscom
-File: Unknown/geo/datafcmapsopendataarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: igisdatahubdstihubarcgiscom
-File: Unknown/geo/igisdatahubdstihubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: rockislandhubexamplerigovhubarcgiscom
-File: Unknown/geo/rockislandhubexamplerigovhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: portwatchimfdatavizhubarcgiscom
-File: Unknown/geo/portwatchimfdatavizhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: osinergmingiscorporativohubarcgiscom
-File: Unknown/geo/osinergmingiscorporativohubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: datamatrtopendataarcgiscom
-File: Unknown/geo/datamatrtopendataarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: pporadatahubgesgislabhubarcgiscom
-File: Unknown/geo/pporadatahubgesgislabhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: maffudedemo01hubarcgiscom
-File: Unknown/geo/maffudedemo01hubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: arcticeaglepatriot22afdcgshubarcgiscom
-File: Unknown/geo/arcticeaglepatriot22afdcgshubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: paginaimpmmlimphubarcgiscom
-File: Unknown/geo/paginaimpmmlimphubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: wfcrckeyshubwfcrchubarcgiscom
-File: Unknown/geo/wfcrckeyshubwfcrchubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: datacravendcopendataarcgiscom
-File: Unknown/geo/datacravendcopendataarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: commissionerdatahubugishubarcgiscom
-File: Unknown/geo/commissionerdatahubugishubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: gispagehvhubarcgiscom
-File: Unknown/geo/gispagehvhubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: gishubweldgovcom
-File: Unknown/geo/gishubweldgovcom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: mcegeohubtestversionmcescartohubarcgiscom
-File: Unknown/geo/mcegeohubtestversionmcescartohubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: idelosriosgorelosrioshubarcgiscom
-File: Unknown/geo/idelosriosgorelosrioshubarcgiscom.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
 
 Record ID: 19216821058
 File: Unknown/Federal/geo/19216821058.yaml
 Country: World
-Issue Count: 6
+Issue Count: 4
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_LANGS (MEDIUM): langs
-  - MISSING_LANGS (MEDIUM): langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - MISSING_OWNER_LINK (LOW): owner.link
   - MISSING_OWNER_LINK (LOW): owner.link
 
 Record ID: 1461189676
 File: Unknown/Federal/geo/1461189676.yaml
 Country: World
-Issue Count: 6
-Issues:
-  - MISSING_LANGS (MEDIUM): langs
-  - MISSING_LANGS (MEDIUM): langs
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - SHORT_DESCRIPTION (MEDIUM): description
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: dataasrcporg
-File: World/indicators/dataasrcporg.yaml
-Country: LB
 Issue Count: 4
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: odataudgedu
-File: World/Federal/opendata/odataudgedu.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: geonetworkothudatagrandlyoncom
-File: World/Federal/geo/geonetworkothudatagrandlyoncom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: cienciaciudadanapageofsuhubarcgiscom
-File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - MISSING_OWNER_LINK (LOW): owner.link
   - MISSING_OWNER_LINK (LOW): owner.link
 
-Record ID: sigaucongocreole93hubarcgiscom
-File: Unknown/geo/sigaucongocreole93hubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: scgiplangicinchubarcgiscom
-File: Unknown/geo/scgiplangicinchubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: osiblueprintbniajfihubarcgiscom
-File: Unknown/geo/osiblueprintbniajfihubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: productionmzehubarcgiscom
-File: Unknown/geo/productionmzehubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: citizenproblemreporterwaggonerhubarcgiscom
-File: Unknown/geo/citizenproblemreporterwaggonerhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: gisopendataaragehubarcgiscom
-File: Unknown/geo/gisopendataaragehubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: turismogeogeekshubarcgiscom
-File: Unknown/geo/turismogeogeekshubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: datacscgisopendataarcgiscom
-File: Unknown/geo/datacscgisopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: citizenproblemreporter6esrivenhubarcgiscom
-File: Unknown/geo/citizenproblemreporter6esrivenhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: commissionerdatahub1ugishubarcgiscom
-File: Unknown/geo/commissionerdatahub1ugishubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: datainnovateopendataarcgiscom
-File: Unknown/geo/datainnovateopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: stchubstcgishubarcgiscom
-File: Unknown/geo/stchubstcgishubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: avcaopendataavcahubarcgiscom
-File: Unknown/geo/avcaopendataavcahubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_TAGS (LOW): tags
-
-Record ID: opendatademodevtemple1hubarcgiscom
-File: Unknown/geo/opendatademodevtemple1hubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: globilpandahubarcgiscom
-File: US/geo/globilpandahubarcgiscom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: mydataiowagov
-File: US/US-IA/opendata/mydataiowagov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: vdhrichmondcitydemosocratacom
-File: US/US-VA/opendata/vdhrichmondcitydemosocratacom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: internalchattadataorg
-File: US/Federal/opendata/internalchattadataorg.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: tilesarcgiscom
-File: US/Federal/geo/tilesarcgiscom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: plosfigsharecom
-File: US/Federal/scientific/plosfigsharecom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_LANGS (MEDIUM): langs
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: covidhubgiogeorgiagov
-File: US/US-GA/geo/covidhubgiogeorgiagov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: catalogsnapuafedu
-File: US/US-AK/geo/catalogsnapuafedu.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: disseminatesimelmtpsgobsv
-File: SV/Federal/indicators/disseminatesimelmtpsgobsv.yaml
-Country: SV
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: kartyhvalyabel
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Country: BY
-Issue Count: 3
-Issues:
-  - MISSING_OWNER_NAME (IMPORTANT): owner.name
-  - MISSING_OWNER_TYPE (IMPORTANT): owner.type
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: metadatatestdcjmbe
-File: BE/geo/metadatatestdcjmbe.yaml
-Country: BE
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: tourismandculturekuniversityhubarcgiscom
-File: KE/Federal/geo/tourismandculturekuniversityhubarcgiscom.yaml
-Country: KE
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: usnfigsharecom
-File: NO/Federal/scientific/usnfigsharecom.yaml
-Country: NO
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: panthromicrolabntuagr
-File: GR/geo/panthromicrolabntuagr.yaml
-Country: GR
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: dl132madgikdiuoagr
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Country: GR
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: thalchor2ypengovgr
-File: GR/Federal/geo/thalchor2ypengovgr.yaml
-Country: GR
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: databenguelaccorg
-File: NA/opendata/databenguelaccorg.yaml
-Country: NA
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TOPICS (LOW): topics
-
-Record ID: hyperaidatasets
-File: CN/Federal/ml/hyperaidatasets.yaml
-Country: CN
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: pruebaider2021cundinamarcamaphubarcgiscom
-File: CO/CO-CUN/geo/pruebaider2021cundinamarcamaphubarcgiscom.yaml
-Country: CO
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: pruebanoviembrecundinamarcamaphubarcgiscom
-File: CO/geo/pruebanoviembrecundinamarcamaphubarcgiscom.yaml
-Country: CO
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: mgidesccaligovco
-File: CO/geo/mgidesccaligovco.yaml
-Country: CO
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: reporteproblemascomunitariosgovesricohubarcgiscom
-File: CO/geo/reporteproblemascomunitariosgovesricohubarcgiscom.yaml
-Country: CO
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: clhckanappsfaoorg
-File: IT/Federal/opendata/clhckanappsfaoorg.yaml
-Country: IT
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: libeccioboismarcnrit
-File: IT/Federal/geo/libeccioboismarcnrit.yaml
-Country: IT
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: testhubsiteharvestingesricapacifichubarcgiscom
-File: CA/geo/testhubsiteharvestingesricapacifichubarcgiscom.yaml
-Country: CA
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: communautaireesricaappshubarcgiscom
-File: CA/geo/communautaireesricaappshubarcgiscom.yaml
-Country: CA
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: sustainablecitiesandcommunitiesfrederictonhubarcgiscom
-File: CA/geo/sustainablecitiesandcommunitiesfrederictonhubarcgiscom.yaml
-Country: CA
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: sdgcifdatacanadaoddcicdonneegithubio
-File: CA/Federal/indicators/sdgcifdatacanadaoddcicdonneegithubio.yaml
-Country: CA
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: metadatavumopcz
-File: CZ/Federal/geo/metadatavumopcz.yaml
-Country: CZ
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: geoportalepmapasdgobec
-File: EC/geo/geoportalepmapasdgobec.yaml
-Country: EC
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-
-Record ID: 18119820220
-File: EC/Federal/geo/18119820220.yaml
-Country: EC
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: geois2orbru
-File: RU/RU-ORE/geo/geois2orbru.yaml
-Country: RU
-Issue Count: 3
-Issues:
-  - MISSING_TAGS (LOW): tags
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: gistigdvoru
-File: RU/RU-PRI/geo/gistigdvoru.yaml
-Country: RU
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: elgrecopro
-File: World/Federal/microdata/elgrecopro.yaml
+Record ID: sitesgooglecom
+File: World/Federal/geo/sitesgooglecom.yaml
 Country: World
 Issue Count: 3
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
 
-Record ID: grandestprodbackofficedata4citizencom
-File: World/Federal/opendata/grandestprodbackofficedata4citizencom.yaml
+Record ID: geoserver4d4scienceorg
+File: World/Federal/geo/geoserver4d4scienceorg.yaml
 Country: World
 Issue Count: 3
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
 
-Record ID: 52358714
-File: World/Federal/opendata/52358714.yaml
+Record ID: geoserverprotectedareaimpactmapsd4scienceorg
+File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
 Country: World
 Issue Count: 3
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
 
-Record ID: dataundergroundorg
-File: World/Federal/opendata/dataundergroundorg.yaml
+Record ID: geoserver2d4scienceorg
+File: World/Federal/geo/geoserver2d4scienceorg.yaml
 Country: World
 Issue Count: 3
 Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: lightbasicthemediscoveryopendatasoftcom
-File: World/Federal/opendata/lightbasicthemediscoveryopendatasoftcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: 146317531
-File: World/Federal/opendata/146317531.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: 15014513627
-File: World/Federal/opendata/15014513627.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: kyrilliassdsmtedu
-File: World/Federal/opendata/kyrilliassdsmtedu.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: lguerrieroopendatasoftcom
-File: World/Federal/opendata/lguerrieroopendatasoftcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: scareopendatasoftcom
-File: World/Federal/opendata/scareopendatasoftcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: brasilio
-File: World/Federal/opendata/brasilio.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: bfortuneopendatasoftcom
-File: World/Federal/opendata/bfortuneopendatasoftcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: rederemoorg
-File: World/Federal/opendata/rederemoorg.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: datatompsccom
-File: World/Federal/opendata/datatompsccom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-
-Record ID: cloudbirstmyopendatasoftcom
-File: World/Federal/opendata/cloudbirstmyopendatasoftcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: ckandiceresearchorg
-File: World/Federal/opendata/ckandiceresearchorg.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: gimi9com
-File: World/Federal/opendata/gimi9com.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-
-Record ID: datanuevanacioncom
-File: World/Federal/opendata/datanuevanacioncom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-
-Record ID: conaviopendatajunarcom
-File: World/Federal/opendata/conaviopendatajunarcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_LANGS (MEDIUM): langs
-  - SHORT_DESCRIPTION (MEDIUM): description
-
-Record ID: gisartemisitscom
-File: World/Federal/geo/gisartemisitscom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_DESCRIPTION (MEDIUM): description
-
-Record ID: rsisdevramsarorg
-File: World/Federal/geo/rsisdevramsarorg.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: 2004522475
-File: World/Federal/geo/2004522475.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: seagrassobservingearth
-File: World/Federal/geo/seagrassobservingearth.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - MISSING_LANGS (MEDIUM): langs
-
-Record ID: nautilushidromodcom
-File: World/Federal/geo/nautilushidromodcom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS (LOW): topics
-  - MISSING_TAGS (LOW): tags
-  - SHORT_DESCRIPTION (MEDIUM): description
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link

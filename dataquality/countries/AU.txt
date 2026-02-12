@@ -1,495 +1,204 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: AU
-Total Records with Issues: 46
-Total Issues Found: 61
+Total Records with Issues: 25
+Total Issues Found: 26
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[DUPLICATE_LINK]
 Count: 4
 Priority: MEDIUM
 
-File: AU/AU-NSW/opendata/opendatanewcastlenswiaropendatasoftcom.yaml
-Record ID: opendatanewcastlenswiaropendatasoftcom
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+File: AU/AU-NSW/opendata/datanswgovau.yaml
+Record ID: datanswgovau
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: AU/Federal/opendata/datamaintenanceorgau.yaml
-Record ID: datamaintenanceorgau
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+File: AU/AU-NSW/opendata/datanswgovaumagda.yaml
+Record ID: datanswgovaumagda
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: AU/Federal/geo/portalauscopeorgau.yaml
-Record ID: portalauscopeorgau
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+File: AU/Federal/geo/marlincsiroau.yaml
+Record ID: marlincsiroau
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: AU/AU-ACT/geo/actmapiactgovopendataarcgiscom.yaml
-Record ID: actmapiactgovopendataarcgiscom
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+File: AU/Federal/geo/wwwmarlincsiroau.yaml
+Record ID: wwwmarlincsiroau
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_LANGS]
-Count: 2
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 22
+Priority: IMPORTANT
 
-File: AU/Federal/scientific/hrafigsharecom.yaml
-Record ID: hrafigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: AU/AU-NSW/opendata/datapassportnswgovau.yaml
+Record ID: datapassportnswgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'tablion', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='tablion' is marked as API-capable in software definitions
 
-File: AU/Federal/scientific/mcrifigsharecom.yaml
-Record ID: mcrifigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: AU/AU-NSW/opendata/datacesenswgovau.yaml
+Record ID: datacesenswgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 9
-Priority: LOW
+File: AU/AU-NSW/opendata/datanswgovau.yaml
+Record ID: datanswgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: AU/AU-NSW/opendata/opendatanewcastlenswiaropendatasoftcom.yaml
-Record ID: opendatanewcastlenswiaropendatasoftcom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: AU/AU-NSW/geo/gsmvdevgeosciencenswgovau.yaml
+Record ID: gsmvdevgeosciencenswgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: AU/geo/citizenproblemreporteresriauhubarcgiscom.yaml
-Record ID: citizenproblemreporteresriauhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: AU/AU-TAS/geo/servicesaadgovau.yaml
+Record ID: servicesaadgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: AU/geo/gisdataportenfopendataarcgiscom.yaml
-Record ID: gisdataportenfopendataarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/AU-QLD/geo/datagoldcoastopendataarcgiscom.yaml
-Record ID: datagoldcoastopendataarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/AU-QLD/geo/cloncurrysserviceshubarcgiscom.yaml
-Record ID: cloncurrysserviceshubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/AU-VIC/opendata/ballaratopendataorgau.yaml
-Record ID: ballaratopendataorgau
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/Federal/geo/portalauscopeorgau.yaml
-Record ID: portalauscopeorgau
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/Federal/geo/wwwcmarcsiroau.yaml
-Record ID: wwwcmarcsiroau
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: AU/AU-ACT/geo/actmapiactgovopendataarcgiscom.yaml
-Record ID: actmapiactgovopendataarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 8
-Priority: LOW
-
-File: AU/geo/datafcnswopendataarcgiscom.yaml
-Record ID: datafcnswopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/AU-QLD/geo/datagoldcoastopendataarcgiscom.yaml
-Record ID: datagoldcoastopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/AU-QLD/geo/cloncurrysserviceshubarcgiscom.yaml
-Record ID: cloncurrysserviceshubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/AU-VIC/geo/southerngrampianssserviceshubarcgiscom.yaml
-Record ID: southerngrampianssserviceshubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/Federal/metadata/desearistotlecloudio.yaml
-Record ID: desearistotlecloudio
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/Federal/scientific/storeercmonasheduau.yaml
-Record ID: storeercmonasheduau
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/Federal/scientific/figsharemqeduau.yaml
-Record ID: figsharemqeduau
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: AU/AU-WA/geo/portalmainroadsopendataarcgiscom.yaml
-Record ID: portalmainroadsopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 31
-Priority: LOW
-
-File: AU/AU-NT/geo/arcgisnoptagovau.yaml
-Record ID: arcgisnoptagovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-NSW/opendata/datamaitlandnswgovau.yaml
-Record ID: datamaitlandnswgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-NSW/geo/spatialindustrynswgovau.yaml
-Record ID: spatialindustrynswgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-NSW/geo/mapprodenvironmentnswgovau.yaml
-Record ID: mapprodenvironmentnswgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-NSW/geo/gsgeosciencenswgovau.yaml
-Record ID: gsgeosciencenswgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/geo/cityofpalmerstonopendatacityofpalmerstonhubarcgiscom.yaml
-Record ID: cityofpalmerstonopendatacityofpalmerstonhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/geo/datafcnswopendataarcgiscom.yaml
-Record ID: datafcnswopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/geo/barcaldineracassserviceshubarcgiscom.yaml
-Record ID: barcaldineracassserviceshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-QLD/opendata/publicationsqldgovau.yaml
-Record ID: publicationsqldgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-QLD/geo/datagoldcoastopendataarcgiscom.yaml
-Record ID: datagoldcoastopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-QLD/geo/gislegacysccqldgovau.yaml
-Record ID: gislegacysccqldgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-QLD/geo/cloncurrysserviceshubarcgiscom.yaml
-Record ID: cloncurrysserviceshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-VIC/geo/enterprisemapsharevicgovau.yaml
-Record ID: enterprisemapsharevicgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: AU/AU-SA/geo/mapssagovau.yaml
+Record ID: mapssagovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: AU/AU-VIC/geo/datavicroadsvicgovau.yaml
 Record ID: datavicroadsvicgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-VIC/scientific/latrobefigsharecom.yaml
-Record ID: latrobefigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-VIC/scientific/federationfigsharecom.yaml
-Record ID: federationfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/opendata/datamaintenanceorgau.yaml
-Record ID: datamaintenanceorgau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/nationalmapgovau.yaml
-Record ID: nationalmapgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/aamgeosolutionscom.yaml
-Record ID: aamgeosolutionscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/spatialinfrastructuregovau.yaml
-Record ID: spatialinfrastructuregovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/wwwsaxgisorg.yaml
-Record ID: wwwsaxigisorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/wwwwaxiexplorerorg.yaml
-Record ID: wwwwaxiexplorerorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/geoserver123aodnorgau.yaml
-Record ID: geoserver123aodnorgau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/geo/mapprod1environmentnswgovau.yaml
-Record ID: mapprod1environmentnswgovau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/metadata/desearistotlecloudio.yaml
-Record ID: desearistotlecloudio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/scientific/storeercmonasheduau.yaml
-Record ID: storeercmonasheduau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/scientific/figsharemqeduau.yaml
-Record ID: figsharemqeduau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/scientific/torrensfigsharecom.yaml
-Record ID: torrensfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/scientific/mcrifigsharecom.yaml
-Record ID: mcrifigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/Federal/scientific/researchusceduau.yaml
-Record ID: researchusceduau
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AU/AU-ACT/geo/actmapiactgovopendataarcgiscom.yaml
-Record ID: actmapiactgovopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 7
-Priority: MEDIUM
-
-File: AU/AU-NSW/opendata/datamaitlandnswgovau.yaml
-Record ID: datamaitlandnswgovau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open data catalog for Maitland, NSW.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: AU/AU-VIC/opendata/datavicgovau.yaml
-Record ID: datavicgovau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Victorian Government open data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: AU/Federal/geo/imos2ersaeduau.yaml
 Record ID: imos2ersaeduau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoserver spatial data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: AU/Federal/geo/programscommunicationsgovau.yaml
+Record ID: programscommunicationsgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: AU/Federal/geo/kmidpawwagovau.yaml
+Record ID: kmidpawwagovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: AU/Federal/geo/mapseatlasorgau.yaml
 Record ID: mapseatlasorgau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: A GeoServer-based web mapping platform.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: AU/Federal/geo/datadaffgovau.yaml
 Record ID: datadaffgovau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoServer-based spatial data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: AU/Federal/geo/geoserverimosorgau.yaml
+Record ID: geoserverimosorgau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: AU/Federal/geo/mapswaternswcomau.yaml
 Record ID: mapswaternswcomau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS service endpoint for WaterNSW
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: AU/Federal/scientific/dapds00nciorgau.yaml
-Record ID: dapds00nciorgau
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Scientific data repository
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: AU/Federal/metadata/desearistotlecloudio.yaml
+Record ID: desearistotlecloudio
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/dataimasutaseduau.yaml
+Record ID: dataimasutaseduau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'aodn', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aodn' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/collectionsalaorgau.yaml
+Record ID: collectionsalaorgau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/researchusqeduau.yaml
+Record ID: researchusqeduau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/usegalaxyorgau.yaml
+Record ID: usegalaxyorgau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/acuresearchbankacueduau.yaml
+Record ID: acuresearchbankacueduau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
+
+File: AU/AU-ACT/geo/wwwgagovau.yaml
+Record ID: wwwgagovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: AU/AU-WA/geo/auth2dbcawagovau.yaml
+Record ID: auth2dbcawagovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 4 issues
-MISSING_LANGS: 2 issues
-MISSING_OWNER_LINK: 9 issues
-MISSING_TAGS: 8 issues
-MISSING_TOPICS: 31 issues
-SHORT_DESCRIPTION: 7 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: datagoldcoastopendataarcgiscom
-File: AU/AU-QLD/geo/datagoldcoastopendataarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: cloncurrysserviceshubarcgiscom
-File: AU/AU-QLD/geo/cloncurrysserviceshubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: actmapiactgovopendataarcgiscom
-File: AU/AU-ACT/geo/actmapiactgovopendataarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_DESCRIPTION: description
-  - MISSING_OWNER_LINK: owner.link
+DUPLICATE_LINK: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 22 issues

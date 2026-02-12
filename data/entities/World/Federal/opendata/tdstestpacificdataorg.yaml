@@ -11,7 +11,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Logical directories of on-line data resources, encoded as XML documents,
@@ -22,7 +22,9 @@ endpoints:
 - type: thredds:catalog
   url: https://tds-test.pacificdata.org/thredds/catalog.xml
 id: tdstestpacificdataorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://tds-test.pacificdata.org/thredds/catalog.html
 name: tds-test.pacificdata.org
 owner:
@@ -32,7 +34,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Pacific Data Hub
   type: International
 properties:

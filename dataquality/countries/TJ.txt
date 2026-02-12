@@ -1,38 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: TJ
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: TJ
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 1
+Priority: IMPORTANT
 
-File: US/Other/geo/cacgeoportalcom.yaml
-Record ID: cacgeoportalcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TJ/geo/mapswistj.yaml
-Record ID: mapswistj
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TJ/geo/sditj.yaml
-Record ID: sditj
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: TJ/Federal/microdata/nadastattj.yaml
+Record ID: nadastattj
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TOPICS: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

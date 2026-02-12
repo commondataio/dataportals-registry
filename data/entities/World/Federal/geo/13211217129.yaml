@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: A data catalog providing geospatial data services
@@ -60,7 +60,9 @@ endpoints:
   url: http://13.211.217.129:8080/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: '13211217129'
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://13.211.217.129:8080/geoserver
 name: 13.211.217.129:8080
 owner:
@@ -70,7 +72,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Not explicitly provided in the URL
   type: Business
 properties:

@@ -12,7 +12,7 @@ coverage:
       id: TW
       name: Taiwan
     level: 20
-    macroregion: &id001
+    macroregion:
       id: '030'
       name: Eastern Asia
 description: No readable description found in source.
@@ -30,6 +30,12 @@ endpoints:
 - type: arcgis:kmz
   url: https://talis.moa.gov.tw/server/rest/services?f=kmz
 id: talismoagovtw
+identifiers:
+- id: url
+  url: https://talis.moa.gov.tw/server/rest/services
+  value: https://talis.moa.gov.tw/server/rest/services
+- id: domain
+  value: talis.moa.gov.tw
 langs:
 - id: ZH
   name: Chinese
@@ -42,15 +48,8 @@ owner:
       id: TW
       name: Taiwan
     level: 20
-    macroregion: *id001
   name: Government of Taiwan
   type: Central government
-identifiers:
-- id: url
-  url: https://talis.moa.gov.tw/server/rest/services
-  value: https://talis.moa.gov.tw/server/rest/services
-- id: domain
-  value: talis.moa.gov.tw
 properties:
   has_doi: false
 rights:

@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Geospatial web services provided by the United Nations for visualization,
@@ -23,7 +23,9 @@ endpoints:
 - type: arcgis:soap
   url: https://geoservices.un.org/arcgis/services?wsdl
 id: geoservicesunorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://geoservices.un.org/arcgis/rest/services
 name: United Nations ArcGIS Geospatial Services
 owner:
@@ -33,7 +35,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: United Nations
   type: International
 properties:

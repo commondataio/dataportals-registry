@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS REST services endpoint hosted on handa.pdrf.org.ph, providing
+  geospatial data services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://handa.pdrf.org.ph/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://handa.pdrf.org.ph/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://handa.pdrf.org.ph/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://handa.pdrf.org.ph/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://handa.pdrf.org.ph/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://handa.pdrf.org.ph/arcgis/rest/services?f=kmz
+id: handapdrforgph
+langs:
+- id: TL
+  name: Tagalog
+link: https://handa.pdrf.org.ph/arcgis/rest/services
+name: ArcGIS REST Services (Handa PDRF)
+owner:
+  link: https://handa.pdrf.org.ph/
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: Handa PDRF
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- REST services
+- GIS
+- ArcGIS
+- Philippines
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020259

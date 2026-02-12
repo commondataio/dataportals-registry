@@ -1,55 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: SN
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: SN
-Total Records with Issues: 3
-Total Issues Found: 4
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: SN/Federal/geo/sigstatansdsn.yaml
-Record ID: sigstatansdsn
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TOPICS]
+[DUPLICATE_LINK]
 Count: 2
-Priority: LOW
-
-File: SN/Federal/geo/sigstatansdsn.yaml
-Record ID: sigstatansdsn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TN/Federal/opendata/donneesitiesn.yaml
-Record ID: donneesitiesn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
 Priority: MEDIUM
 
-File: SN/Federal/scientific/iptsenegalgbiffr.yaml
-Record ID: iptsenegalgbiffr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT for Senegalese data publishers
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: SN/Federal/geo/landfoliocadastreminiersenegalsnarcgisrestservices.yaml
+Record ID: landfoliocadastreminiersenegalsnarcgisrestservices
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://landfolio.cadastreminiersenegal.sn/arcgis/rest/services', 'record_ids': ['landfoliocadastreminiersenegalsnarcgisrestservices', 'landfoliocadastreminiersenegalsn']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: TN/Federal/geo/landfoliocadastreminiersenegalsn.yaml
+Record ID: landfoliocadastreminiersenegalsn
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://landfolio.cadastreminiersenegal.sn/arcgis/rest/services', 'record_ids': ['landfoliocadastreminiersenegalsnarcgisrestservices', 'landfoliocadastreminiersenegalsn']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_TOPICS: 2 issues
-SHORT_DESCRIPTION: 1 issues
+DUPLICATE_LINK: 2 issues

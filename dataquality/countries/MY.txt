@@ -1,161 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: MY
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: MY
-Total Records with Issues: 14
-Total Issues Found: 17
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: MY/Federal/geo/geoportalalamimy.yaml
-Record ID: geoportalalamimy
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: MY/Federal/opendata/datasinarprojectorg.yaml
-Record ID: datasinarprojectorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TAGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 2
-Priority: LOW
+Priority: IMPORTANT
 
 File: MY/Federal/geo/geoportalalamimy.yaml
 Record ID: geoportalalamimy
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: MY/Federal/geo/oclcarsmgovmy.yaml
-Record ID: oclcarsmgovmy
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 13
-Priority: LOW
-
-File: MY/MY-10/geo/jpsselgisselangorgovmy.yaml
-Record ID: jpsselgisselangorgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/MY-04/geo/onemapmelakaalamitechhubarcgiscom.yaml
-Record ID: onemapmelakaalamitechhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/MY-05/geo/gis9nsgovmy.yaml
-Record ID: gis9nsgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/opendata/datamohgovmy.yaml
-Record ID: datamohgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/opendata/datagovmy.yaml
-Record ID: datagovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/opendata/opendosmgovmy.yaml
-Record ID: opendosmgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/gis02llmgovmy.yaml
-Record ID: gis02llmgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/datahydrogovmy.yaml
-Record ID: datahydrogovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/mymapsmygeoportalgovmy.yaml
-Record ID: mymapsmygeoportalgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/geoportalalamimy.yaml
-Record ID: geoportalalamimy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/gismapsjupemgovmy.yaml
-Record ID: gismapsjupemgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/Federal/geo/oclcarsmgovmy.yaml
-Record ID: oclcarsmgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MY/MY-07/geo/pimapmbppgovmy.yaml
-Record ID: pimapmbppgovmy
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: MY/Federal/scientific/birg4fbbutmmy.yaml
+Record ID: birg4fbbutmmy
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_LANGS: 1 issues
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 13 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: geoportalalamimy
-File: MY/Federal/geo/geoportalalamimy.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_DESCRIPTION: description
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

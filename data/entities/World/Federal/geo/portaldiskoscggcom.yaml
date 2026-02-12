@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoServer data catalog interface at portal.diskos.cgg.com
@@ -60,6 +60,10 @@ endpoints:
   url: https://portal.diskos.cgg.com:443/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: portaldiskoscggcom
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/portal-diskos-cgg-com
+  value: portal-diskos-cgg-com
 langs:
 - id: EN
   name: English
@@ -72,15 +76,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: CGG
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/portal-diskos-cgg-com
-  value: portal-diskos-cgg-com
 rights:
   license_id: null
   license_name: null

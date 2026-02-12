@@ -1,36 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: ML
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: ML
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
 File: ML/indicators/pxwebinstatmalicom.yaml
 Record ID: pxwebinstatmalicom
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: ML/geo/dataesripressbooksopendataarcgiscom.yaml
-Record ID: dataesripressbooksopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_TOPICS: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

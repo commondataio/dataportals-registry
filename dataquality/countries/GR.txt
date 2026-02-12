@@ -1,273 +1,73 @@
 DATA QUALITY REPORT - COUNTRY: GR
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: GR
-Total Records with Issues: 22
-Total Issues Found: 30
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: GR/geo/panthromicrolabntuagr.yaml
-Record ID: panthromicrolabntuagr
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Record ID: dl132madgikdiuoagr
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
-
-File: GR/geo/panthromicrolabntuagr.yaml
-Record ID: panthromicrolabntuagr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GR/Federal/geo/thalchor2ypengovgr.yaml
-Record ID: thalchor2ypengovgr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GR/Federal/ml/edenlibraryai.yaml
-Record ID: edenlibraryai
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 16
-Priority: LOW
-
-File: GR/geo/panthromicrolabntuagr.yaml
-Record ID: panthromicrolabntuagr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/cataloghcapdatagr.yaml
-Record ID: cataloghcapdatagr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/repositoryparticipatorylaborg.yaml
-Record ID: repositoryparticipatorylaborg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/odcpgetmapgr.yaml
-Record ID: odcpgetmapgr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/repositorydatagovgr.yaml
-Record ID: repositorydatagovgr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/datahellenicdataservicegr.yaml
-Record ID: datahellenicdataservicegr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/datamalevizigovgr.yaml
-Record ID: datamalevizigovgr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Record ID: dl132madgikdiuoagr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/dl006madgikdiuoagr.yaml
-Record ID: dl006madgikdiuoagr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/opendata/opendataimetbgr.yaml
-Record ID: opendataimetbgr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/geo/mapsrv9terragr.yaml
-Record ID: mapsrv9terragr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/geo/geodatagovgrcsw.yaml
-Record ID: geodatagovgrcsw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/geo/thalchor2ypengovgr.yaml
-Record ID: thalchor2ypengovgr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/ml/edenlibraryai.yaml
-Record ID: edenlibraryai
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/ml/vclitigr.yaml
-Record ID: vclitigr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GR/Federal/scientific/usegalaxyelixirgreeceorg.yaml
-Record ID: usegalaxyelixirgreeceorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 8
-Priority: MEDIUM
-
-File: GR/Federal/opendata/cataloghcapdatagr.yaml
-Record ID: cataloghcapdatagr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not specified in raw text
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Priority: IMPORTANT
 
 File: GR/Federal/opendata/catalogdatagovgr.yaml
 Record ID: catalogdatagovgr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Record ID: dl132madgikdiuoagr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data Catalog Description
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GR/Federal/opendata/diavgeiagovgr.yaml
+Record ID: diavgeiagovgr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: GR/Federal/opendata/libraryatticawetlandseu.yaml
-Record ID: libraryatticawetlandseu
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Library resource for Attica Wetlands
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GR/Federal/geo/gisapplamiacitygr.yaml
+Record ID: gisapplamiacitygr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GR/Federal/geo/wwwlatometgr.yaml
-Record ID: wwwlatometgr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog of ArcGIS services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GR/Federal/geo/gisthessalonikigr.yaml
+Record ID: gisthessalonikigr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: GR/Federal/geo/servicesopendataepirusgr.yaml
 Record ID: servicesopendataepirusgr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoServer-based data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GR/Federal/geo/thalchor2ypengovgr.yaml
-Record ID: thalchor2ypengovgr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Greek government data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GR/Federal/geo/mapsypekagr.yaml
+Record ID: mapsypekagr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: GR/Federal/geo/diavlosocphysuoagr.yaml
 Record ID: diavlosocphysuoagr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ncWMS web service
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ncwms', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ncwms' is marked as API-capable in software definitions
 
-[TAG_HYGIENE]
-Count: 1
-Priority: MEDIUM
-
-File: GR/Federal/geo/urbanlabpkmgovgr.yaml
-Record ID: urbanlabpkmgovgr
-Issue: TAG_HYGIENE
-Field: tags[0]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+File: GR/Federal/scientific/usegalaxyelixirgreeceorg.yaml
+Record ID: usegalaxyelixirgreeceorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 16 issues
-SHORT_DESCRIPTION: 8 issues
-TAG_HYGIENE: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: panthromicrolabntuagr
-File: GR/geo/panthromicrolabntuagr.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: dl132madgikdiuoagr
-File: GR/Federal/opendata/dl132madgikdiuoagr.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_OWNER_LINK: owner.link
-  - SHORT_DESCRIPTION: description
-
-Record ID: thalchor2ypengovgr
-File: GR/Federal/geo/thalchor2ypengovgr.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SHORT_DESCRIPTION: description
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 8 issues

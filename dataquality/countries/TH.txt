@@ -1,184 +1,71 @@
 DATA QUALITY REPORT - COUNTRY: TH
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: TH
-Total Records with Issues: 20
-Total Issues Found: 21
+Total Records with Issues: 7
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: TH/Federal/scientific/ckaninonectecorth.yaml
-Record ID: ckaninonectecorth
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_LANGS]
+[DUPLICATE_LINK]
 Count: 2
 Priority: MEDIUM
 
-File: TH/Federal/opendata/119409775.yaml
-Record ID: 119409775
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: TH/Federal/opendata/datagovmhesigoth.yaml
+Record ID: datagovmhesigoth
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.mhesi.go.th', 'record_ids': ['datagovmhesigoth', 'datamhesigoth']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: TH/Federal/geo/datathailandopendevelopmentmekongnet.yaml
-Record ID: datathailandopendevelopmentmekongnet
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: TH/Federal/opendata/datamhesigoth.yaml
+Record ID: datamhesigoth
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.mhesi.go.th', 'record_ids': ['datagovmhesigoth', 'datamhesigoth']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 5
+Priority: IMPORTANT
 
-File: TH/Federal/scientific/wwwnhmpsuacth.yaml
-Record ID: wwwnhmpsuacth
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: TH/TH-10/geo/bptdolgoth.yaml
+Record ID: bptdolgoth
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-[MISSING_TOPICS]
-Count: 11
-Priority: LOW
+File: TH/Federal/opendata/opendatadpegoth.yaml
+Record ID: opendatadpegoth
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: TH/Federal/opendata/opendatanesdcgoth.yaml
-Record ID: opendatanesdcgoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: TH/Federal/opendata/catalogdoegoth.yaml
+Record ID: catalogdoegoth
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: TH/Federal/opendata/datagoth.yaml
-Record ID: datagoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/catalogssogoth.yaml
-Record ID: catalogssogoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/ckandsigoth.yaml
-Record ID: ckandsigoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/govtechinth.yaml
-Record ID: govtechinth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/datacatmoralcenterorth.yaml
-Record ID: datacatmoralcenterorth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/cadckancadgoth.yaml
-Record ID: cadckancadgoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/dataforestgoth.yaml
-Record ID: dataforestgoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/opendataipstacth.yaml
-Record ID: opendataipstacth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/geo/portaldolgoth.yaml
-Record ID: portaldolgoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/TH-76/opendata/phetchaburigdcataloggoth.yaml
-Record ID: phetchaburigdcataloggoth
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 6
-Priority: MEDIUM
-
-File: TH/TH-10/opendata/databangkokgoth.yaml
-Record ID: databangkokgoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Bangkok open data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TH/Federal/opendata/pcdgdcataloggoth.yaml
-Record ID: pcdgdcataloggoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Government Data Catalog portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TH/Federal/opendata/catalogocscgoth.yaml
-Record ID: catalogocscgoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ระบบบัญชีข้อมูล สำนักงาน ก.พ.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TH/Federal/opendata/onepgdcataloggoth.yaml
-Record ID: onepgdcataloggoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Thai Government Data Catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TH/Federal/opendata/cadckancadgoth.yaml
-Record ID: cadckancadgoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Official data catalog website
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: TH/Federal/geo/gisridgoth.yaml
+Record ID: gisridgoth
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: TH/Federal/geo/mapsmotgoth.yaml
 Record ID: mapsmotgoth
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Directory for MOT.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_LANGS: 2 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 11 issues
-SHORT_DESCRIPTION: 6 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 5 issues

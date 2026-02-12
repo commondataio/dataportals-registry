@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: The CLARIAH Media Suite gives access to important national Dutch audiovisual
+  archives. It aggregates metadata and enables access to media content itself, including
+  collections from the Netherlands Institute for Sound and Vision, EYE Film Museum,
+  DANS oral history interviews, and Open Images Project. Data is registered in a CKAN-based
+  web management system.
+endpoints:
+- type: ckan
+  url: https://mediasuitedata.clariah.nl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://mediasuitedata.clariah.nl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://mediasuitedata.clariah.nl/api/3/action/package_list
+  version: '3'
+id: mediasuitedataclariahnl
+langs:
+- id: NL
+  name: Dutch
+link: https://mediasuitedata.clariah.nl
+name: CLARIAH Media Suite Data Catalog
+owner:
+  link: https://mediasuitedata.clariah.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: CLARIAH
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- audiovisual
+- oral history
+- film
+- media
+- open data
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00020279

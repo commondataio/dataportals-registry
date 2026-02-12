@@ -1,48 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: BA
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: BA
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_TOPICS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: LOW
+Priority: IMPORTANT
 
-File: BA/BA-SRP/geo/gisservergisfuczgovba.yaml
-Record ID: gisservergisfuczgovba
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: BA/Federal/geo/isvportalvodaba.yaml
-Record ID: isvportalvodaba
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Server REST services data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-[TAG_HYGIENE]
-Count: 1
-Priority: MEDIUM
-
-File: BA/Federal/opendata/opendataprijedorba.yaml
-Record ID: opendataprijedorba
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+File: BA/Federal/indicators/wwwpxwebfzsgovba.yaml
+Record ID: wwwpxwebfzsgovba
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TOPICS: 1 issues
-SHORT_DESCRIPTION: 1 issues
-TAG_HYGIENE: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

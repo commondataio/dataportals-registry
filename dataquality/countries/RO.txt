@@ -1,90 +1,59 @@
 DATA QUALITY REPORT - COUNTRY: RO
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: RO
-Total Records with Issues: 8
-Total Issues Found: 9
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 6
+Priority: IMPORTANT
 
-File: RO/RO-TM/opendata/dataprimariatmro.yaml
-Record ID: dataprimariatmro
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: RO/RO-IF/geo/mapbenderigrro.yaml
+Record ID: mapbenderigrro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-[MISSING_TOPICS]
-Count: 7
-Priority: LOW
+File: RO/Federal/geo/imdrofloodmeteoromaniaro.yaml
+Record ID: imdrofloodmeteoromaniaro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: RO/Federal/opendata/datagovro.yaml
-Record ID: datagovro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: RO/Federal/geo/gisroriskro.yaml
+Record ID: gisroriskro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: RO/Federal/geo/inspireinfoferro.yaml
-Record ID: inspireinfoferro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: RO/Federal/geo/geoportalplanifi7caremaritimaunibucro.yaml
+Record ID: geoportalplanifi7caremaritimaunibucro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
 
-File: RO/Federal/geo/geoportalplanificaremaritimaunibucro.yaml
-Record ID: geoportalplanificaremaritimaunibucro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: RO/Federal/geo/portalgeomilro.yaml
+Record ID: portalgeomilro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: RO/Federal/geo/sitgorjnvro.yaml
 Record ID: sitgorjnvro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RO/Federal/geo/geocatalogrosaro.yaml
-Record ID: geocatalogrosaro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RO/Federal/geo/hartiroaepro.yaml
-Record ID: hartiroaepro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RO/Federal/geo/webadaptorgisappro.yaml
-Record ID: webadaptorgisappro
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: RO/Federal/opendata/datagovro.yaml
-Record ID: datagovro
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Romanian government open data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 7 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 6 issues

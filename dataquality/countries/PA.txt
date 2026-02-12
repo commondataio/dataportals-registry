@@ -1,81 +1,43 @@
 DATA QUALITY REPORT - COUNTRY: PA
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: PA
-Total Records with Issues: 4
-Total Issues Found: 7
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 1
+[DUPLICATE_LINK]
+Count: 2
 Priority: MEDIUM
-
-File: PA/geo/geo01innovaciongobpageonode.yaml
-Record ID: geo01innovaciongobpageonode
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
-Record ID: cienciaciudadanapageofsuhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: PA/geo/cienciaciudadanapageofsuhubarcgiscom.yaml
-Record ID: cienciaciudadanapageofsuhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: PA/geo/geo01innovaciongobpageonode.yaml
-Record ID: geo01innovaciongobpageonode
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 File: PA/geo/geo01innovactiongobpa.yaml
 Record ID: geo01innovactiongobpa
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geo-01.innovacion.gob.pa/geonetwork', 'record_ids': ['geo01innovactiongobpa', 'geo01innovaciongobpageonetwork']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: PA/geo/geo01innovaciongobpageonetwork.yaml
 Record ID: geo01innovaciongobpageonetwork
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geo-01.innovacion.gob.pa/geonetwork', 'record_ids': ['geo01innovactiongobpa', 'geo01innovaciongobpageonetwork']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: PA/geo/geo01innovaciongobpageonetwork.yaml
-Record ID: geo01innovaciongobpageonetwork
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geonetwork (Panama Government)
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: PA/geo/geonodemupagobpa.yaml
+Record ID: geonodemupagobpa
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 4 issues
-SHORT_DESCRIPTION: 1 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

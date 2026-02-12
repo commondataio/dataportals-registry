@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Geoserver web mapping service for spatial data
@@ -60,6 +60,11 @@ endpoints:
   url: https://maps.geocat.net/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: mapsgeocatnet
+identifiers:
+- id: url
+  value: https://maps.geocat.net/geoserver
+- id: homepage
+  value: https://geocat.net
 langs:
 - id: EN
   name: English
@@ -72,16 +77,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: spatial
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: url
-  value: https://maps.geocat.net/geoserver
-- id: homepage
-  value: https://geocat.net
 rights:
   license_id: null
   license_name: null

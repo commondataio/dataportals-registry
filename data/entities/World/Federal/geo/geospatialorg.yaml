@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoServer-based geospatial data catalog providing comprehensive access
@@ -68,6 +68,10 @@ endpoints:
   url: http://geo-spatial.org/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
 id: geospatialorg
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/geospatialorg
+  value: geospatialorg
 langs:
 - id: EN
   name: English
@@ -80,15 +84,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/geospatialorg
-  value: geospatialorg
 rights:
   license_id: null
   license_name: null

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS REST Services endpoint for INSPIRE-compliant mapping and geospatial
+  data provided by LNEG (National Laboratory of Energy and Geology)
+endpoints:
+- type: arcgis:rest:info
+  url: https://inspire.lneg.pt/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://inspire.lneg.pt/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://inspire.lneg.pt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://inspire.lneg.pt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://inspire.lneg.pt/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://inspire.lneg.pt/arcgis/rest/services?f=kmz
+id: inspirelnegpt
+langs:
+- id: PT
+  name: Portugal
+link: https://inspire.lneg.pt/arcgis/rest/services
+name: LNEG ArcGIS REST Services Catalog
+owner:
+  link: https://geoportal.lneg.pt/
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: National Laboratory of Energy and Geology (LNEG)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- INSPIRE
+- GIS
+- Energy
+- Geology
+- Mineral resources
+- Infrastructure
+- SDI
+- Portugal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00020245

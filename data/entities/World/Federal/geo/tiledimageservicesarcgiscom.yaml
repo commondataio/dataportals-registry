@@ -12,16 +12,35 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: ArcGIS REST Services Directory hosted on tiledimageservices.arcgis.com providing comprehensive access to tiled image services, geospatial datasets, and map layers through standardized REST API endpoints. This geoportal enables developers and GIS professionals to discover and integrate various tiled imagery services, satellite imagery, aerial photography, and spatial data for mapping, visualization, and spatial analysis applications across web and mobile platforms. The service supports multiple coordinate systems and provides optimized tile caching for efficient map rendering and data delivery, making it suitable for enterprise GIS applications, web mapping services, and location-based services requiring high-performance geospatial data access.
+description: ArcGIS REST Services Directory hosted on tiledimageservices.arcgis.com
+  providing comprehensive access to tiled image services, geospatial datasets, and
+  map layers through standardized REST API endpoints. This geoportal enables developers
+  and GIS professionals to discover and integrate various tiled imagery services,
+  satellite imagery, aerial photography, and spatial data for mapping, visualization,
+  and spatial analysis applications across web and mobile platforms. The service supports
+  multiple coordinate systems and provides optimized tile caching for efficient map
+  rendering and data delivery, making it suitable for enterprise GIS applications,
+  web mapping services, and location-based services requiring high-performance geospatial
+  data access.
 endpoints:
 - type: arcgis:rest:info
   url: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services?f=pjson
 id: tiledimageservicesarcgiscom
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/tiledimageservices-arcgis-com
+  value: tiledimageservices-arcgis-com
+- id: url
+  url: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services
+  value: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services
+- id: esri
+  url: https://www.esri.com
+  value: esri-tiled-image-services
 langs:
 - id: EN
   name: English
@@ -40,21 +59,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Esri or service provider (not specified)
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/tiledimageservices-arcgis-com
-  value: tiledimageservices-arcgis-com
-- id: url
-  url: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services
-  value: https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services
-- id: esri
-  url: https://www.esri.com
-  value: esri-tiled-image-services
 rights:
   license_id: esri-mla
   license_name: Esri Master License Agreement

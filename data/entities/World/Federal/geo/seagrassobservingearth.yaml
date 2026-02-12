@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Data catalog for seagrass observations and related environmental data
@@ -66,7 +66,9 @@ endpoints:
 - type: opensearch
   url: https://seagrass.observing.earth/catalogue/opensearch
 id: seagrassobservingearth
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://seagrass.observing.earth
 name: seagrass.observing.earth
 owner:
@@ -76,7 +78,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 properties:
@@ -92,6 +93,12 @@ software:
   id: geonode
   name: GeoNode
 status: active
-tags: []
-topics: []
+tags:
+- GIS
+- geospatial
+- government
+topics:
+- Geospatial
+- Geography
+- Maps
 uid: temp00004064

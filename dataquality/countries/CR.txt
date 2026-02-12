@@ -1,81 +1,38 @@
 DATA QUALITY REPORT - COUNTRY: CR
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: CR
-Total Records with Issues: 5
-Total Issues Found: 7
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: CR/Federal/scientific/dataversetecaccr.yaml
-Record ID: dataversetecaccr
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: CR/Federal/opendata/ckanpjazurewebsitesnet.yaml
-Record ID: ckanpjazurewebsitesnet
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 2
-Priority: LOW
-
-File: CR/Federal/opendata/ckanpjazurewebsitesnet.yaml
-Record ID: ckanpjazurewebsitesnet
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CR/Federal/geo/mapasdagocr.yaml
-Record ID: mapasdagocr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 3
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: CR/Federal/geo/mapasdagocr.yaml
-Record ID: mapasdagocr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog website URL
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CR/CR-H/opendata/opendataherediagocr.yaml
+Record ID: opendataherediagocr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
-File: CR/Federal/scientific/wwwcrbiocr.yaml
-Record ID: wwwcrbiocr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: This is the IPT for CRBio.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CR/CR-H/geo/mhherediasigopendataarcgiscom.yaml
+Record ID: mhherediasigopendataarcgiscom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
 
-File: CR/CR-SJ/geo/metadatosideoniongocr.yaml
-Record ID: metadatosideoniongocr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoServer map and feature server
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CR/geo/monitoreopriascenataccr.yaml
+Record ID: monitoreopriascenataccr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 2 issues
-SHORT_DESCRIPTION: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues

@@ -1,38 +1,78 @@
 DATA QUALITY REPORT - COUNTRY: SK
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: SK
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
-[SHORT_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
 
-File: SK/Federal/opendata/dataslovenskosk.yaml
-Record ID: dataslovenskosk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Official Slovak Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: SK/Federal/opendata/datagovsk.yaml
+Record ID: datagovsk
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: SK/Federal/geo/tilesgeopsazpsk.yaml
-Record ID: tilesgeopsazpsk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog listing various themes
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 7
+Priority: IMPORTANT
 
-File: SK/Federal/geo/tilesgeocloudsk.yaml
-Record ID: tilesgeocloudsk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not specified in provided text
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: SK/Federal/geo/sscrivupopsk.yaml
+Record ID: sscrivupopsk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/nipisazpsk.yaml
+Record ID: nipisazpsk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: SK/Federal/geo/katasterskgeodesysk.yaml
+Record ID: katasterskgeodesysk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SHORT_DESCRIPTION: 3 issues
+API_STATUS_MISMATCH: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 7 issues

@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -20,12 +21,17 @@ description: Portal de datos abiertos del Ayuntamiento de Camargo que proporcion
   y otros temas de interés ciudadano. Los datos están disponibles en formatos abiertos
   y reutilizables para facilitar su análisis y la creación de aplicaciones y servicios
   innovadores basados en información pública.
+endpoints:
+- type: sparql
+  url: https://datos.aytocamargo.es/sparql
+- type: sparql:web
+  url: https://datos.aytocamargo.es/consulta_sparql
 id: datosaytocamargoes
 identifiers: []
 langs:
 - id: ES
   name: Spanish
-link: http://datos.aytocamargo.es/
+link: https://datos.aytocamargo.es
 name: Camargo Datos Abiertos
 owner:
   link: https://www.aytocamargo.es
@@ -35,12 +41,12 @@ owner:
   name: Ayuntamiento de Camargo
   type: Local government
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: cc-by-4.0
+  license_name: Creative Commons Attribution 4.0 International (CC BY 4.0)
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
-  rights_type: granular
-  tos_url: null
+  rights_type: global
+  tos_url: https://datos.aytocamargo.es/open_data_risp?q=node/12
 software:
   id: custom
   name: Custom software

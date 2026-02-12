@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: '005'
       name: South America
 description: GeoServer-based data catalog serving geospatial data
+endpoints:
+- type: wms130
+  url: http://geointa.inta.gov.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: geointaintagovar
 langs:
 - id: ES

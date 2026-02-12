@@ -1,589 +1,176 @@
 DATA QUALITY REPORT - COUNTRY: EU
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: EU
-Total Records with Issues: 67
-Total Issues Found: 76
+Total Records with Issues: 21
+Total Issues Found: 22
 
 === ISSUES BY TYPE ===
 
-[COVERAGE_NORMALIZATION]
-Count: 1
+[DUPLICATE_LINK]
+Count: 2
+Priority: MEDIUM
+
+File: EU/geo/csweodceu.yaml
+Record ID: csweodceu
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://csw.eodc.eu', 'record_ids': ['csweodceu', 'csweodceu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: EU/Federal/geo/csweodceu.yaml
+Record ID: csweodceu
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://csw.eodc.eu', 'record_ids': ['csweodceu', 'csweodceu']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 20
 Priority: IMPORTANT
 
-File: EU/geo/collectionseurodatacubecom.yaml
-Record ID: collectionseurodatacubecom
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'EU', 'name': 'European Union'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_DESCRIPTION]
-Count: 5
-Priority: MEDIUM
-
-File: EU/opendata/docsentsoeeu.yaml
-Record ID: docsentsoeeu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
-Record ID: livelanguagedatascientiaeu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: EU/Federal/geo/servicesatticawetlandseu.yaml
-Record ID: servicesatticawetlandseu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: EU/Federal/geo/cachemap2webeu.yaml
-Record ID: cachemap2webeu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: EU/Federal/geo/hellaseugeniusassoeu.yaml
-Record ID: hellaseugeniusassoeu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_ENDPOINTS]
-Count: 3
-Priority: MEDIUM
-
-File: EU/geo/hubopeneoorg.yaml
-Record ID: hubopeneoorg
-Issue: MISSING_ENDPOINTS
+File: IT/Federal/geo/geoserverdevd4scienceiiresearchinfrastructureseu.yaml
+Record ID: geoserverdevd4scienceiiresearchinfrastructureseu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: EU/geo/collectionseurodatacubecom.yaml
-Record ID: collectionseurodatacubecom
-Issue: MISSING_ENDPOINTS
+File: EU/indicators/statdataeceuropaeu.yaml
+Record ID: statdataeuropaeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'eurostat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='eurostat' is marked as API-capable in software definitions
 
-File: EU/geo/creodiasrasdamancom.yaml
-Record ID: creodiasrasdamancom
-Issue: MISSING_ENDPOINTS
+File: EU/indicators/webgateeceuropaeu.yaml
+Record ID: webgateeceuropaeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'sdmxri', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sdmxri' is marked as API-capable in software definitions
 
-[MISSING_LANGS]
-Count: 53
-Priority: MEDIUM
-
-File: EU/Federal/opendata/erddapemsofrorg.yaml
-Record ID: erddapemsofrorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/geo/geonetworkmoodh2020eu.yaml
-Record ID: geonetworkmoodh2020eu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/geo/metadatamicaprojecteu.yaml
-Record ID: metadatamicaprojecteu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
-Record ID: livelanguagedatascientiaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/datahubdigicirceu.yaml
-Record ID: datahubdigicirceu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/dataportalponderfuleu.yaml
-Record ID: dataportalponderfuleu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/catalogpublicamundieu.yaml
-Record ID: catalogpublicamundieu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: EU/indicators/dataecbeuropaeu.yaml
+Record ID: dataecbeuropaeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ecb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ecb' is marked as API-capable in software definitions
 
 File: EU/Federal/opendata/datareachincubatoreu.yaml
 Record ID: datareachincubatoreu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: EU/Federal/opendata/nrtcmemsdueu.yaml
-Record ID: nrtcmemsdueu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: EU/Federal/opendata/repositorysynchroseu.yaml
+Record ID: repositorysynchroseu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: EU/Federal/opendata/threddsemodnetphysicseu.yaml
-Record ID: threddsemodnetphysicseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: EU/Federal/opendata/opalcentertbieu.yaml
+Record ID: opalcentertbieu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
 File: EU/Federal/opendata/joinupeceuropaeu.yaml
 Record ID: joinupeceuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/datahubopenscienceeu.yaml
-Record ID: datahubopenscienceeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/mycmemsdueu.yaml
-Record ID: mycmemsdueu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: EU/Federal/opendata/opendatawaterjpieu.yaml
 Record ID: opendatawaterjpieu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: EU/Federal/opendata/catalogueecmeloaeu.yaml
 Record ID: catalogueecmeloaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: EU/Federal/opendata/dataportalaquacrosseu.yaml
-Record ID: dataportalaquacrosseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/publicationseuropaeu.yaml
-Record ID: publicationseuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/opendata/threddsresearchinfrastructureseu.yaml
-Record ID: threddsresearchinfrastructureseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/wwwportodimareeu.yaml
-Record ID: wwwportodimareeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/prodgeonetworkemodnetphysicseu.yaml
-Record ID: prodgeonetworkemodnetphysicseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geogeopotenzialeeu.yaml
-Record ID: geogeopotenzialeeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/forestdiscomapeeaeuropaeu.yaml
-Record ID: forestdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/prodgeoserveremodnetphysicseu.yaml
-Record ID: prodgeoserveremodnetphysicseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/soerdiscomapeeaeuropaeu.yaml
-Record ID: soerdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/maratlasdiscomapeeaeuropaeu.yaml
-Record ID: maratlasdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/danubeforesthealtheu.yaml
-Record ID: danubeforesthealtheu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/owsemodnetseabedhabitatseu.yaml
-Record ID: owsemodnetseabedhabitatseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/catalogemodnetphysicseu.yaml
-Record ID: catalogemodnetphysicseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/marineprojectsopeneartheu.yaml
-Record ID: marineprojectsopeneartheu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/servicesatticawetlandseu.yaml
-Record ID: servicesatticawetlandseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: EU/Federal/opendata/platformrecappretermeu.yaml
+Record ID: platformrecappretermeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/lizmapfaunaliaeu.yaml
 Record ID: lizmapfaunaliaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geospatial2jrceceuropaeu.yaml
-Record ID: geospatial2jrceceuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geoserverdevopendatascienceeu.yaml
-Record ID: geoserverdevopendatascienceeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/wwwemodneteu.yaml
-Record ID: wwwemodneteu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/fastopeneartheu.yaml
-Record ID: fastopeneartheu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/discomapeeaeuropaeu.yaml
 Record ID: discomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/airdiscomapeeaeuropaeu.yaml
-Record ID: airdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/geoserver3d4scienceorg.yaml
 Record ID: geoserver3d4scienceorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/hubgeosmartcityeu.yaml
 Record ID: hubgeosmartcityeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
-Record ID: geonetworkalpinesoilseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/copernicusdiscomapeeaeuropaeu.yaml
-Record ID: copernicusdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/owsemodneteu.yaml
-Record ID: owsemodneteu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/eehadiscomapeeaeuropaeu.yaml
-Record ID: eehadiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/chwopeneartheu.yaml
 Record ID: chwopeneartheu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: EU/Federal/geo/catalogueemodnetphysicseu.yaml
-Record ID: catalogueemodnetphysicseu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/servicedatacoveeu.yaml
-Record ID: servicedatacoveeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/ddshighlanderprojecteu.yaml
-Record ID: ddshighlanderprojecteu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geoserveropendatascienceeu.yaml
-Record ID: geoserveropendatascienceeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/trialdiscomapeeaeuropaeu.yaml
-Record ID: trialdiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/lpddiscomapeeaeuropaeu.yaml
-Record ID: lpddiscomapeeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/geospatialjrceceuropaeu.yaml
-Record ID: geospatialjrceceuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: EU/Federal/geo/hellaseugeniusassoeu.yaml
-Record ID: hellaseugeniusassoeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: EU/Federal/geo/kindrakindraprojecteu.yaml
+Record ID: kindrakindraprojecteu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 File: EU/Federal/geo/climateadapteeaeuropaeu.yaml
 Record ID: climateadapteeaeuropaeu
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
+File: EU/Federal/metadata/webgateeceuropaeufusreg.yaml
+Record ID: webgateeceuropaeufusreg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
 
-File: IT/Federal/geo/geoserver2d4scienceresearchinfrastructureseu.yaml
-Record ID: geoserver2d4scienceresearchinfrastructureseu
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: EU/Federal/opendata/databluecloudorg.yaml
-Record ID: databluecloudorg
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 11
-Priority: LOW
-
-File: IT/Federal/geo/geoserverd4scienceiiresearchinfrastructureseu.yaml
-Record ID: geoserverd4scienceiiresearchinfrastructureseu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: IT/Federal/geo/geoserver3d4scienceresearchinfrastructureseu.yaml
-Record ID: geoserver3d4scienceresearchinfrastructureseu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/Federal/opendata/erddapemsofrorg.yaml
-Record ID: erddapemsofrorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/Federal/opendata/databluecloudorg.yaml
-Record ID: databluecloudorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/opendata/dataedincubatoreu.yaml
-Record ID: dataedincubatoreu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/opendata/dataportaleuinteractorg.yaml
-Record ID: dataportaleuinteractorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/geo/dataopendatascienceeu.yaml
-Record ID: dataopendatascienceeu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/ml/marketplacedeephybriddatacloudeu.yaml
-Record ID: marketplacedeephybriddatacloudeu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
-Record ID: livelanguagedatascientiaeu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/Federal/opendata/datahubopenscienceeu.yaml
-Record ID: datahubopenscienceeu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: EU/Federal/opendata/ckaniotlabeu.yaml
-Record ID: ckaniotlabeu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: EU/opendata/dataportaleuinteractorg.yaml
-Record ID: dataportaleuinteractorg
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for EU INTERACT projects
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: EU/Federal/scientific/usegalaxyeu.yaml
+Record ID: usegalaxyeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 1 issues
-MISSING_DESCRIPTION: 5 issues
-MISSING_ENDPOINTS: 3 issues
-MISSING_LANGS: 53 issues
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 11 issues
-SHORT_DESCRIPTION: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: livelanguagedatascientiaeu
-File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_DESCRIPTION: description
-  - MISSING_LANGS: langs
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 20 issues

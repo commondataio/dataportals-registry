@@ -11,7 +11,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Microdata catalog providing access to statistical datasets and survey
@@ -21,6 +21,13 @@ endpoints:
 - type: nada:csvexport
   url: http://mozdata.microdatahub.com/index.php/catalog/export/csv?ps=5000&collection[]
 id: mozdatamicrodatahubcom
+identifiers:
+- id: url
+  url: http://mozdata.microdatahub.com
+  value: http://mozdata.microdatahub.com
+- id: dataportals.org
+  url: http://dataportals.org/portal/mozdata-microdatahub-com
+  value: mozdata-microdatahub-com
 langs:
 - id: PT
   name: Portuguese
@@ -35,18 +42,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Microdatahub
   type: Academy
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: http://mozdata.microdatahub.com
-  value: http://mozdata.microdatahub.com
-- id: dataportals.org
-  url: http://dataportals.org/portal/mozdata-microdatahub-com
-  value: mozdata-microdatahub-com
 rights:
   license_id: null
   license_name: null

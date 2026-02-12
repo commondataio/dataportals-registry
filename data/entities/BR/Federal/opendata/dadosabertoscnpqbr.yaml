@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,14 +19,24 @@ description: A página de Dados Abertos é um serviço do CNPq que fornece ao ci
   O serviço também fornece dados sobre os Grupos de Pesquisa brasileiros e sobre os
   currículos registrados na Plataforma Lattes, que trazem informações sobre a produção
   científica, tecnológica e de inovação no Brasil.
+endpoints:
+- type: ckan
+  url: https://dadosabertos.cnpq.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.cnpq.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.cnpq.br/api/3/action/package_list
+  version: '3'
 id: dadosabertoscnpqbr
 langs:
 - id: PT
-  name: Portugal
+  name: Portuguese
 link: https://dadosabertos.cnpq.br
 name: CNPq Dados Abertos
 owner:
-  link: https://dadosabertos.cnpq.br
+  link: https://www.gov.br/cnpq/pt-br
   location:
     country:
       id: BR

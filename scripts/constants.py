@@ -469,7 +469,7 @@ MAP_CATALOG_TYPE_SUBDIR = {
     "Scientific data repository": "scientific",
     "API Catalog": "api",
     "Machine learning catalog": "ml",
-    "Data search engines": "search",
+    "Data search engine": "search",
     "Indicators catalog": "indicators",
     "Microdata catalog": "microdata",
 }
@@ -520,7 +520,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "tablion": "Open data portal",
     "socrata": "Open data portal",
     "wordpress": "Open data portal",
-    "searchengines": "Data search engines",
+    "searchengines": "Data search engine",
     "mapproxy": "Geoportal",
     "pygeoapi": "Geoportal",
     "smartdatasdi": "Geoportal",

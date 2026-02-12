@@ -1,128 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: HR
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: HR
-Total Records with Issues: 10
-Total Issues Found: 13
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[DUPLICATE_TAGS]
-Count: 2
-Priority: LOW
-
-File: HR/Federal/scientific/datacrossdahr.yaml
-Record ID: datacrossdahr
-Issue: DUPLICATE_TAGS
-Field: tags[2]
-Current Value: scientific
-Suggested Action: Remove duplicate tag
-
-File: HR/Federal/scientific/datacrossdahr.yaml
-Record ID: datacrossdahr
-Issue: DUPLICATE_TAGS
-Field: tags[3]
-Current Value: has_api
-Suggested Action: Remove duplicate tag
-
-[MISSING_ENDPOINTS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: HR/Federal/metadata/webdzshrklasus.yaml
-Record ID: webdzshrklasus
-Issue: MISSING_ENDPOINTS
+File: HR/Federal/geo/bolegwebgeofunizghr.yaml
+Record ID: bolegwebgeofunizghr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
-
-File: HR/HR-10/opendata/opendataviroviticahr.yaml
-Record ID: opendataviroviticahr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: HR/Federal/opendata/codeforcroatiaopendatasoftcom.yaml
-Record ID: codeforcroatiaopendatasoftcom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: HR/Federal/scientific/dabarsrcehr.yaml
-Record ID: dabarsrcehr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 5
-Priority: LOW
-
-File: HR/HR-21/geo/faustizorhr.yaml
-Record ID: faustizorhr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HR/Federal/opendata/datacodeforcroatiaorg.yaml
-Record ID: datacodeforcroatiaorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HR/Federal/opendata/codeforcroatiaopendatasoftcom.yaml
-Record ID: codeforcroatiaopendatasoftcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HR/Federal/opendata/datagovhr.yaml
-Record ID: datagovhr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HR/Federal/geo/geoportalnipphr.yaml
-Record ID: geoportalnipphr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 2
-Priority: MEDIUM
-
-File: HR/Federal/opendata/datagovhr.yaml
-Record ID: datagovhr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Portal otvorenih podataka
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: HR/Federal/geo/nipphzinfrahr.yaml
-Record ID: nipphzinfrahr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoserver instance hosted by HZ-INFRA
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_TAGS: 2 issues
-MISSING_ENDPOINTS: 1 issues
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 5 issues
-SHORT_DESCRIPTION: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

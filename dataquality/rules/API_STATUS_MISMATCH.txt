@@ -1,0 +1,72 @@
+DATA QUALITY REPORT - RULE: API_STATUS_MISMATCH
+================================================================================
+Generated: 2026-02-12 09:47:40
+Issue Type: API_STATUS_MISMATCH
+Priority: IMPORTANT
+Total Issues Found: 6
+
+=== SUMMARY BY COUNTRY ===
+
+DK: 1 issues
+IE: 2 issues
+SK: 1 issues
+TR: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+datagovsk: 1 issues
+datasetscataloguedatagovdk: 1 issues
+gisepaie: 1 issues
+wwwisdeie: 1 issues
+verikocaelibeltr: 1 issues
+apiibbgovtr: 1 issues
+
+=== ISSUES ===
+
+File: SK/Federal/opendata/datagovsk.yaml
+Record ID: datagovsk
+Country: SK
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
+Record ID: datasetscataloguedatagovdk
+Country: DK
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IE/Federal/geo/gisepaie.yaml
+Record ID: gisepaie
+Country: IE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Country: IE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=7
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: TR/TR-41/opendata/verikocaelibeltr.yaml
+Record ID: verikocaelibeltr
+Country: TR
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: TR/TR-34/geo/apiibbgovtr.yaml
+Record ID: apiibbgovtr
+Country: TR
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints

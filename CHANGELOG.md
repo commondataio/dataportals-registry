@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-02-12
+
+### Changed
+- Refreshed catalog metadata across entity YAML records and rebuilt generated dataset artifacts.
+- Updated export snapshots in `README.md` to reflect the latest dataset counts (12,604 catalogs; 136 software definitions; 677 scheduled; 13,281 combined entities + scheduled records).
+
+### Removed
+- Removed legacy `History.md`; changelog history is maintained in `CHANGELOG.md`.
+
 ## [1.4.0] - 2026-02-09
 
 **GitHub Release**: [v1.4.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.4.0) - Published February 9, 2026
@@ -213,8 +222,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Major updates to Finnish data portals
 - Updated many scientific data catalogs
 - Updated API endpoints for multiple platforms
-
----
-
-*Note: For detailed historical changes prior to 2024-04-13, see [History.md](History.md)*
 

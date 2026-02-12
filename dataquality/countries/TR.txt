@@ -1,50 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: TR
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: TR
-Total Records with Issues: 3
-Total Issues Found: 4
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
+[API_STATUS_MISMATCH]
+Count: 2
+Priority: IMPORTANT
 
-File: TR/TR-52/opendata/acikveriordubeltr.yaml
-Record ID: acikveriordubeltr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: TR/TR-41/opendata/verikocaelibeltr.yaml
+Record ID: verikocaelibeltr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
-File: TR/Federal/opendata/datasefaradcomtr.yaml
-Record ID: datasefaradcomtr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: TR/Federal/scientific/repositorybilkentedutr.yaml
-Record ID: repositorybilkentedutr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: TR/Federal/opendata/datasefaradcomtr.yaml
-Record ID: datasefaradcomtr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: TR/TR-34/geo/apiibbgovtr.yaml
+Record ID: apiibbgovtr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 1 issues
+API_STATUS_MISMATCH: 2 issues

@@ -1,104 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: KZ
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: KZ
-Total Records with Issues: 9
-Total Issues Found: 11
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
-
-File: KZ/Federal/geo/gisgharyshkz.yaml
-Record ID: gisgharyshkz
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KZ/KZ-27/geo/uralskmapgenplankz.yaml
-Record ID: uralskmapgenplankz
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: KZ/KZ-19/geo/mapalmoblkz.yaml
-Record ID: mapalmoblkz
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_TOPICS]
-Count: 7
-Priority: LOW
-
-File: US/Other/geo/cacgeoportalcom.yaml
-Record ID: cacgeoportalcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/gisgharyshkz.yaml
-Record ID: gisgharyshkz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/tileskygiskz.yaml
-Record ID: tileskygiskz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/gisportalkz.yaml
-Record ID: gisportalkz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/stixgeologykz.yaml
-Record ID: stixgeologykz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/argissrvgharyshkz.yaml
-Record ID: argissrvgharyshkz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: KZ/Federal/geo/pastureskazniizhikkz.yaml
-Record ID: pastureskazniizhikkz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: KZ/Federal/geo/pastureskazniizhikkz.yaml
-Record ID: pastureskazniizhikkz
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoServer-based data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: KZ/Federal/geo/aisgzkkz.yaml
+Record ID: aisgzkkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 3 issues
-MISSING_TOPICS: 7 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

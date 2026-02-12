@@ -12,15 +12,15 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoSeer is a specialized geospatial search engine that indexes OGC-compliant
   web services (WMS, WFS, WCS, WMTS) to provide centralized discovery of spatial datasets.
   As of 2025, it indexes over 3.7 million distinct datasets from 4,374 active hosts
   across 95 countries. The platform uses web crawlers to discover services, retrieves
-  GetCapabilities documents, and processes them to clean data, remove duplicates, and
-  determine spatial extents.
+  GetCapabilities documents, and processes them to clean data, remove duplicates,
+  and determine spatial extents.
 endpoints:
 - type: custom_api
   url: https://www.geoseer.net/api.php
@@ -37,7 +37,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: GeoSeer
   type: Business
 properties:

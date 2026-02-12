@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GIS and mapping services provided via ArcGIS REST API
@@ -30,7 +30,9 @@ endpoints:
 - type: arcgis:kmz
   url: https://gis.cbf.org/arcgis/rest/services?f=kmz
 id: giscbforg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://gis.cbf.org/arcgis/rest/services
 name: CBF Data Catalog
 owner:
@@ -40,7 +42,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: CBF
   type: Civil society
 properties:

@@ -1,194 +1,59 @@
 DATA QUALITY REPORT - COUNTRY: BE
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: BE
-Total Records with Issues: 17
-Total Issues Found: 21
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 3
-Priority: MEDIUM
-
-File: BE/Federal/opendata/bruxellesdataopendatasoftcom.yaml
-Record ID: bruxellesdataopendatasoftcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: BE/Federal/geo/webappsportofantwerpbrugescom.yaml
-Record ID: webappsportofantwerpbrugescom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: BE/Federal/scientific/brepolsfigsharecom.yaml
-Record ID: brepolsfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: BE/geo/metadatatestdcjmbe.yaml
-Record ID: metadatatestdcjmbe
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: BE/Federal/scientific/dataverseuliegebe.yaml
-Record ID: dataverseuliegebe
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
-
-File: BE/geo/metadatatestdcjmbe.yaml
-Record ID: metadatatestdcjmbe
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: BE/geo/gisforsecondaryschoolsschoolsbehubarcgiscom.yaml
-Record ID: gisforsecondaryschoolsschoolsbehubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: BE/geo/ouronemapesrieuropehubarcgiscom.yaml
-Record ID: ouronemapesrieuropehubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 12
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 6
+Priority: IMPORTANT
 
 File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
 Record ID: recapuantwerpenbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: BE/BE-WAL/opendata/prcdigitalwalloniaopendatasoftcom.yaml
-Record ID: prcdigitalwalloniaopendatasoftcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
+Record ID: geoservergisirisnetbe
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: BE/geo/metadatatestdcjmbe.yaml
-Record ID: metadatatestdcjmbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: BE/BE-BRU/geo/toolsmartgeothermbe.yaml
+Record ID: toolsmartgeothermbe
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: BE/geo/gisforsecondaryschoolsschoolsbehubarcgiscom.yaml
-Record ID: gisforsecondaryschoolsschoolsbehubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/geo/ouronemapesrieuropehubarcgiscom.yaml
-Record ID: ouronemapesrieuropehubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/geo/portaalmechelenopendataarcgiscom.yaml
-Record ID: portaalmechelenopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/BE-BRU/geo/geobrugeonetworkirisnetbe.yaml
-Record ID: geobrugeonetworkirisnetbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: BE/BE-VLG/geo/geoservervmmbe.yaml
+Record ID: geoservervmmbe
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: BE/Federal/indicators/statnbbbe.yaml
 Record ID: statnbbbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
 
-File: BE/Federal/opendata/dataplatformfietsbe.yaml
-Record ID: dataplatformfietsbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/Federal/opendata/datagovbe.yaml
-Record ID: datagovbe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/Federal/opendata/datacdpnet.yaml
-Record ID: datacdpnet
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BE/Federal/geo/geobe.yaml
-Record ID: geobe
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: BE/Federal/scientific/iptbiodiversitybe.yaml
-Record ID: iptbiodiversitybe
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT of the Belgian BIF provider
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: BE/Federal/scientific/usegalaxybe.yaml
+Record ID: usegalaxybe
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 3 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 12 issues
-SHORT_DESCRIPTION: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: metadatatestdcjmbe
-File: BE/geo/metadatatestdcjmbe.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 6 issues

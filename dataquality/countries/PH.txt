@@ -1,62 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: PH
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: PH
 Total Records with Issues: 4
-Total Issues Found: 5
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 3
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 4
+Priority: IMPORTANT
 
 File: PH/Federal/opendata/opendatasaraiph.yaml
 Record ID: opendatasaraiph
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
-File: PH/Federal/geo/giswebphivolcsdostgovph.yaml
-Record ID: giswebphivolcsdostgovph
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: PH/Federal/scientific/bimmirroraseanbiodiversityorg.yaml
+Record ID: bimmirroraseanbiodiversityorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
-File: PH/Federal/geo/appgeoriskgovph.yaml
-Record ID: appgeoriskgovph
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: PH/Federal/scientific/bkmdaseanbiodiversityorg.yaml
+Record ID: bkmdaseanbiodiversityorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: PH/Federal/opendata/opendatasaraiph.yaml
-Record ID: opendatasaraiph
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: PH/PH-BUK/geo/geoserverbukidnongovph.yaml
-Record ID: geoserverbukidnongovph
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: PH/Federal/scientific/1468874172.yaml
+Record ID: 1468874172
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 3 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues

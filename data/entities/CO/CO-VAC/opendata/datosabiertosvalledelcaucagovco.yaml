@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: CO-VAC
+      name: Valle del Cauca
+description: Portal de datos abiertos de la Gobernacion del Valle del Cauca para acceso
+  y reutilizacion de informacion publica.
+endpoints:
+- type: ckan:package-search
+  url: https://datosabiertos.valledelcauca.gov.co/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datosabiertos.valledelcauca.gov.co/api/3/action/package_list
+  version: '3'
+- type: dcatus11
+  url: https://datosabiertos.valledelcauca.gov.co/data.json
+- type: ckan
+  url: https://datosabiertos.valledelcauca.gov.co/api/3
+  version: '3'
+id: datosabiertosvalledelcaucagovco
+langs:
+- id: ES
+  name: Spanish
+link: https://datosabiertos.valledelcauca.gov.co
+name: Datos Abiertos Valle del Cauca
+owner:
+  link: https://www.valledelcauca.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 30
+    subregion:
+      id: CO-VAC
+      name: Valle del Cauca
+  name: Gobernacion del Valle del Cauca
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- regional data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020308

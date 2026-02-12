@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoServer-based spatial data infrastructure providing comprehensive OGC
@@ -65,6 +65,10 @@ endpoints:
   url: http://sigcap.no-ip.org:8082/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: sigcapnoiporg
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/sigcap-no-ip-org
+  value: sigcap-no-ip-org
 langs:
 - id: EN
   name: English
@@ -77,15 +81,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Spatial Data Infrastructure
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/sigcap-no-ip-org
-  value: sigcap-no-ip-org
 rights:
   license_id: null
   license_name: null

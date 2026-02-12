@@ -11,7 +11,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Open-source microdata cataloging tool for researchers to browse, search,
@@ -22,7 +22,9 @@ endpoints:
 - type: nada:csvexport
   url: https://icasees.org/nada/index.php/catalog/export/csv?ps=5000&collection[]
 id: icaseesorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://icasees.org/nada
 name: NADA Data Catalog on ICASEES
 owner:
@@ -32,7 +34,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: ICASEES
   type: Academy
 properties:

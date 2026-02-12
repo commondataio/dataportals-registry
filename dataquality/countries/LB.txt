@@ -1,76 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: LB
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: LB
-Total Records with Issues: 5
-Total Issues Found: 7
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: LB/Federal/opendata/impactcibgovlb.yaml
-Record ID: impactcibgovlb
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: World/indicators/dataasrcporg.yaml
-Record ID: dataasrcporg
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: LB/Federal/opendata/impactcibgovlb.yaml
-Record ID: impactcibgovlb
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: LB/Federal/opendata/wwwopendatalebanonorg.yaml
-Record ID: wwwopendatalebanonorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: LB/Federal/geo/gisredcrossorglb.yaml
-Record ID: gisredcrossorglb
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: World/indicators/dataasrcporg.yaml
-Record ID: dataasrcporg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: World/geo/dataasrcporggis.yaml
-Record ID: dataasrcporggis
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Arab Regional Geospatial Portal (ARGP)
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: LB/Federal/geo/spimsmoegovlb.yaml
+Record ID: spimsmoegovlb
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 4 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

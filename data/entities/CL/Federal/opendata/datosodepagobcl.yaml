@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Portal de datos abiertos de ODEPA (Oficina de Estudios y Politicas Agrarias)
+  con datos del sector silvoagropecuario chileno, incluyendo precios, comercio exterior
+  y series estadisticas para analisis y reutilizacion.
+endpoints:
+- type: ckan
+  url: https://datos.odepa.gob.cl/api/3
+- type: ckan:package-search
+  url: https://datos.odepa.gob.cl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.odepa.gob.cl/api/3/action/package_list
+  version: '3'
+id: datosodepagobcl
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.odepa.gob.cl
+name: ODEPA - Portal de Datos Abiertos
+owner:
+  link: https://www.odepa.gob.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Oficina de Estudios y Politicas Agrarias (ODEPA)
+  type: Central government
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- agriculture
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00020309

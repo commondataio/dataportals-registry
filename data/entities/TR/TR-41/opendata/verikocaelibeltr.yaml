@@ -19,6 +19,16 @@ coverage:
       name: Kocaeli province
 description: Veri setleri üzerinden eriştiğiniz verileri projelerinizde kullanabilir,
   Kocaeli'nin sosyal ve ekonomik gelişimine katkı sağlayabilirsiniz.
+endpoints:
+- type: ckan
+  url: https://veri.kocaeli.bel.tr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://veri.kocaeli.bel.tr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://veri.kocaeli.bel.tr/api/3/action/package_list
+  version: '3'
 id: verikocaelibeltr
 langs:
 - id: TR

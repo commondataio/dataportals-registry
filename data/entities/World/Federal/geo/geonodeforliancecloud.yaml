@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: A GeoNode-based geospatial data catalog.
@@ -32,7 +32,9 @@ endpoints:
   url: https://geonode.forliance.cloud/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
   version: 1.0.0
 id: geonodeforliancecloud
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://geonode.forliance.cloud
 name: geonode.forliance.cloud
 owner:
@@ -42,7 +44,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Forliance (from URL)
   type: Business
 properties:

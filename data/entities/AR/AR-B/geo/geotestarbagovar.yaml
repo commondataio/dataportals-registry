@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: AR-B
       name: Buenos Aires
 description: Data catalog URL for ARBA GeoServer platform
+endpoints:
+- type: wms130
+  url: https://geo.test.arba.gov.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: geotestarbagovar
 langs:
 - id: ES
@@ -54,5 +58,8 @@ tags:
 - geodata
 - cartography
 - spatial data
-topics: []
+topics:
+- Geospatial
+- Geography
+- Maps
 uid: temp00005443

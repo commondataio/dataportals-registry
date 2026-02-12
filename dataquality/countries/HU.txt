@@ -1,100 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: HU
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: HU
-Total Records with Issues: 7
-Total Issues Found: 9
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
-
-File: HU/Federal/geo/geonetworkmfgihu.yaml
-Record ID: geonetworkmfgihu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: HU/Federal/geo/arcgisserverlechnerkozponthu.yaml
-Record ID: arcgisserverlechnerkozponthu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: HU/Federal/geo/geonetworkinspirefomihu.yaml
-Record ID: geonetworkinspirefomihu
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_OWNER_LINK]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: LOW
+Priority: IMPORTANT
 
-File: HU/Federal/scientific/reporesearchdatahu.yaml
-Record ID: reporesearchdatahu
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: HU/Federal/opendata/opendatahu.yaml
-Record ID: opendatahu
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: HU/Federal/opendata/kozadatportalhu.yaml
-Record ID: kozadatportalhu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HU/Federal/opendata/opendatahu.yaml
-Record ID: opendatahu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: HU/Federal/geo/geonetworkinspirefomihu.yaml
-Record ID: geonetworkinspirefomihu
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: HU/Federal/scientific/iptopenbiomapsorg.yaml
-Record ID: iptopenbiomapsorg
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: OpenBioMaps IPT
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: HU/Federal/geo/giskoszeghyart.yaml
+Record ID: giskoszeghyart
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 3 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 3 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

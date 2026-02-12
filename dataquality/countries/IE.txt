@@ -1,31 +1,113 @@
 DATA QUALITY REPORT - COUNTRY: IE
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: IE
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 13
+Total Issues Found: 13
 
 === ISSUES BY TYPE ===
 
-[MISSING_TOPICS]
+[API_STATUS_MISMATCH]
 Count: 2
-Priority: LOW
+Priority: IMPORTANT
+
+File: IE/Federal/geo/gisepaie.yaml
+Record ID: gisepaie
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=7
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 11
+Priority: IMPORTANT
+
+File: IE/IE-LD/geo/mapslongfordcocoie.yaml
+Record ID: mapslongfordcocoie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: IE/IE-WX/geo/mapswexfordie.yaml
+Record ID: mapswexfordie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: IE/IE-G/geo/gccappsgalwaycocoie.yaml
 Record ID: gccappsgalwaycocoie
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: IE/Federal/geo/w12agis105compassie.yaml
-Record ID: w12agis105compassie
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: IE/Federal/microdata/metadataddicsoie.yaml
+Record ID: metadataddicsoie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'colectica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='colectica' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/mapsseaiie.yaml
+Record ID: mapsseaiie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/mapsnraie.yaml
+Record ID: mapsnraie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/gisintepaie.yaml
+Record ID: gisintepaie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/securedccaegovie.yaml
+Record ID: securedccaegovie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/eutgnmarineie.yaml
+Record ID: eutgnmarineie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/miags04marineie.yaml
+Record ID: miags04marineie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: IE/Federal/geo/airomapsnuimie.yaml
+Record ID: airomapsnuimie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TOPICS: 2 issues
+API_STATUS_MISMATCH: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 11 issues

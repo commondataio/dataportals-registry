@@ -1,102 +1,50 @@
 DATA QUALITY REPORT - COUNTRY: CL
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: CL
-Total Records with Issues: 9
-Total Issues Found: 10
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
-Count: 4
+[DUPLICATE_LINK]
+Count: 3
 Priority: MEDIUM
-
-File: CL/Federal/other/datachileio.yaml
-Record ID: datachileio
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 File: CL/Federal/geo/wwwgeoportalclcat.yaml
 Record ID: wwwgeoportalclcat
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://www.geoportal.cl', 'record_ids': ['wwwgeoportalclcat', 'wwwgeoportalclgs', 'wwwgeoportalcl']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: CL/Federal/geo/wwwgeoportalclgs.yaml
 Record ID: wwwgeoportalclgs
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://www.geoportal.cl', 'record_ids': ['wwwgeoportalclcat', 'wwwgeoportalclgs', 'wwwgeoportalcl']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: CL/Federal/geo/owsdatacubechilecl.yaml
-Record ID: owsdatacubechilecl
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+File: CL/Federal/geo/wwwgeoportalcl.yaml
+Record ID: wwwgeoportalcl
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://www.geoportal.cl', 'record_ids': ['wwwgeoportalclcat', 'wwwgeoportalclgs', 'wwwgeoportalcl']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: CL/Federal/scientific/datospararesilienciacl.yaml
-Record ID: datospararesilienciacl
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CL/Federal/scientific/gbifchilemmagobcl.yaml
-Record ID: gbifchilemmagobcl
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: LOW
+Priority: IMPORTANT
 
-File: CL/CL-AR/opendata/datasmartaraucaniaorg.yaml
-Record ID: datasmartaraucaniaorg
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: CL/CL-LL/geo/sitgoreloslagoscl.yaml
-Record ID: sitgoreloslagoscl
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CL/CL-AR/opendata/datasmartaraucaniaorg.yaml
-Record ID: datasmartaraucaniaorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CL/Federal/geo/mapdatacubechilecl.yaml
-Record ID: mapdatacubechilecl
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CL/Federal/indicators/statinecl.yaml
+Record ID: statinecl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 4 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 3 issues
+DUPLICATE_LINK: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

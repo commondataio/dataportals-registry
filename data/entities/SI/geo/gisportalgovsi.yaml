@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS REST services endpoint for the Government of Slovenia
+endpoints:
+- type: arcgis:portals:self
+  url: https://gisportal.gov.si/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://gisportal.gov.si/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportal.gov.si/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportal.gov.si/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gisportal.gov.si/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gisportal.gov.si/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gisportal.gov.si/arcgis/rest/services?f=kmz
+id: gisportalgovsi
+langs:
+- id: SL
+  name: Slovenian
+link: https://gisportal.gov.si/arcgis/rest/services
+name: Catalog of GIS Services for Government of Slovenia
+owner:
+  link: https://gisportal.gov.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+  name: Government of Slovenia
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- government services
+- ArcGIS
+- Slovenia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00020267

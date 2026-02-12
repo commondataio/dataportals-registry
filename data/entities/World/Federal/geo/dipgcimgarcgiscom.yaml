@@ -12,10 +12,19 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: ArcGIS Server REST services catalog hosted on di-pgc.img.arcgis.com providing comprehensive geospatial datasets and map layers through standard ArcGIS REST API endpoints. The portal offers multiple access formats including REST JSON, SOAP, XML sitemap, geositemap, and KMZ for integration with various GIS applications and web mapping services. This geoportal enables developers and GIS professionals to discover and integrate various map layers, imagery, and spatial data for mapping, visualization, and spatial analysis applications across web and mobile platforms. The service provides access to diverse geospatial content including base maps, imagery services, feature services, tile services, and other spatial datasets that support geographic information systems, web mapping applications, and location-based services.
+description: ArcGIS Server REST services catalog hosted on di-pgc.img.arcgis.com providing
+  comprehensive geospatial datasets and map layers through standard ArcGIS REST API
+  endpoints. The portal offers multiple access formats including REST JSON, SOAP,
+  XML sitemap, geositemap, and KMZ for integration with various GIS applications and
+  web mapping services. This geoportal enables developers and GIS professionals to
+  discover and integrate various map layers, imagery, and spatial data for mapping,
+  visualization, and spatial analysis applications across web and mobile platforms.
+  The service provides access to diverse geospatial content including base maps, imagery
+  services, feature services, tile services, and other spatial datasets that support
+  geographic information systems, web mapping applications, and location-based services.
 endpoints:
 - type: arcgis:rest:info
   url: https://di-pgc.img.arcgis.com/arcgis/rest/info?f=pjson
@@ -30,6 +39,13 @@ endpoints:
 - type: arcgis:kmz
   url: https://di-pgc.img.arcgis.com/arcgis/rest/services?f=kmz
 id: dipgcimgarcgiscom
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/di-pgc-img-arcgis-com
+  value: di-pgc-img-arcgis-com
+- id: url
+  url: https://di-pgc.img.arcgis.com/arcgis/rest/services
+  value: https://di-pgc.img.arcgis.com/arcgis/rest/services
 langs:
 - id: EN
   name: English
@@ -50,18 +66,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: di-pgc.img.arcgis.com
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/di-pgc-img-arcgis-com
-  value: di-pgc-img-arcgis-com
-- id: url
-  url: https://di-pgc.img.arcgis.com/arcgis/rest/services
-  value: https://di-pgc.img.arcgis.com/arcgis/rest/services
 rights:
   license_id: esri-mla
   license_name: Esri Master License Agreement

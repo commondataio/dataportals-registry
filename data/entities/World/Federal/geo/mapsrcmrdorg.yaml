@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Contains geographical datasets that include web maps, applications and
@@ -31,7 +31,9 @@ endpoints:
 - type: arcgis:kmz
   url: https://maps.rcmrd.org/arcgis/rest/services?f=kmz
 id: mapsrcmrdorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://maps.rcmrd.org/arcgis/rest/services
 name: RCMRD Open Data Site
 owner:
@@ -41,7 +43,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Regional Centre for Mapping of Resources for Development (RCMRD)
   type: International
 properties:

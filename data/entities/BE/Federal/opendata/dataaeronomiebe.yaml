@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Open data repository of the Royal Belgian Institute for Space Aeronomy
+  (BIRA-IASB). Hosts atmospheric and space science datasets including ozone, greenhouse
+  gases, remote sensing, and planetary aeronomy from instruments such as TROPOMI, GOME-2,
+  and NOMAD.
+endpoints:
+- type: ckan
+  url: https://data.aeronomie.be/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.aeronomie.be/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.aeronomie.be/api/3/action/package_list
+  version: '3'
+id: dataaeronomiebe
+langs:
+- id: EN
+  name: English
+link: https://data.aeronomie.be
+name: Data repository of BIRA-IASB
+owner:
+  link: https://www.aeronomie.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+  name: Royal Belgian Institute for Space Aeronomy (BIRA-IASB)
+  type: Academy
+properties:
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- scientific
+- has_api
+- open data
+- atmosphere
+- space
+- remote sensing
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00020125

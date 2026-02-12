@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Catalog of REST services provided by OneMapServer
@@ -22,7 +22,9 @@ endpoints:
 - type: arcgis:soap
   url: http://servicelnditu.com/OneMapServer/services?wsdl
 id: servicelnditucom
-langs: []
+langs:
+- id: EN
+  name: English
 link: http://servicelnditu.com/OneMapServer/rest/services
 name: OneMapServer REST Services
 owner:
@@ -32,7 +34,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: OneMapServer Team
   type: Business
 properties:

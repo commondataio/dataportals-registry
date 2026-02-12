@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Defra group have put in place the Data Services Platform to make environmental
+  data openly available to a wide range of users. The more people know about the environment,
+  the better informed will be their actions and decisions. Data is available for download
+  in commonly used formats and via APIs; much is spatial and can be used in GIS applications.
+endpoints:
+- type: arcgis:rest:info
+  url: https://environment.data.gov.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://environment.data.gov.uk/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://environment.data.gov.uk/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://environment.data.gov.uk/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://environment.data.gov.uk/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://environment.data.gov.uk/arcgis/rest/services?f=kmz
+- type: sitemap
+  url: https://environment.data.gov.uk/sitemap.xml
+id: environmentdatagovuk
+langs:
+- id: EN
+  name: English
+link: https://environment.data.gov.uk/
+name: Defra Data Services Platform
+owner:
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 20
+  name: Department for Environment, Food and Rural Affairs (Defra)
+  type: Central government
+  link: https://gov.uk
+rights:
+  license_id: null
+  license_name: Open Government Licence v3.0
+  license_url: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- environmental data
+- spatial data
+- GIS
+- APIs
+- government
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: temp00003695

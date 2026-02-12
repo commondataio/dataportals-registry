@@ -1,50 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: AL
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: AL
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: AL/Federal/opendata/gistpgincnet.yaml
-Record ID: gistpgincnet
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: AL/Federal/geo/basemapasiggoval.yaml
-Record ID: basemapasiggoval
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AL/Federal/geo/instatgisgoval.yaml
-Record ID: instatgisgoval
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AL/Federal/geo/gisserverakptgoval.yaml
-Record ID: gisserverakptgoval
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: AL/Federal/indicators/databazainstatgoval.yaml
+Record ID: databazainstatgoval
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_TOPICS: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

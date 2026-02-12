@@ -1,50 +1,43 @@
 DATA QUALITY REPORT - COUNTRY: MZ
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: MZ
 Total Records with Issues: 3
-Total Issues Found: 4
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: MZ/microdata/mozdatainegovmz.yaml
-Record ID: mozdatainegovmz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MZ/geo/gisfndsgovmz.yaml
-Record ID: gisfndsgovmz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MZ/geo/madicoterrafirmacomz.yaml
-Record ID: madicoterrafirmacomz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
+[DUPLICATE_LINK]
+Count: 2
 Priority: MEDIUM
 
-File: MZ/geo/madicoterrafirmacomz.yaml
-Record ID: madicoterrafirmacomz
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog website
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: MZ/geo/licensesinamigovmzarcgisrestservices.yaml
+Record ID: licensesinamigovmzarcgisrestservices
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MZ/geo/licensesinamigovmz.yaml
+Record ID: licensesinamigovmz
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 1
+Priority: IMPORTANT
+
+File: MZ/Federal/scientific/1972496202.yaml
+Record ID: 1972496202
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TOPICS: 3 issues
-SHORT_DESCRIPTION: 1 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

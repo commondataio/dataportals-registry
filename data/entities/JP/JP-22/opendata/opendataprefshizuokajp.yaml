@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: JP-22
       name: Shizuoka
-description: Open data portal of Shizuoka Prefecture
+description: Open data portal of Shizuoka Prefecture. provides access to datasets
+  and resources.
 id: opendataprefshizuokajp
 langs:
 - id: JA
@@ -47,6 +48,14 @@ software:
   id: ckan
   name: CKAN
 status: active
-tags: []
-topics: []
+tags:
+- CKAN
+- government
+- open data
+topics:
+- Open Data
+- Government Data
+endpoints:
+- type: ckan
+  url: https://opendata.pref.shizuoka.jp/api/3/action/package_list
 uid: temp00004732

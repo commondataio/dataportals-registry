@@ -1,137 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: TW
-Total Records with Issues: 13
-Total Issues Found: 15
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 3
-Priority: LOW
-
-File: TW/TW-PEN/opendata/opendatapenghugovtw.yaml
-Record ID: opendatapenghugovtw
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: TW/Federal/opendata/bmckancpamigovtw.yaml
-Record ID: bmckancpamigovtw
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: TW/Federal/scientific/iptbcrcfirdiorgtw.yaml
-Record ID: iptbcrcfirdiorgtw
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: TW/Federal/geo/casigccugeoghubarcgiscom.yaml
-Record ID: casigccugeoghubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 7
-Priority: LOW
-
-File: TW/Federal/indicators/statdbdgbasgovtw.yaml
-Record ID: nstatdbdgbasgovtw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/opendata/taijiangtw.yaml
-Record ID: taijiangtw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/opendata/datadepositario.yaml
-Record ID: datadepositario
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/opendata/scidmnchcorgtw.yaml
-Record ID: scidmnchcorgtw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/geo/casigccugeoghubarcgiscom.yaml
-Record ID: casigccugeoghubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/geo/elandcpamigovtw.yaml
-Record ID: elandcpamigovtw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TW/Federal/geo/dssmap1ncdrnatgovtw.yaml
-Record ID: dssmap1ncdrnatgovtw
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 4
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: TW/TW-KHH/opendata/datakcggovtw.yaml
-Record ID: datakcggovtw
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Kaohsiung City Government Open Data
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: TW/Federal/geo/mapelandgovtw.yaml
+Record ID: mapelandgovtw
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: TW/TW-PEN/opendata/opendatapenghugovtw.yaml
-Record ID: opendatapenghugovtw
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Penghu County Open Data Platform
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: TW/TW-KIN/geo/mapcloudkinmengovtw.yaml
+Record ID: mapcloudkinmengovtw
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: TW/Federal/opendata/datagovtw.yaml
-Record ID: datagovtw
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Taiwan Government Open Data Platform
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: TW/TW-TNN/geo/tchgistainangovtw.yaml
+Record ID: tchgistainangovtw
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: TW/TW-ILA/opendata/opendataelandgovtw.yaml
-Record ID: opendataelandgovtw
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: 宜蘭縣政府開放資料平台提供宜蘭縣各類公共資料開放下載。
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: TW/TW-TPE/indicators/dotstatgovtaipei.yaml
+Record ID: dotstatgovtaipei
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 3 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 7 issues
-SHORT_DESCRIPTION: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues

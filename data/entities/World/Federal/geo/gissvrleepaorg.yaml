@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GIS data services provided by LEEPA, accessible via REST API
@@ -30,6 +30,10 @@ endpoints:
 - type: arcgis:kmz
   url: https://gissvr.leepa.org/gissvr/rest/services?f=kmz
 id: gissvrleepaorg
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/gissvrleepaorg
+  value: gissvrleepaorg
 langs:
 - id: EN
   name: English
@@ -42,15 +46,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 properties:
   has_doi: false
-identifiers:
-- id: dataportals.org
-  url: http://dataportals.org/portal/gissvrleepaorg
-  value: gissvrleepaorg
 rights:
   license_id: null
   license_name: null

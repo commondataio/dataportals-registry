@@ -1,140 +1,59 @@
 DATA QUALITY REPORT - COUNTRY: NO
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: NO
-Total Records with Issues: 10
-Total Issues Found: 14
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: NO/Federal/scientific/usnfigsharecom.yaml
-Record ID: usnfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
-
-File: NO/NO-30/geo/vikenfylkevikenhubarcgiscom.yaml
-Record ID: vikenfylkevikenhubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: NO/Federal/scientific/usnfigsharecom.yaml
-Record ID: usnfigsharecom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: NO/Federal/scientific/dataarchivesigma2no.yaml
-Record ID: dataarchivesigma2no
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 6
-Priority: LOW
+Priority: IMPORTANT
 
-File: NO/Federal/opendata/datanorgeno.yaml
-Record ID: datanorgeno
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: NO/NO-03/indicators/statistikkbankenoslokommuneno.yaml
+Record ID: statistikkbankenoslokommuneno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
-File: NO/Federal/opendata/catalogintarosnerscno.yaml
-Record ID: catalogintarosnerscno
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: NO/Federal/microdata/recapmedisinntnuno.yaml
+Record ID: recapmedisinntnuno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: NO/Federal/geo/kartrano.yaml
-Record ID: kartrano
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: NO/Federal/indicators/statistikkbankenfiskeridirno.yaml
+Record ID: statistikkbankenfiskeridirno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: NO/Federal/geo/tonsbergasplanviakhubarcgiscom.yaml
-Record ID: tonsbergasplanviakhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: NO/Federal/indicators/havniaugefiskeridirno.yaml
+Record ID: havniaugefiskeridirno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: NO/Federal/scientific/usnfigsharecom.yaml
-Record ID: usnfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: NO/Federal/geo/mapsimrno.yaml
+Record ID: mapsimrno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: NO/Federal/scientific/dataarchivesigma2no.yaml
-Record ID: dataarchivesigma2no
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 4
-Priority: MEDIUM
-
-File: NO/NO-30/geo/hubfrstadkommopendataarcgiscom.yaml
-Record ID: hubfrstadkommopendataarcgiscom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for municipal open data
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: NO/Federal/opendata/datanorgeno.yaml
-Record ID: datanorgeno
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: data.norge.no
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: NO/Federal/scientific/iptgbifno.yaml
-Record ID: iptgbifno
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GBIF Norway IPT
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: NO/Federal/scientific/gbifimrno.yaml
-Record ID: gbifimrno
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IMR IPT server
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: NO/Federal/scientific/usegalaxyno.yaml
+Record ID: usegalaxyno
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 6 issues
-SHORT_DESCRIPTION: 4 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: usnfigsharecom
-File: NO/Federal/scientific/usnfigsharecom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 6 issues

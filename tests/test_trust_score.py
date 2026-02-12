@@ -106,12 +106,12 @@ class TestCatalogTypeScore:
 
     def test_data_search_engines_penalty(self):
         """Test Data search engines (aggregators) get penalty"""
-        catalog = {"catalog_type": "Data search engines"}
+        catalog = {"catalog_type": "Data search engine"}
         assert calculate_catalog_type_score(catalog) == -10
 
     def test_data_marketplaces_penalty(self):
         """Test Data marketplaces get penalty"""
-        catalog = {"catalog_type": "Data marketplaces"}
+        catalog = {"catalog_type": "Data marketplace"}
         assert calculate_catalog_type_score(catalog) == -5
 
     def test_machine_learning_catalog_neutral(self):

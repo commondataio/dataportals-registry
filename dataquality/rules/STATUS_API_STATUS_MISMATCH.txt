@@ -1,0 +1,53 @@
+DATA QUALITY REPORT - RULE: STATUS_API_STATUS_MISMATCH
+================================================================================
+Generated: 2026-02-12 09:01:48
+Issue Type: STATUS_API_STATUS_MISMATCH
+Priority: MEDIUM
+Total Issues Found: 4
+
+=== SUMMARY BY COUNTRY ===
+
+DK: 1 issues
+IE: 2 issues
+SK: 1 issues
+
+=== SUMMARY BY RECORD ===
+
+datagovsk: 1 issues
+datasetscataloguedatagovdk: 1 issues
+gisepaie: 1 issues
+wwwisdeie: 1 issues
+
+=== ISSUES ===
+
+File: SK/Federal/opendata/datagovsk.yaml
+Record ID: datagovsk
+Country: SK
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
+File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
+Record ID: datasetscataloguedatagovdk
+Country: DK
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
+File: IE/Federal/geo/gisepaie.yaml
+Record ID: gisepaie
+Country: IE
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Country: IE
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.

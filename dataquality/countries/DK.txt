@@ -1,74 +1,78 @@
 DATA QUALITY REPORT - COUNTRY: DK
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: DK
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[API_STATUS_MISMATCH]
 Count: 1
-Priority: MEDIUM
-
-File: DK/Federal/scientific/iceslibraryfigsharecom.yaml
-Record ID: iceslibraryfigsharecom
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: MEDIUM
-
-File: DK/Federal/geo/geusegdi01geusdk.yaml
-Record ID: geusegdi01geusdk
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: DK/Federal/geo/citizenproblemreporter1borgerhubarcgiscom.yaml
-Record ID: citizenproblemreporter1borgerhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: DK/Federal/scientific/dataversedeicdk.yaml
-Record ID: dataversedeicdk
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TOPICS]
-Count: 2
-Priority: LOW
+Priority: IMPORTANT
 
 File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
 Record ID: datasetscataloguedatagovdk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: Unknown/geo/investerislagelsegammelslagelsehubarcgiscom.yaml
-Record ID: investerislagelsegammelslagelsehubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 7
+Priority: IMPORTANT
+
+File: DK/Federal/geo/geoserversurfacewatermiljoeportaldk.yaml
+Record ID: geoserversurfacewatermiljoeportaldk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/kortdatafvmdk.yaml
+Record ID: kortdatafvmdk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/geodatafvmdk.yaml
+Record ID: geodatafvmdk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/havplandk.yaml
+Record ID: havplandk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/wfsplansystemdk.yaml
+Record ID: wfsplansystemdk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/fiskeriservicefiskeristyrelsendk.yaml
+Record ID: fiskeriservicefiskeristyrelsendk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DK/Federal/geo/jordbrugsanalyserdk.yaml
+Record ID: jordbrugsanalyserdk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_ENDPOINTS: 1 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TOPICS: 2 issues
+API_STATUS_MISMATCH: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 7 issues

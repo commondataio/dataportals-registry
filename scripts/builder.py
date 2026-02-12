@@ -196,6 +196,11 @@ def build_dataset(datapath, dataset_filename):
             data = yaml.load(f, Loader=Loader)
             f.close()
             
+            # Skip records without id (invalid catalog entries)
+            if not data or not data.get("id"):
+                pbar.update(1)
+                continue
+
             # Validate software profile if building software dataset
             if dataset_filename == "software.jsonl" and data:
                 issues = validate_software_profile(data)
@@ -242,8 +247,18 @@ def merge_datasets(list_datasets, result_file):
             if os.path.exists(filepath):
                 f = open(filepath, "r", encoding="utf8")
                 for line in f:
-                    out.write(line.rstrip() + "\n")
-                    processed_lines += 1
+                    line = line.rstrip()
+                    if not line:
+                        pbar.update(1)
+                        continue
+                    try:
+                        record = json.loads(line)
+                        if record and record.get("id"):
+                            out.write(line + "\n")
+                            processed_lines += 1
+                    except json.JSONDecodeError:
+                        out.write(line + "\n")
+                        processed_lines += 1
                     pbar.update(1)
                 f.close()
     out.close()
@@ -562,7 +577,7 @@ def assign(dryrun=False, mode="entries"):
 
 @app.command()
 def validate():
-    """Validates YAML entities files against simple Cerberus schema"""
+    """Validates the built JSONL export (full.jsonl) against the Cerberus catalog schema."""
     from cerberus import Validator
 
     schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
@@ -573,15 +588,31 @@ def validate():
     typer.echo("Loaded %d data catalog records" % (len(records)))
 
     v = Validator(schema)
+    errors = []
+    total = 0
+    valid = 0
     for d in records:
         if d:
-            r = v.validate(d, schema)
+            total += 1
             try:
-                r = v.validate(d, schema)
-                if not r:
-                    logger.error("%s is not valid %s", d["id"], str(v.errors))
+                if v.validate(d, schema):
+                    valid += 1
+                else:
+                    errors.append((d.get("id", "unknown"), dict(v.errors)))
             except Exception as e:
-                logger.error("%s error %s", d["id"], str(e))
+                errors.append((d.get("id", "unknown"), {"_exception": str(e)}))
+
+    typer.echo("Validation complete:")
+    typer.echo("  Total: %d" % total)
+    typer.echo("  Valid: %d" % valid)
+    typer.echo("  Errors: %d" % len(errors))
+
+    if errors:
+        typer.echo("\nErrors found:")
+        for record_id, err in errors:
+            logger.error("%s: %s", record_id, err)
+        raise typer.Exit(1)
+    typer.echo("\nAll records valid!")
 
 
 @app.command()
@@ -1211,6 +1242,45 @@ def check_missing_endpoints(record):
             "field": "endpoints",
             "current_value": record.get("endpoints", []),
             "suggested_action": "Add API endpoints based on software type and portal structure",
+        }
+    return None
+
+
+def check_software_expected_endpoints(record):
+    """Check endpoint presence for software that is expected to provide APIs."""
+    software = record.get("software", {}) or {}
+    software_id = software.get("id")
+    if not software_id:
+        return None
+
+    # Skip inactive catalogs because their endpoints may be intentionally unavailable.
+    if record.get("status") == "inactive":
+        return None
+
+    software_map = get_cached_software_map()
+    software_meta = software_map.get(software_id) if software_map else None
+    if not software_meta:
+        return None
+
+    has_api = software_meta.get("has_api")
+    requires_endpoints = isinstance(has_api, str) and has_api.strip().lower() == "yes"
+    if not requires_endpoints:
+        return None
+
+    endpoints = record.get("endpoints", [])
+    if not isinstance(endpoints, list) or len(endpoints) == 0:
+        return {
+            "issue_type": "SOFTWARE_EXPECTED_ENDPOINTS_MISSING",
+            "field": "endpoints",
+            "current_value": {
+                "software_id": software_id,
+                "has_api": has_api,
+                "endpoints_count": len(endpoints) if isinstance(endpoints, list) else 0,
+            },
+            "suggested_action": (
+                f"Add at least one endpoint because software.id='{software_id}' "
+                "is marked as API-capable in software definitions"
+            ),
         }
     return None
 
@@ -1930,20 +2000,208 @@ def check_uid_id_consistency(record):
 
 
 def check_contact_info(record):
-    """Check for missing contact information"""
+    """Check for missing contact information.
+
+    This is a low-priority advisory rule that focuses on records which are
+    active and have at least some restricted access, where explicit contact
+    details are more important.
+    """
     issues = []
-    owner = record.get("owner", {})
-    
-    # Check if owner link could serve as contact
-    owner_link = owner.get("link")
-    if not owner_link or owner_link == "":
-        # Already covered by MISSING_OWNER_LINK, but we can add a note about contact
-        pass
-    
-    # Note: We don't have explicit contact fields in the schema, so this is a low-priority check
-    # that suggests adding contact information if available
-    
+    status = record.get("status")
+    access_mode = record.get("access_mode") or []
+    owner = record.get("owner", {}) or {}
+
+    if not isinstance(access_mode, list):
+        return None
+
+    # Only consider currently active, partially restricted portals
+    if status == "active" and "restricted" in access_mode:
+        owner_link = owner.get("link")
+        if not owner_link:
+            issues.append(
+                {
+                    "issue_type": "MISSING_CONTACT_INFO",
+                    "field": "owner.link",
+                    "current_value": owner_link,
+                    "suggested_action": (
+                        "Add a contact or support URL for the organization or portal, "
+                        "so users know how to request access or ask questions."
+                    ),
+                }
+            )
+
     return issues if issues else None
+
+
+def check_path_country_consistency(record):
+    """(Deprecated) Path vs metadata country check is currently disabled."""
+    return None
+
+
+def check_status_directory_uid_consistency(record):
+    """Check coherence between record status/uid and its logical directory."""
+    issues = []
+    directory = record.get("_directory", "entities")
+    status = record.get("status")
+    uid = record.get("uid")
+
+    # Currently analyze_quality scans verified entities; treat everything as entities
+    if directory == "entities":
+        if status == "scheduled":
+            issues.append(
+                {
+                    "issue_type": "STATUS_DIRECTORY_MISMATCH",
+                    "field": "status",
+                    "current_value": status,
+                    "suggested_action": (
+                        "Move scheduled records to data/scheduled or update status "
+                        "to 'active' or 'inactive' for verified entities."
+                    ),
+                }
+            )
+
+    return issues if issues else None
+
+
+def check_id_host_correlation(record):
+    """(Deprecated) ID vs host correlation check is currently disabled."""
+    return None
+
+
+def check_status_api_status_coherence_extended(record):
+    """Check coherence between overall catalog status and api_status."""
+    status = record.get("status")
+    api_status = record.get("api_status")
+    endpoints = record.get("endpoints") or []
+
+    if status is None or api_status is None:
+        return None
+
+    issues = []
+
+    if status == "inactive" and api_status == "active":
+        issues.append(
+            {
+                "issue_type": "STATUS_API_STATUS_MISMATCH",
+                "field": "api_status",
+                "current_value": {"status": status, "api_status": api_status},
+                "suggested_action": (
+                    "Catalog is inactive but API is marked active; update api_status "
+                    "or catalog status to keep them consistent."
+                ),
+            }
+        )
+
+    if status == "active" and api_status == "inactive" and endpoints:
+        issues.append(
+            {
+                "issue_type": "STATUS_API_STATUS_MISMATCH",
+                "field": "api_status",
+                "current_value": {
+                    "status": status,
+                    "api_status": api_status,
+                    "endpoints": len(endpoints),
+                },
+                "suggested_action": (
+                    "Catalog is active and has endpoints but api_status is 'inactive'; "
+                    "verify API availability and update api_status accordingly."
+                ),
+            }
+        )
+
+    return issues if issues else None
+
+
+def check_title_quality(record):
+    """Check title quality and detect placeholder-like names."""
+    name = record.get("name")
+    link = record.get("link")
+
+    if not isinstance(name, str):
+        return None
+
+    title = name.strip()
+    if not title:
+        return None
+
+    issues = []
+
+    # Very short titles are usually not descriptive
+    if len(title) < 5:
+        issues.append(
+            {
+                "issue_type": "PLACEHOLDER_TITLE",
+                "field": "name",
+                "current_value": title,
+                "suggested_action": (
+                    "Expand the portal title to be more descriptive than a few characters."
+                ),
+            }
+        )
+
+    # Generic placeholder titles
+    placeholder_titles = {"DATA PORTAL", "OPEN DATA", "PORTAL", "CATALOG"}
+    if title.upper() in placeholder_titles:
+        issues.append(
+            {
+                "issue_type": "PLACEHOLDER_TITLE",
+                "field": "name",
+                "current_value": title,
+                "suggested_action": (
+                    "Replace generic titles like 'Data portal' or 'Open Data' with "
+                    "a more specific portal name."
+                ),
+            }
+        )
+
+    # Title equal to normalized host (no human-friendly name)
+    if link:
+        host = host_from_url(link)
+        host_norm = normalize_host_for_id(host)
+        if host_norm and title.lower() == host_norm.lower():
+            issues.append(
+                {
+                    "issue_type": "PLACEHOLDER_TITLE",
+                    "field": "name",
+                    "current_value": title,
+                    "suggested_action": (
+                        "Use a human-readable portal name instead of just the hostname."
+                    ),
+                }
+            )
+
+    return issues if issues else None
+
+
+def check_owner_coverage_coherence(record):
+    """(Deprecated) Owner vs coverage coherence check is currently disabled."""
+    return None
+
+
+def check_rights_completeness(record):
+    """Check that the rights object is not only partially populated."""
+    rights = record.get("rights")
+
+    if not isinstance(rights, dict):
+        return None
+
+    keys_present = [
+        key for key in ("license_id", "license_name", "license_url") if rights.get(key)
+    ]
+
+    # Single-field rights objects are often incomplete and ambiguous
+    if 0 < len(keys_present) < 2:
+        return {
+            "issue_type": "RIGHTS_INCOMPLETE",
+            "field": "rights",
+            "current_value": rights,
+            "suggested_action": (
+                "Add complementary license fields (id, name, and/or url) to make rights "
+                "information complete and unambiguous."
+            ),
+        }
+
+    return None
 
 
 # Priority mapping for issue types
@@ -1971,7 +2229,9 @@ ISSUE_PRIORITY_MAP = {
         "MISSING_API_STATUS",
         "SOFTWARE_ID_UNKNOWN",
         "SOFTWARE_NAME_MISMATCH",
+        "SOFTWARE_EXPECTED_ENDPOINTS_MISSING",
         "COVERAGE_NORMALIZATION",
+        "STATUS_DIRECTORY_MISMATCH",
     ],
     "MEDIUM": [
         "MISSING_DESCRIPTION",
@@ -1983,6 +2243,9 @@ ISSUE_PRIORITY_MAP = {
         "SHORT_DESCRIPTION",
         "TAG_HYGIENE",
         "TOPIC_INCOMPLETE",
+        "STATUS_API_STATUS_MISMATCH",
+        "RIGHTS_INCOMPLETE",
+        "PLACEHOLDER_TITLE",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -2071,6 +2334,7 @@ def get_software_map():
             software_map[row["id"]] = {
                 "id": row["id"],
                 "name": row.get("name", ""),
+                "has_api": row.get("has_api"),
             }
     except Exception:
         # If software.jsonl doesn't exist, return empty map
@@ -2629,9 +2893,20 @@ def generate_priority_reports(issues_by_priority, output_dir):
     
     for priority in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
         priority_issues = issues_by_priority.get(priority, [])
+        report_lines = []
         if not priority_issues:
+            report_lines.append(f"DATA QUALITY REPORT - PRIORITY: {priority}")
+            report_lines.append("=" * 80)
+            report_lines.append(f"Generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            report_lines.append(f"Priority Level: {priority}")
+            report_lines.append(f"Total Issues Found: 0")
+            report_lines.append("")
+            report_lines.append("No issues at this priority level.")
+            priority_file = os.path.join(priorities_dir, f"{priority}.txt")
+            with open(priority_file, "w", encoding="utf8") as f:
+                f.write("\n".join(report_lines))
             continue
-        
+
         report_lines = []
         report_lines.append(f"DATA QUALITY REPORT - PRIORITY: {priority}")
         report_lines.append("=" * 80)
@@ -2795,6 +3070,7 @@ def analyze_quality(output: str = None):
     all_issues = []
     total_records = 0
     records_with_issues = {}
+    records_metadata = []
     
     # Walk through all YAML files
     for root, dirs, files in tqdm.tqdm(os.walk(ROOT_DIR)):
@@ -2818,6 +3094,11 @@ def analyze_quality(output: str = None):
                 
                 # Extract country codes from record
                 country_codes = extract_country_codes(record)
+
+                # Attach helper metadata for advanced checks
+                record["_file_path"] = rel_file_path
+                record["_country_codes"] = country_codes
+                record["_directory"] = "entities"
                 
                 # Run all quality checks
                 checks = [
@@ -2826,6 +3107,7 @@ def analyze_quality(output: str = None):
                     check_missing_description,
                     check_missing_langs,
                     check_missing_endpoints,
+                    check_software_expected_endpoints,
                     check_owner_info,
                     check_coverage,
                     check_placeholder_values,
@@ -2843,6 +3125,11 @@ def analyze_quality(output: str = None):
                     check_description_quality,
                     check_uid_id_consistency,
                     check_contact_info,
+                    check_status_directory_uid_consistency,
+                    check_status_api_status_coherence_extended,
+                    check_title_quality,
+                    check_owner_coverage_coherence,
+                    check_rights_completeness,
                 ]
                 
                 for check_func in checks:
@@ -2896,12 +3183,82 @@ def analyze_quality(output: str = None):
                         "country_code": primary_country,
                         "all_country_codes": country_codes,  # Store all countries for this record
                     }
+
+                # Collect metadata for cross-record duplicate detection
+                link = record.get("link")
+                records_metadata.append(
+                    {
+                        "record_id": record_id,
+                        "file_path": rel_file_path,
+                        "country_codes": country_codes if country_codes else ["UNKNOWN"],
+                        "link": link,
+                    }
+                )
                     
             except yaml.YAMLError as e:
                 logger.warning(f"YAML parsing error in {filename}: {str(e)}")
             except Exception as e:
                 logger.warning(f"Error processing {filename}: {str(e)}")
-    
+
+    # Detect duplicate links across records
+    link_to_records = {}
+
+    for meta in records_metadata:
+        link = meta.get("link")
+        if link:
+            link_to_records.setdefault(link, []).append(meta)
+
+    def _ensure_record_entry(record_id, file_path, country_codes):
+        primary_country = country_codes[0] if country_codes else "UNKNOWN"
+        if record_id not in records_with_issues:
+            records_with_issues[record_id] = {
+                "file_path": file_path,
+                "issues": [],
+                "unique_issues": [],
+                "country_code": primary_country,
+                "all_country_codes": country_codes if country_codes else [primary_country],
+            }
+        return records_with_issues[record_id]
+
+    # Duplicate links
+    for link, metas in link_to_records.items():
+        if not link or len(metas) <= 1:
+            continue
+
+        record_ids_for_link = [m["record_id"] for m in metas]
+
+        for meta in metas:
+            record_id = meta["record_id"]
+            file_path = meta["file_path"]
+            country_codes = meta["country_codes"] or ["UNKNOWN"]
+            primary_country = country_codes[0]
+
+            base_issue = {
+                "issue_type": "DUPLICATE_LINK",
+                "field": "link",
+                "current_value": {
+                    "link": link,
+                    "record_ids": record_ids_for_link,
+                },
+                "suggested_action": (
+                    "Multiple records share the same portal link; review them and "
+                    "deduplicate or clarify distinct roles."
+                ),
+                "file_path": file_path,
+                "record_id": record_id,
+                "priority": get_priority_level("DUPLICATE_LINK"),
+                "country_code": primary_country,
+            }
+
+            all_issues.append(base_issue)
+            entry = _ensure_record_entry(record_id, file_path, country_codes)
+            entry["unique_issues"].append(base_issue)
+
+            for country_code in entry.get("all_country_codes", country_codes):
+                issue_copy = base_issue.copy()
+                issue_copy["country_code"] = country_code
+                entry["issues"].append(issue_copy)
+
     # Group issues by country (for country reports - include issues for all countries a record spans)
     issues_by_country = {}
     records_by_country = {}

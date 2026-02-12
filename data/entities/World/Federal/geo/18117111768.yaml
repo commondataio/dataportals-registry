@@ -12,17 +12,17 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: GeoNode-based geoportal providing comprehensive geospatial data and
-  services through multiple OGC standards including WMS, WCS, CSW, WMTS, WPS, and
-  TMS. The portal offers access to datasets and map layers via standardized web services,
-  supporting both data discovery through CSW catalog services and data access through
-  various OGC protocols. Enables users to discover, access, visualize, and download
-  geospatial datasets and map layers for analysis, mapping, and integration into
-  applications. Supports multiple OGC service endpoints for interoperability and
-  standardized geospatial data exchange.
+description: GeoNode-based geoportal providing comprehensive geospatial data and services
+  through multiple OGC standards including WMS, WCS, CSW, WMTS, WPS, and TMS. The
+  portal offers access to datasets and map layers via standardized web services, supporting
+  both data discovery through CSW catalog services and data access through various
+  OGC protocols. Enables users to discover, access, visualize, and download geospatial
+  datasets and map layers for analysis, mapping, and integration into applications.
+  Supports multiple OGC service endpoints for interoperability and standardized geospatial
+  data exchange.
 endpoints:
 - type: wms111
   url: http://181.171.117.68/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -64,6 +64,12 @@ endpoints:
   url: http://181.171.117.68/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
 id: '18117111768'
+identifiers:
+- id: ip
+  value: 181.171.117.68
+- id: url
+  url: http://181.171.117.68/
+  value: http://181.171.117.68/
 langs:
 - id: EN
   name: English
@@ -76,17 +82,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 properties:
   has_doi: false
-identifiers:
-- id: ip
-  value: 181.171.117.68
-- id: url
-  value: http://181.171.117.68/
-  url: http://181.171.117.68/
 rights:
   license_id: null
   license_name: null

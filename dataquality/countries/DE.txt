@@ -1,230 +1,58 @@
 DATA QUALITY REPORT - COUNTRY: DE
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: DE
-Total Records with Issues: 83
-Total Issues Found: 95
+Total Records with Issues: 50
+Total Issues Found: 51
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 14
+[DUPLICATE_LINK]
+Count: 4
 Priority: MEDIUM
-
-File: DE/DE-NW/geo/geoportalmekreismettmannde.yaml
-Record ID: geoportalmekreismettmannde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-RP/geo/weinlagenlwkrlpde.yaml
-Record ID: weinlagenlwkrlpde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/DE-HE/geo/wwwgeoportalhessende.yaml
-Record ID: wwwgeoportalhessende
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
 
 File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
 Record ID: opendatarnvonlinede
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://opendata.rnv-online.de', 'record_ids': ['opendatarnvonlinede', 'opendatarnvonline']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: DE/DE-BW/opendata/fritzfreiburgde.yaml
-Record ID: fritzfreiburgde
-Issue: MISSING_DESCRIPTION
-Field: description
+File: DE/DE-BW/opendata/opendatarnvonline.yaml
+Record ID: opendatarnvonline
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://opendata.rnv-online.de', 'record_ids': ['opendatarnvonlinede', 'opendatarnvonline']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DE/Federal/geo/mdidienstebawdencwms.yaml
+Record ID: mdidienstebawdencwms
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://mdi-dienste.baw.de/geoserver', 'record_ids': ['mdidienstebawdencwms', 'mdidienstebawde']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: DE/Federal/geo/mdidienstebawde.yaml
+Record ID: mdidienstebawde
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://mdi-dienste.baw.de/geoserver', 'record_ids': ['mdidienstebawdencwms', 'mdidienstebawde']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[MISSING_API_STATUS]
+Count: 1
+Priority: IMPORTANT
+
+File: DE/Federal/scientific/rdpcidatruhrunibochumde.yaml
+Record ID: rdpcidatruhrunibochumde
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/opendata/linkeddatacatalogdwsinformatikunimannheimde.yaml
-Record ID: linkeddatacatalogdwsinformatikunimannheimde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/opendata/geoportalmonheimde.yaml
-Record ID: geoportalmonheimde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/wwwwaldgeoportalde.yaml
-Record ID: wwwwaldgeoportalde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/regionalatlasstatistikportalde.yaml
-Record ID: regionalatlasstatistikportalde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/geoportalbirkenwerderde.yaml
-Record ID: geoportalbirkenwerderde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/metaverde.yaml
-Record ID: metaverde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/hcdchereonde.yaml
-Record ID: hcdchereonde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/geo/altenburggajamatrixde.yaml
-Record ID: altenburggajamatrixde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
-
-File: DE/Federal/scientific/datenrepositorybawde.yaml
-Record ID: datenrepositorybawde
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_ENDPOINTS]
-Count: 7
-Priority: MEDIUM
-
-File: DE/DE-RP/geo/geoportalrlpde.yaml
-Record ID: geoportalrlpde
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-BY/geo/geoportalbayernde.yaml
-Record ID: geoportalbayernde
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-HB/opendata/wwwtransparenzbremende.yaml
-Record ID: wwwtransparenzbremende
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-HE/geo/wwwgeoportalhessende.yaml
-Record ID: wwwgeoportalhessende
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/DE-SL/geo/geoportalsaarlandde.yaml
-Record ID: geoportalsaarlandde
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/Federal/geo/downloadgeofabrikde.yaml
-Record ID: downloadgeofabrikde
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/Federal/scientific/databusdbpediaorg.yaml
-Record ID: databusdbpediaorg
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_LANGS]
-Count: 7
-Priority: MEDIUM
-
-File: DE/DE-BW/geo/servicesgiskonstanzdigital.yaml
-Record ID: servicesgiskonstanzdigital
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/DE-BW/geo/webgisregionstuttgartorg.yaml
-Record ID: webgisregionstuttgartorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/Federal/geo/georepublicinfo.yaml
-Record ID: georepublicinfo
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/Federal/geo/mapgalleryarlgishubarcgiscom.yaml
-Record ID: mapgalleryarlgishubarcgiscom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/Federal/geo/geovdbndeutschebahncom.yaml
-Record ID: geovdbndeutschebahncom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/Federal/geo/wwwoprinfo.yaml
-Record ID: wwwoprinfo
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: DE/Federal/geo/wesselingwheregroupcom.yaml
-Record ID: wesselingwheregroupcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
 [MISSING_OWNER_LINK]
-Count: 5
+Count: 1
 Priority: LOW
-
-File: DE/Federal/opendata/einloesenmilesmediende.yaml
-Record ID: einloesenmilesmediende
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
 
 File: DE/Federal/geo/18517146157.yaml
 Record ID: 18517146157
@@ -233,485 +61,329 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: DE/Federal/geo/gdigeonetworkprodseblede.yaml
-Record ID: gdigeonetworkprodseblede
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 45
+Priority: IMPORTANT
 
-File: DE/Federal/scientific/dareuolde.yaml
-Record ID: dareuolde
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/DE-MV/geo/wwwgeoporthrode.yaml
+Record ID: wwwgeoporthrode
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/Federal/scientific/datatudortmundde.yaml
-Record ID: datatudortmundde
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DE/DE-NW/opendata/wwwoffenedatenowlde.yaml
+Record ID: wwwoffenedatenowlde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
-[MISSING_TAGS]
-Count: 4
-Priority: LOW
+File: DE/DE-NW/geo/wwwkarterecklinghausende.yaml
+Record ID: wwwkarterecklinghausende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/geo/radlstadtesride6opendataarcgiscom.yaml
-Record ID: radlstadtesride6opendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: DE/DE-NW/geo/rioobkde.yaml
+Record ID: rioobkde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/DE-BW/opendata/datenportalulmde.yaml
-Record ID: datenportalulmde
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: DE/DE-NW/geo/stadtplangeoportalruhr.yaml
+Record ID: stadtplangeoportalruhr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/DE-NI/geo/mdiniedersachsende.yaml
-Record ID: mdiniedersachsende
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: DE/DE-NW/geo/geoportalmekreismettmannde.yaml
+Record ID: geoportalmekreismettmannde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
 
-File: DE/Federal/opendata/opendatablede.yaml
-Record ID: opendatablede
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: DE/DE-NW/geo/geoportaltroisdorfde.yaml
+Record ID: geoportaltroisdorfde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-[MISSING_TOPICS]
-Count: 38
-Priority: LOW
+File: DE/DE-NW/geo/wwwgeoserverhochsauerlandkreisde.yaml
+Record ID: wwwgeoserverhochsauerlandkreisde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/DE-NW/geo/geodatenmetropoleruhrde.yaml
-Record ID: geodatenmetropoleruhrde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: DE/DE-SN/geo/wwwsmulsachsende.yaml
+Record ID: wwwsmulsachsende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/DE-NW/geo/geoserver4kreisrede.yaml
-Record ID: geoserver4kreisrede
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: DE/DE-SN/geo/luisumweltsachsende.yaml
+Record ID: luisumweltsachsende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/DE-NW/geo/wwwgisnrwde.yaml
-Record ID: wwwgisnrwde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: DE/DE-SN/geo/wwwgeoportalumweltsachsende.yaml
+Record ID: wwwgeoportalumweltsachsende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/DE-NW/geo/datengeoportalruhr.yaml
-Record ID: datengeoportalruhr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-SN/geo/cswsachsenidude.yaml
-Record ID: cswsachsenidude
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/geo/radlstadtesride6opendataarcgiscom.yaml
-Record ID: radlstadtesride6opendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/geo/arcgisinspireesriopendataarcgiscom.yaml
-Record ID: arcgisinspireesriopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BY/opendata/opendatawuerzburgde.yaml
-Record ID: opendatawuerzburgde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
-Record ID: opendatarnvonlinede
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/opendata/fritzfreiburgde.yaml
-Record ID: fritzfreiburgde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/opendata/datenportalulmde.yaml
-Record ID: datenportalulmde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/geo/gdigajamatrixde.yaml
-Record ID: gdigajamatrixde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/geo/gis5stuttgartde.yaml
-Record ID: gis5stuttgartde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/geo/metalgrbbwde.yaml
-Record ID: metalgrbbwde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BW/geo/geodatenfreiburgde.yaml
-Record ID: geodatenfreiburgde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BE/opendata/ckanfutrhubde.yaml
-Record ID: ckanfutrhubde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-NI/geo/mapproxyonmapsde.yaml
-Record ID: mapproxyonmapsde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-NI/geo/nibislbegde.yaml
-Record ID: nibislbegde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/DE-BB/geo/geoportaleberswaldede.yaml
-Record ID: geoportaleberswaldede
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/wwwonlinekioskde.yaml
-Record ID: wwwonlinekioskde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/wwwoffenesdatenportalde.yaml
-Record ID: wwwoffenesdatenportalde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/linkeddatacatalogdwsinformatikunimannheimde.yaml
-Record ID: linkeddatacatalogdwsinformatikunimannheimde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/opendatakaawde.yaml
-Record ID: opendatakaawde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/portalfdzbodiwberlinde.yaml
-Record ID: portalfdzbodiwberlinde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/opendatablede.yaml
-Record ID: opendatablede
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/intr2dokvifarechtde.yaml
-Record ID: intr2dokvifarechtde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/opendatavagde.yaml
-Record ID: opendatavagde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/wwwdatenportalmuensterlandde.yaml
-Record ID: wwwdatenportalmuensterlandde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/studycataloguebrowsershipmedunigreifswaldde.yaml
-Record ID: studycataloguebrowsershipmedunigreifswaldde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/opendata/geokurdmpgeotudresdende.yaml
-Record ID: geokurdmpgeotudresdende
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/geo/websidude.yaml
-Record ID: websidude
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/geo/regionalatlasstatistikportalde.yaml
-Record ID: regionalatlasstatistikportalde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/geo/gdiflide.yaml
-Record ID: gdiflide
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/geo/hcdchereonde.yaml
-Record ID: hcdchereonde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/scientific/elpubbibuniwuppertalde.yaml
-Record ID: elpubbibuniwuppertalde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/scientific/dkanispuniluebeckde.yaml
-Record ID: dkanispuniluebeckde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/scientific/lambdaiosregensburgde.yaml
-Record ID: lambdaiosregensburgde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DE/Federal/scientific/dkanworckdigitalhistoryunibielefeldde.yaml
-Record ID: dkanworckdigitalhistoryunibielefeldde
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 18
-Priority: MEDIUM
-
-File: DE/DE-NW/opendata/opendataduisburgde.yaml
-Record ID: opendataduisburgde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: City of Duisburg open data portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-HE/geo/geoportalwiesbadende.yaml
+Record ID: geoportalwiesbadende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
 File: DE/DE-HE/geo/geoportalkreisggde.yaml
 Record ID: geoportalkreisggde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoportal of the Kreis Groß-Gerau
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/DE-HE/geo/gdkgeoportalhessende.yaml
-Record ID: gdkgeoportalhessende
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Hessen GeoData Catalog (PYCSW)
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
+Record ID: opendatarnvonlinede
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: DE/DE-BW/opendata/opendataheilbronnde.yaml
-Record ID: opendataheilbronnde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Heilbronn Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-BE/geo/apivizberlinde.yaml
+Record ID: apivizberlinde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: DE/DE-BW/geo/gdigajamatrixde.yaml
-Record ID: gdigajamatrixde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-NI/geo/mapslglnniedersachsende.yaml
+Record ID: mapslglnniedersachsende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/DE-NI/opendata/datenportalwetscapesde.yaml
-Record ID: datenportalwetscapesde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Datenportal Wetscapes
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-NI/geo/niedersachsenbreitbandatlasde.yaml
+Record ID: niedersachsenbreitbandatlasde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/DE-BB/opendata/opendatadormagende.yaml
-Record ID: opendatadormagende
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog of the city of Dormagen
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/DE-NI/geo/gisdiepholzde.yaml
+Record ID: gisdiepholzde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/Federal/opendata/coronaopendatackande.yaml
-Record ID: coronaopendatackande
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Corona-Open Data by Ondics GmbH
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/microdata/fredacolecticaorg.yaml
+Record ID: fredacolecticaorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'colectica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='colectica' is marked as API-capable in software definitions
 
-File: DE/Federal/geo/wwwkarto365de.yaml
-Record ID: wwwkarto365de
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoportal hosting services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/opendata/wwwonlinekioskde.yaml
+Record ID: wwwonlinekioskde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+File: DE/Federal/opendata/micamdcberlinde.yaml
+Record ID: micamdcberlinde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: DE/Federal/opendata/linkeddatacatalogdwsinformatikunimannheimde.yaml
+Record ID: linkeddatacatalogdwsinformatikunimannheimde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: DE/Federal/opendata/einloesenmilesmediende.yaml
+Record ID: einloesenmilesmediende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+File: DE/Federal/opendata/geoportalmonheimde.yaml
+Record ID: geoportalmonheimde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/Federal/opendata/studycataloguebrowsershipmedunigreifswaldde.yaml
+Record ID: studycataloguebrowsershipmedunigreifswaldde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/metadatabonaresde.yaml
+Record ID: metadatabonaresde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/gdfbmapservermarumde.yaml
+Record ID: gdfbmapservermarumde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/mapskreisborkende.yaml
+Record ID: mapskreisborkende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/georepublicinfo.yaml
+Record ID: georepublicinfo
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/geoservicedlrde.yaml
+Record ID: geoservicedlrde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/wwwpegelmobilde.yaml
+Record ID: wwwpegelmobilde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/mapgalleryarlgishubarcgiscom.yaml
+Record ID: mapgalleryarlgishubarcgiscom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: DE/Federal/geo/bkggisbkgbundde.yaml
 Record ID: bkggisbkgbundde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: List of GIS services hosted by the BKG
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: DE/Federal/geo/gis02soestde.yaml
-Record ID: gis02soestde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog providing ArcGIS services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/geo/gdiviewerbmelde.yaml
+Record ID: gdiviewerbmelde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/Federal/geo/mdidienstebawdencwms.yaml
-Record ID: mdidienstebawdencwms
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: NCWMS Web service
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/geo/grosskopfbuergergisde.yaml
+Record ID: grosskopfbuergergisde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/Federal/geo/geoserverdigitalemrnde.yaml
-Record ID: geoserverdigitalemrnde
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: A geospatial data catalog and service
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/geo/owsrasdamanorg.yaml
+Record ID: owsrasdamanorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'rasdaman', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='rasdaman' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/gdidiepholzde.yaml
+Record ID: gdidiepholzde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: DE/Federal/geo/geovdbndeutschebahncom.yaml
 Record ID: geovdbndeutschebahncom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Deutsche Bahn GeoServer data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: DE/Federal/geo/geomendende.yaml
-Record ID: geomendende
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog hosting services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: DE/Federal/geo/gitlabopencodede.yaml
+Record ID: gitlabopencodede
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/gdistadtbrandenburgde.yaml
+Record ID: gdistadtbrandenburgde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/wwwoprinfo.yaml
+Record ID: wwwoprinfo
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/webmappingsoltignet.yaml
+Record ID: webmappingsoltignet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+File: DE/Federal/geo/gisherzogtumlauenburgde.yaml
+Record ID: gisherzogtumlauenburgde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: DE/Federal/geo/wesselingwheregroupcom.yaml
 Record ID: wesselingwheregroupcom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Map application for Wesseling city plan
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: DE/Federal/scientific/3711425.yaml
-Record ID: 3711425
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Mobilising biodiversity data in KSA.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: DE/Federal/scientific/threddsiowiowarnemuendede.yaml
-Record ID: threddsiowiowarnemuendede
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: The IOW thredds scientific data
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-[TAG_HYGIENE]
-Count: 2
-Priority: MEDIUM
-
-File: DE/DE-NW/geo/datenzefde.yaml
-Record ID: datenzefde
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
-File: DE/Federal/scientific/nomadlabeu.yaml
-Record ID: nomadlabeu
-Issue: TAG_HYGIENE
-Field: tags[6]
-Current Value: AI
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+File: DE/Federal/scientific/archivubunimarburgde.yaml
+Record ID: archivubunimarburgde
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'vufind', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='vufind' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 14 issues
-MISSING_ENDPOINTS: 7 issues
-MISSING_LANGS: 7 issues
-MISSING_OWNER_LINK: 5 issues
-MISSING_TAGS: 4 issues
-MISSING_TOPICS: 38 issues
-SHORT_DESCRIPTION: 18 issues
-TAG_HYGIENE: 2 issues
+DUPLICATE_LINK: 4 issues
+MISSING_API_STATUS: 1 issues
+MISSING_OWNER_LINK: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 45 issues

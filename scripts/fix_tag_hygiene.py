@@ -65,13 +65,14 @@ def parse_report_file(report_path: str) -> List[Tuple[str, int, str]]:
                     if field_match:
                         tag_index = int(field_match.group(1))
                 
-                if value_line.startswith("Current Value: "):
-                    current_value = value_line.replace("Current Value: ", "").strip()
+                # Accept "Current Value:" or "Current Value: xxx" (value may be empty)
+                if value_line.startswith("Current Value:"):
+                    current_value = value_line.split("Current Value:", 1)[1].strip()
                     break
                 
                 j += 1
             
-            if tag_index is not None and current_value is not None:
+            if tag_index is not None:
                 issues.append((file_path, tag_index, current_value))
         
         i += 1

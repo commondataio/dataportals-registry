@@ -1,116 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: VN
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: VN
-Total Records with Issues: 11
-Total Issues Found: 12
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 4
+Priority: IMPORTANT
+
+File: VN/VN-SG/geo/opendatahcmgisvn.yaml
+Record ID: opendatahcmgisvn
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: VN/VN-SG/geo/opendatahcmgisvngeoserver.yaml
+Record ID: opendatahcmgisvngeoserver
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: VN/Federal/opendata/dulieumoorg.yaml
 Record ID: dulieumoorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[MISSING_TOPICS]
-Count: 6
-Priority: LOW
-
-File: VN/VN-43/geo/sotnmtbariavungtaugovvn.yaml
-Record ID: sotnmtbariavungtaugovvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: VN/Federal/opendata/dulieuitrithucvn.yaml
-Record ID: dulieuitrithucvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: VN/Federal/opendata/opendatavnptitvn.yaml
-Record ID: opendatavnptitvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: VN/Federal/opendata/opendatagovvn.yaml
-Record ID: opendatagovvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: VN/Federal/api/apixvn.yaml
-Record ID: apixvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: VN/VN-34/geo/giskhanhhoagovvn.yaml
-Record ID: giskhanhhoagovvn
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 4
-Priority: MEDIUM
-
-File: VN/Federal/opendata/opendatagovvn.yaml
-Record ID: opendatagovvn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Vietnamese government open data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: VN/Federal/geo/gisfimocomvn.yaml
-Record ID: gisfimocomvn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services for GIS data
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: VN/Federal/geo/gisgiadinhwatervn.yaml
-Record ID: gisgiadinhwatervn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog providing REST services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: VN/VN-03/opendata/datahaugianggovvn.yaml
-Record ID: datahaugianggovvn
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open data portal for Hau Giang Province
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-[TAG_HYGIENE]
-Count: 1
-Priority: MEDIUM
-
-File: VN/VN-30/opendata/csdlcntmgialaigovvn.yaml
-Record ID: csdlcntmgialaigovvn
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+File: VN/Federal/geo/wwwgiscloudvngeoserver.yaml
+Record ID: wwwgiscloudvngeoserver
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_TOPICS: 6 issues
-SHORT_DESCRIPTION: 4 issues
-TAG_HYGIENE: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues

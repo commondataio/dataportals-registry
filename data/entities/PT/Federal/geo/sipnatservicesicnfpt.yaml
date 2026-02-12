@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ArcGIS Server REST services endpoint providing geospatial data services
+  published by Instituto da Conservação da Natureza e das Florestas (ICNF), Portugal.
+endpoints:
+- type: arcgis:rest:info
+  url: http://sipnatservices.icnf.pt/arcgis/rest/info?f=pjson
+- type: arcgis:soap
+  url: http://sipnatservices.icnf.pt/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: http://sipnatservices.icnf.pt/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: http://sipnatservices.icnf.pt/arcgis/rest/services?f=geositemap
+id: sipnatservicesicnfpt
+langs:
+- id: PT
+  name: Portugal
+link: http://sipnatservices.icnf.pt/ArcGIS/rest/services
+name: sipnatservices.icnf.pt/ArcGIS/rest/services
+owner:
+  link: https://www.icnf.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: Instituto da Conservação da Natureza e das Florestas (ICNF)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- geospatial
+- environment
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00020256

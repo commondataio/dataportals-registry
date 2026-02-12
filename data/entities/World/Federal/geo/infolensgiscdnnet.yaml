@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: A GeoServer instance, which functions as a data catalog for geospatial
@@ -61,6 +61,13 @@ endpoints:
   url: https://infolens.gis-cdn.net/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: infolensgiscdnnet
+identifiers:
+- id: url
+  url: https://infolens.gis-cdn.net/geoserver
+  value: https://infolens.gis-cdn.net/geoserver
+- id: owner_url
+  url: https://gis-cdn.net
+  value: https://gis-cdn.net
 langs:
 - id: EN
   name: English
@@ -73,18 +80,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Gis Cdn
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: https://infolens.gis-cdn.net/geoserver
-  value: https://infolens.gis-cdn.net/geoserver
-- id: owner_url
-  url: https://gis-cdn.net
-  value: https://gis-cdn.net
 rights:
   license_id: null
   license_name: null

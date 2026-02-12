@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+    subregion: &id001
+      id: JP-23
+      name: Aichi
+description: Regional open data portal for East Mikawa municipalities in Aichi Prefecture.
+endpoints:
+- type: ckan
+  url: https://opendata-east-mikawa.jp/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata-east-mikawa.jp/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata-east-mikawa.jp/api/3/action/package_list
+  version: '3'
+id: opendataeastmikawajp
+langs:
+- id: JA
+  name: Japanese
+link: https://opendata-east-mikawa.jp
+name: Open Data HIGASHI-MIKAWA
+owner:
+  link: https://www.east-mikawa.jp/
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 30
+    subregion: *id001
+  name: Higashi-Mikawa Wide Area Union
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- regional
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020329

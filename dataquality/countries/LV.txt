@@ -1,109 +1,38 @@
 DATA QUALITY REPORT - COUNTRY: LV
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: LV
-Total Records with Issues: 9
-Total Issues Found: 11
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 3
+Priority: IMPORTANT
 
-File: LV/Federal/scientific/dvdataverselv.yaml
-Record ID: dvdataverselv
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: LV/Federal/scientific/ortusrtulv.yaml
-Record ID: ortusrtulv
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 5
-Priority: LOW
-
-File: LV/LV-RIX/geo/georigalv.yaml
-Record ID: georigalv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: LV/Federal/opendata/dataopendatalv.yaml
-Record ID: dataopendatalv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: LV/Federal/geo/geostatgovlv.yaml
-Record ID: geostatgovlv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: LV/Federal/geo/proxygdsvissgovlv.yaml
+Record ID: proxygdsvissgovlv
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: LV/Federal/geo/ismantojumslv.yaml
 Record ID: ismantojumslv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: LV/Federal/geo/geolatvijalv.yaml
-Record ID: geolatvijalv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 4
-Priority: MEDIUM
-
-File: LV/LV-RIX/geo/georigalv.yaml
-Record ID: georigalv
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Riga city geodata catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: LV/Federal/indicators/statgovlv.yaml
-Record ID: statgovlv
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Latvia official statistics
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: LV/Federal/geo/ismantojumslv.yaml
-Record ID: ismantojumslv
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog via Geoserver interface.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: LV/Federal/scientific/dudatabiologylv.yaml
-Record ID: dudatabiologylv
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Daugavpils University IPT
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Record ID: imswebvvdgovlv
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 5 issues
-SHORT_DESCRIPTION: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues

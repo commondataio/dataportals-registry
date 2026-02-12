@@ -1,57 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: DO
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: DO
-Total Records with Issues: 4
-Total Issues Found: 5
+Total Records with Issues: 2
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
+[DUPLICATE_LINK]
+Count: 4
+Priority: MEDIUM
 
-File: DO/microdata/andaonegobdo.yaml
-Record ID: andaonegobdo
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DO/geo/ozfeconomiagobdo.yaml
+Record ID: ozfeconomiagobdo
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: DO/Federal/scientific/iptvlizbe.yaml
-Record ID: iptvlizbe
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: DO/Federal/geo/ozfeconomiagobdo.yaml
+Record ID: ozfeconomiagobdo
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
+File: DO/geo/mapageneralmineriagobdo.yaml
+Record ID: mapageneralmineriagobdo
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: DO/microdata/andaonegobdo.yaml
-Record ID: andaonegobdo
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DO/geo/geoportaliderdgobdo.yaml
-Record ID: geoportaliderdgobdo
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: DO/api/developerdigitalgobdo.yaml
-Record ID: developerdigitalgobdo
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: DO/Federal/geo/mapageneralmineriagobdo.yaml
+Record ID: mapageneralmineriagobdo
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
-MISSING_TOPICS: 3 issues
+DUPLICATE_LINK: 4 issues

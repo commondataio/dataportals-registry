@@ -1,659 +1,176 @@
 DATA QUALITY REPORT - COUNTRY: CA
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: CA
-Total Records with Issues: 65
-Total Issues Found: 84
+Total Records with Issues: 22
+Total Issues Found: 22
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
+[DUPLICATE_LINK]
+Count: 2
 Priority: MEDIUM
 
-File: CA/CA-ON/geo/gisentclocacom.yaml
-Record ID: gisentclocacom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: CA/CA-BC/scientific/erddapdatacioospacificca.yaml
+Record ID: erddapdatacioospacificca
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_OWNER_LINK]
-Count: 12
-Priority: LOW
+File: CA/Federal/scientific/datacioospacificca.yaml
+Record ID: datacioospacificca
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: CA/geo/testhubsiteharvestingesricapacifichubarcgiscom.yaml
-Record ID: testhubsiteharvestingesricapacifichubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 20
+Priority: IMPORTANT
 
-File: CA/geo/thamesrivercamapshubarcgiscom.yaml
-Record ID: thamesrivercamapshubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
+Record ID: barchettaadumanitobaca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/geo/datahubnewacreorg.yaml
-Record ID: datahubnewacreorg
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-ON/geo/gispublicbarrieca.yaml
+Record ID: gispublicbarrieca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/geo/municipalconsentpermitshamiltonhubarcgiscom.yaml
-Record ID: municipalconsentpermitshamiltonhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-QC/geo/servicesvecto3merngouvqcca.yaml
+Record ID: servicesvecto3merngouvqcca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: CA/geo/communautaireesricaappshubarcgiscom.yaml
-Record ID: communautaireesricaappshubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-BC/geo/cosmossurreyca.yaml
+Record ID: cosmossurreyca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/geo/sustainablecitiesandcommunitiesfrederictonhubarcgiscom.yaml
-Record ID: sustainablecitiesandcommunitiesfrederictonhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-BC/geo/mapswhiterockcityca.yaml
+Record ID: mapswhiterockcityca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/CA-BC/geo/mapelkfordhubarcgiscom.yaml
-Record ID: mapelkfordhubarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/CA-AB/geo/mapsalbertaca.yaml
+Record ID: mapsalbertaca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/Federal/indicators/sdgcifdatacanadaoddcicdonneegithubio.yaml
-Record ID: sdgcifdatacanadaoddcicdonneegithubio
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/Federal/microdata/wwwmaelstromresearchorg.yaml
+Record ID: wwwmaelstromresearchorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: CA/Federal/geo/nsgiwanovascotiaca.yaml
-Record ID: nsgiwanovascotiaca
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: CA/Federal/microdata/metadatamedubcca.yaml
+Record ID: metadatamedubcca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: CA/Federal/geo/nonnageoserverdatachsshcca.yaml
-Record ID: nonnageoserverdatachsshcca
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CA/Federal/geo/giscrglca.yaml
-Record ID: giscrglca
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CA/Federal/scientific/datacanadensysnet.yaml
-Record ID: datacanadensysnet
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 16
-Priority: LOW
-
-File: CA/CA-ON/geo/jazzyhubsontarioregionopendataarcgiscom.yaml
-Record ID: jazzyhubsontarioregionopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/testhubsiteharvestingesricapacifichubarcgiscom.yaml
-Record ID: testhubsiteharvestingesricapacifichubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/opensippopendataarcgiscom.yaml
-Record ID: opensippopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/giscapitalregionopendataarcgiscom.yaml
-Record ID: giscapitalregionopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/ouvertmonctonca.yaml
-Record ID: ouvertmonctonca
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/ouverteottawaca.yaml
-Record ID: ouverteottawaca
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/communautaireesricaappshubarcgiscom.yaml
-Record ID: communautaireesricaappshubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/oddev2ottawaopendataarcgiscom.yaml
-Record ID: oddev2ottawaopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/nopovertyhubfrederictonhubarcgiscom.yaml
-Record ID: nopovertyhubfrederictonhubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/opendataesquimaltca.yaml
-Record ID: opendataesquimaltca
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/aquaterautilities1aquautilitieshubarcgiscom.yaml
-Record ID: aquaterautilities1aquautilitieshubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/geo/sustainablecitiesandcommunitiesfrederictonhubarcgiscom.yaml
-Record ID: sustainablecitiesandcommunitiesfrederictonhubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/CA-AB/geo/opendataparklandcountycom.yaml
-Record ID: opendataparklandcountycom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CA/CA-AB/geo/prdstalbertopendataarcgiscom.yaml
-Record ID: prdstalbertopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+File: CA/Federal/microdata/portalcitfmcgillca.yaml
+Record ID: portalcitfmcgillca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
 File: CA/Federal/microdata/micapulsarca.yaml
 Record ID: micapulsarca
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: CA/Federal/geo/geoca.yaml
-Record ID: geoca
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 45
-Priority: LOW
-
-File: CA/CA-NL/geo/homecnlopbhubarcgiscom.yaml
-Record ID: homecnlopbhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/opendata/thegridyouthfulcitiescom.yaml
-Record ID: thegridyouthfulcitiescom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/mapscambridgeca.yaml
-Record ID: mapscambridgeca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/icorridorfrmtooncahubarcgiscom.yaml
-Record ID: icorridorfrmtooncahubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/maps1bramptonca.yaml
-Record ID: maps1bramptonca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/portalniagarafallsca.yaml
-Record ID: portalniagarafallsca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/icorridormtooncahubarcgiscom.yaml
-Record ID: icorridormtooncahubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-ON/geo/jazzyhubsontarioregionopendataarcgiscom.yaml
-Record ID: jazzyhubsontarioregionopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/datamarkhamopendataarcgiscom.yaml
-Record ID: datamarkhamopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/testhubsiteharvestingesricapacifichubarcgiscom.yaml
-Record ID: testhubsiteharvestingesricapacifichubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/opensippopendataarcgiscom.yaml
-Record ID: opensippopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/mapsgreyca.yaml
-Record ID: mapsgreyca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/openniagarafallsca.yaml
-Record ID: openniagarafallsca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/giscapitalregionopendataarcgiscom.yaml
-Record ID: giscapitalregionopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/opendatathunderbayca.yaml
-Record ID: opendatathunderbayca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/mydatakamloopsopendataarcgiscom.yaml
-Record ID: mydatakamloopsopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/ouvertmonctonca.yaml
-Record ID: ouvertmonctonca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/wfnopendatardcoopendataarcgiscom.yaml
-Record ID: wfnopendatardcoopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/openpentictonca.yaml
-Record ID: openpentictonca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/ouverteottawaca.yaml
-Record ID: ouverteottawaca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/communautaireesricaappshubarcgiscom.yaml
-Record ID: communautaireesricaappshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/rowopendatarmwopendataarcgiscom.yaml
-Record ID: rowopendatarmwopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/londonnewcomersguidewesternuhubarcgiscom.yaml
-Record ID: londonnewcomersguidewesternuhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/nopovertyhubfrederictonhubarcgiscom.yaml
-Record ID: nopovertyhubfrederictonhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/opendataesquimaltca.yaml
-Record ID: opendataesquimaltca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/mytnrdhubarcgiscom.yaml
-Record ID: mytnrdhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/aquaterautilities1aquautilitieshubarcgiscom.yaml
-Record ID: aquaterautilities1aquautilitieshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/newdataeasthantsopendataarcgiscom.yaml
-Record ID: newdataeasthantsopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/opendataarchivesquamishhubarcgiscom.yaml
-Record ID: opendataarchivesquamishhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/geo/sustainablecitiesandcommunitiesfrederictonhubarcgiscom.yaml
-Record ID: sustainablecitiesandcommunitiesfrederictonhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-QC/opendata/catalogueogslca.yaml
-Record ID: catalogueogslca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-QC/geo/cartesrouynnorandaca.yaml
-Record ID: cartesrouynnorandaca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-SK/geo/gisextsaskatoonca.yaml
-Record ID: gisextsaskatoonca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-BC/geo/townofgibsonsopendataportalmyscrdhubarcgiscom.yaml
-Record ID: townofgibsonsopendataportalmyscrdhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-BC/geo/geoprodsvrkamloopsca.yaml
-Record ID: geoprodsvrkamloopsca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-BC/geo/geokelownaca.yaml
-Record ID: geokelownaca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-BC/geo/giswestkelownacityca.yaml
-Record ID: giswestkelownacityca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-BC/geo/mapelkfordhubarcgiscom.yaml
-Record ID: mapelkfordhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CA/CA-AB/geo/prdstalbertopendataarcgiscom.yaml
-Record ID: prdstalbertopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CA/Federal/microdata/canpathportalprodoicronca.yaml
+Record ID: canpathportalprodoicronca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
 File: CA/Federal/microdata/portalcanpathca.yaml
 Record ID: portalcanpathca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: CA/Federal/indicators/sdgcifdatacanadaoddcicdonneegithubio.yaml
-Record ID: sdgcifdatacanadaoddcicdonneegithubio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CA/Federal/microdata/portalpartnershipfortomorrowca.yaml
+Record ID: portalpartnershipfortomorrowca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: CA/Federal/microdata/micaurcaca.yaml
+Record ID: micaurcaca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
 File: CA/Federal/opendata/odesi2scholarsportalinfo.yaml
 Record ID: odesi2scholarsportalinfo
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
-File: CA/Federal/geo/hrtcoccerfhubarcgiscom.yaml
-Record ID: hrtcoccerfhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CA/Federal/geo/intranetecgcca.yaml
+Record ID: intranetecgcca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/Federal/geo/geoca.yaml
-Record ID: geoca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CA/Federal/geo/geoportalgcca.yaml
+Record ID: geoportalgcca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: CA/Federal/scientific/rsharelibrarytorontomuca.yaml
-Record ID: rsharelibrarytorontomuca
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: CA/Federal/geo/afcfrcfsnetnfisorg.yaml
+Record ID: afcfrcfsnetnfisorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-[SHORT_DESCRIPTION]
-Count: 10
-Priority: MEDIUM
+File: CA/Federal/geo/canada3dgeosciencesca.yaml
+Record ID: canada3dgeosciencesca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: CA/CA-ON/opendata/opendatagreyca.yaml
-Record ID: opendatagreyca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Website for Grey County Open Data
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/CA-BC/geo/mapitislandstrustbcca.yaml
-Record ID: mapitislandstrustbcca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services directory
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/CA-NT/geo/wwwimagegeomaticsgovntca.yaml
-Record ID: wwwimagegeomaticsgovntca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: The GNWT ArcGIS REST Services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/CA-NT/geo/wwwgeomaticsgovntca.yaml
-Record ID: wwwgeomaticsgovntca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: The GNWT ArcGIS REST Services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/CA-NT/geo/wwwsandboxgeomaticsgovntca.yaml
-Record ID: wwwsandboxgeomaticsgovntca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for geospatial services.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/Federal/indicators/sdgcifdatacanadaoddcicdonneegithubio.yaml
-Record ID: sdgcifdatacanadaoddcicdonneegithubio
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not available in provided raw text
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/Federal/geo/mapsscrdca.yaml
-Record ID: mapsscrdca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Catalog of ArcGIS REST services
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/Federal/geo/arcgiscreegeoportalca.yaml
-Record ID: arcgiscreegeoportalca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/Federal/geo/orientiswebgolderca.yaml
-Record ID: orientiswebgolderca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: ArcGIS REST Services Data Catalog Index
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: CA/Federal/scientific/prismucalgaryca.yaml
-Record ID: prismucalgaryca
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: PRISM | Institutional Repository
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CA/Federal/geo/mappingburlingtonca.yaml
+Record ID: mappingburlingtonca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_OWNER_LINK: 12 issues
-MISSING_TAGS: 16 issues
-MISSING_TOPICS: 45 issues
-SHORT_DESCRIPTION: 10 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: testhubsiteharvestingesricapacifichubarcgiscom
-File: CA/geo/testhubsiteharvestingesricapacifichubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: communautaireesricaappshubarcgiscom
-File: CA/geo/communautaireesricaappshubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: sustainablecitiesandcommunitiesfrederictonhubarcgiscom
-File: CA/geo/sustainablecitiesandcommunitiesfrederictonhubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: sdgcifdatacanadaoddcicdonneegithubio
-File: CA/Federal/indicators/sdgcifdatacanadaoddcicdonneegithubio.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_OWNER_LINK: owner.link
-  - SHORT_DESCRIPTION: description
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 20 issues

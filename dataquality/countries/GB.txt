@@ -1,936 +1,610 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: GB
-Total Records with Issues: 101
-Total Issues Found: 124
+Total Records with Issues: 84
+Total Issues Found: 84
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
-Count: 3
+[DUPLICATE_LINK]
+Count: 2
 Priority: MEDIUM
 
-File: GB/GB-NIR/opendata/nienetworksopendatasoftcom.yaml
-Record ID: nienetworksopendatasoftcom
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+File: GB/GB-ENG/scientific/wwwrepositorycamacuk.yaml
+Record ID: wwwrepositorycamacuk
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.repository.cam.ac.uk', 'record_ids': ['wwwrepositorycamacuk', 'repositorycamacuk']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: GB/Federal/opendata/icemnesstardataarchiveacuk.yaml
-Record ID: icemnesstardataarchiveacuk
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+File: GB/GB-ENG/scientific/repositorycamacuk.yaml
+Record ID: repositorycamacuk
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.repository.cam.ac.uk', 'record_ids': ['wwwrepositorycamacuk', 'repositorycamacuk']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: GB/Federal/opendata/ckanearlhamacuk.yaml
-Record ID: ckanearlhamacuk
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 82
+Priority: IMPORTANT
 
-[MISSING_LANGS]
-Count: 28
-Priority: MEDIUM
+File: GB/GB-WLS/geo/inspiredataswanseagovuk.yaml
+Record ID: inspiredataswanseagovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: GB/GB-SCT/geo/opendatadesignglasgowgishubarcgiscom.yaml
-Record ID: opendatadesignglasgowgishubarcgiscom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: GB/GB-NIR/geo/webservicesspatialnigovuk.yaml
+Record ID: webservicesspatialnigovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-NIR/geo/publiconlinehmrcgovuk.yaml
+Record ID: publiconlinehmrcgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-NIR/geo/gisservicesspatialnigovuk.yaml
+Record ID: gisservicesspatialnigovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/mapsaberdeencitygovuk.yaml
+Record ID: mapsaberdeencitygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/dataangusgovuk.yaml
+Record ID: dataangusgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/mapseastdunbartongovuk.yaml
+Record ID: mapseastdunbartongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/cagmapsnhgovuk.yaml
+Record ID: cagmapsnhgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/navgisapp04northayrshiregovuk.yaml
+Record ID: navgisapp04northayrshiregovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-SCT/geo/mapsnorthlanarkshiregovuk.yaml
+Record ID: mapsnorthlanarkshiregovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
 File: GB/Federal/opendata/actionagainststuntingopenfnorg.yaml
 Record ID: actionagainststuntingopenfnorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/opendata/birminghamcityobservatorydatopiancom.yaml
-Record ID: birminghamcityobservatorydatopiancom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/opendata/lincolnshireckanio.yaml
-Record ID: lincolnshireckanio
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/datagisunepwcmcorg.yaml
-Record ID: datagisunepwcmcorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/wwwastuntechnologycom.yaml
-Record ID: wwwastuntechnologycom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/onsinspireesriukcom.yaml
-Record ID: onsinspireesriukcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
-Record ID: moragisprd01cossunderlandlocal
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/gisunepwcmcorg.yaml
-Record ID: gisunepwcmcorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/gisworldpoporg.yaml
-Record ID: gisworldpoporg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/geo/sheffieldcitycouncilcloudesriukcom.yaml
-Record ID: sheffieldcitycouncilcloudesriukcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/brillfigsharecom.yaml
-Record ID: brillfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/arufigsharecom.yaml
-Record ID: arufigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/gbifcabiorg.yaml
-Record ID: gbifcabiorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
-Record ID: swat4hclsfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/acsfigsharecom.yaml
-Record ID: acsfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/plusfigsharecom.yaml
-Record ID: plusfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/brunelfigsharecom.yaml
-Record ID: brunelfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/microbiologyfigsharecom.yaml
-Record ID: microbiologyfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/Federal/scientific/altmetricfigsharecom.yaml
-Record ID: altmetricfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/geo/metadataatkinsgeospatialcom.yaml
-Record ID: metadataatkinsgeospatialcom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/geo/ogcworldpoporg.yaml
-Record ID: ogcworldpoporg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/geo/geoserveroxfordarchaeologycom.yaml
-Record ID: geoserveroxfordarchaeologycom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/scientific/sgulfigsharecom.yaml
-Record ID: sgulfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/scientific/adisjournalsfigsharecom.yaml
-Record ID: adisjournalsfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/scientific/kclfigsharecom.yaml
-Record ID: kclfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/scientific/futuresciencegroupfigsharecom.yaml
-Record ID: futuresciencegroupfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: GB/GB-ENG/scientific/royalhollowayfigsharecom.yaml
-Record ID: royalhollowayfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: GB/Federal/geo/datacommunitiesopendataarcgiscom.yaml
-Record ID: datacommunitiesopendataarcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: GB/Federal/geo/geofeatureorg.yaml
-Record ID: geofeatureorg
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 15
-Priority: LOW
-
-File: GB/GB-WLS/scientific/researchdatauwtsdacuk.yaml
-Record ID: researchdatauwtsdacuk
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-SCT/geo/opendataperthkinrosshubarcgiscom.yaml
-Record ID: opendataperthkinrosshubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-SCT/geo/opendatadesignglasgowgishubarcgiscom.yaml
-Record ID: opendatadesignglasgowgishubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
-Record ID: moragisprd01cossunderlandlocal
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/Federal/geo/datacommunitiesopendataarcgiscom.yaml
-Record ID: datacommunitiesopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
-Record ID: swat4hclsfigsharecom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/Federal/scientific/orcidfigsharecom.yaml
-Record ID: orcidfigsharecom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/geo/spatialdatacbmdchubarcgiscom.yaml
-Record ID: spatialdatacbmdchubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/geo/mariolancashirecchubarcgiscom.yaml
-Record ID: mariolancashirecchubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/geo/middlesbroughcouncilmiddlesbroughopendataarcgiscom.yaml
-Record ID: middlesbroughcouncilmiddlesbroughopendataarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/scientific/stedwardsfigsharecom.yaml
-Record ID: stedwardsfigsharecom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/scientific/kclfigsharecom.yaml
-Record ID: kclfigsharecom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/scientific/datakentacuk.yaml
-Record ID: datakentacuk
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: GB/GB-ENG/scientific/datacatliverpoolacuk.yaml
-Record ID: datacatliverpoolacuk
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: Unknown/geo/cotswolddistrictcouncildatasetscotswoldhubarcgiscom.yaml
-Record ID: cotswolddistrictcouncildatasetscotswoldhubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 67
-Priority: LOW
-
-File: GB/GB-WLS/scientific/researchdatauwtsdacuk.yaml
-Record ID: researchdatauwtsdacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-NIR/opendata/nienetworksopendatasoftcom.yaml
-Record ID: nienetworksopendatasoftcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-NIR/opendata/wwwopendatanigovuk.yaml
-Record ID: wwwopendatanigovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-NIR/opendata/adminopendatanigovuk.yaml
-Record ID: adminopendatanigovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-NIR/geo/osnispatialniopendataarcgiscom.yaml
-Record ID: osnispatialniopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-NIR/geo/geonodegisqubacuk.yaml
-Record ID: geonodegisqubacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/opendata/opendatascot.yaml
-Record ID: opendatascot
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/opendata/datadundeecitygovuk.yaml
-Record ID: datadundeecitygovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/opendata/dataspatialhubscot.yaml
-Record ID: dataspatialhubscot
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/opendata/findresearchdatascot.yaml
-Record ID: findresearchdatascot
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/geo/opendataperthkinrosshubarcgiscom.yaml
-Record ID: opendataperthkinrosshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/geo/mapsrenfrewshiregovuk.yaml
-Record ID: mapsrenfrewshiregovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-SCT/geo/spatialdatagovscot.yaml
-Record ID: spatialdatagovscot
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/indicators/sdgsthelensgithubio.yaml
-Record ID: sdgsthelensgithubio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/indicators/bristolsdgsgithubio.yaml
-Record ID: bristolsdgsgithubio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/opendatanhsbsanet.yaml
-Record ID: opendatanhsbsanet
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/wwwstatsbrisacuk.yaml
-Record ID: wwwstatsbrisacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/mapsmapactionorg.yaml
-Record ID: mapsmapactionorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/opendatadatahubio.yaml
-Record ID: opendatadatahubio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/datageodsacuk.yaml
-Record ID: datageodsacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/ckancabiorg.yaml
-Record ID: ckancabiorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/datanhmacuk.yaml
-Record ID: datanhmacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/statisticsukdataserviceacuk.yaml
-Record ID: statisticsukdataserviceacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/datacdrcacuk.yaml
-Record ID: datacdrcacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/datagovuk.yaml
-Record ID: datagovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/ukpowernetworksopendatasoftcom.yaml
-Record ID: ukpowernetworksopendatasoftcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/wwwgovuk.yaml
-Record ID: wwwgovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: GB/Federal/opendata/icemnesstardataarchiveacuk.yaml
 Record ID: icemnesstardataarchiveacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/wwwresourcedataorg.yaml
-Record ID: wwwresourcedataorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/inspiresthelensgovuk.yaml
+Record ID: inspiresthelensgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/datamysocietyorg.yaml
-Record ID: datamysocietyorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/wwwastuntechnologycom.yaml
+Record ID: wwwastuntechnologycom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/exploredataparliamentuk.yaml
-Record ID: exploredataparliamentuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/webappskentgovuk.yaml
+Record ID: webappskentgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/ckanearlhamacuk.yaml
-Record ID: ckanearlhamacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/itportaldeccgovuk.yaml
+Record ID: itportaldeccgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/olddatahubio.yaml
-Record ID: olddatahubio
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/wwwgisnorthlincsgovuk.yaml
+Record ID: wwwgisnorthlincsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/opendata/opendatagovje.yaml
-Record ID: opendatagovje
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/geopowysgovuk.yaml
+Record ID: geopowysgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/geo/datasearchnercacuk.yaml
-Record ID: datasearchnercacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/onsinspireesriukcom.yaml
+Record ID: onsinspireesriukcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapsbristolgovuk.yaml
+Record ID: mapsbristolgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapsgeoplacecouk.yaml
+Record ID: mapsgeoplacecouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/inspireredcarclevelandgovuk.yaml
+Record ID: inspireredcarclevelandgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapsnorthlincsgovuk.yaml
+Record ID: mapsnorthlincsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/newmapsashfordgovuk.yaml
+Record ID: newmapsashfordgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/wwwnewcastlestaffsgovuk.yaml
+Record ID: wwwnewcastlestaffsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
 Record ID: moragisprd01cossunderlandlocal
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GB/Federal/geo/wwwdeltaportalnet.yaml
-Record ID: wwwdeltaportalnet
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/itportalogauthoritycouk.yaml
+Record ID: itportalogauthoritycouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GB/Federal/geo/dataforestryopendataarcgiscom.yaml
-Record ID: dataforestryopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/kgeoknowsleygovuk.yaml
+Record ID: kgeoknowsleygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/geo/metadatabgsacuk.yaml
-Record ID: metadatabgsacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/gsggpsystemscouk.yaml
+Record ID: gsggpsystemscouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/geo/geofeatureorg.yaml
-Record ID: geofeatureorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/mappingbroxbournegovuk.yaml
+Record ID: mappingbroxbournegovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/api/apigovuk.yaml
-Record ID: apigovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/mapsmiddevongovuk.yaml
+Record ID: mapsmiddevongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/scientific/researchdataastonacuk.yaml
-Record ID: researchdataastonacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/w3blabygovuk.yaml
+Record ID: w3blabygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
-Record ID: swat4hclsfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/sedsh127sedshgovuk.yaml
+Record ID: sedsh127sedshgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: GB/Federal/scientific/shurdashuacuk.yaml
-Record ID: shurdashuacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GB/Federal/geo/wwwmaphackneygovuk.yaml
+Record ID: wwwmaphackneygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: GB/Federal/scientific/plusfigsharecom.yaml
-Record ID: plusfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/scientific/brunelfigsharecom.yaml
-Record ID: brunelfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/scientific/sussexfigsharecom.yaml
-Record ID: sussexfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/opendata/dartportalleedsacuk.yaml
-Record ID: dartportalleedsacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/opendata/databrisacuk.yaml
-Record ID: databrisacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/spatialdatacbmdchubarcgiscom.yaml
-Record ID: spatialdatacbmdchubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/southdownssdnpahubarcgiscom.yaml
-Record ID: southdownssdnpahubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/mapsbroxtoweopendataarcgiscom.yaml
-Record ID: mapsbroxtoweopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/mariolancashirecchubarcgiscom.yaml
-Record ID: mariolancashirecchubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/spatialdatatunbridgewellshubarcgiscom.yaml
-Record ID: spatialdatatunbridgewellshubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/opendatatunbridgewellsgovuk.yaml
-Record ID: opendatatunbridgewellsgovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/middlesbroughcouncilmiddlesbroughopendataarcgiscom.yaml
-Record ID: middlesbroughcouncilmiddlesbroughopendataarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/gisworcestershiregovuk.yaml
-Record ID: gisworcestershiregovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/geo/opendatacanterburygovuk.yaml
-Record ID: opendatacanterburygovuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/cranfieldfigsharecom.yaml
-Record ID: cranfieldfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/opendataspracuk.yaml
-Record ID: opendataspracuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/stedwardsfigsharecom.yaml
-Record ID: stedwardsfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/kclfigsharecom.yaml
-Record ID: kclfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/datakentacuk.yaml
-Record ID: datakentacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/datanclacuk.yaml
-Record ID: datanclacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/leicesterfigsharecom.yaml
-Record ID: leicesterfigsharecom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/figsharedmuacuk.yaml
-Record ID: figsharedmuacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/GB-ENG/scientific/datacatliverpoolacuk.yaml
-Record ID: datacatliverpoolacuk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 9
-Priority: MEDIUM
-
-File: GB/GB-NIR/geo/inspirespatialnigovuk.yaml
-Record ID: inspirespatialnigovuk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Northern Ireland's INSPIRE Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: GB/GB-SCT/opendata/opendatanhsscot.yaml
-Record ID: opendatanhsscot
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: NHS Scotland Open Data Portal
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: GB/GB-SCT/geo/maphighlandopendataarcgiscom.yaml
-Record ID: maphighlandopendataarcgiscom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Public access to regional datasets.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: GB/Federal/indicators/sdgsthelensgithubio.yaml
-Record ID: sdgsthelensgithubio
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data catalog for St. Helens, UK
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GB/Federal/geo/w3blackpoolgovuk.yaml
+Record ID: w3blackpoolgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: GB/Federal/geo/inspirenorthdevongovuk.yaml
 Record ID: inspirenorthdevongovuk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geoserver data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/wwwrbkcgovuk.yaml
+Record ID: wwwrbkcgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/gistch1copelandbcorguk.yaml
+Record ID: gistch1copelandbcorguk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/gisrushmoorgovuk.yaml
+Record ID: gisrushmoorgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapswolverhamptongovuk.yaml
+Record ID: mapswolverhamptongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/inspirenationalparksgovuk.yaml
+Record ID: inspirenationalparksgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/servicesgeoplacecouk.yaml
+Record ID: servicesgeoplacecouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/maps2eastdevongovuk.yaml
+Record ID: maps2eastdevongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/gisnorthumberlandgovuk.yaml
+Record ID: gisnorthumberlandgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/geodatarbwmgovuk.yaml
+Record ID: geodatarbwmgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/locationmetadataeditordatagovuk.yaml
+Record ID: locationmetadataeditordatagovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapsscarboroughgovuk.yaml
+Record ID: mapsscarboroughgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/appshinckleybosworthgovuk.yaml
+Record ID: appshinckleybosworthgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/geonetallerdalegovuk.yaml
+Record ID: geonetallerdalegovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/inspiredundeecitygovuk.yaml
+Record ID: inspiredundeecitygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapshantsgovuk.yaml
+Record ID: mapshantsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/mapsdarlingtongovuk.yaml
+Record ID: mapsdarlingtongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/geoserverrushmoorgovuk.yaml
+Record ID: geoserverrushmoorgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/inspiregwyneddgovuk.yaml
+Record ID: inspiregwyneddgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/servicestunbridgewellsgovuk.yaml
+Record ID: servicestunbridgewellsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/Federal/geo/w3fyldegovuk.yaml
+Record ID: w3fyldegovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/19217119349.yaml
+Record ID: 19217119349
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/gbifcabiorg.yaml
+Record ID: gbifcabiorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/openresearchlsbuacuk.yaml
+Record ID: openresearchlsbuacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
 
 File: GB/Federal/scientific/repositoryderbyacuk.yaml
 Record ID: repositoryderbyacuk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: University of Derby Repository
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
 
-File: GB/Federal/scientific/3524630207.yaml
-Record ID: 3524630207
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Birda production
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GB/Federal/scientific/repositoryuelacuk.yaml
+Record ID: repositoryuelacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
 
-File: GB/GB-ENG/geo/mapscommunitiesgovuk.yaml
-Record ID: mapscommunitiesgovuk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geospatial data services catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GB/Federal/scientific/westminsterresearchwestminsteracuk.yaml
+Record ID: westminsterresearchwestminsteracuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
 
-File: GB/GB-ENG/scientific/uclanacukacuk.yaml
-Record ID: uclanacukacuk
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: UCLan institutional data repository
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GB/Federal/scientific/repositorycanterburyacuk.yaml
+Record ID: repositorycanterburyacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/doisahfosacuk.yaml
+Record ID: doisahfosacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/repositorymdxacuk.yaml
+Record ID: repositorymdxacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/wwwhepdatanet.yaml
+Record ID: wwwhepdatanet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'invenio', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='invenio' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/cordcranfieldacuk.yaml
+Record ID: cordcranfieldacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'figshare', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='figshare' is marked as API-capable in software definitions
+
+File: GB/Federal/scientific/repositoryrothamstedacuk.yaml
+Record ID: repositoryrothamstedacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/opendata/nesstarukdataserviceacuk.yaml
+Record ID: nesstarukdataserviceacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/opendata/alspacexplorebristolacuk.yaml
+Record ID: alspacexplorebristolacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/gis1westberksgovuk.yaml
+Record ID: gis1westberksgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/mapscheshiregovuk.yaml
+Record ID: mapscheshiregovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/appnewarksherwooddcgovuk.yaml
+Record ID: appnewarksherwooddcgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/mapsstaffordbcgovuk.yaml
+Record ID: mapsstaffordbcgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/wwwbasacuk.yaml
+Record ID: wwwbasacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/gistowerhamletsgovuk.yaml
+Record ID: gistowerhamletsgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/inspireribblevalleygovuk.yaml
+Record ID: inspireribblevalleygovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/mapscheshiresharedservicesgovuk.yaml
+Record ID: mapscheshiresharedservicesgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/mapapps2bgsacuk.yaml
+Record ID: mapapps2bgsacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/geo/webmapstocktongovuk.yaml
+Record ID: webmapstocktongovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: GB/GB-ENG/scientific/cranfieldfigsharecom.yaml
+Record ID: cranfieldfigsharecom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'figshare', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='figshare' is marked as API-capable in software definitions
+
+File: MM/opendata/openjadedataorg.yaml
+Record ID: openjadedataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'strapi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='strapi' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 3 issues
-MISSING_LANGS: 28 issues
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 15 issues
-MISSING_TOPICS: 67 issues
-SHORT_DESCRIPTION: 9 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: moragisprd01cossunderlandlocal
-File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
-
-Record ID: swat4hclsfigsharecom
-File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
-
-Record ID: kclfigsharecom
-File: GB/GB-ENG/scientific/kclfigsharecom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 82 issues

@@ -4,11 +4,73 @@ Script to fix IMPORTANT priority issues:
 - MISSING_OWNER_LOCATION
 - MISSING_OWNER_NAME
 - MISSING_OWNER_TYPE
+- COVERAGE_NORMALIZATION (add macroregion)
+- INCONSISTENT_LICENSE (add license_url)
+- MISSING_API_STATUS (add api_status)
+- SOFTWARE_ID_UNKNOWN (map to custom or verify)
+- SOFTWARE_NAME_MISMATCH (fix name)
 """
+import csv
 import re
 import yaml
 from pathlib import Path
 from urllib.parse import urlparse
+from typing import Dict, Optional, Tuple
+
+# Base directories
+BASE_DIR = Path(__file__).parent.parent
+ENTITIES_DIR = BASE_DIR / "data" / "entities"
+SOFTWARE_DIR = BASE_DIR / "data" / "software"
+MACROREGION_FILE = BASE_DIR / "data" / "reference" / "macroregion_countries.tsv"
+
+# License URL mappings
+LICENSE_URL_MAP = {
+    "Open Government Licence v3.0": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "Open Government Licence": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "OGL": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "Creative Commons Atribuição-SemDerivações 3.0": "https://creativecommons.org/licenses/by-nd/3.0/",
+    "CC BY-ND 3.0": "https://creativecommons.org/licenses/by-nd/3.0/",
+    "Creative Commons Attribution-NoDerivatives 3.0": "https://creativecommons.org/licenses/by-nd/3.0/",
+}
+
+# Software ID mappings for unknown IDs (only for IDs with no software definition)
+SOFTWARE_ID_MAPPING = {}
+
+def load_macroregion_dict() -> Dict[str, Dict[str, str]]:
+    """Load macroregion mapping from TSV file"""
+    macroregion_dict = {}
+    if MACROREGION_FILE.exists():
+        with open(MACROREGION_FILE, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f, delimiter='\t')
+            for row in reader:
+                alpha2 = row.get('alpha2', '').strip()
+                if alpha2:
+                    macroregion_dict[alpha2] = {
+                        'macroregion_code': row.get('macroregion_code', '').strip(),
+                        'macroregion_name': row.get('macroregion_name', '').strip(),
+                    }
+    return macroregion_dict
+
+def load_software_definitions() -> Dict[str, Dict]:
+    """Load all software definitions from data/software directory."""
+    software = {}
+    
+    for software_file in SOFTWARE_DIR.rglob("*.yaml"):
+        if software_file.name == "_template.tmpl":
+            continue
+            
+        try:
+            with open(software_file, "r", encoding="utf-8") as f:
+                data = yaml.safe_load(f)
+                if data and "id" in data:
+                    software[data["id"]] = {
+                        "id": data["id"],
+                        "name": data.get("name", ""),
+                    }
+        except Exception as e:
+            print(f"Error loading {software_file}: {e}")
+    
+    return software
 
 def infer_country_from_coverage(record):
     """Try to infer country from record's coverage"""
@@ -301,6 +363,76 @@ def infer_owner_type(record, owner_link=None):
     
     return None
 
+def fix_coverage_normalization(record, macroregion_dict: Dict[str, Dict]) -> Tuple[bool, str]:
+    """Fix COVERAGE_NORMALIZATION by adding macroregion"""
+    coverage = record.get("coverage", [])
+    if not coverage:
+        return False, None
+    
+    fixed = False
+    messages = []
+    
+    for idx, cov_entry in enumerate(coverage):
+        location = cov_entry.get("location", {})
+        country = location.get("country", {})
+        country_id = country.get("id")
+        
+        if country_id and ("macroregion" not in location or not location.get("macroregion")):
+            # Skip Unknown, EU, World
+            if country_id in ["Unknown", "EU", "World"]:
+                continue
+            
+            if country_id in macroregion_dict:
+                macroregion_info = macroregion_dict[country_id]
+                location["macroregion"] = {
+                    "id": macroregion_info["macroregion_code"],
+                    "name": macroregion_info["macroregion_name"],
+                }
+                coverage[idx]["location"] = location
+                fixed = True
+                messages.append(f"Added macroregion {macroregion_info['macroregion_name']} for {country_id}")
+    
+    if fixed:
+        record["coverage"] = coverage
+        return True, "; ".join(messages)
+    
+    return False, None
+
+def fix_inconsistent_license(record) -> Tuple[bool, str]:
+    """Fix INCONSISTENT_LICENSE by adding license_url"""
+    rights = record.get("rights", {})
+    license_name = rights.get("license_name")
+    license_url = rights.get("license_url")
+    
+    if license_name and not license_url:
+        # Try to find URL in mapping
+        for key, url in LICENSE_URL_MAP.items():
+            if key.lower() in license_name.lower():
+                rights["license_url"] = url
+                record["rights"] = rights
+                return True, f"Added license_url: {url}"
+    
+    return False, None
+
+def fix_missing_api_status(record) -> Tuple[bool, str]:
+    """Fix MISSING_API_STATUS by setting api_status based on api and endpoints"""
+    api_status = record.get("api_status")
+    
+    if api_status is None or api_status == "":
+        api = record.get("api", False)
+        endpoints = record.get("endpoints", [])
+        
+        # If api=True or endpoints exist, set to active
+        if api is True or len(endpoints) > 0:
+            record["api_status"] = "active"
+            return True, "Set api_status to 'active' (api=True or endpoints present)"
+        else:
+            # Otherwise set to uncertain
+            record["api_status"] = "uncertain"
+            return True, "Set api_status to 'uncertain' (no api or endpoints)"
+    
+    return False, None
+
 def fix_owner_location(record, file_path):
     """Fix MISSING_OWNER_LOCATION"""
     owner = record.get("owner", {})
@@ -367,6 +499,48 @@ def fix_owner_type(record, file_path):
     
     return False, None
 
+def fix_software_id_unknown(record, software_defs: Dict[str, Dict]) -> Tuple[bool, str]:
+    """Fix SOFTWARE_ID_UNKNOWN by mapping to custom or verifying"""
+    software = record.get("software", {})
+    software_id = software.get("id")
+    
+    if not software_id:
+        return False, None
+    
+    # Check if ID is in mapping
+    if software_id in SOFTWARE_ID_MAPPING:
+        new_id = SOFTWARE_ID_MAPPING[software_id]
+        software["id"] = new_id
+        if new_id == "custom":
+            software["name"] = "Custom software"
+        record["software"] = software
+        return True, f"Mapped software.id from '{software_id}' to '{new_id}'"
+    
+    # Check if ID exists in software definitions
+    if software_id not in software_defs:
+        # Map to custom
+        software["id"] = "custom"
+        software["name"] = "Custom software"
+        record["software"] = software
+        return True, f"Mapped unknown software.id '{software_id}' to 'custom'"
+    
+    return False, None
+
+def fix_software_name_mismatch(record, software_defs: Dict[str, Dict]) -> Tuple[bool, str]:
+    """Fix SOFTWARE_NAME_MISMATCH by updating name to match ID"""
+    software = record.get("software", {})
+    software_id = software.get("id")
+    software_name = software.get("name", "")
+    
+    if software_id and software_id in software_defs:
+        expected_name = software_defs[software_id].get("name", "")
+        if expected_name and software_name != expected_name:
+            software["name"] = expected_name
+            record["software"] = software
+            return True, f"Updated software.name from '{software_name}' to '{expected_name}'"
+    
+    return False, None
+
 def parse_important_file(important_file_path):
     """Parse IMPORTANT.txt and extract file paths and issues"""
     issues = []
@@ -385,20 +559,25 @@ def parse_important_file(important_file_path):
     
     return issues
 
-def fix_yaml_file(file_path, issue_type):
+def fix_yaml_file(file_path, issue_type, macroregion_dict: Dict[str, Dict], software_defs: Dict[str, Dict]):
     """Fix issues in a YAML file"""
-    full_path = Path("data/entities") / file_path
+    full_path = ENTITIES_DIR / file_path
     
     if not full_path.exists():
-        print(f"Warning: File not found: {full_path}")
-        return False
+        # Try scheduled directory
+        scheduled_path = BASE_DIR / "data" / "scheduled" / file_path
+        if scheduled_path.exists():
+            full_path = scheduled_path
+        else:
+            print(f"Warning: File not found: {full_path}")
+            return False
     
     try:
         with open(full_path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
         
-        if not data or 'owner' not in data:
-            print(f"Warning: No owner field in {file_path}")
+        if not data:
+            print(f"Warning: Empty file: {file_path}")
             return False
         
         fixed = False
@@ -410,6 +589,16 @@ def fix_yaml_file(file_path, issue_type):
             fixed, message = fix_owner_name(data, file_path)
         elif issue_type == "MISSING_OWNER_TYPE":
             fixed, message = fix_owner_type(data, file_path)
+        elif issue_type == "COVERAGE_NORMALIZATION":
+            fixed, message = fix_coverage_normalization(data, macroregion_dict)
+        elif issue_type == "INCONSISTENT_LICENSE":
+            fixed, message = fix_inconsistent_license(data)
+        elif issue_type == "MISSING_API_STATUS":
+            fixed, message = fix_missing_api_status(data)
+        elif issue_type == "SOFTWARE_ID_UNKNOWN":
+            fixed, message = fix_software_id_unknown(data, software_defs)
+        elif issue_type == "SOFTWARE_NAME_MISMATCH":
+            fixed, message = fix_software_name_mismatch(data, software_defs)
         
         if fixed and message:
             print(f"{issue_type} in {file_path}: {message}")
@@ -421,23 +610,33 @@ def fix_yaml_file(file_path, issue_type):
         return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 def main():
-    important_file = Path("dataquality/priorities/IMPORTANT.txt")
+    important_file = BASE_DIR / "dataquality" / "priorities" / "IMPORTANT.txt"
     
     if not important_file.exists():
         print(f"Error: {important_file} not found")
         return
     
-    print("Parsing IMPORTANT.txt...")
+    print("Loading macroregion dictionary...")
+    macroregion_dict = load_macroregion_dict()
+    print(f"Loaded {len(macroregion_dict)} macroregion mappings")
+    
+    print("Loading software definitions...")
+    software_defs = load_software_definitions()
+    print(f"Loaded {len(software_defs)} software definitions")
+    
+    print("\nParsing IMPORTANT.txt...")
     issues = parse_important_file(important_file)
     print(f"Found {len(issues)} issues to fix")
     
     fixed_count = 0
     skipped_count = 0
     for file_path, issue_type, field in issues:
-        result = fix_yaml_file(file_path, issue_type)
+        result = fix_yaml_file(file_path, issue_type, macroregion_dict, software_defs)
         if result:
             fixed_count += 1
         else:

@@ -1,109 +1,99 @@
 DATA QUALITY REPORT - COUNTRY: FI
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: FI
 Total Records with Issues: 11
 Total Issues Found: 11
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[DUPLICATE_LINK]
 Count: 2
 Priority: MEDIUM
 
-File: FI/Federal/geo/maakuntakaava2040pirkanmaafi.yaml
-Record ID: maakuntakaava2040pirkanmaafi
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+File: FI/Federal/geo/paikkatietohakemistofi.yaml
+Record ID: paikkatietohakemistofi
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.paikkatietohakemisto.fi/geonetwork', 'record_ids': ['paikkatietohakemistofi', 'wwwpaikkatietohakemistofi']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: FI/Federal/geo/openwmsfmifi.yaml
-Record ID: openwmsfmifi
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+File: FI/Federal/geo/wwwpaikkatietohakemistofi.yaml
+Record ID: wwwpaikkatietohakemistofi
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://www.paikkatietohakemisto.fi/geonetwork', 'record_ids': ['paikkatietohakemistofi', 'wwwpaikkatietohakemistofi']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: FI/FI-18/geo/malhslhrthubarcgiscom.yaml
-Record ID: malhslhrthubarcgiscom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: FI/Federal/scientific/servicesfsdtunifi.yaml
-Record ID: servicesfsdtunifi
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 5
-Priority: LOW
-
-File: FI/FI-11/geo/tietopirkanmaafi.yaml
-Record ID: tietopirkanmaafi
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 9
+Priority: IMPORTANT
 
 File: FI/FI-18/microdata/recap7ltdkhelsinkifi.yaml
 Record ID: recap7ltdkhelsinkifi
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
 
-File: FI/FI-18/geo/geoserverymparistofi.yaml
-Record ID: geoserverymparistofi
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: FI/FI-18/indicators/stathelfi2.yaml
+Record ID: stathelfi2
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-File: FI/FI-01/geo/kartorregeringenax.yaml
-Record ID: kartorregeringenax
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: FI/Federal/microdata/lodafsdtunifi.yaml
+Record ID: lodafsdtunifi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'colectica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='colectica' is marked as API-capable in software definitions
 
-File: FI/Federal/geo/geostatfi.yaml
-Record ID: geostatfi
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: FI/Federal/indicators/tilastottelafi.yaml
+Record ID: tilastottelafi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-[SHORT_DESCRIPTION]
-Count: 2
-Priority: MEDIUM
+File: FI/Federal/geo/wspalvelutietovarantosuomifi.yaml
+Record ID: wspalvelutietovarantosuomifi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: FI/FI-11/opendata/datatamperefi.yaml
-Record ID: datatamperefi
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Tampere City Open Data Catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: FI/Federal/geo/maakuntakaava2040pirkanmaafi.yaml
+Record ID: maakuntakaava2040pirkanmaafi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: FI/Federal/indicators/statdblukefi.yaml
-Record ID: statdblukefi
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: FI/Federal/geo/julkinenvaylafi.yaml
+Record ID: julkinenvaylafi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: FI/Federal/geo/mapproxystoraensocom.yaml
+Record ID: mapproxystoraensocom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapproxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapproxy' is marked as API-capable in software definitions
+
+File: FI/Federal/geo/devhelfi.yaml
+Record ID: devhelfi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 2 issues
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 5 issues
-SHORT_DESCRIPTION: 2 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 9 issues

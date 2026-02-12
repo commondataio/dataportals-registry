@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MZ
+      name: Mozambique
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+    level: 20
+description: ArcGIS Server geospatial services endpoint used by the Mozambique mining
+  cadastre platform (INAMI). Provides map and geoprocessing services for mining licensing
+  and spatial analysis workflows.
+endpoints:
+- type: arcgis:rest:info
+  url: https://licenses.inami.gov.mz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://licenses.inami.gov.mz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://licenses.inami.gov.mz/arcgis/rest/services?f=kmz
+id: licensesinamigovmzarcgisrestservices
+langs:
+- id: EN
+  name: English
+- id: PT
+  name: Portuguese
+link: https://licenses.inami.gov.mz/arcgis/rest/services
+name: INAMI Mozambique ArcGIS Services
+owner:
+  link: https://licenses.inami.gov.mz
+  location:
+    country:
+      id: MZ
+      name: Mozambique
+    level: 20
+  name: National Institute of Mines (INAMI)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- arcgis
+- arcgisserver
+- geospatial
+- gis
+- mining
+- mozambique
+- rest
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020298

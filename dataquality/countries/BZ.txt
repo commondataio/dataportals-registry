@@ -1,48 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: BZ
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: BZ
-Total Records with Issues: 2
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
-
-File: BZ/indicators/appsiborgbz.yaml
-Record ID: appsiborgbz
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
 File: BZ/Federal/geo/gisyaaxcheorg.yaml
 Record ID: gisyaaxcheorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: BZ/indicators/appsiborgbz.yaml
-Record ID: appsiborgbz
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 1 issues
-MISSING_LANGS: 1 issues
-MISSING_TOPICS: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

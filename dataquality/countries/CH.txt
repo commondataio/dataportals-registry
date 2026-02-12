@@ -1,121 +1,50 @@
 DATA QUALITY REPORT - COUNTRY: CH
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: CH
-Total Records with Issues: 12
-Total Issues Found: 12
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
+[DUPLICATE_LINK]
+Count: 2
 Priority: MEDIUM
 
-File: CH/Federal/scientific/kargerfigsharecom.yaml
-Record ID: kargerfigsharecom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: World/indicators/datahubituint.yaml
+Record ID: datahubituint
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://bbmaps.itu.int/geonetwork', 'record_ids': ['datahubituint', 'bbmapsituint']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+File: World/geo/bbmapsituint.yaml
+Record ID: bbmapsituint
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://bbmaps.itu.int/geonetwork', 'record_ids': ['datahubituint', 'bbmapsituint']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: CH/Federal/scientific/iptswissrdgbifch.yaml
-Record ID: iptswissrdgbifch
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 2
+Priority: IMPORTANT
 
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
+File: US/Other/other/datausaio.yaml
+Record ID: datausaiio
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'datawheel', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datawheel' is marked as API-capable in software definitions
 
-File: CH/CH-BE/geo/wwwgeoserviceappsbech.yaml
-Record ID: wwwgeoserviceappsbech
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CH/CH-UR/geo/geourch.yaml
-Record ID: geourch
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CH/Federal/scientific/borisportalunibech.yaml
-Record ID: borisportalunibech
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 6
-Priority: LOW
-
-File: CH/Federal/opendata/dataswisscomcom.yaml
-Record ID: dataswisscomcom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CH/Federal/geo/giscdeunibech.yaml
-Record ID: giscdeunibech
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CH/Federal/geo/wwwgeocatch.yaml
-Record ID: wwwgeocatch
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CH/Federal/geo/geonetworkswissdatacubeorg.yaml
-Record ID: geonetworkswissdatacubeorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CH/Federal/geo/geocatintdevbgdich.yaml
-Record ID: geocatintdevbgdich
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: CH/Federal/geo/mapinfogis2ch.yaml
-Record ID: mapinfogis2ch
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: CH/Federal/scientific/iptgbifch.yaml
-Record ID: iptgbifch
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT installation of the Swiss node.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: CH/Federal/microdata/menuchunisantech.yaml
+Record ID: wwwstudydatablvadminch
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TAGS: 3 issues
-MISSING_TOPICS: 6 issues
-SHORT_DESCRIPTION: 1 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

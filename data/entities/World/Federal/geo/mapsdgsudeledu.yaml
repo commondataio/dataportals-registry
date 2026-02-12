@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Geospatial data services portal hosted by the University of Delaware
@@ -63,6 +63,16 @@ endpoints:
   url: http://maps.dgs.udel.edu:80/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: mapsdgsudeledu
+identifiers:
+- id: url
+  url: http://maps.dgs.udel.edu:80/geoserver
+  value: http://maps.dgs.udel.edu:80/geoserver
+- id: owner_url
+  url: http://udel.edu
+  value: http://udel.edu
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q7894134
+  value: Q7894134
 langs:
 - id: EN
   name: English
@@ -75,21 +85,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: University of Delaware
   type: Academy
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: http://maps.dgs.udel.edu:80/geoserver
-  value: http://maps.dgs.udel.edu:80/geoserver
-- id: owner_url
-  url: http://udel.edu
-  value: http://udel.edu
-- id: wikidata
-  url: https://www.wikidata.org/wiki/Q7894134
-  value: Q7894134
 rights:
   license_id: null
   license_name: Academic/Research Use (granular licensing per dataset)

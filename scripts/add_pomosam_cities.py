@@ -463,8 +463,9 @@ def create_city_record(city_name: str, url: str, region_code: Optional[str] = No
     
     record["coverage"].append(location)
     
-    # Set owner
-    record["owner"]["location"] = location["location"].copy()
+    # Set owner (schema allows only country, level, subregion — not macroregion)
+    owner_location = {k: v for k, v in location["location"].items() if k != "macroregion"}
+    record["owner"]["location"] = owner_location
     record["owner"]["name"] = f"Mesto {city_name}"
     # Extract city domain for owner link
     domain = urlparse(url).netloc

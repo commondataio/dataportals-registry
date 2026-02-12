@@ -1,36 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: UG
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: UG
-Total Records with Issues: 10
-Total Issues Found: 11
+Total Records with Issues: 5
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
 [MISSING_OWNER_LINK]
-Count: 8
+Count: 3
 Priority: LOW
-
-File: UG/Federal/opendata/opendatademossprojorg.yaml
-Record ID: opendatademossprojorg
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/opendata/mischooldatadatasocratacom.yaml
-Record ID: mischooldatadatasocratacom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/geo/services7arcgiscom.yaml
-Record ID: services7arcgiscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
 
 File: UG/Federal/geo/19012973205.yaml
 Record ID: 19012973205
@@ -46,13 +25,6 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: UG/Federal/geo/geocatsemidenet.yaml
-Record ID: geocatsemidenet
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
 File: UG/Federal/geo/1722692140.yaml
 Record ID: 1722692140
 Issue: MISSING_OWNER_LINK
@@ -60,40 +32,47 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-File: UG/Federal/geo/ec25019218171compute1amazonawscom.yaml
-Record ID: ec25019218171compute1amazonawscom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 5
+Priority: IMPORTANT
 
-[SHORT_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
+File: UG/Federal/opendata/opendatademossprojorg.yaml
+Record ID: opendatademossprojorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: UG/Federal/opendata/ppivalopendatasoftcom.yaml
-Record ID: ppivalopendatasoftcom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: No description provided in source.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: UG/Federal/geo/19012973205.yaml
+Record ID: 19012973205
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: UG/Federal/geo/4625521167.yaml
+Record ID: 4625521167
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: UG/Federal/geo/geocatsemidenet.yaml
 Record ID: geocatsemidenet
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: GeoNetwork Opensource
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: UG/Federal/scientific/iptugandagbiffr.yaml
-Record ID: iptugandagbiffr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT GBIF Uganda
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: UG/Federal/geo/1722692140.yaml
+Record ID: 1722692140
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 8 issues
-SHORT_DESCRIPTION: 3 issues
+MISSING_OWNER_LINK: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 5 issues

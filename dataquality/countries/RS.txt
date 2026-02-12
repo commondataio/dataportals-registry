@@ -1,140 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: RS
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: RS
-Total Records with Issues: 9
-Total Issues Found: 14
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 2
-Priority: MEDIUM
-
-File: RS/Federal/opendata/datakragujevacrs.yaml
-Record ID: datakragujevacrs
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+Priority: IMPORTANT
 
 File: RS/Federal/geo/gismregovrs.yaml
 Record ID: gismregovrs
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
-Suggested Action: Add meaningful description based on portal content and purpose
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: RS/Federal/opendata/datakragujevacrs.yaml
-Record ID: datakragujevacrs
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: RS/Federal/scientific/cherrychembgacrs.yaml
-Record ID: cherrychembgacrs
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 8
-Priority: LOW
-
-File: RS/RS-00/geo/radaribissbgacrs.yaml
-Record ID: radaribissbgacrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/RS-00/geo/srsrbgishubsrsrbhubarcgiscom.yaml
-Record ID: srsrbgishubsrsrbhubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/opendata/datakragujevacrs.yaml
-Record ID: datakragujevacrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/opendata/datagovrs.yaml
-Record ID: datagovrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/geo/gismregovrs.yaml
-Record ID: gismregovrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/geo/osglgrfbgacrs.yaml
-Record ID: osglgrfbgacrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/scientific/daissanuacrs.yaml
-Record ID: daissanuacrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RS/Federal/scientific/veterinarvetbgacrs.yaml
-Record ID: veterinarvetbgacrs
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 2
-Priority: MEDIUM
-
-File: RS/Federal/geo/osglgrfbgacrs.yaml
-Record ID: osglgrfbgacrs
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Geonetwork data catalog
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: RS/Federal/scientific/veterinarvetbgacrs.yaml
-Record ID: veterinarvetbgacrs
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Not provided in source
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: RS/Federal/scientific/hoverfbiosenserhcloudcom.yaml
+Record ID: hoverfbiosenserhcloudcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_DESCRIPTION: 2 issues
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 8 issues
-SHORT_DESCRIPTION: 2 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: datakragujevacrs
-File: RS/Federal/opendata/datakragujevacrs.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_DESCRIPTION: description
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

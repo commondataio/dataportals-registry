@@ -1,50 +1,94 @@
 DATA QUALITY REPORT - COUNTRY: PL
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: PL
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 11
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 11
+Priority: IMPORTANT
+
+File: PL/PL-02/geo/geoportaldolnyslaskpl.yaml
+Record ID: geoportaldolnyslaskpl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/serwiswrosippl.yaml
+Record ID: serwiswrosippl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/mapygisumradompl.yaml
+Record ID: mapygisumradompl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 File: PL/Federal/geo/rapprepozytoriumapp.yaml
 Record ID: rapprepozytoriumapp
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
-[SHORT_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
+File: PL/Federal/geo/wms2geopozpoznanpl.yaml
+Record ID: wms2geopozpoznanpl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: PL/PL-02/opendata/opendatacuiwroclawpl.yaml
-Record ID: opendatacuiwroclawpl
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Open data catalog for Wrocław city.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: PL/Federal/geo/geostatgovpl.yaml
+Record ID: geostatgovpl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: PL/Federal/scientific/iptgbifpl.yaml
-Record ID: iptgbifpl
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT of the Polish GBIF Participant Node
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: PL/Federal/geo/usipeswietokrzyskiepl.yaml
+Record ID: usipeswietokrzyskiepl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PL/Federal/scientific/fgbggbnlbglasygovpl.yaml
+Record ID: fgbggbnlbglasygovpl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PL/Federal/scientific/iptherbariumpomeranicumpl.yaml
+Record ID: iptherbariumpomeranicumpl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 File: PL/PL-24/geo/situmtychypl.yaml
 Record ID: situmtychypl
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: No description available in input.
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: PL/PL-14/opendata/wwweuslugimazowieckiepl.yaml
+Record ID: wwweuslugimazowieckiepl
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
-SHORT_DESCRIPTION: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 11 issues

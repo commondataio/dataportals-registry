@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: BY
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: BY
-Total Records with Issues: 5
-Total Issues Found: 8
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
@@ -18,96 +18,7 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-[MISSING_OWNER_NAME]
-Count: 1
-Priority: IMPORTANT
-
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Record ID: kartyhvalyabel
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: Unknown
-Suggested Action: Add owner organization name
-
-[MISSING_OWNER_TYPE]
-Count: 1
-Priority: IMPORTANT
-
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Record ID: kartyhvalyabel
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: BY/Federal/opendata/opendataby.yaml
-Record ID: opendataby
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 2
-Priority: LOW
-
-File: BY/BY-HO/geo/gomelgismapby.yaml
-Record ID: gomelgismapby
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BY/Federal/opendata/opendataby.yaml
-Record ID: opendataby
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: BY/Federal/geo/metageoby.yaml
-Record ID: metageoby
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Published geospatial data via GeoServer
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-[TAG_HYGIENE]
-Count: 1
-Priority: MEDIUM
-
-File: BY/Federal/indicators/dataportalbelstatgovby.yaml
-Record ID: dataportalbelstatgovby
-Issue: TAG_HYGIENE
-Field: tags[2]
-Current Value: 
-Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
-
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issues
-MISSING_OWNER_NAME: 1 issues
-MISSING_OWNER_TYPE: 1 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 2 issues
-SHORT_DESCRIPTION: 1 issues
-TAG_HYGIENE: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: kartyhvalyabel
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Issue Count: 3
-Issues:
-  - MISSING_OWNER_NAME: owner.name
-  - MISSING_OWNER_TYPE: owner.type
-  - MISSING_OWNER_LINK: owner.link

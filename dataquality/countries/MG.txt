@@ -1,31 +1,50 @@
 DATA QUALITY REPORT - COUNTRY: MG
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: MG
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[SHORT_DESCRIPTION]
+[DUPLICATE_LINK]
 Count: 2
 Priority: MEDIUM
 
+File: MG/geo/protectedareasmg.yaml
+Record ID: protectedareasmg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: MG/geo/artecmg.yaml
+Record ID: artecmg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 2
+Priority: IMPORTANT
+
 File: MG/Federal/scientific/datarebiomanet.yaml
 Record ID: datarebiomanet
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT REBIOMA
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
-File: MG/Federal/scientific/iptmadbifmg.yaml
-Record ID: iptmadbifmg
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT du MadBIF
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: MG/Federal/scientific/wwwlemursportalorg.yaml
+Record ID: wwwlemursportalorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SHORT_DESCRIPTION: 2 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

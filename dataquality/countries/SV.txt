@@ -1,86 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: SV
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: SV
-Total Records with Issues: 4
-Total Issues Found: 7
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: SV/Federal/microdata/onecbcrgobsv.yaml
-Record ID: onecbcrgobsv
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: SV/Federal/indicators/disseminatesimelmtpsgobsv.yaml
-Record ID: disseminatesimelmtpsgobsv
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: SV/SV-SS/opendata/datosabiertosopamssorgsv.yaml
-Record ID: datosabiertosopamssorgsv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: SV/Federal/microdata/onecbcrgobsv.yaml
-Record ID: onecbcrgobsv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: SV/Federal/indicators/disseminatesimelmtpsgobsv.yaml
-Record ID: disseminatesimelmtpsgobsv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: SV/Federal/geo/geoportalsnetgobsv.yaml
-Record ID: geoportalsnetgobsv
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
-File: SV/Federal/indicators/disseminatesimelmtpsgobsv.yaml
-Record ID: disseminatesimelmtpsgobsv
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: SIMEL indicators via SDMX REST API
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: SV/Federal/microdata/onecbcrgobsv.yaml
+Record ID: onecbcrgobsv
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TAGS: 2 issues
-MISSING_TOPICS: 4 issues
-SHORT_DESCRIPTION: 1 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: disseminatesimelmtpsgobsv
-File: SV/Federal/indicators/disseminatesimelmtpsgobsv.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SHORT_DESCRIPTION: description
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

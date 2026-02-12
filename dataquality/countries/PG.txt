@@ -1,24 +1,43 @@
 DATA QUALITY REPORT - COUNTRY: PG
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: PG
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
+[DUPLICATE_LINK]
+Count: 2
+Priority: MEDIUM
 
 File: PG/PG-NCD/geo/portalmragovpg.yaml
 Record ID: portalmragovpg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://portal.mra.gov.pg/arcgis/rest/services', 'record_ids': ['portalmragovpg', 'portalmragovpgarcgisrestservices']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: PG/Federal/geo/portalmragovpgarcgisrestservices.yaml
+Record ID: portalmragovpgarcgisrestservices
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://portal.mra.gov.pg/arcgis/rest/services', 'record_ids': ['portalmragovpg', 'portalmragovpgarcgisrestservices']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 1
+Priority: IMPORTANT
+
+File: PG/geo/pngpopgisspcint.yaml
+Record ID: pngpopgisspcint
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_TOPICS: 1 issues
+DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

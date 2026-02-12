@@ -1,24 +1,50 @@
-DATA QUALITY REPORT - COUNTRY: unknown
+DATA QUALITY REPORT - COUNTRY: Unknown
 ================================================================================
-Generated: 2026-01-15 16:35:15
-Country Code: unknown
-Total Records with Issues: 1
-Total Issues Found: 1
+Generated: 2026-02-12 09:47:40
+Country Code: Unknown
+Total Records with Issues: 2
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
+[MISSING_OWNER_LINK]
+Count: 2
+Priority: LOW
 
-File: Unknown/Federal/geo/gispgatlascom.yaml
-Record ID: gispgatlascom
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: Unknown/Federal/geo/19216821058.yaml
+Record ID: 19216821058
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: Unknown/Federal/geo/1461189676.yaml
+Record ID: 1461189676
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 2
+Priority: IMPORTANT
+
+File: Unknown/Federal/geo/19216821058.yaml
+Record ID: 19216821058
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: Unknown/Federal/geo/1461189676.yaml
+Record ID: 1461189676
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
+MISSING_OWNER_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

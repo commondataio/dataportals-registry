@@ -1,62 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: TG
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: TG
-Total Records with Issues: 4
-Total Issues Found: 5
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_LANGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
-Priority: MEDIUM
+Priority: IMPORTANT
 
 File: TG/Federal/microdata/wwwstattogoorg.yaml
 Record ID: wwwstattogoorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: TG/Federal/geo/wis2anamettogocom.yaml
-Record ID: wis2anamettogocom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 3
-Priority: MEDIUM
-
-File: TG/Federal/geo/wis2anamettogocom.yaml
-Record ID: wis2anamettogocom
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Wis 2.0 Togo
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TG/Federal/scientific/iptafricanherbariaorg.yaml
-Record ID: iptafricanherbariaorg
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: African Herbaria
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
-
-File: TG/Federal/scientific/ipttogogbiffr.yaml
-Record ID: ipttogogbiffr
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: IPT du GBIF Togo
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_LANGS: 1 issues
-MISSING_TOPICS: 1 issues
-SHORT_DESCRIPTION: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues

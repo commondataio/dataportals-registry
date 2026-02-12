@@ -1,48 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: SI
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: SI
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 4
+Priority: IMPORTANT
 
-File: SI/geo/collectionssentinelhubcom.yaml
-Record ID: collectionssentinelhubcom
-Issue: MISSING_ENDPOINTS
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: SI/Federal/scientific/dataverseadpfdvuniljsi.yaml
-Record ID: dataverseadpfdvuniljsi
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
+File: SI/indicators/nesstar2adpfdvuniljsi.yaml
+Record ID: nesstar2adpfdvuniljsi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
 File: SI/indicators/pxbsisi.yaml
 Record ID: pxbsisi
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: SI/geo/prostor4govsi.yaml
+Record ID: prostor4govsi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues

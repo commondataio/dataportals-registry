@@ -11,10 +11,18 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
-description: Beta testing instance of CKAN open data portal software. This is a demonstration and testing environment for CKAN features and functionality, showcasing the capabilities of the CKAN data catalog platform. The portal serves as a sandbox for testing new CKAN features, API endpoints, and user interface improvements before they are released to production environments. It provides developers and administrators with a preview of upcoming CKAN functionality and allows for experimentation with data catalog management workflows. This beta portal enables users to explore CKAN's open data cataloging capabilities, test API integrations, and evaluate the platform's metadata management features in a safe testing environment.
+description: Beta testing instance of CKAN open data portal software. This is a demonstration
+  and testing environment for CKAN features and functionality, showcasing the capabilities
+  of the CKAN data catalog platform. The portal serves as a sandbox for testing new
+  CKAN features, API endpoints, and user interface improvements before they are released
+  to production environments. It provides developers and administrators with a preview
+  of upcoming CKAN functionality and allows for experimentation with data catalog
+  management workflows. This beta portal enables users to explore CKAN's open data
+  cataloging capabilities, test API integrations, and evaluate the platform's metadata
+  management features in a safe testing environment.
 endpoints:
 - type: ckan
   url: https://beta.ckan.org/api/3
@@ -26,6 +34,15 @@ endpoints:
   url: https://beta.ckan.org/api/3/action/package_list
   version: '3'
 id: betackanorg
+identifiers:
+- id: url
+  value: https://beta.ckan.org
+- id: github
+  url: https://github.com/ckan/ckan
+  value: ckan/ckan
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1055841
+  value: Q1055841
 langs:
 - id: EN
   name: English
@@ -38,7 +55,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Government of Unknown
   type: Central government
 rights:
@@ -90,13 +106,4 @@ topics:
 - id: INTR
   name: International issues
   type: eudatatheme
-identifiers:
-- id: url
-  value: https://beta.ckan.org
-- id: github
-  url: https://github.com/ckan/ckan
-  value: ckan/ckan
-- id: wikidata
-  url: https://www.wikidata.org/wiki/Q1055841
-  value: Q1055841
 uid: temp00004783

@@ -1,6 +1,6 @@
 DATA QUALITY REPORT - COUNTRY: GH
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: GH
 Total Records with Issues: 3
 Total Issues Found: 3
@@ -18,31 +18,26 @@ Field: owner.link
 Current Value: None
 Suggested Action: Add owner organization website URL
 
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 2
+Priority: IMPORTANT
 
-File: GH/opendata/cdamaauccedugh.yaml
-Record ID: cdamaauccedugh
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
+File: GH/Federal/microdata/wwwstatsghanagovgh.yaml
+Record ID: wwwstatsghanagovgh
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: GH/microdata/nadauccedugh.yaml
-Record ID: nadauccedugh
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Data Catalog - Microdata Home
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: GH/Federal/microdata/dataportalisseredugh.yaml
+Record ID: dataportalisseredugh
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_OWNER_LINK: 1 issues
-MISSING_TOPICS: 1 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues

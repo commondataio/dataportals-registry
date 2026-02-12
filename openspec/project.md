@@ -65,9 +65,9 @@ The registry is organized as a collection of YAML files that will eventually be 
     - `microdata/` - Microdata catalogs
     - `indicators/` - Indicators catalogs
     - `ml/` - Machine learning catalogs
-    - `search/` - Data search engines
+    - `search/` - Data search engine
     - `api/` - API Catalogs
-    - `marketplace/` - Data marketplaces
+    - `marketplace/` - Data marketplaceы
     - `other/` - Other types
 - **Scripts**:
   - Main build script: `scripts/builder.py`

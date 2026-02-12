@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,13 @@ coverage:
       name: Cordoba
 description: Catálogo de datos públicos y en formatos abiertos de la Municipalidad
   de Villa María. Incluye datos de economía, ambiente, salud y otros temas.
+endpoints:
+- type: ckan:package-search
+  url: https://datos.villamaria.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.villamaria.gob.ar/api/3/action/package_list
+  version: '3'
 id: datosvillamariagobar
 langs:
 - id: ES

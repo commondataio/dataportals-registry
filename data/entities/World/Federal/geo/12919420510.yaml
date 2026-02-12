@@ -12,15 +12,16 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoServer instance providing comprehensive geospatial data services including
-  WMS (Web Map Service), WFS (Web Feature Service), WCS (Web Coverage Service), WPS (Web
-  Processing Service), TMS (Tile Map Service), WMTS (Web Map Tile Service), and WMS-C
-  (Cached WMS) endpoints. This server enables access to map layers, feature data, and
-  coverage services through standardized OGC protocols, supporting geospatial data discovery,
-  visualization, and integration for mapping applications and GIS workflows.
+  WMS (Web Map Service), WFS (Web Feature Service), WCS (Web Coverage Service), WPS
+  (Web Processing Service), TMS (Tile Map Service), WMTS (Web Map Tile Service), and
+  WMS-C (Cached WMS) endpoints. This server enables access to map layers, feature
+  data, and coverage services through standardized OGC protocols, supporting geospatial
+  data discovery, visualization, and integration for mapping applications and GIS
+  workflows.
 endpoints:
 - type: wms111
   url: http://129.194.205.10:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -78,7 +79,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Private Organization
   type: Business
 properties:

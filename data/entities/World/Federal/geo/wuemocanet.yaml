@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Wuemoca geoportal provides open access to geospatial datasets and map
@@ -60,6 +60,10 @@ endpoints:
   url: http://wuemoca.net/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: wuemocanet
+identifiers:
+- id: url
+  url: http://wuemoca.net/geoserver/web/
+  value: http://wuemoca.net/geoserver/web/
 langs:
 - id: EN
   name: English
@@ -72,15 +76,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Wuemoca
   type: Academy
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: http://wuemoca.net/geoserver/web/
-  value: http://wuemoca.net/geoserver/web/
 rights:
   license_id: null
   license_name: null

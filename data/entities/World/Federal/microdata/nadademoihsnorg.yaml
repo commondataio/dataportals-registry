@@ -11,7 +11,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: NADA is an open-source web-based data cataloging application. It is used
@@ -26,7 +26,9 @@ endpoints:
 - type: nada:csvexport
   url: https://nada-demo.ihsn.org/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadademoihsnorg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://nada-demo.ihsn.org
 name: NADA Data Catalog (Demo Instance)
 owner:
@@ -36,7 +38,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: International Household Survey Network (IHSN)
   type: International
 properties:

@@ -1,110 +1,45 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-01-15 16:35:15
+Generated: 2026-02-12 09:47:40
 Country Code: AT
-Total Records with Issues: 9
-Total Issues Found: 9
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[CATALOG_SOFTWARE_MISMATCH]
-Count: 1
-Priority: CRITICAL
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+Count: 4
+Priority: IMPORTANT
 
-File: AT/AT-7/opendata/datatirisopendataarcgiscom.yaml
-Record ID: datatirisopendataarcgiscom
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Open data portal, software.id=arcgishub
-Suggested Action: Update catalog_type to 'Geoportal' to match software.id
-
-[MISSING_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: AT/Federal/geo/geometadatenlfrzat.yaml
-Record ID: geometadatenlfrzat
-Issue: MISSING_DESCRIPTION
-Field: description
-Current Value: None
-Suggested Action: Add meaningful description based on portal content and purpose
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: MEDIUM
-
-File: AT/Federal/indicators/statcubeat.yaml
-Record ID: statcubeat
-Issue: MISSING_ENDPOINTS
+File: AT/AT-9/opendata/datawuacat.yaml
+Record ID: datawuacat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+File: AT/Federal/geo/sdigeofreeaustrocontrolat.yaml
+Record ID: sdigeofreeaustrocontrolat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: AT/Federal/geo/gisktngvat.yaml
-Record ID: gisktngvat
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: AT/Federal/geo/mapcentropemaporg.yaml
+Record ID: mapcentropemaporg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: AT/AT-3/opendata/opendatanoegvat.yaml
-Record ID: opendatanoegvat
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: AT/Federal/geo/wwwstatistikatinspire.yaml
-Record ID: wwwstatistikatinspire
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AT/Federal/geo/geonetworklebensraumvernetzungat.yaml
-Record ID: geonetworklebensraumvernetzungat
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AT/Federal/geo/geogisagesat.yaml
-Record ID: geogisagesat
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[SHORT_DESCRIPTION]
-Count: 1
-Priority: MEDIUM
-
-File: AT/Federal/indicators/wwwstatistikat.yaml
-Record ID: wwwstatistikat
-Issue: SHORT_DESCRIPTION
-Field: description
-Current Value: Austria Statistics official website
-Suggested Action: Expand description to provide more meaningful information (at least 40 characters)
+File: AT/Federal/scientific/collectorybiodiversityatlasat.yaml
+Record ID: collectorybiodiversityatlasat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-CATALOG_SOFTWARE_MISMATCH: 1 issues
-MISSING_DESCRIPTION: 1 issues
-MISSING_ENDPOINTS: 1 issues
-MISSING_OWNER_LINK: 1 issues
-MISSING_TAGS: 1 issues
-MISSING_TOPICS: 3 issues
-SHORT_DESCRIPTION: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues

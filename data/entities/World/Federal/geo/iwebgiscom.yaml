@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: Geospatial data catalog powered by GeoServer
@@ -60,6 +60,10 @@ endpoints:
   url: http://iwebgis.com/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: iwebgiscom
+identifiers:
+- id: url
+  url: http://iwebgis.com/geoserver
+  value: http://iwebgis.com/geoserver
 langs:
 - id: EN
   name: English
@@ -72,15 +76,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Iwebgis
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: http://iwebgis.com/geoserver
-  value: http://iwebgis.com/geoserver
 rights:
   license_id: null
   license_name: null

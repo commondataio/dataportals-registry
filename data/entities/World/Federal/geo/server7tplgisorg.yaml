@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: ArcGIS REST API endpoint providing geospatial data services
@@ -30,6 +30,10 @@ endpoints:
 - type: arcgis:kmz
   url: https://server7.tplgis.org/arcgis7/rest/services?f=kmz
 id: server7tplgisorg
+identifiers:
+- id: url
+  url: https://server7.tplgis.org/arcgis7/rest/services
+  value: https://server7.tplgis.org/arcgis7/rest/services
 langs:
 - id: EN
   name: English
@@ -42,15 +46,10 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: ArcGIS
   type: Business
 properties:
   has_doi: false
-identifiers:
-- id: url
-  url: https://server7.tplgis.org/arcgis7/rest/services
-  value: https://server7.tplgis.org/arcgis7/rest/services
 rights:
   license_id: esri-mla
   license_name: Esri Master License Agreement

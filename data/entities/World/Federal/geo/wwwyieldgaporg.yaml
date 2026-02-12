@@ -12,7 +12,7 @@ coverage:
       id: World
       name: World
     level: 10
-    macroregion: &id001
+    macroregion:
       id: World
       name: World
 description: GeoServer instance for the Global Yield Gap Atlas, providing WMS endpoints
@@ -62,7 +62,9 @@ endpoints:
   url: https://www.yieldgap.org/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
 id: wwwyieldgaporg
-langs: []
+langs:
+- id: EN
+  name: English
 link: https://www.yieldgap.org/geoserver
 name: yieldgap.org/geoserver
 owner:
@@ -72,7 +74,6 @@ owner:
       id: World
       name: World
     level: 10
-    macroregion: *id001
   name: Global Yield Gap Atlas
   type: Academy
 properties:
