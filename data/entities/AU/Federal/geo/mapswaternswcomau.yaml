@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,7 +22,7 @@ langs:
 - id: EN
   name: English
 link: http://maps.waternsw.com.au:6080/arcgis/services
-name: maps.waternsw.com.au:6080
+name: Regional Government of water Geoportal
 owner:
   link: http://waternsw.com.au
   location:
@@ -57,3 +57,6 @@ topics:
   name: Environment
   type: iso19115
 uid: temp00004891
+endpoints:
+- type: arcgis:rest:services
+  url: http://maps.waternsw.com.au:6080/arcgis/rest/services?f=pjson

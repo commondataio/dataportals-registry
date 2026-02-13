@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -64,3 +64,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00003356
+endpoints:
+- type: wms130
+  url: https://auth2.dbca.wa.gov.au/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

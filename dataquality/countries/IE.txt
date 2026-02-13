@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: IE
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: IE
-Total Records with Issues: 13
-Total Issues Found: 13
+Total Records with Issues: 16
+Total Issues Found: 21
 
 === ISSUES BY TYPE ===
 
@@ -24,6 +24,66 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=7
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+[PLACEHOLDER_TITLE]
+Count: 8
+Priority: MEDIUM
+
+File: IE/IE-WX/geo/mapswexfordie.yaml
+Record ID: mapswexfordie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.wexford.ie
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IE/IE-WX/geo/mapswexfordie.yaml
+Record ID: mapswexfordie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.wexford.ie
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IE/Federal/microdata/opendatahousinggovie.yaml
+Record ID: opendatahousinggovie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.housing.gov.ie
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IE/Federal/microdata/opendatahousinggovie.yaml
+Record ID: opendatahousinggovie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.housing.gov.ie
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IE/Federal/opendata/opendataagriculturegovie.yaml
+Record ID: opendataagriculturegovie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.agriculture.gov.ie
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IE/Federal/opendata/opendataagriculturegovie.yaml
+Record ID: opendataagriculturegovie
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.agriculture.gov.ie
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IE/Federal/metadata/hseiearistotlecloudio.yaml
+Record ID: hseiearistotlecloudio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hse-ie.aristotlecloud.io
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IE/Federal/metadata/hseiearistotlecloudio.yaml
+Record ID: hseiearistotlecloudio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hse-ie.aristotlecloud.io
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 11
@@ -110,4 +170,15 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 2 issues
+PLACEHOLDER_TITLE: 8 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 11 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: mapswexfordie
+File: IE/IE-WX/geo/mapswexfordie.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

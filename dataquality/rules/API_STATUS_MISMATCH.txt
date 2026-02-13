@@ -1,12 +1,14 @@
 DATA QUALITY REPORT - RULE: API_STATUS_MISMATCH
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Issue Type: API_STATUS_MISMATCH
 Priority: IMPORTANT
-Total Issues Found: 6
+Total Issues Found: 10
 
 === SUMMARY BY COUNTRY ===
 
+BE: 3 issues
+CI: 1 issues
 DK: 1 issues
 IE: 2 issues
 SK: 1 issues
@@ -15,6 +17,10 @@ TR: 2 issues
 === SUMMARY BY RECORD ===
 
 datagovsk: 1 issues
+recapuantwerpenbe: 1 issues
+geoservergisirisnetbe: 1 issues
+geoservervmmbe: 1 issues
+gouvcikoumoulcom: 1 issues
 datasetscataloguedatagovdk: 1 issues
 gisepaie: 1 issues
 wwwisdeie: 1 issues
@@ -30,6 +36,38 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
+Record ID: recapuantwerpenbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
+Record ID: geoservergisirisnetbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-VLG/geo/geoservervmmbe.yaml
+Record ID: geoservervmmbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
 Record ID: datasetscataloguedatagovdk

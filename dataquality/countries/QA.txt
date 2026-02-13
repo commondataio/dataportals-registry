@@ -1,24 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: QA
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-12 10:38:12
 Country Code: QA
 Total Records with Issues: 1
 Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+[API_STATUS_MISMATCH]
 Count: 1
 Priority: IMPORTANT
 
 File: OM/indicators/sdmxmarsagccstatorg.yaml
 Record ID: sdmxmarsagccstatorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues
+API_STATUS_MISMATCH: 1 issues

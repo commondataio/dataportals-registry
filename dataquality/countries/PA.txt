@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: PA
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: PA
 Total Records with Issues: 3
-Total Issues Found: 3
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
 
@@ -25,6 +25,24 @@ Field: link
 Current Value: {'link': 'https://geo-01.innovacion.gob.pa/geonetwork', 'record_ids': ['geo01innovactiongobpa', 'geo01innovaciongobpageonetwork']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: PA/geo/geonodemupagobpa.yaml
+Record ID: geonodemupagobpa
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.mupa.gob.pa/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PA/geo/geonodemupagobpa.yaml
+Record ID: geonodemupagobpa
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.mupa.gob.pa/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
 Priority: IMPORTANT
@@ -40,4 +58,15 @@ Suggested Action: Add at least one endpoint because software.id='geoserver' is m
 === SUMMARY BY ISSUE TYPE ===
 
 DUPLICATE_LINK: 2 issues
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geonodemupagobpa
+File: PA/geo/geonodemupagobpa.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

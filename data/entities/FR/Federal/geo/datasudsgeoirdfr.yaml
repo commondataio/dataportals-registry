@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork-based geospatial catalog of IRD DataSuds, providing searchable
+  access to datasets and map resources.
+endpoints:
+- type: csw202
+  url: https://datasuds-geo.ird.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://datasuds-geo.ird.fr/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://datasuds-geo.ird.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://datasuds-geo.ird.fr/geonetwork/srv/api/site
+- type: opensearch
+  url: https://datasuds-geo.ird.fr/portal.opensearch
+id: datasudsgeoirdfr
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://datasuds-geo.ird.fr
+name: DataSuds-geo
+owner:
+  link: https://www.ird.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Institut de recherche pour le developpement (IRD)
+  type: Academy
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- research
+- has_api
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00020385

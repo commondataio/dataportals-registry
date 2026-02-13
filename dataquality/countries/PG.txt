@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: PG
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: PG
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 4
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
 
@@ -25,6 +25,38 @@ Field: link
 Current Value: {'link': 'https://portal.mra.gov.pg/arcgis/rest/services', 'record_ids': ['portalmragovpg', 'portalmragovpgarcgisrestservices']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
+[PLACEHOLDER_TITLE]
+Count: 4
+Priority: MEDIUM
+
+File: PG/PG-NCD/geo/portalmragovpg.yaml
+Record ID: portalmragovpg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: portal.mra.gov.pg/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PG/PG-NCD/geo/portalmragovpg.yaml
+Record ID: portalmragovpg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: portal.mra.gov.pg/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: PG/Federal/geo/pnggeoportalorg.yaml
+Record ID: pnggeoportalorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: png-geoportal.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PG/Federal/geo/pnggeoportalorg.yaml
+Record ID: pnggeoportalorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: png-geoportal.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
 Priority: IMPORTANT
@@ -40,4 +72,15 @@ Suggested Action: Add at least one endpoint because software.id='popgis' is mark
 === SUMMARY BY ISSUE TYPE ===
 
 DUPLICATE_LINK: 2 issues
+PLACEHOLDER_TITLE: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: portalmragovpg
+File: PG/PG-NCD/geo/portalmragovpg.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link

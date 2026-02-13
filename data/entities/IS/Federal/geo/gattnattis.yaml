@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Icelandic geospatial metadata portal (Lysigagnagatt) operated by the
+  Icelandic Institute of Natural History.
+endpoints:
+- type: geonetwork:query
+  url: https://gatt.natt.is/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://gatt.natt.is/geonetwork/srv/api/records
+- type: openapi
+  url: https://gatt.natt.is/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://gatt.natt.is/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://gatt.natt.is/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: gattnattis
+langs:
+- id: IS
+  name: Icelandic
+- id: EN
+  name: English
+link: https://gatt.natt.is/geonetwork
+name: Lýsigagnagátt
+owner:
+  link: https://www.ni.is
+  location:
+    country:
+      id: IS
+      name: Iceland
+    level: 20
+  name: Icelandic Institute of Natural History
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- metadata
+- government
+topics:
+- Geospatial
+- Environment
+uid: cdi00020405

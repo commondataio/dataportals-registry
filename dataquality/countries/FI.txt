@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: FI
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: FI
-Total Records with Issues: 11
-Total Issues Found: 11
+Total Records with Issues: 37
+Total Issues Found: 66
 
 === ISSUES BY TYPE ===
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: FI/Federal/scientific/ckanenergydatardtunifi.yaml
+Record ID: ckanenergydatardtunifi
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
 
 [DUPLICATE_LINK]
 Count: 2
@@ -24,6 +35,388 @@ Issue: DUPLICATE_LINK
 Field: link
 Current Value: {'link': 'https://www.paikkatietohakemisto.fi/geonetwork', 'record_ids': ['paikkatietohakemistofi', 'wwwpaikkatietohakemistofi']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[PLACEHOLDER_TITLE]
+Count: 54
+Priority: MEDIUM
+
+File: FI/FI-18/microdata/recap7ltdkhelsinkifi.yaml
+Record ID: recap7ltdkhelsinkifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: recap-7.ltdk.helsinki.fi/cat/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-18/microdata/recap7ltdkhelsinkifi.yaml
+Record ID: recap7ltdkhelsinkifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: recap-7.ltdk.helsinki.fi/cat/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/FI-18/geo/geoserverymparistofi.yaml
+Record ID: geoserverymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.ymparisto.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-18/geo/geoserverymparistofi.yaml
+Record ID: geoserverymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.ymparisto.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/FI-18/geo/ixgsmap2ymparistofi.yaml
+Record ID: ixgsmap2ymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ixgsmap2.ymparisto.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-18/geo/ixgsmap2ymparistofi.yaml
+Record ID: ixgsmap2ymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ixgsmap2.ymparisto.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/FI-18/geo/karttahsyfioskari.yaml
+Record ID: karttahsyfioskari
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.hsy.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-18/geo/karttahsyfioskari.yaml
+Record ID: karttahsyfioskari
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.hsy.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/FI-19/geo/geoserverlounaistietofi.yaml
+Record ID: geoserverlounaistietofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.lounaistieto.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-19/geo/geoserverlounaistietofi.yaml
+Record ID: geoserverlounaistietofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.lounaistieto.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/FI-01/geo/wwwkartorax.yaml
+Record ID: wwwkartorax
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartor.ax
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/FI-01/geo/wwwkartorax.yaml
+Record ID: wwwkartorax
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartor.ax
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/indicators/tieliikenneonnettomuudetstatfi.yaml
+Record ID: tieliikenneonnettomuudetstatfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tieliikenneonnettomuudet.stat.fi/PXWeb
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/indicators/tieliikenneonnettomuudetstatfi.yaml
+Record ID: tieliikenneonnettomuudetstatfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tieliikenneonnettomuudet.stat.fi/PXWeb
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/fmiardfinland.yaml
+Record ID: fmiardfinland
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pta.data.lit.fmi.fi/stac/root.json
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/fmiardfinland.yaml
+Record ID: fmiardfinland
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pta.data.lit.fmi.fi/stac/root.json
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/gisvantaafi.yaml
+Record ID: gisvantaafi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.vantaa.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/gisvantaafi.yaml
+Record ID: gisvantaafi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.vantaa.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/karttaraisiofi.yaml
+Record ID: karttaraisiofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.raisio.fi/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/karttaraisiofi.yaml
+Record ID: karttaraisiofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.raisio.fi/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/julkinentraficomfi.yaml
+Record ID: julkinentraficomfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: julkinen.traficom.fi/oskari
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/julkinentraficomfi.yaml
+Record ID: julkinentraficomfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: julkinen.traficom.fi/oskari
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/paikkatietokarttatiimifi.yaml
+Record ID: paikkatietokarttatiimifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.karttatiimi.fi:443
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/paikkatietokarttatiimifi.yaml
+Record ID: paikkatietokarttatiimifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.karttatiimi.fi:443
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/avoinkarammmfi.yaml
+Record ID: avoinkarammmfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: avoinkara.mmm.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/avoinkarammmfi.yaml
+Record ID: avoinkarammmfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: avoinkara.mmm.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/geoserver2ymparistofi.yaml
+Record ID: geoserver2ymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver2.ymparisto.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/geoserver2ymparistofi.yaml
+Record ID: geoserver2ymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver2.ymparisto.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/peltodatafi.yaml
+Record ID: peltodatafi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Peltodata.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/peltodatafi.yaml
+Record ID: peltodatafi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Peltodata.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/paikkatiedotymparistofi.yaml
+Record ID: paikkatiedotymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatiedot.ymparisto.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/paikkatiedotymparistofi.yaml
+Record ID: paikkatiedotymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatiedot.ymparisto.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/paikkatietoymparistofi.yaml
+Record ID: paikkatietoymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.ymparisto.fi/arcgissecured/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/paikkatietoymparistofi.yaml
+Record ID: paikkatietoymparistofi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.ymparisto.fi/arcgissecured/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/rajapinnatmetsaanfi.yaml
+Record ID: rajapinnatmetsaanfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: rajapinnat.metsaan.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/rajapinnatmetsaanfi.yaml
+Record ID: rajapinnatmetsaanfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: rajapinnat.metsaan.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/kartatvlkfi.yaml
+Record ID: kartatvlkfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartat.vlk.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/kartatvlkfi.yaml
+Record ID: kartatvlkfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartat.vlk.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/mapproxystoraensocom.yaml
+Record ID: mapproxystoraensocom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapproxy.storaenso.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/mapproxystoraensocom.yaml
+Record ID: mapproxystoraensocom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapproxy.storaenso.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/paikkatietopalvelupirnetfi.yaml
+Record ID: paikkatietopalvelupirnetfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatietopalvelu.pirnet.fi/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/paikkatietopalvelupirnetfi.yaml
+Record ID: paikkatietopalvelupirnetfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatietopalvelu.pirnet.fi/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/opendataymparistonytfi.yaml
+Record ID: opendataymparistonytfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ymparistonyt.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/opendataymparistonytfi.yaml
+Record ID: opendataymparistonytfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ymparistonyt.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/mapproxylukefi.yaml
+Record ID: mapproxylukefi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapproxy.luke.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/mapproxylukefi.yaml
+Record ID: mapproxylukefi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapproxy.luke.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/lipasccjyufi.yaml
+Record ID: lipasccjyufi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lipas.cc.jyu.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/lipasccjyufi.yaml
+Record ID: lipasccjyufi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lipas.cc.jyu.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/openwmsfmifi.yaml
+Record ID: openwmsfmifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: openwms.fmi.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/openwmsfmifi.yaml
+Record ID: openwmsfmifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: openwms.fmi.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/karttalukefi.yaml
+Record ID: karttalukefi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.luke.fi/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/karttalukefi.yaml
+Record ID: karttalukefi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kartta.luke.fi/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/geo/paikkatietovaylapilvifi.yaml
+Record ID: paikkatietovaylapilvifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.vaylapilvi.fi/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/geo/paikkatietovaylapilvifi.yaml
+Record ID: paikkatietovaylapilvifi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: paikkatieto.vaylapilvi.fi/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 9
@@ -95,5 +488,25 @@ Suggested Action: Add at least one endpoint because software.id='geoserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+CATALOG_SOFTWARE_MISMATCH: 1 issues
 DUPLICATE_LINK: 2 issues
+PLACEHOLDER_TITLE: 54 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 9 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: recap7ltdkhelsinkifi
+File: FI/FI-18/microdata/recap7ltdkhelsinkifi.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: mapproxystoraensocom
+File: FI/Federal/geo/mapproxystoraensocom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

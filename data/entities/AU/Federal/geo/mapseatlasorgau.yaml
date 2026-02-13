@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,7 +22,7 @@ langs:
 - id: EN
   name: English
 link: http://maps.eatlas.org.au/geoserver
-name: maps.eatlas.org.au
+name: eAtlas Geoportal
 owner:
   link: http://maps.eatlas.org.au/geoserver
   location:
@@ -74,3 +74,7 @@ topics:
   name: Utilities / Communication
   type: iso19115
 uid: temp00004887
+endpoints:
+- type: wms130
+  url: http://maps.eatlas.org.au/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

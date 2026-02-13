@@ -1,13 +1,13 @@
 DATA QUALITY REPORT - PRIORITY: IMPORTANT
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Priority Level: IMPORTANT
-Total Issues Found: 840
+Total Issues Found: 830
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 6
+Count: 10
 
 File: SK/Federal/opendata/datagovsk.yaml
 Record ID: datagovsk
@@ -16,6 +16,38 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
+Record ID: recapuantwerpenbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
+Record ID: geoservergisirisnetbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-VLG/geo/geoservervmmbe.yaml
+Record ID: geoservervmmbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
 Record ID: datasetscataloguedatagovdk
@@ -58,7 +90,79 @@ Current Value: api=False, endpoints=3
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 [MISSING_API_STATUS]
-Count: 1
+Count: 17
+
+File: US/Federal/scientific/discoverpennsieveio.yaml
+Record ID: discoverpennsieveio
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/eclearthchemorg.yaml
+Record ID: eclearthchemorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/adaastromatorg.yaml
+Record ID: adaastromatorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/repoastromatorg.yaml
+Record ID: repoastromatorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
+Record ID: prcdigitalwalloniabe
+Country: BE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: World/scientific/bionomianetdatasets.yaml
+Record ID: bionomianetdatasets
+Country: World
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: NL/Federal/scientific/npdcnl.yaml
+Record ID: npdcnl
+Country: NL
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
 File: DE/Federal/scientific/rdpcidatruhrunibochumde.yaml
 Record ID: rdpcidatruhrunibochumde
@@ -68,8 +172,64 @@ Field: api_status
 Current Value: None
 Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
+File: DE/Federal/scientific/dataopenpowersystemdataorg.yaml
+Record ID: dataopenpowersystemdataorg
+Country: DE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: DE/Federal/scientific/animafzjuelichde.yaml
+Record ID: animafzjuelichde
+Country: DE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: DE/Federal/scientific/dataisimiporg.yaml
+Record ID: dataisimiporg
+Country: DE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: FR/Federal/scientific/catalogeldaorg.yaml
+Record ID: catalogeldaorg
+Country: FR
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: JP/Federal/scientific/dataportalbrainmindsjp.yaml
+Record ID: dataportalbrainmindsjp
+Country: JP
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: JP/Federal/scientific/dbarchivebiosciencedbcjp.yaml
+Record ID: dbarchivebiosciencedbcjp
+Country: JP
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Country: BE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 833
+Count: 801
 
 File: SK/Federal/geo/sscrivupopsk.yaml
 Record ID: sscrivupopsk
@@ -559,6 +719,14 @@ Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
+File: US/US-IN/scientific/datacoreiuedu.yaml
+Record ID: datacoreiuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
+
 File: US/US-FL/geo/gismarionflorg.yaml
 Record ID: gismarionflorg
 Country: US
@@ -863,32 +1031,40 @@ Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: US/Federal/geo/gisdatapimagov.yaml
-Record ID: gisdatapimagov
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+... and 701 more records with this issue
 
-... and 733 more records with this issue
+[SOFTWARE_NAME_MISMATCH]
+Count: 2
+
+File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
+Record ID: prcdigitalwalloniabe
+Country: BE
+Issue: SOFTWARE_NAME_MISMATCH
+Field: software.name
+Current Value: id=custom, name=Custom
+Suggested Action: Update software.name to 'Custom software' to match software.id
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: SOFTWARE_NAME_MISMATCH
+Field: software.name
+Current Value: id=geonetwork, name=GeoNetwork
+Suggested Action: Update software.name to 'Geonetwork' to match software.id
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 6 issues
-MISSING_API_STATUS: 1 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 833 issues
+API_STATUS_MISMATCH: 10 issues
+MISSING_API_STATUS: 17 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 801 issues
+SOFTWARE_NAME_MISMATCH: 2 issues
 
 === SUMMARY BY COUNTRY ===
 
-AL: 1 issues
 AM: 1 issues
-AT: 4 issues
-AU: 22 issues
-BA: 1 issues
 BD: 2 issues
-BE: 6 issues
+BE: 8 issues
 BF: 1 issues
 BG: 1 issues
 BJ: 1 issues
@@ -897,12 +1073,13 @@ BR: 16 issues
 BZ: 1 issues
 CA: 20 issues
 CH: 2 issues
+CI: 2 issues
 CL: 1 issues
 CN: 14 issues
 CO: 4 issues
 CR: 3 issues
-CZ: 2 issues
-DE: 46 issues
+CZ: 5 issues
+DE: 49 issues
 DK: 8 issues
 EC: 3 issues
 EE: 3 issues
@@ -911,7 +1088,7 @@ ES: 29 issues
 EU: 19 issues
 FI: 9 issues
 FK: 1 issues
-FR: 70 issues
+FR: 71 issues
 GB: 82 issues
 GH: 2 issues
 GR: 8 issues
@@ -924,7 +1101,8 @@ IE: 13 issues
 IL: 3 issues
 IN: 2 issues
 IR: 1 issues
-IT: 38 issues
+IT: 37 issues
+JP: 2 issues
 KE: 3 issues
 KZ: 1 issues
 LB: 1 issues
@@ -939,10 +1117,9 @@ MY: 2 issues
 MZ: 1 issues
 NG: 2 issues
 NI: 2 issues
-NL: 7 issues
+NL: 8 issues
 NO: 6 issues
 NZ: 11 issues
-OM: 1 issues
 Oceania: 12 issues
 PA: 1 issues
 PE: 10 issues
@@ -964,9 +1141,9 @@ TJ: 1 issues
 TR: 2 issues
 TW: 4 issues
 UG: 5 issues
-US: 72 issues
+US: 77 issues
 UY: 1 issues
 VN: 4 issues
 WS: 1 issues
-World: 50 issues
+World: 51 issues
 ZM: 1 issues

@@ -1,0 +1,77 @@
+DATA QUALITY REPORT - COUNTRY: CI
+================================================================================
+Generated: 2026-02-13 19:09:38
+Country Code: CI
+Total Records with Issues: 2
+Total Issues Found: 5
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[MISSING_API_STATUS]
+Count: 1
+Priority: IMPORTANT
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mines.gouv.ci.cadastreminier.org/arcgis/rest/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Record ID: minesgouvcicadastreminierorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mines.gouv.ci.cadastreminier.org/arcgis/rest/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issues
+MISSING_API_STATUS: 1 issues
+MISSING_TOPICS: 1 issues
+PLACEHOLDER_TITLE: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gouvcikoumoulcom
+File: CI/opendata/gouvcikoumoulcom.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_API_STATUS: api_status
+  - API_STATUS_MISMATCH: api

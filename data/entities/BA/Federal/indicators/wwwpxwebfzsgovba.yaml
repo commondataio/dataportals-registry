@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -16,12 +16,16 @@ coverage:
       name: Southern Europe
 description: Website of the Federal Office of Statistics of Bosnia and Herzegovina,
   likely serving as a data catalog for official statistics.
+endpoints:
+- type: pxwebapi
+  url: http://www.px-web.fzs.gov.ba/PXWeb/api/v1/en/
+  version: '1'
 id: wwwpxwebfzsgovba
 langs:
 - id: SR
   name: Serbian
 link: http://www.px-web.fzs.gov.ba
-name: www.px-web.fzs.gov.ba
+name: FZS PxWeb Statistical Database
 owner:
   link: http://www.fzs.gov.ba
   location:

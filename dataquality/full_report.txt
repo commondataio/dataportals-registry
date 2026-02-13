@@ -1,14 +1,14 @@
 DATA QUALITY ANALYSIS REPORT
 ================================================================================
-Generated: 2026-02-12 09:47:40
-Total Records Analyzed: 12604
-Total Issues Found: 966
-Records with Issues: 918
+Generated: 2026-02-13 19:09:38
+Total Records Analyzed: 12697
+Total Issues Found: 4619
+Records with Issues: 2505
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 6
+Count: 10
 Priority: IMPORTANT
 
 File: SK/Federal/opendata/datagovsk.yaml
@@ -18,6 +18,38 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
+Record ID: recapuantwerpenbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
+Record ID: geoservergisirisnetbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: BE/BE-VLG/geo/geoservervmmbe.yaml
+Record ID: geoservervmmbe
+Country: BE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
 Record ID: datasetscataloguedatagovdk
@@ -59,8 +91,52 @@ Field: api
 Current Value: api=False, endpoints=3
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 5
+Priority: CRITICAL
+
+File: IT/Federal/scientific/antarcticdatacentermnait.yaml
+Record ID: antarcticdatacentermnait
+Country: IT
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geonetwork
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
+File: DE/Federal/scientific/ckankupferdigitalorg.yaml
+Record ID: ckankupferdigitalorg
+Country: DE
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+File: DE/Federal/scientific/repodainstorg.yaml
+Record ID: repodainstorg
+Country: DE
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+File: FI/Federal/scientific/ckanenergydatardtunifi.yaml
+Record ID: ckanenergydatardtunifi
+Country: FI
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=ckan
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
+File: FR/Federal/api/apilannuaireservicepublicfr.yaml
+Record ID: apilannuaireservicepublicfr
+Country: FR
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=API Catalog, software.id=opendatasoft
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
 [DUPLICATE_LINK]
-Count: 113
+Count: 111
 Priority: MEDIUM
 
 File: US/US-WI/geo/mapsscowiscedu.yaml
@@ -463,11 +539,83 @@ Field: link
 Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-... and 63 more records with this issue
+... and 61 more records with this issue
 
 [MISSING_API_STATUS]
-Count: 1
+Count: 17
 Priority: IMPORTANT
+
+File: US/Federal/scientific/discoverpennsieveio.yaml
+Record ID: discoverpennsieveio
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/eclearthchemorg.yaml
+Record ID: eclearthchemorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/adaastromatorg.yaml
+Record ID: adaastromatorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/repoastromatorg.yaml
+Record ID: repoastromatorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
+Record ID: prcdigitalwalloniabe
+Country: BE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: World/scientific/bionomianetdatasets.yaml
+Record ID: bionomianetdatasets
+Country: World
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: NL/Federal/scientific/npdcnl.yaml
+Record ID: npdcnl
+Country: NL
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
 File: DE/Federal/scientific/rdpcidatruhrunibochumde.yaml
 Record ID: rdpcidatruhrunibochumde
@@ -477,105 +625,149 @@ Field: api_status
 Current Value: None
 Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-[MISSING_OWNER_LINK]
-Count: 12
-Priority: LOW
-
-File: UG/Federal/geo/19012973205.yaml
-Record ID: 19012973205
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/geo/4625521167.yaml
-Record ID: 4625521167
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: UG/Federal/geo/1722692140.yaml
-Record ID: 1722692140
-Country: UG
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: BY/Federal/geo/kartyhvalyabel.yaml
-Record ID: kartyhvalyabel
-Country: BY
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: GH/Federal/scientific/197189235147.yaml
-Record ID: 197189235147
-Country: GH
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CO/geo/mgidesccaligovco.yaml
-Record ID: mgidesccaligovco
-Country: CO
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: DE/Federal/geo/18517146157.yaml
-Record ID: 18517146157
+File: DE/Federal/scientific/dataopenpowersystemdataorg.yaml
+Record ID: dataopenpowersystemdataorg
 Country: DE
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-File: BR/BR-RJ/opendata/datario.yaml
-Record ID: datario
-Country: BR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+File: DE/Federal/scientific/animafzjuelichde.yaml
+Record ID: animafzjuelichde
+Country: DE
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-File: BR/Federal/opendata/19314442171.yaml
-Record ID: 19314442171
-Country: BR
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+File: DE/Federal/scientific/dataisimiporg.yaml
+Record ID: dataisimiporg
+Country: DE
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-File: ID/ID-JA/geo/jambiprovinasdiorid.yaml
-Record ID: jambiprovinasdiorid
-Country: ID
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+File: FR/Federal/scientific/catalogeldaorg.yaml
+Record ID: catalogeldaorg
+Country: FR
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-File: Unknown/Federal/geo/19216821058.yaml
-Record ID: 19216821058
-Country: World
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+File: JP/Federal/scientific/dataportalbrainmindsjp.yaml
+Record ID: dataportalbrainmindsjp
+Country: JP
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
-File: Unknown/Federal/geo/1461189676.yaml
-Record ID: 1461189676
-Country: World
-Issue: MISSING_OWNER_LINK
-Field: owner.link
+File: JP/Federal/scientific/dbarchivebiosciencedbcjp.yaml
+Record ID: dbarchivebiosciencedbcjp
+Country: JP
+Issue: MISSING_API_STATUS
+Field: api_status
 Current Value: None
-Suggested Action: Add owner organization website URL
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Country: BE
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+[MISSING_CONTENT_TYPES]
+Count: 2
+Priority: MEDIUM
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: MISSING_CONTENT_TYPES
+Field: content_types
+Current Value: []
+Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Country: BE
+Issue: MISSING_CONTENT_TYPES
+Field: content_types
+Current Value: []
+Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
+
+[MISSING_ENDPOINTS]
+Count: 8
+Priority: MEDIUM
+
+File: SI/geo/collectionssentinelhubcom.yaml
+Record ID: collectionssentinelhubcom
+Country: SI
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: GB/Federal/scientific/betaukdataserviceacuk.yaml
+Record ID: betaukdataserviceacuk
+Country: GB
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/opendata/adsatmospherecopernicuseu.yaml
+Record ID: adsatmospherecopernicuseu
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/opendata/ewdsclimatecopernicuseu.yaml
+Record ID: ewdsclimatecopernicuseu
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/fungiensemblorg.yaml
+Record ID: fungiensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/protistsensemblorg.yaml
+Record ID: protistsensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/metazoaensemblorg.yaml
+Record ID: metazoaensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/egaarchiveorg.yaml
+Record ID: egaarchiveorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [MISSING_TAGS]
 Count: 1
@@ -589,8 +781,856 @@ Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
+[MISSING_TOPICS]
+Count: 4
+Priority: LOW
+
+File: CI/opendata/gouvcikoumoulcom.yaml
+Record ID: gouvcikoumoulcom
+Country: CI
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: GB/Federal/opendata/electricitynorthwestopendatasoftcom.yaml
+Record ID: electricitynorthwestopendatasoftcom
+Country: GB
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: AR/AR-M/opendata/datoslujandecuyogobar.yaml
+Record ID: datoslujandecuyogobar
+Country: AR
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: TH/Federal/opendata/opendatacifsgoth.yaml
+Record ID: opendatacifsgoth
+Country: TH
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 61
+Priority: MEDIUM
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: SE/Federal/geo/ivometriase.yaml
+Record ID: ivometriase
+Country: SE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/gisopenforestdatapl.yaml
+Record ID: gisopenforestdatapl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not Specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/daneakoportalpl.yaml
+Record ID: daneakoportalpl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/mapaabakusnetpl.yaml
+Record ID: mapaabakusnetpl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/rgvfloodcom.yaml
+Record ID: rgvfloodcom
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/insideidahoorg.yaml
+Record ID: insideidahoorg
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/ienccloudus.yaml
+Record ID: ienccloudus
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/US-MO/opendata/rdxstldataorg.yaml
+Record ID: rdxstldataorg
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: N/A
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BD/Federal/geo/2024179152.yaml
+Record ID: 2024179152
+Country: BD
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not Specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CN/Federal/geo/2186120106.yaml
+Record ID: 2186120106
+Country: CN
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Record ID: wgmaterapaesitit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/opendata/lodaciit.yaml
+Record ID: lodaciit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/geo/stagingwebgisadbpoit.yaml
+Record ID: stagingwebgisadbpoit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
+Record ID: barchettaadumanitobaca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/Federal/geo/nsgiwanovascotiaca.yaml
+Record ID: nsgiwanovascotiaca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/Federal/geo/arcgiscreegeoportalca.yaml
+Record ID: arcgiscreegeoportalca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RU/RU-NIZ/geo/3dgorodru.yaml
+Record ID: 3dgorodru
+Country: RU
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RU/RU-NIZ/geo/epidatlasnniiemru.yaml
+Record ID: epidatlasnniiemru
+Country: RU
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/search/hubarcgiscom.yaml
+Record ID: hubarcgiscom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/demodatashadescom.yaml
+Record ID: demodatashadescom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/conaviopendatajunarcom.yaml
+Record ID: conaviopendatajunarcom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/inondationsdakarorg.yaml
+Record ID: inondationsdakarorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/servicesgeospatialorg.yaml
+Record ID: servicesgeospatialorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/mapsoraotcaorg.yaml
+Record ID: mapsoraotcaorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/wwwafricabeescom.yaml
+Record ID: wwwafricabeescom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/103105195227.yaml
+Record ID: 103105195227
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Country: RS
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BO/Federal/geo/geodataooppgobbo.yaml
+Record ID: geodataooppgobbo
+Country: BO
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
+Record ID: moragisprd01cossunderlandlocal
+Country: GB
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/opendata/micamdcberlinde.yaml
+Record ID: micamdcberlinde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/opendata/einloesenmilesmediende.yaml
+Record ID: einloesenmilesmediende
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/rudolstadtgajamatrixde.yaml
+Record ID: rudolstadtgajamatrixde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/gdigeonetworkprodseblede.yaml
+Record ID: gdigeonetworkprodseblede
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/geoservergretasmapde.yaml
+Record ID: geoservergretasmapde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/umapdmhode.yaml
+Record ID: umapdmhode
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/gisflide.yaml
+Record ID: gisflide
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/geoserversurfacewatermiljoeportaldk.yaml
+Record ID: geoserversurfacewatermiljoeportaldk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/wwwsatlasdk.yaml
+Record ID: wwwsatlasdk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/jordbrugsanalyserdk.yaml
+Record ID: jordbrugsanalyserdk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/opendata/19314442171.yaml
+Record ID: 19314442171
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/opendata/dadosjuventudeibictbr.yaml
+Record ID: dadosjuventudeibictbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/geo/obahiadeaufvbr.yaml
+Record ID: obahiadeaufvbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/geo/webradioaguaorgbr.yaml
+Record ID: webradioaguaorgbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Record ID: opendatasurabayagoid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/ID-JI/geo/situbondokabinasdiorid.yaml
+Record ID: situbondokabinasdiorid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/Federal/geo/sidrapkabinasdiorid.yaml
+Record ID: sidrapkabinasdiorid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/geocreilsudoisefr.yaml
+Record ID: geocreilsudoisefr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/wwwtigeofr.yaml
+Record ID: wwwtigeofr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/alsacewebsolfr.yaml
+Record ID: alsacewebsolfr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+... and 11 more records with this issue
+
+[PLACEHOLDER_TITLE]
+Count: 3597
+Priority: MEDIUM
+
+File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
+Record ID: wwwgeoportalksksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.geoportalksk.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
+Record ID: wwwgeoportalksksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.geoportalksk.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/gisfnsunibask.yaml
+Record ID: gisfnsunibask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.fns.uniba.sk/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/gisfnsunibask.yaml
+Record ID: gisfnsunibask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.fns.uniba.sk/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/sluzbyvuvhsk.yaml
+Record ID: sluzbyvuvhsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sluzby.vuvh.sk/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/sluzbyvuvhsk.yaml
+Record ID: sluzbyvuvhsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sluzby.vuvh.sk/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.surveye.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.surveye.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.skgeodesy.sk/eskn/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.skgeodesy.sk/eskn/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ismcs.cdb.sk/inspire/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ismcs.cdb.sk/inspire/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mapsgeopsazpsk.yaml
+Record ID: mapsgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.geop.sazp.sk:80/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mapsgeopsazpsk.yaml
+Record ID: mapsgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.geop.sazp.sk:80/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mptsvpsk.yaml
+Record ID: mptsvpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mpt.svp.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mptsvpsk.yaml
+Record ID: mptsvpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mpt.svp.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisgeo.zsr.sk/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisgeo.zsr.sk/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/tilesgeopsazpsk.yaml
+Record ID: tilesgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geop.sazp.sk/themes
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/tilesgeopsazpsk.yaml
+Record ID: tilesgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geop.sazp.sk/themes
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/inspirebiomonitoringsk.yaml
+Record ID: inspirebiomonitoringsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.biomonitoring.sk/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/inspirebiomonitoringsk.yaml
+Record ID: inspirebiomonitoringsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.biomonitoring.sk/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/tilesgeocloudsk.yaml
+Record ID: tilesgeocloudsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geocloud.sk/mapproxy
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/tilesgeocloudsk.yaml
+Record ID: tilesgeocloudsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geocloud.sk/mapproxy
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/geoshmusk.yaml
+Record ID: geoshmusk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.shmu.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/geoshmusk.yaml
+Record ID: geoshmusk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.shmu.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/wwwgisatapexsk.yaml
+Record ID: wwwgisatapexsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.gis.atapex.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/wwwgisatapexsk.yaml
+Record ID: wwwgisatapexsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.gis.atapex.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
+Record ID: ccibispriestoroveplanovaniesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ccibis.priestoroveplanovanie.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
+Record ID: ccibispriestoroveplanovaniesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ccibis.priestoroveplanovanie.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/SK-BL/geo/geoportalbratislavask.yaml
+Record ID: geoportalbratislavask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.bratislava.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-BL/geo/geoportalbratislavask.yaml
+Record ID: geoportalbratislavask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.bratislava.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/SK-BC/geo/gisregionbsksk.yaml
+Record ID: gisregionbsksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.region-bsk.sk/server/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-BC/geo/gisregionbsksk.yaml
+Record ID: gisregionbsksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.region-bsk.sk/server/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SB/Federal/geo/geoserverapiaspreporg.yaml
+Record ID: geoserverapiaspreporg
+Country: SB
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver-apia.sprep.org/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SB/Federal/geo/geoserverapiaspreporg.yaml
+Record ID: geoserverapiaspreporg
+Country: SB
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver-apia.sprep.org/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/SE-H/geo/kartakalmarse.yaml
+Record ID: kartakalmarse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.kalmar.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/SE-H/geo/kartakalmarse.yaml
+Record ID: kartakalmarse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.kalmar.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/datakbse.yaml
+Record ID: datakbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kb.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/datakbse.yaml
+Record ID: datakbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kb.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
+Record ID: geoportalarcticsdiorg
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.arctic-sdi.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
+Record ID: geoportalarcticsdiorg
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.arctic-sdi.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Record ID: neardbnearagingse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: neardb.near-aging.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Record ID: neardbnearagingse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: neardb.near-aging.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/trafficdatase.yaml
+Record ID: trafficdatase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: trafficdata.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/trafficdatase.yaml
+Record ID: trafficdatase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: trafficdata.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
+Record ID: stationsregistermiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
+Record ID: stationsregistermiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/epubsjvse.yaml
+Record ID: epubsjvse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: epub.sjv.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/epubsjvse.yaml
+Record ID: epubsjvse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: epub.sjv.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+... and 3547 more records with this issue
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 833
+Count: 801
 Priority: IMPORTANT
 
 File: SK/Federal/geo/sscrivupopsk.yaml
@@ -993,57 +2033,911 @@ Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-... and 783 more records with this issue
+... and 751 more records with this issue
+
+[SOFTWARE_NAME_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
+Record ID: prcdigitalwalloniabe
+Country: BE
+Issue: SOFTWARE_NAME_MISMATCH
+Field: software.name
+Current Value: id=custom, name=Custom
+Suggested Action: Update software.name to 'Custom software' to match software.id
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: SOFTWARE_NAME_MISMATCH
+Field: software.name
+Current Value: id=geonetwork, name=GeoNetwork
+Suggested Action: Update software.name to 'Geonetwork' to match software.id
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH (IMPORTANT): 6 issues
-DUPLICATE_LINK (MEDIUM): 113 issues
-MISSING_API_STATUS (IMPORTANT): 1 issues
-MISSING_OWNER_LINK (LOW): 12 issues
+API_STATUS_MISMATCH (IMPORTANT): 10 issues
+CATALOG_SOFTWARE_MISMATCH (CRITICAL): 5 issues
+DUPLICATE_LINK (MEDIUM): 111 issues
+MISSING_API_STATUS (IMPORTANT): 17 issues
+MISSING_CONTENT_TYPES (MEDIUM): 2 issues
+MISSING_ENDPOINTS (MEDIUM): 8 issues
 MISSING_TAGS (LOW): 1 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): 833 issues
+MISSING_TOPICS (LOW): 4 issues
+PLACEHOLDER_OWNER_NAME (MEDIUM): 61 issues
+PLACEHOLDER_TITLE (MEDIUM): 3597 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): 801 issues
+SOFTWARE_NAME_MISMATCH (IMPORTANT): 2 issues
 
 === SUMMARY BY PRIORITY ===
 
-IMPORTANT: 840 issues
-MEDIUM: 113 issues
-LOW: 13 issues
+CRITICAL: 5 issues
+IMPORTANT: 830 issues
+MEDIUM: 3779 issues
+LOW: 5 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: sdmxmarsagccstatorg
-File: OM/indicators/sdmxmarsagccstatorg.yaml
-Country: OM
+Record ID: datausaiio
+File: US/Other/other/datausaio.yaml
+Country: CH
 Issue Count: 6
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: saocomputeeuracedu
+File: IT/Federal/geo/saocomputeeuracedu.yaml
+Country: IT
+Issue Count: 6
+Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
 
 Record ID: 19216821058
 File: Unknown/Federal/geo/19216821058.yaml
 Country: World
-Issue Count: 4
+Issue Count: 6
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
 
 Record ID: 1461189676
 File: Unknown/Federal/geo/1461189676.yaml
 Country: World
-Issue Count: 4
+Issue Count: 6
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - MISSING_OWNER_LINK (LOW): owner.link
-  - MISSING_OWNER_LINK (LOW): owner.link
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: cookspopgisspcint
+File: CK/geo/cookspopgisspcint.yaml
+Country: Oceania
+Issue Count: 6
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geoserverprotectedareaimpactmapsd4scienceorg
+File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
+Country: World
+Issue Count: 5
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: geoserver2d4scienceorg
+File: World/Federal/geo/geoserver2d4scienceorg.yaml
+Country: World
+Issue Count: 5
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: ismcscdbsk
+File: SK/Federal/geo/ismcscdbsk.yaml
+Country: SK
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: mapsscowiscedu
+File: World/Federal/geo/mapsscowiscedu.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: dideafricaimgarcgiscom
+File: US/US-CA/geo/dideafricaimgarcgiscom.yaml
+Country: US
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: services8arcgiscom
+File: US/US-CA/geo/services8arcgiscom.yaml
+Country: US
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: insightsservices8arcgiscom
+File: US/US-CA/geo/insightsservices8arcgiscom.yaml
+Country: US
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: services6arcgiscom
+File: US/US-CA/geo/services6arcgiscom.yaml
+Country: US
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: csdcimmaporg
+File: World/Federal/geo/csdcimmaporg.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: tilesarcgiscom
+File: World/Federal/geo/tilesarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: minesgouvcicadastreminierorg
+File: CI/geo/minesgouvcicadastreminierorg.yaml
+Country: ZA
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: unisimondigitalcommonsdatacom
+File: CO/Federal/opendata/unisimondigitalcommonsdatacom.yaml
+Country: CO
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: geoserver4d4scienceresearchinfrastructureseu
+File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
+Country: IT
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geoserverd4scienceiiresearchinfrastructureseu
+File: IT/Federal/geo/geoserverd4scienceiiresearchinfrastructureseu.yaml
+Country: IT
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geoserversdilabd4scienceorg
+File: World/Federal/geo/geoserversdilabd4scienceorg.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: barchettaadumanitobaca
+File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
+Country: CA
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisentclocacom
+File: CA/CA-ON/geo/gisentclocacom.yaml
+Country: CA
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: egdigeologycz
+File: CZ/Federal/geo/egdigeologycz.yaml
+Country: CZ
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - MISSING_API_STATUS (IMPORTANT): api_status
+  - MISSING_CONTENT_TYPES (MEDIUM): content_types
+  - SOFTWARE_NAME_MISMATCH (IMPORTANT): software.name
+
+Record ID: erfdataportalcom
+File: EG/Federal/microdata/erfdataportalcom.yaml
+Country: EG
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: odataudgedu
+File: ES/Federal/opendata/odataudgedu.yaml
+Country: ES
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: energydatainfo
+File: World/Federal/opendata/energydatainfo.yaml
+Country: US
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geonetworkothudatagrandlyoncom
+File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Country: FR
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: geonodecifororg
+File: ID/Federal/geo/geonodecifororg.yaml
+Country: ID
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: 103105195227
+File: World/Federal/geo/103105195227.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geodataooppgobbo
+File: BO/Federal/geo/geodataooppgobbo.yaml
+Country: BO
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: cubeexplorercsopenportalcouk
+File: GB/Federal/geo/cubeexplorercsopenportalcouk.yaml
+Country: GB
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: swat4hclsfigsharecom
+File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
+Country: GB
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: opendatarnvonlinede
+File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
+Country: DE
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - DUPLICATE_LINK (MEDIUM): link
+
+Record ID: micamdcberlinde
+File: DE/Federal/opendata/micamdcberlinde.yaml
+Country: DE
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: einloesenmilesmediende
+File: DE/Federal/opendata/einloesenmilesmediende.yaml
+Country: DE
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: jordbrugsanalyserdk
+File: DK/Federal/geo/jordbrugsanalyserdk.yaml
+Country: DK
+Issue Count: 4
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geonetworkgambiamahacenter-com
+File: FR/Federal/geo/geonetworkgambiamahacenter.yaml
+Country: FR
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: kpisburhubarcgiscom
+File: Unknown/geo/kpisburhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datadownloadpageliberhubarcgiscom
+File: Unknown/geo/datadownloadpageliberhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: citizenproblemreporter1coswvhubarcgiscom
+File: Unknown/geo/citizenproblemreporter1coswvhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: xaylorlcthp0dekkjdfivthubarcgiscom
+File: Unknown/geo/xaylorlcthp0dekkjdfivthubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: resourceskenwildtrusthubarcgiscom
+File: Unknown/geo/resourceskenwildtrusthubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datafcmapsopendataarcgiscom
+File: Unknown/geo/datafcmapsopendataarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: semawebportalshowmefloodriskhubarcgiscom
+File: Unknown/geo/semawebportalshowmefloodriskhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: rockislandhubexamplerigovhubarcgiscom
+File: Unknown/geo/rockislandhubexamplerigovhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: appstitellusnet
+File: Unknown/geo/appstitellusnet.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datamatrtopendataarcgiscom
+File: Unknown/geo/datamatrtopendataarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: osiblueprintbniajfihubarcgiscom
+File: Unknown/geo/osiblueprintbniajfihubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: cidtrialvrachubarcgiscom
+File: Unknown/geo/cidtrialvrachubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: citizenproblemreporterwaggonerhubarcgiscom
+File: Unknown/geo/citizenproblemreporterwaggonerhubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: sineerwetlandsgissegrasshubarcgiscom
+File: Unknown/geo/sineerwetlandsgissegrasshubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisopendataaragehubarcgiscom
+File: Unknown/geo/gisopendataaragehubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datacosgisopendataarcgiscom
+File: Unknown/geo/datacosgisopendataarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geonodegeovisorumsacom
+File: Unknown/geo/geonodegeovisorumsacom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: citizenproblemreporter1brentwoodborohubarcgiscom
+File: Unknown/geo/citizenproblemreporter1brentwoodborohubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: maffudedemo01hubarcgiscom
+File: Unknown/geo/maffudedemo01hubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datainnovateopendataarcgiscom
+File: Unknown/geo/datainnovateopendataarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datacravendcopendataarcgiscom
+File: Unknown/geo/datacravendcopendataarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gishubweldgovcom
+File: Unknown/geo/gishubweldgovcom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: mcegeohubtestversionmcescartohubarcgiscom
+File: Unknown/geo/mcegeohubtestversionmcescartohubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: idelosriosgorelosrioshubarcgiscom
+File: Unknown/geo/idelosriosgorelosrioshubarcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: tiledimageservices8arcgiscom
+File: Unknown/Federal/geo/tiledimageservices8arcgiscom.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geonodevhistoryorg
+File: Unknown/Federal/geo/geonodevhistoryorg.yaml
+Country: World
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gnssmetadataeu
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Country: BE
+Issue Count: 4
+Issues:
+  - MISSING_API_STATUS (IMPORTANT): api_status
+  - MISSING_API_STATUS (IMPORTANT): api_status
+  - MISSING_CONTENT_TYPES (MEDIUM): content_types
+  - MISSING_CONTENT_TYPES (MEDIUM): content_types
+
+Record ID: mapssurveyesk
+File: SK/Federal/geo/mapssurveyesk.yaml
+Country: SK
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: inspireskgeodesysk
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Country: SK
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisgeozsrsk
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Country: SK
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: neardbnearagingse
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Country: SE
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: ivometriase
+File: SE/Federal/geo/ivometriase.yaml
+Country: SE
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: opendatademossprojorg
+File: UG/Federal/opendata/opendatademossprojorg.yaml
+Country: UG
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: 4625521167
+File: UG/Federal/geo/4625521167.yaml
+Country: UG
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geocatsemidenet
+File: UG/Federal/geo/geocatsemidenet.yaml
+Country: UG
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisopenforestdatapl
+File: PL/Federal/geo/gisopenforestdatapl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: mapygisumradompl
+File: PL/Federal/geo/mapygisumradompl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: daneakoportalpl
+File: PL/Federal/geo/daneakoportalpl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: rapprepozytoriumapp
+File: PL/Federal/geo/rapprepozytoriumapp.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: mapaabakusnetpl
+File: PL/Federal/geo/mapaabakusnetpl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: wms2geopozpoznanpl
+File: PL/Federal/geo/wms2geopozpoznanpl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: usipeswietokrzyskiepl
+File: PL/Federal/geo/usipeswietokrzyskiepl.yaml
+Country: PL
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datosabiertospjeastuscloudappazurecom
+File: PE/Federal/opendata/datosabiertospjeastuscloudappazurecom.yaml
+Country: PE
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: datosinsgobpe
+File: PE/Federal/opendata/datosinsgobpe.yaml
+Country: PE
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: estadoconservacionsernanpgobpe
+File: PE/Federal/geo/estadoconservacionsernanpgobpe.yaml
+Country: PE
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: serverazgeoazgov
+File: US/US-AZ/geo/serverazgeoazgov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: wwwnativehawaiiandataportalcom
+File: US/US-HI/opendata/wwwnativehawaiiandataportalcom.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisfdacsgov
+File: US/US-FL/geo/gisfdacsgov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geonetworkgridnigeriaorg
+File: US/US-IA/geo/geonetworkgridnigeriaorg.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: wwwctdatacollaborativeorg
+File: US/US-CT/opendata/wwwctdatacollaborativeorg.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
 
 Record ID: sitesgooglecom
 File: World/Federal/geo/sitesgooglecom.yaml
@@ -1054,29 +2948,110 @@ Issues:
   - DUPLICATE_LINK (MEDIUM): link
   - DUPLICATE_LINK (MEDIUM): link
 
-Record ID: geoserver4d4scienceorg
-File: World/Federal/geo/geoserver4d4scienceorg.yaml
-Country: World
+Record ID: nativehawaiiandataportalcom
+File: US/Federal/opendata/nativehawaiiandataportalcom.yaml
+Country: US
 Issue Count: 3
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
 
-Record ID: geoserverprotectedareaimpactmapsd4scienceorg
-File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
-Country: World
+Record ID: dataessdivelblgov
+File: US/Federal/opendata/dataessdivelblgov.yaml
+Country: US
 Issue Count: 3
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
 
-Record ID: geoserver2d4scienceorg
-File: World/Federal/geo/geoserver2d4scienceorg.yaml
-Country: World
+Record ID: inventorydatagov
+File: US/Federal/opendata/inventorydatagov.yaml
+Country: US
 Issue Count: 3
 Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: developersarcgiscom
+File: US/Federal/geo/developersarcgiscom.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisdetroitmigov
+File: US/Federal/geo/gisdetroitmigov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: mapservergisumnedu
+File: US/Federal/geo/mapservergisumnedu.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: websvcsgeongamil
+File: US/Federal/geo/websvcsgeongamil.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geohubepaasgov
+File: US/Federal/geo/geohubepaasgov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: premaplblgov
+File: US/Federal/geo/premaplblgov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: rgvfloodcom
+File: US/Federal/geo/rgvfloodcom.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: gisdatapimagov
+File: US/Federal/geo/gisdatapimagov.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name
+
+Record ID: geoserversfeiorg
+File: US/Federal/geo/geoserversfeiorg.yaml
+Country: US
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
+  - PLACEHOLDER_TITLE (MEDIUM): name
+  - PLACEHOLDER_TITLE (MEDIUM): name

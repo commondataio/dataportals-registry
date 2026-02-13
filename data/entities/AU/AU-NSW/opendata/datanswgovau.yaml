@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -23,7 +23,7 @@ id: datanswgovau
 langs:
 - id: EN
   name: English
-link: https://data.nsw.gov.au
+link: https://data.nsw.gov.au/data
 name: New South Wales open data
 owner:
   link: https://www.nsw.gov.au/
@@ -105,3 +105,6 @@ topics:
   name: Transportation
   type: iso19115
 uid: temp00004566
+endpoints:
+- type: ckan:api
+  url: https://data.nsw.gov.au/data/api/3/action/package_list

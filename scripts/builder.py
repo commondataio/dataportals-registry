@@ -1297,6 +1297,31 @@ def check_owner_info(record):
             "current_value": owner.get("name"),
             "suggested_action": "Add owner organization name",
         })
+    else:
+        owner_name = owner.get("name")
+        if isinstance(owner_name, str):
+            owner_name_norm = owner_name.strip().lower()
+            placeholder_owner_names = {
+                "unknown",
+                "not specified",
+                "unspecified",
+                "not available",
+                "n/a",
+                "na",
+                "none",
+                "null",
+                "tbd",
+                "to be determined",
+                "placeholder",
+                "-",
+            }
+            if owner_name_norm in placeholder_owner_names:
+                issues.append({
+                    "issue_type": "PLACEHOLDER_OWNER_NAME",
+                    "field": "owner.name",
+                    "current_value": owner_name,
+                    "suggested_action": "Replace placeholder owner name with a real organization name",
+                })
     
     if not owner.get("type") or owner.get("type") == "Unknown":
         issues.append({
@@ -2140,7 +2165,18 @@ def check_title_quality(record):
         )
 
     # Generic placeholder titles
-    placeholder_titles = {"DATA PORTAL", "OPEN DATA", "PORTAL", "CATALOG"}
+    placeholder_titles = {
+        "DATA PORTAL",
+        "OPEN DATA",
+        "PORTAL",
+        "CATALOG",
+        "NOT SPECIFIED",
+        "UNKNOWN",
+        "N/A",
+        "NONE",
+        "TBD",
+        "PLACEHOLDER",
+    }
     if title.upper() in placeholder_titles:
         issues.append(
             {
@@ -2150,6 +2186,21 @@ def check_title_quality(record):
                 "suggested_action": (
                     "Replace generic titles like 'Data portal' or 'Open Data' with "
                     "a more specific portal name."
+                ),
+            }
+        )
+
+    # Title that looks like a bare URL/domain or domain+path
+    title_as_url = title if "://" in title else f"https://{title}"
+    parsed_title = urlparse(title_as_url)
+    if parsed_title.netloc and "." in parsed_title.netloc and " " not in title:
+        issues.append(
+            {
+                "issue_type": "PLACEHOLDER_TITLE",
+                "field": "name",
+                "current_value": title,
+                "suggested_action": (
+                    "Use a human-readable portal title instead of a URL/domain string."
                 ),
             }
         )
@@ -2169,6 +2220,29 @@ def check_title_quality(record):
                     ),
                 }
             )
+
+        # Title equal to link domain or domain+path
+        parsed_link = urlparse(link)
+        link_host = (parsed_link.netloc or "").lower()
+        link_host_no_www = link_host[4:] if link_host.startswith("www.") else link_host
+        link_path = (parsed_link.path or "").strip("/").lower()
+        title_norm = title.strip().lower().rstrip("/")
+        if link_host_no_www:
+            domain_like_values = {link_host, link_host_no_www}
+            if link_path:
+                domain_like_values.add(f"{link_host_no_www}/{link_path}")
+                domain_like_values.add(f"{link_host}/{link_path}")
+            if title_norm in domain_like_values:
+                issues.append(
+                    {
+                        "issue_type": "PLACEHOLDER_TITLE",
+                        "field": "name",
+                        "current_value": title,
+                        "suggested_action": (
+                            "Replace domain/path-based title with a descriptive portal name."
+                        ),
+                    }
+                )
 
     return issues if issues else None
 
@@ -2246,6 +2320,7 @@ ISSUE_PRIORITY_MAP = {
         "STATUS_API_STATUS_MISMATCH",
         "RIGHTS_INCOMPLETE",
         "PLACEHOLDER_TITLE",
+        "PLACEHOLDER_OWNER_NAME",
     ],
     "LOW": [
         "MISSING_TOPICS",

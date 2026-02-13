@@ -1,28 +1,21 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: US
-Total Records with Issues: 84
-Total Issues Found: 92
+Total Records with Issues: 384
+Total Issues Found: 723
 
 === ISSUES BY TYPE ===
 
 [DUPLICATE_LINK]
-Count: 20
+Count: 14
 Priority: MEDIUM
 
-File: US/US-WI/geo/mapsscowiscedu.yaml
-Record ID: mapsscowiscedu
+File: US/US-KY/geo/kygisportalserviceskygov.yaml
+Record ID: kygisportalserviceskygov
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/mapsscowiscedu.yaml
-Record ID: mapsscowiscedu
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
+Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: US/Other/scientific/tdsmarinerutgersedu.yaml
@@ -95,34 +88,6 @@ Field: link
 Current Value: {'link': 'https://cecgis-caenergy.opendata.arcgis.com/', 'record_ids': ['cecgiscaenergyopendataarcgiscom', 'cecgiscaenergyopendataarcgiscom']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: US/Federal/geo/csdcimmaporg.yaml
-Record ID: csdcimmaporg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/csdcimmaporg.yaml
-Record ID: csdcimmaporg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
 File: US/Federal/geo/dataalgeohubopendataarcgiscom.yaml
 Record ID: dataalgeohubopendataarcgiscom
 Issue: DUPLICATE_LINK
@@ -144,15 +109,778 @@ Field: link
 Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: US/US-KY/geo/kygisportalserviceskygov.yaml
-Record ID: kygisportalserviceskygov
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+[MISSING_API_STATUS]
+Count: 4
+Priority: IMPORTANT
+
+File: US/Federal/scientific/discoverpennsieveio.yaml
+Record ID: discoverpennsieveio
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/eclearthchemorg.yaml
+Record ID: eclearthchemorg
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/adaastromatorg.yaml
+Record ID: adaastromatorg
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/repoastromatorg.yaml
+Record ID: repoastromatorg
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 4
+Priority: MEDIUM
+
+File: US/Federal/geo/rgvfloodcom.yaml
+Record ID: rgvfloodcom
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/insideidahoorg.yaml
+Record ID: insideidahoorg
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/ienccloudus.yaml
+Record ID: ienccloudus
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/US-MO/opendata/rdxstldataorg.yaml
+Record ID: rdxstldataorg
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: N/A
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 628
+Priority: MEDIUM
+
+File: US/US-OH/geo/datatoledogov.yaml
+Record ID: datatoledogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.toledo.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OH/geo/datatoledogov.yaml
+Record ID: datatoledogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.toledo.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-OH/geo/lcenggiscolucasohus.yaml
+Record ID: lcenggiscolucasohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lcenggis.co.lucas.oh.us
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OH/geo/lcenggiscolucasohus.yaml
+Record ID: lcenggiscolucasohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lcenggis.co.lucas.oh.us
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-OH/geo/mappingdublinohus.yaml
+Record ID: mappingdublinohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapping.dublin.oh.us
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OH/geo/mappingdublinohus.yaml
+Record ID: mappingdublinohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapping.dublin.oh.us
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-OH/geo/cityworksdublinohus.yaml
+Record ID: cityworksdublinohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cityworks.dublin.oh.us/cityworks/gis/1/1096/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OH/geo/cityworksdublinohus.yaml
+Record ID: cityworksdublinohus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cityworks.dublin.oh.us/cityworks/gis/1/1096/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-ID/geo/geocataloguidahohubarcgiscom.yaml
+Record ID: geocataloguidahohubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalog-uidaho.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-ID/geo/geocataloguidahohubarcgiscom.yaml
+Record ID: geocataloguidahohubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalog-uidaho.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-ID/geo/mapcasedeqidahogov.yaml
+Record ID: mapcasedeqidahogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapcase.deq.idaho.gov/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-ID/geo/mapcasedeqidahogov.yaml
+Record ID: mapcasedeqidahogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapcase.deq.idaho.gov/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-ID/geo/gisportalidfgidahogov.yaml
+Record ID: gisportalidfgidahogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisportal-idfg.idaho.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-ID/geo/gisportalidfgidahogov.yaml
+Record ID: gisportalidfgidahogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisportal-idfg.idaho.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-ID/geo/idahoepscorgem3uidahohubarcgiscom.yaml
+Record ID: idahoepscorgem3uidahohubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idaho-epscor-gem3-uidaho.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-ID/geo/idahoepscorgem3uidahohubarcgiscom.yaml
+Record ID: idahoepscorgem3uidahohubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idaho-epscor-gem3-uidaho.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-LA/geo/giswebdotdlagov.yaml
+Record ID: giswebdotdlagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisweb.dotd.la.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-LA/geo/giswebdotdlagov.yaml
+Record ID: giswebdotdlagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisweb.dotd.la.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-OR/geo/wwwportlandmapscom.yaml
+Record ID: wwwportlandmapscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: portlandmaps.com/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OR/geo/wwwportlandmapscom.yaml
+Record ID: wwwportlandmapscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: portlandmaps.com/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-OR/geo/lcmapslanecountyorg.yaml
+Record ID: lcmapslanecountyorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lcmaps.lanecounty.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-OR/geo/lcmapslanecountyorg.yaml
+Record ID: lcmapslanecountyorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lcmaps.lanecounty.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-IL/opendata/databankillinoisedu.yaml
+Record ID: databankillinoisedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: databank.illinois.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-IL/opendata/databankillinoisedu.yaml
+Record ID: databankillinoisedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: databank.illinois.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-IL/opendata/performancecookcountyilgov.yaml
+Record ID: performancecookcountyilgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: performance.cookcountyil.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-IL/opendata/performancecookcountyilgov.yaml
+Record ID: performancecookcountyilgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: performance.cookcountyil.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-IL/opendata/performancecijanesvillewius.yaml
+Record ID: performancecijanesvillewius
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: performance.ci.janesville.wi.us
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-IL/opendata/performancecijanesvillewius.yaml
+Record ID: performancecijanesvillewius
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: performance.ci.janesville.wi.us
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-IL/scientific/indigouicedu.yaml
+Record ID: indigouicedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indigo.uic.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-IL/scientific/indigouicedu.yaml
+Record ID: indigouicedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indigo.uic.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-TN/geo/tnmaptngov.yaml
+Record ID: tnmaptngov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tnmap.tn.gov/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-TN/geo/tnmaptngov.yaml
+Record ID: tnmaptngov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tnmap.tn.gov/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-WA/opendata/databellevuewagov.yaml
+Record ID: databellevuewagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.bellevuewa.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WA/opendata/databellevuewagov.yaml
+Record ID: databellevuewagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.bellevuewa.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-WA/opendata/datahmatorg.yaml
+Record ID: datahmatorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.h-mat.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WA/opendata/datahmatorg.yaml
+Record ID: datahmatorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.h-mat.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-WA/geo/mapcothurstonwaus.yaml
+Record ID: mapcothurstonwaus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: map.co.thurston.wa.us
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WA/geo/mapcothurstonwaus.yaml
+Record ID: mapcothurstonwaus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: map.co.thurston.wa.us
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-WA/geo/sdisefsuwedu.yaml
+Record ID: sdisefsuwedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sdi.sefs.uw.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WA/geo/sdisefsuwedu.yaml
+Record ID: sdisefsuwedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sdi.sefs.uw.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-WA/geo/connectlynnwoodwagov.yaml
+Record ID: connectlynnwoodwagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: connect.lynnwoodwa.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WA/geo/connectlynnwoodwagov.yaml
+Record ID: connectlynnwoodwagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: connect.lynnwoodwa.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-PR/opendata/datosestadisticaspr.yaml
+Record ID: datosestadisticaspr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datos.estadisticas.pr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-PR/opendata/datosestadisticaspr.yaml
+Record ID: datosestadisticaspr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datos.estadisticas.pr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-PA/geo/opendataallentownpagov.yaml
+Record ID: opendataallentownpagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.allentownpa.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-PA/geo/opendataallentownpagov.yaml
+Record ID: opendataallentownpagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.allentownpa.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-PA/geo/mapservicespasdapsuedu.yaml
+Record ID: mapservicespasdapsuedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapservices.pasda.psu.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-PA/geo/mapservicespasdapsuedu.yaml
+Record ID: mapservicespasdapsuedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapservices.pasda.psu.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-PA/scientific/kilthubcmuedu.yaml
+Record ID: kilthubcmuedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kilthub.cmu.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-PA/scientific/kilthubcmuedu.yaml
+Record ID: kilthubcmuedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kilthub.cmu.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-PA/scientific/datacataloghslspittedu.yaml
+Record ID: datacataloghslspittedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datacatalog.hsls.pitt.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-PA/scientific/datacataloghslspittedu.yaml
+Record ID: datacataloghslspittedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datacatalog.hsls.pitt.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/opendata/wwwcivicdataio.yaml
+Record ID: wwwcivicdataio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: CivicData.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/other/datausaio.yaml
+Record ID: datausaiio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: DataUSA.io
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/other/datausaio.yaml
+Record ID: datausaiio
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: DataUSA.io
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/geo/polargeospatialcenter.yaml
+Record ID: polargeospatialcenter
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pgc-opendata-dems.s3.us-west-2.amazonaws.com/pgc-data-stac.json
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/geo/polargeospatialcenter.yaml
+Record ID: polargeospatialcenter
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pgc-opendata-dems.s3.us-west-2.amazonaws.com/pgc-data-stac.json
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/geo/maxaropendatacatalogardformat.yaml
+Record ID: maxaropendatacatalogardformat
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maxar-opendata.s3.amazonaws.com/events/catalog.json
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/geo/maxaropendatacatalogardformat.yaml
+Record ID: maxaropendatacatalogardformat
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maxar-opendata.s3.amazonaws.com/events/catalog.json
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/scientific/slocumdatamarinerutgersedu.yaml
+Record ID: slocumdatamarinerutgersedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: slocum-data.marine.rutgers.edu/erddap
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/podaacjplnasagov.yaml
+Record ID: podaacjplnasagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PO.DAAC
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/datawaterpathogensorg.yaml
+Record ID: datawaterpathogensorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.waterpathogens.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/datawaterpathogensorg.yaml
+Record ID: datawaterpathogensorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.waterpathogens.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/scientific/repositoryniddknihgov.yaml
+Record ID: repositoryniddknihgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: repository.niddk.nih.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/repositoryniddknihgov.yaml
+Record ID: repositoryniddknihgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: repository.niddk.nih.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/scientific/opendatancatsnihgov.yaml
+Record ID: opendatancatsnihgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ncats.nih.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/opendatancatsnihgov.yaml
+Record ID: opendatancatsnihgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ncats.nih.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/scientific/datajgidoegov.yaml
+Record ID: datajgidoegov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.jgi.doe.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/datajgidoegov.yaml
+Record ID: datajgidoegov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.jgi.doe.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Other/scientific/theghuborg.yaml
+Record ID: theghuborg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: theghub.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Other/scientific/theghuborg.yaml
+Record ID: theghuborg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: theghub.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/windsitet2odugishubarcgiscom.yaml
+Record ID: windsitet2odugishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: windsitet2-odu-gis.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/windsitet2odugishubarcgiscom.yaml
+Record ID: windsitet2odugishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: windsitet2-odu-gis.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/communitiesamerigeossopendataarcgiscom.yaml
+Record ID: communitiesamerigeossopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: communities-amerigeoss.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/communitiesamerigeossopendataarcgiscom.yaml
+Record ID: communitiesamerigeossopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: communities-amerigeoss.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/shareopendatachangishubarcgiscom.yaml
+Record ID: shareopendatachangishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: share-open-data-changis.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/shareopendatachangishubarcgiscom.yaml
+Record ID: shareopendatachangishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: share-open-data-changis.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/pruebaopendatageotecopendataarcgiscom.yaml
+Record ID: pruebaopendatageotecopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pruebaopendata-geotec.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/pruebaopendatageotecopendataarcgiscom.yaml
+Record ID: pruebaopendatageotecopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pruebaopendata-geotec.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/datacosgishubarcgiscom.yaml
+Record ID: datacosgishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-cos-gis.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/datacosgishubarcgiscom.yaml
+Record ID: datacosgishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-cos-gis.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/citizenproblemreporternewtownhubarcgiscom.yaml
+Record ID: citizenproblemreporternewtownhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: citizen-problem-reporter-newtown.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/citizenproblemreporternewtownhubarcgiscom.yaml
+Record ID: citizenproblemreporternewtownhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: citizen-problem-reporter-newtown.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/mappingosithubarcgiscom.yaml
+Record ID: mappingosithubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapping-osit.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/mappingosithubarcgiscom.yaml
+Record ID: mappingosithubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mapping-osit.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/datamcleangishubarcgiscom.yaml
+Record ID: datamcleangishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-mcleangis.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/datamcleangishubarcgiscom.yaml
+Record ID: datamcleangishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-mcleangis.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/indicatorsspatialdatapcbshubarcgiscom.yaml
+Record ID: indicatorsspatialdatapcbshubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indicatorsspatialdata-pcbs.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/indicatorsspatialdatapcbshubarcgiscom.yaml
+Record ID: indicatorsspatialdatapcbshubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indicatorsspatialdata-pcbs.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/malagadataea664wcupagisopendataarcgiscom.yaml
+Record ID: malagadataea664wcupagisopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: malagadata-ea664-wcupagis.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/malagadataea664wcupagisopendataarcgiscom.yaml
+Record ID: malagadataea664wcupagisopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: malagadata-ea664-wcupagis.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/datalanderopendataarcgiscom.yaml
+Record ID: datalanderopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-lander.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/datalanderopendataarcgiscom.yaml
+Record ID: datalanderopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data-lander.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/mgsmaineopendataarcgiscom.yaml
+Record ID: mgsmaineopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mgs-maine.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/mgsmaineopendataarcgiscom.yaml
+Record ID: mgsmaineopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mgs-maine.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/gishubgimsoh29opendataarcgiscom.yaml
+Record ID: gishubgimsoh29opendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gishub-gimsoh29.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/gishubgimsoh29opendataarcgiscom.yaml
+Record ID: gishubgimsoh29opendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gishub-gimsoh29.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/20200127eastpointgishubarcgiscom.yaml
+Record ID: 20200127eastpointgishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 20200127-eastpointgis.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/geo/20200127eastpointgishubarcgiscom.yaml
+Record ID: 20200127eastpointgishubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 20200127-eastpointgis.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/geo/redistrictinggeohubarcgiscom.yaml
+Record ID: redistrictinggeohubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: redistricting-geo.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+... and 528 more records with this issue
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 72
+Count: 73
 Priority: IMPORTANT
 
 File: US/US-OH/geo/wwwclevelandgisorg.yaml
@@ -273,6 +1001,13 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: US/US-IN/scientific/datacoreiuedu.yaml
+Record ID: datacoreiuedu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Field: endpoints
+Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
 
 File: US/US-FL/geo/gismarionflorg.yaml
 Record ID: gismarionflorg
@@ -662,5 +1397,186 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 20 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 72 issues
+DUPLICATE_LINK: 14 issues
+MISSING_API_STATUS: 4 issues
+PLACEHOLDER_OWNER_NAME: 4 issues
+PLACEHOLDER_TITLE: 628 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 73 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: datausaiio
+File: US/Other/other/datausaio.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: serverazgeoazgov
+File: US/US-AZ/geo/serverazgeoazgov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwnativehawaiiandataportalcom
+File: US/US-HI/opendata/wwwnativehawaiiandataportalcom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: gisfdacsgov
+File: US/US-FL/geo/gisfdacsgov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geonetworkgridnigeriaorg
+File: US/US-IA/geo/geonetworkgridnigeriaorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwctdatacollaborativeorg
+File: US/US-CT/opendata/wwwctdatacollaborativeorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: nativehawaiiandataportalcom
+File: US/Federal/opendata/nativehawaiiandataportalcom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataessdivelblgov
+File: US/Federal/opendata/dataessdivelblgov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: inventorydatagov
+File: US/Federal/opendata/inventorydatagov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: developersarcgiscom
+File: US/Federal/geo/developersarcgiscom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: gisdetroitmigov
+File: US/Federal/geo/gisdetroitmigov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: mapservergisumnedu
+File: US/Federal/geo/mapservergisumnedu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: websvcsgeongamil
+File: US/Federal/geo/websvcsgeongamil.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geohubepaasgov
+File: US/Federal/geo/geohubepaasgov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: premaplblgov
+File: US/Federal/geo/premaplblgov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: rgvfloodcom
+File: US/Federal/geo/rgvfloodcom.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: gisdatapimagov
+File: US/Federal/geo/gisdatapimagov.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geoserversfeiorg
+File: US/Federal/geo/geoserversfeiorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: insideidahoorg
+File: US/Federal/geo/insideidahoorg.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: ienccloudus
+File: US/Federal/geo/ienccloudus.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geoserverlibuconnedu
+File: US/Federal/geo/geoserverlibuconnedu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: kygisportalserviceskygov
+File: US/US-KY/geo/kygisportalserviceskygov.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link

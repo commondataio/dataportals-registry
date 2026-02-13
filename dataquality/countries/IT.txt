@@ -1,14 +1,25 @@
 DATA QUALITY REPORT - COUNTRY: IT
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: IT
-Total Records with Issues: 38
-Total Issues Found: 39
+Total Records with Issues: 97
+Total Issues Found: 198
 
 === ISSUES BY TYPE ===
 
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: IT/Federal/scientific/antarcticdatacentermnait.yaml
+Record ID: antarcticdatacentermnait
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=geonetwork
+Suggested Action: Update catalog_type to 'Geoportal' to match software.id
+
 [DUPLICATE_LINK]
-Count: 4
+Count: 2
 Priority: MEDIUM
 
 File: IT/IT-42/opendata/daticomunedigenovait.yaml
@@ -25,22 +36,739 @@ Field: link
 Current Value: {'link': 'https://dati.comune.genova.it', 'record_ids': ['daticomunedigenovait', 'daticomunegenovait']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: IT/Federal/geo/geoserversdilabd4scienceorg.yaml
-Record ID: geoserversdilabd4scienceorg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+[PLACEHOLDER_OWNER_NAME]
+Count: 3
+Priority: MEDIUM
 
-File: World/Federal/geo/geoserversdilabd4scienceorg.yaml
-Record ID: geoserversdilabd4scienceorg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Record ID: wgmaterapaesitit
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/opendata/lodaciit.yaml
+Record ID: lodaciit
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/geo/stagingwebgisadbpoit.yaml
+Record ID: stagingwebgisadbpoit
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 158
+Priority: MEDIUM
+
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Record ID: wgmaterapaesitit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: wgmatera.paesit.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Record ID: wgmaterapaesitit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: wgmatera.paesit.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-77/geo/microzonazioneregionebasilicatait.yaml
+Record ID: microzonazioneregionebasilicatait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microzonazione.regione.basilicata.it:80/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-77/geo/microzonazioneregionebasilicatait.yaml
+Record ID: microzonazioneregionebasilicatait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microzonazione.regione.basilicata.it:80/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-82/geo/sifwebregionesiciliait.yaml
+Record ID: sifwebregionesiciliait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sifweb.regione.sicilia.it/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-82/geo/sifwebregionesiciliait.yaml
+Record ID: sifwebregionesiciliait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sifweb.regione.sicilia.it/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-82/geo/mapsitrregionesiciliait.yaml
+Record ID: mapsitrregionesiciliait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: map.sitr.regione.sicilia.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-82/geo/mapsitrregionesiciliait.yaml
+Record ID: mapsitrregionesiciliait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: map.sitr.regione.sicilia.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-25/geo/geoportalecomunemilanoit.yaml
+Record ID: geoportalecomunemilanoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportale.comune.milano.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-25/geo/geoportalecomunemilanoit.yaml
+Record ID: geoportalecomunemilanoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportale.comune.milano.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-25/geo/sdiprovincialodiit.yaml
+Record ID: sdiprovincialodiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sdi.provincia.lodi.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-25/geo/sdiprovincialodiit.yaml
+Record ID: sdiprovincialodiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sdi.provincia.lodi.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-36/geo/geoserverprotezionecivilefvgit.yaml
+Record ID: geoserverprotezionecivilefvgit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.protezionecivile.fvg.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-36/geo/geoserverprotezionecivilefvgit.yaml
+Record ID: geoserverprotezionecivilefvgit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.protezionecivile.fvg.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-65/geo/mappeprovinciateramoit.yaml
+Record ID: mappeprovinciateramoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mappe.provincia.teramo.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-65/geo/mappeprovinciateramoit.yaml
+Record ID: mappeprovinciateramoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mappe.provincia.teramo.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-62/geo/isidermingvit.yaml
+Record ID: isidermingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: iside.rm.ingv.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-62/geo/isidermingvit.yaml
+Record ID: isidermingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: iside.rm.ingv.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-62/geo/sgi2isprambienteit.yaml
+Record ID: sgi2isprambienteit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sgi2.isprambiente.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-62/geo/sgi2isprambienteit.yaml
+Record ID: sgi2isprambienteit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sgi2.isprambiente.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-62/geo/terremotiingvit.yaml
+Record ID: terremotiingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: terremoti.ingv.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-62/geo/terremotiingvit.yaml
+Record ID: terremotiingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: terremoti.ingv.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-62/geo/cntrmingvit.yaml
+Record ID: cntrmingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cnt.rm.ingv.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-62/geo/cntrmingvit.yaml
+Record ID: cntrmingvit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cnt.rm.ingv.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/opendata/opendatacomunearezzoit.yaml
+Record ID: opendatacomunearezzoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.comune.arezzo.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/opendata/opendatacomunearezzoit.yaml
+Record ID: opendatacomunearezzoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.comune.arezzo.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/opendata/opendataprovinciapisait.yaml
+Record ID: opendataprovinciapisait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.provincia.pisa.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/opendata/opendataprovinciapisait.yaml
+Record ID: opendataprovinciapisait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.provincia.pisa.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/opendata/opendataluccait.yaml
+Record ID: opendataluccait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.lucca.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/opendata/opendataluccait.yaml
+Record ID: opendataluccait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.lucca.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/geo/pubblicazionicittametropolitanafiit.yaml
+Record ID: pubblicazionicittametropolitanafiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pubblicazioni.cittametropolitana.fi.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/geo/pubblicazionicittametropolitanafiit.yaml
+Record ID: pubblicazionicittametropolitanafiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: pubblicazioni.cittametropolitana.fi.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/geo/repoiggservicesiitcnrit.yaml
+Record ID: repoiggservicesiitcnrit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: repoigg.services.iit.cnr.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/geo/repoiggservicesiitcnrit.yaml
+Record ID: repoiggservicesiitcnrit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: repoigg.services.iit.cnr.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/geo/odncomunepratoit.yaml
+Record ID: odncomunepratoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: odn.comune.prato.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/geo/odncomunepratoit.yaml
+Record ID: odncomunepratoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: odn.comune.prato.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/geo/datiprovinciapistoiaitgeo.yaml
+Record ID: datiprovinciapistoiaitgeo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.provincia.pistoia.it/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/geo/datiprovinciapistoiaitgeo.yaml
+Record ID: datiprovinciapistoiaitgeo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.provincia.pistoia.it/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-52/geo/geoportalelammaretetoscanait.yaml
+Record ID: geoportalelammaretetoscanait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportale.lamma.rete.toscana.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-52/geo/geoportalelammaretetoscanait.yaml
+Record ID: geoportalelammaretetoscanait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportale.lamma.rete.toscana.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-55/opendata/datiregioneumbriait.yaml
+Record ID: datiregioneumbriait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.regione.umbria.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-55/opendata/datiregioneumbriait.yaml
+Record ID: datiregioneumbriait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.regione.umbria.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-42/geo/mappecomunegenovait.yaml
+Record ID: mappecomunegenovait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mappe.comune.genova.it/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-42/geo/mappecomunegenovait.yaml
+Record ID: mappecomunegenovait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mappe.comune.genova.it/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-45/geo/geoservercomunemodenait.yaml
+Record ID: geoservercomunemodenait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.modena.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-45/geo/geoservercomunemodenait.yaml
+Record ID: geoservercomunemodenait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.modena.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-45/geo/geoservercomunereit.yaml
+Record ID: geoservercomunereit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.re.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-45/geo/geoservercomunereit.yaml
+Record ID: geoservercomunereit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.re.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-45/geo/geonetworkcasacciaeneait.yaml
+Record ID: geonetworkcasacciaeneait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.casaccia.enea.it:8089/srv/rus/catalog.search
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-45/geo/geonetworkcasacciaeneait.yaml
+Record ID: geonetworkcasacciaeneait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.casaccia.enea.it:8089/srv/rus/catalog.search
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-45/geo/servizigisarpaeit.yaml
+Record ID: servizigisarpaeit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: servizi-gis.arpae.it/server/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-45/geo/servizigisarpaeit.yaml
+Record ID: servizigisarpaeit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: servizi-gis.arpae.it/server/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-45/geo/servizigisregioneemiliaromagnait.yaml
+Record ID: servizigisregioneemiliaromagnait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: servizigis.regione.emilia-romagna.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-45/geo/servizigisregioneemiliaromagnait.yaml
+Record ID: servizigisregioneemiliaromagnait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: servizigis.regione.emilia-romagna.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-21/geo/gisserverterritoriocsiit.yaml
+Record ID: gisserverterritoriocsiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisserver.territorio.csi.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-21/geo/gisserverterritoriocsiit.yaml
+Record ID: gisserverterritoriocsiit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisserver.territorio.csi.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-72/geo/sitcittametropolitananait.yaml
+Record ID: sitcittametropolitananait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sit.cittametropolitana.na.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-72/geo/sitcittametropolitananait.yaml
+Record ID: sitcittametropolitananait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sit.cittametropolitana.na.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/IT-88/geo/nurnetcrs4it.yaml
+Record ID: nurnetcrs4it
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: nurnet.crs4.it/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/IT-88/geo/nurnetcrs4it.yaml
+Record ID: nurnetcrs4it
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: nurnet.crs4.it/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/daticomunecrispianotait.yaml
+Record ID: daticomunecrispianotait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.comune.crispiano.ta.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/daticomunecrispianotait.yaml
+Record ID: daticomunecrispianotait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.comune.crispiano.ta.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/datiagenziademanioit.yaml
+Record ID: datiagenziademanioit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.agenziademanio.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/datiagenziademanioit.yaml
+Record ID: datiagenziademanioit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dati.agenziademanio.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/datagatesnap4cityorg.yaml
+Record ID: datagatesnap4cityorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datagate.snap4city.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/datagatesnap4cityorg.yaml
+Record ID: datagatesnap4cityorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: datagate.snap4city.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/datatdmprojectit.yaml
+Record ID: datatdmprojectit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tdm-project.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/datatdmprojectit.yaml
+Record ID: datatdmprojectit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tdm-project.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/opendatacomunecivitavecchiarmit.yaml
+Record ID: opendatacomunecivitavecchiarmit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.comune.civitavecchia.rm.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/opendatacomunecivitavecchiarmit.yaml
+Record ID: opendatacomunecivitavecchiarmit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.comune.civitavecchia.rm.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/ckancasacciaeneait.yaml
+Record ID: ckancasacciaeneait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ckan.casaccia.enea.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/ckancasacciaeneait.yaml
+Record ID: ckancasacciaeneait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ckan.casaccia.enea.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/wwwhetorit.yaml
+Record ID: wwwhetorit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hetor.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/wwwhetorit.yaml
+Record ID: wwwhetorit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hetor.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/opendataunibasit.yaml
+Record ID: opendataunibasit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.unibas.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/opendataunibasit.yaml
+Record ID: opendataunibasit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.unibas.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/opengolfoit.yaml
+Record ID: opengolfoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opengolfo.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/opengolfoit.yaml
+Record ID: opengolfoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opengolfo.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/lodaciit.yaml
+Record ID: lodaciit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lod.aci.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/lodaciit.yaml
+Record ID: lodaciit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lod.aci.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/dkangecoit.yaml
+Record ID: dkangecoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dkan.ge.co.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/dkangecoit.yaml
+Record ID: dkangecoit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dkan.ge.co.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/opendata/srv1comunemartinafrancatait.yaml
+Record ID: srv1comunemartinafrancatait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: srv1.comune.martinafranca.ta.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/opendata/srv1comunemartinafrancatait.yaml
+Record ID: srv1comunemartinafrancatait
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: srv1.comune.martinafranca.ta.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/9523119997.yaml
+Record ID: 9523119997
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 95.231.199.97
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/9523119997.yaml
+Record ID: 9523119997
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 95.231.199.97
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/ladecgetitit.yaml
+Record ID: ladecgetitit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ladec.get-it.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/ladecgetitit.yaml
+Record ID: ladecgetitit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ladec.get-it.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/wwwcartografiaservizirlit.yaml
+Record ID: wwwcartografiaservizirlit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartografia.servizirl.it/arcgis2/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/wwwcartografiaservizirlit.yaml
+Record ID: wwwcartografiaservizirlit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartografia.servizirl.it/arcgis2/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/sentinel3aws.yaml
+Record ID: sentinel3aws
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: meeo-s3.s3.amazonaws.com/catalog.json
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/sentinel3aws.yaml
+Record ID: sentinel3aws
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: meeo-s3.s3.amazonaws.com/catalog.json
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/greenmicetechnologiesit.yaml
+Record ID: greenmicetechnologiesit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: greenmicetechnologies.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/greenmicetechnologiesit.yaml
+Record ID: greenmicetechnologiesit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: greenmicetechnologies.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/geonetworkinogsit.yaml
+Record ID: geonetworkinogsit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.inogs.it
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/geonetworkinogsit.yaml
+Record ID: geonetworkinogsit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.inogs.it
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/geoservercomunefanopuit.yaml
+Record ID: geoservercomunefanopuit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.fano.pu.it:8090/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/geoservercomunefanopuit.yaml
+Record ID: geoservercomunefanopuit
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.comune.fano.pu.it:8090/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
+Record ID: geoserver4d4scienceresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver4.d4science.research-infrastructures.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
+Record ID: geoserver4d4scienceresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver4.d4science.research-infrastructures.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+... and 58 more records with this issue
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 35
+Count: 34
 Priority: IMPORTANT
 
 File: IT/IT-62/geo/isidermingvit.yaml
@@ -56,13 +784,6 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: IT/IT-62/geo/wigispiingvit.yaml
-Record ID: wigispiingvit
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 File: IT/IT-62/geo/cntrmingvit.yaml
 Record ID: cntrmingvit
@@ -291,5 +1012,186 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 4 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 35 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+DUPLICATE_LINK: 2 issues
+PLACEHOLDER_OWNER_NAME: 3 issues
+PLACEHOLDER_TITLE: 158 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 34 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: wgmaterapaesitit
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: isidermingvit
+File: IT/IT-62/geo/isidermingvit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: terremotiingvit
+File: IT/IT-62/geo/terremotiingvit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cntrmingvit
+File: IT/IT-62/geo/cntrmingvit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: repoiggservicesiitcnrit
+File: IT/IT-52/geo/repoiggservicesiitcnrit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: daticomunecrispianotait
+File: IT/Federal/opendata/daticomunecrispianotait.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwhetorit
+File: IT/Federal/opendata/wwwhetorit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: lodaciit
+File: IT/Federal/opendata/lodaciit.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: srv1comunemartinafrancatait
+File: IT/Federal/opendata/srv1comunemartinafrancatait.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: 9523119997
+File: IT/Federal/geo/9523119997.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: ladecgetitit
+File: IT/Federal/geo/ladecgetitit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: greenmicetechnologiesit
+File: IT/Federal/geo/greenmicetechnologiesit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: saocomputeeuracedu
+File: IT/Federal/geo/saocomputeeuracedu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwcisgisit
+File: IT/Federal/geo/wwwcisgisit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geoserverd4scienceorg
+File: IT/Federal/geo/geoserverd4scienceorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwgeodaltasit
+File: IT/Federal/geo/wwwgeodaltasit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: saocomputeeuracedugeoserver
+File: IT/Federal/geo/saocomputeeuracedugeoserver.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: collinasgeonuecom
+File: IT/Federal/geo/collinasgeonuecom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datiretecivicabzit
+File: IT/IT-32/opendata/datiretecivicabzit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geoservicesretecivicabzit
+File: IT/IT-32/geo/geoservicesretecivicabzit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geoservicesbuergernetzbzit
+File: IT/IT-32/geo/geoservicesbuergernetzbzit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: webgisprovinciabellunoit
+File: IT/IT-34/geo/webgisprovinciabellunoit.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

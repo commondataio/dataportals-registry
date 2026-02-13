@@ -1,11 +1,89 @@
 DATA QUALITY REPORT - COUNTRY: EG
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: EG
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 4
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: MEDIUM
+
+File: World/Federal/microdata/erfdataportalcom.yaml
+Record ID: erfdataportalcom
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://erfdataportal.com', 'record_ids': ['erfdataportalcom', 'erfdataportalcom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: EG/Federal/microdata/erfdataportalcom.yaml
+Record ID: erfdataportalcom
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'http://erfdataportal.com', 'record_ids': ['erfdataportalcom', 'erfdataportalcom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[PLACEHOLDER_TITLE]
+Count: 8
+Priority: MEDIUM
+
+File: EG/Federal/microdata/erfdataportalcom.yaml
+Record ID: erfdataportalcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: erfdataportal.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EG/Federal/microdata/erfdataportalcom.yaml
+Record ID: erfdataportalcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: erfdataportal.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EG/EG-C/geo/geoportalcairodcgoveg.yaml
+Record ID: geoportalcairodcgoveg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.cairodc.gov.eg/server/rest/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EG/EG-C/geo/geoportalcairodcgoveg.yaml
+Record ID: geoportalcairodcgoveg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.cairodc.gov.eg/server/rest/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EG/Federal/microdata/wwwcensusinfocapmasgoveg.yaml
+Record ID: wwwcensusinfocapmasgoveg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.censusinfo.capmas.gov.eg
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EG/Federal/microdata/wwwcensusinfocapmasgoveg.yaml
+Record ID: wwwcensusinfocapmasgoveg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.censusinfo.capmas.gov.eg
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EG/Federal/geo/idscgisidscegyhubarcgiscom.yaml
+Record ID: idscgisidscegyhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idsc-gisidscegy.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EG/Federal/geo/idscgisidscegyhubarcgiscom.yaml
+Record ID: idscgisidscegyhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idsc-gisidscegy.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 1
@@ -21,4 +99,25 @@ Suggested Action: Add at least one endpoint because software.id='nada' is marked
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK: 2 issues
+PLACEHOLDER_TITLE: 8 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: erfdataportalcom
+File: EG/Federal/microdata/erfdataportalcom.yaml
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link
+  - DUPLICATE_LINK: link
+
+Record ID: wwwcensusinfocapmasgoveg
+File: EG/Federal/microdata/wwwcensusinfocapmasgoveg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

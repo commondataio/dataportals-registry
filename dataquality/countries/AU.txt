@@ -1,204 +1,31 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: AU
-Total Records with Issues: 25
-Total Issues Found: 26
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
 [DUPLICATE_LINK]
-Count: 4
+Count: 2
 Priority: MEDIUM
 
+File: AU/AU-NSW/opendata/datanswgovauckan.yaml
+Record ID: datanswgovauckan
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
 File: AU/AU-NSW/opendata/datanswgovau.yaml
 Record ID: datanswgovau
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
+Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: AU/AU-NSW/opendata/datanswgovaumagda.yaml
-Record ID: datanswgovaumagda
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: AU/Federal/geo/marlincsiroau.yaml
-Record ID: marlincsiroau
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: AU/Federal/geo/wwwmarlincsiroau.yaml
-Record ID: wwwmarlincsiroau
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 22
-Priority: IMPORTANT
-
-File: AU/AU-NSW/opendata/datapassportnswgovau.yaml
-Record ID: datapassportnswgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'tablion', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='tablion' is marked as API-capable in software definitions
-
-File: AU/AU-NSW/opendata/datacesenswgovau.yaml
-Record ID: datacesenswgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
-
-File: AU/AU-NSW/opendata/datanswgovau.yaml
-Record ID: datanswgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
-
-File: AU/AU-NSW/geo/gsmvdevgeosciencenswgovau.yaml
-Record ID: gsmvdevgeosciencenswgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/AU-TAS/geo/servicesaadgovau.yaml
-Record ID: servicesaadgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/AU-SA/geo/mapssagovau.yaml
-Record ID: mapssagovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: AU/AU-VIC/geo/datavicroadsvicgovau.yaml
-Record ID: datavicroadsvicgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/imos2ersaeduau.yaml
-Record ID: imos2ersaeduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/programscommunicationsgovau.yaml
-Record ID: programscommunicationsgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/kmidpawwagovau.yaml
-Record ID: kmidpawwagovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/mapseatlasorgau.yaml
-Record ID: mapseatlasorgau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/datadaffgovau.yaml
-Record ID: datadaffgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/geoserverimosorgau.yaml
-Record ID: geoserverimosorgau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: AU/Federal/geo/mapswaternswcomau.yaml
-Record ID: mapswaternswcomau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: AU/Federal/metadata/desearistotlecloudio.yaml
-Record ID: desearistotlecloudio
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
-
-File: AU/Federal/scientific/dataimasutaseduau.yaml
-Record ID: dataimasutaseduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'aodn', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='aodn' is marked as API-capable in software definitions
-
-File: AU/Federal/scientific/collectionsalaorgau.yaml
-Record ID: collectionsalaorgau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
-
-File: AU/Federal/scientific/researchusqeduau.yaml
-Record ID: researchusqeduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
-
-File: AU/Federal/scientific/usegalaxyorgau.yaml
-Record ID: usegalaxyorgau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
-
-File: AU/Federal/scientific/acuresearchbankacueduau.yaml
-Record ID: acuresearchbankacueduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'haplo', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='haplo' is marked as API-capable in software definitions
-
-File: AU/AU-ACT/geo/wwwgagovau.yaml
-Record ID: wwwgagovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
-
-File: AU/AU-WA/geo/auth2dbcawagovau.yaml
-Record ID: auth2dbcawagovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 4 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 22 issues
+DUPLICATE_LINK: 2 issues

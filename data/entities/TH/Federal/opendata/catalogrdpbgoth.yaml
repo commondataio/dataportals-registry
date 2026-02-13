@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Official data catalog of the Office of the Royal Development Projects
+  Board (ORDPB), Thailand.
+endpoints:
+- type: ckan
+  url: https://catalog.rdpb.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.rdpb.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.rdpb.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalog.rdpb.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://catalog.rdpb.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://catalog.rdpb.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://catalog.rdpb.go.th/catalog.jsonld
+id: catalogrdpbgoth
+langs:
+- id: TH
+  name: Thai
+link: https://catalog.rdpb.go.th
+name: ระบบบัญชีข้อมูลสำนักงาน กปร.
+owner:
+  link: https://www.rdpb.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Office of the Royal Development Projects Board (ORDPB), Thailand
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- royal development projects
+- thailand
+- ckan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020362

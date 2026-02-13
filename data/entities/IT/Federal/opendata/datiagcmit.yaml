@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Open data portal of the Italian Competition Authority (AGCM).
+endpoints:
+- type: ckan
+  url: https://dati.agcm.it/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.agcm.it/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.agcm.it/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://dati.agcm.it/catalog.n3
+- type: dcat:ttl
+  url: https://dati.agcm.it/catalog.ttl
+- type: dcat:xml
+  url: https://dati.agcm.it/catalog.xml
+- type: dcat:jsonld
+  url: https://dati.agcm.it/catalog.jsonld
+id: datiagcmit
+langs:
+- id: IT
+  name: Italian
+link: https://dati.agcm.it
+name: Portale Open Data AGCM
+owner:
+  link: https://www.agcm.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Autorita Garante della Concorrenza e del Mercato
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- antitrust
+- italy
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00020387

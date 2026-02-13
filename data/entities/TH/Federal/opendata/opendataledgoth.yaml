@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Official open data portal of the Legal Execution Department (LED), Thailand.
+endpoints:
+- type: ckan
+  url: https://opendata.led.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.led.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.led.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.led.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.led.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.led.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.led.go.th/catalog.jsonld
+id: opendataledgoth
+langs:
+- id: TH
+  name: Thai
+- id: EN
+  name: English
+link: https://opendata.led.go.th/
+name: LED Open Data
+owner:
+  link: https://www.led.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Legal Execution Department (LED), Thailand
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- legal
+- justice
+- government
+- open data
+- Thailand
+- ckan
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020425

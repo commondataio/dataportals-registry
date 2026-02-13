@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,11 @@ coverage:
 description: CentropeMAP is a geoportal connecting the region by collecting web map
   services (WMS) from all Centrope member regions in one single map viewer, allowing
   cross-border spatial analysis with multiple data layers for regional planning and related fields.
+endpoints:
+- type: mapbender
+  url: https://map.centropemap.org
+- type: sitemap
+  url: https://map.centropemap.org/sitemap.xml
 id: mapcentropemaporg
 langs: 
 - id: EN

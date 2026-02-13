@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: INRAE Datahub for geospatial data and metadata discovery.
+endpoints:
+- type: csw202
+  url: https://geodata.inrae.fr/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: geonetwork:selections
+  url: https://geodata.inrae.fr/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://geodata.inrae.fr/geonetwork/srv/api/site
+id: geodatainraefr
+langs:
+- id: FR
+  name: French
+link: https://geodata.inrae.fr/geonetwork
+name: INRAE Datahub
+owner:
+  link: https://www.inrae.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: INRAE
+  type: Academy
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- france
+- geospatial
+- research
+topics:
+- Geospatial
+uid: cdi00020409

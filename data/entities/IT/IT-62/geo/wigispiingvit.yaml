@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,12 +19,22 @@ coverage:
       id: IT-62
       name: Lazio
 description: Web-based GIS application for catalog and map visualization.
+endpoints:
+- type: wms111
+  url: https://wi-gis.pi.ingv.it/lizmap-web-client-2.10.0/lizmap/www/index.php/lizmap/service/?repository=webgis&project=roncovetro&SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://wi-gis.pi.ingv.it/lizmap-web-client-2.10.0/lizmap/www/index.php/lizmap/service/?repository=webgis&project=roncovetro&SERVICE=WFS&REQUEST=GetCapabilities
+  version: 1.1.0
+- type: wcs100
+  url: https://wi-gis.pi.ingv.it/lizmap-web-client-2.10.0/lizmap/www/index.php/lizmap/service/?repository=webgis&project=roncovetro&SERVICE=WCS&REQUEST=GetCapabilities
+  version: 1.0.0
 id: wigispiingvit
 langs:
 - id: IT
   name: Italian
-link: http://wi-gis.pi.ingv.it/lizmap-web-client-2.10.0/lizmap
-name: LIZMAP Web Client 2.10.0
+link: http://wi-gis.pi.ingv.it
+name: LIZMAP INGV
 owner:
   link: https://www.ingv.it/en/
   location:
@@ -58,9 +68,6 @@ tags:
 - Seismology
 - Volcanology
 topics:
-- id: ENVI
-  name: Environment
-  type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme

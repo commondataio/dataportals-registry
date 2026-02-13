@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Refreshed catalog metadata across entity YAML records and rebuilt generated dataset artifacts.
-- Updated export snapshots in `README.md` to reflect the latest dataset counts (12,604 catalogs; 136 software definitions; 677 scheduled; 13,281 combined entities + scheduled records).
+- Updated export snapshots in `README.md` to reflect the latest dataset counts (12,697 catalogs; 136 software definitions; 677 scheduled; 13,374 combined entities + scheduled records).
+- Refined release documentation in `CHANGELOG.md` and `README.md`; these updates are included in `1.5.0` (release not yet published).
 
 ### Removed
 - Removed legacy `History.md`; changelog history is maintained in `CHANGELOG.md`.

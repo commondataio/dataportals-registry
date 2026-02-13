@@ -1,22 +1,760 @@
 DATA QUALITY REPORT - COUNTRY: ID
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: ID
-Total Records with Issues: 97
-Total Issues Found: 98
+Total Records with Issues: 164
+Total Issues Found: 233
 
 === ISSUES BY TYPE ===
 
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
+[DUPLICATE_LINK]
+Count: 2
+Priority: MEDIUM
 
-File: ID/ID-JA/geo/jambiprovinasdiorid.yaml
-Record ID: jambiprovinasdiorid
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
+File: World/Federal/geo/geonodecifororg.yaml
+Record ID: geonodecifororg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geonode.cifor.org', 'record_ids': ['geonodecifororg', 'geonodecifororg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: ID/Federal/geo/geonodecifororg.yaml
+Record ID: geonodecifororg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geonode.cifor.org', 'record_ids': ['geonodecifororg', 'geonodecifororg']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 3
+Priority: MEDIUM
+
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Record ID: opendatasurabayagoid
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/ID-JI/geo/situbondokabinasdiorid.yaml
+Record ID: situbondokabinasdiorid
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/Federal/geo/sidrapkabinasdiorid.yaml
+Record ID: sidrapkabinasdiorid
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 131
+Priority: MEDIUM
+
+File: ID/Federal/geo/geonodecifororg.yaml
+Record ID: geonodecifororg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.cifor.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/geo/geonodecifororg.yaml
+Record ID: geonodecifororg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.cifor.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-RI/opendata/datakamparkabgoid.yaml
+Record ID: datakamparkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kamparkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-RI/opendata/datakamparkabgoid.yaml
+Record ID: datakamparkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kamparkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-RI/geo/indragirihilirkabinasdiorid.yaml
+Record ID: indragirihilirkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indragirihilirkab.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-RI/geo/indragirihilirkabinasdiorid.yaml
+Record ID: indragirihilirkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: indragirihilirkab.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-RI/geo/geoportalriaugoid.yaml
+Record ID: geoportalriaugoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.riau.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-RI/geo/geoportalriaugoid.yaml
+Record ID: geoportalriaugoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.riau.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Record ID: opendatasurabayagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.surabaya.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Record ID: opendatasurabayagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.surabaya.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JI/geo/malangkabinasdiorid.yaml
+Record ID: malangkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: malangkab.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JI/geo/malangkabinasdiorid.yaml
+Record ID: malangkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: malangkab.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JI/geo/geoportaltulungagunggoid.yaml
+Record ID: geoportaltulungagunggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.tulungagung.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JI/geo/geoportaltulungagunggoid.yaml
+Record ID: geoportaltulungagunggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.tulungagung.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JA/geo/geoportaljambikotagoid.yaml
+Record ID: geoportaljambikotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.jambikota.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JA/geo/geoportaljambikotagoid.yaml
+Record ID: geoportaljambikotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.jambikota.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/opendata/datapekalongankotagoid.yaml
+Record ID: datapekalongankotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pekalongankota.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/opendata/datapekalongankotagoid.yaml
+Record ID: datapekalongankotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pekalongankota.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/opendata/datapekalongankabgoid.yaml
+Record ID: datapekalongankabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pekalongankab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/opendata/datapekalongankabgoid.yaml
+Record ID: datapekalongankabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pekalongankab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/geo/geoportalkuduskabgoid.yaml
+Record ID: geoportalkuduskabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kuduskab.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/geo/geoportalkuduskabgoid.yaml
+Record ID: geoportalkuduskabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kuduskab.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/geo/geoportaltemanggungkabgoid.yaml
+Record ID: geoportaltemanggungkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.temanggungkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/geo/geoportaltemanggungkabgoid.yaml
+Record ID: geoportaltemanggungkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.temanggungkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/geo/geoportalpurworejokabgoid.yaml
+Record ID: geoportalpurworejokabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.purworejokab.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/geo/geoportalpurworejokabgoid.yaml
+Record ID: geoportalpurworejokabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.purworejokab.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JT/geo/geoportaljatengprovgoid.yaml
+Record ID: geoportaljatengprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.jatengprov.go.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JT/geo/geoportaljatengprovgoid.yaml
+Record ID: geoportaljatengprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.jatengprov.go.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-NT/geo/geoportalntbprovgoid.yaml
+Record ID: geoportalntbprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.ntbprov.go.id:8080/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-NT/geo/geoportalntbprovgoid.yaml
+Record ID: geoportalntbprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.ntbprov.go.id:8080/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-NT/geo/nttprovinasdiorid.yaml
+Record ID: nttprovinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: nttprov.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-NT/geo/nttprovinasdiorid.yaml
+Record ID: nttprovinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: nttprov.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-KB/geo/siakkabinasdiorid.yaml
+Record ID: siakkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: siakkab.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-KB/geo/siakkabinasdiorid.yaml
+Record ID: siakkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: siakkab.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-KB/geo/kotawaringinbaratkabinasdiorid.yaml
+Record ID: kotawaringinbaratkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kotawaringinbaratkab.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-KB/geo/kotawaringinbaratkabinasdiorid.yaml
+Record ID: kotawaringinbaratkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kotawaringinbaratkab.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-MU/geo/kepulauansulakabinasdiorid.yaml
+Record ID: kepulauansulakabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kepulauansulakab.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-MU/geo/kepulauansulakabinasdiorid.yaml
+Record ID: kepulauansulakabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kepulauansulakab.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-MU/geo/halmaherautarakabinasdiorid.yaml
+Record ID: halmaherautarakabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: halmaherautarakab.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-MU/geo/halmaherautarakabinasdiorid.yaml
+Record ID: halmaherautarakabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: halmaherautarakab.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-AC/opendata/datapidiejayakabgoid.yaml
+Record ID: datapidiejayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pidiejayakab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-AC/opendata/datapidiejayakabgoid.yaml
+Record ID: datapidiejayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pidiejayakab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-AC/opendata/datapidiekabgoid.yaml
+Record ID: datapidiekabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pidiekab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-AC/opendata/datapidiekabgoid.yaml
+Record ID: datapidiekabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pidiekab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-AC/opendata/dataacehbaratkabgoid.yaml
+Record ID: dataacehbaratkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.acehbaratkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-AC/opendata/dataacehbaratkabgoid.yaml
+Record ID: dataacehbaratkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.acehbaratkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-AC/opendata/dataacehjayakabgoid.yaml
+Record ID: dataacehjayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.acehjayakab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-AC/opendata/dataacehjayakabgoid.yaml
+Record ID: dataacehjayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.acehjayakab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-AC/opendata/datagayolueskabgoid.yaml
+Record ID: datagayolueskabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.gayolueskab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-AC/opendata/datagayolueskabgoid.yaml
+Record ID: datagayolueskabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.gayolueskab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-BE/geo/bengkuluprovinasdiorid.yaml
+Record ID: bengkuluprovinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: bengkuluprov.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-BE/geo/bengkuluprovinasdiorid.yaml
+Record ID: bengkuluprovinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: bengkuluprov.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/opendata/opendatasolselkabgoid.yaml
+Record ID: opendatasolselkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.solselkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/opendata/opendatasolselkabgoid.yaml
+Record ID: opendatasolselkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.solselkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/opendata/datapesisirselatankabgoid.yaml
+Record ID: datapesisirselatankabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pesisirselatankab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/opendata/datapesisirselatankabgoid.yaml
+Record ID: datapesisirselatankabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pesisirselatankab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/opendata/satudatapadanggoid.yaml
+Record ID: satudatapadanggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: satudata.padang.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/opendata/satudatapadanggoid.yaml
+Record ID: satudatapadanggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: satudata.padang.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/opendata/datapasamanbaratkabgoid.yaml
+Record ID: datapasamanbaratkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pasamanbaratkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/opendata/datapasamanbaratkabgoid.yaml
+Record ID: datapasamanbaratkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.pasamanbaratkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/opendata/satudatadharmasrayakabgoid.yaml
+Record ID: satudatadharmasrayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: satudata.dharmasrayakab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/opendata/satudatadharmasrayakabgoid.yaml
+Record ID: satudatadharmasrayakabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: satudata.dharmasrayakab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/geo/serambigeoportalpadangpanjanggoid.yaml
+Record ID: serambigeoportalpadangpanjanggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: serambigeoportal.padangpanjang.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/geo/serambigeoportalpadangpanjanggoid.yaml
+Record ID: serambigeoportalpadangpanjanggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: serambigeoportal.padangpanjang.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-SB/geo/geoportalsumbarprovgoid.yaml
+Record ID: geoportalsumbarprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.sumbarprov.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-SB/geo/geoportalsumbarprovgoid.yaml
+Record ID: geoportalsumbarprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.sumbarprov.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-LA/opendata/opendatalampungprovgoid.yaml
+Record ID: opendatalampungprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.lampungprov.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-LA/opendata/opendatalampungprovgoid.yaml
+Record ID: opendatalampungprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.lampungprov.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/opendata/opendatajabarprovgoid.yaml
+Record ID: opendatajabarprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.jabarprov.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/opendata/opendatajabarprovgoid.yaml
+Record ID: opendatajabarprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.jabarprov.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/opendata/opendatabogorkabgoid.yaml
+Record ID: opendatabogorkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.bogorkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/opendata/opendatabogorkabgoid.yaml
+Record ID: opendatabogorkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.bogorkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/opendata/dantaadminbekasikotagoid.yaml
+Record ID: dantaadminbekasikotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: danta-admin.bekasikota.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/opendata/dantaadminbekasikotagoid.yaml
+Record ID: dantaadminbekasikotagoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: danta-admin.bekasikota.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/geo/cirebonkabinasdiorid.yaml
+Record ID: cirebonkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cirebonkab.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/geo/cirebonkabinasdiorid.yaml
+Record ID: cirebonkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cirebonkab.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/geo/melawikabinasdiorid.yaml
+Record ID: melawikabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: melawikab.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/geo/melawikabinasdiorid.yaml
+Record ID: melawikabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: melawikab.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JB/geo/tapselkabinasdiorid.yaml
+Record ID: tapselkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tapselkab.ina-sdi.or.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JB/geo/tapselkabinasdiorid.yaml
+Record ID: tapselkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tapselkab.ina-sdi.or.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-JK/geo/idsddepokgoid.yaml
+Record ID: idsddepokgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idsd.depok.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-JK/geo/idsddepokgoid.yaml
+Record ID: idsddepokgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: idsd.depok.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/Federal/microdata/repositorybpsgoid.yaml
+Record ID: repositorybpsgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mikrodata.bps.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/opendata/wwwdatatalkasia.yaml
+Record ID: wwwdatatalkasia
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.datatalk.asia
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/opendata/wwwdatatalkasia.yaml
+Record ID: wwwdatatalkasia
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.datatalk.asia
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/Federal/opendata/microdatabpsgoid.yaml
+Record ID: microdatabpsgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microdata.bps.go.id/mikrodata
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/opendata/microdatabpsgoid.yaml
+Record ID: microdatabpsgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microdata.bps.go.id/mikrodata
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/Federal/geo/platformindonesiamapbiomasorg.yaml
+Record ID: platformindonesiamapbiomasorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: platform.indonesia.mapbiomas.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/geo/platformindonesiamapbiomasorg.yaml
+Record ID: platformindonesiamapbiomasorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: platform.indonesia.mapbiomas.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/Federal/geo/dataclubgisitbopendataarcgiscom.yaml
+Record ID: dataclubgisitbopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dataclub-gisitb.opendata.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/geo/dataclubgisitbopendataarcgiscom.yaml
+Record ID: dataclubgisitbopendataarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dataclub-gisitb.opendata.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/Federal/geo/midgsgisprovmalhubarcgiscom.yaml
+Record ID: midgsgisprovmalhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: midgs-gisprovmal.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/Federal/geo/midgsgisprovmalhubarcgiscom.yaml
+Record ID: midgsgisprovmalhubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: midgs-gisprovmal.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-KS/geo/tanahlautkabinasdiorid.yaml
+Record ID: tanahlautkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tanahlautkab.ina-sdi.or.id/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-KS/geo/tanahlautkabinasdiorid.yaml
+Record ID: tanahlautkabinasdiorid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tanahlautkab.ina-sdi.or.id/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-KT/geo/geoportalkaltenggoid.yaml
+Record ID: geoportalkaltenggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kalteng.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-KT/geo/geoportalkaltenggoid.yaml
+Record ID: geoportalkaltenggoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kalteng.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-KT/geo/geoportalkotimkabgoid.yaml
+Record ID: geoportalkotimkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kotimkab.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: ID/ID-KT/geo/geoportalkotimkabgoid.yaml
+Record ID: geoportalkotimkabgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.kotimkab.go.id
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: ID/ID-BT/opendata/opendatabantenprovgoid.yaml
+Record ID: opendatabantenprovgoid
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.bantenprov.go.id
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+... and 31 more records with this issue
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 97
@@ -704,5 +1442,34 @@ Suggested Action: Add at least one endpoint because software.id='geonode' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issues
+DUPLICATE_LINK: 2 issues
+PLACEHOLDER_OWNER_NAME: 3 issues
+PLACEHOLDER_TITLE: 131 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 97 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geonodecifororg
+File: ID/Federal/geo/geonodecifororg.yaml
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link
+  - DUPLICATE_LINK: link
+
+Record ID: opendatasurabayagoid
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: microdatabpsgoid
+File: ID/Federal/opendata/microdatabpsgoid.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

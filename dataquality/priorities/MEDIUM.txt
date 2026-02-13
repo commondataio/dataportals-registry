@@ -1,13 +1,13 @@
 DATA QUALITY REPORT - PRIORITY: MEDIUM
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Priority Level: MEDIUM
-Total Issues Found: 113
+Total Issues Found: 3779
 
 === ISSUES BY TYPE ===
 
 [DUPLICATE_LINK]
-Count: 113
+Count: 111
 
 File: US/US-WI/geo/mapsscowiscedu.yaml
 Record ID: mapsscowiscedu
@@ -601,12 +601,12 @@ Field: link
 Current Value: {'link': 'https://www.repository.cam.ac.uk', 'record_ids': ['wwwrepositorycamacuk', 'repositorycamacuk']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: AU/AU-NSW/opendata/datanswgovaumagda.yaml
-Record ID: datanswgovaumagda
+File: AU/AU-NSW/opendata/datanswgovauckan.yaml
+Record ID: datanswgovauckan
 Country: AU
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
+Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: AU/AU-NSW/opendata/datanswgovau.yaml
@@ -614,23 +614,7 @@ Record ID: datanswgovau
 Country: AU
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'https://data.nsw.gov.au', 'record_ids': ['datanswgovaumagda', 'datanswgovau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: AU/Federal/geo/marlincsiroau.yaml
-Record ID: marlincsiroau
-Country: AU
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: AU/Federal/geo/wwwmarlincsiroau.yaml
-Record ID: wwwmarlincsiroau
-Country: AU
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://www.marlin.csiro.au/geonetwork', 'record_ids': ['marlincsiroau', 'wwwmarlincsiroau']}
+Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: NL/NL-GE/opendata/opendataarnhemnl.yaml
@@ -809,36 +793,1513 @@ Field: link
 Current Value: {'link': 'https://opendata.aragon.es', 'record_ids': ['opendataaragones', 'opendataaragonesdatoscatalogo']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-... and 13 more records with this issue
+File: ES/ES-MD/opendata/datoscomunidadmadridcatalogo.yaml
+Record ID: datoscomunidadmadridcatalogo
+Country: ES
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://datos.comunidad.madrid/catalogo/', 'record_ids': ['datoscomunidadmadridcatalogo', 'datoscomunidadmadrid']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: ES/ES-MD/opendata/datoscomunidadmadrid.yaml
+Record ID: datoscomunidadmadrid
+Country: ES
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://datos.comunidad.madrid/catalogo/', 'record_ids': ['datoscomunidadmadridcatalogo', 'datoscomunidadmadrid']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+... and 11 more records with this issue
+
+[MISSING_CONTENT_TYPES]
+Count: 2
+
+File: CZ/Federal/geo/egdigeologycz.yaml
+Record ID: egdigeologycz
+Country: CZ
+Issue: MISSING_CONTENT_TYPES
+Field: content_types
+Current Value: []
+Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Country: BE
+Issue: MISSING_CONTENT_TYPES
+Field: content_types
+Current Value: []
+Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
+
+[MISSING_ENDPOINTS]
+Count: 8
+
+File: SI/geo/collectionssentinelhubcom.yaml
+Record ID: collectionssentinelhubcom
+Country: SI
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: GB/Federal/scientific/betaukdataserviceacuk.yaml
+Record ID: betaukdataserviceacuk
+Country: GB
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/opendata/adsatmospherecopernicuseu.yaml
+Record ID: adsatmospherecopernicuseu
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/opendata/ewdsclimatecopernicuseu.yaml
+Record ID: ewdsclimatecopernicuseu
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/fungiensemblorg.yaml
+Record ID: fungiensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/protistsensemblorg.yaml
+Record ID: protistsensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/metazoaensemblorg.yaml
+Record ID: metazoaensemblorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/egaarchiveorg.yaml
+Record ID: egaarchiveorg
+Country: EU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 61
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: SE/Federal/geo/ivometriase.yaml
+Record ID: ivometriase
+Country: SE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/gisopenforestdatapl.yaml
+Record ID: gisopenforestdatapl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not Specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/daneakoportalpl.yaml
+Record ID: daneakoportalpl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: PL/Federal/geo/mapaabakusnetpl.yaml
+Record ID: mapaabakusnetpl
+Country: PL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/rgvfloodcom.yaml
+Record ID: rgvfloodcom
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/insideidahoorg.yaml
+Record ID: insideidahoorg
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/Federal/geo/ienccloudus.yaml
+Record ID: ienccloudus
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: US/US-MO/opendata/rdxstldataorg.yaml
+Record ID: rdxstldataorg
+Country: US
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: N/A
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BD/Federal/geo/2024179152.yaml
+Record ID: 2024179152
+Country: BD
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not Specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CN/Federal/geo/2186120106.yaml
+Record ID: 2186120106
+Country: CN
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/IT-77/geo/wgmaterapaesitit.yaml
+Record ID: wgmaterapaesitit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/opendata/lodaciit.yaml
+Record ID: lodaciit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IT/Federal/geo/stagingwebgisadbpoit.yaml
+Record ID: stagingwebgisadbpoit
+Country: IT
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
+Record ID: barchettaadumanitobaca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/Federal/geo/nsgiwanovascotiaca.yaml
+Record ID: nsgiwanovascotiaca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: CA/Federal/geo/arcgiscreegeoportalca.yaml
+Record ID: arcgiscreegeoportalca
+Country: CA
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RU/RU-NIZ/geo/3dgorodru.yaml
+Record ID: 3dgorodru
+Country: RU
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RU/RU-NIZ/geo/epidatlasnniiemru.yaml
+Record ID: epidatlasnniiemru
+Country: RU
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/search/hubarcgiscom.yaml
+Record ID: hubarcgiscom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/demodatashadescom.yaml
+Record ID: demodatashadescom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/conaviopendatajunarcom.yaml
+Record ID: conaviopendatajunarcom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/opendata/inondationsdakarorg.yaml
+Record ID: inondationsdakarorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/servicesgeospatialorg.yaml
+Record ID: servicesgeospatialorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/mapsoraotcaorg.yaml
+Record ID: mapsoraotcaorg
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: unknown
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/wwwafricabeescom.yaml
+Record ID: wwwafricabeescom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: World/Federal/geo/103105195227.yaml
+Record ID: 103105195227
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: RS/Federal/geo/gisportalrs.yaml
+Record ID: gisportalrs
+Country: RS
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BO/Federal/geo/geodataooppgobbo.yaml
+Record ID: geodataooppgobbo
+Country: BO
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
+Record ID: moragisprd01cossunderlandlocal
+Country: GB
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/opendata/micamdcberlinde.yaml
+Record ID: micamdcberlinde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/opendata/einloesenmilesmediende.yaml
+Record ID: einloesenmilesmediende
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/rudolstadtgajamatrixde.yaml
+Record ID: rudolstadtgajamatrixde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/gdigeonetworkprodseblede.yaml
+Record ID: gdigeonetworkprodseblede
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/geoservergretasmapde.yaml
+Record ID: geoservergretasmapde
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/umapdmhode.yaml
+Record ID: umapdmhode
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DE/Federal/geo/gisflide.yaml
+Record ID: gisflide
+Country: DE
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/geoserversurfacewatermiljoeportaldk.yaml
+Record ID: geoserversurfacewatermiljoeportaldk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/wwwsatlasdk.yaml
+Record ID: wwwsatlasdk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: DK/Federal/geo/jordbrugsanalyserdk.yaml
+Record ID: jordbrugsanalyserdk
+Country: DK
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/opendata/19314442171.yaml
+Record ID: 19314442171
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/opendata/dadosjuventudeibictbr.yaml
+Record ID: dadosjuventudeibictbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/geo/obahiadeaufvbr.yaml
+Record ID: obahiadeaufvbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: BR/Federal/geo/webradioaguaorgbr.yaml
+Record ID: webradioaguaorgbr
+Country: BR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
+Record ID: opendatasurabayagoid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/ID-JI/geo/situbondokabinasdiorid.yaml
+Record ID: situbondokabinasdiorid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ID/Federal/geo/sidrapkabinasdiorid.yaml
+Record ID: sidrapkabinasdiorid
+Country: ID
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/geocreilsudoisefr.yaml
+Record ID: geocreilsudoisefr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/wwwtigeofr.yaml
+Record ID: wwwtigeofr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/alsacewebsolfr.yaml
+Record ID: alsacewebsolfr
+Country: FR
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ES/ES-AN/geo/cdaidesevillaopendataarcgiscom.yaml
+Record ID: cdaidesevillaopendataarcgiscom
+Country: ES
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ES/Federal/geo/iberchebroes.yaml
+Record ID: iberchebroes
+Country: ES
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ES/Federal/scientific/repositoriounicanes.yaml
+Record ID: repositoriounicanes
+Country: ES
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: ES/Federal/scientific/iochembdbsces.yaml
+Record ID: iochembdbsces
+Country: ES
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: Unknown/geo/scgiplangicinchubarcgiscom.yaml
+Record ID: scgiplangicinchubarcgiscom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: Unknown/geo/productionmzehubarcgiscom.yaml
+Record ID: productionmzehubarcgiscom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: Unknown/geo/paginaimpmmlimphubarcgiscom.yaml
+Record ID: paginaimpmmlimphubarcgiscom
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not available
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: Unknown/Federal/geo/201159223152.yaml
+Record ID: 201159223152
+Country: World
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: IL/IL-D/geo/gisbeershevaopendataarcgiscom.yaml
+Record ID: gisbeershevaopendataarcgiscom
+Country: IL
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
+Record ID: geonetworkalpinesoilseu
+Country: EU
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: TH/Federal/opendata/119409775.yaml
+Record ID: 119409775
+Country: TH
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 3597
+
+File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
+Record ID: wwwgeoportalksksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.geoportalksk.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
+Record ID: wwwgeoportalksksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.geoportalksk.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/gisfnsunibask.yaml
+Record ID: gisfnsunibask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.fns.uniba.sk/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/gisfnsunibask.yaml
+Record ID: gisfnsunibask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.fns.uniba.sk/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/sluzbyvuvhsk.yaml
+Record ID: sluzbyvuvhsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sluzby.vuvh.sk/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/sluzbyvuvhsk.yaml
+Record ID: sluzbyvuvhsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sluzby.vuvh.sk/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.surveye.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mapssurveyesk.yaml
+Record ID: mapssurveyesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.surveye.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.skgeodesy.sk/eskn/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/inspireskgeodesysk.yaml
+Record ID: inspireskgeodesysk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.skgeodesy.sk/eskn/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ismcs.cdb.sk/inspire/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/ismcscdbsk.yaml
+Record ID: ismcscdbsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ismcs.cdb.sk/inspire/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mapsgeopsazpsk.yaml
+Record ID: mapsgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.geop.sazp.sk:80/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mapsgeopsazpsk.yaml
+Record ID: mapsgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: maps.geop.sazp.sk:80/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/mptsvpsk.yaml
+Record ID: mptsvpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mpt.svp.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/mptsvpsk.yaml
+Record ID: mptsvpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mpt.svp.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisgeo.zsr.sk/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/gisgeozsrsk.yaml
+Record ID: gisgeozsrsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gisgeo.zsr.sk/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/tilesgeopsazpsk.yaml
+Record ID: tilesgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geop.sazp.sk/themes
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/tilesgeopsazpsk.yaml
+Record ID: tilesgeopsazpsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geop.sazp.sk/themes
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/inspirebiomonitoringsk.yaml
+Record ID: inspirebiomonitoringsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.biomonitoring.sk/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/inspirebiomonitoringsk.yaml
+Record ID: inspirebiomonitoringsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: inspire.biomonitoring.sk/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/tilesgeocloudsk.yaml
+Record ID: tilesgeocloudsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geocloud.sk/mapproxy
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/tilesgeocloudsk.yaml
+Record ID: tilesgeocloudsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tiles.geocloud.sk/mapproxy
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/geoshmusk.yaml
+Record ID: geoshmusk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.shmu.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/geoshmusk.yaml
+Record ID: geoshmusk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.shmu.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/wwwgisatapexsk.yaml
+Record ID: wwwgisatapexsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.gis.atapex.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/wwwgisatapexsk.yaml
+Record ID: wwwgisatapexsk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.gis.atapex.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
+Record ID: ccibispriestoroveplanovaniesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ccibis.priestoroveplanovanie.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
+Record ID: ccibispriestoroveplanovaniesk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ccibis.priestoroveplanovanie.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/SK-BL/geo/geoportalbratislavask.yaml
+Record ID: geoportalbratislavask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.bratislava.sk
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-BL/geo/geoportalbratislavask.yaml
+Record ID: geoportalbratislavask
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.bratislava.sk
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SK/SK-BC/geo/gisregionbsksk.yaml
+Record ID: gisregionbsksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.region-bsk.sk/server/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SK/SK-BC/geo/gisregionbsksk.yaml
+Record ID: gisregionbsksk
+Country: SK
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis.region-bsk.sk/server/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SB/Federal/geo/geoserverapiaspreporg.yaml
+Record ID: geoserverapiaspreporg
+Country: SB
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver-apia.sprep.org/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SB/Federal/geo/geoserverapiaspreporg.yaml
+Record ID: geoserverapiaspreporg
+Country: SB
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver-apia.sprep.org/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/SE-H/geo/kartakalmarse.yaml
+Record ID: kartakalmarse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.kalmar.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/SE-H/geo/kartakalmarse.yaml
+Record ID: kartakalmarse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.kalmar.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/datakbse.yaml
+Record ID: datakbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kb.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/datakbse.yaml
+Record ID: datakbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kb.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
+Record ID: geoportalarcticsdiorg
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.arctic-sdi.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
+Record ID: geoportalarcticsdiorg
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoportal.arctic-sdi.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Record ID: neardbnearagingse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: neardb.near-aging.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/neardbnearagingse.yaml
+Record ID: neardbnearagingse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: neardb.near-aging.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/opendata/trafficdatase.yaml
+Record ID: trafficdatase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: trafficdata.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/opendata/trafficdatase.yaml
+Record ID: trafficdatase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: trafficdata.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
+Record ID: stationsregistermiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
+Record ID: stationsregistermiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/epubsjvse.yaml
+Record ID: epubsjvse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: epub.sjv.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/epubsjvse.yaml
+Record ID: epubsjvse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: epub.sjv.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/agolorustse.yaml
+Record ID: agolorustse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: agol.orust.se/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/agolorustse.yaml
+Record ID: agolorustse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: agol.orust.se/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/gisservicesmetriase.yaml
+Record ID: gisservicesmetriase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis-services.metria.se/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/gisservicesmetriase.yaml
+Record ID: gisservicesmetriase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: gis-services.metria.se/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geodatahelsingborgse.yaml
+Record ID: geodatahelsingborgse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.helsingborg.se/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geodatahelsingborgse.yaml
+Record ID: geodatahelsingborgse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.helsingborg.se/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geonetse.yaml
+Record ID: geonetse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonet.se/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geonetse.yaml
+Record ID: geonetse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonet.se/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/stationsregistertestmiljodatasamverkanse.yaml
+Record ID: stationsregistertestmiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregistertest.miljodatasamverkan.se/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/stationsregistertestmiljodatasamverkanse.yaml
+Record ID: stationsregistertestmiljodatasamverkanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: stationsregistertest.miljodatasamverkan.se/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geodataskelleftease.yaml
+Record ID: geodataskelleftease
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.skelleftea.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geodataskelleftease.yaml
+Record ID: geodataskelleftease
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.skelleftea.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/kartamiljoforvaltningengoteborgse.yaml
+Record ID: kartamiljoforvaltningengoteborgse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.miljoforvaltningen.goteborg.se/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/kartamiljoforvaltningengoteborgse.yaml
+Record ID: kartamiljoforvaltningengoteborgse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: karta.miljoforvaltningen.goteborg.se/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/ivometriase.yaml
+Record ID: ivometriase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ivo.metria.se/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/ivometriase.yaml
+Record ID: ivometriase
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ivo.metria.se/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geodatascbse.yaml
+Record ID: geodatascbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.scb.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geodatascbse.yaml
+Record ID: geodatascbse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.scb.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geonodefolkhalsomyndighetense.yaml
+Record ID: geonodefolkhalsomyndighetense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.folkhalsomyndigheten.se/geoserver/web/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geonodefolkhalsomyndighetense.yaml
+Record ID: geonodefolkhalsomyndighetense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonode.folkhalsomyndigheten.se/geoserver/web/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geodatasvoaexternstockholmse.yaml
+Record ID: geodatasvoaexternstockholmse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata-svoa-extern.stockholm.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geodatasvoaexternstockholmse.yaml
+Record ID: geodatasvoaexternstockholmse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata-svoa-extern.stockholm.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/geodpagsskogsstyrelsense.yaml
+Record ID: geodpagsskogsstyrelsense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodpags.skogsstyrelsen.se/arcgis/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/geodpagsskogsstyrelsense.yaml
+Record ID: geodpagsskogsstyrelsense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodpags.skogsstyrelsen.se/arcgis/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/testikartanse.yaml
+Record ID: testikartanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: test.ikartan.se/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/testikartanse.yaml
+Record ID: testikartanse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: test.ikartan.se/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/geo/arcticsdilmse.yaml
+Record ID: arcticsdilmse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: arcticsdi.lm.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/geo/arcticsdilmse.yaml
+Record ID: arcticsdilmse
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: arcticsdi.lm.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/Federal/scientific/scilifelabfigsharecom.yaml
+Record ID: scilifelabfigsharecom
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: scilifelab.figshare.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/Federal/scientific/scilifelabfigsharecom.yaml
+Record ID: scilifelabfigsharecom
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: scilifelab.figshare.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: SE/SE-Y/opendata/geodatasandvikense.yaml
+Record ID: geodatasandvikense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.sandviken.se
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: SE/SE-Y/opendata/geodatasandvikense.yaml
+Record ID: geodatasandvikense
+Country: SE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodata.sandviken.se
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/opendata/ppivalopendatasoftcom.yaml
+Record ID: ppivalopendatasoftcom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ppival.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/opendata/ppivalopendatasoftcom.yaml
+Record ID: ppivalopendatasoftcom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ppival.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/opendata/opendatademossprojorg.yaml
+Record ID: opendatademossprojorg
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.demo.ss-proj.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/opendata/opendatademossprojorg.yaml
+Record ID: opendatademossprojorg
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.demo.ss-proj.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/geo/services7arcgiscom.yaml
+Record ID: services7arcgiscom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: services7.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/geo/services7arcgiscom.yaml
+Record ID: services7arcgiscom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: services7.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/geo/4625521167.yaml
+Record ID: 4625521167
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 46.255.211.67:82
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/geo/4625521167.yaml
+Record ID: 4625521167
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: 46.255.211.67:82
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/geo/geocatsemidenet.yaml
+Record ID: geocatsemidenet
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocat.semide.net/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/geo/geocatsemidenet.yaml
+Record ID: geocatsemidenet
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocat.semide.net/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: UG/Federal/geo/ec25019218171compute1amazonawscom.yaml
+Record ID: ec25019218171compute1amazonawscom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ec2-50-19-218-171.compute-1.amazonaws.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: UG/Federal/geo/ec25019218171compute1amazonawscom.yaml
+Record ID: ec25019218171compute1amazonawscom
+Country: UG
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ec2-50-19-218-171.compute-1.amazonaws.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: PL/PL-02/opendata/opendatacuiwroclawpl.yaml
+Record ID: opendatacuiwroclawpl
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.cui.wroclaw.pl
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PL/PL-02/opendata/opendatacuiwroclawpl.yaml
+Record ID: opendatacuiwroclawpl
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.cui.wroclaw.pl
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: PL/Federal/opendata/danegovpl.yaml
+Record ID: danegovpl
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dane.gov.pl
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PL/Federal/opendata/danegovpl.yaml
+Record ID: danegovpl
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dane.gov.pl
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: PL/Federal/opendata/opendataekostrategcom.yaml
+Record ID: opendataekostrategcom
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ekostrateg.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: PL/Federal/opendata/opendataekostrategcom.yaml
+Record ID: opendataekostrategcom
+Country: PL
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.ekostrateg.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+... and 3497 more records with this issue
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 113 issues
+DUPLICATE_LINK: 111 issues
+MISSING_CONTENT_TYPES: 2 issues
+MISSING_ENDPOINTS: 8 issues
+PLACEHOLDER_OWNER_NAME: 61 issues
+PLACEHOLDER_TITLE: 3597 issues
 
 === SUMMARY BY COUNTRY ===
 
-AU: 4 issues
-CA: 2 issues
-CH: 2 issues
-CL: 3 issues
-CO: 8 issues
-DE: 4 issues
+AM: 2 issues
+AU: 2 issues
+BD: 1 issues
+BE: 1 issues
+BG: 6 issues
+BO: 28 issues
+BR: 91 issues
+BZ: 3 issues
+CA: 107 issues
+CH: 32 issues
+CL: 13 issues
+CN: 78 issues
+CO: 66 issues
+CR: 8 issues
+CZ: 35 issues
+Caribbean: 2 issues
+DE: 252 issues
+DK: 27 issues
 DO: 4 issues
-EG: 1 issues
-ES: 11 issues
-EU: 4 issues
-FI: 2 issues
-FR: 7 issues
-GB: 3 issues
-ID: 1 issues
-IT: 6 issues
+EC: 12 issues
+EE: 7 issues
+EG: 9 issues
+ES: 151 issues
+ET: 4 issues
+EU: 49 issues
+FI: 56 issues
+FO: 4 issues
+FR: 290 issues
+GB: 179 issues
+GH: 6 issues
+GR: 14 issues
+HK: 4 issues
+HU: 19 issues
+ID: 135 issues
+IE: 8 issues
+IL: 7 issues
+IN: 18 issues
+IS: 12 issues
+IT: 173 issues
+JP: 14 issues
+KE: 8 issues
+KG: 2 issues
+KH: 2 issues
+KR: 4 issues
+LA: 2 issues
+LB: 10 issues
+LC: 2 issues
+LT: 6 issues
+LU: 1 issues
+LV: 3 issues
 MG: 2 issues
+MK: 4 issues
+ML: 2 issues
+MN: 6 issues
+MT: 2 issues
+MX: 12 issues
+MY: 22 issues
 MZ: 2 issues
-NL: 6 issues
-PA: 2 issues
-PG: 2 issues
+NG: 8 issues
+NI: 2 issues
+NL: 82 issues
+NO: 48 issues
+NP: 2 issues
+NU: 2 issues
+NZ: 48 issues
+Oceania: 2 issues
+PA: 4 issues
+PE: 32 issues
+PG: 6 issues
+PH: 8 issues
+PL: 57 issues
+PR: 2 issues
+PS: 2 issues
+PT: 27 issues
+PY: 8 issues
+RO: 18 issues
+RS: 19 issues
+RU: 22 issues
+RW: 4 issues
+SA: 2 issues
+SB: 2 issues
+SE: 47 issues
+SI: 14 issues
+SK: 35 issues
 SN: 2 issues
-TH: 2 issues
-US: 18 issues
-World: 15 issues
+SO: 4 issues
+SV: 3 issues
+TH: 113 issues
+TN: 4 issues
+TR: 4 issues
+TW: 7 issues
+TZ: 2 issues
+UG: 12 issues
+US: 654 issues
+UY: 8 issues
+VE: 2 issues
+VN: 12 issues
+World: 408 issues
+ZA: 20 issues

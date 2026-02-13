@@ -1,21 +1,46 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: FR
-Total Records with Issues: 76
-Total Issues Found: 76
+Total Records with Issues: 197
+Total Issues Found: 363
 
 === ISSUES BY TYPE ===
 
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: FR/Federal/api/apilannuaireservicepublicfr.yaml
+Record ID: apilannuaireservicepublicfr
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=API Catalog, software.id=opendatasoft
+Suggested Action: Update catalog_type to 'Open data portal' to match software.id
+
 [DUPLICATE_LINK]
-Count: 6
+Count: 8
 Priority: MEDIUM
 
-File: FR/FR-PDL/geo/geopalorggeonetwork.yaml
-Record ID: geopalorggeonetwork
+File: World/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Record ID: geonetworkothudatagrandlyoncom
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'https://catalogue.geopal.org/geonetwork', 'record_ids': ['geopalorggeonetwork', 'cataloguegeopalorg']}
+Current Value: {'link': 'https://geonetwork-othu.data.grandlyon.com/geonetwork', 'record_ids': ['geonetworkothudatagrandlyoncom', 'geonetworkothudatagrandlyoncom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Record ID: geonetworkothudatagrandlyoncom
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geonetwork-othu.data.grandlyon.com/geonetwork', 'record_ids': ['geonetworkothudatagrandlyoncom', 'geonetworkothudatagrandlyoncom']}
+Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+File: FR/FR-GES/geo/datainfogeo54fr.yaml
+Record ID: datainfogeo54fr
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data.infogeo54.fr/geonetwork', 'record_ids': ['datainfogeo54fr', 'infogeo54fr']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: FR/Federal/geo/cataloguegeopalorg.yaml
@@ -25,11 +50,11 @@ Field: link
 Current Value: {'link': 'https://catalogue.geopal.org/geonetwork', 'record_ids': ['geopalorggeonetwork', 'cataloguegeopalorg']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
-File: FR/FR-GES/geo/datainfogeo54fr.yaml
-Record ID: datainfogeo54fr
+File: FR/FR-PDL/geo/geopalorggeonetwork.yaml
+Record ID: geopalorggeonetwork
 Issue: DUPLICATE_LINK
 Field: link
-Current Value: {'link': 'https://data.infogeo54.fr/geonetwork', 'record_ids': ['datainfogeo54fr', 'infogeo54fr']}
+Current Value: {'link': 'https://catalogue.geopal.org/geonetwork', 'record_ids': ['geopalorggeonetwork', 'cataloguegeopalorg']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
 
 File: FR/FR-GES/geo/infogeo54fr.yaml
@@ -52,6 +77,748 @@ Issue: DUPLICATE_LINK
 Field: link
 Current Value: {'link': 'https://catalogue.karugeo.fr/geonetwork', 'record_ids': ['karugeofrgeonetwork', 'cataloguekarugeofr']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[MISSING_API_STATUS]
+Count: 1
+Priority: IMPORTANT
+
+File: FR/Federal/scientific/catalogeldaorg.yaml
+Record ID: catalogeldaorg
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 3
+Priority: MEDIUM
+
+File: FR/Federal/geo/geocreilsudoisefr.yaml
+Record ID: geocreilsudoisefr
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/wwwtigeofr.yaml
+Record ID: wwwtigeofr
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+File: FR/Federal/geo/alsacewebsolfr.yaml
+Record ID: alsacewebsolfr
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 280
+Priority: MEDIUM
+
+File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Record ID: geonetworkothudatagrandlyoncom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork-othu.data.grandlyon.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Record ID: geonetworkothudatagrandlyoncom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork-othu.data.grandlyon.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-OCC/geo/sigoremeorg.yaml
+Record ID: sigoremeorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sig.oreme.org/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-OCC/geo/lizmapauatoulouseorg.yaml
+Record ID: lizmapauatoulouseorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lizmap.aua-toulouse.org/lizmap
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-OCC/geo/lizmapauatoulouseorg.yaml
+Record ID: lizmapauatoulouseorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: lizmap.aua-toulouse.org/lizmap
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-OCC/geo/dynidstoulouseinraefr.yaml
+Record ID: dynidstoulouseinraefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dynids.toulouse.inrae.fr:8443
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-OCC/geo/dynidstoulouseinraefr.yaml
+Record ID: dynidstoulouseinraefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: dynids.toulouse.inrae.fr:8443
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-20R/opendata/wwwdatacorsica.yaml
+Record ID: wwwdatacorsica
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.data.corsica
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-20R/opendata/wwwdatacorsica.yaml
+Record ID: wwwdatacorsica
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.data.corsica
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-NAQ/opendata/wwwopendatapaysbasquefr.yaml
+Record ID: wwwopendatapaysbasquefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.opendata-paysbasque.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-NAQ/opendata/wwwopendatapaysbasquefr.yaml
+Record ID: wwwopendatapaysbasquefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.opendata-paysbasque.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-NAQ/geo/geonetworkbiodiversitenouvelleaquitainefr.yaml
+Record ID: geonetworkbiodiversitenouvelleaquitainefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.biodiversite-nouvelle-aquitaine.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-NAQ/geo/geonetworkbiodiversitenouvelleaquitainefr.yaml
+Record ID: geonetworkbiodiversitenouvelleaquitainefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.biodiversite-nouvelle-aquitaine.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-NAQ/geo/geocataloguebiodiversitenouvelleaquitainefr.yaml
+Record ID: geocataloguebiodiversitenouvelleaquitainefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.biodiversite-nouvelle-aquitaine.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-NAQ/geo/geocataloguebiodiversitenouvelleaquitainefr.yaml
+Record ID: geocataloguebiodiversitenouvelleaquitainefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.biodiversite-nouvelle-aquitaine.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-NAQ/geo/opendatadepartement86hubarcgiscom.yaml
+Record ID: opendatadepartement86hubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-departement86.hub.arcgis.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-NAQ/geo/opendatadepartement86hubarcgiscom.yaml
+Record ID: opendatadepartement86hubarcgiscom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-departement86.hub.arcgis.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-IDF/opendata/cachanopendatasoftcom.yaml
+Record ID: cachanopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cachan.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-IDF/opendata/cachanopendatasoftcom.yaml
+Record ID: cachanopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cachan.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-IDF/opendata/parisdataopendatasoftcom.yaml
+Record ID: parisdataopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: parisdata.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-IDF/opendata/parisdataopendatasoftcom.yaml
+Record ID: parisdataopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: parisdata.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-IDF/opendata/opendatastifinfo.yaml
+Record ID: opendatastifinfo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.stif.info
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-IDF/opendata/opendatastifinfo.yaml
+Record ID: opendatastifinfo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.stif.info
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-IDF/opendata/opendatasaemesfr.yaml
+Record ID: opendatasaemesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.saemes.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-IDF/opendata/opendatasaemesfr.yaml
+Record ID: opendatasaemesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.saemes.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-IDF/geo/voparisvespahipswmsobspmfr.yaml
+Record ID: voparisvespahipswmsobspmfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: voparis-vespa-hips-wms.obspm.fr:8080
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-IDF/geo/voparisvespahipswmsobspmfr.yaml
+Record ID: voparisvespahipswmsobspmfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: voparis-vespa-hips-wms.obspm.fr:8080
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-GES/opendata/grandestdataeducationopendatasoftcom.yaml
+Record ID: grandestdataeducationopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: grand-est-dataeducation.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-GES/opendata/grandestdataeducationopendatasoftcom.yaml
+Record ID: grandestdataeducationopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: grand-est-dataeducation.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-GES/geo/geoeaurhinmeusefr.yaml
+Record ID: geoeaurhinmeusefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.eau-rhin-meuse.fr/server/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-GES/geo/geoeaurhinmeusefr.yaml
+Record ID: geoeaurhinmeusefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geo.eau-rhin-meuse.fr/server/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-GES/geo/datainfogeo54fr.yaml
+Record ID: datainfogeo54fr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.infogeo54.fr/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-GES/geo/datainfogeo54fr.yaml
+Record ID: datainfogeo54fr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.infogeo54.fr/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-PAC/opendata/publierdatasudfr.yaml
+Record ID: publierdatasudfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: publier.datasud.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-PAC/opendata/publierdatasudfr.yaml
+Record ID: publierdatasudfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: publier.datasud.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-PAC/opendata/datacannesfr.yaml
+Record ID: datacannesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cannes.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-PAC/opendata/datacannesfr.yaml
+Record ID: datacannesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cannes.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-PAC/geo/geocataloguecrigepacaorg.yaml
+Record ID: geocataloguecrigepacaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.crige-paca.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-PAC/geo/geocataloguecrigepacaorg.yaml
+Record ID: geocataloguecrigepacaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.crige-paca.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-HDF/geo/geocataloguehautsdefrancefr.yaml
+Record ID: geocataloguehautsdefrancefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.hautsdefrance.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-HDF/geo/geocataloguehautsdefrancefr.yaml
+Record ID: geocataloguehautsdefrancefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geocatalogue.hautsdefrance.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/FR-ARA/geo/sigatmoauvergnerhonealpesfr.yaml
+Record ID: sigatmoauvergnerhonealpesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sig.atmo-auvergnerhonealpes.fr/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/FR-ARA/geo/sigatmoauvergnerhonealpesfr.yaml
+Record ID: sigatmoauvergnerhonealpesfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: sig.atmo-auvergnerhonealpes.fr/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/dataunedicorg.yaml
+Record ID: dataunedicorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.unedic.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/dataunedicorg.yaml
+Record ID: dataunedicorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.unedic.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/dataculturegouvfr.yaml
+Record ID: dataculturegouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.culture.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/dataculturegouvfr.yaml
+Record ID: dataculturegouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.culture.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datacentrevaldeloirefr.yaml
+Record ID: datacentrevaldeloirefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.centrevaldeloire.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datacentrevaldeloirefr.yaml
+Record ID: datacentrevaldeloirefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.centrevaldeloire.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/wwwdataeconomiegouvfr.yaml
+Record ID: wwwdataeconomiegouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.data.economie.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/wwwdataeconomiegouvfr.yaml
+Record ID: wwwdataeconomiegouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: www.data.economie.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/opendatacorseedffr.yaml
+Record ID: opendatacorseedffr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-corse.edf.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/opendatacorseedffr.yaml
+Record ID: opendatacorseedffr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-corse.edf.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/opendataaudefr.yaml
+Record ID: opendataaudefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.aude.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/opendataaudefr.yaml
+Record ID: opendataaudefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.aude.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/dataculturecommunicationgouvfr.yaml
+Record ID: dataculturecommunicationgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.culturecommunication.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/dataculturecommunicationgouvfr.yaml
+Record ID: dataculturecommunicationgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.culturecommunication.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/theshiftdataportalorg.yaml
+Record ID: theshiftdataportalorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: theshiftdataportal.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/theshiftdataportalorg.yaml
+Record ID: theshiftdataportalorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: theshiftdataportal.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/opendataplustransformationgouvfr.yaml
+Record ID: opendataplustransformationgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.plus.transformation.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/opendataplustransformationgouvfr.yaml
+Record ID: opendataplustransformationgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata.plus.transformation.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/wwwprojetsenvironnementgouvfr.yaml
+Record ID: wwwprojetsenvironnementgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: projets-environnement.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/wwwprojetsenvironnementgouvfr.yaml
+Record ID: wwwprojetsenvironnementgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: projets-environnement.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/discoveryopendatasoftcom.yaml
+Record ID: discoveryopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: discovery.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/discoveryopendatasoftcom.yaml
+Record ID: discoveryopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: discovery.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datasarthefr.yaml
+Record ID: datasarthefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.sarthe.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datasarthefr.yaml
+Record ID: datasarthefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.sarthe.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/cchblafibre64data64opendatasoftcom.yaml
+Record ID: cchblafibre64data64opendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cchb-lafibre64-data64.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/cchblafibre64data64opendatasoftcom.yaml
+Record ID: cchblafibre64data64opendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cchb-lafibre64-data64.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datatoursmetropolefr.yaml
+Record ID: datatoursmetropolefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tours-metropole.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datatoursmetropolefr.yaml
+Record ID: datatoursmetropolefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tours-metropole.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datacnavfr.yaml
+Record ID: datacnavfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cnav.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datacnavfr.yaml
+Record ID: datacnavfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cnav.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/mairiebastiadatacorsicaopendatasoftcom.yaml
+Record ID: mairiebastiadatacorsicaopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mairie-bastia-datacorsica.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/mairiebastiadatacorsicaopendatasoftcom.yaml
+Record ID: mairiebastiadatacorsicaopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: mairie-bastia-datacorsica.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datalamayennefr.yaml
+Record ID: datalamayennefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.lamayenne.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datalamayennefr.yaml
+Record ID: datalamayennefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.lamayenne.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datamairierisorangisfr.yaml
+Record ID: datamairierisorangisfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.mairie-ris-orangis.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datamairierisorangisfr.yaml
+Record ID: datamairierisorangisfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.mairie-ris-orangis.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/dataeurelienfr.yaml
+Record ID: dataeurelienfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.eurelien.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/dataeurelienfr.yaml
+Record ID: dataeurelienfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.eurelien.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/future4careopendatasoftcom.yaml
+Record ID: future4careopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: future4care.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/future4careopendatasoftcom.yaml
+Record ID: future4careopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: future4care.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datamegalisbretagnebzh.yaml
+Record ID: datamegalisbretagnebzh
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.megalis.bretagne.bzh
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datamegalisbretagnebzh.yaml
+Record ID: datamegalisbretagnebzh
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.megalis.bretagne.bzh
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/d4cagglolarochellefr.yaml
+Record ID: d4cagglolarochellefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: d4c.agglo-larochelle.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/d4cagglolarochellefr.yaml
+Record ID: d4cagglolarochellefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: d4c.agglo-larochelle.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/opendatailesponantedffr.yaml
+Record ID: opendatailesponantedffr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-iles-ponant.edf.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/opendatailesponantedffr.yaml
+Record ID: opendatailesponantedffr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: opendata-iles-ponant.edf.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/documentationresourcesopendatasoftcom.yaml
+Record ID: documentationresourcesopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: documentation-resources.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/documentationresourcesopendatasoftcom.yaml
+Record ID: documentationresourcesopendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: documentation-resources.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datastmaloagglomerationfr.yaml
+Record ID: datastmaloagglomerationfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.stmalo-agglomeration.fr:443
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datastmaloagglomerationfr.yaml
+Record ID: datastmaloagglomerationfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.stmalo-agglomeration.fr:443
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/donneesgrandchamberyfr.yaml
+Record ID: donneesgrandchamberyfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: donnees.grandchambery.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/donneesgrandchamberyfr.yaml
+Record ID: donneesgrandchamberyfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: donnees.grandchambery.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/tourisme62opendatasoftcom.yaml
+Record ID: tourisme62opendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tourisme62.opendatasoft.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/tourisme62opendatasoftcom.yaml
+Record ID: tourisme62opendatasoftcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: tourisme62.opendatasoft.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/datasmartidfservices.yaml
+Record ID: datasmartidfservices
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.smartidf.services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/opendata/datasmartidfservices.yaml
+Record ID: datasmartidfservices
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.smartidf.services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/opendata/wwwinfofinancierefr.yaml
+Record ID: wwwinfofinancierefr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: info-financiere.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+... and 180 more records with this issue
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 70
@@ -550,5 +1317,212 @@ Suggested Action: Add at least one endpoint because software.id='lizmap' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 6 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issues
+DUPLICATE_LINK: 8 issues
+MISSING_API_STATUS: 1 issues
+PLACEHOLDER_OWNER_NAME: 3 issues
+PLACEHOLDER_TITLE: 280 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 70 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: geonetworkothudatagrandlyoncom
+File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
+Issue Count: 4
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link
+  - DUPLICATE_LINK: link
+
+Record ID: lizmapauatoulouseorg
+File: FR/FR-OCC/geo/lizmapauatoulouseorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datainfogeo54fr
+File: FR/FR-GES/geo/datainfogeo54fr.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link
+
+Record ID: publierdatasudfr
+File: FR/FR-PAC/opendata/publierdatasudfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geocataloguecrigepacaorg
+File: FR/FR-PAC/geo/geocataloguecrigepacaorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwdatagouvfr
+File: FR/Federal/opendata/wwwdatagouvfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwdatalocalefr
+File: FR/Federal/geo/wwwdatalocalefr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cartole64fr
+File: FR/Federal/geo/cartole64fr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: lizmapacreimsfr
+File: FR/Federal/geo/lizmapacreimsfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cartesmairieavignoncom
+File: FR/Federal/geo/cartesmairieavignoncom.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: ppigenpdcfr
+File: FR/Federal/geo/ppigenpdcfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: wwwtigeofr
+File: FR/Federal/geo/wwwtigeofr.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cartoparcnaturelpilatfr
+File: FR/Federal/geo/cartoparcnaturelpilatfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: clcdeveloppementdurablegouvfr
+File: FR/Federal/geo/clcdeveloppementdurablegouvfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: lizmaplafabbmfr
+File: FR/Federal/geo/lizmaplafabbmfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geovaldilleaubignefrfr
+File: FR/Federal/geo/geovaldilleaubignefrfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: idspigmaorg
+File: FR/Federal/geo/idspigmaorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cartobretagnevivantedevorg
+File: FR/Federal/geo/cartobretagnevivantedevorg.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: cataloguegeopalorg
+File: FR/Federal/geo/cataloguegeopalorg.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+  - DUPLICATE_LINK: link
+
+Record ID: catalogueparcnationalfr
+File: FR/Federal/geo/catalogueparcnationalfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geosuiuemunivbrestfr
+File: FR/Federal/geo/geosuiuemunivbrestfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geovaldilleaubignefr
+File: FR/Federal/geo/geovaldilleaubignefr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: caribvetmapsciradfr
+File: FR/Federal/geo/caribvetmapsciradfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: alsacewebsolfr
+File: FR/Federal/geo/alsacewebsolfr.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: usegalaxyfr
+File: FR/Federal/scientific/usegalaxyfr.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

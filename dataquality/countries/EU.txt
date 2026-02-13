@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: EU
 ================================================================================
-Generated: 2026-02-12 09:47:40
+Generated: 2026-02-13 19:09:38
 Country Code: EU
-Total Records with Issues: 21
-Total Issues Found: 22
+Total Records with Issues: 46
+Total Issues Found: 73
 
 === ISSUES BY TYPE ===
 
@@ -24,6 +24,383 @@ Issue: DUPLICATE_LINK
 Field: link
 Current Value: {'link': 'https://csw.eodc.eu', 'record_ids': ['csweodceu', 'csweodceu']}
 Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+
+[MISSING_API_STATUS]
+Count: 1
+Priority: IMPORTANT
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+[MISSING_CONTENT_TYPES]
+Count: 1
+Priority: MEDIUM
+
+File: EU/Federal/geo/gnssmetadataeu.yaml
+Record ID: gnssmetadataeu
+Issue: MISSING_CONTENT_TYPES
+Field: content_types
+Current Value: []
+Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
+
+[MISSING_ENDPOINTS]
+Count: 6
+Priority: MEDIUM
+
+File: EU/Federal/opendata/adsatmospherecopernicuseu.yaml
+Record ID: adsatmospherecopernicuseu
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/opendata/ewdsclimatecopernicuseu.yaml
+Record ID: ewdsclimatecopernicuseu
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/fungiensemblorg.yaml
+Record ID: fungiensemblorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/protistsensemblorg.yaml
+Record ID: protistsensemblorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/metazoaensemblorg.yaml
+Record ID: metazoaensemblorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EU/Federal/scientific/egaarchiveorg.yaml
+Record ID: egaarchiveorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[PLACEHOLDER_OWNER_NAME]
+Count: 1
+Priority: MEDIUM
+
+File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
+Record ID: geonetworkalpinesoilseu
+Issue: PLACEHOLDER_OWNER_NAME
+Field: owner.name
+Current Value: Not specified
+Suggested Action: Replace placeholder owner name with a real organization name
+
+[PLACEHOLDER_TITLE]
+Count: 42
+Priority: MEDIUM
+
+File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
+Record ID: geoserver4d4scienceresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver4.d4science.research-infrastructures.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
+Record ID: geoserver4d4scienceresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver4.d4science.research-infrastructures.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: IT/Federal/geo/geoserverd4scienceiiresearchinfrastructureseu.yaml
+Record ID: geoserverd4scienceiiresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.d4science-ii.research-infrastructures.eu:80/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: IT/Federal/geo/geoserverd4scienceiiresearchinfrastructureseu.yaml
+Record ID: geoserverd4scienceiiresearchinfrastructureseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geoserver.d4science-ii.research-infrastructures.eu:80/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/geo/eodcopeneo.yaml
+Record ID: eodcopeneo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: openeo.eodc.eu/v1.0/
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/geo/eodcopeneo.yaml
+Record ID: eodcopeneo
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: openeo.eodc.eu/v1.0/
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/geo/geonetworkmoodh2020eu.yaml
+Record ID: geonetworkmoodh2020eu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.mood-h2020.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/geo/geonetworkmoodh2020eu.yaml
+Record ID: geonetworkmoodh2020eu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.mood-h2020.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/geo/metadatamicaprojecteu.yaml
+Record ID: metadatamicaprojecteu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: metadata.mica-project.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/geo/metadatamicaprojecteu.yaml
+Record ID: metadatamicaprojecteu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: metadata.mica-project.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
+Record ID: livelanguagedatascientiaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: livelanguage.datascientia.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/opendata/livelanguagedatascientiaeu.yaml
+Record ID: livelanguagedatascientiaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: livelanguage.datascientia.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/opendata/publicationseuropaeu.yaml
+Record ID: publicationseuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: publications.europa.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/opendata/publicationseuropaeu.yaml
+Record ID: publicationseuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: publications.europa.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/opendata/riinternetofuseu.yaml
+Record ID: riinternetofuseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ri.internetofus.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/opendata/riinternetofuseu.yaml
+Record ID: riinternetofuseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: ri.internetofus.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/forestdiscomapeeaeuropaeu.yaml
+Record ID: forestdiscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: forest.discomap.eea.europa.eu/arcgis/rest/services
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/forestdiscomapeeaeuropaeu.yaml
+Record ID: forestdiscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: forest.discomap.eea.europa.eu/arcgis/rest/services
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/prodgeoserveremodnetphysicseu.yaml
+Record ID: prodgeoserveremodnetphysicseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: prod-geoserver.emodnet-physics.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/prodgeoserveremodnetphysicseu.yaml
+Record ID: prodgeoserveremodnetphysicseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: prod-geoserver.emodnet-physics.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/imagediscomapeeaeuropaeu.yaml
+Record ID: imagediscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: image.discomap.eea.europa.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/imagediscomapeeaeuropaeu.yaml
+Record ID: imagediscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: image.discomap.eea.europa.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/marineprojectsopeneartheu.yaml
+Record ID: marineprojectsopeneartheu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: marineprojects.openearth.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/marineprojectsopeneartheu.yaml
+Record ID: marineprojectsopeneartheu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: marineprojects.openearth.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/hubgeosmartcityeu.yaml
+Record ID: hubgeosmartcityeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hub.geosmartcity.eu/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/hubgeosmartcityeu.yaml
+Record ID: hubgeosmartcityeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hub.geosmartcity.eu/geonetwork
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
+Record ID: geonetworkalpinesoilseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.alpinesoils.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
+Record ID: geonetworkalpinesoilseu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geonetwork.alpinesoils.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/copernicusdiscomapeeaeuropaeu.yaml
+Record ID: copernicusdiscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: copernicus.discomap.eea.europa.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/copernicusdiscomapeeaeuropaeu.yaml
+Record ID: copernicusdiscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: copernicus.discomap.eea.europa.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/cachemap2webeu.yaml
+Record ID: cachemap2webeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: map2web.eu/seeboden
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/chwopeneartheu.yaml
+Record ID: chwopeneartheu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: chw.openearth.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/chwopeneartheu.yaml
+Record ID: chwopeneartheu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: chw.openearth.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/kindrakindraprojecteu.yaml
+Record ID: kindrakindraprojecteu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: kindra.kindraproject.eu/geonetwork
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/marinediscomapeeaeuropaeu.yaml
+Record ID: marinediscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: marine.discomap.eea.europa.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/marinediscomapeeaeuropaeu.yaml
+Record ID: marinediscomapeeaeuropaeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: marine.discomap.eea.europa.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/geo/hellaseugeniusassoeu.yaml
+Record ID: hellaseugeniusassoeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hellas.eugenius-asso.eu/geoserver
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/geo/hellaseugeniusassoeu.yaml
+Record ID: hellaseugeniusassoeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: hellas.eugenius-asso.eu/geoserver
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/scientific/usegalaxyeu.yaml
+Record ID: usegalaxyeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: usegalaxy.eu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/scientific/usegalaxyeu.yaml
+Record ID: usegalaxyeu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: usegalaxy.eu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: EU/Federal/scientific/eurfigsharecom.yaml
+Record ID: eurfigsharecom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: eur.figshare.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: EU/Federal/scientific/eurfigsharecom.yaml
+Record ID: eurfigsharecom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: eur.figshare.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
 Count: 20
@@ -173,4 +550,43 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 === SUMMARY BY ISSUE TYPE ===
 
 DUPLICATE_LINK: 2 issues
+MISSING_API_STATUS: 1 issues
+MISSING_CONTENT_TYPES: 1 issues
+MISSING_ENDPOINTS: 6 issues
+PLACEHOLDER_OWNER_NAME: 1 issues
+PLACEHOLDER_TITLE: 42 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 20 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: hubgeosmartcityeu
+File: EU/Federal/geo/hubgeosmartcityeu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: geonetworkalpinesoilseu
+File: EU/Federal/geo/geonetworkalpinesoilseu.yaml
+Issue Count: 3
+Issues:
+  - PLACEHOLDER_OWNER_NAME: owner.name
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: chwopeneartheu
+File: EU/Federal/geo/chwopeneartheu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: usegalaxyeu
+File: EU/Federal/scientific/usegalaxyeu.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Government data catalog of the Department of Airports, Thailand.
+endpoints:
+- type: ckan
+  url: https://gdcatalog.airports.go.th/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://gdcatalog.airports.go.th/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://gdcatalog.airports.go.th/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://gdcatalog.airports.go.th/catalog.n3
+- type: dcat:ttl
+  url: https://gdcatalog.airports.go.th/catalog.ttl
+- type: dcat:xml
+  url: https://gdcatalog.airports.go.th/catalog.xml
+- type: dcat:jsonld
+  url: https://gdcatalog.airports.go.th/catalog.jsonld
+id: gdcatalogairportsgoth
+langs:
+- id: TH
+  name: Thai
+link: https://gdcatalog.airports.go.th/
+name: Department of Airports Government Data Catalog
+owner:
+  link: https://www.airports.go.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Department of Airports
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- transport
+- aviation
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+uid: cdi00020406

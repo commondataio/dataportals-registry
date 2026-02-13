@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -22,6 +22,16 @@ description: Open Data portal presenting data about lectures, rooms, and organiz
   develops automated and community-driven data quality improvement techniques and
   integrates pilot implementations into existing Open Data portals for enhanced usability
   and accessibility for non-expert users.
+endpoints:
+- type: ckan
+  url: https://data.wu.ac.at/portal/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.wu.ac.at/portal/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.wu.ac.at/portal/api/3/action/package_list
+  version: '3'
 id: datawuacat
 langs:
 - id: DE

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -23,7 +23,7 @@ langs:
 - id: EN
   name: English
 link: https://kmi.dpaw.wa.gov.au/geoserver
-name: geoserver.kmi.dpaw.wa.gov.au
+name: Department of Biodiversity, Conservation and Attractions (DBCA) Geoportal
 owner:
   link: https://kmi.dpaw.wa.gov.au/geoserver
   location:
@@ -73,3 +73,7 @@ topics:
   name: Boundaries
   type: iso19115
 uid: temp00003369
+endpoints:
+- type: wms130
+  url: https://kmi.dpaw.wa.gov.au/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
