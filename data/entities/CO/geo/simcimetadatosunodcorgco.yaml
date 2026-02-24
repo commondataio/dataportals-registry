@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,12 +17,15 @@ coverage:
       name: South America
 description: A catalog application to manage spatially referenced resources, providing
   metadata editing and search functions as well as an interactive web map viewer.
+endpoints:
+- type: geonetwork:records
+  url: https://simcimetadatos.unodc.org.co/geonetwork/srv/api/records
 id: simcimetadatosunodcorgco
 langs:
 - id: ES
   name: Spanish
 link: https://simcimetadatos.unodc.org.co/geonetwork
-name: simcimetadatos.unodc.org.co
+name: UNODC Colombia GeoNetwork Catalog
 owner:
   link: https://simcimetadatos.unodc.org.co/geonetwork
   location:
@@ -49,7 +52,13 @@ tags:
 - GIS
 - geospatial
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00004134

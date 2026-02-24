@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,12 +19,15 @@ coverage:
       id: CN-FJ
       name: Fujian
 description: ArcGIS REST Services Directory for mapping and geospatial data services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://zsbs.sp.fuzhou.gov.cn/arcgis/rest/services/info?f=pjson
 id: zsbsspfuzhougovcn
 langs:
 - id: ZH
   name: Chinese
 link: https://zsbs.sp.fuzhou.gov.cn/arcgis/rest/services
-name: zsbs.sp.fuzhou.gov.cn/arcgis/rest/services
+name: Fuzhou ArcGIS Services
 owner:
   link: https://zsbs.sp.fuzhou.gov.cn/arcgis/rest/services
   location:

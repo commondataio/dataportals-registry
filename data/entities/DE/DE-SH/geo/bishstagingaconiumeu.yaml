@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+description: Staging instance of BISH (Breitband-Informationssystem Schleswig-Holstein).
+  Interactive maps and data on broadband and digital infrastructure in Schleswig-Holstein.
+  Hosted by Aconium.
+endpoints:
+- type: geonode:layers
+  url: https://bish-staging.aconium.eu/api/layers/
+- type: geonode:documents
+  url: https://bish-staging.aconium.eu/api/documents/
+- type: csw202
+  url: https://bish-staging.aconium.eu/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://bish-staging.aconium.eu/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://bish-staging.aconium.eu/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://bish-staging.aconium.eu/sitemap.xml
+- type: opensearch
+  url: https://bish-staging.aconium.eu/catalogue/opensearch
+id: bishstagingaconiumeu
+langs:
+- id: DE
+  name: German
+link: https://bish-staging.aconium.eu/
+name: BISH Staging - Breitband-Informationssystem Schleswig-Holstein
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-SH
+      name: Schleswig-Holstein
+  name: Schleswig-Holstein (Breitbandatlas)
+  type: Regional government
+  link: https://aconium.eu
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geoportal
+- GeoNode
+- broadband
+- digital infrastructure
+- Schleswig-Holstein
+- staging
+uid: cdi00021484
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+content_types:
+- dataset
+- map_layer

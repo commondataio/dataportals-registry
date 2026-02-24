@@ -1,31 +1,36 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: AU
 Total Records with Issues: 2
 Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[DUPLICATE_LINK]
-Count: 2
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
+Count: 1
+Priority: IMPORTANT
 
-File: AU/AU-NSW/opendata/datanswgovauckan.yaml
-Record ID: datanswgovauckan
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+File: AU/Federal/scientific/seedbankalaorgau.yaml
+Record ID: seedbankalaorgau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
-File: AU/AU-NSW/opendata/datanswgovau.yaml
-Record ID: datanswgovau
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data.nsw.gov.au/data', 'record_ids': ['datanswgovauckan', 'datanswgovau']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA]
+Count: 1
+Priority: IMPORTANT
+
+File: AU/Federal/geo/digitalatlasgovau.yaml
+Record ID: digitalatlasgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+Field: endpoints
+Current Value: {'software_id': 'terria', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='terria' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA: 1 issue

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,19 +16,25 @@ coverage:
       id: '030'
       name: Eastern Asia
 description: GIS and mapping data services, accessible via REST API
+endpoints:
+- type: arcgis:rest:info
+  url: https://tdtxy.xinyu.gov.cn:6443/arcgis/rest/services/info?f=pjson
 id: tdtxyxinyugovcn
 langs:
 - id: ZH
   name: Chinese
 link: https://tdtxy.xinyu.gov.cn:6443/arcgis/rest/services
-name: tdtxy.xinyu.gov.cn:6443
+name: Xinyu ArcGIS Services
 owner:
   link: https://xinyu.gov.cn
   location:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
+    subregion:
+      id: CN-JX
+      name: Jiangxi
   name: Local Government of ArcGIS
   type: Local government
 properties:

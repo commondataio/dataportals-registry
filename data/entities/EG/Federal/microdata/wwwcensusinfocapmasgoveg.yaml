@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - dataset
@@ -18,12 +18,17 @@ description: The Central Data Catalog managed by the Central Agency for Public M
   and Statistics (CAPMAS) - Egypt, Arab Rep. Government. It contains datasets and
   metadata related to statistics, health, transport, household surveys, and informatics
   bulletins.
+endpoints:
+- type: nada:catalog-search
+  url: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2/index.php/catalog/export/csv?ps=5000&collection[]
 id: wwwcensusinfocapmasgoveg
 langs:
 - id: EN
   name: English
 link: https://www.censusinfo.capmas.gov.eg/Metadata-ar-v4.2
-name: www.censusinfo.capmas.gov.eg
+name: CAPMAS Census Metadata Catalog
 owner:
   link: https://www.capmas.gov.eg
   location:

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoNode instance for sharing geospatial data and apps (Datasets, Documents,
+  Maps, GeoStories, Dashboards). Hosted on gis4cloud.pt.
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.gis4cloud.pt/api/datasets/
+- type: geonode:documents
+  url: https://geonode.gis4cloud.pt/api/documents/
+- type: csw202
+  url: https://geonode.gis4cloud.pt/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.gis4cloud.pt/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.gis4cloud.pt/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://geonode.gis4cloud.pt/sitemap.xml
+id: geonodegis4cloudpt
+langs:
+- id: PT
+  name: Portuguese
+- id: EN
+  name: English
+link: https://geonode.gis4cloud.pt
+name: LJG GeoNode
+owner:
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+  name: gis4cloud
+  type: Other
+  link: https://gis4cloud.pt
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- Portugal
+uid: cdi00021542
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+content_types:
+- dataset
+- map_layer

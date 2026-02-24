@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Geoserver data catalog. This geoportal. managed by North Devon Council.
+  provides access to datasets and resources.
+id: inspirenorthdevongovuk
+langs:
+- id: EN
+  name: English
+link: http://inspire.northdevon.gov.uk/geoserver
+name: North Devon Council Geoportal
+owner:
+  link: http://inspire.northdevon.gov.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: North Devon Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- United Kingdom
+- geoserver
+- geospatial
+- local government
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005007
+endpoints:
+- type: wms111
+  url: http://inspire.northdevon.gov.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://inspire.northdevon.gov.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0

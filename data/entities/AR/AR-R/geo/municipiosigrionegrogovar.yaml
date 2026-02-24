@@ -68,6 +68,8 @@ endpoints:
 - type: wms-c111
   url: http://municipiosig.rionegro.gov.ar/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
   version: 1.1.1
+- type: sitemap
+  url: http://municipiosig.rionegro.gov.ar/sitemap.xml
 id: municipiosigrionegrogovar
 langs:
 - id: ES
@@ -104,7 +106,13 @@ tags:
 - geospatial
 - government
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00002718

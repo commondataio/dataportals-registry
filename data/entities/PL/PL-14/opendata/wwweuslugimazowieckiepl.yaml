@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,7 +16,7 @@ coverage:
       name: 'Eastern Europe '
     subregion:
       id: PL-14
-      name: Mazovia
+      name: Mazowieckie
 description: Open data catalog of the Mazowieckie region, providing access to various
   datasets.
 id: wwweuslugimazowieckiepl
@@ -34,7 +34,7 @@ owner:
     level: 30
     subregion:
       id: PL-14
-      name: Mazovia
+      name: Mazowieckie
   name: Masovian Voivodeship Office in Warsaw
   type: Regional government
 properties:
@@ -59,3 +59,7 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00004822
+endpoints:
+- type: ckan:api
+  url: https://www.e-uslugi.mazowieckie.pl/api/3/action/package_list
+  version: '3.0'

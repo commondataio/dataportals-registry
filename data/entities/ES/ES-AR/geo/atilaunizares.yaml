@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -29,6 +29,9 @@ owner:
       id: ES
       name: Spain
     level: 20
+    subregion:
+      id: ES-AR
+      name: Aragon
   name: University of Zaragoza
   type: Academy
 properties:
@@ -56,3 +59,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00004962
+endpoints:
+- type: ogc:wms
+  url: https://atila.unizar.es:8081/geoserver/wms
+- type: ogc:wfs
+  url: https://atila.unizar.es:8081/geoserver/wfs

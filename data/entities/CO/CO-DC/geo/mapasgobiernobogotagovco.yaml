@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,12 +20,15 @@ coverage:
       name: Distrito Capital de Bogota
 description: Data catalog providing access to map and geospatial data services for
   Bogotá.
+endpoints:
+- type: arcgis:rest:services
+  url: https://mapas.gobiernobogota.gov.co/waserver/services?f=pjson
 id: mapasgobiernobogotagovco
 langs:
 - id: ES
   name: Spanish
 link: https://mapas.gobiernobogota.gov.co/waserver/services
-name: mapas.gobiernobogota.gov.co/waserver/services
+name: Gobierno de Bogota Map Services
 owner:
   link: https://mapas.gobiernobogota.gov.co
   location:

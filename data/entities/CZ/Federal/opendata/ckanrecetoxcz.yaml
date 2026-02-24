@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: RECETOX Data Catalogue - CKAN-based catalog of research datasets from
+  Masaryk University's Research Centre for Toxic Compounds in the Environment, including
+  CELSPAC population studies, environmental monitoring networks, and chemical risk
+  assessment data.
+endpoints:
+- type: ckan
+  url: https://ckan.recetox.cz/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.recetox.cz/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.recetox.cz/api/3/action/package_list
+  version: '3'
+id: ckanrecetoxcz
+langs:
+- id: EN
+  name: English
+- id: CS
+  name: Czech
+link: https://ckan.recetox.cz/
+name: RECETOX Data Catalogue
+owner:
+  link: https://muni.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Masaryk University (RECETOX)
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- research data
+- environmental monitoring
+- population studies
+- CKAN
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00020532

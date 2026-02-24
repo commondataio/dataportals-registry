@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Indicators catalog
 content_types:
@@ -15,6 +16,9 @@ coverage:
       name: Western Europe
 description: NBB.Stat is the online database of the National Bank of Belgium providing
   extensive macroeconomic statistics.
+endpoints:
+- type: stattech:api
+  url: https://stat.nbb.be/api
 id: statnbbbe
 langs:
 - id: EN
@@ -50,7 +54,7 @@ tags:
 - bank
 - Belgium
 topics:
-- Statistics
-- Indicators
-- Metrics
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 uid: cdi00000139

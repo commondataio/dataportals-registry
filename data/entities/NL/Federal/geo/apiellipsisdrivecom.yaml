@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Sample raster data for SkyServe missions, served via Ellipsis Drive STAC API.
+endpoints:
+- type: stacserverapi
+  url: https://api.ellipsis-drive.com/v3/ogc/stac/catalog/8a059125-b93d-4dda-b69b-9130fbe9f55e/epat_UK6PDdbzeJpySAvkdV55lztWjjrUZZmFzlYUQPbRFK2VnCxJQZ9twUJlv4ksKGc8
+id: apiellipsisdrivecom
+langs:
+- id: EN
+  name: English
+link: https://api.ellipsis-drive.com/v3/ogc/stac/catalog/8a059125-b93d-4dda-b69b-9130fbe9f55e/epat_UK6PDdbzeJpySAvkdV55lztWjjrUZZmFzlYUQPbRFK2VnCxJQZ9twUJlv4ksKGc8
+name: SkyServe Mission Data
+owner:
+  link: https://ellipsis-drive.com
+  location:
+    country: *id001
+    level: 20
+  name: SkyServe Mission Data
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021396

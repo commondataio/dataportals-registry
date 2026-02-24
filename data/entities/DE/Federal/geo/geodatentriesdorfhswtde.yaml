@@ -15,11 +15,10 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: GIS and geospatial data catalog operated by Hochschule Weihenstephan-Triesdorf
-  (HSWT), a University of Applied Sciences.
+description: GeoNode-based geospatial data portal of Hochschule Weihenstephan-Triesdorf
+  (HSWT), providing access to datasets, maps, and services with a focus on
+  agriculture and environment-related topics.
 endpoints:
-- type: geonode:layers
-  url: https://geodaten.triesdorf.hswt.de/api/layers/
 - type: geonode:documents
   url: https://geodaten.triesdorf.hswt.de/api/documents/
 - type: wms111
@@ -77,14 +76,18 @@ endpoints:
   version: 1.1.1
 - type: geoserver:settings
   url: https://geodaten.triesdorf.hswt.de/geoserver/rest/settings
+- type: geoserver:version
+  url: https://geodaten.triesdorf.hswt.de/geoserver/rest/about/version
 - type: geoserver:layers
   url: https://geodaten.triesdorf.hswt.de/geoserver/rest/layers
+- type: opensearch
+  url: https://geodaten.triesdorf.hswt.de/catalogue/opensearch
 id: geodatentriesdorfhswtde
 langs:
 - id: DE
   name: German
 link: https://geodaten.triesdorf.hswt.de
-name: geodaten.triesdorf.hswt.de
+name: HSWT Geodatenportal Triesdorf
 owner:
   link: https://www.hswt.de/en/
   location:

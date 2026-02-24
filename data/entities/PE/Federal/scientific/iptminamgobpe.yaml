@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,12 @@ coverage:
 description: The mission of the Ministry of Environment of Peru is to promote the
   environmental sustainability by means of conserving, protecting, recovering and
   ensuring environmental conditions, ecosystems and natural resources.
+endpoints:
+- type: ipt:dataset
+  url: http://ipt.minam.gob.pe/inventory/dataset
+- type: rss
+  url: http://ipt.minam.gob.pe/rss.do
+  version: '2.0'
 id: iptminamgobpe
 langs:
 - id: ES

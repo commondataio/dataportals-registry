@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Constructed Wetlands Knowledge Platform - GeoNode-based WebGIS and database
+  for constructed wetlands data. Global standardized data collection and management
+  for research, policy, and nature-based solutions (NbS). Operated by Leibniz University
+  Hannover, Institute of Botany (LUH-BOT) with l3S research center.
+endpoints:
+- type: geonode:layers
+  url: https://data.cwetlandsdata.com/api/layers/
+- type: geonode:documents
+  url: https://data.cwetlandsdata.com/api/documents/
+- type: dcatus11
+  url: https://data.cwetlandsdata.com/data.json
+- type: csw202
+  url: https://data.cwetlandsdata.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://data.cwetlandsdata.com/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://data.cwetlandsdata.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://data.cwetlandsdata.com/sitemap.xml
+- type: opensearch
+  url: https://data.cwetlandsdata.com/catalogue/opensearch
+id: datacwetlandsdatacom
+langs:
+- id: EN
+  name: English
+link: https://data.cwetlandsdata.com/
+name: CWetlands Data - Constructed Wetlands Knowledge Platform
+owner:
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Leibniz University Hannover, Institute of Botany (LUH-BOT)
+  type: Higher education
+  link: https://cwetlandsdata.com
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Germany
+- geoportal
+- GeoNode
+- constructed wetlands
+- wastewater
+- nature-based solutions
+- WebGIS
+uid: cdi00021651
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+content_types:
+- dataset
+- map_layer

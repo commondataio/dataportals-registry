@@ -1,163 +1,48 @@
 DATA QUALITY REPORT - COUNTRY: SI
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: SI
-Total Records with Issues: 10
-Total Issues Found: 18
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 1
-Priority: MEDIUM
-
-File: SI/geo/collectionssentinelhubcom.yaml
-Record ID: collectionssentinelhubcom
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[PLACEHOLDER_TITLE]
-Count: 13
-Priority: MEDIUM
-
-File: SI/indicators/pxbsisi.yaml
-Record ID: pxbsisi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: pxweb.stat.si
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/gisarsogovsi.yaml
-Record ID: gisarsogovsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.arso.gov.si
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/gisarsogovsi.yaml
-Record ID: gisarsogovsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.arso.gov.si
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SI/geo/gis3fursgovsi.yaml
-Record ID: gis3fursgovsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis3.furs.gov.si
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/gis3fursgovsi.yaml
-Record ID: gis3fursgovsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis3.furs.gov.si
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SI/geo/gisservergeozssi.yaml
-Record ID: gisservergeozssi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisserver.geo-zs.si/arcgis/rest/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/gisservergeozssi.yaml
-Record ID: gisservergeozssi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisserver.geo-zs.si/arcgis/rest/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SI/geo/gisakosrssi.yaml
-Record ID: gisakosrssi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.akos-rs.si
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/gisakosrssi.yaml
-Record ID: gisakosrssi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.akos-rs.si
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SI/geo/prostor4govsi.yaml
-Record ID: prostor4govsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: prostor4.gov.si/imps
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/geo/prostor4govsi.yaml
-Record ID: prostor4govsi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: prostor4.gov.si/imps
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SI/SI-061/geo/pobudeljubljanasi.yaml
-Record ID: pobudeljubljanasi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: pobude.ljubljana.si/arcgis/rest/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SI/SI-061/geo/pobudeljubljanasi.yaml
-Record ID: pobudeljubljanasi
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: pobude.ljubljana.si/arcgis/rest/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 4
 Priority: IMPORTANT
 
-File: SI/indicators/podatkinijzsi.yaml
-Record ID: podatkinijzsi
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SI/indicators/nesstar2adpfdvuniljsi.yaml
-Record ID: nesstar2adpfdvuniljsi
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
-
-File: SI/indicators/pxbsisi.yaml
-Record ID: pxbsisi
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
 File: SI/geo/prostor4govsi.yaml
 Record ID: prostor4govsi
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR]
+Count: 1
+Priority: IMPORTANT
+
+File: SI/indicators/nesstar2adpfdvuniljsi.yaml
+Record ID: nesstar2adpfdvuniljsi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
+Count: 1
+Priority: IMPORTANT
+
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issues
-PLACEHOLDER_TITLE: 13 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 4 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: prostor4govsi
-File: SI/geo/prostor4govsi.yaml
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING: endpoints
-  - PLACEHOLDER_TITLE: name
-  - PLACEHOLDER_TITLE: name
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue

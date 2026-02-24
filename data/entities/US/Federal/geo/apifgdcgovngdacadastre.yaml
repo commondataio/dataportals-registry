@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Cadastre information from the U.S. Past, current, and future rights and
+  interests in real property including the spatial information necessary to describe
+  geographic extents.
+endpoints:
+- type: stacserverapi
+  url: https://api.fgdc.gov/ngda/cadastre/
+id: apifgdcgovngdacadastre
+langs:
+- id: EN
+  name: English
+link: https://api.fgdc.gov/ngda/cadastre/
+name: 🇺🇸 United States | Cadastre Data Theme
+owner:
+  link: https://www.fgdc.gov/
+  location:
+    country: *id001
+    level: 20
+  name: Federal Geographic Data Committee
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021364

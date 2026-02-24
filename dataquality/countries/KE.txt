@@ -1,99 +1,55 @@
 DATA QUALITY REPORT - COUNTRY: KE
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: KE
-Total Records with Issues: 7
-Total Issues Found: 11
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
-[PLACEHOLDER_TITLE]
-Count: 8
-Priority: MEDIUM
-
-File: KE/Federal/microdata/microdataportalaphrcorg.yaml
-Record ID: microdataportalaphrcorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: microdataportal.aphrc.org
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KE/Federal/microdata/microdataportalaphrcorg.yaml
-Record ID: microdataportalaphrcorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: microdataportal.aphrc.org
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: KE/Federal/geo/geodataarinafricaorg.yaml
-Record ID: geodataarinafricaorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geodata.arin-africa.org
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KE/Federal/geo/geodataarinafricaorg.yaml
-Record ID: geodataarinafricaorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geodata.arin-africa.org
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: KE/Federal/geo/geoportalrcmrdorg.yaml
-Record ID: geoportalrcmrdorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.rcmrd.org
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KE/Federal/geo/geoportalrcmrdorg.yaml
-Record ID: geoportalrcmrdorg
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.rcmrd.org
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: KE/Federal/geo/gisportalkengencoke.yaml
-Record ID: gisportalkengencoke
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisportal.kengen.co.ke
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KE/Federal/geo/gisportalkengencoke.yaml
-Record ID: gisportalkengencoke
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisportal.kengen.co.ke
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 3
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 2
 Priority: IMPORTANT
 
-File: KE/Federal/geo/mapsvirtualkenyaorg.yaml
-Record ID: mapsvirtualkenyaorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: KE/Federal/scientific/datailriorg.yaml
+File: KE/Federal/opendata/datailriorg.yaml
 Record ID: datailriorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: Unknown/Other/opendata/genderopendataorg.yaml
 Record ID: genderopendataorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE]
+Count: 1
+Priority: IMPORTANT
+
+File: World/Federal/geo/maspawionet.yaml
+Record ID: maspawionet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
+Count: 1
+Priority: IMPORTANT
+
+File: KE/Federal/geo/mapsvirtualkenyaorg.yaml
+Record ID: mapsvirtualkenyaorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-PLACEHOLDER_TITLE: 8 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue

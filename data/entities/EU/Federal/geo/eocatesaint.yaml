@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ESA Earth Observation Catalogue (EOCAT) provides interoperable access,
+  following ISO/OGC interface guidelines, to Earth observation metadata and imagery
+  from ESA and third-party satellite missions (e.g. Aeolus, CryoSat, SMOS, Swarm).
+endpoints:
+- type: stacserverapi
+  url: https://eocat.esa.int/eo-catalogue/
+id: eocatesaint
+langs:
+- id: EN
+  name: English
+link: https://eocat.esa.int/eo-catalogue/
+name: ESA Earth Observation Catalogue (EOCAT)
+owner:
+  link: https://www.esa.int
+  location:
+    country: *id001
+    level: 20
+  name: European Space Agency
+  type: International organization
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021407

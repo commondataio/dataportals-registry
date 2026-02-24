@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,14 +21,17 @@ langs:
 - id: IT
   name: Italian
 link: https://dati.retecivica.bz.it
-name: dati.retecivica.bz.it
+name: Open data portal - Local Government of Retecivica
 owner:
   link: https://retecivica.bz.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
+    subregion:
+      id: IT-32
+      name: Trentino-Alto Adige
   name: Local Government of Retecivica
   type: Local government
 rights:
@@ -47,6 +50,11 @@ tags:
 - ckan
 - open data
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00004704
+endpoints:
+- type: ckan:package-list
+  url: https://dati.retecivica.bz.it/api/3/action/package_list
+  version: '3'

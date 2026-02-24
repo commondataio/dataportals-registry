@@ -1,0 +1,109 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: InfoTool zur Klimaanpassung (Co-Site). GeoNode with datasets, maps, documents,
+  GeoStories, and dashboards for climate adaptation in regions such as Leverkusen,
+  Kerpen, and Rhein-Erft-Kreis.
+endpoints:
+- type: geonode:documents
+  url: https://infotool.thk.52north.org/api/documents/
+- type: csw202
+  url: https://infotool.thk.52north.org/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://infotool.thk.52north.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://infotool.thk.52north.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://infotool.thk.52north.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: infotoolthk52northorg
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://infotool.thk.52north.org
+name: InfoTool zur Klimaanpassung
+owner:
+  link: https://52north.org
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: 52°North
+  type: Other
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Germany
+- geoportal
+- GeoNode
+- climate adaptation
+- NRW
+uid: cdi00021699
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+content_types:
+- dataset
+- map_layer

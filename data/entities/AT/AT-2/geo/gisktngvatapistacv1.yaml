@@ -1,0 +1,57 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: AT
+      name: Austria
+    macroregion:
+      id: '155'
+      name: Western Europe
+    level: 20
+    subregion: &id002
+      id: AT-2
+      name: Karnten
+description: STAC KAGIS - Land Kärnten (Carinthia, Austria)
+endpoints:
+- type: stacserverapi
+  url: https://gis.ktn.gv.at/api/stac/v1/
+id: gisktngvatapistacv1
+langs:
+- id: EN
+  name: English
+link: https://gis.ktn.gv.at/api/stac/v1/
+name: KAGIS Katalog
+owner:
+  link: https://www.ktn.gv.at/
+  location:
+    country: *id001
+    level: 20
+    subregion: *id002
+  name: KAGIS Katalog
+  type: Other
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: geospatial
+  name: Geospatial
+  type: general
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021398

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -29,7 +29,7 @@ owner:
     country:
       id: FR
       name: France
-    level: 50
+    level: 30
     subregion:
       id: FR-NOR
       name: Normandie
@@ -58,3 +58,6 @@ topics:
 uid: cdi00011085
 description: Open data portal. managed by Cœur Côte Fleurie. providing access to cœur
   côte fleurie.
+endpoints:
+- type: ckan:api
+  url: http://data.coeurcotefleurie.org/api/3/action/package_list

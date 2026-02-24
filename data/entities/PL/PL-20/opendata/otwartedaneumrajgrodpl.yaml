@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+    subregion:
+      id: PL-20
+      name: Podlaskie
+description: Portal otwartych danych Urzędu Miejskiego w Rajgrodzie, zawierający zbiory
+  danych tworzonych i przetwarzanych przez samorząd gminy.
+endpoints:
+- type: ckan
+  url: https://otwartedane.umrajgrod.pl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://otwartedane.umrajgrod.pl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://otwartedane.umrajgrod.pl/api/3/action/package_list
+  version: '3'
+id: otwartedaneumrajgrodpl
+langs:
+- id: PL
+  name: Polish
+link: https://otwartedane.umrajgrod.pl
+name: Portal Otwartych Danych Urzędu Miejskiego w Rajgrodzie
+owner:
+  link: https://umrajgrod.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-20
+      name: Podlaskie
+  name: Urząd Miejski w Rajgrodzie
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- rajgród
+- municipality
+- poland
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+uid: cdi00020644

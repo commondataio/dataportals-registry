@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-CL
+      name: Castilla y Leon
+description: GeoNetwork metadata catalog of the Infraestructura de Datos Espaciales
+  de Castilla y León (IDECyL), providing discovery of spatial datasets for the region.
+endpoints:
+- type: geonetwork:query
+  url: https://idecyl.jcyl.es/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://idecyl.jcyl.es/geonetwork/srv/api/records
+- type: csw202
+  url: https://idecyl.jcyl.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+id: idecyljcylesgeonetwork
+langs:
+- id: ES
+  name: Spanish
+link: https://idecyl.jcyl.es/geonetwork
+name: IDECyL GeoNetwork
+owner:
+  link: https://idecyl.jcyl.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-CL
+      name: Castilla y Leon
+  name: Junta de Castilla y León
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- GeoNetwork
+- Spain
+- geoportal
+- geospatial
+- metadata
+- Castilla y León
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021761

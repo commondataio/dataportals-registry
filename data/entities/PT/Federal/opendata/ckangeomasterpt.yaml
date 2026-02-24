@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: CKAN open data portal for geographic and agricultural data in Portugal
+endpoints:
+- type: ckan
+  url: https://ckan.geomaster.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.geomaster.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.geomaster.pt/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://ckan.geomaster.pt/catalog.n3
+- type: dcat:ttl
+  url: https://ckan.geomaster.pt/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.geomaster.pt/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.geomaster.pt/catalog.jsonld
+id: ckangeomasterpt
+langs:
+- id: PT
+  name: Portugal
+link: https://ckan.geomaster.pt
+name: GeoMaster CKAN
+owner:
+  link: https://geomaster.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+  name: GeoMaster
+  type: Other
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+- open data
+- CKAN
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020524

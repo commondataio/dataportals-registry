@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -9,7 +9,7 @@ coverage:
 - location:
     country:
       id: PH
-      name: Phillipines
+      name: Philippines
     level: 20
     macroregion:
       id: '035'
@@ -37,6 +37,14 @@ description: "ASEAN Centre for Biodiversity Integrated Publishing Toolkit\r\nThe
   \ biodiversity in the ASEAN is realised and ensured\r\n\r\nTechnical contact person\r\
   \nNode Manager : Kit Elloran\r\nNode name : ASEAN Centre for Biodiversity\r\nBiodiversity\
   \ Informatics and Geospatial Analysis\r\nNode website : https://dashboard.aseanbiodiversity.org"
+endpoints:
+- type: dcat:ttl
+  url: https://bkmd.aseanbiodiversity.org/ipt/dcat
+- type: ipt:dataset
+  url: https://bkmd.aseanbiodiversity.org/ipt/inventory/dataset
+- type: rss
+  url: https://bkmd.aseanbiodiversity.org/ipt/rss.do
+  version: '2.0'
 id: bkmdaseanbiodiversityorg
 langs:
 - id: TL
@@ -48,7 +56,7 @@ owner:
   location:
     country:
       id: PH
-      name: Phillipines
+      name: Philippines
     level: 20
   name: ASEAN Centre for Biodiversity (ACB)
   type: Academy

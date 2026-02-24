@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='dkan' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+PH: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+opendatasaraiph: 1 issue
+
+=== ISSUES ===
+
+File: PH/Federal/opendata/opendatasaraiph.yaml
+Record ID: opendatasaraiph
+Country: PH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Field: endpoints
+Current Value: {"software_id": "dkan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions

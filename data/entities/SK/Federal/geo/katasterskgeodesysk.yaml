@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: 'Eastern Europe '
 description: Geo data services (likely map and cadastral data) provided via OGC services
   (WMS, WFS, etc.) under the Slovak Geodesy and Cartography authority.
+endpoints:
+- type: arcgis:rest:services
+  url: https://kataster.skgeodesy.sk/eskn/rest/services?f=pjson
 id: katasterskgeodesysk
 langs:
 - id: SK

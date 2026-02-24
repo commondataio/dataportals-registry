@@ -1,0 +1,51 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC API server for Terradue AI Extensions (stac-fastapi), providing
+  earth observation and geospatial datasets. First submission July 2024.
+endpoints:
+- type: stacserverapi
+  url: https://ai-extensions-stac.terradue.com
+id: aiextensionsstacterraduecom
+langs:
+- id: EN
+  name: English
+link: https://ai-extensions-stac.terradue.com
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: general
+name: Terradue AI Extensions STAC
+owner:
+  link: https://www.terradue.com
+  location:
+    country: *id001
+    level: 20
+  name: Terradue
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021410

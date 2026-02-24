@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,6 +24,12 @@ description: El proyecto de Metadatos Regional - Institucional es parte del plan
   de la IDEP y la IDE de la Región de Cajamarca a fin de tomar decisiones y usando
   estándares Internacionales y Nacionales para compatibilicar, armonizar e integrar
   funcionalidades y nivelar capacidades.
+endpoints:
+- type: geonetwork:query
+  url: https://metadatos.regioncajamarca.gob.pe:8080/geonetwork/srv/eng/q
+- type: csw202
+  url: https://metadatos.regioncajamarca.gob.pe:8080/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
 id: metadatosregioncajamarcagobpe
 langs:
 - id: ES

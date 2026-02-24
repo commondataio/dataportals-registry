@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Northern Europe
 description: Estonian Health Insurance Fund's official statistics portal, providing
   datasets on health insurance, benefits, and related topics.
+endpoints:
+- type: pxwebapi
+  url: https://statistika.haigekassa.ee/PXWeb/api/v1/en/
+  version: '1'
 id: statistikahaigekassaee
 langs:
 - id: ET

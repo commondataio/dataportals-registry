@@ -1,0 +1,112 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-IB
+      name: Illes Balears
+description: GeoServer instance providing geospatial data services for the Spatial
+  Data Infrastructure of Mallorca (IDEmallorca). Managed by TIC Mallorca, the Information
+  and Communication Technologies entity of the Consell de Mallorca, this geoportal
+  integrates and disseminates geographic information produced by the Consell de Mallorca,
+  aligning with the European INSPIRE Directive and Spain's national SDI (IDEE).
+id: ideticmallorcanet
+langs:
+- id: ES
+  name: Spanish
+- id: CA
+  name: Catalan
+link: http://ide.ticmallorca.net/geoserver
+name: TIC Mallorca - Consell de Mallorca Geoportal
+owner:
+  link: http://ticmallorca.net
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-IB
+      name: Illes Balears
+  name: TIC Mallorca - Consell de Mallorca
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geoserver
+- geospatial
+- geoportal
+- mallorca
+- spain
+- balearic-islands
+- SDI
+- INSPIRE
+- spatial-data-infrastructure
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00005548
+endpoints:
+- type: wms130
+  url: http://ide.ticmallorca.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: http://ide.ticmallorca.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: http://ide.ticmallorca.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: http://ide.ticmallorca.net/geoserver/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: http://ide.ticmallorca.net/geoserver/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: http://ide.ticmallorca.net/geoserver/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: sitemap
+  url: http://ide.ticmallorca.net/sitemap.xml

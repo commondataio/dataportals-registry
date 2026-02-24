@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Catalogs of AMAZONIA and CBERS 4/4A missions' imagery on AWS. Image files
+  are recorded and processed by INPE and converted to Cloud Optimized Geotiff (COG)
+  for cloud-based applications. Daily updated and hosted on AWS.
+endpoints:
+- type: stacserverapi
+  url: https://stac.scitekno.com.br/v100/
+id: stacsciteknocombr
+langs:
+- id: EN
+  name: English
+link: https://stac.scitekno.com.br/v100/
+name: CBERS/AMAZONIA on AWS
+owner:
+  link: https://scitekno.com.br
+  location:
+    country: *id001
+    level: 20
+  name: Scitekno
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021402

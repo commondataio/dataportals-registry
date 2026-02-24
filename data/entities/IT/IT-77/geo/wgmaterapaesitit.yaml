@@ -48,20 +48,30 @@ endpoints:
 - type: wmts100
   url: http://wgmatera.paesit.it/geoserver/gwc/service/wmts?REQUEST=GetCapabilities
   version: 1.0.0
+- type: geoserver:version
+  url: http://wgmatera.paesit.it/geoserver/rest/about/version
+- type: geoserver:settings
+  url: http://wgmatera.paesit.it/geoserver/rest/settings
+- type: wcs111
+  url: http://wgmatera.paesit.it/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: wgmaterapaesitit
 langs:
 - id: IT
   name: Italian
 link: http://wgmatera.paesit.it/geoserver
-name: wgmatera.paesit.it/geoserver
+name: Geoportal - Wgmatera Paesit
 owner:
   link: http://wgmatera.paesit.it/geoserver
   location:
     country:
       id: IT
       name: Italy
-    level: 20
-  name: Not specified
+    level: 30
+    subregion:
+      id: IT-77
+      name: Basilicata
+  name: Wgmatera Paesit
   type: Local government
 properties:
   has_doi: false

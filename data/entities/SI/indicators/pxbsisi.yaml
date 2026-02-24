@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -14,12 +15,16 @@ coverage:
       id: 039
       name: Southern Europe
 description: PX-Web 2017 v1 Data Series - Banka Slovenije
+endpoints:
+- type: pxwebapi
+  url: https://px.bsi.si/api/v1/en/
+  version: '1'
 id: pxbsisi
 langs:
 - id: EN
   name: English
 link: https://px.bsi.si
-name: pxweb.stat.si
+name: Bank of Slovenia Indicators Catalog
 owner:
   link: https://www.bsi.si
   location:
@@ -52,7 +57,7 @@ tags:
 - XLSX
 - JSON-stat
 topics:
-- Statistics
-- Indicators
-- Metrics
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
 uid: cdi00010187

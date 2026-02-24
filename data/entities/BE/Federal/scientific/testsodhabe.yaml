@@ -14,19 +14,29 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Social Sciences and Digital Humanities Archive – SODHA [test instance]
+description: Test instance of SODHA (Social Sciences and Digital Humanities Archive),
+  the Belgian federal data archive for social sciences and digital humanities. This
+  environment is used for testing and previewing repository functionality and API
+  behavior before production rollout.
 endpoints:
+- type: dataverseapi
+  url: https://test.sodha.be/api/search?q=*&type=dataset&sort=name&order=asc
 - type: dataverseapi
   url: https://test.sodha.be/api/search
 - type: oaipmh20
   url: https://test.sodha.be/oai?verb=Identify
   version: '2.0'
+- type: sitemap
+  url: https://test.sodha.be/sitemap.xml
 id: testsodhabe
+identifiers:
+- id: url
+  value: https://test.sodha.be
 langs:
 - id: FR
   name: French
 link: https://test.sodha.be
-name: SODHA [test instance]
+name: 'SODHA: Social Sciences and Digital Humanities Archive (Test)'
 owner:
   link: https://www.arch.be
   location:
@@ -38,6 +48,7 @@ owner:
   type: Academy
 properties:
   has_doi: true
+  transferable_topics: true
 rights:
   license_id: null
   license_name: null
@@ -52,6 +63,8 @@ status: active
 tags:
 - scientific
 - has_api
+- test
+- sandbox
 - Social Sciences
 - Digital Humanities
 - Research Data Management

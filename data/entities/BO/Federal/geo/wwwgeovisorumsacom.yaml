@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,12 +17,16 @@ coverage:
       name: South America
 description: GeoServer-based geospatial data catalog for Universidad Mayor de San
   Andrés (UMSA)
+endpoints:
+- type: wms111
+  url: http://www.geovisorumsa.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: wwwgeovisorumsacom
 langs:
 - id: ES
   name: Spanish
 link: http://www.geovisorumsa.com/geoserver
-name: www.geovisorumsa.com
+name: GeoVisor UMSA GeoServer
 owner:
   link: https://www.umsa.bo
   location:

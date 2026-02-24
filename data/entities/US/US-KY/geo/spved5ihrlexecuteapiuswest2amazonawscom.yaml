@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id002
+      id: US-KY
+      name: Kentucky
+description: This API delivers the Kentucky Aerial Photography and Elevation Data
+  (KYAPED) program data dating from 2010 - Present.  Collections are divided in three
+  phases (of collection) for each product  - leaf-off orthoimagery, LiDAR point cloud,
+  and LiDAR-derived digital elevation model.
+endpoints:
+- type: stacserverapi
+  url: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/
+id: spved5ihrlexecuteapiuswest2amazonawscom
+langs:
+- id: EN
+  name: English
+link: https://spved5ihrl.execute-api.us-west-2.amazonaws.com/
+name: Kentucky From Above SpatioTemporal Asset Catalog
+owner:
+  link: https://kygeonet.ky.gov
+  location:
+    country: *id001
+    level: 20
+    subregion: *id002
+  name: Kentucky From Above SpatioTemporal Asset Catalog
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: earth_observation
+  name: Earth observation
+  type: general
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021371

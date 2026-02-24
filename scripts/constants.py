@@ -259,7 +259,7 @@ DOMAIN_LOCATIONS = {
     "np": {"location": {"country": {"id": "NP", "name": "Nepal"}, "level": 2}},
     "hr": {"location": {"country": {"id": "HR", "name": "Croatia"}, "level": 2}},
     "uy": {"location": {"country": {"id": "UY", "name": "Uruguay"}, "level": 2}},
-    "tn": {"location": {"country": {"id": "TN", "name": "Tunis"}, "level": 2}},
+    "tn": {"location": {"country": {"id": "TN", "name": "Tunisia"}, "level": 2}},
     "rw": {"location": {"country": {"id": "RW", "name": "Rwanda"}, "level": 2}},
     "iq": {"location": {"country": {"id": "IQ", "name": "Iraq"}, "level": 2}},
     "rs": {"location": {"country": {"id": "RS", "name": "Serbia"}, "level": 2}},
@@ -463,6 +463,28 @@ DOMAIN_LOCATIONS = {
 }
 
 
+# Allowed values from catalog schema (for quality validation)
+ACCESS_MODE_ALLOWED = frozenset(
+    ["open", "restricted", "limited", "public", "protected", "closed", "private"]
+)
+CATALOG_TYPE_ALLOWED = frozenset([
+    "Open data portal",
+    "Geoportal",
+    "Scientific data repository",
+    "Indicators catalog",
+    "Microdata catalog",
+    "Machine learning catalog",
+    "Data search engine",
+    "API Catalog",
+    "Data marketplace",
+    "Metadata catalog",
+    "Other",
+    "Datasets list",
+    "General research repository",
+])
+STATUS_ALLOWED = frozenset(["active", "inactive", "scheduled", "deprecated"])
+API_STATUS_ALLOWED = frozenset(["active", "inactive", "uncertain"])
+
 MAP_CATALOG_TYPE_SUBDIR = {
     "Metadata catalog": "metadata",
     "Geoportal": "geo",
@@ -472,6 +494,11 @@ MAP_CATALOG_TYPE_SUBDIR = {
     "Data search engine": "search",
     "Indicators catalog": "indicators",
     "Microdata catalog": "microdata",
+    "Open data portal": "opendata",
+    "Other": "other",
+    "Data marketplace": "marketplace",
+    "Datasets list": "opendata",
+    "General research repository": "scientific",
 }
 
 MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
@@ -540,6 +567,12 @@ CUSTOM_SOFTWARE_KEYS = [
     "metadataregistries",
     "api",
 ]
+
+# Portal detection: software names/ids that should be normalized to a canonical platform.
+# Huwise is a data governance solution built on OpenDataSoft; treat as opendatasoft.
+SOFTWARE_NAME_ALIASES = {
+    "huwise": "opendatasoft",
+}
 
 # Software repository URL mappings (GitHub/GitLab)
 SOFTWARE_REPOSITORY_URLS = {
@@ -864,7 +897,7 @@ COUNTRIES = {
     "OM": "Oman",
     "PA": "Panama",
     "PE": "Peru",
-    "PH": "Phillipines",
+    "PH": "Philippines",
     "PK": "Pakistan",
     "PL": "Poland",
     "PS": "Palestine",
@@ -887,7 +920,7 @@ COUNTRIES = {
     "TG": "Togo",
     "TH": "Thailand",
     "TJ": "Tajikistan",
-    "TN": "Tunis",
+    "TN": "Tunisia",
     "TR": "Turkey",
     "TT": "Trinidad and Tobago",
     "TW": "Taiwan",

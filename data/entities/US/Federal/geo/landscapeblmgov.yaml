@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -88,3 +88,8 @@ topics:
   name: Climatology / Meteorology / Atmosphere
   type: iso19115
 uid: temp00004359
+endpoints:
+- type: arcgis:rest:info
+  url: https://landscape.blm.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://landscape.blm.gov/arcgis/rest/services?f=pjson

@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: GISTDA Drought Index in Thailand, Data processing from MODIS Product.
+endpoints:
+- type: stacserverapi
+  url: https://disaster-vallaris.gistda.or.th/core/api/stac/1.0/Drought/?api_key=ErNGa8yrMWef0YutwmL7XvpwWQNCK2kVPNt5dAwWbBMnvDoifTEhD75H3DCENjKJ
+id: disastervallarisgistdaorth
+langs:
+- id: EN
+  name: English
+link: https://disaster-vallaris.gistda.or.th/core/api/stac/1.0/Drought/?api_key=ErNGa8yrMWef0YutwmL7XvpwWQNCK2kVPNt5dAwWbBMnvDoifTEhD75H3DCENjKJ
+name: GISTDA Drought Index in Thailand
+owner:
+  link: https://gistda.or.th
+  location:
+    country: *id001
+    level: 20
+  name: Geo-Informatics and Space Technology Development Agency (GISTDA), Thailand
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021418

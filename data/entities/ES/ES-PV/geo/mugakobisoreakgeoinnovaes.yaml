@@ -1,0 +1,108 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-PV
+      name: Pais Vasco
+description: Mugako Bisoreak territorial platform (Plataforma Territorial). GeoNode-based
+  geoportal implemented by Geoinnova SL in collaboration with Abtemas SL; support
+  by Peio Martikorena fundazioa.
+endpoints:
+- type: geonode:datasets
+  url: https://mugakobisoreak.geoinnova.es/api/datasets/
+- type: geonode:documents
+  url: https://mugakobisoreak.geoinnova.es/api/documents/
+- type: csw202
+  url: https://mugakobisoreak.geoinnova.es/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://mugakobisoreak.geoinnova.es/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://mugakobisoreak.geoinnova.es/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: mugakobisoreakgeoinnovaes
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+- id: EU
+  name: Basque
+link: https://mugakobisoreak.geoinnova.es
+name: Mugako Bisoreak
+owner:
+  link: https://www.geoinnova.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-PV
+      name: Pais Vasco
+  name: Geoinnova SL
+  type: Business
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geonode
+- geoportal
+- territorial
+uid: cdi00021473
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+content_types:
+- dataset
+- map_layer

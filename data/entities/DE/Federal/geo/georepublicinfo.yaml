@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -23,7 +23,7 @@ langs:
 - id: DE
   name: German
 link: https://georepublic.info/tags/geoserver
-name: georepublic.info
+name: Georepublic Geoportal
 owner:
   link: https://georepublic.info
   location:
@@ -59,3 +59,7 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: temp00003967
+endpoints:
+- type: wms130
+  url: https://georepublic.info/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

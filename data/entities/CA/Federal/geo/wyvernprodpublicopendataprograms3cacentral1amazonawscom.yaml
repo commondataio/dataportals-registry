@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: CA
+      name: Canada
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Root catalog for Wyvern's Open Data Program. Select the relevant catalogs/collections
+  to access Wyvern's hyperspectral data. For more information on Wyvern and our data,
+  check out our knowledge centre for tutorials about how to work with hyperspectral
+  data!
+endpoints:
+- type: stacserverapi
+  url: https://wyvern-prod-public-open-data-program.s3.ca-central-1.amazonaws.com/catalog.json
+id: wyvernprodpublicopendataprograms3cacentral1amazonawscom
+langs:
+- id: EN
+  name: English
+link: https://wyvern-prod-public-open-data-program.s3.ca-central-1.amazonaws.com/catalog.json
+name: Wyvern Open Data
+owner:
+  link: https://wyvern.space
+  location:
+    country: *id001
+    level: 20
+  name: Wyvern Open Data
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: GEOS
+  name: Geoscientific Information
+  type: eudatatheme
+uid: cdi00021382

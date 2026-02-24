@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,7 +22,7 @@ langs:
 - id: FR
   name: French
 link: http://CLC.developpement-durable.gouv.fr/geoserver
-name: CLC.developpement-durable.gouv.fr/geoserver
+name: Clc Geoportal
 owner:
   link: http://clc.developpement-durable.gouv.fr/geoserver
   location:
@@ -67,3 +67,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00005492
+endpoints:
+- type: wms130
+  url: http://CLC.developpement-durable.gouv.fr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

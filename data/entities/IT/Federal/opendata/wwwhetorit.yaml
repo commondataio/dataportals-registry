@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -20,7 +20,7 @@ langs:
 - id: IT
   name: Italian
 link: https://www.hetor.it
-name: hetor.it
+name: Open data portal - Hetor
 owner:
   link: https://hetor.it
   location:
@@ -46,6 +46,11 @@ tags:
 - ckan
 - open data
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00004709
+endpoints:
+- type: ckan:package-list
+  url: https://www.hetor.it/api/3/action/package_list
+  version: '3'

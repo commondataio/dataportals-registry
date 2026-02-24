@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: http://inspiredata.swansea.gov.uk:8080/geonetwork
-name: inspiredata.swansea.gov.uk:8080
+name: Swansea Council INSPIRE Data Portal - Geoportal
 owner:
   link: http://inspiredata.swansea.gov.uk:8080/geonetwork
   location:
@@ -71,3 +71,9 @@ topics:
   name: Boundaries
   type: iso19115
 uid: temp00005001
+endpoints:
+- type: geonetwork:api:records
+  url: http://inspiredata.swansea.gov.uk/geonetwork/srv/api/records
+- type: csw202
+  url: http://inspiredata.swansea.gov.uk/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2

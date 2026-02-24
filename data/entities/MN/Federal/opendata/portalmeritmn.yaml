@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Portal of Merit, MN, providing access to data catalogs and datasets from
+  Merit region.
+endpoints:
+- type: ckan
+  url: http://portal.merit.mn/api/3
+  version: '3'
+- type: ckan:package-search
+  url: http://portal.merit.mn/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: http://portal.merit.mn/api/3/action/package_list
+  version: '3'
+id: portalmeritmn
+langs:
+- id: MN
+  name: Mongolian
+link: http://portal.merit.mn
+name: MERIT knowledge portal
+owner:
+  link: http://merit.mn
+  location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+  name: Project MERIT
+  type: Civil society
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- has_api
+- Open data
+- Merit
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00001127

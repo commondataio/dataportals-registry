@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='terria' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+AU: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+digitalatlasgovau: 1 issue
+
+=== ISSUES ===
+
+File: AU/Federal/geo/digitalatlasgovau.yaml
+Record ID: digitalatlasgovau
+Country: AU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+Field: endpoints
+Current Value: {"software_id": "terria", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='terria' is marked as API-capable in software definitions

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CA
+      name: California
+description: City of Modesto open data portal providing access to municipal datasets.
+endpoints:
+- type: dcatus11
+  url: https://data.modestogov.com/data.json
+- type: socrata:views
+  url: https://data.modestogov.com/api/views
+- type: sitemap
+  url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.modestogov.com.xml
+- type: opensearch
+  url: https://data.modestogov.com/opensearch.xml
+id: datamodestogovcom
+langs:
+- id: EN
+  name: English
+link: https://data.modestogov.com
+name: Modesto City View
+owner:
+  link: https://www.modestogov.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CA
+      name: California
+  name: City of Modesto
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.tylertech.com/privacy
+  rights_type: granular
+  tos_url: https://www.tylertech.com/terms
+software:
+  id: socrata
+  name: Socrata
+status: active
+tags:
+- open data
+- government
+- city
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020467

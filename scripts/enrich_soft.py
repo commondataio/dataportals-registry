@@ -126,7 +126,11 @@ def update_software(dryrun=False):
             f.close()
             #            print(record)
             #            record['software'] = {'id' : '', 'name' : record['software']}
-            if record["software"]["name"] in software.keys():
+            # Huwise-based portals are OpenDataSoft
+            if record["software"]["name"] == "Huwise":
+                record["software"]["id"] = "opendatasoft"
+                record["software"]["name"] = "OpenDataSoft"
+            elif record["software"]["name"] in software.keys():
                 record["software"]["id"] = software[record["software"]["name"]]["id"]
             #            print(record)
             f = open(filepath, "w", encoding="utf8")

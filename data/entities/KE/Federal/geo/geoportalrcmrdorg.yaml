@@ -25,12 +25,45 @@ endpoints:
 - type: wms111
   url: https://geoportal.rcmrd.org/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
   version: 1.1.1
+- type: oaipmh20
+  url: https://geoportal.rcmrd.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geoportal.rcmrd.org/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wcs111
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs110
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geoportal.rcmrd.org/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: geoserver:settings
+  url: https://geoportal.rcmrd.org/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://geoportal.rcmrd.org/geoserver/rest/layers
+- type: sitemap
+  url: https://geoportal.rcmrd.org/sitemap.xml
 id: geoportalrcmrdorg
 langs:
 - id: EN
   name: English
 link: https://geoportal.rcmrd.org/
-name: geoportal.rcmrd.org
+name: RCMRD Geoportal
 owner:
   link: https://geoportal.rcmrd.org/
   location:

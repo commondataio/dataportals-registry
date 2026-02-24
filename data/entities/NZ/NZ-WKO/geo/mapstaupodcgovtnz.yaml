@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Waikato
 description: Data catalog featuring GIS services such as map layers (e.g., contours,
   land information), available via ArcGIS REST API
+endpoints:
+- type: arcgis:rest:services
+  url: https://maps.taupodc.govt.nz/server/rest/services?f=pjson
 id: mapstaupodcgovtnz
 langs:
 - id: EN

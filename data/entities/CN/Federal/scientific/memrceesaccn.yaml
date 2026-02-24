@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,12 +16,15 @@ coverage:
       name: Eastern Asia
 description: Scientific data repository. managed by Rcees. powered by Galaxy. accessible
   at mem.rcees.ac.cn:8083.
+endpoints:
+- type: galaxy:api
+  url: http://mem.rcees.ac.cn:8083/api
 id: memrceesaccn
 langs:
 - id: ZH
   name: Chinese
 link: http://mem.rcees.ac.cn:8083/
-name: mem.rcees.ac.cn:8083
+name: RCEES Scientific Data Repository
 owner:
   link: http://rcees.ac.cn
   location:
@@ -46,7 +49,7 @@ tags:
 - China
 - galaxy
 topics:
-- Research
-- Science
-- Academic
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00000165

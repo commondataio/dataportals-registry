@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -14,23 +14,27 @@ coverage:
     level: 20
     macroregion:
       id: '151'
-      name: 'Eastern Europe '
+      name: Eastern Europe
 description: Geoserver Web interface for the IMRoFLOOD project hosted by Meteoromania
+endpoints:
+- type: wms111
+  url: http://imdroflood.meteoromania.ro:8080/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: imdrofloodmeteoromaniaro
 langs:
 - id: RO
   name: Romanian
 link: http://imdroflood.meteoromania.ro:8080/geoserver/web/
-name: imdroflood.meteoromania.ro:8080
+name: Meteoromania Geoportal
 owner:
-  link: http://imdroflood.meteoromania.ro:8080/geoserver/web/
+  link: https://www.meteoromania.ro
   location:
     country:
       id: RO
       name: Romania
     level: 20
-  name: Meteoromania
-  type: Regional government
+  name: Administrația Națională de Meteorologie
+  type: Central government
 properties:
   has_doi: false
 rights:

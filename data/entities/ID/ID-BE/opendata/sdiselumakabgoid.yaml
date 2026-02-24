@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-BE
+      name: Bengkulu
+description: Satu Data portal of Seluma Regency (Kabupaten Seluma), Bengkulu province,
+  Indonesia. Government open data portal providing access to municipal datasets via
+  CKAN platform.
+endpoints:
+- type: ckan
+  url: https://sdi.selumakab.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://sdi.selumakab.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://sdi.selumakab.go.id/api/3/action/package_list
+  version: '3'
+id: sdiselumakabgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://sdi.selumakab.go.id
+name: Satu Data Kabupaten Seluma
+owner:
+  link: https://selumakab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-BE
+      name: Bengkulu
+  name: Pemerintah Kabupaten Seluma
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- local government
+- open data
+- Satu Data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020669

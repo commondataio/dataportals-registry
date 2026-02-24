@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -56,7 +56,18 @@ tags:
 - Deprecated
 - Cangooroo
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00004069
+endpoints:
+- type: arcgis:rest:info
+  url: https://sites.google.com/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://sites.google.com/arcgis/rest/services?f=pjson

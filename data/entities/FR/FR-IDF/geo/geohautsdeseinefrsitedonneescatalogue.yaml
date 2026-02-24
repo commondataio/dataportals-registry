@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,7 +17,7 @@ coverage:
       name: Western Europe
     subregion:
       id: FR-IDF
-      name: Île-de-France
+      name: Ile-de-France
 id: geohautsdeseinefrsitedonneescatalogue
 langs:
 - id: FR
@@ -30,10 +30,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 40
+    level: 30
     subregion:
       id: FR-IDF
-      name: Île-de-France
+      name: Ile-de-France
   name: Géo Hauts-de-Seine
   type: Local government
 properties:
@@ -59,3 +59,6 @@ topics:
 uid: cdi00011045
 description: Geoportal. managed by Géo Hauts-de-Seine. powered by IsiGéo. accessible
   at geo.hauts-de-seine.fr.
+endpoints:
+- type: openapi
+  url: https://geo.hauts-de-seine.fr/api

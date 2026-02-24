@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoNetwork metadata catalog of the Geological Survey of Denmark and Greenland
+  (GEUS), providing discovery of spatial and geological datasets for Denmark and Greenland.
+endpoints:
+- type: geonetwork:query
+  url: https://metadata.geus.dk/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: https://metadata.geus.dk/geonetwork/srv/api/records
+- type: csw202
+  url: https://metadata.geus.dk/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://metadata.geus.dk/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: metadatageusdkgeonetwork
+langs:
+- id: EN
+  name: English
+- id: DA
+  name: Danish
+link: https://metadata.geus.dk/geonetwork
+name: GEUS metadata (GeoNetwork)
+owner:
+  link: https://www.geus.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Geological Survey of Denmark and Greenland – GEUS
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- GIS
+- Metadata
+- geology
+- Spatial Data Infrastructure
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021757

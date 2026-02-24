@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Data catalog for the City of Mělník, likely focusing on local government
+  open data. No direct metadata provided in the query.
+endpoints:
+- type: ckan:package-search
+  url: https://opendata.mmdecin.cz/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.mmdecin.cz/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://opendata.mmdecin.cz/api/3
+  version: '3'
+id: opendatammdecincz
+identifiers:
+- id: wikidata
+  url: https://wikidata.org/wiki/Q102042869
+  value: Q102042869
+langs:
+- id: CS
+  name: Czech
+link: https://opendata.mmdecin.cz
+name: opendata města Děčín
+owner:
+  link: https://mmdecin.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 30
+    subregion:
+      id: CZ-42
+      name: Ustecky kraj
+  name: Magistrát města Děčín
+  type: Local government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00000405

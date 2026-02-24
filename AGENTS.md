@@ -37,7 +37,7 @@ The registry collects and maintains structured metadata about:
 - Data marketplaces
 - Other data infrastructure
 
-As of February 2026, the registry contains **12,489 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
+As of February 2026, the registry contains **13,877 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
 
 ---
 
@@ -216,7 +216,7 @@ pip install -r requirements.txt
 # Build all datasets (from YAML to JSONL/DuckDB)
 python scripts/builder.py build
 
-# Validate all YAML files against schema
+# Validate all YAML files against schema (use with options to verify single entry if single entry added/edited)
 python scripts/builder.py validate-yaml
 
 # Run full test suite with coverage
@@ -393,6 +393,13 @@ CLI commands available:
 | `fix_tag_hygiene.py` | Tag quality |
 | `fix_software_id.py` | Software ID fixes |
 | `fix_api_status_mismatch.py` | API status fixes |
+
+### Scheduled Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `promote_scheduled.py` | Promote scheduled entries to entities |
+| `remove_scheduled_duplicates.py` | Remove scheduled records that exist in entities |
 
 ---
 

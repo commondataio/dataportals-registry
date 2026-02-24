@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GIS data catalog providing REST services, likely related to geospatial
-  information for Lithuania (APVA context).
+description: GIS data catalog providing ArcGIS REST services for geospatial data from
+  APVA (Environmental Projects Management Agency), Lithuania.
 endpoints:
 - type: arcgis:portals:self
   url: https://renomap.apva.lt/portal/sharing/rest/portals/self?f=pjson
@@ -37,16 +37,16 @@ langs:
 - id: LT
   name: Lithuanian
 link: https://renomap.apva.lt/arcgis/rest/services
-name: ARVA ArcGIS REST
+name: APVA ArcGIS REST
 owner:
   link: https://www.apva.lt
   location:
     country:
       id: LT
       name: Lithuania
-    level: 20
-  name: APVA Lithuanian mapping or cadastral agency)
-  type: Local government
+    level: 30
+  name: APVA (Environmental Projects Management Agency)
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -66,7 +66,13 @@ tags:
 - geospatial
 - Lithuania
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00000458

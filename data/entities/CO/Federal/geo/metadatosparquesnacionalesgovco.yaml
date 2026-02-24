@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoNetwork metadata catalog for Parques Nacionales Naturales de Colombia
+  (metadatos.parquesnacionales.gov.co).
+endpoints:
+- type: geonetwork:query
+  url: https://metadatos.parquesnacionales.gov.co/geonetwork/srv/eng/q
+- type: openapi
+  url: https://metadatos.parquesnacionales.gov.co/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadatos.parquesnacionales.gov.co/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadatos.parquesnacionales.gov.co/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadatos.parquesnacionales.gov.co/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: metadatosparquesnacionalesgovco
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://metadatos.parquesnacionales.gov.co/geonetwork
+name: Metadatos - Parques Nacionales Naturales de Colombia
+owner:
+  link: https://www.parquesnacionales.gov.co
+  location:
+    country:
+      id: CO
+      name: Colombia
+    level: 20
+  name: Parques Naturales Nacionales de Colombia
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+- Parques Naturales Nacionales
+- Colombia
+- Protected Areas
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00021802

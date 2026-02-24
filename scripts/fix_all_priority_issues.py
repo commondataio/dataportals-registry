@@ -334,30 +334,60 @@ class IssueFixer:
         catalog_type = self.record.get("catalog_type", "").lower()
         description = self.record.get("description", "").lower()
         
-        # Map catalog types to topics
+        # Map catalog types to topics (use proper objects with id, name, type - not bare strings)
         if "geoportal" in catalog_type or "geo" in catalog_type:
-            topics.extend(["Geospatial", "Geography", "Maps"])
+            topics.extend([
+                {"id": "Location", "name": "Location", "type": "iso19115"},
+                {"id": "Boundaries", "name": "Boundaries", "type": "iso19115"},
+                {"id": "Imagery / Base Maps / Earth Cover", "name": "Imagery / Base Maps / Earth Cover", "type": "iso19115"},
+            ])
         if "scientific" in catalog_type or "research" in catalog_type:
-            topics.extend(["Research", "Science", "Academic"])
+            topics.extend([
+                {"id": "TECH", "name": "Science and technology", "type": "eudatatheme"},
+            ])
         if "open data" in catalog_type or "opendata" in catalog_type:
-            topics.extend(["Open Data", "Government Data"])
+            topics.extend([
+                {"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"},
+            ])
         if "indicators" in catalog_type:
-            topics.extend(["Statistics", "Indicators", "Metrics"])
+            topics.extend([
+                {"id": "SOCI", "name": "Population and society", "type": "eudatatheme"},
+            ])
         if "microdata" in catalog_type:
-            topics.extend(["Microdata", "Surveys", "Statistics"])
+            topics.extend([
+                {"id": "SOCI", "name": "Population and society", "type": "eudatatheme"},
+            ])
         if "marketplace" in catalog_type:
-            topics.extend(["Data Marketplace", "Commercial Data", "Third-party Data"])
+            topics.extend([
+                {"id": "ECON", "name": "Economy and finance", "type": "eudatatheme"},
+            ])
         if "ml" in catalog_type or "machine learning" in catalog_type:
-            topics.extend(["Machine Learning", "AI", "Data Science"])
+            topics.extend([
+                {"id": "TECH", "name": "Science and technology", "type": "eudatatheme"},
+            ])
         if "search" in catalog_type:
-            topics.extend(["Data Search", "Discovery"])
+            topics.extend([
+                {"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"},
+            ])
         if "api" in catalog_type:
-            topics.extend(["API", "Web Services"])
+            topics.extend([
+                {"id": "TECH", "name": "Science and technology", "type": "eudatatheme"},
+            ])
         if "metadata" in catalog_type:
-            topics.extend(["Metadata", "Data Catalog"])
+            topics.extend([
+                {"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"},
+            ])
         
+        # Deduplicate by (id, type)
         if topics:
-            self.record["topics"] = topics
+            seen = set()
+            unique_topics = []
+            for t in topics:
+                key = (t.get("id"), t.get("type"))
+                if key not in seen:
+                    seen.add(key)
+                    unique_topics.append(t)
+            self.record["topics"] = unique_topics
             self.changes.append(f"Added topics: {topics}")
             return True
         
@@ -406,7 +436,22 @@ class IssueFixer:
         self.record["api_status"] = "uncertain"
         self.changes.append("Set api_status to 'uncertain'")
         return True
-    
+
+    def fix_missing_content_types(self, issue: Dict[str, Any]) -> bool:
+        """Fix MISSING_CONTENT_TYPES - set content_types based on catalog_type."""
+        cts = self.record.get("content_types", [])
+        if cts:
+            return False
+        ctype = self.record.get("catalog_type", "")
+        if ctype == "Geoportal":
+            self.record["content_types"] = ["dataset", "map_layer"]
+        elif ctype == "Scientific data repository":
+            self.record["content_types"] = ["dataset", "document"]
+        else:
+            self.record["content_types"] = ["dataset"]
+        self.changes.append(f"Set content_types to {self.record['content_types']}")
+        return True
+
     def fix_inconsistent_license(self, issue: Dict[str, Any]) -> bool:
         """Fix INCONSISTENT_LICENSE"""
         rights = self.record.get("rights", {})
@@ -534,6 +579,7 @@ class IssueFixer:
             "MISSING_TOPICS": self.fix_missing_topics,
             "MISSING_ENDPOINTS": self.fix_missing_endpoints,
             "MISSING_API_STATUS": self.fix_missing_api_status,
+            "MISSING_CONTENT_TYPES": self.fix_missing_content_types,
             "API_STATUS_MISMATCH": self.fix_api_status_mismatch,
             "INCONSISTENT_LICENSE": self.fix_inconsistent_license,
             "TAG_HYGIENE": self.fix_tag_hygiene,

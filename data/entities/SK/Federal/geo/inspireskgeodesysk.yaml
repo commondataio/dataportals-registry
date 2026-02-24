@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,12 +17,15 @@ coverage:
       name: 'Eastern Europe '
 description: Data catalog providing spatial data and services in line with the INSPIRE
   Directive (Slovakia's National Spatial Information Infrastructure)
+endpoints:
+- type: arcgis:rest:services
+  url: https://inspire.skgeodesy.sk/eskn/rest/services?f=pjson
 id: inspireskgeodesysk
 langs:
 - id: SK
   name: Slovak
 link: https://inspire.skgeodesy.sk/eskn/rest/services
-name: inspire.skgeodesy.sk/eskn/rest/services
+name: Slovak INSPIRE Geospatial Services
 owner:
   link: https://inspire.skgeodesy.sk/eskn/rest/services
   location:

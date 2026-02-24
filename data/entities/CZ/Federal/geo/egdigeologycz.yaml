@@ -1,5 +1,7 @@
 access_mode:
 - open
+api: true
+api_status: active
 catalog_type: Geoportal
 coverage:
 - location:
@@ -12,6 +14,15 @@ coverage:
       name: Eastern Europe
 description: EGDI Spatial Metadata Catalogue maintained by the Czech Geological Survey
   for EuroGeoSurveys.
+endpoints:
+- type: geonetwork:query
+  url: https://egdi.geology.cz/srv/eng/q
+- type: csw202
+  url: https://egdi.geology.cz/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: openapi
+  url: https://egdi.geology.cz/srv/v2/api-docs
+  version: '2'
 id: egdigeologycz
 langs:
 - id: EN
@@ -29,9 +40,12 @@ owner:
     level: 20
   name: Czech Geological Survey
   type: Central government
+content_types:
+- dataset
+- map_layer
 software:
   id: geonetwork
-  name: GeoNetwork
+  name: Geonetwork
 status: active
 tags:
 - egdi

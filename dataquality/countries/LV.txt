@@ -1,58 +1,37 @@
 DATA QUALITY REPORT - COUNTRY: LV
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: LV
-Total Records with Issues: 5
-Total Issues Found: 6
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[PLACEHOLDER_TITLE]
-Count: 3
-Priority: MEDIUM
-
-File: LV/Federal/scientific/repositoryclarinlv.yaml
-Record ID: repositoryclarinlv
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: repository.clarin.lv
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: LV/Federal/scientific/repositoryclarinlv.yaml
-Record ID: repositoryclarinlv
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: repository.clarin.lv
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: LV/Federal/scientific/dudatabiologylv.yaml
-Record ID: dudatabiologylv
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: du.ipt
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 3
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
+Count: 1
 Priority: IMPORTANT
 
 File: LV/Federal/geo/proxygdsvissgovlv.yaml
 Record ID: proxygdsvissgovlv
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
+Count: 2
+Priority: IMPORTANT
+
 File: LV/Federal/geo/ismantojumslv.yaml
 Record ID: ismantojumslv
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: LV/Federal/geo/imswebvvdgovlv.yaml
 Record ID: imswebvvdgovlv
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
@@ -60,5 +39,5 @@ Suggested Action: Add at least one endpoint because software.id='geoserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-PLACEHOLDER_TITLE: 3 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 2 issues

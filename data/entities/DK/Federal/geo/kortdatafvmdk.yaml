@@ -1,14 +1,24 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+endpoints:
+- type: wms111
+  url: https://kortdata.fvm.dk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://kortdata.fvm.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://kortdata.fvm.dk/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country: 
       id: DK
       name: Denmark
     level: 20
@@ -27,7 +37,9 @@ name: kortdata.fvm.dk geoserver
 owner:
   link: https://kortdata.fvm.dk
   location:
-    country: *id001
+    country: 
+      id: DK
+      name: Denmark
     level: 20
   name: Styrelsen for Grøn Arealomlægning og Vandmiljø
   type: Central government

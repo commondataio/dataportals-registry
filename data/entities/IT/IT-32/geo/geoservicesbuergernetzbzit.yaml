@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: IT
   name: Italian
 link: https://geoservices.buergernetz.bz.it/geoserver
-name: geoservices.buergernetz.bz.it/geoserver
+name: Geoportal - buergernetz.bz.it
 owner:
   link: https://geoservices.buergernetz.bz.it/geoserver
   location:
@@ -85,3 +85,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00001569
+endpoints:
+- type: wms111
+  url: https://geoservices.buergernetz.bz.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1

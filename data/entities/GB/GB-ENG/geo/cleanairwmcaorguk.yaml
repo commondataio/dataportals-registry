@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Air quality data portal for the West Midlands region providing access
+  to spatial datasets and interactive maps on air quality monitoring.
+endpoints:
+- type: arcgis:hub:catalog
+  url: https://cleanair.wmca.org.uk/api/v3/datasets
+- type: dcatap201
+  url: https://cleanair.wmca.org.uk/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://cleanair.wmca.org.uk/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://cleanair.wmca.org.uk/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://cleanair.wmca.org.uk/api/search/v1
+- type: dcatus11
+  url: https://cleanair.wmca.org.uk/data.json
+- type: sitemap
+  url: https://cleanair.wmca.org.uk/sitemap.xml
+id: cleanairwmcaorguk
+langs:
+- id: EN
+  name: English
+link: https://cleanair.wmca.org.uk
+name: WM Air Quality
+owner:
+  link: https://www.wmca.org.uk
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: West Midlands Combined Authority
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- air quality
+- environment
+- GIS
+- Open Data
+- United Kingdom
+- West Midlands
+- arcgishub
+- geodata
+- geospatial
+- spatial
+- pollution
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00020888

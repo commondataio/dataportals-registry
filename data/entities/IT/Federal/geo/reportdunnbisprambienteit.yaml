@@ -1,0 +1,107 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Environmental reporting and data portal of the Italian National Biodiversity
+  Network (NNB), part of ISPRA (Italian Institute for Environmental Protection and
+  Research).
+endpoints:
+- type: geonode:datasets
+  url: https://reportdu.nnb.isprambiente.it/api/datasets/
+- type: geonode:documents
+  url: https://reportdu.nnb.isprambiente.it/api/documents/
+- type: csw202
+  url: https://reportdu.nnb.isprambiente.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://reportdu.nnb.isprambiente.it/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://reportdu.nnb.isprambiente.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://reportdu.nnb.isprambiente.it/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: reportdunnbisprambienteit
+langs:
+- id: IT
+  name: Italian
+link: https://reportdu.nnb.isprambiente.it/
+name: Report DU - NNB ISPRA
+owner:
+  link: https://www.isprambiente.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: ISPRA - Italian National Institute for Environmental Protection and Research
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Italy
+- environmental reporting
+- NNB
+- ISPRA
+- geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00021597

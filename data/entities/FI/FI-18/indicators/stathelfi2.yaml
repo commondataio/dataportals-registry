@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +19,10 @@ coverage:
       name: Uusimaa
 description: Data catalog offering statistical data from Helsinki, Finland, accessible
   via PXWEB API.
+endpoints:
+- type: pxwebapi
+  url: https://stat.hel.fi/pxweb/api/v1/en
+  version: '1'
 id: stathelfi2
 langs:
 - id: EN

@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
+description: Portal de Dados Abertos do Governo do Estado de São Paulo. Plataforma
+  para facilitar o acesso a dados públicos, promovendo transparência e participação
+  cidadã. Inclui dados econômicos, sociais, saúde, educação e outros.
+endpoints:
+- type: ckan
+  url: https://dadosabertos.sp.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.sp.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.sp.gov.br/api/3/action/package_list
+  version: '3'
+id: dadosabertosspspgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://dadosabertos.sp.gov.br
+name: Dados Abertos SP
+owner:
+  link: https://www.saopaulo.sp.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
+  name: Governo do Estado de São Paulo
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00020549

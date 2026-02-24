@@ -1,0 +1,50 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: MISTEO STAC SERVER, for geo data for selected states
+endpoints:
+- type: stacserverapi
+  url: https://stac-server.dev2prod.co/
+id: stacserverdev2prodco
+langs:
+- id: EN
+  name: English
+link: https://stac-server.dev2prod.co/
+name: MISTEO STAC SERVER
+owner:
+  link: https://stac-server.dev2prod.co/
+  location:
+    country: *id001
+    level: 20
+  name: MISTEO STAC SERVER
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021401

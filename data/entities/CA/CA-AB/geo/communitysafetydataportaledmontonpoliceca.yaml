@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: Edmonton Police Service Community Safety Data Portal providing public
+  access to crime incident data mapped to intersections. Users can filter by occurrence
+  type and date range. Includes map interface, data tables, comparison tools, and
+  reports. Data refreshed daily with 24-48 hour delay.
+endpoints:
+- type: dcatap201
+  url: https://communitysafetydataportal.edmontonpolice.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://communitysafetydataportal.edmontonpolice.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://communitysafetydataportal.edmontonpolice.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://communitysafetydataportal.edmontonpolice.ca/api/search/v1
+- type: sitemap
+  url: https://communitysafetydataportal.edmontonpolice.ca/sitemap.xml
+id: communitysafetydataportaledmontonpoliceca
+langs:
+- id: EN
+  name: English
+link: https://communitysafetydataportal.edmontonpolice.ca/
+name: Edmonton Police Community Safety Data Portal
+owner:
+  link: https://www.edmontonpolice.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Edmonton Police Service
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- crime
+- GIS
+- geospatial
+- government
+- police
+- public safety
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00020705

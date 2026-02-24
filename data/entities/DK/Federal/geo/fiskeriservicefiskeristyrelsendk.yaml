@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: '154'
       name: Northern Europe
 description: A geospatial data catalog provided by the Danish Fisheries Agency
+endpoints:
+- type: wms130
+  url: http://fiskeriservice.fiskeristyrelsen.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: fiskeriservicefiskeristyrelsendk
 langs:
 - id: DA

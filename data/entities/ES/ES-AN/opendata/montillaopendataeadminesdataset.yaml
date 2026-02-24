@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucia
+endpoints:
+- type: ckan
+  url: https://montilla-opendata.e-admin.es/api/3
+- type: ckan
+  url: https://montilla-opendata.e-admin.es/api/3/action/package_list
+- type: dcat
+  url: https://montilla-opendata.e-admin.es/catalog.xml
+- type: dcatap
+  url: https://montilla-opendata.e-admin.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://montilla-opendata.e-admin.es/catalog.jsonld
+- type: ckan
+  url: https://montilla-opendata.e-admin.es/api/3
+  version: '3'
+id: montillaopendataeadminesdataset
+langs:
+- id: ES
+  name: Spanish
+link: https://montilla-opendata.e-admin.es/dataset/
+name: Datos abiertos Montilla
+owner:
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucia
+  name: Datos abiertos Montilla
+  type: Local government
+  link: https://e-admin.es
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010694
+description: Open data portal. managed by Datos abiertos Montilla. providing access
+  to datos abiertos montilla.

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Nodo CFI - GeoNode for sharing geospatial data and maps of the Consejo
+  Federal de Inversiones.
+endpoints:
+- type: geonode:datasets
+  url: https://nodo.cfi.org.ar/api/v2/datasets/
+- type: geonode:documents
+  url: https://nodo.cfi.org.ar/api/v2/documents/
+- type: wms111
+  url: https://nodo.cfi.org.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://nodo.cfi.org.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: csw202
+  url: https://nodo.cfi.org.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: sitemap
+  url: https://nodo.cfi.org.ar/sitemap.xml
+id: nodocfiorgar
+langs:
+- id: ES
+  name: Spanish
+link: https://nodo.cfi.org.ar
+name: Nodo CFI
+owner:
+  link: https://www.cfi.org.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 20
+  name: Consejo Federal de Inversiones
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- maps
+- Argentina
+- geonode
+- government
+- CFI
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021643

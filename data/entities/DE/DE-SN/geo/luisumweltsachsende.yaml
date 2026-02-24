@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: DE
   name: German
 link: https://luis.umwelt.sachsen.de/arcgis/services
-name: luis.umwelt.sachsen.de/arcgis/services
+name: Sachsen (Saxony) State Environmental Agency Geoportal
 owner:
   link: https://luis.umwelt.sachsen.de
   location:
@@ -69,3 +69,6 @@ topics:
   name: Location
   type: iso19115
 uid: temp00004947
+endpoints:
+- type: arcgis:rest:services
+  url: https://luis.umwelt.sachsen.de/arcgis/rest/services?f=pjson

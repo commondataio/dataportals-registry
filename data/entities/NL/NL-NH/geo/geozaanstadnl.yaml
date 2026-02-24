@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: NL-NH
+      name: Noord-Holland
+description: Data catalog application to manage spatially referenced resources, used
+  by the local municipality to publish and search geospatial datasets, maps, and services.
+endpoints:
+- type: geonetwork:query
+  url: https://geo.zaanstad.nl/geonetwork/srv/eng/q
+- type: openapi
+  url: https://geo.zaanstad.nl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geo.zaanstad.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geo.zaanstad.nl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geo.zaanstad.nl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geozaanstadnl
+langs:
+- id: NL
+  name: Dutch
+link: https://geo.zaanstad.nl/geonetwork
+name: GeoNetwork for Gemeente Zaanstad
+owner:
+  link: https://www.zaanstad.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion: *id001
+  name: Gemeente Zaanstad
+  type: Local government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- GeoNetwork
+- GIS
+- Spatial Data Infrastructure
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: temp00003828

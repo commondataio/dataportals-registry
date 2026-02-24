@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,7 @@ coverage:
 description: Data catalog providing forest inventory and related GIS data services
   from the Canadian National Forest Inventory System.
 id: afcfrcfsnetnfisorg
-langs: 
+langs:
 - id: EN
   name: English
 link: https://afc-fr.cfsnet.nfis.org/arcgis/services
@@ -58,3 +58,8 @@ topics:
   name: Biota
   type: iso19115
 uid: temp00005345
+endpoints:
+- type: arcgis:rest:info
+  url: https://afc-fr.cfsnet.nfis.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://afc-fr.cfsnet.nfis.org/arcgis/rest/services?f=pjson

@@ -1,0 +1,106 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.terrainai.com/api/datasets/
+- type: geonode:documents
+  url: https://geonode.terrainai.com/api/documents/
+- type: csw202
+  url: https://geonode.terrainai.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonode.terrainai.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://geonode.terrainai.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.terrainai.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.terrainai.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://geonode.terrainai.com/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://geonode.terrainai.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geonode.terrainai.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geonode.terrainai.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geonode.terrainai.com/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geonode.terrainai.com/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geonode.terrainai.com/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geonode.terrainai.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geonode.terrainai.com/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geonode.terrainai.com/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://geonode.terrainai.com/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: geonodeterrainaicom
+langs:
+- id: EN
+  name: English
+link: https://geonode.terrainai.com
+name: GeoNode NCG
+owner:
+  link: https://www.maynoothuniversity.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Maynooth University
+  type: Academy
+software:
+  id: geonode
+  name: GeoNode
+status: active
+uid: cdi00021675
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+tags:
+- GIS
+- academic
+- geospatial
+description: Geoportal. managed by Maynooth University. providing access to geonode
+  ncg.
+content_types:
+- dataset
+- map_layer

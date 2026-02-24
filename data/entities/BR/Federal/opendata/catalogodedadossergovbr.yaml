@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Open data catalog of SERPRO (Serviço Federal de Processamento de Dados),
+  the Brazilian Federal Data Processing Service, providing public access to government
+  datasets.
+endpoints:
+- type: ckan
+  url: https://catalogodedados.serpro.gov.br/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalogodedados.serpro.gov.br/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalogodedados.serpro.gov.br/api/3/action/package_list
+  version: '3'
+id: catalogodedadossergovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://catalogodedados.serpro.gov.br
+name: Catálogo de Dados - SERPRO
+owner:
+  link: https://www.serpro.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: SERPRO - Serviço Federal de Processamento de Dados
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Brazil
+- ckan
+- government data
+- SERPRO
+uid: cdi00020512
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme

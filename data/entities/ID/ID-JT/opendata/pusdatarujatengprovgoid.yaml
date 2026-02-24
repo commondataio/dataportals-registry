@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -77,3 +77,11 @@ topics:
   name: Structure
   type: iso19115
 uid: cdi00000905
+endpoints:
+- type: ckan
+  url: https://pusdataru.jatengprov.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://pusdataru.jatengprov.go.id/api/3/action/package_search
+  version: '3'
+api: true

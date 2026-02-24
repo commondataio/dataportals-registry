@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: National geospatial data catalog of Greece, providing access to spatial
+  data, metadata, and related resources.
+endpoints:
+- type: csw202
+  url: https://geodata.gov.gr/csw
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodata.gov.gr/csw/oaipmh
+  version: '2.0'
+- type: csw202
+  url: https://geodata.gov.gr/csw/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://geodata.gov.gr/csw/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://geodata.gov.gr/csw/opensearch
+  version: '1.0'
+- type: sru
+  url: https://geodata.gov.gr/csw/sru
+  version: '1.0'
+id: geodatagovgrcsw
+identifiers:
+- id: dataportals.org
+  url: http://dataportals.org/portal/geodata_gov_gr
+  value: geodata_gov_gr
+- id: wikidata
+  url: https://wikidata.org/wiki/Q97012113
+  value: Q97012113
+langs:
+- id: EL
+  name: Greek
+link: https://geodata.gov.gr/csw
+name: Geodata.gov.gr data catalog
+owner:
+  link: http://www.imis.athena-innovation.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: IMIS/Athena RC
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pycsw
+  name: Pycsw
+status: active
+tags:
+- government
+- has_api
+- spatial
+- metadata
+- CSW
+- ISO19115
+- DCAT-AP
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00005096

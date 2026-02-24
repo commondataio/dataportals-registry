@@ -13,7 +13,7 @@ coverage:
       name: Botswana
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 - location:
     country:
@@ -21,7 +21,7 @@ coverage:
       name: Lesotho
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 - location:
     country:
@@ -29,7 +29,7 @@ coverage:
       name: Namibia
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 - location:
     country:
@@ -37,7 +37,7 @@ coverage:
       name: South Africa
     level: 20
     macroregion:
-      id: '018'
+      id: 018
       name: Southern Africa
 description: This server shares spatial data and maps related to the Orange-Senqu
   River Basin under the custodianship of The Orange-Senqu River Commission (ORASECOM)
@@ -107,6 +107,11 @@ endpoints:
   url: http://gis.orasecom.org/geoserver/rest/layers
 - type: opensearch
   url: http://gis.orasecom.org/catalogue/opensearch
+- type: geonode:datasets
+  url: http://gis.orasecom.org/api/datasets/
+- type: oaipmh20
+  url: http://gis.orasecom.org/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
 id: gisorasecomorg
 langs:
 - id: EN

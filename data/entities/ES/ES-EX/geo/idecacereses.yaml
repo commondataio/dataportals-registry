@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -28,7 +28,10 @@ owner:
     country:
       id: ES
       name: Spain
-    level: 20
+    level: 30
+    subregion:
+      id: ES-EX
+      name: Extremadura
   name: Caceres Local Government
   type: Local government
 properties:
@@ -111,3 +114,8 @@ topics:
   name: Utilities / Communication
   type: iso19115
 uid: temp00004963
+endpoints:
+- type: ogc:wms
+  url: https://ide.caceres.es/geoserver/wms
+- type: ogc:wfs
+  url: https://ide.caceres.es/geoserver/wfs

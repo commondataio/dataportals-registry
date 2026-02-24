@@ -70,6 +70,9 @@ endpoints:
   url: https://mymaps.mygeoportal.gov.my/geoserver/rest/settings
 - type: geoserver:layers
   url: https://mymaps.mygeoportal.gov.my/geoserver/rest/layers
+- type: wfs100
+  url: https://mymaps.mygeoportal.gov.my/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
 id: mymapsmygeoportalgovmy
 langs:
 - id: EN
@@ -104,7 +107,13 @@ tags:
 - maps
 - open-source
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00001146

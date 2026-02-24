@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BE
+      name: Belgium
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork metadata catalog of the Royal Museum for Central Africa (Cartesius).
+endpoints:
+- type: geonetwork:query
+  url: https://cartesius.africamuseum.be/geonetwork/srv/eng/q
+- type: geonetwork
+  url: https://cartesius.africamuseum.be/geonetwork/srv/api
+- type: geonetwork:records
+  url: https://cartesius.africamuseum.be/geonetwork/srv/api/records
+- type: openapi
+  url: https://cartesius.africamuseum.be/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://cartesius.africamuseum.be/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://cartesius.africamuseum.be/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://cartesius.africamuseum.be/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://cartesius.africamuseum.be/geonetwork/srv/api/site
+id: cartesiusafricamuseumbe
+langs:
+- id: FR
+  name: French
+link: https://cartesius.africamuseum.be/geonetwork
+name: Cartesius GeoNetwork - Royal Museum for Central Africa
+owner:
+  link: https://www.africamuseum.be
+  location:
+    country:
+      id: BE
+      name: Belgium
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
+  name: Royal Museum for Central Africa
+  type: Academy
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+- open data
+- Africa
+- museum
+uid: cdi00021743
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115

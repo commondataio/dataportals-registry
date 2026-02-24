@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PA
+      name: Panama
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: GeoNode platform for managing and publishing geospatial data, supporting
+  upload and management of vector and raster datasets, metadata according to ISO 19115/19139,
+  and integration with GeoServer for serving OGC services.
+endpoints:
+- type: wms111
+  url: https://geonode.mupa.gob.pa/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geonode.mupa.gob.pa/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://geonode.mupa.gob.pa/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.mupa.gob.pa/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: geonodemupagobpa
+langs:
+- id: ES
+  name: Spanish
+link: https://geonode.mupa.gob.pa/geoserver
+name: GeoNode Alcaldía de Panamá Geoportal
+owner:
+  link: https://mupa.gob.pa
+  location:
+    country:
+      id: PA
+      name: Panama
+    level: 30
+    subregion:
+      id: PA-8
+      name: Panama
+  name: Alcaldía de Panamá
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- geospatial data
+- mapping
+- geoserver
+- geonode
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00020264

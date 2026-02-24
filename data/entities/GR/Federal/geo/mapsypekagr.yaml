@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,11 @@ coverage:
       name: Southern Europe
 description: AGOL/REST-based geospatial platform for serving map services and geodata
   through ArcGIS REST endpoints
+endpoints:
+- type: arcgis:rest:services
+  url: http://maps.ypeka.gr/arcgis/rest/services?f=pjson
+- type: arcgis:rest:info
+  url: http://maps.ypeka.gr/arcgis/rest/info?f=pjson
 id: mapsypekagr
 langs:
 - id: EL

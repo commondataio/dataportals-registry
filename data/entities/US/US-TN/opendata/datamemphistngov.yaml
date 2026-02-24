@@ -11,12 +11,12 @@ coverage:
       id: US
       name: United States
     level: 30
-    subregion:
-      id: US-TN
-      name: Tennessee
     macroregion:
       id: '021'
       name: Northern America
+    subregion:
+      id: US-TN
+      name: Tennessee
 description: Memphis, TN governmental data catalog. open data portal. managed by City
   of Memphis. powered by Socrata. accessible at data.memphistn.gov.
 endpoints:
@@ -28,6 +28,8 @@ endpoints:
   url: https://s3.amazonaws.com/sa-socrata-sitemaps-us-east-1-fedramp-prod/sitemaps/sitemap-data.memphistn.gov.xml
 - type: opensearch
   url: https://data.memphistn.gov/opensearch.xml
+- type: sitemap
+  url: https://data.memphistn.gov/sitemap.xml
 id: datamemphistngov
 langs:
 - id: EN

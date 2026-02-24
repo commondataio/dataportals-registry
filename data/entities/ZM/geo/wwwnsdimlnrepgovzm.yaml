@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,11 @@ langs:
 - id: EN
   name: English
 link: http://www.nsdi.mlnrep.gov.zm/arcgis/rest/services
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.nsdi.mlnrep.gov.zm/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://www.nsdi.mlnrep.gov.zm/arcgis/rest/services?f=pjson
 name: National Spatial Data Infrastructure of Zambia ArcGIS server
 owner:
   link: https://gov.zm

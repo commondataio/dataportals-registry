@@ -15,32 +15,33 @@ coverage:
     macroregion:
       id: '017'
       name: Middle Africa
-description: Data catalog of the Ministry of Forests and Wildlife, Cameroon
+description: Cameroon Forest Atlas data catalog. Open data portal of the Ministry
+  of Forests and Wildlife (Minfof) for forest and wildlife geospatial data.
 endpoints:
 - type: dcatap201
-  url: https://data-minfof.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+  url: https://cmr-data.forest-atlas.org/api/feed/dcat-ap/2.0.1.json
 - type: dcatus11
-  url: https://data-minfof.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+  url: https://cmr-data.forest-atlas.org/api/feed/dcat-us/1.1.json
 - type: rss
-  url: https://data-minfof.opendata.arcgis.com/api/feed/rss/2.0
+  url: https://cmr-data.forest-atlas.org/api/feed/rss/2.0
 - type: ogcrecordsapi
-  url: https://data-minfof.opendata.arcgis.com/api/search/v1
+  url: https://cmr-data.forest-atlas.org/api/search/v1
 - type: sitemap
-  url: https://data-minfof.opendata.arcgis.com/sitemap.xml
+  url: https://cmr-data.forest-atlas.org/sitemap.xml
 id: cmrdataforestatlasorg
 langs:
 - id: FR
   name: French
-link: https://data-minfof.opendata.arcgis.com
-name: Ministry of Forest and Wildlife Open Data Portal
+link: https://cmr-data.forest-atlas.org
+name: Cameroon Forest Atlas
 owner:
-  link: https://mininfof.cm
+  link: https://forest-atlas.org
   location:
     country:
       id: CM
       name: Cameroon
     level: 20
-  name: Ministry of Forest and Wildlife Cameroon
+  name: Ministry of Forest and Wildlife (Cameroon)
   type: Central government
 properties:
   has_doi: false
@@ -56,11 +57,22 @@ software:
   name: ArcGIS Hub
 status: active
 tags:
+- forest atlas
+- forestry
 - geospatial
 - government
 - has_api
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
 uid: cdi00000366

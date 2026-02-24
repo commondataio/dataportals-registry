@@ -1,0 +1,112 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Spatial Data Infrastructure (SDI) GeoServer portal for GeoRhena, the
+  GIS of the trinational Upper Rhine region (Rhin supérieur / Oberrhein). Collects,
+  harmonizes and disseminates open geospatial data. Partners include French, German
+  and Swiss public institutions.
+endpoints:
+- type: wms111
+  url: https://sdi.georhena.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://sdi.georhena.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://sdi.georhena.eu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://sdi.georhena.eu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: sdigeorhenaeu
+langs:
+- id: FR
+  name: French
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://sdi.georhena.eu/geoserver
+name: GeoRhena Geoportal
+owner:
+  link: https://www.georhena.eu
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-GES
+      name: Grand-Est
+  name: GeoRhena
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- European Union
+- GIS
+- GeoServer
+- SDI
+- Upper Rhine
+- geoportal
+- geospatial
+- spatial data
+- trinational
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00001478

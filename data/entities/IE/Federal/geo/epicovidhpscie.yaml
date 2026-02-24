@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: HPSC Infectious Disease Data Portal providing access to COVID-19, influenza,
+  RSV, and other notifiable disease datasets. Includes National Notifiable Disease
+  Hub, Respiratory Virus Notification Data Hub, National Outbreaks Data Hub, and Seroepidemiology
+  of COVID-19 in Ireland Data Hub.
+endpoints:
+- type: dcatap201
+  url: https://epicovid.hpsc.ie/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://epicovid.hpsc.ie/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://epicovid.hpsc.ie/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://epicovid.hpsc.ie/api/search/v1
+- type: dcatus11
+  url: https://epicovid.hpsc.ie/data.json
+- type: sitemap
+  url: https://epicovid.hpsc.ie/sitemap.xml
+id: epicovidhpscie
+langs:
+- id: EN
+  name: English
+link: https://epicovid.hpsc.ie
+name: HPSC Infectious Disease Data Portal
+owner:
+  link: https://www.hpsc.ie
+  location:
+    country:
+      id: IE
+      name: Ireland
+    level: 20
+  name: Health Protection Surveillance Centre
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- health
+- epidemiology
+- covid19
+- infectious disease
+- Ireland
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00020819

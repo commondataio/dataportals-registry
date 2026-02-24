@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -82,3 +82,10 @@ topics:
   name: Boundaries
   type: iso19115
 uid: temp00003443
+endpoints:
+- type: wms130
+  url: https://servicesvecto3.mern.gouv.qc.ca/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://servicesvecto3.mern.gouv.qc.ca/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

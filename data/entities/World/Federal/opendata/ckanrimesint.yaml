@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: RIMES CKAN data portal provides access to climate, weather, and hazard
+  datasets for Asia and Africa. Includes rainfall, temperature, ENSO, IOD, MJO data,
+  crop calendars, emissions, and disaster-related datasets from the Regional Integrated
+  Multi-Hazard Early Warning System.
+endpoints:
+- type: ckan
+  url: https://ckan.rimes.int/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.rimes.int/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.rimes.int/api/3/action/package_list
+  version: '3'
+id: ckanrimesint
+langs:
+- id: EN
+  name: English
+link: https://ckan.rimes.int/
+name: RIMES CKAN Data Portal
+owner:
+  link: https://www.rimes.int
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Regional Integrated Multi-Hazard Early Warning System (RIMES)
+  type: International
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- climate
+- weather
+- early warning
+- hazards
+- rainfall
+- crop
+- healthcare
+- Asia
+- Africa
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00020534

@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+endpoints:
+- type: csw202
+  url: https://repozytorium.imp.gda.pl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://repozytorium.imp.gda.pl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://repozytorium.imp.gda.pl/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://repozytorium.imp.gda.pl/geonetwork/srv/api/site
+description: GeoNetwork metadata catalog of the Institute of Fluid Flow Machinery, Polish
+  Academy of Sciences (IMP PAN) in Gdańsk, for geospatial and research data.
+id: repozytoriumimpgdapigeonetwork
+langs:
+- id: PL
+  name: Polish
+- id: EN
+  name: English
+link: https://repozytorium.imp.gda.pl/geonetwork
+name: IMP Gdańsk GeoNetwork
+owner:
+  link: https://repozytorium.imp.gda.pl/
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 20
+  name: Instytut Maszyn Przepływowych PAN (IMP)
+  type: Academy
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- GeoNetwork
+uid: cdi00021787
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115

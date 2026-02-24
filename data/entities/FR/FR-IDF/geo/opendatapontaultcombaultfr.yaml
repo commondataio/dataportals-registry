@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,7 +17,7 @@ coverage:
       name: Western Europe
     subregion:
       id: FR-IDF
-      name: Île-de-France
+      name: Ile-de-France
 id: opendatapontaultcombaultfr
 langs:
 - id: FR
@@ -30,10 +30,10 @@ owner:
     country:
       id: FR
       name: France
-    level: 60
+    level: 30
     subregion:
       id: FR-IDF
-      name: Île-de-France
+      name: Ile-de-France
   name: Pontault Combault
   type: Local government
 properties:
@@ -59,3 +59,6 @@ topics:
 uid: cdi00011052
 description: Geoportal. managed by Pontault Combault. providing access to pontault
   combault.
+endpoints:
+- type: ogcrecordsapi
+  url: https://opendata.pontault-combault.fr/api/search/v1

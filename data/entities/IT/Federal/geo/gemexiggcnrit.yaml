@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoNode-based open access database for the GEMex project, providing geospatial
+  layers and maps.
+endpoints:
+- type: geonode:layers
+  url: https://gemex.igg.cnr.it/api/layers/
+- type: geonode:documents
+  url: https://gemex.igg.cnr.it/api/documents/
+- type: csw202
+  url: https://gemex.igg.cnr.it/catalogue/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: csw202
+  url: https://gemex.igg.cnr.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://gemex.igg.cnr.it/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://gemex.igg.cnr.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://gemex.igg.cnr.it/sitemap.xml
+- type: opensearch
+  url: https://gemex.igg.cnr.it/catalogue/opensearch
+id: gemexiggcnrit
+langs:
+- id: EN
+  name: English
+link: https://gemex.igg.cnr.it/
+name: GEMex Open Access Database
+owner:
+  link: https://www.igg.cnr.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Istituto di Geoscienze e Georisorse (IGG), Consiglio Nazionale delle Ricerche
+  type: Academy
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Italy
+- IGG-CNR
+- GEMex
+- geonode
+- geospatial
+topics:
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00020446

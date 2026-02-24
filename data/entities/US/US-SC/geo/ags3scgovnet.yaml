@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-SC
+      name: South Carolina
+description: South Carolina state ArcGIS Server providing geospatial data services
+  including imagery (SC2021, SC2023) via REST API. Hosts planning and GIS mapping
+  applications for the State of South Carolina.
+endpoints:
+- type: arcgis:rest:info
+  url: https://ags3.scgov.net/agsfed/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ags3.scgov.net/agsfed/rest/services?f=pjson
+id: ags3scgovnet
+langs:
+- id: EN
+  name: English
+link: https://ags3.scgov.net/agsfed/rest/services/
+name: South Carolina State GIS ArcGIS Server
+owner:
+  link: https://sc.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-SC
+      name: South Carolina
+  name: State of South Carolina
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+- arcgisserver
+- geospatial
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012766

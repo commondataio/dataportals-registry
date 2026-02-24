@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Geoportal. managed by Città Metropolitana di Firenze. powered by Geonetwork.
+  accessible at www.opendatanetwork.it.
+endpoints:
+- type: csw202
+  url: http://www.opendatanetwork.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://www.opendatanetwork.it/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://www.opendatanetwork.it/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: wwwopendatanetworkit
+langs:
+- id: IT
+  name: Italian
+link: http://www.opendatanetwork.it/geonetwork
+name: Città Metropolitana di Firenze metadata catalogue
+owner:
+  link: https://www.cittametropolitana.fi.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 30
+    subregion:
+      id: IT-52
+      name: Toscana
+  name: Città Metropolitana di Firenze
+  type: Local government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00002162

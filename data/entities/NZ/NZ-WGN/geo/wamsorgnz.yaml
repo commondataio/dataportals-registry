@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Wellington
 description: ArcGIS REST services hosted by WAMS, providing geospatial data and map
   services for the Wellington and Marlborough regions.
+endpoints:
+- type: arcgis:rest:services
+  url: http://wams.org.nz/ArcGIS/rest/services?f=pjson
 id: wamsorgnz
 langs:
 - id: EN

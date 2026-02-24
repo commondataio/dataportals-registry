@@ -1,0 +1,105 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+endpoints:
+- type: geonode:documents
+  url: https://sdi.atlasgeotechllc.com/api/documents/
+- type: csw202
+  url: https://sdi.atlasgeotechllc.com/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://sdi.atlasgeotechllc.com/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://sdi.atlasgeotechllc.com/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://sdi.atlasgeotechllc.com/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs201
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://sdi.atlasgeotechllc.com/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://sdi.atlasgeotechllc.com/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://sdi.atlasgeotechllc.com/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: sitemap
+  url: https://sdi.atlasgeotechllc.com/sitemap.xml
+id: sdiatlasgeotechllccom
+langs:
+- id: EN
+  name: English
+link: https://sdi.atlasgeotechllc.com
+name: Atlas Geotech
+owner:
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Atlas Geotech LLC
+  type: Private company
+  link: https://atlasgeotechllc.com
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- GeoNode
+- SDI
+uid: cdi00021645
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+description: Geoportal. managed by Atlas Geotech LLC. providing access to atlas geotech.
+content_types:
+- dataset
+- map_layer

@@ -1,37 +1,19 @@
 DATA QUALITY REPORT - COUNTRY: MZ
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: MZ
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[DUPLICATE_LINK]
-Count: 2
-Priority: MEDIUM
-
-File: MZ/geo/licensesinamigovmzarcgisrestservices.yaml
-Record ID: licensesinamigovmzarcgisrestservices
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: MZ/geo/licensesinamigovmz.yaml
-Record ID: licensesinamigovmz
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT]
 Count: 1
 Priority: IMPORTANT
 
 File: MZ/Federal/scientific/1972496202.yaml
 Record ID: 1972496202
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
 Field: endpoints
 Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
@@ -39,5 +21,4 @@ Suggested Action: Add at least one endpoint because software.id='ipt' is marked 
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT: 1 issue

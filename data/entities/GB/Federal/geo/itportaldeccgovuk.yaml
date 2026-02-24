@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,7 +22,7 @@ langs:
 - id: EN
   name: English
 link: https://itportal.decc.gov.uk/arcgis/services
-name: itportal.decc.gov.uk
+name: DECC IT Portal - Geoportal
 owner:
   link: https://itportal.decc.gov.uk/arcgis/services
   location:
@@ -66,3 +66,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00005014
+endpoints:
+- type: arcgis:rest:info
+  url: https://itportal.decc.gov.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://itportal.decc.gov.uk/arcgis/rest/services?f=pjson

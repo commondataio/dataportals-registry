@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoNetwork catalogue for monitoring, managed by OBSNEV.
+endpoints:
+- type: geonetwork:query
+  url: https://geonetwork-monitoreo.obsnev.es/geonetwork/srv/eng/q
+- type: openapi
+  url: https://geonetwork-monitoreo.obsnev.es/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://geonetwork-monitoreo.obsnev.es/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonetwork-monitoreo.obsnev.es/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geonetwork-monitoreo.obsnev.es/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geonetworkmonitoreoobsneves
+langs:
+- id: ES
+  name: Spanish
+link: https://geonetwork-monitoreo.obsnev.es/geonetwork
+name: GeoNetwork Monitoreo OBSNEV
+owner:
+  link: https://obsnev.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: OBSNEV
+  type: Other
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- Spain
+- geonetwork
+- geoportal
+- geospatial
+- OBSNEV
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021762

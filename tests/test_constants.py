@@ -76,9 +76,8 @@ class TestConstants:
         assert MAP_CATALOG_TYPE_SUBDIR["Scientific data repository"] == "scientific"
         assert "Indicators catalog" in MAP_CATALOG_TYPE_SUBDIR
         assert MAP_CATALOG_TYPE_SUBDIR["Indicators catalog"] == "indicators"
-        # Note: 'Open data portal' is not in MAP_CATALOG_TYPE_SUBDIR
-        # It defaults to 'opendata' in builder.py when not found
-        assert "Open data portal" not in MAP_CATALOG_TYPE_SUBDIR
+        assert "Open data portal" in MAP_CATALOG_TYPE_SUBDIR
+        assert MAP_CATALOG_TYPE_SUBDIR["Open data portal"] == "opendata"
 
     def test_map_software_owner_catalog_type(self):
         """Test MAP_SOFTWARE_OWNER_CATALOG_TYPE mappings"""

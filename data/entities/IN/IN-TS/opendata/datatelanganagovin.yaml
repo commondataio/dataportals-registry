@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,6 +21,16 @@ description: The Open Data Platform supports the 'Open Data Policy' of the Gover
   of Telangana. The portal will be the central repository of all the datasets of the
   Government of Telangana that should be in the public domain. The portal will house
   datasets form the various departments and organizations of the Government of Telangana.
+endpoints:
+- type: dkan:search
+  url: https://data.telangana.gov.in/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://data.telangana.gov.in/api/1/metastore
+  version: '1'
+- type: dkan:datastore
+  url: https://data.telangana.gov.in/api/1/datastore
+  version: '1'
 id: datatelanganagovin
 identifiers:
 - id: dataportals.org
@@ -39,7 +49,7 @@ owner:
       name: India
     level: 30
     subregion:
-      id: IN-TG
+      id: IN-TS
       name: Telangana
   name: Government of Telangana
   type: Regional government

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,11 @@ description: A data catalog hosted by the Marine Institute, serving as Ireland's
   data including oceanography, fisheries, marine environment, and food safety. The
   catalog provides access to datasets for research, policy, and industry, and supports
   interactive maps and data downloads.
+endpoints:
+- type: arcgis:rest:info
+  url: http://miags04.marine.ie/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://miags04.marine.ie/arcgis/rest/services?f=pjson
 id: miags04marineie
 langs:
 - id: EN

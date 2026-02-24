@@ -1,0 +1,118 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+- document
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: ATLAD - Atlante delle aree degradate (Atlas of degraded areas). Italian
+  national GeoNode geoportal for degraded and contaminated land areas.
+endpoints:
+- type: geonode:datasets
+  url: https://atlad.geoportale.it/api/datasets/
+- type: geonode:documents
+  url: https://atlad.geoportale.it/api/documents/
+- type: csw202
+  url: https://atlad.geoportale.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://atlad.geoportale.it/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://atlad.geoportale.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://atlad.geoportale.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://atlad.geoportale.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://atlad.geoportale.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://atlad.geoportale.it/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://atlad.geoportale.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://atlad.geoportale.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://atlad.geoportale.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://atlad.geoportale.it/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://atlad.geoportale.it/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://atlad.geoportale.it/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://atlad.geoportale.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://atlad.geoportale.it/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://atlad.geoportale.it/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://atlad.geoportale.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: atladgeoportaleit
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://atlad.geoportale.it
+name: ATLAD - Atlante delle aree degradate
+owner:
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Italian Government
+  type: Central government
+  link: https://geoportale.it
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Italy
+- degraded areas
+- contaminated land
+- geonode
+- geoportal
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021595

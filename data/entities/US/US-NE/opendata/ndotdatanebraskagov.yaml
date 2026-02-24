@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NE
+      name: Nebraska
+description: Open data portal of the Nebraska Department of Transportation providing
+  transportation datasets for reference and public use.
+endpoints:
+- type: ckan
+  url: https://ndotdata.nebraska.gov/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ndotdata.nebraska.gov/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ndotdata.nebraska.gov/api/3/action/package_list
+  version: '3'
+id: ndotdatanebraskagov
+langs:
+- id: EN
+  name: English
+link: https://ndotdata.nebraska.gov/
+name: Nebraska Department of Transportation Open Data
+owner:
+  link: https://ndotdata.nebraska.gov/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NE
+      name: Nebraska
+  name: Nebraska Department of Transportation
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- transportation
+- government
+- has_api
+uid: cdi00020609
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115

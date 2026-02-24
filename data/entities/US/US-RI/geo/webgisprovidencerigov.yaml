@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -63,3 +63,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00004415
+endpoints:
+- type: arcgis:rest:info
+  url: https://webgis.providenceri.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://webgis.providenceri.gov/arcgis/rest/services?f=pjson

@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: No actual catalog metadata or vocabularies were extracted from the given
+  URL, as the request is to extract structured data according to a schema from a catalog,
+  but the provided URL is the catalog homepage, not a metadata endpoint. No catalog
+  instance or dataset metadata is visible in the provided content. To extract actual
+  metadata, an API endpoint or structured data (e.g., DCAT JSON-LD, CSW XML) must
+  be provided or found within the website. The catalog at the given URL likely contains
+  datasets, but you must provide a direct metadata endpoint, a dataset-specific page,
+  or detailed scraping instructions to extract specific owner types, data themes,
+  and ISO19115 themes.
+endpoints:
+- type: dcatap201
+  url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://geoportaal.ddh.opendata.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://geoportaal.ddh.opendata.arcgis.com/api/search/v1
+id: geoportaalddhopendataarcgiscom
+langs:
+- id: NL
+  name: Dutch
+link: https://geoportaal.ddh.opendata.arcgis.com
+name: Extract not possible with provided data
+owner:
+  link: https://geoportaal.ddh.opendata.arcgis.com
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion:
+      id: NL-ZH
+      name: Zuid-Holland
+  name: Den Haag
+  type: Local government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- geospatial
+- has_api
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00001167

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -84,3 +84,8 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: temp00003983
+endpoints:
+- type: arcgis:rest:info
+  url: http://gis.cityofsanmateo.org/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://gis.cityofsanmateo.org/arcgis/rest/services?f=pjson

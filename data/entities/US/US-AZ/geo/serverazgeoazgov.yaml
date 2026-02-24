@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: https://server.azgeo.az.gov/arcgis/rest/services
-name: server.azgeo.az.gov
+name: Government of United States Geoportal
 owner:
   link: https://server.azgeo.az.gov
   location:
@@ -118,3 +118,8 @@ topics:
   name: Transportation
   type: iso19115
 uid: temp00005727
+endpoints:
+- type: arcgis:rest:info
+  url: https://server.azgeo.az.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://server.azgeo.az.gov/arcgis/rest/services?f=pjson

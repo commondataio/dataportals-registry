@@ -5,6 +5,7 @@ Script to fix IMPORTANT priority issues:
 - MISSING_OWNER_NAME
 - MISSING_OWNER_TYPE
 - COVERAGE_NORMALIZATION (add macroregion)
+- UNKNOWN_COUNTRY_OR_MACROREGION (replace Unknown with inferred or World)
 - INCONSISTENT_LICENSE (add license_url)
 - MISSING_API_STATUS (add api_status)
 - SOFTWARE_ID_UNKNOWN (map to custom or verify)
@@ -363,6 +364,108 @@ def infer_owner_type(record, owner_link=None):
     
     return None
 
+def fix_unknown_country_macroregion(record, macroregion_dict: Dict[str, Dict], file_path: str = "") -> Tuple[bool, str]:
+    """Fix UNKNOWN_COUNTRY_OR_MACROREGION by replacing Unknown with inferred or World."""
+    UNKNOWN = "Unknown"
+    fixed = False
+    messages = []
+
+    # Infer country from owner or file path
+    owner_country = (record.get("owner", {}) or {}).get("location", {}) or {}
+    owner_country = owner_country.get("country", {}) or {}
+    owner_id = (owner_country.get("id") or "").strip()
+    owner_name = (owner_country.get("name") or "").strip()
+
+    # Country from file path (e.g. US/Other/scientific/x.yaml -> US)
+    path_country = ""
+    if file_path and "/" in file_path:
+        path_country = file_path.split("/")[0].strip()
+
+    def _valid_country(cid):
+        return cid and str(cid).strip() != UNKNOWN
+
+    def _valid_macroregion(mid):
+        return mid and str(mid).strip() != UNKNOWN
+
+    # Macroregion paths (not ISO countries) - use World
+    MACROREGION_PATHS = {"Africa", "World", "EU", "Oceania", "Americas", "Asia", "Europe"}
+    if path_country in MACROREGION_PATHS:
+        path_country = ""
+
+    # Resolve replacement country: owner > path > World
+    if _valid_country(owner_id):
+        replacement_country = {"id": owner_id, "name": owner_name or owner_id}
+    elif path_country and path_country in macroregion_dict:
+        # Get country name from reference
+        country_name = path_country
+        countries_file = BASE_DIR / "data" / "reference" / "countries.csv"
+        if countries_file.exists():
+            with open(countries_file, "r", encoding="utf-8") as f:
+                for row in csv.DictReader(f):
+                    if row.get("alpha2") == path_country:
+                        country_name = row.get("name", path_country)
+                        break
+        replacement_country = {"id": path_country, "name": country_name}
+    else:
+        replacement_country = {"id": "World", "name": "World"}
+
+    # Fix coverage entries
+    coverage = record.get("coverage", [])
+    for idx, cov_entry in enumerate(coverage or []):
+        location = cov_entry.get("location", {}) or {}
+        country = location.get("country", {}) or {}
+        macroregion = location.get("macroregion", {}) or {}
+
+        # Fix country.id or country.name = Unknown
+        cid = (country.get("id") or "").strip()
+        cname = (country.get("name") or "").strip()
+        if cid == UNKNOWN or cname == UNKNOWN:
+            location["country"] = replacement_country.copy()
+            cov_entry["location"] = location
+            coverage[idx] = cov_entry
+            fixed = True
+            messages.append(f"Set coverage[{idx}].country to {replacement_country['id']}")
+
+        # Fix macroregion.id or macroregion.name = Unknown
+        mid = (macroregion.get("id") or "").strip()
+        mname = (macroregion.get("name") or "").strip()
+        if mid == UNKNOWN or mname == UNKNOWN:
+            # Infer from country
+            loc_country = location.get("country", {}) or {}
+            loc_cid = (loc_country.get("id") or "").strip()
+            if loc_cid and loc_cid != UNKNOWN:
+                mr_info = macroregion_dict.get(loc_cid)
+                if mr_info:
+                    location["macroregion"] = {
+                        "id": mr_info["macroregion_code"],
+                        "name": mr_info["macroregion_name"],
+                    }
+                else:
+                    location["macroregion"] = {"id": "001", "name": "World"}
+            else:
+                location["macroregion"] = {"id": "001", "name": "World"}
+            cov_entry["location"] = location
+            coverage[idx] = cov_entry
+            fixed = True
+            messages.append(f"Set coverage[{idx}].macroregion")
+
+    # Fix owner.location.country if Unknown
+    owner = record.get("owner", {}) or {}
+    owner_loc = owner.get("location", {}) or {}
+    owner_country = owner_loc.get("country", {}) or {}
+    if (owner_country.get("id") or "").strip() == UNKNOWN or (owner_country.get("name") or "").strip() == UNKNOWN:
+        owner_loc["country"] = replacement_country.copy()
+        owner["location"] = owner_loc
+        record["owner"] = owner
+        fixed = True
+        messages.append("Set owner.location.country")
+
+    if fixed:
+        record["coverage"] = coverage
+        return True, "; ".join(messages)
+    return False, None
+
+
 def fix_coverage_normalization(record, macroregion_dict: Dict[str, Dict]) -> Tuple[bool, str]:
     """Fix COVERAGE_NORMALIZATION by adding macroregion"""
     coverage = record.get("coverage", [])
@@ -378,12 +481,16 @@ def fix_coverage_normalization(record, macroregion_dict: Dict[str, Dict]) -> Tup
         country_id = country.get("id")
         
         if country_id and ("macroregion" not in location or not location.get("macroregion")):
-            # Skip Unknown, EU, World
-            if country_id in ["Unknown", "EU", "World"]:
+            if country_id == "Unknown":
                 continue
-            
-            if country_id in macroregion_dict:
-                macroregion_info = macroregion_dict[country_id]
+
+            # Special macroregions for EU and World (not in UN M49 country list)
+            special_macroregions = {
+                "EU": {"macroregion_code": "EU", "macroregion_name": "European Union"},
+                "World": {"macroregion_code": "001", "macroregion_name": "World"},
+            }
+            macroregion_info = special_macroregions.get(country_id) or macroregion_dict.get(country_id)
+            if macroregion_info:
                 location["macroregion"] = {
                     "id": macroregion_info["macroregion_code"],
                     "name": macroregion_info["macroregion_name"],
@@ -599,6 +706,8 @@ def fix_yaml_file(file_path, issue_type, macroregion_dict: Dict[str, Dict], soft
             fixed, message = fix_software_id_unknown(data, software_defs)
         elif issue_type == "SOFTWARE_NAME_MISMATCH":
             fixed, message = fix_software_name_mismatch(data, software_defs)
+        elif issue_type == "UNKNOWN_COUNTRY_OR_MACROREGION":
+            fixed, message = fix_unknown_country_macroregion(data, macroregion_dict, file_path)
         
         if fixed and message:
             print(f"{issue_type} in {file_path}: {message}")

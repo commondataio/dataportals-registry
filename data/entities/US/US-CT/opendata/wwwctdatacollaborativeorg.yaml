@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -26,7 +26,7 @@ langs:
 - id: EN
   name: English
 link: https://www.ctdatacollaborative.org
-name: www.ctdatacollaborative.org
+name: Inform CT, Inc. dba CTData Collaborative Open Data Portal
 owner:
   link: https://www.ctdata.org
   location:
@@ -64,3 +64,7 @@ topics:
   name: Society
   type: iso19115
 uid: temp00002018
+endpoints:
+- type: ckan:api
+  url: https://www.ctdatacollaborative.org/api/3/action/package_list
+  version: '3.0'

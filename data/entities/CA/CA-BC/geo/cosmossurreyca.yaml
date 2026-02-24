@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -89,3 +89,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00004907
+endpoints:
+- type: arcgis:rest:info
+  url: http://cosmos.surrey.ca/COSREST/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: http://cosmos.surrey.ca/COSREST/rest/services?f=pjson

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,7 +17,7 @@ coverage:
       name: Eastern Europe
     subregion:
       id: PL-24
-      name: Silesia
+      name: Slaskie
 description: No description available in input. geoportal. managed by Tychy city government.
   powered by Geonetwork. accessible at sit.umtychy.pl:8080.
 id: situmtychypl
@@ -35,7 +35,7 @@ owner:
     level: 30
     subregion:
       id: PL-24
-      name: Silesia
+      name: Slaskie
   name: Tychy city government
   type: Local government
 properties:
@@ -61,3 +61,6 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00004166
+endpoints:
+- type: geonetwork:api:records
+  url: https://sit.umtychy.pl:8080/geonetwork/srv/api/records

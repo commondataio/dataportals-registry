@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Data catalog for open datasets from North Macedonia (no direct content
+  available within search results). Publisher and thematic details not available in
+  the provided search results.
+endpoints:
+- type: ckan
+  url: https://data.gov.mk/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.mk/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.mk/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.gov.mk/catalog.n3
+- type: dcat:ttl
+  url: https://data.gov.mk/catalog.ttl
+- type: dcat:xml
+  url: https://data.gov.mk/catalog.xml
+- type: dcat:jsonld
+  url: https://data.gov.mk/catalog.jsonld
+id: datagovmk
+langs:
+- id: MK
+  name: Makedonian
+link: https://data.gov.mk
+name: Data Open Data Portal
+owner:
+  link: https://data.gov.mk
+  location:
+    country:
+      id: MK
+      name: Republic of North Macedonia
+    level: 20
+  name: Data
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00001115

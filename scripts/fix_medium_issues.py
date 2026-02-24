@@ -44,6 +44,11 @@ LANGS_BY_COUNTRY = {
     "BE": ["FR", "NL"],  # Belgium has both French and Dutch
     "CH": ["DE", "FR", "IT"],  # Switzerland has multiple languages
     "CA": ["EN", "FR"],  # Canada has English and French
+    # Additional country/region codes from quality report
+    "SY": ["AR"],  # Syria - Arabic
+    "EU": ["EN"],  # European Union - English as common
+    "Africa": ["EN"],  # Continental - English as common
+    "KE": ["EN"],  # Kenya - English
 }
 
 # Language code to name mapping (shared)
@@ -434,6 +439,12 @@ def fix_yaml_file(file_path, issue_type, field=None):
         return False
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Fix MEDIUM priority data quality issues")
+    parser.add_argument("--only", type=str, metavar="ISSUE_TYPE",
+                        help="Only fix this issue type (e.g. MISSING_LANGS)")
+    args = parser.parse_args()
+
     medium_file = BASE_DIR / "dataquality" / "priorities" / "MEDIUM.txt"
     
     if not medium_file.exists():
@@ -442,7 +453,11 @@ def main():
     
     print("Parsing MEDIUM.txt...")
     issues = parse_medium_file(medium_file)
-    print(f"Found {len(issues)} issues to fix")
+    if args.only:
+        issues = [(fp, it, fld) for fp, it, fld in issues if it == args.only]
+        print(f"Filtering to {args.only}: {len(issues)} issues to fix")
+    else:
+        print(f"Found {len(issues)} issues to fix")
     
     fixed_count = 0
     skipped_count = 0

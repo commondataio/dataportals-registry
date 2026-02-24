@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -54,6 +54,10 @@ tags:
 - ckan
 - local government
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00003000
+endpoints:
+- type: api
+  url: https://ckan.pbh.gov.br/api/3/action/package_search

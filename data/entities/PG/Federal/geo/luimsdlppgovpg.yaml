@@ -1,0 +1,93 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map
+- document
+coverage:
+- location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 20
+    macroregion:
+      id: '054'
+      name: Melanesia
+description: National Land Use Information Management System (LUIMS) providing geospatial
+  data, maps, and land use plans to support sustainable land use planning across Papua
+  New Guinea.
+endpoints:
+- type: geonode:datasets
+  url: https://luims.dlpp.gov.pg/api/datasets/
+- type: geonode:layers
+  url: https://luims.dlpp.gov.pg/api/layers/
+- type: geonode:documents
+  url: https://luims.dlpp.gov.pg/api/documents/
+- type: wms130
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://luims.dlpp.gov.pg/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: csw202
+  url: https://luims.dlpp.gov.pg/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://luims.dlpp.gov.pg/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://luims.dlpp.gov.pg/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: luimsdlppgovpg
+langs:
+- id: EN
+  name: English
+link: https://luims.dlpp.gov.pg
+name: National Land Use Information Management System (LUIMS)
+owner:
+  link: https://dlpp.gov.pg
+  location:
+    country:
+      id: PG
+      name: Papua New Guinea
+    level: 20
+  name: Department of Lands and Physical Planning (DLPP)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- GIS
+- land use
+- planning
+- Papua New Guinea
+- geonode
+- geoportal
+- spatial data
+topics:
+- id: Planning Cadastre
+  name: Planning Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021538

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,12 @@ coverage:
       name: Western Asia
 description: BioGIS - Israel node. This scientific data repository. managed by Israel
   Nature and Parks Authority.
+endpoints:
+- type: ipt:dataset
+  url: http://132.64.68.168:8080/ipt-2.1.1/inventory/dataset
+- type: rss
+  url: http://132.64.68.168:8080/ipt-2.1.1/rss.do
+  version: '2.0'
 id: '1326468168'
 langs:
 - id: HE

@@ -34,6 +34,10 @@ endpoints:
   version: '1.0'
 - type: opensearch
   url: http://riskdata.thessaloniki.gr/catalogue/opensearch
+- type: geonode:datasets
+  url: http://riskdata.thessaloniki.gr/api/datasets/
+- type: sitemap
+  url: http://riskdata.thessaloniki.gr/sitemap.xml
 id: riskdatathessalonikigr
 langs:
 - id: EL
@@ -46,7 +50,10 @@ owner:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
+    subregion:
+      id: GR-B
+      name: Kentriki Makedonia
   name: City of Thessaloniki
   type: Regional government
 properties:

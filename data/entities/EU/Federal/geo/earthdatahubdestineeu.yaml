@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+- collection
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Gateway of the Destination Earth (DestinE) Data Lake. STAC-compliant
+  catalogue and access to analysis-ready Earth observation data (ERA5, CMIP6, Copernicus
+  DEM, Sentinel-1 ARD) as Zarr stores via the Xarray protocol. Implemented by ECMWF
+  as part of the DestinE Digital Twin Engine.
+endpoints:
+- type: stacserverapi
+  url: https://earthdatahub.destine.eu/api/stac/v1/
+id: earthdatahubdestineeu
+langs:
+- id: EN
+  name: English
+link: https://earthdatahub.destine.eu/
+name: Earth Data Hub
+owner:
+  link: https://destination-earth.eu
+  location:
+    country: *id001
+    level: 20
+  name: Destination Earth (DestinE)
+  type: International organization
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+- earth-observation
+- climate
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00021412

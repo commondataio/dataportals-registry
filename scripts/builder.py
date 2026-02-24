@@ -21,6 +21,7 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 import csv
+import glob
 import json
 import os
 import shutil
@@ -38,11 +39,16 @@ from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,
+    MAP_CATALOG_TYPE_SUBDIR,
     DOMAIN_LOCATIONS,
     DEFAULT_LOCATION,
     COUNTRIES_LANGS,
-    MAP_CATALOG_TYPE_SUBDIR,
     COUNTRIES,
+    SOFTWARE_NAME_ALIASES,
+    ACCESS_MODE_ALLOWED,
+    CATALOG_TYPE_ALLOWED,
+    STATUS_ALLOWED,
+    API_STATUS_ALLOWED,
 )
 
 # Configure logging
@@ -60,6 +66,7 @@ SCHEDULED_DIR = os.path.join(_REPO_ROOT, "data", "scheduled")
 SOFTWARE_DIR = os.path.join(_REPO_ROOT, "data", "software")
 DATASETS_DIR = os.path.join(_REPO_ROOT, "data", "datasets")
 UNPROCESSED_DIR = os.path.join(_REPO_ROOT, "data", "_unprocessed")
+SUBREGIONS_CSV = os.path.join(_REPO_ROOT, "data", "reference", "subregions", "IP2LOCATION-ISO3166-2.CSV")
 
 app = typer.Typer()
 
@@ -615,9 +622,58 @@ def validate():
     typer.echo("\nAll records valid!")
 
 
+def _validate_yaml_files(filenames: List[str], schema: dict, v) -> tuple:
+    """Validate a list of YAML files. Returns (errors, total, valid)."""
+    errors = []
+    total = 0
+    valid = 0
+    for filename in filenames:
+        total += 1
+        try:
+            f = open(filename, "r", encoding="utf8")
+            record = yaml.load(f, Loader=Loader)
+            f.close()
+
+            if record is None:
+                errors.append((filename, "File is empty or invalid YAML"))
+                continue
+
+            if not v.validate(record, schema):
+                record_id = record.get("id", "unknown")
+                errors.append((filename, f"{record_id}: {str(v.errors)}"))
+            else:
+                valid += 1
+        except yaml.YAMLError as e:
+            errors.append((filename, f"YAML parsing error: {str(e)}"))
+        except Exception as e:
+            record_id = "unknown"
+            try:
+                f = open(filename, "r", encoding="utf8")
+                record = yaml.load(f, Loader=Loader)
+                f.close()
+                if record:
+                    record_id = record.get("id", "unknown")
+            except Exception:
+                pass
+            errors.append((filename, f"{record_id}: {str(e)}"))
+    return errors, total, valid
+
+
 @app.command()
-def validate_yaml():
-    """Validates all YAML files in entities directory against Cerberus schema"""
+def validate_yaml(
+    file: Optional[str] = typer.Option(
+        None,
+        "--file", "-f",
+        help="Path to a single YAML file to validate",
+        path_type=str,
+    ),
+    id: Optional[str] = typer.Option(
+        None,
+        "--id", "-i",
+        help="Catalog ID to validate (finds {id}.yaml in entities and scheduled)",
+    ),
+):
+    """Validates YAML files against Cerberus schema. Without --file or --id, validates all entities."""
     from cerberus import Validator
 
     schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "catalog.json")
@@ -630,39 +686,43 @@ def validate_yaml():
     total = 0
     valid = 0
 
-    typer.echo("Validating YAML files in entities directory...")
-
-    for root, dirs, files in tqdm.tqdm(os.walk(ROOT_DIR)):
-        files = [os.path.join(root, fi) for fi in files if fi.endswith(".yaml")]
-        for filename in files:
-            total += 1
-            try:
-                f = open(filename, "r", encoding="utf8")
-                record = yaml.load(f, Loader=Loader)
-                f.close()
-
-                if record is None:
-                    errors.append((filename, "File is empty or invalid YAML"))
-                    continue
-
-                if not v.validate(record, schema):
-                    record_id = record.get("id", "unknown")
-                    errors.append((filename, f"{record_id}: {str(v.errors)}"))
-                else:
-                    valid += 1
-            except yaml.YAMLError as e:
-                errors.append((filename, f"YAML parsing error: {str(e)}"))
-            except Exception as e:
-                record_id = "unknown"
-                try:
-                    f = open(filename, "r", encoding="utf8")
-                    record = yaml.load(f, Loader=Loader)
-                    f.close()
-                    if record:
-                        record_id = record.get("id", "unknown")
-                except:
-                    pass
-                errors.append((filename, f"{record_id}: {str(e)}"))
+    if file is not None:
+        # Single file path
+        path = os.path.normpath(file)
+        if not os.path.isabs(path):
+            path = os.path.join(_REPO_ROOT, path)
+        if not os.path.exists(path):
+            typer.echo(f"Error: File not found: {path}", err=True)
+            raise typer.Exit(1)
+        if not path.endswith(".yaml"):
+            typer.echo(f"Error: File must be a YAML file: {path}", err=True)
+            raise typer.Exit(1)
+        typer.echo(f"Validating single file: {path}")
+        errors, total, valid = _validate_yaml_files([path], schema, v)
+    elif id is not None:
+        # Find by catalog ID
+        pattern = os.path.join("**", f"{id}.yaml")
+        candidates = []
+        for base in [ROOT_DIR, SCHEDULED_DIR]:
+            if os.path.exists(base):
+                for match in glob.glob(os.path.join(base, pattern), recursive=True):
+                    candidates.append(match)
+        if not candidates:
+            typer.echo(f"Error: No YAML file found for id '{id}' in entities or scheduled", err=True)
+            raise typer.Exit(1)
+        if len(candidates) > 1:
+            typer.echo(f"Found {len(candidates)} files for id '{id}', validating all")
+        typer.echo(f"Validating: {', '.join(candidates)}")
+        errors, total, valid = _validate_yaml_files(candidates, schema, v)
+    else:
+        # All entities
+        typer.echo("Validating YAML files in entities directory...")
+        filenames = []
+        for root, dirs, files in tqdm.tqdm(os.walk(ROOT_DIR)):
+            filenames.extend(
+                os.path.join(root, fi) for fi in files if fi.endswith(".yaml")
+            )
+        errors, total, valid = _validate_yaml_files(filenames, schema, v)
 
     typer.echo(f"\nValidation complete:")
     typer.echo(f"  Total files: {total}")
@@ -672,7 +732,7 @@ def validate_yaml():
     if errors:
         typer.echo("\nErrors found:")
         for filename, error in errors:
-            rel_path = os.path.relpath(filename, ROOT_DIR)
+            rel_path = os.path.relpath(filename, _REPO_ROOT)
             logger.error("%s: %s", rel_path, error)
         return 1
     else:
@@ -734,6 +794,10 @@ def _add_single_entry(
     preloaded=None,
 ):
     from apidetect import detect_single
+
+    # Huwise-based portals are OpenDataSoft; normalize for add/list and detection.
+    if isinstance(software, str) and software.strip().lower() in SOFTWARE_NAME_ALIASES:
+        software = SOFTWARE_NAME_ALIASES[software.strip().lower()]
 
     domain = urlparse(url).netloc.lower()
     record_id = (
@@ -1269,8 +1333,10 @@ def check_software_expected_endpoints(record):
 
     endpoints = record.get("endpoints", [])
     if not isinstance(endpoints, list) or len(endpoints) == 0:
+        software_suffix = (software_id or "").upper().replace("-", "_")
+        issue_type = f"SOFTWARE_EXPECTED_ENDPOINTS_MISSING_{software_suffix}" if software_suffix else "SOFTWARE_EXPECTED_ENDPOINTS_MISSING"
         return {
-            "issue_type": "SOFTWARE_EXPECTED_ENDPOINTS_MISSING",
+            "issue_type": issue_type,
             "field": "endpoints",
             "current_value": {
                 "software_id": software_id,
@@ -1347,7 +1413,109 @@ def check_owner_info(record):
             "current_value": owner_location,
             "suggested_action": "Add owner organization location with country information",
         })
-    
+
+    owner_type = owner.get("type")
+    owner_type_normalized = owner_type.strip().lower() if isinstance(owner_type, str) else None
+    if owner_type_normalized in {"regional government", "local government"} and owner_location:
+        level_value = owner_location.get("level")
+        try:
+            level_is_30 = int(level_value) == 30
+        except (TypeError, ValueError):
+            level_is_30 = False
+
+        subregion = owner_location.get("subregion")
+        has_subregion = isinstance(subregion, dict) and bool(subregion.get("id")) and bool(subregion.get("name"))
+
+        if not level_is_30 or not has_subregion:
+            issues.append({
+                "issue_type": "OWNER_LOCATION_SUBREGION_REQUIRED",
+                "field": "owner.location",
+                "current_value": owner_location,
+                "suggested_action": (
+                    "For Regional government and Local government owners, set owner.location.level "
+                    "to 30 and include owner.location.subregion with id and name."
+                ),
+            })
+
+    # Verify that if record has owner subregion, the file is in the correct subregion directory (not Federal)
+    subregion = owner_location.get("subregion") if owner_location else None
+    has_owner_subregion = (
+        isinstance(subregion, dict)
+        and isinstance(subregion.get("id"), str)
+        and bool(subregion.get("id", "").strip())
+    )
+    if has_owner_subregion:
+        file_path = record.get("_file_path", "")
+        if isinstance(file_path, str) and file_path:
+            path_parts = file_path.split(os.sep)
+            # Expected: {country}/{admin_dir}/{catalog_type}/{id}.yaml
+            if len(path_parts) >= 4:
+                admin_dir = path_parts[1]
+                subregion_id = subregion.get("id", "").strip()
+                if admin_dir == "Federal" and subregion_id:
+                    # For EU/Federal files, destination must use owner country from subregion (e.g. FR-GES -> FR)
+                    country_from_path = path_parts[0] if path_parts else ""
+                    catalog_type = path_parts[2] if len(path_parts) > 2 else ""
+                    if country_from_path == "EU" and "-" in subregion_id:
+                        dst_country = subregion_id.split("-")[0]
+                        dst_path = f"{dst_country}/{subregion_id}/{catalog_type}/"
+                        suggested_action = (
+                            f"Move this record from EU/Federal/ to {dst_path} under data/entities "
+                            f"(owner country {dst_country}), or remove owner.location.subregion if the record is truly federal."
+                        )
+                    else:
+                        suggested_action = (
+                            f"Move this record from 'Federal' to the '{subregion_id}' subregion directory "
+                            "under data/entities, or remove owner.location.subregion if the record is truly federal."
+                        )
+                    issues.append({
+                        "issue_type": "OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH",
+                        "field": "owner.location.subregion",
+                        "current_value": {
+                            "owner_subregion_id": subregion_id,
+                            "file_admin_dir": admin_dir,
+                            "file_path": file_path,
+                        },
+                        "suggested_action": suggested_action,
+                    })
+
+    # Verify that if record file is in a subregion directory, owner.location.subregion must match that directory
+    file_path = record.get("_file_path", "")
+    if isinstance(file_path, str) and file_path:
+        path_parts = file_path.split(os.sep)
+        # Expected: {country}/{admin_dir}/{catalog_type}/{id}.yaml
+        if len(path_parts) >= 4:
+            admin_dir = path_parts[1]
+            country_from_path = path_parts[0] if path_parts else ""
+            # Subregion dirs are typically {country}-{subdivision} e.g. US-TX, US-CA, ID-JB
+            is_subregion_dir = (
+                admin_dir != "Federal"
+                and "-" in admin_dir
+                and admin_dir.startswith(f"{country_from_path}-")
+            )
+            if is_subregion_dir:
+                subregion = owner_location.get("subregion") if owner_location else None
+                owner_subregion_id = (
+                    subregion.get("id", "").strip()
+                    if isinstance(subregion, dict) and subregion.get("id")
+                    else None
+                )
+                if owner_subregion_id != admin_dir:
+                    issues.append({
+                        "issue_type": "OWNER_LOCATION_SUBREGION_REQUIRED",
+                        "field": "owner.location.subregion",
+                        "current_value": {
+                            "file_admin_dir": admin_dir,
+                            "owner_subregion_id": owner_subregion_id,
+                            "file_path": file_path,
+                        },
+                        "suggested_action": (
+                            f"Record is in subregion directory '{admin_dir}' but owner.location.subregion "
+                            f"is missing or mismatched (current: {owner_subregion_id!r}). "
+                            f"Add owner.location.subregion with id='{admin_dir}' and name, or move the file to Federal."
+                        ),
+                    })
+
     return issues if issues else None
 
 
@@ -1930,8 +2098,18 @@ def check_tag_topic_hygiene(record):
     topics = record.get("topics", [])
     for idx, topic in enumerate(topics):
         if not isinstance(topic, dict):
+            # Schema expects {type, id, name} dicts; bare strings are a violation
+            issues.append({
+                "issue_type": "TOPIC_SCHEMA_VIOLATION",
+                "field": f"topics[{idx}]",
+                "current_value": topic,
+                "suggested_action": (
+                    "Topics should be objects with type, id, and/or name fields, "
+                    "not bare strings. Convert to dict format, e.g. {type: 'eudatatheme', id: '...', name: '...'}."
+                ),
+            })
             continue
-        
+
         topic_id = topic.get("id")
         topic_name = topic.get("name")
         topic_type = topic.get("type")
@@ -2084,6 +2262,152 @@ def check_status_directory_uid_consistency(record):
                     ),
                 }
             )
+
+    return issues if issues else None
+
+
+def _load_valid_iso3166_2_codes():
+    """Load valid ISO3166-2 subdivision codes from reference CSV. Returns a set of codes."""
+    valid = set()
+    if not os.path.exists(SUBREGIONS_CSV):
+        return valid
+    try:
+        with open(SUBREGIONS_CSV, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                code = (row.get("code") or "").strip()
+                if code:
+                    valid.add(code)
+    except Exception as e:
+        logger.warning(f"Could not load ISO3166-2 codes from {SUBREGIONS_CSV}: {e}")
+    return valid
+
+
+_valid_iso3166_2_codes_cache = None
+
+
+def _get_valid_iso3166_2_codes():
+    """Get cached set of valid ISO3166-2 codes."""
+    global _valid_iso3166_2_codes_cache
+    if _valid_iso3166_2_codes_cache is None:
+        _valid_iso3166_2_codes_cache = _load_valid_iso3166_2_codes()
+    return _valid_iso3166_2_codes_cache
+
+
+def check_subregion_iso3166_2(record):
+    """Verify that subregion codes in owner and coverage are valid ISO3166-2 codes."""
+    valid_codes = _get_valid_iso3166_2_codes()
+    if not valid_codes:
+        return None
+
+    issues = []
+
+    def _check_subregion_id(subregion_id, field_path):
+        if not subregion_id or not isinstance(subregion_id, str):
+            return
+        sid = subregion_id.strip()
+        if not sid:
+            return
+        if sid not in valid_codes:
+            issues.append({
+                "issue_type": "SUBREGION_INVALID_ISO3166_2",
+                "field": field_path,
+                "current_value": {"subregion_id": sid},
+                "suggested_action": (
+                    f"Subregion code '{sid}' is not a valid ISO3166-2 code. "
+                    "Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). "
+                    "Reference: data/reference/subregions/IP2LOCATION-ISO3166-2.CSV"
+                ),
+            })
+
+    # Check owner.location.subregion and owner.location.subdivision
+    owner = record.get("owner", {}) or {}
+    owner_loc = owner.get("location", {}) or {}
+    for key in ("subregion", "subdivision"):
+        sr = owner_loc.get(key)
+        if isinstance(sr, dict) and sr.get("id"):
+            _check_subregion_id(sr.get("id"), f"owner.location.{key}")
+
+    # Check coverage[].location.subregion and coverage[].location.subdivision
+    coverage = record.get("coverage", []) or []
+    for idx, cov_entry in enumerate(coverage):
+        loc = (cov_entry or {}).get("location", {}) or {}
+        for key in ("subregion", "subdivision"):
+            sr = loc.get(key)
+            if isinstance(sr, dict) and sr.get("id"):
+                _check_subregion_id(sr.get("id"), f"coverage[{idx}].location.{key}")
+
+    return issues if issues else None
+
+
+def check_subregion_unk_placeholder(record):
+    """Identify records with subregion like '<country_code>-UNK' which is a placeholder, not a real subregion.
+
+    UNK suffix indicates unknown/placeholder subregion. These records should be reviewed and fixed
+    by inferring the real subregion (e.g. from link domain, owner name) or moving to Federal.
+    """
+    issues = []
+    file_path = record.get("_file_path", "")
+    path_parts = file_path.replace("\\", "/").split("/")
+
+    # Check 1: File path contains {country_code}-UNK (e.g. ES/ES-UNK/opendata/...)
+    if len(path_parts) >= 2:
+        country_from_path = path_parts[0]
+        subregion_from_path = path_parts[1]
+        unk_placeholder = f"{country_from_path}-UNK"
+        if subregion_from_path == unk_placeholder:
+            issues.append({
+                "issue_type": "SUBREGION_UNK_PLACEHOLDER",
+                "field": "file_path",
+                "current_value": {"subregion": subregion_from_path, "path": file_path},
+                "suggested_action": (
+                    f"Subregion '{unk_placeholder}' is a placeholder (UNK = unknown), not a real ISO3166-2 code. "
+                    "Review and fix: infer real subregion from link domain, owner name, or description, "
+                    "or move to Federal/ if national-level. See fix_es_unk_subregions.py for reference."
+                ),
+            })
+
+    # Check 2: owner.location.subregion.id or coverage[].location.subregion.id is XX-UNK
+    def _has_unk_subregion(loc):
+        if not loc:
+            return False
+        for key in ("subregion", "subdivision"):
+            sr = loc.get(key)
+            if isinstance(sr, dict):
+                sid = (sr.get("id") or "").strip()
+                if sid and sid.endswith("-UNK"):
+                    return True
+        return False
+
+    owner_loc = (record.get("owner") or {}).get("location") or {}
+    if _has_unk_subregion(owner_loc):
+        sr = owner_loc.get("subregion") or owner_loc.get("subdivision") or {}
+        sid = (sr.get("id") or "").strip()
+        issues.append({
+            "issue_type": "SUBREGION_UNK_PLACEHOLDER",
+            "field": "owner.location.subregion",
+            "current_value": {"subregion_id": sid},
+            "suggested_action": (
+                f"Subregion '{sid}' is a placeholder (UNK = unknown), not a real ISO3166-2 code. "
+                "Review and fix: infer real subregion from link domain, owner name, or description, "
+                "or use Federal/ if national-level."
+            ),
+        })
+
+    for idx, cov_entry in enumerate(record.get("coverage") or []):
+        loc = (cov_entry or {}).get("location") or {}
+        if _has_unk_subregion(loc):
+            sr = loc.get("subregion") or loc.get("subdivision") or {}
+            sid = (sr.get("id") or "").strip()
+            issues.append({
+                "issue_type": "SUBREGION_UNK_PLACEHOLDER",
+                "field": f"coverage[{idx}].location.subregion",
+                "current_value": {"subregion_id": sid},
+                "suggested_action": (
+                    f"Subregion '{sid}' is a placeholder (UNK = unknown), not a real ISO3166-2 code. "
+                    "Review and fix: infer real subregion from link domain, owner name, or description."
+                ),
+            })
 
     return issues if issues else None
 
@@ -2278,6 +2602,461 @@ def check_rights_completeness(record):
     return None
 
 
+def check_access_mode_values(record):
+    """Validate access_mode values against schema allowed list."""
+    issues = []
+    access_mode = record.get("access_mode", [])
+    if not isinstance(access_mode, list):
+        return None
+    for idx, val in enumerate(access_mode):
+        if isinstance(val, str) and val.strip().lower() not in ACCESS_MODE_ALLOWED:
+            issues.append({
+                "issue_type": "INVALID_ACCESS_MODE",
+                "field": f"access_mode[{idx}]",
+                "current_value": val,
+                "suggested_action": (
+                    f"Use one of: {', '.join(sorted(ACCESS_MODE_ALLOWED))}"
+                ),
+            })
+    return issues if issues else None
+
+
+def check_catalog_type_values(record):
+    """Validate catalog_type against allowed values."""
+    catalog_type = record.get("catalog_type")
+    if not catalog_type or not isinstance(catalog_type, str):
+        return None
+    if catalog_type.strip() not in CATALOG_TYPE_ALLOWED:
+        return {
+            "issue_type": "INVALID_CATALOG_TYPE",
+            "field": "catalog_type",
+            "current_value": catalog_type,
+            "suggested_action": (
+                f"Use one of: {', '.join(sorted(CATALOG_TYPE_ALLOWED))}"
+            ),
+        }
+    return None
+
+
+def check_status_values(record):
+    """Validate status against allowed values."""
+    status = record.get("status")
+    if not status or not isinstance(status, str):
+        return None
+    if status.strip().lower() not in STATUS_ALLOWED:
+        return {
+            "issue_type": "INVALID_STATUS",
+            "field": "status",
+            "current_value": status,
+            "suggested_action": (
+                f"Use one of: {', '.join(sorted(STATUS_ALLOWED))}"
+            ),
+        }
+    return None
+
+
+def check_api_status_values(record):
+    """Validate api_status when present (active, inactive, uncertain)."""
+    api_status = record.get("api_status")
+    if api_status is None or api_status == "":
+        return None
+    if not isinstance(api_status, str):
+        return None
+    if api_status.strip().lower() not in API_STATUS_ALLOWED:
+        return {
+            "issue_type": "INVALID_API_STATUS",
+            "field": "api_status",
+            "current_value": api_status,
+            "suggested_action": (
+                f"Use one of: {', '.join(sorted(API_STATUS_ALLOWED))}"
+            ),
+        }
+    return None
+
+
+def check_trust_score_bounds(record):
+    """Validate trust_score is 0-100 when present."""
+    trust_score = record.get("trust_score")
+    if trust_score is None:
+        return None
+    try:
+        val = float(trust_score)
+        if val < 0 or val > 100:
+            return {
+                "issue_type": "TRUST_SCORE_OUT_OF_BOUNDS",
+                "field": "trust_score",
+                "current_value": trust_score,
+                "suggested_action": "trust_score must be between 0 and 100",
+            }
+    except (TypeError, ValueError):
+        return {
+            "issue_type": "TRUST_SCORE_OUT_OF_BOUNDS",
+            "field": "trust_score",
+            "current_value": trust_score,
+            "suggested_action": "trust_score must be a number between 0 and 100",
+        }
+    return None
+
+
+def _validate_url_format(url, field_path, issue_type):
+    """Helper to validate URL format. Returns issue dict or None."""
+    if not url or not isinstance(url, str) or not url.strip():
+        return None
+    try:
+        parsed = urlparse(url.strip())
+        if not parsed.scheme or not parsed.netloc:
+            return {
+                "issue_type": issue_type,
+                "field": field_path,
+                "current_value": url,
+                "suggested_action": f"Fix URL format: {url}",
+            }
+    except Exception:
+        return {
+            "issue_type": issue_type,
+            "field": field_path,
+            "current_value": url,
+            "suggested_action": f"Fix URL format: {url}",
+        }
+    return None
+
+
+def check_identifier_urls(record):
+    """Validate identifier URLs when present."""
+    issues = []
+    identifiers = record.get("identifiers", [])
+    for idx, identifier in enumerate(identifiers):
+        if isinstance(identifier, dict) and identifier.get("url"):
+            issue = _validate_url_format(
+                identifier["url"],
+                f"identifiers[{idx}].url",
+                "INVALID_IDENTIFIER_URL",
+            )
+            if issue:
+                issues.append(issue)
+    return issues if issues else None
+
+
+def check_rights_urls(record):
+    """Validate rights URLs (tos_url, privacy_policy_url, license_url) when present."""
+    issues = []
+    rights = record.get("rights", {})
+    if not isinstance(rights, dict):
+        return None
+    for key in ("tos_url", "privacy_policy_url", "license_url"):
+        url = rights.get(key)
+        if url:
+            issue = _validate_url_format(
+                url,
+                f"rights.{key}",
+                "INVALID_RIGHTS_URL",
+            )
+            if issue:
+                issues.append(issue)
+    return issues if issues else None
+
+
+def check_catalog_type_directory(record):
+    """Check file path catalog_type subdir matches catalog_type field."""
+    file_path = record.get("_file_path", "")
+    catalog_type = record.get("catalog_type")
+    if not file_path or not catalog_type or not isinstance(catalog_type, str):
+        return None
+    path_parts = file_path.replace("\\", "/").split("/")
+    if len(path_parts) < 2:
+        return None
+    # Path can be {country}/{catalog_type_dir}/{id}.yaml or {country}/{admin_dir}/{catalog_type_dir}/{id}.yaml
+    # The catalog_type dir is always the parent of the filename (second-to-last part)
+    actual_subdir = path_parts[-2]
+    expected_subdir = MAP_CATALOG_TYPE_SUBDIR.get(catalog_type.strip())
+    if not expected_subdir:
+        return None
+    if actual_subdir != expected_subdir:
+        return {
+            "issue_type": "CATALOG_TYPE_DIRECTORY_MISMATCH",
+            "field": "catalog_type",
+            "current_value": {
+                "catalog_type": catalog_type,
+                "file_path": file_path,
+                "actual_subdir": actual_subdir,
+                "expected_subdir": expected_subdir,
+            },
+            "suggested_action": (
+                f"File is in '{actual_subdir}/' but catalog_type '{catalog_type}' "
+                f"maps to '{expected_subdir}/'. Move file to {expected_subdir}/ or update catalog_type."
+            ),
+        }
+    return None
+
+
+# Special country/region codes valid in the registry (not ISO 3166-1 alpha-2)
+_VALID_COUNTRY_SPECIAL = frozenset({
+    "UNKNOWN", "WORLD", "EU", "AFRICA", "ASEAN", "CARIBBEAN", "LATINAMERICA", "OCEANIA",
+    "INTERNATIONAL", "AMERICAS", "CENTRALAMERICA",
+})
+# Common abbreviations accepted as valid (e.g. UK for GB)
+_VALID_COUNTRY_ABBREVIATIONS = frozenset({"UK"})
+
+
+def _get_valid_country_codes():
+    """Load valid ISO 3166-1 alpha-2 codes from countries.csv plus special codes.
+    Cached at module level to avoid re-reading the CSV on every record.
+    """
+    cache = getattr(_get_valid_country_codes, "_cache", None)
+    if cache is not None:
+        return cache
+    valid = set()
+    countries_csv = os.path.join(_REPO_ROOT, "data", "reference", "countries.csv")
+    try:
+        with open(countries_csv, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                alpha2 = (row.get("alpha2") or "").strip().upper()
+                if len(alpha2) == 2 and alpha2.isalpha():
+                    valid.add(alpha2)
+    except (OSError, csv.Error) as e:
+        logger.warning("Could not load countries.csv for INVALID_COUNTRY_CODE rule: %s", e)
+        valid = set(k.upper() for k in COUNTRIES.keys()) if COUNTRIES else set()
+    valid.update(_VALID_COUNTRY_SPECIAL)
+    valid.update(_VALID_COUNTRY_ABBREVIATIONS)
+    _get_valid_country_codes._cache = frozenset(valid)
+    return _get_valid_country_codes._cache
+
+
+def check_country_codes(record):
+    """Validate owner and coverage country.id against ISO 3166-1 codes from countries.csv."""
+    issues = []
+    valid_countries = _get_valid_country_codes()
+
+    def _check_country_id(country_id, field_path):
+        if not country_id:
+            return
+        sid = str(country_id).strip().upper()
+        if not sid:
+            return
+        if sid not in valid_countries:
+            issues.append({
+                "issue_type": "INVALID_COUNTRY_CODE",
+                "field": field_path,
+                "current_value": {"country_id": country_id},
+                "suggested_action": (
+                    f"Country code '{sid}' is not in the known ISO 3166-1 list. "
+                    "Use a valid alpha-2 code from countries.csv (e.g. US, GB, FR)."
+                ),
+            })
+
+    owner = record.get("owner", {}) or {}
+    owner_country = (owner.get("location") or {}).get("country") or {}
+    if owner_country:
+        _check_country_id(owner_country.get("id"), "owner.location.country.id")
+
+    for idx, cov_entry in enumerate(record.get("coverage") or []):
+        loc = (cov_entry or {}).get("location") or {}
+        country = loc.get("country") or {}
+        if country:
+            _check_country_id(country.get("id"), f"coverage[{idx}].location.country.id")
+
+    return issues if issues else None
+
+
+def _get_country_id_to_name():
+    """Load country code -> canonical name mapping. Uses COUNTRIES first, then countries.csv."""
+    cache = getattr(_get_country_id_to_name, "_cache", None)
+    if cache is not None:
+        return cache
+    mapping = dict(COUNTRIES)  # Start with project constants
+    countries_csv = os.path.join(_REPO_ROOT, "data", "reference", "countries.csv")
+    try:
+        with open(countries_csv, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                alpha2 = (row.get("alpha2") or "").strip().upper()
+                name = (row.get("name") or "").strip()
+                if len(alpha2) == 2 and alpha2.isalpha() and name and alpha2 not in mapping:
+                    mapping[alpha2] = name
+    except (OSError, csv.Error) as e:
+        logger.warning("Could not load countries.csv for country name consistency: %s", e)
+    _get_country_id_to_name._cache = mapping
+    return _get_country_id_to_name._cache
+
+
+def _get_subregion_code_to_name():
+    """Load subregion code -> canonical name from IP2LOCATION-ISO3166-2.CSV."""
+    cache = getattr(_get_subregion_code_to_name, "_cache", None)
+    if cache is not None:
+        return cache
+    mapping = {}
+    if not os.path.exists(SUBREGIONS_CSV):
+        _get_subregion_code_to_name._cache = mapping
+        return mapping
+    try:
+        with open(SUBREGIONS_CSV, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                code = (row.get("code") or "").strip()
+                name = (row.get("subdivision_name") or "").strip()
+                if code and name:
+                    mapping[code] = name
+    except (OSError, csv.Error) as e:
+        logger.warning("Could not load subregions CSV for name consistency: %s", e)
+    _get_subregion_code_to_name._cache = mapping
+    return _get_subregion_code_to_name._cache
+
+
+def _names_match(got, expected):
+    """Case-insensitive comparison for name consistency."""
+    if not got or not expected:
+        return False
+    return str(got).strip().lower() == str(expected).strip().lower()
+
+
+def check_country_subregion_name_consistency(record):
+    """Verify that country and subregion names match their canonical IDs."""
+    issues = []
+    country_names = _get_country_id_to_name()
+    subregion_names = _get_subregion_code_to_name()
+
+    def _check_country(country, field_path):
+        if not country or not isinstance(country, dict):
+            return
+        cid = (country.get("id") or "").strip()
+        cname = (country.get("name") or "").strip()
+        if not cid or not cname:
+            return
+        cid_upper = cid.upper()
+        canonical = country_names.get(cid_upper) or country_names.get(cid)
+        if canonical and not _names_match(cname, canonical):
+            issues.append({
+                "issue_type": "COUNTRY_NAME_ID_MISMATCH",
+                "field": f"{field_path}.name",
+                "current_value": {"country_id": cid, "name": cname, "expected": canonical},
+                "suggested_action": (
+                    f"Country code '{cid}' has canonical name '{canonical}'. "
+                    f"Update name from '{cname}' to '{canonical}' for consistency."
+                ),
+            })
+
+    def _check_subregion_id_name(sr, field_path):
+        if not sr or not isinstance(sr, dict):
+            return
+        sid = (sr.get("id") or "").strip()
+        sname = (sr.get("name") or "").strip()
+        if not sid or not sname:
+            return
+        canonical = subregion_names.get(sid)
+        if canonical and not _names_match(sname, canonical):
+            issues.append({
+                "issue_type": "SUBREGION_NAME_ID_MISMATCH",
+                "field": f"{field_path}.name",
+                "current_value": {"subregion_id": sid, "name": sname, "expected": canonical},
+                "suggested_action": (
+                    f"Subregion code '{sid}' has canonical name '{canonical}'. "
+                    f"Update name from '{sname}' to '{canonical}' for consistency."
+                ),
+            })
+
+    # Check owner.location.country
+    owner = record.get("owner", {}) or {}
+    owner_loc = owner.get("location", {}) or {}
+    owner_country = owner_loc.get("country")
+    if owner_country:
+        _check_country(owner_country, "owner.location.country")
+
+    # Check owner.location.subregion and subdivision
+    for key in ("subregion", "subdivision"):
+        sr = owner_loc.get(key)
+        if sr:
+            _check_subregion_id_name(sr, f"owner.location.{key}")
+
+    # Check coverage[].location.country and subregion
+    for idx, cov_entry in enumerate(record.get("coverage") or []):
+        loc = (cov_entry or {}).get("location") or {}
+        country = loc.get("country")
+        if country:
+            _check_country(country, f"coverage[{idx}].location.country")
+        for key in ("subregion", "subdivision"):
+            sr = loc.get(key)
+            if sr:
+                _check_subregion_id_name(sr, f"coverage[{idx}].location.{key}")
+
+    return issues if issues else None
+
+
+def check_unknown_country_macroregion(record):
+    """Flag when country or macroregion is set to Unknown - should be replaced with real data."""
+    issues = []
+    UNKNOWN_VAL = "Unknown"
+
+    def _is_unknown(val):
+        return val and str(val).strip() == UNKNOWN_VAL
+
+    def _add_issue(field_path, current_value, suggested_action):
+        issues.append({
+            "issue_type": "UNKNOWN_COUNTRY_OR_MACROREGION",
+            "field": field_path,
+            "current_value": current_value,
+            "suggested_action": suggested_action,
+        })
+
+    # Owner location
+    owner = record.get("owner", {}) or {}
+    owner_loc = owner.get("location") or {}
+    owner_country = owner_loc.get("country") or {}
+    if owner_country:
+        cid = owner_country.get("id")
+        cname = owner_country.get("name")
+        if _is_unknown(cid):
+            _add_issue(
+                "owner.location.country.id",
+                {"country_id": cid},
+                "Replace 'Unknown' with a valid ISO 3166-1 alpha-2 country code.",
+            )
+        if _is_unknown(cname):
+            _add_issue(
+                "owner.location.country.name",
+                {"country_name": cname},
+                "Replace 'Unknown' with the actual country name.",
+            )
+
+    # Coverage locations
+    for idx, cov_entry in enumerate(record.get("coverage") or []):
+        loc = (cov_entry or {}).get("location") or {}
+        country = loc.get("country") or {}
+        if country:
+            cid = country.get("id")
+            cname = country.get("name")
+            if _is_unknown(cid):
+                _add_issue(
+                    f"coverage[{idx}].location.country.id",
+                    {"country_id": cid},
+                    "Replace 'Unknown' with a valid ISO 3166-1 alpha-2 country code.",
+                )
+            if _is_unknown(cname):
+                _add_issue(
+                    f"coverage[{idx}].location.country.name",
+                    {"country_name": cname},
+                    "Replace 'Unknown' with the actual country name.",
+                )
+        macroregion = loc.get("macroregion") or {}
+        if macroregion:
+            mid = macroregion.get("id")
+            mname = macroregion.get("name")
+            if _is_unknown(mid):
+                _add_issue(
+                    f"coverage[{idx}].location.macroregion.id",
+                    {"macroregion_id": mid},
+                    "Replace 'Unknown' with a valid macroregion code (e.g. World, Africa, Europe).",
+                )
+            if _is_unknown(mname):
+                _add_issue(
+                    f"coverage[{idx}].location.macroregion.name",
+                    {"macroregion_name": mname},
+                    "Replace 'Unknown' with the actual macroregion name.",
+                )
+
+    return issues if issues else None
+
+
 # Priority mapping for issue types
 ISSUE_PRIORITY_MAP = {
     "CRITICAL": [
@@ -2293,6 +3072,7 @@ ISSUE_PRIORITY_MAP = {
         "MISSING_OWNER_NAME",
         "MISSING_OWNER_TYPE",
         "MISSING_OWNER_LOCATION",
+        "OWNER_LOCATION_SUBREGION_REQUIRED",
         "MISSING_COVERAGE",
         "PLACEHOLDER_CATALOG_TYPE",
         "PLACEHOLDER_STATUS",
@@ -2303,9 +3083,16 @@ ISSUE_PRIORITY_MAP = {
         "MISSING_API_STATUS",
         "SOFTWARE_ID_UNKNOWN",
         "SOFTWARE_NAME_MISMATCH",
-        "SOFTWARE_EXPECTED_ENDPOINTS_MISSING",
         "COVERAGE_NORMALIZATION",
         "STATUS_DIRECTORY_MISMATCH",
+        "OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH",
+        "SUBREGION_INVALID_ISO3166_2",
+        "SUBREGION_UNK_PLACEHOLDER",
+        "UNKNOWN_COUNTRY_OR_MACROREGION",
+        "INVALID_ACCESS_MODE",
+        "INVALID_CATALOG_TYPE",
+        "INVALID_STATUS",
+        "CATALOG_TYPE_DIRECTORY_MISMATCH",
     ],
     "MEDIUM": [
         "MISSING_DESCRIPTION",
@@ -2321,6 +3108,13 @@ ISSUE_PRIORITY_MAP = {
         "RIGHTS_INCOMPLETE",
         "PLACEHOLDER_TITLE",
         "PLACEHOLDER_OWNER_NAME",
+        "INVALID_API_STATUS",
+        "TRUST_SCORE_OUT_OF_BOUNDS",
+        "INVALID_IDENTIFIER_URL",
+        "INVALID_RIGHTS_URL",
+        "INVALID_COUNTRY_CODE",
+        "COUNTRY_NAME_ID_MISMATCH",
+        "SUBREGION_NAME_ID_MISMATCH",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -2329,6 +3123,7 @@ ISSUE_PRIORITY_MAP = {
         "DUPLICATE_TAGS",
         "DUPLICATE_COVERAGE",
         "MISSING_CONTACT_INFO",
+        "TOPIC_SCHEMA_VIOLATION",
     ],
 }
 
@@ -2366,6 +3161,8 @@ def extract_country_codes(record):
 
 def get_priority_level(issue_type):
     """Get priority level for an issue type."""
+    if issue_type and issue_type.startswith("SOFTWARE_EXPECTED_ENDPOINTS_MISSING_"):
+        return "IMPORTANT"
     return PRIORITY_BY_ISSUE_TYPE.get(issue_type, "MEDIUM")
 
 
@@ -2820,7 +3617,8 @@ def generate_full_report(issues, records_with_issues, total_records, output_path
             report_lines.append("")
         
         if len(issues_list) > 50:
-            report_lines.append(f"... and {len(issues_list) - 50} more records with this issue")
+            n = len(issues_list) - 50
+            report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
             report_lines.append("")
     
     # Summary by issue type
@@ -2830,7 +3628,7 @@ def generate_full_report(issues, records_with_issues, total_records, output_path
     for issue_type in sorted(issues_by_type.keys()):
         count = len(issues_by_type[issue_type])
         priority = issues_by_type[issue_type][0].get("priority", "MEDIUM") if issues_by_type[issue_type] else "MEDIUM"
-        report_lines.append(f"{issue_type} ({priority}): {count} issues")
+        report_lines.append(f"{issue_type} ({priority}): {count} issue" + ("s" if count != 1 else ""))
     
     # Summary by priority
     report_lines.append("")
@@ -2846,7 +3644,7 @@ def generate_full_report(issues, records_with_issues, total_records, output_path
     for priority in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
         if priority in issues_by_priority:
             count = len(issues_by_priority[priority])
-            report_lines.append(f"{priority}: {count} issues")
+            report_lines.append(f"{priority}: {count} issue" + ("s" if count != 1 else ""))
     
     # Records with multiple issues
     report_lines.append("")
@@ -2880,7 +3678,17 @@ def generate_country_reports(issues_by_country, records_by_country, output_dir):
     """Generate reports for each country."""
     countries_dir = os.path.join(output_dir, "countries")
     os.makedirs(countries_dir, exist_ok=True)
-    
+
+    # Remove stale reports for countries that no longer have issues
+    countries_with_issues = {c for c, issues in issues_by_country.items() if issues}
+    if os.path.exists(countries_dir):
+        for f in os.listdir(countries_dir):
+            if f.endswith(".txt"):
+                country_code = f[:-4]
+                if country_code not in countries_with_issues:
+                    stale_file = os.path.join(countries_dir, f)
+                    os.remove(stale_file)
+
     for country_code, country_issues in issues_by_country.items():
         if not country_issues:
             continue
@@ -2925,7 +3733,8 @@ def generate_country_reports(issues_by_country, records_by_country, output_dir):
                 report_lines.append("")
             
             if len(issues_list) > 100:
-                report_lines.append(f"... and {len(issues_list) - 100} more records with this issue")
+                n = len(issues_list) - 100
+                report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
                 report_lines.append("")
         
         # Summary by issue type
@@ -2934,7 +3743,7 @@ def generate_country_reports(issues_by_country, records_by_country, output_dir):
         report_lines.append("")
         for issue_type in sorted(issues_by_type.keys()):
             count = len(issues_by_type[issue_type])
-            report_lines.append(f"{issue_type}: {count} issues")
+            report_lines.append(f"{issue_type}: {count} issue" + ("s" if count != 1 else ""))
         
         # Records with multiple issues
         multi_issue_records = {
@@ -3019,7 +3828,8 @@ def generate_priority_reports(issues_by_priority, output_dir):
                 report_lines.append("")
             
             if len(issues_list) > 100:
-                report_lines.append(f"... and {len(issues_list) - 100} more records with this issue")
+                n = len(issues_list) - 100
+                report_lines.append(f"... and {n} more record" + ("s" if n != 1 else "") + " with this issue")
                 report_lines.append("")
         
         # Summary by issue type
@@ -3028,7 +3838,7 @@ def generate_priority_reports(issues_by_priority, output_dir):
         report_lines.append("")
         for issue_type in sorted(issues_by_type.keys()):
             count = len(issues_by_type[issue_type])
-            report_lines.append(f"{issue_type}: {count} issues")
+            report_lines.append(f"{issue_type}: {count} issue" + ("s" if count != 1 else ""))
         
         # Summary by country
         report_lines.append("")
@@ -3043,7 +3853,7 @@ def generate_priority_reports(issues_by_priority, output_dir):
         
         for country_code in sorted(issues_by_country.keys()):
             count = len(issues_by_country[country_code])
-            report_lines.append(f"{country_code}: {count} issues")
+            report_lines.append(f"{country_code}: {count} issue" + ("s" if count != 1 else ""))
         
         # Write priority report
         priority_file = os.path.join(priorities_dir, f"{priority}.txt")
@@ -3051,6 +3861,70 @@ def generate_priority_reports(issues_by_priority, output_dir):
         with open(priority_file, "w", encoding="utf8") as f:
             f.write(report_content)
 
+
+RULE_DESCRIPTIONS = {
+    "OWNER_LOCATION_SUBREGION_REQUIRED": (
+        "Verifies: (1) Regional/Local government owners have owner.location.level=30 and "
+        "owner.location.subregion with id and name; (2) When owner has subregion, the file must be "
+        "in the matching subregion directory (not Federal); (3) When file is in a subregion "
+        "directory (e.g. US-TX/), owner.location.subregion must match that directory."
+    ),
+    "OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH": (
+        "Verifies that when a record has owner.location.subregion, the file is stored in the "
+        "matching subregion directory (e.g. US-CA/), not in Federal/."
+    ),
+    "SUBREGION_UNK_PLACEHOLDER": (
+        "Identifies records with subregion '<country_code>-UNK' (e.g. ES-UNK, NL-UNK). "
+        "UNK is a placeholder for unknown subregion, not a real ISO3166-2 code. "
+        "These records should be reviewed and fixed by inferring the real subregion or moving to Federal/."
+    ),
+    "DUPLICATE_LINK": (
+        "Identifies records that share the same portal link. Multiple catalog entries pointing to "
+        "the same URL may be duplicates; review and deduplicate or clarify distinct roles."
+    ),
+    "RIGHTS_INCOMPLETE": (
+        "Identifies records whose rights object has only one of license_id, license_name, or "
+        "license_url. Add at least two of these fields so license information is complete and unambiguous."
+    ),
+    "INVALID_ACCESS_MODE": (
+        "access_mode values must be one of: open, restricted, limited, public, protected, closed, private."
+    ),
+    "INVALID_CATALOG_TYPE": (
+        "catalog_type must match one of the schema-allowed values (e.g. Open data portal, Geoportal, etc.)."
+    ),
+    "INVALID_STATUS": (
+        "status must be one of: active, inactive, scheduled, deprecated."
+    ),
+    "INVALID_API_STATUS": (
+        "api_status must be one of: active, inactive, uncertain."
+    ),
+    "TRUST_SCORE_OUT_OF_BOUNDS": (
+        "trust_score must be a number between 0 and 100 when present."
+    ),
+    "INVALID_IDENTIFIER_URL": (
+        "identifiers[].url must be a valid URL format (scheme + netloc) when present."
+    ),
+    "INVALID_RIGHTS_URL": (
+        "rights.tos_url, privacy_policy_url, and license_url must be valid URL format when present."
+    ),
+    "CATALOG_TYPE_DIRECTORY_MISMATCH": (
+        "File path subdirectory must match catalog_type (e.g. geo/ for Geoportal, opendata/ for Open data portal)."
+    ),
+    "INVALID_COUNTRY_CODE": (
+        "owner.location.country.id and coverage[].location.country.id must use valid ISO 3166-1 country codes."
+    ),
+    "COUNTRY_NAME_ID_MISMATCH": (
+        "When country has both id and name, the name must match the canonical name for that country code "
+        "(e.g. id=US, name=United States)."
+    ),
+    "SUBREGION_NAME_ID_MISMATCH": (
+        "When subregion has both id and name, the name must match the canonical subdivision name for that "
+        "ISO 3166-2 code (e.g. id=US-CA, name=California)."
+    ),
+    "TOPIC_SCHEMA_VIOLATION": (
+        "Topics must be objects with type, id, and/or name fields, not bare strings."
+    ),
+}
 
 def generate_rule_reports(issues_by_type, output_dir):
     """Generate reports for each issue type (rule)."""
@@ -3070,6 +3944,16 @@ def generate_rule_reports(issues_by_type, output_dir):
         report_lines.append(f"Issue Type: {issue_type}")
         report_lines.append(f"Priority: {priority}")
         report_lines.append(f"Total Issues Found: {len(issues_list)}")
+        rule_desc = RULE_DESCRIPTIONS.get(issue_type)
+        if not rule_desc and issue_type.startswith("SOFTWARE_EXPECTED_ENDPOINTS_MISSING_"):
+            software_suffix = issue_type.replace("SOFTWARE_EXPECTED_ENDPOINTS_MISSING_", "").lower()
+            rule_desc = (
+                f"Identifies records using software.id='{software_suffix}' (API-capable per software definitions) "
+                "that have no endpoints listed. Add at least one API endpoint for discovery and integration."
+            )
+        if rule_desc:
+            report_lines.append("")
+            report_lines.append(f"Rule: {rule_desc}")
         report_lines.append("")
 
         # Summary by country
@@ -3081,7 +3965,8 @@ def generate_rule_reports(issues_by_type, output_dir):
         report_lines.append("=== SUMMARY BY COUNTRY ===")
         report_lines.append("")
         for country_code in sorted(issues_by_country.keys()):
-            report_lines.append(f"{country_code}: {issues_by_country[country_code]} issues")
+            c = issues_by_country[country_code]
+            report_lines.append(f"{country_code}: {c} issue" + ("s" if c != 1 else ""))
         report_lines.append("")
 
         # Summary by record
@@ -3093,7 +3978,7 @@ def generate_rule_reports(issues_by_type, output_dir):
         report_lines.append("=== SUMMARY BY RECORD ===")
         report_lines.append("")
         for rid, count in sorted(issues_by_record.items(), key=lambda x: x[1], reverse=True):
-            report_lines.append(f"{rid}: {count} issues")
+            report_lines.append(f"{rid}: {count} issue" + ("s" if count != 1 else ""))
         report_lines.append("")
 
         # List all issues (no limit)
@@ -3105,7 +3990,12 @@ def generate_rule_reports(issues_by_type, output_dir):
             report_lines.append(f"Country: {issue.get('country_code', 'UNKNOWN')}")
             report_lines.append(f"Issue: {issue_type}")
             report_lines.append(f"Field: {issue['field']}")
-            report_lines.append(f"Current Value: {issue['current_value']}")
+            current_val = issue["current_value"]
+            if isinstance(current_val, dict):
+                current_val_str = json.dumps(current_val, ensure_ascii=False)
+            else:
+                current_val_str = str(current_val) if current_val is not None else ""
+            report_lines.append(f"Current Value: {current_val_str}")
             report_lines.append(f"Suggested Action: {issue['suggested_action']}")
             report_lines.append("")
 
@@ -3115,6 +4005,32 @@ def generate_rule_reports(issues_by_type, output_dir):
         report_content = "\n".join(report_lines)
         with open(rule_file, "w", encoding="utf8") as f:
             f.write(report_content)
+
+    # Remove stale rule reports for issue types that now have 0 issues
+    known_issue_types = (
+        ISSUE_PRIORITY_MAP.get("CRITICAL", [])
+        + ISSUE_PRIORITY_MAP.get("IMPORTANT", [])
+        + ISSUE_PRIORITY_MAP.get("MEDIUM", [])
+        + ISSUE_PRIORITY_MAP.get("LOW", [])
+    )
+    for issue_type in known_issue_types:
+        if issues_by_type.get(issue_type):
+            continue
+        safe_name = re.sub(r"[^A-Za-z0-9_-]+", "_", issue_type)
+        rule_file = os.path.join(rules_dir, f"{safe_name}.txt")
+        if os.path.exists(rule_file):
+            os.remove(rule_file)
+
+    # Remove legacy SOFTWARE_EXPECTED_ENDPOINTS_MISSING.txt (replaced by per-software rules)
+    legacy_rule = os.path.join(rules_dir, "SOFTWARE_EXPECTED_ENDPOINTS_MISSING.txt")
+    if os.path.exists(legacy_rule):
+        os.remove(legacy_rule)
+
+    # Remove stale SOFTWARE_EXPECTED_ENDPOINTS_MISSING_* rule files with 0 issues
+    for rule_path in glob.glob(os.path.join(rules_dir, "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*.txt")):
+        stem = os.path.basename(rule_path)[:-4]  # strip .txt
+        if not issues_by_type.get(stem):
+            os.remove(rule_path)
 
 
 @app.command()
@@ -3205,6 +4121,19 @@ def analyze_quality(output: str = None):
                     check_title_quality,
                     check_owner_coverage_coherence,
                     check_rights_completeness,
+                    check_subregion_unk_placeholder,
+                    check_subregion_iso3166_2,
+                    check_access_mode_values,
+                    check_catalog_type_values,
+                    check_status_values,
+                    check_api_status_values,
+                    check_trust_score_bounds,
+                    check_identifier_urls,
+                    check_rights_urls,
+                    check_catalog_type_directory,
+                    check_country_codes,
+                    check_country_subregion_name_consistency,
+                    check_unknown_country_macroregion,
                 ]
                 
                 for check_func in checks:
@@ -3491,7 +4420,7 @@ def analyze_quality(output: str = None):
     for priority in ["CRITICAL", "IMPORTANT", "MEDIUM", "LOW"]:
         if priority in issues_by_priority:
             count = len(issues_by_priority[priority])
-            typer.echo(f"  {priority}: {count} issues")
+            typer.echo(f"  {priority}: {count} issue" + ("s" if count != 1 else ""))
     
     # Print summary by issue type
     issues_by_type = {}

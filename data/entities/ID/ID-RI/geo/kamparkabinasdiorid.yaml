@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -29,7 +29,10 @@ owner:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
+    subregion:
+      id: ID-RI
+      name: Riau
   name: Kamparkab
   type: Regional government
 properties:
@@ -67,3 +70,10 @@ topics:
   name: Boundaries
   type: iso19115
 uid: temp00005153
+endpoints:
+- type: wms130
+  url: http://kamparkab.ina-sdi.or.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: http://kamparkab.ina-sdi.or.id/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

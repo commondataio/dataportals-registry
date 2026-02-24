@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: GeoNode-based geoportal for geospatial data, maps, and documents on the
+  hisoya.grida.no platform (GRID-Arendal).
+endpoints:
+- type: geonode:documents
+  url: https://hisoya.grida.no/api/documents/
+- type: csw202
+  url: https://hisoya.grida.no/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://hisoya.grida.no/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://hisoya.grida.no/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: sitemap
+  url: https://hisoya.grida.no/sitemap.xml
+- type: opensearch
+  url: https://geo.grida.no/catalogue/opensearch
+id: hisoyagridano
+langs:
+- id: EN
+  name: English
+link: https://hisoya.grida.no/
+name: Hisoya GRID-Arendal Geoportal
+owner:
+  link: https://www.grida.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: GRID-Arendal
+  type: Civil society
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- environmental
+- UNEP
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00021536

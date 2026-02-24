@@ -15,8 +15,8 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Data catalog for geographic and energy data related to Energinet's infrastructure
-  and operations.
+description: ArcGIS services catalog from Energinet with geospatial data for Denmark's
+  electricity and gas infrastructure, planning, and utility operations.
 endpoints:
 - type: arcgis:rest:info
   url: https://agis.energinet.dk/server/rest/info?f=pjson
@@ -30,12 +30,16 @@ endpoints:
   url: https://agis.energinet.dk/server/rest/services?f=geositemap
 - type: arcgis:kmz
   url: https://agis.energinet.dk/server/rest/services?f=kmz
+- type: arcgis:token-service
+  url: https://agis.energinet.dk/portal/sharing/rest/generateToken
 id: agisenerginetdk
 langs:
 - id: DA
   name: Danish
+- id: EN
+  name: English
 link: https://agis.energinet.dk/server/rest/services
-name: agis.energinet.dk Data Catalog
+name: AGIS Energinet ArcGIS Services
 owner:
   link: https://www.energinet.dk
   location:
@@ -59,12 +63,18 @@ software:
   name: ArcGIS Server
 status: active
 tags:
+- arcgisserver
+- Denmark
+- electricity
+- gas
+- geodata
 - GIS
 - infrastructure
-- electricity
-- grid
 topics:
 - id: ENER
   name: Energy
   type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
 uid: temp00005875

@@ -1,45 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: KR
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: KR
-Total Records with Issues: 2
-Total Issues Found: 4
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[PLACEHOLDER_TITLE]
-Count: 4
-Priority: MEDIUM
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
+Count: 1
+Priority: IMPORTANT
 
-File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
-Record ID: dataesrikrmktopendataarcgiscom
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: data-esrikrmkt.opendata.arcgis.com
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KR/geo/dataesrikrmktopendataarcgiscom.yaml
-Record ID: dataesrikrmktopendataarcgiscom
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: data-esrikrmkt.opendata.arcgis.com
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: KR/Federal/scientific/climatedataibsrekr.yaml
-Record ID: climatedataibsrekr
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: climatedata.ibs.re.kr:8443
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: KR/Federal/scientific/climatedataibsrekr.yaml
-Record ID: climatedataibsrekr
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: climatedata.ibs.re.kr:8443
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
+File: KR/Federal/geo/geoxdworldkr.yaml
+Record ID: geoxdworldkr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-PLACEHOLDER_TITLE: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue

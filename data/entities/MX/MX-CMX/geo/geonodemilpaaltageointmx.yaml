@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-CMX
+      name: Ciudad de Mexico
+description: GeoNode instance for Milpa Alta (Ciudad de México), sharing geospatial
+  data and maps on the geoint.mx platform.
+endpoints:
+- type: geonode:documents
+  url: https://geonode.milpaalta.geoint.mx/api/documents/
+- type: opensearch
+  url: https://geonode.milpaalta.geoint.mx/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wcs111
+  url: https://geonode.milpaalta.geoint.mx/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: geonodemilpaaltageointmx
+langs:
+- id: ES
+  name: Spanish
+link: https://geonode.milpaalta.geoint.mx
+name: GeoNode Milpa Alta
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-CMX
+      name: Ciudad de Mexico
+  name: Alcaldía Milpa Alta / geoint.mx
+  type: Local government
+  link: https://geoint.mx
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geonode
+- geospatial
+- Milpa Alta
+- CDMX
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00021523

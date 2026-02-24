@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-AB
+      name: Alberta
+description: Oil Sands Monitoring Data Catalogue providing access to environmental
+  monitoring datasets from the oil sands region of Alberta.
+endpoints:
+- type: ckan:package-search
+  url: https://osmdatacatalog.alberta.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://osmdatacatalog.alberta.ca/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://osmdatacatalog.alberta.ca/api/3
+  version: '3'
+id: osmdatacatalogalbertaca
+langs:
+- id: EN
+  name: English
+link: https://osmdatacatalog.alberta.ca
+name: Oil Sands Monitoring Data Catalogue
+owner:
+  link: https://alberta.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-AB
+      name: Alberta
+  name: Government of Alberta
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- datasets
+- alberta
+- environmental monitoring
+- oil sands
+uid: cdi00020643
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115

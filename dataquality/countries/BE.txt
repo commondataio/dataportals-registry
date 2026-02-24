@@ -1,100 +1,48 @@
 DATA QUALITY REPORT - COUNTRY: BE
 ================================================================================
-Generated: 2026-02-13 19:09:38
+Generated: 2026-02-24 19:14:11
 Country Code: BE
-Total Records with Issues: 7
-Total Issues Found: 9
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
-[API_STATUS_MISMATCH]
-Count: 3
-Priority: IMPORTANT
-
-File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
-Record ID: recapuantwerpenbe
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
-Record ID: geoservergisirisnetbe
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: BE/BE-VLG/geo/geoservervmmbe.yaml
-Record ID: geoservervmmbe
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[MISSING_API_STATUS]
-Count: 2
-Priority: IMPORTANT
-
-File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
-Record ID: prcdigitalwalloniabe
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: EU/Federal/geo/gnssmetadataeu.yaml
-Record ID: gnssmetadataeu
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-[MISSING_CONTENT_TYPES]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
-Priority: MEDIUM
-
-File: EU/Federal/geo/gnssmetadataeu.yaml
-Record ID: gnssmetadataeu
-Issue: MISSING_CONTENT_TYPES
-Field: content_types
-Current Value: []
-Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 2
 Priority: IMPORTANT
 
-File: BE/Federal/indicators/statnbbbe.yaml
-Record ID: statnbbbe
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: BE/BE-VLG/scientific/naturdatainbobecollectorydatasets.yaml
+Record ID: naturdatainbobecollectorydatasets
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
 Field: endpoints
-Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
-File: BE/Federal/scientific/usegalaxybe.yaml
-Record ID: usegalaxybe
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
+Count: 1
+Priority: IMPORTANT
+
+File: EU/Federal/geo/geocoderesribeluxeu.yaml
+Record ID: geocoderesribeluxeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
+Count: 1
+Priority: IMPORTANT
+
+File: BE/Federal/scientific/usegalaxyvibbe.yaml
+Record ID: usegalaxyvibbe
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
 Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-[SOFTWARE_NAME_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
-Record ID: prcdigitalwalloniabe
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=custom, name=Custom
-Suggested Action: Update software.name to 'Custom software' to match software.id
-
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 3 issues
-MISSING_API_STATUS: 2 issues
-MISSING_CONTENT_TYPES: 1 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING: 2 issues
-SOFTWARE_NAME_MISMATCH: 1 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue

@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: CA
+      name: Canada
+    macroregion:
+      id: '021'
+      name: Northern America
+    level: 20
+description: Data Analytics for Canadian Climate Services (DACCS) project. Searchable
+  spatiotemporal metadata describing climate and Earth observation datasets. The CRIM
+  Hirondelle server is employed for experimental development of STAC and OGC standards.
+endpoints:
+- type: stacserverapi
+  url: https://hirondelle.crim.ca/stac/
+id: hirondellecrimca
+langs:
+- id: EN
+  name: English
+link: https://hirondelle.crim.ca/stac/
+name: DACCS STAC API - CRIM Hirondelle
+owner:
+  link: https://www.crim.ca
+  location:
+    country: *id001
+    level: 20
+  name: DACCS STAC API - CRIM Hirondelle
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00021381

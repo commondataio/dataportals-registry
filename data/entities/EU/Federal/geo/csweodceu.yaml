@@ -15,23 +15,38 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: EODC Data Catalogue providing geospatial metadata services for Earth
-  Observation Data Centre datasets and services.
+description: Catalogue Service (CSW) from Open Geospatial Consortium for discovering
+  and accessing metadata of ESA missions Sentinel-1, Sentinel-2, and Sentinel-3. Allows
+  filtering and selection by temporal and spatial extent, and supports standardized
+  search for geospatial data. Facilitates discovery and retrieval via APIs such as
+  CSW 2/CSW 3, OpenSearch, OAI-PMH, and SRU.
 endpoints:
 - type: csw202
-  url: https://csw.eodc.eu/?service=CSW&version=2.0.2&request=GetCapabilities
+  url: https://csw.eodc.eu
   version: 2.0.2
 - type: oaipmh20
-  url: https://csw.eodc.eu/?mode=oaipmh&verb=Identify
+  url: https://csw.eodc.eu/oaipmh
   version: '2.0'
+- type: csw202
+  url: https://csw.eodc.eu/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: csw300
+  url: https://csw.eodc.eu/csw
+  version: 3.0.0
+- type: opensearch
+  url: https://csw.eodc.eu/opensearch
+  version: '1.0'
+- type: sru
+  url: https://csw.eodc.eu/sru
+  version: '1.0'
 id: csweodceu
 langs:
 - id: EN
   name: English
 link: https://csw.eodc.eu
-name: EODC Data Catalogue
+name: EODC CSW Catalogue
 owner:
-  link: https://eodc.eu
+  link: https://www.eodc.eu
   location:
     country:
       id: EU
@@ -46,28 +61,36 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
   id: pycsw
   name: Pycsw
 status: active
 tags:
-- geospatial
-- metadata
-- pycsw
 - Earth Observation
-- remote sensing
-- satellite data
-- EODC
+- Sentinel
+- ESA
 topics:
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: Geoscientific Information
-  name: Geoscientific Information
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Environment
+  name: Environment
   type: iso19115
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
-uid: cdi00010944
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00004276

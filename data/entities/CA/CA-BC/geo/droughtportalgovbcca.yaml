@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-BC
+      name: British Columbia
+description: British Columbia's drought information portal providing interactive drought
+  monitoring maps, regional drought levels (0-5 scale), snow level data, and water
+  management resources for the province.
+endpoints:
+- type: dcatap201
+  url: https://droughtportal.gov.bc.ca/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://droughtportal.gov.bc.ca/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://droughtportal.gov.bc.ca/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://droughtportal.gov.bc.ca/api/search/v1
+- type: dcatus11
+  url: https://droughtportal.gov.bc.ca/data.json
+- type: sitemap
+  url: https://droughtportal.gov.bc.ca/sitemap.xml
+id: droughtportalgovbcca
+langs:
+- id: EN
+  name: English
+link: https://droughtportal.gov.bc.ca
+name: BC Drought Information Portal
+owner:
+  link: https://www2.gov.bc.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-BC
+      name: British Columbia
+  name: Government of British Columbia
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- drought
+- water
+- British Columbia
+- environment
+- geospatial
+- monitoring
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00020719

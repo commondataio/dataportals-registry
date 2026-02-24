@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
 description: Estonian largest set of health-related statistics and survey results,
   administrated by National Institute for Health Development. The database is free
   of charge, updated regularly, and offers data for download in multiple formats.
+endpoints:
+- type: pxwebapi
+  url: https://statistika.tervisekassa.ee/PXWeb/api/v1/en/
+  version: '1'
 id: statistikatervisekassaee
 langs:
 - id: ET

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -58,3 +58,7 @@ topics:
   type: eudatatheme
 uid: cdi00011086
 description: Geoportal. managed by Atmo Normandie. providing access to atmo normandie.
+endpoints:
+- type: wms130
+  url: https://api.atmonormandie.fr/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0

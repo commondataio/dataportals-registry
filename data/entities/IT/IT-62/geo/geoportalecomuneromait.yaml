@@ -63,6 +63,12 @@ endpoints:
 - type: csw202
   url: https://geoportale.comune.roma.it/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: wcs111
+  url: https://geoportale.comune.roma.it/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoportale.comune.roma.it/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: geoportalecomuneromait
 langs:
 - id: IT
@@ -75,7 +81,10 @@ owner:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
+    subregion:
+      id: IT-62
+      name: Lazio
   name: Comune di Roma
   type: Local government
 properties:

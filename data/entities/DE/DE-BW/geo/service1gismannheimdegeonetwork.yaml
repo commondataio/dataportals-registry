@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+description: GeoNetwork metadata catalog of the city of Mannheim (service1 instance).
+endpoints:
+- type: geonetwork:query
+  url: http://service1.gis-mannheim.de/geonetwork/srv/eng/q
+- type: geonetwork:records
+  url: http://service1.gis-mannheim.de/geonetwork/srv/api/records
+- type: csw202
+  url: http://service1.gis-mannheim.de/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: http://service1.gis-mannheim.de/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: http://service1.gis-mannheim.de/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: service1gismannheimdegeonetwork
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: http://service1.gis-mannheim.de/geonetwork
+name: Geodatenkatalog Stadt Mannheim (service1)
+owner:
+  link: https://www.mannheim.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BW
+      name: Baden-Wurttemberg
+  name: Stadt Mannheim
+  type: Regional government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- GIS
+- Metadata
+- Spatial Data Infrastructure
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00021756

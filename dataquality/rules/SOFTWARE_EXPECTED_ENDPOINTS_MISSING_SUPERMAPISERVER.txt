@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+Priority: IMPORTANT
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='supermapiserver' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+BD: 1 issue
+MO: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+bisdsatgovmo: 1 issue
+servernsdigovbd: 1 issue
+
+=== ISSUES ===
+
+File: MO/geo/bisdsatgovmo.yaml
+Record ID: bisdsatgovmo
+Country: MO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+Field: endpoints
+Current Value: {"software_id": "supermapiserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions
+
+File: BD/geo/servernsdigovbd.yaml
+Record ID: servernsdigovbd
+Country: BD
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+Field: endpoints
+Current Value: {"software_id": "supermapiserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions

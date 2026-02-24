@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: https://navgisapp04.north-ayrshire.gov.uk:6443/arcgis/services
-name: navgisapp04.north-ayrshire.gov.uk:6443/arcgis/services
+name: North Ayrshire Council GIS - Geoportal
 owner:
   link: https://www.north-ayrshire.gov.uk
   location:
@@ -69,3 +69,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00005040
+endpoints:
+- type: arcgis:rest:info
+  url: https://navgisapp04.north-ayrshire.gov.uk/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://navgisapp04.north-ayrshire.gov.uk/arcgis/rest/services?f=pjson

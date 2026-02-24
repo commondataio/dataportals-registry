@@ -1,0 +1,55 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: The Sea Ice Concentration Climate Data Record (CDR) provides a consistent
+  daily and monthly time series of sea ice concentrations for both the north and south
+  Polar Regions on a 25 km x 25 km grid.
+endpoints:
+- type: stacserverapi
+  url: https://noaadata.apps.nsidc.org/NOAA/G02202_V4/stac/collection.json
+id: noaadataappsnsidcorg
+langs:
+- id: EN
+  name: English
+link: https://noaadata.apps.nsidc.org/NOAA/G02202_V4/stac/collection.json
+name: Sea Ice Concentration CDR
+owner:
+  link: https://www.nsidc.org
+  location:
+    country: *id001
+    level: 20
+  name: National Snow and Ice Data Center
+  type: Research institution
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021369

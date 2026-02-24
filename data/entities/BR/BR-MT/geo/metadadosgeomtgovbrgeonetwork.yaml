@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-MT
+      name: Mato Grosso
+endpoints:
+- type: geonetwork:query
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/eng/q
+- type: openapi
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://metadados.geo.mt.gov.br/geonetwork/srv/api/site
+- type: opensearch
+  url: https://metadados.geo.mt.gov.br/portal.opensearch
+id: metadadosgeomtgovbrgeonetwork
+link: https://metadados.geo.mt.gov.br/geonetwork
+name: Metadados Geo MT - Geoportal (GeoNetwork)
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-MT
+      name: Mato Grosso
+  name: Governo do Estado de Mato Grosso
+  type: Regional government
+  link: https://gov.br
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+uid: cdi00021741
+langs:
+- id: PT
+  name: Portuguese
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+tags:
+- GIS
+- geospatial
+- government
+description: Geoportal. managed by Governo do Estado de Mato Grosso. providing access
+  to metadados geo mt - geoportal (geonetwork).
+content_types:
+- dataset
+- map_layer

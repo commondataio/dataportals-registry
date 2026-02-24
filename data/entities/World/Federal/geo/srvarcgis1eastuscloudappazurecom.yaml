@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -35,7 +35,7 @@ langs:
 - id: ES
   name: Spanish
 link: https://srvarcgis1.eastus.cloudapp.azure.com/agserver/rest/services
-name: srvarcgis1.eastus.cloudapp.azure.com
+name: Azure Geoportal
 owner:
   link: https://azure.com
   location:
@@ -117,3 +117,12 @@ topics:
   name: Elevation
   type: iso19115
 uid: temp00005380
+endpoints:
+- type: dcatap201
+  url: https://srvarcgis1.eastus.cloudapp.azure.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://srvarcgis1.eastus.cloudapp.azure.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://srvarcgis1.eastus.cloudapp.azure.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://srvarcgis1.eastus.cloudapp.azure.com/api/search/v1

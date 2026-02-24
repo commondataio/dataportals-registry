@@ -1,0 +1,56 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: CA
+      name: Canada
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Collections of geospatial datasets from Canada Centre for Mapping and
+  Earth Observation, delivered through the DataCube platform. / Collections de données
+  géospatiales provenant du Centre canadien de cartographie et d’observation de la
+  Terre, offertes via la plateforme Cube de Données.
+endpoints:
+- type: stacserverapi
+  url: https://datacube.services.geo.ca/stac/api/
+id: datacubeservicesgeoca
+langs:
+- id: EN
+  name: English
+link: https://datacube.services.geo.ca/stac/api/
+name: Canadian Geospatial Data Collections
+owner:
+  link: https://natural-resources.canada.ca
+  location:
+    country: *id001
+    level: 20
+  name: Canada Centre for Mapping and Earth Observation
+  type: Central government
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021380

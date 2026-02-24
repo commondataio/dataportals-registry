@@ -62,12 +62,29 @@ endpoints:
 - type: csw202
   url: https://geoservices.govt.lc/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: wms111
+  url: https://geoservices.govt.lc/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoservices.govt.lc/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geoservices.govt.lc/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://geoservices.govt.lc/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geoservices.govt.lc/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: sitemap
+  url: https://geoservices.govt.lc/sitemap.xml
 id: geoservicesgovtlc
 langs:
 - id: EN
   name: English
 link: https://geoservices.govt.lc/geoserver
-name: geoservices.govt.lc/geoserver
+name: Saint Lucia Government Geoportal
 owner:
   link: https://www.gov.lc
   location:
@@ -96,7 +113,13 @@ tags:
 - GIS
 - open data
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: cdi00005124

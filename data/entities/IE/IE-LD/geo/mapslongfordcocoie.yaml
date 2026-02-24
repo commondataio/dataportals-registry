@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,11 @@ coverage:
       id: IE-LD
       name: Longford
 description: Catalog of GIS REST services provided by Longford County Council.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.longfordcoco.ie/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.longfordcoco.ie/arcgis/rest/services?f=pjson
 id: mapslongfordcocoie
 langs:
 - id: EN

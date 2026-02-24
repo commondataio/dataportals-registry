@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: FI-01
+      name: Ahvenanmaa
+description: Public portal for locating automated external defibrillators (AEDs) in
+  Åland. Provides open geospatial data on AED locations, downloadable in multiple
+  formats (GeoJSON, CSV, Shapefile, GeoPackage, KML).
+endpoints:
+- type: dcatus11
+  url: https://www.hjartstartare.ax/api/feed/dcat-us/1.1.json
+- type: dcatap201
+  url: https://www.hjartstartare.ax/api/feed/dcat-ap/2.0.1.json
+- type: rss
+  url: https://www.hjartstartare.ax/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://www.hjartstartare.ax/api/search/v1
+- type: dcatus11
+  url: https://www.hjartstartare.ax/data.json
+- type: sitemap
+  url: https://www.hjartstartare.ax/sitemap.xml
+id: wwwhjartstartareax
+langs:
+- id: SV
+  name: Swedish
+link: https://www.hjartstartare.ax/
+name: Hjärtstartare - AED locations Åland
+owner:
+  link: https://www.regeringen.ax
+  location:
+    country:
+      id: FI
+      name: Finland
+    level: 30
+    subregion:
+      id: FI-01
+      name: Ahvenanmaa
+  name: Ålands landskapsregering
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0
+  license_url: https://creativecommons.org/licenses/by/4.0
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- health
+- emergency
+- AED
+- defibrillator
+- Åland Islands
+- geospatial
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00020684

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,12 +17,16 @@ coverage:
       name: South America
 description: Geoserver platform hosted by INE (Instituto Nacional de Estadística)
   of Bolivia
+endpoints:
+- type: wms111
+  url: http://siged.ine.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: sigedinegobbo
 langs:
 - id: ES
   name: Spanish
 link: http://siged.ine.gob.bo/geoserver
-name: siged.ine.gob.bo/geoserver
+name: SIGED GeoServer - INE Bolivia
 owner:
   link: https://siged.ine.gob.bo/geoserver
   location:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -24,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: https://www.nativehawaiiandataportal.com
-name: www.nativehawaiiandataportal.com
+name: Liliʻuokalani Trust Open Data Portal
 owner:
   link: https://onipaa.org/native-hawaiian-data-portal
   location:
@@ -66,3 +66,7 @@ topics:
   name: Society
   type: iso19115
 uid: temp00004862
+endpoints:
+- type: ckan:api
+  url: https://www.nativehawaiiandataportal.com/api/3/action/package_list
+  version: '3.0'

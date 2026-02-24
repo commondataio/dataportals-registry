@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: Spatial Data Infrastructure at WGCF (FKMC). GeoNode-based portal with
+  datasets, documents, maps, GeoStories, and dashboards.
+endpoints:
+- type: geonode:documents
+  url: https://fkmcsdi.wgcf.edu.et/api/documents/
+- type: csw202
+  url: https://fkmcsdi.wgcf.edu.et/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://fkmcsdi.wgcf.edu.et/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://fkmcsdi.wgcf.edu.et/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://fkmcsdi.wgcf.edu.et/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: sitemap
+  url: https://fkmcsdi.wgcf.edu.et/sitemap.xml
+id: fkmcsdiwgcfeduet
+langs:
+- id: EN
+  name: English
+link: https://fkmcsdi.wgcf.edu.et
+name: FKMC - Spatial Data Infrastructure
+owner:
+  location:
+    country:
+      id: ET
+      name: Ethiopia
+    level: 20
+  name: WGCF (FKMC)
+  type: Academy
+  link: https://edu.et
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- GIS
+- SDI
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021478

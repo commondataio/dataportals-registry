@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       id: 039
       name: Southern Europe
 description: Data catalog for ArcGIS REST Services from Lamia City
+endpoints:
+- type: arcgis:rest:services
+  url: http://gisapp.lamia-city.gr/ArcGIS/rest/services?f=pjson
+- type: arcgis:rest:info
+  url: http://gisapp.lamia-city.gr/ArcGIS/rest/info?f=pjson
 id: gisapplamiacitygr
 langs:
 - id: EL
@@ -28,7 +33,10 @@ owner:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
+    subregion:
+      id: GR-H
+      name: Sterea Ellada
   name: Lamia City
   type: Local government
 properties:

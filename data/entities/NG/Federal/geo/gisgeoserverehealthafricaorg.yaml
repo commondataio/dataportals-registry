@@ -48,12 +48,27 @@ endpoints:
 - type: csw202
   url: https://gis-geoserver.ehealthafrica.org/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: geoserver:version
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/rest/layers
+- type: wfs200
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://gis-geoserver.ehealthafrica.org/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: gisgeoserverehealthafricaorg
 langs:
 - id: EN
   name: English
 link: https://gis-geoserver.ehealthafrica.org/geoserver
-name: gis-geoserver.ehealthafrica.org
+name: eHealth Africa gGmbH Geoportal
 owner:
   link: https://www.ehealthafrica.org
   location:

@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    macroregion:
+      id: '013'
+      name: Central America
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+description: Atlas de Riesgo del municipio de León, Guanajuato. Geoportal de información
+  geográfica y de riesgos para la planeación y prevención.
+endpoints:
+- type: geonode:datasets
+  url: https://leonatlasriesgo.gob.mx/api/datasets/
+- type: geonode:documents
+  url: https://leonatlasriesgo.gob.mx/api/documents/
+- type: csw202
+  url: https://leonatlasriesgo.gob.mx/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://leonatlasriesgo.gob.mx/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://leonatlasriesgo.gob.mx/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: leonatlasriesgogobmx
+langs:
+- id: ES
+  name: Spanish
+link: https://leonatlasriesgo.gob.mx/
+name: Atlas de Riesgo de León
+owner:
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 30
+    subregion:
+      id: MX-GUA
+      name: Guanajuato
+  name: Municipio de León, Guanajuato
+  type: Local government
+  link: https://gob.mx
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- risk
+- atlas
+- geospatial
+- León
+- Guanajuato
+uid: cdi00021528
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115

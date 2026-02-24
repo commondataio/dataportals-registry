@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: DETECT is a GeoNetwork-based geospatial metadata catalog associated with
+  PhenoRob and the University of Bonn.
+endpoints:
+- type: openapi
+  url: https://detect-z03.geoinformation.net/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://detect-z03.geoinformation.net/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://detect-z03.geoinformation.net/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://detect-z03.geoinformation.net/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: phenorob816iaasunibonnde
+langs:
+- id: EN
+  name: English
+link: https://detect-z03.geoinformation.net/geonetwork
+name: DETECT - University of Bonn
+owner:
+  link: https://www.uni-bonn.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Rheinische Friedrich-Wilhelms-Universitat Bonn
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- has_api
+- research data
+- agriculture
+- phenotyping
+- metadata catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00020450

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,15 @@ description: Spatial data server providing WMS, WFS and related services. Used f
 endpoints:
 - type: wms130
   url: https://geoserver.vmm.be/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+- type: wms111
+  url: https://geoserver.vmm.be/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.vmm.be/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geoserver.vmm.be/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: geoservervmmbe
 langs:
 - id: FR
@@ -32,7 +41,10 @@ owner:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-VLG
+      name: Vlaams Gewest
   name: Vlaamse Milieumaatschappij (VMM), likely a Flemish environmental agency
   type: Regional government
 properties:

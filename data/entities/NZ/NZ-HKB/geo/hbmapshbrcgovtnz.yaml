@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
     subregion:
       id: NZ-HKB
 description: Catalog of ArcGIS map services provided by Hawke's Bay Regional Council
+endpoints:
+- type: arcgis:soap
+  url: https://hbmaps.hbrc.govt.nz/arcgis/services?wsdl
 id: hbmapshbrcgovtnz
 langs:
 - id: EN
@@ -30,7 +33,10 @@ owner:
     country:
       id: NZ
       name: New Zealand
-    level: 20
+    level: 30
+    subregion:
+      id: NZ-HKB
+      name: Hawke's Bay
   name: Hawke's Bay Regional Council
   type: Regional government
 properties:

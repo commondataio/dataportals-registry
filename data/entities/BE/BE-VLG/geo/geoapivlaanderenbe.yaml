@@ -21,6 +21,15 @@ description: Digitale topografische referentiekaart van Vlaanderen. Bevat nauwke
 endpoints:
 - type: ogc:features
   url: https://geo.api.vlaanderen.be/GRB/ogc/features/collections
+- type: wms111
+  url: https://geo.api.vlaanderen.be/GRB/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geo.api.vlaanderen.be/GRB/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geo.api.vlaanderen.be/GRB/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
 id: geoapivlaanderenbe
 langs:
 - id: FR
@@ -36,7 +45,7 @@ owner:
     level: 30
     subregion:
       id: BE-VLG
-      name: Flemish Region
+      name: Vlaams Gewest
   name: Flemish government
   type: Regional government
 properties:

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -26,7 +26,7 @@ langs:
 - id: FR
   name: French
 link: https://lizmap.aua-toulouse.org/lizmap
-name: lizmap.aua-toulouse.org/lizmap
+name: AUA Toulouse Geoportal
 owner:
   link: https://aua-toulouse.org/
   location:
@@ -79,3 +79,7 @@ topics:
   name: Environment
   type: iso19115
 uid: temp00003279
+endpoints:
+- type: wms130
+  url: https://lizmap.aua-toulouse.org/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0

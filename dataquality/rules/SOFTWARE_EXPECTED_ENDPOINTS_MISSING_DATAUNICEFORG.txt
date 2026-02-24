@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='datauniceforg' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+World: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+datauniceforg: 1 issue
+
+=== ISSUES ===
+
+File: World/indicators/datauniceforg.yaml
+Record ID: datauniceforg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG
+Field: endpoints
+Current Value: {"software_id": "datauniceforg", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='datauniceforg' is marked as API-capable in software definitions

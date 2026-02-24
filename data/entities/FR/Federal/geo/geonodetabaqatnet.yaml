@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: TotalEnergies GeoNode for sharing geospatial data and maps. Provides
+  datasets, documents, maps, GeoStories, and dashboards.
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.tabaqat.net/api/datasets/
+- type: geonode:documents
+  url: https://geonode.tabaqat.net/api/documents/
+- type: csw202
+  url: https://geonode.tabaqat.net/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.tabaqat.net/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.tabaqat.net/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+id: geonodetabaqatnet
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+- id: DE
+  name: German
+- id: ES
+  name: Spanish
+- id: IT
+  name: Italian
+link: https://geonode.tabaqat.net
+name: TotalEnergies GeoNode
+owner:
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: TotalEnergies
+  type: Business
+  link: https://tabaqat.net
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- GIS
+- maps
+- TotalEnergies
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geospatial
+  name: Geospatial
+  type: general
+- id: Maps
+  name: Maps
+  type: general
+uid: cdi00021696

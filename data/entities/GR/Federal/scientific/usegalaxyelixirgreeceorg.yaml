@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,12 +16,15 @@ coverage:
       name: Southern Europe
 description: Data catalog offering research data management and analysis services,
   primarily for life science research.
+endpoints:
+- type: galaxy:api
+  url: https://usegalaxy.elixir-greece.org/api/version
 id: usegalaxyelixirgreeceorg
 langs:
 - id: EN
   name: English
 link: https://usegalaxy.elixir-greece.org
-name: usegalaxy.elixir-greece.org
+name: ELIXIR Greece Galaxy
 owner:
   link: https://elixir-greece.org
   location:
@@ -48,7 +51,7 @@ tags:
 - Galaxy
 - Research data management
 topics:
-- Research
-- Science
-- Academic
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
 uid: temp00002276

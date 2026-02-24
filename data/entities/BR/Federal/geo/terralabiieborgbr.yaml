@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: TerraLab is a GeoNode-based geospatial data platform managed by IIEB
+  (Instituto de Estudos Socioambientais do Sul da Bahia) for management and publication
+  of geospatial data.
+endpoints:
+- type: geonode:layers
+  url: https://terralab.iieb.org.br/api/layers/
+- type: geonode:documents
+  url: https://terralab.iieb.org.br/api/documents/
+- type: wms111
+  url: https://terralab.iieb.org.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://terralab.iieb.org.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://terralab.iieb.org.br/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://terralab.iieb.org.br/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: terralabiieborgbr
+langs:
+- id: PT
+  name: Portugal
+link: https://terralab.iieb.org.br
+name: TerraLab - IIEB
+owner:
+  link: https://iieb.org.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: IIEB - Instituto de Estudos Socioambientais do Sul da Bahia
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Brazil
+- GeoNode
+- geospatial
+- IIEB
+- socio-environmental
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021616

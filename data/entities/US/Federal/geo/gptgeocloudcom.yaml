@@ -1,0 +1,52 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: This STAC uses the open-source Esri Geoportal Server. Esri Geoportal
+  Server is a generic metadata catalog solution that can be configured to support
+  any XML or JSON based metadata structure.
+endpoints:
+- type: stacserverapi
+  url: https://gpt.geocloud.com/sentinel/stac
+id: gptgeocloudcom
+langs:
+- id: EN
+  name: English
+link: https://gpt.geocloud.com/sentinel/stac
+name: Geoportal Server
+owner:
+  link: https://www.esri.com
+  location:
+    country: *id001
+    level: 20
+  name: Esri
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021363

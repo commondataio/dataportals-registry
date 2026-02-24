@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -23,7 +23,7 @@ langs:
 - id: EN
   name: English
 link: https://developers.arcgis.com/rest/services
-name: developers.arcgis.com
+name: Esri Geoportal
 owner:
   link: https://www.esri.com
   location:
@@ -61,3 +61,8 @@ topics:
   name: Location
   type: iso19115
 uid: temp00003949
+endpoints:
+- type: arcgis:rest:info
+  url: https://developers.arcgis.com/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://developers.arcgis.com/arcgis/rest/services?f=pjson

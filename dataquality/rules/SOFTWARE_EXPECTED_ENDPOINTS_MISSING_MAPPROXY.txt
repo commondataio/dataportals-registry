@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='mapproxy' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FR: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+ogcaltermapfr: 1 issue
+
+=== ISSUES ===
+
+File: FR/Federal/geo/ogcaltermapfr.yaml
+Record ID: ogcaltermapfr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY
+Field: endpoints
+Current Value: {"software_id": "mapproxy", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='mapproxy' is marked as API-capable in software definitions

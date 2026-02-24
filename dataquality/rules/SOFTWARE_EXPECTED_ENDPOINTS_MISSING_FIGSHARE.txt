@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='figshare' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+NL: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+uufigsharecom: 1 issue
+
+=== ISSUES ===
+
+File: NL/Federal/scientific/uufigsharecom.yaml
+Record ID: uufigsharecom
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE
+Field: endpoints
+Current Value: {"software_id": "figshare", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='figshare' is marked as API-capable in software definitions

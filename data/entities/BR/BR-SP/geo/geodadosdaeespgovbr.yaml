@@ -1,0 +1,108 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
+description: Plataforma de dados geoespacializados do DAEE (Departamento de Águas
+  e Energia Elétrica do Estado de São Paulo). GeoNode-based geoportal with datasets,
+  maps, documents, GeoStories and dashboards.
+endpoints:
+- type: geonode:documents
+  url: https://geodados.daee.sp.gov.br/api/documents/
+- type: csw202
+  url: https://geodados.daee.sp.gov.br/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodados.daee.sp.gov.br/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geodados.daee.sp.gov.br/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wfs110
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs100
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geodados.daee.sp.gov.br/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: geodadosdaeespgovbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geodados.daee.sp.gov.br/
+name: Geodados - DAEE
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-SP
+      name: Sao Paulo
+  name: Departamento de Águas e Energia Elétrica do Estado de São Paulo
+  type: Regional government
+  link: https://gov.br
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Brazil
+- DAEE
+- geonode
+- geospatial
+- water
+- energy
+topics:
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi00021612

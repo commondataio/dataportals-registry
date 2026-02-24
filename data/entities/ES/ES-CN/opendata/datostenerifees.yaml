@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -121,3 +121,7 @@ topics:
   name: Utilities / Communication
   type: iso19115
 uid: temp00004630
+endpoints:
+- type: ckan:api
+  url: https://datos.tenerife.es/api/3/action/package_list
+  version: '3.0'

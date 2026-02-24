@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoNetwork metadata catalog of the BE-Basic consortium at TU Delft Faculty
+  of Civil Engineering and Geosciences (Citg) for geospatial and research data.
+endpoints:
+- type: csw202
+  url: https://be-basic.citg.tudelft.nl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://be-basic.citg.tudelft.nl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:selections
+  url: https://be-basic.citg.tudelft.nl/geonetwork/srv/api/selections
+- type: geonetwork:site
+  url: https://be-basic.citg.tudelft.nl/geonetwork/srv/api/site
+id: bebasiccitgtudelftnlgeonetwork
+langs:
+- id: EN
+  name: English
+link: https://be-basic.citg.tudelft.nl/geonetwork
+name: BE-Basic Citg GeoNetwork (TU Delft)
+owner:
+  link: https://www.tudelft.nl/en/citg
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: TU Delft, Faculty of Civil Engineering and Geosciences (Citg), BE-Basic
+  type: Academy
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- TU Delft
+- BE-Basic
+- research data
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021775

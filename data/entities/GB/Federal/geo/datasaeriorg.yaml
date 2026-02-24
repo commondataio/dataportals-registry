@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -10,7 +10,7 @@ coverage:
 - location:
     country:
       id: FK
-      name: Falkland Islands
+      name: Falkland Islands (the) [Malvinas]   [l]
     level: 20
     macroregion:
       id: '005'
@@ -18,7 +18,7 @@ coverage:
 - location:
     country:
       id: SH
-      name: Saint Helena, Ascension Island, Tristan da Cunha
+      name: "Saint Helena \u00A0 \u00A0 Ascension Island \u00A0 \u00A0 Tristan da Cunha"
     level: 20
     macroregion:
       id: '011'
@@ -27,7 +27,9 @@ description: This page displays the WebGIS projects that SAERI has helped develo
   For any queries, please contact datamanager@saeri.org. WebGIS data catalog providing
   access to geospatial data and maps for the South Atlantic UK Overseas Territories
   including Falkland Islands, Saint Helena, Ascension Island, and Tristan da Cunha.
-endpoints: []
+endpoints:
+- type: lizmap:service
+  url: https://data.saeri.org/index.php/lizmap/service/
 id: datasaeriorg
 langs:
 - id: EN
@@ -39,7 +41,7 @@ owner:
   location:
     country:
       id: FK
-      name: Falkland Islands
+      name: Falkland Islands (the) [Malvinas]   [l]
     level: 20
   name: South Atlantic Environmental Research Institute (SAERI)
   type: Academy

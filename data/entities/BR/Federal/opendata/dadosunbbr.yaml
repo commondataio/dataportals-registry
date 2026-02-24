@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,7 +21,7 @@ langs:
 - id: PT
   name: Portugal
 link: https://dados.unb.br
-name: dados.unb.br
+name: Open Data Portal - Universidade de Brasília (UnB)
 owner:
   link: https://dados.unb.br
   location:
@@ -49,6 +49,10 @@ tags:
 - open data
 - university resources
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00004596
+endpoints:
+- type: api
+  url: https://dados.unb.br/api/3/action/package_search

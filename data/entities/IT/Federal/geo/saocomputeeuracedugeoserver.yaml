@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,13 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: GeoServer instance managed by EURAC Research (European Academy of Bozen/Bolzano) providing comprehensive access to geospatial datasets and map layers for research purposes. The service enables discovery and access to geographic information through standard OGC web services including WMS (Web Map Service), WFS (Web Feature Service), and WCS (Web Coverage Service). This geoportal supports scientific research activities in the Alpine region and beyond, offering geospatial data infrastructure for academic and research communities.
+description: GeoServer instance managed by EURAC Research (European Academy of Bozen/Bolzano)
+  providing comprehensive access to geospatial datasets and map layers for research
+  purposes. The service enables discovery and access to geographic information through
+  standard OGC web services including WMS (Web Map Service), WFS (Web Feature Service),
+  and WCS (Web Coverage Service). This geoportal supports scientific research activities
+  in the Alpine region and beyond, offering geospatial data infrastructure for academic
+  and research communities.
 id: saocomputeeuracedugeoserver
 identifiers:
 - id: wikidata
@@ -27,7 +33,7 @@ langs:
 - id: EN
   name: English
 link: http://saocompute.eurac.edu/geoserver
-name: saocompute.eurac.edu
+name: Geoportal - EURAC
 owner:
   link: https://www.eurac.edu
   location:
@@ -86,3 +92,7 @@ topics:
   name: Science and technology
   type: eudatatheme
 uid: temp00004062
+endpoints:
+- type: wms111
+  url: http://saocompute.eurac.edu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1

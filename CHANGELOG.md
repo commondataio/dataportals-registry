@@ -7,12 +7,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **1,647 new catalog entries** (net from v1.6.0); export snapshot: **14,346** catalog records (entities).
+
+### Changed
+- **3,432 catalog entries updated** with refreshed metadata; regenerated datasets and quality reports.
+- Export snapshots: 14,346 catalog records in `catalogs.jsonl` / `full.jsonl`; 136 software definitions; 0 scheduled (all promoted or removed).
+
+### Removed
+- **3,472 catalog entries** removed (inactive, duplicate, or consolidated).
+
+### Fixed
+- Data quality rules and fixes (including API status mismatch handling).
+- Subregion name/ID mismatch fixes (`fix_subregion_name_id_mismatch.py`).
+
+## [1.6.0] - 2026-02-21
+
+**GitHub Release**: [v1.6.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.6.0) - Published February 21, 2026
+
+### Added
+- **95 new catalog entries** (including Community Statistics Yukon — community-statistics.service.yukon.ca).
+
+### Changed
+- **156 catalog entries updated** with refreshed metadata and regenerated datasets and quality reports.
+- Export snapshots: **12,699** catalog records (entities); 136 software definitions; combined entities + scheduled in `full.jsonl`.
+
+### Removed
+- **1 catalog entry** removed.
+
+### Fixed
+- Improved API detection reliability; added regression coverage for apidetect.
+
 ## [1.5.0] - 2026-02-12
+
+**GitHub Release**: [v1.5.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.5.0) - Published February 12, 2026
 
 ### Changed
 - Refreshed catalog metadata across entity YAML records and rebuilt generated dataset artifacts.
 - Updated export snapshots in `README.md` to reflect the latest dataset counts (12,697 catalogs; 136 software definitions; 677 scheduled; 13,374 combined entities + scheduled records).
-- Refined release documentation in `CHANGELOG.md` and `README.md`; these updates are included in `1.5.0` (release not yet published).
+- Refined release documentation in `CHANGELOG.md` and `README.md`.
 
 ### Removed
 - Removed legacy `History.md`; changelog history is maintained in `CHANGELOG.md`.

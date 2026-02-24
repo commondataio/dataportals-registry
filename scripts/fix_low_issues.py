@@ -196,6 +196,21 @@ def infer_topics(record):
     if any(word in description for word in ["planning", "cadastre", "land use"]):
         topics.append({"id": "Planning / Cadastre", "name": "Planning / Cadastre", "type": "iso19115"})
     
+    # Fallback: if we have a catalog_type but no topics yet, add a generic topic
+    if not topics and catalog_type:
+        ct = catalog_lower
+        if "other" in ct or "data marketplace" in ct:
+            topics.append({"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"})
+        elif "api" in ct:
+            topics.append({"id": "TECH", "name": "Science and technology", "type": "eudatatheme"})
+        elif "search" in ct:
+            topics.append({"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"})
+        elif "metadata" in ct:
+            topics.append({"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"})
+        else:
+            # Generic fallback for any catalog type (e.g. ML, indicators with different wording)
+            topics.append({"id": "GOVE", "name": "Government and public sector", "type": "eudatatheme"})
+    
     # Remove duplicates
     seen = set()
     unique_topics = []

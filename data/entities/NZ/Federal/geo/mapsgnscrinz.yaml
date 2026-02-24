@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ description: Metadata catalogue of geoscience publications and datasets relevant
   New Zealand and Pacific region, including references, abstracts, and GIS layers.
   Managed by GNS Science, covers natural sciences, geology, geophysics, geodesy, atmospheric
   science, water research, and more. Includes access information and conditions.
+endpoints:
+- type: wms111
+  url: http://maps.gns.cri.nz/geoserver/ows?service=WMS&request=GetCapabilities&version=1.1.1
 id: mapsgnscrinz
 langs:
 - id: EN

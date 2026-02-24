@@ -63,6 +63,27 @@ endpoints:
 - type: csw202
   url: https://mybrugis.irisnet.be/geoserver/csw?service=csw&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: geoserver:version
+  url: https://mybrugis.irisnet.be/geoserver/rest/about/version
+- type: geoserver:settings
+  url: https://mybrugis.irisnet.be/geoserver/rest/settings
+- type: geoserver:layers
+  url: https://mybrugis.irisnet.be/geoserver/rest/layers
+- type: wms111
+  url: https://mybrugis.irisnet.be/geoserver/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://mybrugis.irisnet.be/geoserver/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://mybrugis.irisnet.be/geoserver/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://mybrugis.irisnet.be/geoserver/wcs?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://mybrugis.irisnet.be/geoserver/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
 id: mybrugisirisnetbe
 langs:
 - id: FR
@@ -75,7 +96,10 @@ owner:
     country:
       id: BE
       name: Belgium
-    level: 20
+    level: 30
+    subregion:
+      id: BE-BRU
+      name: Brussels Hoofdstedelijk Gewest
   name: BruGIS / Urban Brussels
   type: Local government
 properties:

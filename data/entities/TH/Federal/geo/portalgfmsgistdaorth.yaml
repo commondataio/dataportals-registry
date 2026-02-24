@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: GISTDA GFMS (Geo-Forest Monitoring System) geoportal for sharing geospatial
+  data and maps via GeoNode; provides datasets, maps, documents, GeoStories, and dashboards.
+endpoints:
+- type: geonode:datasets
+  url: https://portal.gfms.gistda.or.th/api/datasets/
+- type: geonode:documents
+  url: https://portal.gfms.gistda.or.th/api/documents/
+- type: wms111
+  url: https://portal.gfms.gistda.or.th/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://portal.gfms.gistda.or.th/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://portal.gfms.gistda.or.th/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://portal.gfms.gistda.or.th/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wms130
+  url: https://portal.gfms.gistda.or.th/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: portalgfmsgistdaorth
+langs:
+- id: EN
+  name: English
+- id: TH
+  name: Thai
+link: https://portal.gfms.gistda.or.th
+name: GISTDA GFMS Geoportal
+owner:
+  link: https://gistda.or.th
+  location:
+    country:
+      id: TH
+      name: Thailand
+    level: 20
+  name: Geo-Informatics and Space Technology Development Agency (GISTDA)
+  type: Central government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- forest
+- GIS
+- Thailand
+- geonode
+- GISTDA
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021552

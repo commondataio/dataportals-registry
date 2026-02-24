@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Eastern Asia
 description: Listing of ArcGIS REST endpoints for geographic data services available
   at zzch.gov.cn.
+endpoints:
+- type: arcgis:rest:info
+  url: http://www.zzch.gov.cn:6080/arcgis/rest/services/info?f=pjson
 id: wwwzzchgovcn
 langs:
 - id: ZH
@@ -29,7 +32,10 @@ owner:
     country:
       id: CN
       name: China
-    level: 20
+    level: 30
+    subregion:
+      id: CN-HB
+      name: Hubei
   name: ZZCH.gov.cn
   type: Local government
 properties:

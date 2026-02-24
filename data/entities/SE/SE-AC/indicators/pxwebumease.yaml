@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -16,7 +16,7 @@ coverage:
       name: Northern Europe
     subregion:
       id: SE-AC
-      name: Vasterbotten County
+      name: Vasterbottens lan
 description: Indicators catalog. managed by Umea municipality. powered by PxWeb. accessible
   at pxweb.umea.se.
 id: pxwebumease
@@ -34,7 +34,7 @@ owner:
     level: 30
     subregion:
       id: SE-AC
-      name: Vasterbotten County
+      name: Vasterbottens lan
   name: Umea municipality
   type: Local government
 properties:
@@ -61,3 +61,7 @@ topics:
   name: Population and society
   type: eudatatheme
 uid: cdi00005215
+endpoints:
+- type: pxwebapi
+  url: https://pxweb.umea.se/api/v1/en/
+  version: '1'

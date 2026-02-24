@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-LA
+      name: Louisiana
+description: JeffMap is Jefferson Parish's Geographic Information System mapping portal,
+  providing GIS data, parcel information, zoning data, and future land use maps for
+  unincorporated Jefferson Parish, Louisiana.
+endpoints:
+- type: arcgis:rest:info
+  url: https://jeffmap.jeffparish.net/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://jeffmap.jeffparish.net/arcgis/rest/services?f=pjson
+- type: dcatap201
+  url: https://jeffmap.jeffparish.net/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://jeffmap.jeffparish.net/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://jeffmap.jeffparish.net/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://jeffmap.jeffparish.net/api/search/v1
+- type: dcatus11
+  url: https://jeffmap.jeffparish.net/data.json
+- type: sitemap
+  url: https://jeffmap.jeffparish.net/sitemap.xml
+id: jeffmapjeffparishnet
+langs:
+- id: EN
+  name: English
+link: https://jeffmap.jeffparish.net
+name: JeffMap - Jefferson Parish GIS Portal
+owner:
+  link: https://www.jeffparish.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-LA
+      name: Louisiana
+  name: Jefferson Parish
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- ArcGIS
+- GIS
+- parcel
+- zoning
+- Louisiana
+topics:
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00020848

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id001
+      id: US-OR
+      name: Oregon
+description: Official geospatial data services portal for Union County, Oregon providing
+  GIS data and map layers.
+endpoints:
+- type: dcatus11
+  url: https://maps.union-county.org/data.json
+- type: sitemap
+  url: https://maps.union-county.org/sitemap.xml
+- type: dcatap201
+  url: https://maps.union-county.org/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://maps.union-county.org/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://maps.union-county.org/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://maps.union-county.org/api/search/v1
+id: mapsunioncountyorg
+langs:
+- id: EN
+  name: English
+link: https://maps.union-county.org
+name: Union County, Oregon GIS Portal
+owner:
+  link: https://union-county.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion: *id001
+  name: Union County, Oregon
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- geospatial data
+- county government
+- oregon
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021054

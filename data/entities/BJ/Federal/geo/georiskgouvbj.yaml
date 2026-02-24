@@ -1,0 +1,97 @@
+access_mode:
+- public
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map
+- document
+- map_layer
+- dashboard
+- storymap
+coverage:
+- location:
+    country:
+      id: BJ
+      name: Benin
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: GeoRisk Bénin est le portail national des risques de catastrophes naturelles
+  au Bénin, offrant des données, cartes et tableaux de bord pour l'évaluation et la
+  gestion des risques.
+endpoints:
+- type: geonode:layers
+  url: https://georisk.gouv.bj/api/layers/
+- type: geonode:documents
+  url: https://georisk.gouv.bj/api/documents/
+- type: geonode:dcatus11
+  url: https://georisk.gouv.bj/data.json
+- type: wms130
+  url: https://georisk.gouv.bj/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://georisk.gouv.bj/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wmts100
+  url: https://georisk.gouv.bj/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: sitemap
+  url: https://georisk.gouv.bj/sitemap.xml
+id: georiskgouvbj
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://georisk.gouv.bj
+name: GeoRisk Bénin
+owner:
+  link: https://www.gouv.bj
+  location:
+    country:
+      id: BJ
+      name: Benin
+    level: 20
+  name: Government of Benin
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- government
+- geoportal
+- disaster risk
+- natural hazards
+- risk management
+- Benin
+- geonode
+- GIS
+- open data
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021426

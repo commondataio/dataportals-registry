@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,14 +22,17 @@ langs:
 - id: IT
   name: Italian
 link: http://geoservices.retecivica.bz.it/geoserver
-name: geoservices.retecivica.bz.it/geoserver
+name: Geoportal - Rete Civica
 owner:
   link: http://geoservices.retecivica.bz.it/geoserver
   location:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
+    subregion:
+      id: IT-32
+      name: Trentino-Alto Adige
   name: Rete Civica
   type: Local government
 properties:
@@ -87,3 +90,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00003770
+endpoints:
+- type: wms111
+  url: http://geoservices.retecivica.bz.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Catalog from geoserver.surfacewater.miljoeportal.dk
+endpoints:
+- type: wms130
+  url: http://geoserver.surfacewater.miljoeportal.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: geoserversurfacewatermiljoeportaldk
 langs:
 - id: DA
@@ -27,7 +31,7 @@ owner:
   location:
     country: *id001
     level: 20
-  name: Not specified
+  name: Danmarks Miljoportal
   type: Central government
 properties:
   has_doi: false

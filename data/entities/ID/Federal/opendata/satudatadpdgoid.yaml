@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: Portal Satu Data DPD RI ditujukan untuk mempermudah publik dalam mengakses
+  data dan informasi mengenai DPD RI. Data-data yang ditampung dalam sistem ini dapat
+  berupa tabel (.csv, .xlsx).
+endpoints:
+- type: ckan
+  url: https://satudata.dpd.go.id/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://satudata.dpd.go.id/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://satudata.dpd.go.id/api/3/action/package_list
+  version: '3'
+id: satudatadpdgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://satudata.dpd.go.id/
+name: Satu Data DPD RI
+owner:
+  link: https://dpd.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 20
+  name: Dewan Perwakilan Daerah Republik Indonesia (DPD RI)
+  type: Central government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- open data
+- Indonesia
+- parliament
+- DPD RI
+uid: cdi00020656
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ description: Within WASCAL a large number of heterogeneous data are collected. T
   (Core Research Program, Graduate School Program) from the hydrological-meteorological,
   remote sensing, biodiversity and socio economic observation networks within WASCAL,
   and from the activities of the WASCAL Competence Center in Ouagadougou, Burkina-Faso.
+endpoints:
+- type: ckan:package-list
+  url: https://wascal-dataportal.org/api/3/action/package_list
+  version: "3"
 id: wascaldataportalorg
 langs:
 - id: EN

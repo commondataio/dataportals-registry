@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,12 @@ coverage:
 description: 'Israel’s biodiversity: the flora and fauna of Israel. a long-term, dynamic
   database, that reflects the current state of knowledge on the distribution of plant
   and animal species in Israel.'
+endpoints:
+- type: ipt:dataset
+  url: http://jbossews-gbifisrael.rhcloud.com/ipt/inventory/dataset
+- type: rss
+  url: http://jbossews-gbifisrael.rhcloud.com/ipt/rss.do
+  version: '2.0'
 id: jbossewsgbifisraelrhcloudcom
 langs:
 - id: HE

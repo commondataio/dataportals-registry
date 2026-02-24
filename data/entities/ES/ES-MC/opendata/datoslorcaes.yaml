@@ -1,58 +1,61 @@
 access_mode:
 - open
-api: false
 api_status: uncertain
 catalog_type: Open data portal
 content_types:
 - dataset
 coverage:
 - location:
-    country:
+    country: &id001
       id: ES
       name: Spain
     level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: Catálogo de datos abiertos del Excmo. Ayuntamiento de Lorca
+    subregion:
+      id: ES-MC
+      name: Murcia, Region de
+description: Portal de datos abiertos del Ayuntamiento de Lorca que proporciona acceso
+  a información pública municipal para promover la transparencia y la reutilización
+  de datos. El portal incluye conjuntos de datos sobre administración municipal, servicios
+  públicos, urbanismo, movilidad, medio ambiente, presupuestos, contrataciones públicas
+  y otros temas de interés ciudadano. Los datos están disponibles en formatos abiertos
+  y reutilizables para facilitar su análisis y la creación de aplicaciones y servicios
+  innovadores basados en información pública.
 id: datoslorcaes
+identifiers: []
 langs:
 - id: ES
   name: Spanish
-link: https://datos.lorca.es
-name: Catálogo de datos abiertos del Excmo. Ayuntamiento de Lorca
+link: https://datos.lorca.es/
+name: Catálogo de Datos Abiertos del Ayuntamiento de Lorca
 owner:
   link: https://www.lorca.es
   location:
-    country:
-      id: ES
-      name: Spain
+    country: *id001
     level: 30
-  name: Excmo. Ayuntamiento de Lorca
+    subregion:
+      id: ES-MC
+      name: Murcia, Region de
+  name: Ayuntamiento de Lorca
   type: Local government
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
   id: custom
   name: Custom software
 status: active
 tags:
-- Lorca
-- Murcia
-- Spain
-- custom
+- government
 - open data
-- public sector
 topics:
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Society
-  name: Society
-  type: iso19115
-uid: cdi00020290
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00010774

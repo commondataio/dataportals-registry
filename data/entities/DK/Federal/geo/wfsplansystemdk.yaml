@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,19 +16,23 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Geospatial data catalog hosted by geoserver, likely from Denmark
+endpoints:
+- type: wms130
+  url: http://wfs.plansystem.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: wfsplansystemdk
 langs:
 - id: DA
   name: Danish
 link: http://wfs.plansystem.dk/geoserver
-name: wfs.plansystem.dk/geoserver
+name: PlanSystemDK GeoServer
 owner:
   link: http://wfs.plansystem.dk/geoserver
   location:
     country: *id001
     level: 20
-  name: Not specified in source
-  type: Local government
+  name: Danish Planning Data Service
+  type: Central government
 properties:
   has_doi: false
 rights:

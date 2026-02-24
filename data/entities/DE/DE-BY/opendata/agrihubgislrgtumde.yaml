@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BY
+      name: Bayern
+description: HEF AgriHUB is the central catalog of information resources for the Hans
+  Eisenmann-Forum (HEF), supporting chairs, administrations and scientists at the
+  Wissenschaftszentrum Weihenstephan (WZW) in managing their research data.
+endpoints:
+- type: ckan
+  url: https://agrihub.gis.lrg.tum.de/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://agrihub.gis.lrg.tum.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://agrihub.gis.lrg.tum.de/api/3/action/package_list
+  version: '3'
+id: agrihubgislrgtumde
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://agrihub.gis.lrg.tum.de
+name: HEF AgriHUB - Forschungsdaten Infrastruktur
+owner:
+  link: https://www.gis.lrg.tum.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BY
+      name: Bayern
+  name: Technische Universität München (TUM), Lehrstuhl für Geoinformatik
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- research data
+- agriculture
+- HEF
+- WZW
+- CKAN
+- has_api
+topics:
+- id: AGRI
+  name: Agriculture, forestry and fisheries
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00020502

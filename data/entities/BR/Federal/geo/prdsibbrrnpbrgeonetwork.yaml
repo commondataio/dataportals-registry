@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+endpoints:
+- type: geonetwork:query
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/eng/q
+- type: openapi
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://prd.sibbr.rnp.br/geonetwork/srv/api/site
+- type: sitemap
+  url: https://prd.sibbr.rnp.br/geonetwork/sitemap/index
+- type: opensearch
+  url: https://prd.sibbr.rnp.br/portal.opensearch
+id: prdsibbrrnpbrgeonetwork
+link: https://prd.sibbr.rnp.br/geonetwork
+name: Catálogo de Metadados do Sistema Sobre a Biodiversidade Brasileira - SiBBr
+owner:
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Sistema de Informação sobre a Biodiversidade Brasileira (SiBBr)
+  type: Central government
+  link: https://rnp.br
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+uid: cdi00021746
+langs:
+- id: PT
+  name: Portuguese
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+tags:
+- GIS
+- geospatial
+- government
+description: Geoportal. managed by Sistema de Informação sobre a Biodiversidade Brasileira
+  (SiBBr). providing access to catálogo de metadados do sistema sobre a biodiversidade
+  brasileira - sibbr.
+content_types:
+- dataset
+- map_layer

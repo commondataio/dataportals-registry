@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -68,3 +68,8 @@ topics:
   name: Planning / Cadastre
   type: iso19115
 uid: temp00005722
+endpoints:
+- type: arcgis:rest:info
+  url: https://mcgisweb.co.middlesex.nj.us/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://mcgisweb.co.middlesex.nj.us/arcgis/rest/services?f=pjson

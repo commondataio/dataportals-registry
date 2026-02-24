@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -35,7 +35,7 @@ langs:
 - id: EN
   name: English
 link: http://141.91.172.224:6080/arcgis/services
-name: 141.91.172.224:6080
+name: Government of Unknown Geoportal
 owner:
   link: http://141.91.172.224
   location:
@@ -101,3 +101,12 @@ topics:
   name: Geoscientific Information
   type: iso19115
 uid: temp00005336
+endpoints:
+- type: dcatap201
+  url: http://141.91.172.224:6080/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: http://141.91.172.224:6080/api/feed/dcat-us/1.1.json
+- type: rss
+  url: http://141.91.172.224:6080/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: http://141.91.172.224:6080/api/search/v1

@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ArcGIS REST services catalog for geographic data in Mayenne, France
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.geomayenne.fr/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.geomayenne.fr/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.geomayenne.fr/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.geomayenne.fr/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.geomayenne.fr/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.geomayenne.fr/arcgis/rest/services?f=kmz
+id: wwwgeomayennefr
+langs:
+- id: FR
+  name: French
+link: https://www.geomayenne.fr/arcgis/rest/services
+name: Geomayenne Fr Geoportal
+owner:
+  link: https://www.geomayenne.fr/arcgis/rest/services
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-PDL
+      name: Pays-de-la-Loire
+  name: Geomayenne
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- France
+- REST
+- arcgisserver
+- geodata
+- geospatial
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005586

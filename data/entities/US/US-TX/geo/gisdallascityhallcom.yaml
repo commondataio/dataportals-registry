@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -65,3 +65,8 @@ topics:
   name: Transport
   type: eudatatheme
 uid: temp00003985
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.dallascityhall.com/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.dallascityhall.com/arcgis/rest/services?f=pjson

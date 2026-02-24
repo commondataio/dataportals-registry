@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Catalog for the Federatief Datastelsel (Federal Data System), providing
+  an overview of data sources available within the Dutch federal data infrastructure.
+endpoints:
+- type: ckan
+  url: https://fds-ckan.apps.digilab.network/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://fds-ckan.apps.digilab.network/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://fds-ckan.apps.digilab.network/api/3/action/package_list
+  version: '3'
+id: fdsckanappsdigilabnetwork
+langs:
+- id: NL
+  name: Dutch
+link: https://fds-ckan.apps.digilab.network/
+name: Federatief Datastelsel Catalog
+owner:
+  link: https://digilab.overheid.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Digilab
+  type: Central government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- federatief-datastelsel
+- government
+- has_api
+- open data
+- netherlands
+uid: cdi00020597
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme

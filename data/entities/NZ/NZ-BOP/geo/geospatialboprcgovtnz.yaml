@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,19 +18,25 @@ coverage:
     subregion:
       id: NZ-BOP
 description: Geospatial web services provided by the Bay of Plenty Regional Council
+endpoints:
+- type: arcgis:soap
+  url: https://geospatial.boprc.govt.nz/arcgis/services?wsdl
 id: geospatialboprcgovtnz
 langs:
 - id: EN
   name: English
 link: https://geospatial.boprc.govt.nz/arcgis/services
-name: geospatial.boprc.govt.nz/arcgis/services
+name: Bay of Plenty Regional Council Geospatial Services
 owner:
   link: https://geospatial.boprc.govt.nz
   location:
     country:
       id: NZ
       name: New Zealand
-    level: 20
+    level: 30
+    subregion:
+      id: NZ-BOP
+      name: Bay of Plenty
   name: Bay of Plenty Regional Council
   type: Regional government
 properties:

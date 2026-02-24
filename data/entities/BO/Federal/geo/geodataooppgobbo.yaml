@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,22 +15,26 @@ coverage:
     macroregion:
       id: '005'
       name: South America
-description: Data catalog hosting geospatial data. This geoportal. managed by Not
-  specified. provides access to datasets and resources.
+description: GeoServer-based geospatial data catalog operated by the Bolivian Ministry
+  of Public Works.
+endpoints:
+- type: wms111
+  url: http://geodata.oopp.gob.bo/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
 id: geodataooppgobbo
 langs:
 - id: ES
   name: Spanish
 link: http://geodata.oopp.gob.bo/geoserver
-name: geodata.oopp.gob.bo
+name: GeoServer del Ministerio de Obras Publicas de Bolivia
 owner:
   location:
     country:
       id: BO
       name: Bolivia
     level: 20
-  name: Not specified
-  type: Civil society
+  name: Ministerio de Obras Publicas, Servicios y Vivienda (Bolivia)
+  type: Central government
   link: https://gob.bo
 properties:
   has_doi: false

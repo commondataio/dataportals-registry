@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+description: Catálogo de datos abiertos de Open Data UPV (Universitat Politècnica de
+  València). Portal de transparencia con conjuntos de datos sobre áreas académica,
+  económica e institucional.
+endpoints:
+- type: ckan
+  url: https://upvtransparente.upv.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://upvtransparente.upv.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://upvtransparente.upv.es/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://upvtransparente.upv.es/catalog.n3
+- type: dcat:ttl
+  url: https://upvtransparente.upv.es/catalog.ttl
+- type: dcat:xml
+  url: https://upvtransparente.upv.es/catalog.xml
+- type: dcat:jsonld
+  url: https://upvtransparente.upv.es/catalog.jsonld
+id: upvtransparenteupves
+langs:
+- id: ES
+  name: Spanish
+link: https://upvtransparente.upv.es
+name: Open Data UPV (UPVTransparent)
+owner:
+  link: https://www.upv.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-VC
+      name: Valenciana, Comunidad
+  name: Universitat Politècnica de València
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- Spain
+- ckan
+- open data
+- transparency
+- university
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00004633

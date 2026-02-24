@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -21,7 +21,7 @@ langs:
 - id: DE
   name: German
 link: https://linkeddatacatalog.dws.informatik.uni-mannheim.de
-name: linkeddatacatalog.dws.informatik.uni-mannheim.de
+name: Uni Mannheim Open Data Portal
 owner:
   link: https://uni-mannheim.de
   location:
@@ -46,6 +46,11 @@ tags:
 - Germany
 - ckan
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00004622
+endpoints:
+- type: ckan:package-list
+  url: https://linkeddatacatalog.dws.informatik.uni-mannheim.de/api/3/action/package_list
+  version: '3'

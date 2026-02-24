@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,16 +21,16 @@ langs:
 - id: EN
   name: English
 link: http://webgis.mpugzo-zzh.com/lizmap
-name: webgis.mpugzo-zzh.com/lizmap
+name: Local Government of Mpugzo Zzh Geoportal
 owner:
   link: http://mpugzo-zzh.com
   location:
     country:
       id: World
       name: World
-    level: 10
+    level: 20
   name: Local Government of Mpugzo Zzh
-  type: Local government
+  type: Central government
 properties:
   has_doi: false
 rights:
@@ -49,7 +49,16 @@ tags:
 - geospatial
 - government
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00003282
+endpoints:
+- type: sitemap
+  url: http://webgis.mpugzo-zzh.com/sitemap.xml

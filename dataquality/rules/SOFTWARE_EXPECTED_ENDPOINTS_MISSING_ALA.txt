@@ -1,0 +1,56 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+================================================================================
+Generated: 2026-02-24 19:14:11
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Priority: IMPORTANT
+Total Issues Found: 4
+
+Rule: Identifies records using software.id='ala' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+AU: 1 issue
+BE: 1 issue
+HR: 1 issue
+PT: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+naturdatainbobecollectorydatasets: 1 issue
+collectionsgbifpt: 1 issue
+seedbankalaorgau: 1 issue
+collectionsbioatlasbioportalhr: 1 issue
+
+=== ISSUES ===
+
+File: BE/BE-VLG/scientific/naturdatainbobecollectorydatasets.yaml
+Record ID: naturdatainbobecollectorydatasets
+Country: BE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {"software_id": "ala", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: PT/Federal/scientific/collectionsgbifpt.yaml
+Record ID: collectionsgbifpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {"software_id": "ala", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/seedbankalaorgau.yaml
+Record ID: seedbankalaorgau
+Country: AU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {"software_id": "ala", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: HR/Federal/scientific/collectionsbioatlasbioportalhr.yaml
+Record ID: collectionsbioatlasbioportalhr
+Country: HR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {"software_id": "ala", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions

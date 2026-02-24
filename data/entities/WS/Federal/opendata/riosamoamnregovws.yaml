@@ -1,7 +1,7 @@
 access_mode:
 -  private
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -42,6 +42,10 @@ rights:
 software:
   id: dkan
   name: DKAN
+endpoints:
+- type: ckan:package-list
+  url: http://rio-samoa.mnre.gov.ws/api/3/action/package_list
+  version: '3'
 status: active
 tags: 
 - open data portal

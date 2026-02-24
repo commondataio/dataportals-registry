@@ -1,0 +1,108 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+    subregion:
+      id: ID-SN
+      name: Sulawesi Selatan
+description: Geoportal of Bulukumba Regency (Kabupaten Bulukumba), South Sulawesi,
+  Indonesia. GeoNode-based spatial data portal with datasets, maps, GeoStories and
+  dashboards.
+endpoints:
+- type: geonode:documents
+  url: https://geoportal.bulukumbakab.go.id/api/documents/
+- type: csw202
+  url: https://geoportal.bulukumbakab.go.id/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geoportal.bulukumbakab.go.id/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geoportal.bulukumbakab.go.id/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wfs110
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://geoportal.bulukumbakab.go.id/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geoportal.bulukumbakab.go.id/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geoportal.bulukumbakab.go.id/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://geoportal.bulukumbakab.go.id/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: geoportalbulukumbakabgoid
+langs:
+- id: ID
+  name: Indonesian
+link: https://geoportal.bulukumbakab.go.id
+name: Geoportal Kabupaten Bulukumba
+owner:
+  link: https://bulukumbakab.go.id
+  location:
+    country:
+      id: ID
+      name: Indonesia
+    level: 30
+    subregion:
+      id: ID-SN
+      name: Sulawesi Selatan
+  name: Pemerintah Kabupaten Bulukumba
+  type: Local government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- government
+- local government
+- geoportal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00021573
+content_types:
+- dataset
+- map_layer

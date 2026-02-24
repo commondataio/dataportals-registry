@@ -4,6 +4,7 @@ import logging
 import sys
 from io import BytesIO
 import typer
+from typing import Optional
 from typing_extensions import Annotated
 import requests
 from urllib.parse import urljoin
@@ -1815,70 +1816,6 @@ CUSTOM_URLMAP = [
         "is_json": False,
         "version": None,
     },
-    # Generic OGC service detection for custom APIs (non-standard geoportals)
-    {
-        "id": "wms111",
-        "url": "/wms?service=WMS&version=1.1.1&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.1.1",
-    },
-    {
-        "id": "wms130",
-        "url": "/wms?service=WMS&version=1.3.0&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.3.0",
-    },
-    {
-        "id": "wfs200",
-        "url": "/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "2.0.0",
-    },
-    {
-        "id": "wcs111",
-        "url": "/wcs?service=WCS&version=1.1.1&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.1.1",
-    },
-    {
-        "id": "wms111",
-        "url": "/ows?service=WMS&version=1.1.1&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.1.1",
-    },
-    {
-        "id": "wms130",
-        "url": "/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.3.0",
-    },
-    {
-        "id": "wfs200",
-        "url": "/ows?service=WFS&version=2.0.0&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "2.0.0",
-    },
-    {
-        "id": "wcs111",
-        "url": "/ows?service=WCS&version=1.1.1&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "1.1.1",
-    },
-    {
-        "id": "csw202",
-        "url": "/csw?service=CSW&version=2.0.2&request=GetCapabilities",
-        "expected_mime": XML_MIMETYPES,
-        "is_json": False,
-        "version": "2.0.2",
-    },
 ]
 
 
@@ -2526,20 +2463,32 @@ def detect_software(
     action: Annotated[str, typer.Option("--action")] = "insert",
     mode: str = "entries",
     deep: bool = False,
+    max_endpoints: Annotated[
+        Optional[int],
+        typer.Option(
+            "--max-endpoints",
+            help="Only process records with fewer than N endpoints. Use 1 for records with no endpoints.",
+        ),
+    ] = None,
 ):
     """Enrich data catalogs with API endpoints by software"""
     root_dir = _resolve_root_dir(mode)
     for filepath in _iter_yaml_files(root_dir):
         record = _load_record(filepath)
-        if record["software"]["id"] == software:
-            _detect_record(
-                filepath,
-                filepath,
-                record,
-                action,
-                deep,
-                dryrun=dryrun,
-            )
+        if record["software"]["id"] != software:
+            continue
+        if max_endpoints is not None:
+            endpoint_count = len(record.get("endpoints", []))
+            if endpoint_count >= max_endpoints:
+                continue
+        _detect_record(
+            filepath,
+            filepath,
+            record,
+            action,
+            deep,
+            dryrun=dryrun,
+        )
 
 
 @app.command()

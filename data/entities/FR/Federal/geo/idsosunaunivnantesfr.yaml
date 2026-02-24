@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,7 +21,7 @@ langs:
 - id: FR
   name: French
 link: http://ids.osuna.univ-nantes.fr/geoserver
-name: geoserver.ids.osuna.univ-nantes.fr
+name: Université de Nantes / IDS Osuna Geoportal
 owner:
   link: http://ids.osuna.univ-nantes.fr/geoserver
   location:
@@ -55,3 +55,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00003644
+endpoints:
+- type: wms130
+  url: http://ids.osuna.univ-nantes.fr/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

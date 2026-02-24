@@ -1,0 +1,108 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+endpoints:
+- type: geonode:datasets
+  url: https://tebaka.planetek.it/api/datasets/
+- type: geonode:documents
+  url: https://tebaka.planetek.it/api/documents/
+- type: csw202
+  url: https://tebaka.planetek.it/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://tebaka.planetek.it/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://tebaka.planetek.it/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://tebaka.planetek.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://tebaka.planetek.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://tebaka.planetek.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://tebaka.planetek.it/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://tebaka.planetek.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://tebaka.planetek.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://tebaka.planetek.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://tebaka.planetek.it/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://tebaka.planetek.it/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://tebaka.planetek.it/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://tebaka.planetek.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://tebaka.planetek.it/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://tebaka.planetek.it/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://tebaka.planetek.it/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: tebakaplanetekit
+link: https://tebaka.planetek.it
+name: GeoNode - tebaka.planetek.it
+owner:
+  link: https://www.planetek.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Planetek Italia
+  type: Private sector
+software:
+  id: geonode
+  name: GeoNode
+status: active
+uid: cdi00021599
+langs:
+- id: IT
+  name: Italian
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+tags:
+- GIS
+- geospatial
+description: Geoportal. managed by Planetek Italia. providing access to geonode -
+  tebaka.planetek.it.
+content_types:
+- dataset
+- map_layer

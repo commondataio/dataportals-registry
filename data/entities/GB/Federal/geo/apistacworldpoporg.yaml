@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: GB
+      name: United Kingdom
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    level: 20
+description: WorldPop STAC API is a specialized platform for accessing and analyzing
+  global population distribution and covariate data. It uses the STAC specification
+  to provide standardized access to geospatial datasets on human population and environmental
+  factors at ~100m resolution (WGS84).
+endpoints:
+- type: stacserverapi
+  url: https://api.stac.worldpop.org
+id: apistacworldpoporg
+langs:
+- id: EN
+  name: English
+link: https://api.stac.worldpop.org
+name: WorldPop STAC API
+owner:
+  link: https://www.worldpop.org/
+  location:
+    country: *id001
+    level: 20
+  name: WorldPop STAC API
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+uid: cdi00021394

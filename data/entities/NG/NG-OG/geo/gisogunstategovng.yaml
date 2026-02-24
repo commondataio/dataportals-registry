@@ -1,0 +1,68 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map
+- document
+- geostory
+- dashboard
+coverage:
+- location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 30
+    macroregion:
+      id: '011'
+      name: Western Africa
+    subregion: &id001
+      id: NG-OG
+      name: Ogun
+description: GeoNode-based spatial data infrastructure for Ogun State, Nigeria, providing
+  access to datasets, maps, documents, GeoStories, and dashboards.
+endpoints:
+- type: geonode:datasets
+  url: https://gis.ogunstate.gov.ng/api/datasets/
+- type: geonode:maps
+  url: https://gis.ogunstate.gov.ng/api/maps/
+id: gisogunstategovng
+langs:
+- id: EN
+  name: English
+link: https://gis.ogunstate.gov.ng/
+name: Ogun SDI Web-Portal
+owner:
+  link: https://gis.ogunstate.gov.ng/
+  location:
+    country:
+      id: NG
+      name: Nigeria
+    level: 30
+    subregion: *id001
+  name: Ogun State Government
+  type: Regional government
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geoportal
+- GeoNode
+- geospatial
+- spatial data infrastructure
+- Ogun State
+- Nigeria
+uid: cdi00021537
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115

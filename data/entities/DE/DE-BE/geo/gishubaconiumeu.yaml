@@ -1,0 +1,105 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GIS Hub by aconium GmbH. Central application for capturing, editing,
+  visualizing and analyzing spatial data. Used for the "Zukunftsreise" Infomobil project
+  to map mobile network coverage across Germany.
+endpoints:
+- type: geonode:layers
+  url: https://gishub.aconium.eu/api/layers/
+- type: wfs110
+  url: https://gishub.aconium.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://gishub.aconium.eu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://gishub.aconium.eu/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://gishub.aconium.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://gishub.aconium.eu/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://gishub.aconium.eu/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://gishub.aconium.eu/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://gishub.aconium.eu/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://gishub.aconium.eu/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://gishub.aconium.eu/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://gishub.aconium.eu/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://gishub.aconium.eu/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://gishub.aconium.eu/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+- type: opensearch
+  url: https://gishub.aconium.eu/catalogue/opensearch
+id: gishubaconiumeu
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://gishub.aconium.eu
+name: GIS Hub aconium
+owner:
+  link: https://www.aconium.eu
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BE
+      name: Berlin
+  name: aconium GmbH
+  type: Other
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Germany
+- geoportal
+- GeoNode
+- mobility
+- mobile network coverage
+uid: cdi00021485
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+content_types:
+- dataset
+- map_layer

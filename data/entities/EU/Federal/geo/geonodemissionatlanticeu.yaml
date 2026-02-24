@@ -1,0 +1,92 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: Mission Atlantic GeoNode provides geospatial data from the EU Horizon
+  2020 Mission Atlantic project on Atlantic Ocean ecosystems. Users can search, visualize,
+  download and share datasets; the platform supports OGC web services and FAIR principles.
+endpoints:
+- type: geonode:documents
+  url: https://geonode.missionatlantic.eu/api/documents/
+- type: geonode:layers
+  url: https://geonode.missionatlantic.eu/api/layers/
+- type: wms111
+  url: https://geonode.missionatlantic.eu/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.missionatlantic.eu/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.missionatlantic.eu/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: csw202
+  url: https://geonode.missionatlantic.eu/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geonode.missionatlantic.eu/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geonode.missionatlantic.eu/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: geoserver:version
+  url: https://geonode.missionatlantic.eu/geoserver/rest/about/version
+- type: geoserver:layers
+  url: https://geonode.missionatlantic.eu/geoserver/rest/layers
+- type: opensearch
+  url: https://geonode.missionatlantic.eu/catalogue/opensearch
+id: geonodemissionatlanticeu
+langs:
+- id: EN
+  name: English
+link: https://geonode.missionatlantic.eu
+name: Mission Atlantic GeoNode
+owner:
+  link: https://missionatlantic.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: Mission Atlantic project
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- environment
+- ocean science
+- Atlantic
+- FAIR
+- OGC
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00021487

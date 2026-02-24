@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -20,7 +20,7 @@ langs:
 - id: PT
   name: Portugal
 link: https://dados.infraestrutura.gov.br
-name: dados.infraestrutura.gov.br
+name: Open Data Portal - Ministry of Infrastructure
 owner:
   link: https://dados.infraestrutura.gov.br
   location:
@@ -45,6 +45,10 @@ tags:
 - Brazil
 - ckan
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00004587
+endpoints:
+- type: api
+  url: https://dados.infraestrutura.gov.br/api/3/action/package_search

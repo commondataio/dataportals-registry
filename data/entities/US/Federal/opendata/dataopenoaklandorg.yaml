@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -50,6 +50,11 @@ tags:
 - open data
 - Oakland
 topics:
-- Open Data
-- Government Data
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
 uid: temp00001830
+endpoints:
+- type: ckan:api
+  url: http://data.openoakland.org/api/3/action/package_list
+  version: '3.0'

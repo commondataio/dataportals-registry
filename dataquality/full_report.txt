@@ -1,3057 +1,1811 @@
 DATA QUALITY ANALYSIS REPORT
 ================================================================================
-Generated: 2026-02-13 19:09:38
-Total Records Analyzed: 12697
-Total Issues Found: 4619
-Records with Issues: 2505
+Generated: 2026-02-24 19:14:11
+Total Records Analyzed: 14346
+Total Issues Found: 204
+Records with Issues: 204
 
 === ISSUES BY TYPE ===
 
-[API_STATUS_MISMATCH]
-Count: 10
-Priority: IMPORTANT
-
-File: SK/Federal/opendata/datagovsk.yaml
-Record ID: datagovsk
-Country: SK
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=4
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: BE/BE-VAN/opendata/recapuantwerpenbe.yaml
-Record ID: recapuantwerpenbe
-Country: BE
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: BE/BE-BRU/geo/geoservergisirisnetbe.yaml
-Record ID: geoservergisirisnetbe
-Country: BE
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: BE/BE-VLG/geo/geoservervmmbe.yaml
-Record ID: geoservervmmbe
-Country: BE
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: CI/opendata/gouvcikoumoulcom.yaml
-Record ID: gouvcikoumoulcom
-Country: CI
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: DK/Federal/opendata/datasetscataloguedatagovdk.yaml
-Record ID: datasetscataloguedatagovdk
-Country: DK
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IE/Federal/geo/gisepaie.yaml
-Record ID: gisepaie
-Country: IE
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=5
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IE/Federal/geo/wwwisdeie.yaml
-Record ID: wwwisdeie
-Country: IE
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=7
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: TR/TR-41/opendata/verikocaelibeltr.yaml
-Record ID: verikocaelibeltr
-Country: TR
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=3
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: TR/TR-34/geo/apiibbgovtr.yaml
-Record ID: apiibbgovtr
-Country: TR
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=3
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[CATALOG_SOFTWARE_MISMATCH]
-Count: 5
-Priority: CRITICAL
-
-File: IT/Federal/scientific/antarcticdatacentermnait.yaml
-Record ID: antarcticdatacentermnait
-Country: IT
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Scientific data repository, software.id=geonetwork
-Suggested Action: Update catalog_type to 'Geoportal' to match software.id
-
-File: DE/Federal/scientific/ckankupferdigitalorg.yaml
-Record ID: ckankupferdigitalorg
-Country: DE
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Scientific data repository, software.id=ckan
-Suggested Action: Update catalog_type to 'Open data portal' to match software.id
-
-File: DE/Federal/scientific/repodainstorg.yaml
-Record ID: repodainstorg
-Country: DE
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Scientific data repository, software.id=ckan
-Suggested Action: Update catalog_type to 'Open data portal' to match software.id
-
-File: FI/Federal/scientific/ckanenergydatardtunifi.yaml
-Record ID: ckanenergydatardtunifi
-Country: FI
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Scientific data repository, software.id=ckan
-Suggested Action: Update catalog_type to 'Open data portal' to match software.id
-
-File: FR/Federal/api/apilannuaireservicepublicfr.yaml
-Record ID: apilannuaireservicepublicfr
-Country: FR
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=API Catalog, software.id=opendatasoft
-Suggested Action: Update catalog_type to 'Open data portal' to match software.id
-
-[DUPLICATE_LINK]
-Count: 111
-Priority: MEDIUM
-
-File: US/US-WI/geo/mapsscowiscedu.yaml
-Record ID: mapsscowiscedu
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/mapsscowiscedu.yaml
-Record ID: mapsscowiscedu
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://maps.sco.wisc.edu/opengeoportal/', 'record_ids': ['mapsscowiscedu', 'mapsscowiscedu']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Other/scientific/tdsmarinerutgersedu.yaml
-Record ID: tdsmarinerutgersedu
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tds.marine.rutgers.edu/thredds/catalog.html', 'record_ids': ['tdsmarinerutgersedu', 'tdsmarinerutgersedu']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-NJ/opendata/tdsmarinerutgersedu.yaml
-Record ID: tdsmarinerutgersedu
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tds.marine.rutgers.edu/thredds/catalog.html', 'record_ids': ['tdsmarinerutgersedu', 'tdsmarinerutgersedu']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-NJ/opendata/healthdatanjgov.yaml
-Record ID: healthdatanjgov
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://healthdata.nj.gov', 'record_ids': ['healthdatanjgov', 'healthdatadatanjgov']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-NJ/opendata/healthdatadatanjgov.yaml
-Record ID: healthdatadatanjgov
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://healthdata.nj.gov', 'record_ids': ['healthdatanjgov', 'healthdatadatanjgov']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-NC/geo/datancdenropendataarcgiscom.yaml
-Record ID: datancdenropendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data-ncdenr.opendata.arcgis.com', 'record_ids': ['datancdenropendataarcgiscom', 'datancdenropendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/datancdenropendataarcgiscom.yaml
-Record ID: datancdenropendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data-ncdenr.opendata.arcgis.com', 'record_ids': ['datancdenropendataarcgiscom', 'datancdenropendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-AZ/geo/azgeoopendataagichubarcgiscom.yaml
-Record ID: azgeoopendataagichubarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://azgeo-open-data-agic.hub.arcgis.com', 'record_ids': ['azgeoopendataagichubarcgiscom', 'azgeoopendataagichubarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/azgeoopendataagichubarcgiscom.yaml
-Record ID: azgeoopendataagichubarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://azgeo-open-data-agic.hub.arcgis.com', 'record_ids': ['azgeoopendataagichubarcgiscom', 'azgeoopendataagichubarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-CA/geo/cecgiscaenergyopendataarcgiscom.yaml
-Record ID: cecgiscaenergyopendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://cecgis-caenergy.opendata.arcgis.com/', 'record_ids': ['cecgiscaenergyopendataarcgiscom', 'cecgiscaenergyopendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/cecgiscaenergyopendataarcgiscom.yaml
-Record ID: cecgiscaenergyopendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://cecgis-caenergy.opendata.arcgis.com/', 'record_ids': ['cecgiscaenergyopendataarcgiscom', 'cecgiscaenergyopendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-VA/geo/sitesgooglecom.yaml
-Record ID: sitesgooglecom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://sites.google.com/t4w.com.br/cangooroo-doc/deprecated-api/rest/services', 'record_ids': ['sitesgooglecom', 'sitesgooglecom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/sitesgooglecom.yaml
-Record ID: sitesgooglecom
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://sites.google.com/t4w.com.br/cangooroo-doc/deprecated-api/rest/services', 'record_ids': ['sitesgooglecom', 'sitesgooglecom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/csdcimmaporg.yaml
-Record ID: csdcimmaporg
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/csdcimmaporg.yaml
-Record ID: csdcimmaporg
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://csdc.immap.org/', 'record_ids': ['csdcimmaporg', 'csdcimmaporg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/tilesarcgiscom.yaml
-Record ID: tilesarcgiscom
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://tiles.arcgis.com/tiles/TZcrgU6CIbqWt9Qv/arcgis/rest/services', 'record_ids': ['tilesarcgiscom', 'tilesarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/Federal/geo/dataalgeohubopendataarcgiscom.yaml
-Record ID: dataalgeohubopendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data-algeohub.opendata.arcgis.com', 'record_ids': ['dataalgeohubopendataarcgiscom', 'dataalgeohubopendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-AL/geo/dataalgeohubopendataarcgiscom.yaml
-Record ID: dataalgeohubopendataarcgiscom
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data-algeohub.opendata.arcgis.com', 'record_ids': ['dataalgeohubopendataarcgiscom', 'dataalgeohubopendataarcgiscom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-KY/geo/kygeoportalkygov.yaml
-Record ID: kygeoportalkygov
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: US/US-KY/geo/kygisportalserviceskygov.yaml
-Record ID: kygisportalserviceskygov
-Country: US
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://kygisportalservices.ky.gov/server/rest/services', 'record_ids': ['kygeoportalkygov', 'kygisportalserviceskygov']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: MZ/geo/licensesinamigovmzarcgisrestservices.yaml
-Record ID: licensesinamigovmzarcgisrestservices
-Country: MZ
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: MZ/geo/licensesinamigovmz.yaml
-Record ID: licensesinamigovmz
-Country: MZ
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://licenses.inami.gov.mz/arcgis/rest/services', 'record_ids': ['licensesinamigovmzarcgisrestservices', 'licensesinamigovmz']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: DO/geo/ozfeconomiagobdo.yaml
-Record ID: ozfeconomiagobdo
-Country: DO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: DO/Federal/geo/ozfeconomiagobdo.yaml
-Record ID: ozfeconomiagobdo
-Country: DO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://ozf.economia.gob.do/geoserver/web/', 'record_ids': ['ozfeconomiagobdo', 'ozfeconomiagobdo']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: DO/geo/mapageneralmineriagobdo.yaml
-Record ID: mapageneralmineriagobdo
-Country: DO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: DO/Federal/geo/mapageneralmineriagobdo.yaml
-Record ID: mapageneralmineriagobdo
-Country: DO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://mapageneral.mineria.gob.do/arcgis/rest/services', 'record_ids': ['mapageneralmineriagobdo', 'mapageneralmineriagobdo']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: MG/geo/protectedareasmg.yaml
-Record ID: protectedareasmg
-Country: MG
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: MG/geo/artecmg.yaml
-Record ID: artecmg
-Country: MG
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://protectedareas.mg/geoserver', 'record_ids': ['protectedareasmg', 'artecmg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/CO-DC/geo/geoportaljbbgovco.yaml
-Record ID: geoportaljbbgovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://geoportal.jbb.gov.co/agc/rest/services', 'record_ids': ['geoportaljbbgovco', 'geoportaljbbgovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/Federal/geo/geoportaljbbgovco.yaml
-Record ID: geoportaljbbgovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://geoportal.jbb.gov.co/agc/rest/services', 'record_ids': ['geoportaljbbgovco', 'geoportaljbbgovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/CO-DC/geo/wwwsecretariadeambientegovco.yaml
-Record ID: wwwsecretariadeambientegovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://www.secretariadeambiente.gov.co/arcgis/rest/services', 'record_ids': ['wwwsecretariadeambientegovco', 'wwwsecretariadeambientegovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/Federal/geo/wwwsecretariadeambientegovco.yaml
-Record ID: wwwsecretariadeambientegovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://www.secretariadeambiente.gov.co/arcgis/rest/services', 'record_ids': ['wwwsecretariadeambientegovco', 'wwwsecretariadeambientegovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/CO-VAC/geo/wsidesccaligovco.yaml
-Record ID: wsidesccaligovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://ws-idesc.cali.gov.co:8081/geoserver', 'record_ids': ['wsidesccaligovco', 'wsidesccaligovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/Federal/geo/wsidesccaligovco.yaml
-Record ID: wsidesccaligovco
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://ws-idesc.cali.gov.co:8081/geoserver', 'record_ids': ['wsidesccaligovco', 'wsidesccaligovco']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/Federal/opendata/unisimondigitalcommonsdatacom.yaml
-Record ID: unisimondigitalcommonsdatacom
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://unisimon.digitalcommonsdata.com', 'record_ids': ['unisimondigitalcommonsdatacom', 'unisimondigitalcommonsdatacom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CO/Federal/geo/unisimondigitalcommonsdatacom.yaml
-Record ID: unisimondigitalcommonsdatacom
-Country: CO
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://unisimon.digitalcommonsdata.com', 'record_ids': ['unisimondigitalcommonsdatacom', 'unisimondigitalcommonsdatacom']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/IT-42/opendata/daticomunedigenovait.yaml
-Record ID: daticomunedigenovait
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://dati.comune.genova.it', 'record_ids': ['daticomunedigenovait', 'daticomunegenovait']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/IT-42/opendata/daticomunegenovait.yaml
-Record ID: daticomunegenovait
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://dati.comune.genova.it', 'record_ids': ['daticomunedigenovait', 'daticomunegenovait']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/Federal/geo/geoserver4d4scienceorg.yaml
-Record ID: geoserver4d4scienceorg
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver4.d4science.org/geoserver', 'record_ids': ['geoserver4d4scienceorg', 'geoserver4d4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/geoserver4d4scienceorg.yaml
-Record ID: geoserver4d4scienceorg
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver4.d4science.org/geoserver', 'record_ids': ['geoserver4d4scienceorg', 'geoserver4d4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
-Record ID: geoserverprotectedareaimpactmapsd4scienceorg
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-protectedareaimpactmaps.d4science.org/geoserver', 'record_ids': ['geoserverprotectedareaimpactmapsd4scienceorg', 'geoserverprotectedareaimpactmapsd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
-Record ID: geoserverprotectedareaimpactmapsd4scienceorg
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-protectedareaimpactmaps.d4science.org/geoserver', 'record_ids': ['geoserverprotectedareaimpactmapsd4scienceorg', 'geoserverprotectedareaimpactmapsd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/Federal/geo/geoserversdilabd4scienceorg.yaml
-Record ID: geoserversdilabd4scienceorg
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/geoserversdilabd4scienceorg.yaml
-Record ID: geoserversdilabd4scienceorg
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver-sdi-lab.d4science.org/geoserver', 'record_ids': ['geoserversdilabd4scienceorg', 'geoserversdilabd4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: IT/Federal/geo/geoserver2d4scienceorg.yaml
-Record ID: geoserver2d4scienceorg
-Country: IT
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver2.d4science.org/geoserver', 'record_ids': ['geoserver2d4scienceorg', 'geoserver2d4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: World/Federal/geo/geoserver2d4scienceorg.yaml
-Record ID: geoserver2d4scienceorg
-Country: World
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'http://geoserver2.d4science.org/geoserver', 'record_ids': ['geoserver2d4scienceorg', 'geoserver2d4scienceorg']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CA/CA-BC/scientific/erddapdatacioospacificca.yaml
-Record ID: erddapdatacioospacificca
-Country: CA
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-File: CA/Federal/scientific/datacioospacificca.yaml
-Record ID: datacioospacificca
-Country: CA
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://data.cioospacific.ca/erddap/index.html', 'record_ids': ['erddapdatacioospacificca', 'datacioospacificca']}
-Suggested Action: Multiple records share the same portal link; review them and deduplicate or clarify distinct roles.
-
-... and 61 more records with this issue
-
-[MISSING_API_STATUS]
-Count: 17
-Priority: IMPORTANT
-
-File: US/Federal/scientific/discoverpennsieveio.yaml
-Record ID: discoverpennsieveio
-Country: US
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: US/Federal/scientific/eclearthchemorg.yaml
-Record ID: eclearthchemorg
-Country: US
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: US/Federal/scientific/adaastromatorg.yaml
-Record ID: adaastromatorg
-Country: US
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: US/Federal/scientific/repoastromatorg.yaml
-Record ID: repoastromatorg
-Country: US
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
-Record ID: prcdigitalwalloniabe
-Country: BE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: CI/opendata/gouvcikoumoulcom.yaml
-Record ID: gouvcikoumoulcom
-Country: CI
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: CZ/Federal/geo/egdigeologycz.yaml
-Record ID: egdigeologycz
-Country: CZ
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: World/scientific/bionomianetdatasets.yaml
-Record ID: bionomianetdatasets
-Country: World
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: NL/Federal/scientific/npdcnl.yaml
-Record ID: npdcnl
-Country: NL
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: DE/Federal/scientific/rdpcidatruhrunibochumde.yaml
-Record ID: rdpcidatruhrunibochumde
-Country: DE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: DE/Federal/scientific/dataopenpowersystemdataorg.yaml
-Record ID: dataopenpowersystemdataorg
-Country: DE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: DE/Federal/scientific/animafzjuelichde.yaml
-Record ID: animafzjuelichde
-Country: DE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: DE/Federal/scientific/dataisimiporg.yaml
-Record ID: dataisimiporg
-Country: DE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: FR/Federal/scientific/catalogeldaorg.yaml
-Record ID: catalogeldaorg
-Country: FR
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: JP/Federal/scientific/dataportalbrainmindsjp.yaml
-Record ID: dataportalbrainmindsjp
-Country: JP
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: JP/Federal/scientific/dbarchivebiosciencedbcjp.yaml
-Record ID: dbarchivebiosciencedbcjp
-Country: JP
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-File: EU/Federal/geo/gnssmetadataeu.yaml
-Record ID: gnssmetadataeu
-Country: BE
-Issue: MISSING_API_STATUS
-Field: api_status
-Current Value: None
-Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
-
-[MISSING_CONTENT_TYPES]
-Count: 2
-Priority: MEDIUM
-
-File: CZ/Federal/geo/egdigeologycz.yaml
-Record ID: egdigeologycz
-Country: CZ
-Issue: MISSING_CONTENT_TYPES
-Field: content_types
-Current Value: []
-Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
-
-File: EU/Federal/geo/gnssmetadataeu.yaml
-Record ID: gnssmetadataeu
-Country: BE
-Issue: MISSING_CONTENT_TYPES
-Field: content_types
-Current Value: []
-Suggested Action: Add content_types (e.g., ['dataset', 'map_layer'])
-
-[MISSING_ENDPOINTS]
-Count: 8
-Priority: MEDIUM
-
-File: SI/geo/collectionssentinelhubcom.yaml
-Record ID: collectionssentinelhubcom
-Country: SI
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: GB/Federal/scientific/betaukdataserviceacuk.yaml
-Record ID: betaukdataserviceacuk
-Country: GB
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/opendata/adsatmospherecopernicuseu.yaml
-Record ID: adsatmospherecopernicuseu
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/opendata/ewdsclimatecopernicuseu.yaml
-Record ID: ewdsclimatecopernicuseu
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/scientific/fungiensemblorg.yaml
-Record ID: fungiensemblorg
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/scientific/protistsensemblorg.yaml
-Record ID: protistsensemblorg
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/scientific/metazoaensemblorg.yaml
-Record ID: metazoaensemblorg
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EU/Federal/scientific/egaarchiveorg.yaml
-Record ID: egaarchiveorg
-Country: EU
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_TAGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS]
 Count: 1
-Priority: LOW
-
-File: PT/geo/geoserverevolutiopt.yaml
-Record ID: geoserverevolutiopt
-Country: PT
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: CI/opendata/gouvcikoumoulcom.yaml
-Record ID: gouvcikoumoulcom
-Country: CI
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: GB/Federal/opendata/electricitynorthwestopendatasoftcom.yaml
-Record ID: electricitynorthwestopendatasoftcom
-Country: GB
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: AR/AR-M/opendata/datoslujandecuyogobar.yaml
-Record ID: datoslujandecuyogobar
-Country: AR
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: TH/Federal/opendata/opendatacifsgoth.yaml
-Record ID: opendatacifsgoth
-Country: TH
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[PLACEHOLDER_OWNER_NAME]
-Count: 61
-Priority: MEDIUM
-
-File: SK/Federal/geo/ismcscdbsk.yaml
-Record ID: ismcscdbsk
-Country: SK
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: SE/Federal/geo/ivometriase.yaml
-Record ID: ivometriase
-Country: SE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: PL/Federal/geo/gisopenforestdatapl.yaml
-Record ID: gisopenforestdatapl
-Country: PL
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not Specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: PL/Federal/geo/daneakoportalpl.yaml
-Record ID: daneakoportalpl
-Country: PL
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: unknown
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: PL/Federal/geo/mapaabakusnetpl.yaml
-Record ID: mapaabakusnetpl
-Country: PL
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: US/Federal/geo/rgvfloodcom.yaml
-Record ID: rgvfloodcom
-Country: US
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: US/Federal/geo/insideidahoorg.yaml
-Record ID: insideidahoorg
-Country: US
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: US/Federal/geo/ienccloudus.yaml
-Record ID: ienccloudus
-Country: US
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: US/US-MO/opendata/rdxstldataorg.yaml
-Record ID: rdxstldataorg
-Country: US
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: N/A
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BD/Federal/geo/2024179152.yaml
-Record ID: 2024179152
-Country: BD
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not Specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: CN/Federal/geo/2186120106.yaml
-Record ID: 2186120106
-Country: CN
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: IT/IT-77/geo/wgmaterapaesitit.yaml
-Record ID: wgmaterapaesitit
-Country: IT
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: IT/Federal/opendata/lodaciit.yaml
-Record ID: lodaciit
-Country: IT
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: unknown
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: IT/Federal/geo/stagingwebgisadbpoit.yaml
-Record ID: stagingwebgisadbpoit
-Country: IT
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
-Record ID: barchettaadumanitobaca
-Country: CA
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: CA/Federal/geo/nsgiwanovascotiaca.yaml
-Record ID: nsgiwanovascotiaca
-Country: CA
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: CA/Federal/geo/arcgiscreegeoportalca.yaml
-Record ID: arcgiscreegeoportalca
-Country: CA
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: RU/RU-NIZ/geo/3dgorodru.yaml
-Record ID: 3dgorodru
-Country: RU
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: RU/RU-NIZ/geo/epidatlasnniiemru.yaml
-Record ID: epidatlasnniiemru
-Country: RU
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/search/hubarcgiscom.yaml
-Record ID: hubarcgiscom
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not available
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/opendata/demodatashadescom.yaml
-Record ID: demodatashadescom
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/opendata/conaviopendatajunarcom.yaml
-Record ID: conaviopendatajunarcom
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/opendata/inondationsdakarorg.yaml
-Record ID: inondationsdakarorg
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/geo/servicesgeospatialorg.yaml
-Record ID: servicesgeospatialorg
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/geo/mapsoraotcaorg.yaml
-Record ID: mapsoraotcaorg
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: unknown
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/geo/wwwafricabeescom.yaml
-Record ID: wwwafricabeescom
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: World/Federal/geo/103105195227.yaml
-Record ID: 103105195227
-Country: World
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: RS/Federal/geo/gisportalrs.yaml
-Record ID: gisportalrs
-Country: RS
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BO/Federal/geo/geodataooppgobbo.yaml
-Record ID: geodataooppgobbo
-Country: BO
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: GB/Federal/geo/moragisprd01cossunderlandlocal.yaml
-Record ID: moragisprd01cossunderlandlocal
-Country: GB
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/opendata/micamdcberlinde.yaml
-Record ID: micamdcberlinde
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/opendata/einloesenmilesmediende.yaml
-Record ID: einloesenmilesmediende
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/geo/rudolstadtgajamatrixde.yaml
-Record ID: rudolstadtgajamatrixde
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/geo/gdigeonetworkprodseblede.yaml
-Record ID: gdigeonetworkprodseblede
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not available
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/geo/geoservergretasmapde.yaml
-Record ID: geoservergretasmapde
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/geo/umapdmhode.yaml
-Record ID: umapdmhode
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DE/Federal/geo/gisflide.yaml
-Record ID: gisflide
-Country: DE
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DK/Federal/geo/geoserversurfacewatermiljoeportaldk.yaml
-Record ID: geoserversurfacewatermiljoeportaldk
-Country: DK
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DK/Federal/geo/wwwsatlasdk.yaml
-Record ID: wwwsatlasdk
-Country: DK
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: DK/Federal/geo/jordbrugsanalyserdk.yaml
-Record ID: jordbrugsanalyserdk
-Country: DK
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BR/Federal/opendata/19314442171.yaml
-Record ID: 19314442171
-Country: BR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not available
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BR/Federal/opendata/dadosjuventudeibictbr.yaml
-Record ID: dadosjuventudeibictbr
-Country: BR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not available
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BR/Federal/geo/obahiadeaufvbr.yaml
-Record ID: obahiadeaufvbr
-Country: BR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: BR/Federal/geo/webradioaguaorgbr.yaml
-Record ID: webradioaguaorgbr
-Country: BR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: ID/ID-JI/opendata/opendatasurabayagoid.yaml
-Record ID: opendatasurabayagoid
-Country: ID
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: ID/ID-JI/geo/situbondokabinasdiorid.yaml
-Record ID: situbondokabinasdiorid
-Country: ID
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: ID/Federal/geo/sidrapkabinasdiorid.yaml
-Record ID: sidrapkabinasdiorid
-Country: ID
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: FR/Federal/geo/geocreilsudoisefr.yaml
-Record ID: geocreilsudoisefr
-Country: FR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: FR/Federal/geo/wwwtigeofr.yaml
-Record ID: wwwtigeofr
-Country: FR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-File: FR/Federal/geo/alsacewebsolfr.yaml
-Record ID: alsacewebsolfr
-Country: FR
-Issue: PLACEHOLDER_OWNER_NAME
-Field: owner.name
-Current Value: Not specified
-Suggested Action: Replace placeholder owner name with a real organization name
-
-... and 11 more records with this issue
-
-[PLACEHOLDER_TITLE]
-Count: 3597
-Priority: MEDIUM
-
-File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
-Record ID: wwwgeoportalksksk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: www.geoportalksk.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/SK-KI/geo/wwwgeoportalksksk.yaml
-Record ID: wwwgeoportalksksk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: www.geoportalksk.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/gisfnsunibask.yaml
-Record ID: gisfnsunibask
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.fns.uniba.sk/geoserver/web/
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/gisfnsunibask.yaml
-Record ID: gisfnsunibask
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.fns.uniba.sk/geoserver/web/
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/sluzbyvuvhsk.yaml
-Record ID: sluzbyvuvhsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: sluzby.vuvh.sk/arcgis/rest/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/sluzbyvuvhsk.yaml
-Record ID: sluzbyvuvhsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: sluzby.vuvh.sk/arcgis/rest/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/mapssurveyesk.yaml
-Record ID: mapssurveyesk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: maps.surveye.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/mapssurveyesk.yaml
-Record ID: mapssurveyesk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: maps.surveye.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/inspireskgeodesysk.yaml
-Record ID: inspireskgeodesysk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: inspire.skgeodesy.sk/eskn/rest/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/inspireskgeodesysk.yaml
-Record ID: inspireskgeodesysk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: inspire.skgeodesy.sk/eskn/rest/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/ismcscdbsk.yaml
-Record ID: ismcscdbsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: ismcs.cdb.sk/inspire/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/ismcscdbsk.yaml
-Record ID: ismcscdbsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: ismcs.cdb.sk/inspire/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/mapsgeopsazpsk.yaml
-Record ID: mapsgeopsazpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: maps.geop.sazp.sk:80/geoserver
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/mapsgeopsazpsk.yaml
-Record ID: mapsgeopsazpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: maps.geop.sazp.sk:80/geoserver
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/mptsvpsk.yaml
-Record ID: mptsvpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: mpt.svp.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/mptsvpsk.yaml
-Record ID: mptsvpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: mpt.svp.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/gisgeozsrsk.yaml
-Record ID: gisgeozsrsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisgeo.zsr.sk/geoserver
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/gisgeozsrsk.yaml
-Record ID: gisgeozsrsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gisgeo.zsr.sk/geoserver
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/tilesgeopsazpsk.yaml
-Record ID: tilesgeopsazpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: tiles.geop.sazp.sk/themes
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/tilesgeopsazpsk.yaml
-Record ID: tilesgeopsazpsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: tiles.geop.sazp.sk/themes
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/inspirebiomonitoringsk.yaml
-Record ID: inspirebiomonitoringsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: inspire.biomonitoring.sk/geoserver
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/inspirebiomonitoringsk.yaml
-Record ID: inspirebiomonitoringsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: inspire.biomonitoring.sk/geoserver
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/tilesgeocloudsk.yaml
-Record ID: tilesgeocloudsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: tiles.geocloud.sk/mapproxy
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/tilesgeocloudsk.yaml
-Record ID: tilesgeocloudsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: tiles.geocloud.sk/mapproxy
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/geoshmusk.yaml
-Record ID: geoshmusk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geo.shmu.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/geoshmusk.yaml
-Record ID: geoshmusk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geo.shmu.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/wwwgisatapexsk.yaml
-Record ID: wwwgisatapexsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: www.gis.atapex.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/wwwgisatapexsk.yaml
-Record ID: wwwgisatapexsk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: www.gis.atapex.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
-Record ID: ccibispriestoroveplanovaniesk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: ccibis.priestoroveplanovanie.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/Federal/geo/ccibispriestoroveplanovaniesk.yaml
-Record ID: ccibispriestoroveplanovaniesk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: ccibis.priestoroveplanovanie.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/SK-BL/geo/geoportalbratislavask.yaml
-Record ID: geoportalbratislavask
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.bratislava.sk
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/SK-BL/geo/geoportalbratislavask.yaml
-Record ID: geoportalbratislavask
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.bratislava.sk
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SK/SK-BC/geo/gisregionbsksk.yaml
-Record ID: gisregionbsksk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.region-bsk.sk/server/rest/services
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SK/SK-BC/geo/gisregionbsksk.yaml
-Record ID: gisregionbsksk
-Country: SK
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: gis.region-bsk.sk/server/rest/services
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SB/Federal/geo/geoserverapiaspreporg.yaml
-Record ID: geoserverapiaspreporg
-Country: SB
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoserver-apia.sprep.org/geoserver
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SB/Federal/geo/geoserverapiaspreporg.yaml
-Record ID: geoserverapiaspreporg
-Country: SB
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoserver-apia.sprep.org/geoserver
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/SE-H/geo/kartakalmarse.yaml
-Record ID: kartakalmarse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: karta.kalmar.se
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/SE-H/geo/kartakalmarse.yaml
-Record ID: kartakalmarse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: karta.kalmar.se
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/opendata/datakbse.yaml
-Record ID: datakbse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: data.kb.se
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/opendata/datakbse.yaml
-Record ID: datakbse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: data.kb.se
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
-Record ID: geoportalarcticsdiorg
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.arctic-sdi.org
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/opendata/geoportalarcticsdiorg.yaml
-Record ID: geoportalarcticsdiorg
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: geoportal.arctic-sdi.org
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/opendata/neardbnearagingse.yaml
-Record ID: neardbnearagingse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: neardb.near-aging.se
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/opendata/neardbnearagingse.yaml
-Record ID: neardbnearagingse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: neardb.near-aging.se
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/opendata/trafficdatase.yaml
-Record ID: trafficdatase
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: trafficdata.se
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/opendata/trafficdatase.yaml
-Record ID: trafficdatase
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: trafficdata.se
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
-Record ID: stationsregistermiljodatasamverkanse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/geo/stationsregistermiljodatasamverkanse.yaml
-Record ID: stationsregistermiljodatasamverkanse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: stationsregister.miljodatasamverkan.se/geoserver/web/
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-File: SE/Federal/geo/epubsjvse.yaml
-Record ID: epubsjvse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: epub.sjv.se
-Suggested Action: Use a human-readable portal title instead of a URL/domain string.
-
-File: SE/Federal/geo/epubsjvse.yaml
-Record ID: epubsjvse
-Country: SE
-Issue: PLACEHOLDER_TITLE
-Field: name
-Current Value: epub.sjv.se
-Suggested Action: Replace domain/path-based title with a descriptive portal name.
-
-... and 3547 more records with this issue
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING]
-Count: 801
 Priority: IMPORTANT
 
-File: SK/Federal/geo/sscrivupopsk.yaml
-Record ID: sscrivupopsk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: RU/RU-TA/geo/mapkznru.yaml
+Record ID: mapkznru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
+Count: 4
+Priority: IMPORTANT
+
+File: BE/BE-VLG/scientific/naturdatainbobecollectorydatasets.yaml
+Record ID: naturdatainbobecollectorydatasets
+Country: BE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: PT/Federal/scientific/collectionsgbifpt.yaml
+Record ID: collectionsgbifpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: AU/Federal/scientific/seedbankalaorgau.yaml
+Record ID: seedbankalaorgau
+Country: AU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+File: HR/Federal/scientific/collectionsbioatlasbioportalhr.yaml
+Record ID: collectionsbioatlasbioportalhr
+Country: HR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
+Count: 20
+Priority: IMPORTANT
+
+File: CN/CN-NX/geo/wwwszjdzgovcn.yaml
+Record ID: wwwszjdzgovcn
+Country: CN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/mapssurveyesk.yaml
-Record ID: mapssurveyesk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: SK/Federal/geo/inspireskgeodesysk.yaml
-Record ID: inspireskgeodesysk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: CN/Federal/geo/tilesvccindatacn.yaml
+Record ID: tilesvccindatacn
+Country: CN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/nipisazpsk.yaml
-Record ID: nipisazpsk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: LV/Federal/geo/proxygdsvissgovlv.yaml
+Record ID: proxygdsvissgovlv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/ismcscdbsk.yaml
-Record ID: ismcscdbsk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: RU/RU-NVS/geo/mapsnsoru.yaml
+Record ID: mapsnsoru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SK/Federal/geo/gisgeozsrsk.yaml
-Record ID: gisgeozsrsk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: SK/Federal/geo/katasterskgeodesysk.yaml
-Record ID: katasterskgeodesysk
-Country: SK
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: RU/RU-NIZ/geo/gisogdnoru.yaml
+Record ID: gisogdnoru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: SB/geo/solomonspopgisspcint.yaml
-Record ID: solomonspopgisspcint
-Country: Oceania
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
-
-File: SE/SE-S/indicators/pxwebkarlstadse.yaml
-Record ID: pxwebkarlstadse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SE/SE-AC/indicators/pxwebumease.yaml
-Record ID: pxwebumease
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SE/Federal/indicators/pxsocialstyrelsense.yaml
-Record ID: pxsocialstyrelsense
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SE/Federal/indicators/pxwebdemoscbse.yaml
-Record ID: pxwebdemoscbse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SE/Federal/indicators/statistikjordbruksverketse.yaml
-Record ID: statistikjordbruksverketse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
-
-File: SE/Federal/opendata/neardbnearagingse.yaml
-Record ID: neardbnearagingse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
-
-File: SE/Federal/geo/geodatatorgetse.yaml
-Record ID: geodatatorgetse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
-
-File: SE/Federal/geo/metadatakatalogennaturvardsverketse.yaml
-Record ID: metadatakatalogennaturvardsverketse
-Country: SE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
-
-File: ZM/geo/wwwnsdimlnrepgovzm.yaml
-Record ID: wwwnsdimlnrepgovzm
-Country: ZM
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/Federal/geo/deafricageocloudcom.yaml
+Record ID: deafricageocloudcom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: UG/Federal/opendata/opendatademossprojorg.yaml
-Record ID: opendatademossprojorg
-Country: UG
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/Federal/geo/portalairbusdsgeocom.yaml
+Record ID: portalairbusdsgeocom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: TW/Federal/geo/mapelandgovtw.yaml
+Record ID: mapelandgovtw
+Country: TW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: TW/TW-KIN/geo/mapcloudkinmengovtw.yaml
+Record ID: mapcloudkinmengovtw
+Country: TW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: RS/Federal/geo/gismregovrs.yaml
+Record ID: gismregovrs
+Country: RS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: RO/Federal/geo/gisroriskro.yaml
+Record ID: gisroriskro
+Country: RO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: RO/Federal/geo/portalgeomilro.yaml
+Record ID: portalgeomilro
+Country: RO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: UY/Federal/geo/siganepeduuy.yaml
+Record ID: siganepeduuy
+Country: UY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: MY/Federal/geo/geoportalalamimy.yaml
+Record ID: geoportalalamimy
+Country: MY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: NL/NL-ZH/geo/geoportaalzoetermeernl.yaml
+Record ID: geoportaalzoetermeernl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: NL/NL-ZH/geo/giszoetermeernl.yaml
+Record ID: giszoetermeernl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: NL/NL-OV/geo/wwwijssellandearthnl.yaml
+Record ID: wwwijssellandearthnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/geoservicepblnl.yaml
+Record ID: geoservicepblnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: KZ/Federal/geo/aisgzkkz.yaml
+Record ID: aisgzkkz
+Country: KZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+File: EU/Federal/geo/geocoderesribeluxeu.yaml
+Record ID: geocoderesribeluxeu
+Country: BE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
+Field: endpoints
+Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR]
+Count: 1
+Priority: IMPORTANT
+
+File: World/Federal/metadata/potentialxaristotlecloudio.yaml
+Record ID: potentialxaristotlecloudio
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR
+Field: endpoints
+Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 22
+Priority: IMPORTANT
+
+File: US/Federal/opendata/oneclickcartodbcom.yaml
+Record ID: oneclickcartodbcom
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: UG/Federal/geo/19012973205.yaml
-Record ID: 19012973205
-Country: UG
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: VN/Federal/opendata/dulieumoorg.yaml
+Record ID: dulieumoorg
+Country: VN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: UG/Federal/geo/4625521167.yaml
-Record ID: 4625521167
-Country: UG
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: KE/Federal/opendata/datailriorg.yaml
+Record ID: datailriorg
+Country: KE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: UG/Federal/geo/geocatsemidenet.yaml
-Record ID: geocatsemidenet
-Country: UG
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: GR/GR-A/opendata/datakavalagovgr.yaml
+Record ID: datakavalagovgr
+Country: GR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: UG/Federal/geo/1722692140.yaml
-Record ID: 1722692140
-Country: UG
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: IN/IN-WB/opendata/awsisakvotestorg.yaml
+Record ID: awsisakvotestorg
+Country: IN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/PL-02/geo/geoportaldolnyslaskpl.yaml
-Record ID: geoportaldolnyslaskpl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: IT/Federal/opendata/clhckanappsfaoorg.yaml
+Record ID: clhckanappsfaoorg
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/serwiswrosippl.yaml
-Record ID: serwiswrosippl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/Federal/opendata/apidataappsfaoorg.yaml
+Record ID: apidataappsfaoorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'smartfindersdi', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='smartfindersdi' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/mapygisumradompl.yaml
-Record ID: mapygisumradompl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/Federal/opendata/stominisorg.yaml
+Record ID: stominisorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/rapprepozytoriumapp.yaml
-Record ID: rapprepozytoriumapp
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: AR/Federal/opendata/mcconsejomagistraturagobar.yaml
+Record ID: mcconsejomagistraturagobar
+Country: AR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/wms2geopozpoznanpl.yaml
-Record ID: wms2geopozpoznanpl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: MX/MX-ROO/opendata/datosqroogobmx.yaml
+Record ID: datosqroogobmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/geostatgovpl.yaml
-Record ID: geostatgovpl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: MX/Federal/opendata/www2imssgobmx.yaml
+Record ID: www2imssgobmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/geo/usipeswietokrzyskiepl.yaml
-Record ID: usipeswietokrzyskiepl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: MX/MX-YUC/opendata/datoscicymx.yaml
+Record ID: datoscicymx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/scientific/fgbggbnlbglasygovpl.yaml
-Record ID: fgbggbnlbglasygovpl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: BR/Federal/opendata/geoinfodadosembrapabr.yaml
+Record ID: geoinfodadosembrapabr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/Federal/scientific/iptherbariumpomeranicumpl.yaml
-Record ID: iptherbariumpomeranicumpl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: ID/ID-SU/opendata/sdiniasutarakabgoid.yaml
+Record ID: sdiniasutarakabgoid
+Country: ID
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/PL-24/geo/situmtychypl.yaml
-Record ID: situmtychypl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: FR/FR-PAC/opendata/opendatanicecotedazurorg.yaml
+Record ID: opendatanicecotedazurorg
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: PL/PL-14/opendata/wwweuslugimazowieckiepl.yaml
-Record ID: wwweuslugimazowieckiepl
-Country: PL
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: CC/Federal/opendata/mindsetccgeoinfo.yaml
+Record ID: mindsetccgeoinfo
+Country: CC
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-AN/opendata/moguerckaninnovasurcom.yaml
+Record ID: moguerckaninnovasurcom
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-AN/opendata/algecirasopendataenmapacom.yaml
+Record ID: algecirasopendataenmapacom
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-MC/opendata/ckancampuslivinglabinfumes.yaml
+Record ID: ckancampuslivinglabinfumes
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-MD/opendata/datosabiertosaytoboadillaorg.yaml
+Record ID: datosabiertosaytoboadillaorg
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: ES/ES-VC/opendata/datosabiertosaguasdealicantepreapslio.yaml
+Record ID: datosabiertosaguasdealicantepreapslio
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: Unknown/Other/opendata/genderopendataorg.yaml
+Record ID: genderopendataorg
+Country: KE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG]
+Count: 1
+Priority: IMPORTANT
+
+File: World/indicators/datauniceforg.yaml
+Record ID: datauniceforg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG
+Field: endpoints
+Current Value: {'software_id': 'datauniceforg', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datauniceforg' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
+Count: 1
+Priority: IMPORTANT
+
+File: PH/Federal/opendata/opendatasaraiph.yaml
+Record ID: opendatasaraiph
+Country: PH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
 Field: endpoints
 Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
-File: VU/geo/vanuatupopgisspcint.yaml
-Record ID: vanuatupopgisspcint
-Country: Oceania
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS]
+Count: 1
+Priority: IMPORTANT
 
-File: PE/PE-CAJ/geo/metadatosregioncajamarcagobpe.yaml
-Record ID: metadatosregioncajamarcagobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: RU/RU-NVS/geo/mapnovosibirskru.yaml
+Record ID: mapnovosibirskru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS
 Field: endpoints
-Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+Current Value: {'software_id': 'elitegis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='elitegis' is marked as API-capable in software definitions
 
-File: PE/PE-LIM/geo/geoservermirafloresgobpe.yaml
-Record ID: geoservermirafloresgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE]
+Count: 1
+Priority: IMPORTANT
+
+File: NL/Federal/scientific/uufigsharecom.yaml
+Record ID: uufigsharecom
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE
 Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'figshare', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='figshare' is marked as API-capable in software definitions
 
-File: PE/PE-LIM/geo/geoanagobpe.yaml
-Record ID: geoanagobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY]
+Count: 3
+Priority: IMPORTANT
+
+File: World/metadata/registrysdmxorg.yaml
+Record ID: registrysdmxorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
 Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
 
-File: PE/Federal/opendata/datosabiertospjeastuscloudappazurecom.yaml
-Record ID: datosabiertospjeastuscloudappazurecom
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/metadata/sdmxdatauniceforg.yaml
+Record ID: sdmxdatauniceforg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
 Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
 
-File: PE/Federal/opendata/datosinsgobpe.yaml
-Record ID: datosinsgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: World/metadata/sdmxcentralimforg.yaml
+Record ID: sdmxcentralimforg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
 Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
 
-File: PE/Federal/geo/estadoconservacionsernanpgobpe.yaml
-Record ID: estadoconservacionsernanpgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
+Count: 10
+Priority: IMPORTANT
 
-File: PE/Federal/geo/mtcgeo2mtcgobpe.yaml
-Record ID: mtcgeo2mtcgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: PE/Federal/geo/geosernanpgobpe.yaml
-Record ID: geosernanpgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: PE/Federal/scientific/iptminamgobpe.yaml
-Record ID: iptminamgobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
-
-File: PE/PE-HUC/geo/iderregionhuanucogobpe.yaml
-Record ID: iderregionhuanucogobpe
-Country: PE
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: US/US-OH/geo/wwwclevelandgisorg.yaml
-Record ID: wwwclevelandgisorg
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: US/US-WI/opendata/wgnhswiscedu.yaml
-Record ID: wgnhswiscedu
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
-
-File: US/Other/other/datausaio.yaml
-Record ID: datausaiio
-Country: CH
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'datawheel', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='datawheel' is marked as API-capable in software definitions
-
-File: US/Other/geo/collectionsleventhalmaporg.yaml
-Record ID: collectionsleventhalmaporg
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'geoblacklight', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoblacklight' is marked as API-capable in software definitions
-
-File: US/Other/scientific/scholarworksiuedu.yaml
-Record ID: scholarworksiuedu
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
-Field: endpoints
-Current Value: {'software_id': 'dspace', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
-
-File: US/Other/scientific/usegalaxyorg.yaml
-Record ID: usegalaxyorg
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING
+File: SE/Federal/scientific/usegalaxyse.yaml
+Record ID: usegalaxyse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
 Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-... and 751 more records with this issue
+File: PL/Federal/scientific/usegalaxypl.yaml
+Record ID: usegalaxypl
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
-[SOFTWARE_NAME_MISMATCH]
+File: US/Federal/scientific/usegalaxyiuedu.yaml
+Record ID: usegalaxyiuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: BE/Federal/scientific/usegalaxyvibbe.yaml
+Record ID: usegalaxyvibbe
+Country: BE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: NO/Federal/scientific/usegalaxyno.yaml
+Record ID: usegalaxyno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: IT/Federal/scientific/usegalaxyit.yaml
+Record ID: usegalaxyit
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: NL/Federal/scientific/usegalaxynl.yaml
+Record ID: usegalaxynl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/usegalaxyde.yaml
+Record ID: usegalaxyde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: DK/Federal/scientific/usegalaxydk.yaml
+Record ID: usegalaxydk
+Country: DK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+File: FR/Federal/scientific/usegalaxypasteurfr.yaml
+Record ID: usegalaxypasteurfr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+Field: endpoints
+Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
+Count: 9
+Priority: IMPORTANT
+
+File: UG/Federal/geo/geocatsemidenet.yaml
+Record ID: geocatsemidenet
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: GR/Federal/geo/gne-pyrrosgrgeonetwork.yaml
+Record ID: gne-pyrrosgrgeonetwork
+Country: GR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/tcodetinroru.yaml
+Record ID: tcodetinroru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: World/Federal/geo/geoserverisciencescom.yaml
+Record ID: geoserverisciencescom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: World/Federal/geo/geossregistriesinfo.yaml
+Record ID: geossregistriesinfo
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: SI/geo/prostor4govsi.yaml
+Record ID: prostor4govsi
+Country: SI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: AR/AR-B/geo/idefchuniceneduar.yaml
+Record ID: idefchuniceneduar
+Country: AR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: NL/NL-ZH/geo/geonetworkbij12nl.yaml
+Record ID: geonetworkbij12nl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+File: BG/Federal/geo/inspirecustomersmapexbg.yaml
+Record ID: inspirecustomersmapexbg
+Country: BG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
+Field: endpoints
+Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE]
+Count: 10
+Priority: IMPORTANT
+
+File: VN/VN-SG/geo/opendatahcmgisvn.yaml
+Record ID: opendatahcmgisvn
+Country: VN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: PY/Federal/geo/geohidroinformaticaitaipugovpy.yaml
+Record ID: geohidroinformaticaitaipugovpy
+Country: PY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: NI/Federal/geo/geonodoinetergobni.yaml
+Record ID: geonodoinetergobni
+Country: NI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: IT/IT-34/geo/cataloggeourbait.yaml
+Record ID: cataloggeourbait
+Country: IT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: World/Federal/geo/girasxyz.yaml
+Record ID: girasxyz
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: World/Federal/geo/maspawionet.yaml
+Record ID: maspawionet
+Country: KE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: RO/Federal/geo/geoportalplanifi7caremaritimaunibucro.yaml
+Record ID: geoportalplanifi7caremaritimaunibucro
+Country: RO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: BO/Federal/geo/geoportalaltperuboliviaorg.yaml
+Record ID: geoportalaltperuboliviaorg
+Country: BO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: BO/Federal/geo/geoconcursogeogobbo.yaml
+Record ID: geoconcursogeogobbo
+Country: BO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/bebasicgrstudelftnl.yaml
+Record ID: bebasicgrstudelftnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
+Field: endpoints
+Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
+Count: 51
+Priority: IMPORTANT
+
+File: UG/Federal/geo/19012973205.yaml
+Record ID: 19012973205
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: UG/Federal/geo/4625521167.yaml
+Record ID: 4625521167
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: UG/Federal/geo/1722692140.yaml
+Record ID: 1722692140
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PL/Federal/geo/kartozacom.yaml
+Record ID: kartozacom
+Country: PL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: VN/VN-SG/geo/opendatahcmgisvngeoserver.yaml
+Record ID: opendatahcmgisvngeoserver
+Country: VN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: VN/Federal/geo/wwwgiscloudvngeoserver.yaml
+Record ID: wwwgiscloudvngeoserver
+Country: VN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NG/Federal/geo/gisaieehealthafricaorg.yaml
+Record ID: gisaieehealthafricaorg
+Country: NG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NG/Federal/geo/geoservergridnigeriaorg.yaml
+Record ID: geoservergridnigeriaorg
+Country: NG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NI/Federal/geo/mapserverprivadoinetergobni.yaml
+Record ID: mapserverprivadoinetergobni
+Country: NI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: KE/Federal/geo/mapsvirtualkenyaorg.yaml
+Record ID: mapsvirtualkenyaorg
+Country: KE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NO/Federal/geo/mapsimrno.yaml
+Record ID: mapsimrno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: BD/Federal/geo/2024179152.yaml
+Record ID: 2024179152
+Country: BD
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: LV/Federal/geo/ismantojumslv.yaml
+Record ID: ismantojumslv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: LV/Federal/geo/imswebvvdgovlv.yaml
+Record ID: imswebvvdgovlv
+Country: LV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: LB/Federal/geo/spimsmoegovlb.yaml
+Record ID: spimsmoegovlb
+Country: LB
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: RU/RU-VLG/geo/geoservergeogov35ru.yaml
+Record ID: geoservergeogov35ru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/geo/probavmepesaint.yaml
+Record ID: probavmepesaint
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/21221923379.yaml
+Record ID: 21221923379
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/helpopenstreetmaporg.yaml
+Record ID: helpopenstreetmaporg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/geo4vicmetrianu.yaml
+Record ID: geo4vicmetrianu
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/104155211193.yaml
+Record ID: 104155211193
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/geoservercawgcaporg.yaml
+Record ID: geoservercawgcaporg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/109238224174.yaml
+Record ID: 109238224174
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/avstdocom.yaml
+Record ID: avstdocom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/Federal/geo/202154182164.yaml
+Record ID: 202154182164
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: TW/TW-TNN/geo/tchgistainangovtw.yaml
+Record ID: tchgistainangovtw
+Country: TW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PT/PT-30/geo/igdremmadeiragovpt.yaml
+Record ID: igdremmadeiragovpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: PT/Federal/geo/prototipocatalogoipmapt.yaml
+Record ID: prototipocatalogoipmapt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: KR/Federal/geo/geoxdworldkr.yaml
+Record ID: geoxdworldkr
+Country: KR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-FR/geo/geosudwestfryslannl.yaml
+Record ID: geosudwestfryslannl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-NB/geo/geolabhasnl.yaml
+Record ID: geolabhasnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-FL/geo/geo2flevolandnl.yaml
+Record ID: geo2flevolandnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/fastopenearthnl.yaml
+Record ID: fastopenearthnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/mepduinenopenearthnl.yaml
+Record ID: mepduinenopenearthnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/altc004xtrdeltaresnl.yaml
+Record ID: altc004xtrdeltaresnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/geodatarivmnl.yaml
+Record ID: geodatarivmnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/langsdammenopenearthnl.yaml
+Record ID: langsdammenopenearthnl
+Country: UG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/nedglobefeedbacknedgraphicscsnl.yaml
+Record ID: nedglobefeedbacknedgraphicscsnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/marineprojectopenearthnl.yaml
+Record ID: marineprojectopenearthnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/modeldatanhidatadeltaresnl.yaml
+Record ID: modeldatanhidatadeltaresnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/Federal/geo/wwwwioninspirenl.yaml
+Record ID: wwwwioninspirenl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-UT/geo/geoiszfnl.yaml
+Record ID: geoiszfnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-UT/geo/geoservernieuwegeinnl.yaml
+Record ID: geoservernieuwegeinnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-DR/geo/geodrenthenl.yaml
+Record ID: geodrenthenl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-NH/geo/geokoggenlandnl.yaml
+Record ID: geokoggenlandnl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-NH/geo/geowebamstelveennl.yaml
+Record ID: geowebamstelveennl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: NL/NL-NH/geo/plattegrondengooisemerennl.yaml
+Record ID: plattegrondengooisemerennl
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: MX/MX-JAL/geo/geodatosjaliscogobmx.yaml
+Record ID: geodatosjaliscogobmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: FI/Federal/geo/karttasuomifi.yaml
+Record ID: karttasuomifi
+Country: FI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: ID/ID-JI/geo/dumaikotainasdiorid.yaml
+Record ID: dumaikotainasdiorid
+Country: ID
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+... and 1 more record with this issue
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE]
+Count: 1
+Priority: IMPORTANT
+
+File: RU/RU-RYA/geo/geogisroryazangovru.yaml
+Record ID: geogisroryazangovru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE
+Field: endpoints
+Current Value: {'software_id': 'giswebse', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='giswebse' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT]
+Count: 14
+Priority: IMPORTANT
+
+File: MZ/Federal/scientific/1972496202.yaml
+Record ID: 1972496202
+Country: MZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MG/Federal/scientific/datarebiomanet.yaml
+Record ID: datarebiomanet
+Country: MG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MG/Federal/scientific/wwwlemursportalorg.yaml
+Record ID: wwwlemursportalorg
+Country: MG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: RS/Federal/scientific/hoverfbiosenserhcloudcom.yaml
+Record ID: hoverfbiosenserhcloudcom
+Country: RS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PT/Federal/scientific/gbifiptmuseusulpt.yaml
+Record ID: gbifiptmuseusulpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PT/Federal/scientific/maeruaiictpt.yaml
+Record ID: maeruaiictpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PT/Federal/scientific/floraonpt.yaml
+Record ID: floraonpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: PH/Federal/scientific/1468874172.yaml
+Record ID: 1468874172
+Country: PH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: GY/Federal/scientific/4419823378.yaml
+Record ID: 4419823378
+Country: GY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: GY/Federal/scientific/132148241236.yaml
+Record ID: 132148241236
+Country: GY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MW/Federal/scientific/19632215240.yaml
+Record ID: 19632215240
+Country: MW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MW/Federal/scientific/417713208.yaml
+Record ID: 417713208
+Country: MW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MY/Federal/scientific/birg4fbbutmmy.yaml
+Record ID: birg4fbbutmmy
+Country: MY
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+File: MX/Federal/scientific/arcaagsnjvmhostnet.yaml
+Record ID: arcaagsnjvmhostnet
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT
+Field: endpoints
+Current Value: {'software_id': 'ipt', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipt' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
+Count: 7
+Priority: IMPORTANT
+
+File: RU/RU-KGD/geo/geoportalklgdru.yaml
+Record ID: geoportalklgdru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: World/Federal/geo/wwwsinasmzcom.yaml
+Record ID: wwwsinasmzcom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: TC/geo/webgisgovtc.yaml
+Record ID: webgisgovtc
+Country: TC
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: PT/Federal/geo/webgisbiondpt.yaml
+Record ID: webgisbiondpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: FR/Federal/geo/lizmapobservatoireenvironnementorg.yaml
+Record ID: lizmapobservatoireenvironnementorg
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: FR/Federal/geo/wikigarrigueinfo.yaml
+Record ID: wikigarrigueinfo
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+File: FR/FR-75C/geo/observatoiregrandlibournaiseu.yaml
+Record ID: observatoiregrandlibournaiseu
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
+Field: endpoints
+Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER]
 Count: 2
 Priority: IMPORTANT
 
-File: BE/BE-WAL/opendata/prcdigitalwalloniabe.yaml
-Record ID: prcdigitalwalloniabe
-Country: BE
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=custom, name=Custom
-Suggested Action: Update software.name to 'Custom software' to match software.id
+File: RO/RO-IF/geo/mapbenderigrro.yaml
+Record ID: mapbenderigrro
+Country: RO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
-File: CZ/Federal/geo/egdigeologycz.yaml
-Record ID: egdigeologycz
-Country: CZ
-Issue: SOFTWARE_NAME_MISMATCH
-Field: software.name
-Current Value: id=geonetwork, name=GeoNetwork
-Suggested Action: Update software.name to 'Geonetwork' to match software.id
+File: NL/NL-GE/geo/wwwkaartopmaateu.yaml
+Record ID: wwwkaartopmaateu
+Country: NL
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER
+Field: endpoints
+Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY]
+Count: 1
+Priority: IMPORTANT
+
+File: FR/Federal/geo/ogcaltermapfr.yaml
+Record ID: ogcaltermapfr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY
+Field: endpoints
+Current Value: {'software_id': 'mapproxy', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapproxy' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA]
+Count: 4
+Priority: IMPORTANT
+
+File: SV/Federal/microdata/onecbcrgobsv.yaml
+Record ID: onecbcrgobsv
+Country: SV
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+File: TJ/Federal/microdata/nadastattj.yaml
+Record ID: nadastattj
+Country: TJ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+File: NE/Federal/microdata/pninnigerorg.yaml
+Record ID: pninnigerorg
+Country: NE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+File: TG/Federal/microdata/wwwstattogoorg.yaml
+Record ID: wwwstattogoorg
+Country: TG
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA
+Field: endpoints
+Current Value: {'software_id': 'nada', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nada' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR]
+Count: 4
+Priority: IMPORTANT
+
+File: NO/NO-03/indicators/statistikkbankenoslokommuneno.yaml
+Record ID: statistikkbankenoslokommuneno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+File: World/Federal/opendata/146317531.yaml
+Record ID: 146317531
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+File: PT/Federal/indicators/nesstaricsulpt.yaml
+Record ID: nesstaricsulpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+File: SI/indicators/nesstar2adpfdvuniljsi.yaml
+Record ID: nesstar2adpfdvuniljsi
+Country: SI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
+Field: endpoints
+Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA]
+Count: 3
+Priority: IMPORTANT
+
+File: NO/Federal/microdata/recapmedisinntnuno.yaml
+Record ID: recapmedisinntnuno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: PT/PT-13/microdata/recapactioninesctecpt.yaml
+Record ID: recapactioninesctecpt
+Country: PT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+File: MX/Federal/microdata/esmaestrasinterinspmx.yaml
+Record ID: esmaestrasinterinspmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA
+Field: endpoints
+Current Value: {'software_id': 'obibamica', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='obibamica' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT]
+Count: 2
+Priority: IMPORTANT
+
+File: World/Federal/opendata/geocataloguesmavdorg.yaml
+Record ID: geocataloguesmavdorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT
+Field: endpoints
+Current Value: {'software_id': 'opendatasoft', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opendatasoft' is marked as API-capable in software definitions
+
+File: World/Federal/opendata/experiencearcgiscom.yaml
+Record ID: experiencearcgiscom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT
+Field: endpoints
+Current Value: {'software_id': 'opendatasoft', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opendatasoft' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS]
+Count: 10
+Priority: IMPORTANT
+
+File: SB/Federal/geo/solomonspopgisspcint.yaml
+Record ID: solomonspopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: VU/geo/vanuatupopgisspcint.yaml
+Record ID: vanuatupopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: PW/geo/palaupopgisspcint.yaml
+Record ID: palaupopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: NR/geo/naurupopgisspcint.yaml
+Record ID: naurupopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: MH/geo/marshallpopgisspcint.yaml
+Record ID: marshallpopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: FM/geo/fsmpopgisspcint.yaml
+Record ID: fsmpopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: TV/geo/tuvalupopgisspcint.yaml
+Record ID: tuvalupopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: PG/Federal/geo/pngpopgisspcint.yaml
+Record ID: pngpopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: KI/geo/kiribatipopgisspcint.yaml
+Record ID: kiribatipopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+File: TO/geo/tongapopgisspcint.yaml
+Record ID: tongapopgisspcint
+Country: Oceania
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS
+Field: endpoints
+Current Value: {'software_id': 'popgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='popgis' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE]
+Count: 2
+Priority: IMPORTANT
+
+File: RU/Federal/scientific/pureportalspburu.yaml
+Record ID: pureportalspburu
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE
+Field: endpoints
+Current Value: {'software_id': 'pure', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pure' is marked as API-capable in software definitions
+
+File: RU/Federal/scientific/purensuru.yaml
+Record ID: purensuru
+Country: RU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE
+Field: endpoints
+Current Value: {'software_id': 'pure', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pure' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
+Count: 6
+Priority: IMPORTANT
+
+File: NO/Federal/indicators/statistikkbankenfiskeridirno.yaml
+Record ID: statistikkbankenfiskeridirno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: NO/Federal/indicators/havniaugefiskeridirno.yaml
+Record ID: havniaugefiskeridirno
+Country: NO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: TW/TW-TPE/indicators/dotstatgovtaipei.yaml
+Record ID: dotstatgovtaipei
+Country: TW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: SI/indicators/podatkinijzsi.yaml
+Record ID: podatkinijzsi
+Country: SI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: ML/indicators/pxwebinstatmalicom.yaml
+Record ID: pxwebinstatmalicom
+Country: ML
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: MK/Federal/indicators/nbstatnbrmmk.yaml
+Record ID: nbstatnbrmmk
+Country: MK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI]
+Count: 1
+Priority: IMPORTANT
+
+File: World/indicators/apidataexplorerunescaporg.yaml
+Record ID: apidataexplorerunescaporg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI
+Field: endpoints
+Current Value: {'software_id': 'sdmxri', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='sdmxri' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA]
+Count: 5
+Priority: IMPORTANT
+
+File: US/US-TN/opendata/performancefranklintngov.yaml
+Record ID: performancefranklintngov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA
+Field: endpoints
+Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
+
+File: US/US-PR/opendata/wwwpivcidepr.yaml
+Record ID: wwwpivcidepr
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA
+Field: endpoints
+Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
+
+File: US/US-IA/opendata/resultsiowagov.yaml
+Record ID: resultsiowagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA
+Field: endpoints
+Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
+
+File: US/US-CA/opendata/bythenumbersscoagov.yaml
+Record ID: bythenumbersscoagov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA
+Field: endpoints
+Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
+
+File: US/Federal/opendata/permittingprestagedynamoworks.yaml
+Record ID: permittingprestagedynamoworks
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA
+Field: endpoints
+Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH]
+Count: 2
+Priority: IMPORTANT
+
+File: World/indicators/datauisunescoorg.yaml
+Record ID: datauisunescoorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH
+Field: endpoints
+Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
+
+File: World/indicators/statsoecdorg.yaml
+Record ID: statsoecdorg
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH
+Field: endpoints
+Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI]
+Count: 1
+Priority: IMPORTANT
+
+File: MM/Federal/opendata/openjadedataorg.yaml
+Record ID: openjadedataorg
+Country: GB
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI
+Field: endpoints
+Current Value: {'software_id': 'strapi', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='strapi' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER]
+Count: 2
+Priority: IMPORTANT
+
+File: MO/geo/bisdsatgovmo.yaml
+Record ID: bisdsatgovmo
+Country: MO
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+Field: endpoints
+Current Value: {'software_id': 'supermapiserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions
+
+File: BD/geo/servernsdigovbd.yaml
+Record ID: servernsdigovbd
+Country: BD
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
+Field: endpoints
+Current Value: {'software_id': 'supermapiserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA]
+Count: 1
+Priority: IMPORTANT
+
+File: AU/Federal/geo/digitalatlasgovau.yaml
+Record ID: digitalatlasgovau
+Country: AU
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+Field: endpoints
+Current Value: {'software_id': 'terria', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='terria' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND]
+Count: 1
+Priority: IMPORTANT
+
+File: MX/Federal/scientific/riuacjmx.yaml
+Record ID: riuacjmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND
+Field: endpoints
+Current Value: {'software_id': 'vufind', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='vufind' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH (IMPORTANT): 10 issues
-CATALOG_SOFTWARE_MISMATCH (CRITICAL): 5 issues
-DUPLICATE_LINK (MEDIUM): 111 issues
-MISSING_API_STATUS (IMPORTANT): 17 issues
-MISSING_CONTENT_TYPES (MEDIUM): 2 issues
-MISSING_ENDPOINTS (MEDIUM): 8 issues
-MISSING_TAGS (LOW): 1 issues
-MISSING_TOPICS (LOW): 4 issues
-PLACEHOLDER_OWNER_NAME (MEDIUM): 61 issues
-PLACEHOLDER_TITLE (MEDIUM): 3597 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): 801 issues
-SOFTWARE_NAME_MISMATCH (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA (IMPORTANT): 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER (IMPORTANT): 20 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN (IMPORTANT): 22 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY (IMPORTANT): 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY (IMPORTANT): 10 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK (IMPORTANT): 9 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE (IMPORTANT): 10 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER (IMPORTANT): 51 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPT (IMPORTANT): 14 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP (IMPORTANT): 7 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA (IMPORTANT): 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR (IMPORTANT): 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA (IMPORTANT): 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_POPGIS (IMPORTANT): 10 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB (IMPORTANT): 6 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA (IMPORTANT): 5 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER (IMPORTANT): 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA (IMPORTANT): 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND (IMPORTANT): 1 issue
 
 === SUMMARY BY PRIORITY ===
 
-CRITICAL: 5 issues
-IMPORTANT: 830 issues
-MEDIUM: 3779 issues
-LOW: 5 issues
+IMPORTANT: 204 issues
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: datausaiio
-File: US/Other/other/datausaio.yaml
-Country: CH
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: saocomputeeuracedu
-File: IT/Federal/geo/saocomputeeuracedu.yaml
-Country: IT
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: 19216821058
-File: Unknown/Federal/geo/19216821058.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: 1461189676
-File: Unknown/Federal/geo/1461189676.yaml
-Country: World
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: cookspopgisspcint
-File: CK/geo/cookspopgisspcint.yaml
-Country: Oceania
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geoserverprotectedareaimpactmapsd4scienceorg
-File: World/Federal/geo/geoserverprotectedareaimpactmapsd4scienceorg.yaml
-Country: World
-Issue Count: 5
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: geoserver2d4scienceorg
-File: World/Federal/geo/geoserver2d4scienceorg.yaml
-Country: World
-Issue Count: 5
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: ismcscdbsk
-File: SK/Federal/geo/ismcscdbsk.yaml
-Country: SK
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: mapsscowiscedu
-File: World/Federal/geo/mapsscowiscedu.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: dideafricaimgarcgiscom
-File: US/US-CA/geo/dideafricaimgarcgiscom.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: services8arcgiscom
-File: US/US-CA/geo/services8arcgiscom.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: insightsservices8arcgiscom
-File: US/US-CA/geo/insightsservices8arcgiscom.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: services6arcgiscom
-File: US/US-CA/geo/services6arcgiscom.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: csdcimmaporg
-File: World/Federal/geo/csdcimmaporg.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: tilesarcgiscom
-File: World/Federal/geo/tilesarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: minesgouvcicadastreminierorg
-File: CI/geo/minesgouvcicadastreminierorg.yaml
-Country: ZA
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: unisimondigitalcommonsdatacom
-File: CO/Federal/opendata/unisimondigitalcommonsdatacom.yaml
-Country: CO
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: geoserver4d4scienceresearchinfrastructureseu
-File: IT/Federal/geo/geoserver4d4scienceresearchinfrastructureseu.yaml
-Country: IT
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geoserverd4scienceiiresearchinfrastructureseu
-File: IT/Federal/geo/geoserverd4scienceiiresearchinfrastructureseu.yaml
-Country: IT
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geoserversdilabd4scienceorg
-File: World/Federal/geo/geoserversdilabd4scienceorg.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: barchettaadumanitobaca
-File: CA/CA-MB/geo/barchettaadumanitobaca.yaml
-Country: CA
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisentclocacom
-File: CA/CA-ON/geo/gisentclocacom.yaml
-Country: CA
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: egdigeologycz
-File: CZ/Federal/geo/egdigeologycz.yaml
-Country: CZ
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - MISSING_API_STATUS (IMPORTANT): api_status
-  - MISSING_CONTENT_TYPES (MEDIUM): content_types
-  - SOFTWARE_NAME_MISMATCH (IMPORTANT): software.name
-
-Record ID: erfdataportalcom
-File: EG/Federal/microdata/erfdataportalcom.yaml
-Country: EG
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: odataudgedu
-File: ES/Federal/opendata/odataudgedu.yaml
-Country: ES
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: energydatainfo
-File: World/Federal/opendata/energydatainfo.yaml
-Country: US
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geonetworkothudatagrandlyoncom
-File: FR/Federal/geo/geonetworkothudatagrandlyoncom.yaml
-Country: FR
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: geonodecifororg
-File: ID/Federal/geo/geonodecifororg.yaml
-Country: ID
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: 103105195227
-File: World/Federal/geo/103105195227.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geodataooppgobbo
-File: BO/Federal/geo/geodataooppgobbo.yaml
-Country: BO
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: cubeexplorercsopenportalcouk
-File: GB/Federal/geo/cubeexplorercsopenportalcouk.yaml
-Country: GB
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: swat4hclsfigsharecom
-File: GB/Federal/scientific/swat4hclsfigsharecom.yaml
-Country: GB
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: opendatarnvonlinede
-File: DE/DE-BW/opendata/opendatarnvonlinede.yaml
-Country: DE
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: micamdcberlinde
-File: DE/Federal/opendata/micamdcberlinde.yaml
-Country: DE
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: einloesenmilesmediende
-File: DE/Federal/opendata/einloesenmilesmediende.yaml
-Country: DE
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: jordbrugsanalyserdk
-File: DK/Federal/geo/jordbrugsanalyserdk.yaml
-Country: DK
-Issue Count: 4
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geonetworkgambiamahacenter-com
-File: FR/Federal/geo/geonetworkgambiamahacenter.yaml
-Country: FR
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: kpisburhubarcgiscom
-File: Unknown/geo/kpisburhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datadownloadpageliberhubarcgiscom
-File: Unknown/geo/datadownloadpageliberhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: citizenproblemreporter1coswvhubarcgiscom
-File: Unknown/geo/citizenproblemreporter1coswvhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: xaylorlcthp0dekkjdfivthubarcgiscom
-File: Unknown/geo/xaylorlcthp0dekkjdfivthubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: resourceskenwildtrusthubarcgiscom
-File: Unknown/geo/resourceskenwildtrusthubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datafcmapsopendataarcgiscom
-File: Unknown/geo/datafcmapsopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: semawebportalshowmefloodriskhubarcgiscom
-File: Unknown/geo/semawebportalshowmefloodriskhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: rockislandhubexamplerigovhubarcgiscom
-File: Unknown/geo/rockislandhubexamplerigovhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: appstitellusnet
-File: Unknown/geo/appstitellusnet.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datamatrtopendataarcgiscom
-File: Unknown/geo/datamatrtopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: osiblueprintbniajfihubarcgiscom
-File: Unknown/geo/osiblueprintbniajfihubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: cidtrialvrachubarcgiscom
-File: Unknown/geo/cidtrialvrachubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: citizenproblemreporterwaggonerhubarcgiscom
-File: Unknown/geo/citizenproblemreporterwaggonerhubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: sineerwetlandsgissegrasshubarcgiscom
-File: Unknown/geo/sineerwetlandsgissegrasshubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisopendataaragehubarcgiscom
-File: Unknown/geo/gisopendataaragehubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datacosgisopendataarcgiscom
-File: Unknown/geo/datacosgisopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geonodegeovisorumsacom
-File: Unknown/geo/geonodegeovisorumsacom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: citizenproblemreporter1brentwoodborohubarcgiscom
-File: Unknown/geo/citizenproblemreporter1brentwoodborohubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: maffudedemo01hubarcgiscom
-File: Unknown/geo/maffudedemo01hubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datainnovateopendataarcgiscom
-File: Unknown/geo/datainnovateopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datacravendcopendataarcgiscom
-File: Unknown/geo/datacravendcopendataarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gishubweldgovcom
-File: Unknown/geo/gishubweldgovcom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: mcegeohubtestversionmcescartohubarcgiscom
-File: Unknown/geo/mcegeohubtestversionmcescartohubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: idelosriosgorelosrioshubarcgiscom
-File: Unknown/geo/idelosriosgorelosrioshubarcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: tiledimageservices8arcgiscom
-File: Unknown/Federal/geo/tiledimageservices8arcgiscom.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geonodevhistoryorg
-File: Unknown/Federal/geo/geonodevhistoryorg.yaml
-Country: World
-Issue Count: 4
-Issues:
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gnssmetadataeu
-File: EU/Federal/geo/gnssmetadataeu.yaml
-Country: BE
-Issue Count: 4
-Issues:
-  - MISSING_API_STATUS (IMPORTANT): api_status
-  - MISSING_API_STATUS (IMPORTANT): api_status
-  - MISSING_CONTENT_TYPES (MEDIUM): content_types
-  - MISSING_CONTENT_TYPES (MEDIUM): content_types
-
-Record ID: mapssurveyesk
-File: SK/Federal/geo/mapssurveyesk.yaml
-Country: SK
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: inspireskgeodesysk
-File: SK/Federal/geo/inspireskgeodesysk.yaml
-Country: SK
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisgeozsrsk
-File: SK/Federal/geo/gisgeozsrsk.yaml
-Country: SK
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: neardbnearagingse
-File: SE/Federal/opendata/neardbnearagingse.yaml
-Country: SE
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: ivometriase
-File: SE/Federal/geo/ivometriase.yaml
-Country: SE
-Issue Count: 3
-Issues:
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: opendatademossprojorg
-File: UG/Federal/opendata/opendatademossprojorg.yaml
-Country: UG
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: 4625521167
-File: UG/Federal/geo/4625521167.yaml
-Country: UG
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geocatsemidenet
-File: UG/Federal/geo/geocatsemidenet.yaml
-Country: UG
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisopenforestdatapl
-File: PL/Federal/geo/gisopenforestdatapl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: mapygisumradompl
-File: PL/Federal/geo/mapygisumradompl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: daneakoportalpl
-File: PL/Federal/geo/daneakoportalpl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: rapprepozytoriumapp
-File: PL/Federal/geo/rapprepozytoriumapp.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: mapaabakusnetpl
-File: PL/Federal/geo/mapaabakusnetpl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: wms2geopozpoznanpl
-File: PL/Federal/geo/wms2geopozpoznanpl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: usipeswietokrzyskiepl
-File: PL/Federal/geo/usipeswietokrzyskiepl.yaml
-Country: PL
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datosabiertospjeastuscloudappazurecom
-File: PE/Federal/opendata/datosabiertospjeastuscloudappazurecom.yaml
-Country: PE
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: datosinsgobpe
-File: PE/Federal/opendata/datosinsgobpe.yaml
-Country: PE
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: estadoconservacionsernanpgobpe
-File: PE/Federal/geo/estadoconservacionsernanpgobpe.yaml
-Country: PE
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: serverazgeoazgov
-File: US/US-AZ/geo/serverazgeoazgov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: wwwnativehawaiiandataportalcom
-File: US/US-HI/opendata/wwwnativehawaiiandataportalcom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisfdacsgov
-File: US/US-FL/geo/gisfdacsgov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geonetworkgridnigeriaorg
-File: US/US-IA/geo/geonetworkgridnigeriaorg.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: wwwctdatacollaborativeorg
-File: US/US-CT/opendata/wwwctdatacollaborativeorg.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: sitesgooglecom
-File: World/Federal/geo/sitesgooglecom.yaml
-Country: World
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - DUPLICATE_LINK (MEDIUM): link
-  - DUPLICATE_LINK (MEDIUM): link
-
-Record ID: nativehawaiiandataportalcom
-File: US/Federal/opendata/nativehawaiiandataportalcom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: dataessdivelblgov
-File: US/Federal/opendata/dataessdivelblgov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: inventorydatagov
-File: US/Federal/opendata/inventorydatagov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: developersarcgiscom
-File: US/Federal/geo/developersarcgiscom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisdetroitmigov
-File: US/Federal/geo/gisdetroitmigov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: mapservergisumnedu
-File: US/Federal/geo/mapservergisumnedu.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: websvcsgeongamil
-File: US/Federal/geo/websvcsgeongamil.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geohubepaasgov
-File: US/Federal/geo/geohubepaasgov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: premaplblgov
-File: US/Federal/geo/premaplblgov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: rgvfloodcom
-File: US/Federal/geo/rgvfloodcom.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - PLACEHOLDER_OWNER_NAME (MEDIUM): owner.name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: gisdatapimagov
-File: US/Federal/geo/gisdatapimagov.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
-
-Record ID: geoserversfeiorg
-File: US/Federal/geo/geoserversfeiorg.yaml
-Country: US
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING (IMPORTANT): endpoints
-  - PLACEHOLDER_TITLE (MEDIUM): name
-  - PLACEHOLDER_TITLE (MEDIUM): name
+No records found with 3+ issues

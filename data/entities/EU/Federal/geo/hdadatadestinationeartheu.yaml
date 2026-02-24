@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC API (v2) for the DestinE Data Lake (DEDL). The Data Lake brings
+  together data from ESA, EUMETSAT, Copernicus, and Digital Twins, offering discovery,
+  data access, and big data processing in the cloud. EUMETSAT has end-to-end
+  responsibility for the DEDL.
+endpoints:
+- type: stacserverapi
+  url: https://hda.data.destination-earth.eu/stac/v2
+id: hdadatadestinationeartheu
+langs:
+- id: EN
+  name: English
+link: https://hda.data.destination-earth.eu/stac/v2
+name: DestinE Data Lake (DEDL) STAC API
+owner:
+  link: https://destination-earth.eu
+  location:
+    country: *id001
+    level: 20
+  name: Destination Earth (DestinE)
+  type: International organization
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021413

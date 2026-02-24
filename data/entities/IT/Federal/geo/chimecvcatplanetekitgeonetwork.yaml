@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoNetwork metadata catalogue (Chime CVCAT) by Planetek Italia for calibration/validation
+  datasets and Earth observation metadata.
+endpoints:
+- type: csw202
+  url: https://chimecvcat.planetek.it/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://chimecvcat.planetek.it/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://chimecvcat.planetek.it/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: chimecvcatplanetekitgeonetwork
+langs:
+- id: IT
+  name: Italian
+- id: EN
+  name: English
+link: https://chimecvcat.planetek.it/geonetwork
+name: Chime CVCAT Catalogue Portal
+owner:
+  link: https://www.planetek.it
+  location:
+    country:
+      id: IT
+      name: Italy
+    level: 20
+  name: Planetek Italia
+  type: Private sector
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- metadata
+- calibration
+- validation
+- Earth observation
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021798

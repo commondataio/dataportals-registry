@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-PB
+      name: Paraiba
+description: GeoNode instance for sharing geospatial data and maps at Universidade
+  Federal da Paraíba (UFPB) - IDEAL.
+endpoints:
+- type: geonode:layers
+  url: https://geonode.ideal.ufpb.br/api/layers/
+- type: geonode:documents
+  url: https://geonode.ideal.ufpb.br/api/documents/
+- type: geonode:dcatus11
+  url: https://geonode.ideal.ufpb.br/data.json
+- type: wms111
+  url: https://geonode.ideal.ufpb.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.ideal.ufpb.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: csw202
+  url: https://geonode.ideal.ufpb.br/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+id: geonodeidealufpbbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://geonode.ideal.ufpb.br
+name: GeoNode IDEAL - UFPB
+owner:
+  link: https://www.ufpb.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PB
+      name: Paraiba
+  name: Universidade Federal da Paraíba (UFPB)
+  type: Academy
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial data
+- Brazil
+- university
+- UFPB
+- IDEAL
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00021617

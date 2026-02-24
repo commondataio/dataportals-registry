@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: GeoNetwork metadata catalog for Tecotec DSS (Decision Support System).
+endpoints:
+- type: geonetwork:query
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/q
+- type: openapi
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://metadata-dss.tecotec.vn/geonetwork/srv/api/site
+- type: opensearch
+  url: https://metadata-dss.tecotec.vn/portal.opensearch
+id: metadatadsstecotecvngeonetwork
+langs:
+- id: VN
+  name: Vietnamese
+- id: EN
+  name: English
+link: https://metadata-dss.tecotec.vn/geonetwork
+name: Tecotec DSS GeoNetwork
+owner:
+  location:
+    country:
+      id: VN
+      name: Vietnam
+    level: 20
+  name: Tecotec
+  type: Other
+  link: https://tecotec.vn
+software:
+  id: geonetwork
+  name: Geonetwork
+status: active
+tags:
+- geospatial
+- metadata
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021793

@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    macroregion:
+      id: '154'
+      name: Northern Europe
+    subregion:
+      id: GB-ENG
+      name: England
+description: Geospatial data catalog served via GeoServer for Scarborough Borough
+  Council.
+id: mapsscarboroughgovuk
+langs:
+- id: EN
+  name: English
+link: http://maps.scarborough.gov.uk/geoserver
+name: Scarborough Borough Council GeoServer
+owner:
+  link: http://maps.scarborough.gov.uk/
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+    level: 30
+    subregion:
+      id: GB-ENG
+      name: England
+  name: Scarborough Borough Council
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- United Kingdom
+- geo
+- geoserver
+- geospatial
+- open data
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: temp00005034
+endpoints:
+- type: wms111
+  url: http://maps.scarborough.gov.uk/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: http://maps.scarborough.gov.uk/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0

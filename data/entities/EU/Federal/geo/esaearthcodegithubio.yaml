@@ -1,0 +1,58 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: A catalog of publicly available geoscience products, datasets, workflows,
+  experiments, and resources developed in the frame of scientific research projects
+  funded by ESA EO (Earth Observation).
+endpoints:
+- type: stacserverapi
+  url: https://esa-earthcode.github.io/open-science-catalog-metadata/catalog.json
+id: esaearthcodegithubio
+langs:
+- id: EN
+  name: English
+link: https://esa-earthcode.github.io/open-science-catalog-metadata/catalog.json
+name: Open Science Catalog
+owner:
+  link: https://earth.esa.int/
+  location:
+    country: *id001
+    level: 20
+  name: European Space Agency
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Location
+  name: Location
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021406

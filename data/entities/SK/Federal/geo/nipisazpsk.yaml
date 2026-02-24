@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: 'Eastern Europe '
 description: ArcGIS REST API endpoint for geospatial data services from the Slovak
   Environmental Agency
+endpoints:
+- type: arcgis:rest:services
+  url: https://nipi.sazp.sk/ArcGIS/rest/services?f=pjson
 id: nipisazpsk
 langs:
 - id: SK

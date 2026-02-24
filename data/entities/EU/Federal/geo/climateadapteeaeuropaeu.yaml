@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -78,3 +78,7 @@ topics:
   name: Location
   type: iso19115
 uid: temp00005485
+endpoints:
+- type: wms130
+  url: http://climate-adapt.eea.europa.eu/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0

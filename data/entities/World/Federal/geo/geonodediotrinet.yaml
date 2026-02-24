@@ -1,0 +1,112 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: World
+      name: World
+endpoints:
+- type: geonode:datasets
+  url: https://geonode.diotri.net/api/datasets/
+- type: geonode:documents
+  url: https://geonode.diotri.net/api/documents/
+- type: csw202
+  url: https://geonode.diotri.net/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geonode.diotri.net/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://geonode.diotri.net/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geonode.diotri.net/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geonode.diotri.net/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://geonode.diotri.net/geoserver/gwc/service/wmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wms130
+  url: https://geonode.diotri.net/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geonode.diotri.net/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://geonode.diotri.net/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs100
+  url: https://geonode.diotri.net/geoserver/ows?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wcs110
+  url: https://geonode.diotri.net/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs11
+  url: https://geonode.diotri.net/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://geonode.diotri.net/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://geonode.diotri.net/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: tms100
+  url: https://geonode.diotri.net/geoserver/gwc/service/tms/1.0.0
+  version: 1.0.0
+- type: wms-c111
+  url: https://geonode.diotri.net/geoserver/gwc/service/wms?request=GetCapabilities&version=1.1.1&tiled=true
+  version: 1.1.1
+id: geonodediotrinet
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: Deutsch
+- id: ES
+  name: Español
+- id: FR
+  name: Français
+- id: IT
+  name: Italiano
+link: https://geonode.diotri.net
+name: GeoNode Diotri
+owner:
+  location:
+    country:
+      id: World
+      name: World
+    level: 20
+  name: Diotri
+  type: Private
+  link: https://diotri.net
+software:
+  id: geonode
+  name: GeoNode
+status: active
+uid: cdi00021687
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+tags:
+- GIS
+- geospatial
+description: Geoportal. managed by Diotri. providing access to geonode diotri.
+content_types:
+- dataset
+- map_layer

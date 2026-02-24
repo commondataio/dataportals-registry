@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id002
+      id: US-CA
+      name: California
+description: California’s GeoPortal is the states platform for exploring and downloading
+  open data, discovering and building apps, and engaging the public through geospatial
+  data. The OGC Compliant API allows you to browse, search, preview, and download
+  a variety of state and national geospatial data.
+endpoints:
+- type: stacserverapi
+  url: https://api.fgdc.gov/states/ca/
+id: apifgdcgovstatesca
+langs:
+- id: EN
+  name: English
+link: https://api.fgdc.gov/states/ca/
+name: 🇺🇸 United States | California Geospatial Data
+owner:
+  link: https://www.fgdc.gov/
+  location:
+    country: *id001
+    level: 20
+    subregion: *id002
+  name: 🇺🇸 United States | California Geospatial Data
+  type: Other
+software:
+  id: stacserver
+  name: Stac-server
+status: active
+topics:
+- id: geospatial
+  name: Geospatial
+  type: general
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: government
+  name: Government
+  type: general
+tags:
+- geospatial
+- has_api
+- STAC
+uid: cdi00021359

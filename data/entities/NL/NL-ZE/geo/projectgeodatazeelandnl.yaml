@@ -1,0 +1,104 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id001
+      id: NL-ZE
+      name: Zeeland
+description: GeoServer Web Service, anonymous access to predefined map tiles generated
+  from vector data, raster data, and imagery via WMTS 1.1.1.
+endpoints:
+- type: wfs100
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs110
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WCS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs11
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WCS&version=1.1&request=GetCapabilities
+  version: '1.1'
+- type: wcs201
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://projectgeodata.zeeland.nl/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: projectgeodatazeelandnl
+langs:
+- id: NL
+  name: Dutch
+link: https://projectgeodata.zeeland.nl/geoserver/web/
+name: 'GeoServer: Welcome - Provincie Zeeland'
+owner:
+  link: https://projectgeodata.zeeland.nl/geoserver/
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 30
+    subregion: *id001
+  name: Provincie Zeeland
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- GeoServer
+- WMTS
+- GIS
+- opendata
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00000515

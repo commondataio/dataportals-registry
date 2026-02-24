@@ -18,7 +18,10 @@ coverage:
     subregion:
       id: IT-34
       name: Veneto
-description: GeoServer-based data catalog accessible via the provided URL.
+description: CIGNo (Collaborative Interoperable Geographic Node) is the GeoNode platform
+  of CNR ISMAR for sharing geospatial data and maps. It started in 2010 with CORILA
+  and City of Venice for the Atlante della Laguna project. Offers layers, maps, and
+  documents.
 endpoints:
 - type: wms111
   url: http://cigno.ve.ismar.cnr.it:80/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -66,8 +69,8 @@ id: cignoveismarcnrit
 langs:
 - id: IT
   name: Italian
-link: http://cigno.ve.ismar.cnr.it:80/geoserver
-name: ISMAR GeoServer
+link: http://cigno.ve.ismar.cnr.it/
+name: CIGNo data portal
 owner:
   link: https://www.ismar.cnr.it
   location:
@@ -90,14 +93,23 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: geonode
+  name: GeoNode
 status: active
 tags:
-- geoserver
+- geonode
 - spatial data
+- Venice
+- lagoon
+- ISMAR
 topics:
-- Geospatial
-- Geography
-- Maps
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
 uid: temp00001563

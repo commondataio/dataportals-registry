@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,18 +16,22 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Geospatial data catalog for agricultural analyses
+endpoints:
+- type: wms130
+  url: http://jordbrugsanalyser.dk/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: jordbrugsanalyserdk
 langs:
 - id: DA
   name: Danish
 link: http://jordbrugsanalyser.dk/geoserver
-name: jordbrugsanalyser.dk/geoserver
+name: Agricultural Analyses GeoServer Denmark
 owner:
   link: http://jordbrugsanalyser.dk/geoserver
   location:
     country: *id001
     level: 20
-  name: Not specified
+  name: Danish Agency for Green Area Reallocation and Water Environment
   type: Central government
 properties:
   has_doi: false

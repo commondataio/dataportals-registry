@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -60,3 +60,8 @@ topics:
   name: Environment
   type: iso19115
 uid: temp00003736
+endpoints:
+- type: arcgis:rest:info
+  url: https://dbgis.menlhk.go.id/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://dbgis.menlhk.go.id/arcgis/rest/services?f=pjson

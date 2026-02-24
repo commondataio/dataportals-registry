@@ -15,18 +15,27 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: GIS REST services endpoint for areal data within Danmarks Miljøportal,
-  providing various environmental and geographical datasets.
+description: Geospatial data catalog from Danmarks Miljøportal providing areal and
+  environmental map services for Denmark.
 endpoints:
+- type: arcgis:rest:info
+  url: https://arealinformation.miljoeportal.dk/gis/rest/info?f=pjson
 - type: arcgis:rest:services
   url: https://arealinformation.miljoeportal.dk/gis/rest/services?f=pjson
-  version: '1.0'
+- type: arcgis:soap
+  url: https://arealinformation.miljoeportal.dk/gis/services?wsdl
+- type: arcgis:sitemap
+  url: https://arealinformation.miljoeportal.dk/gis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arealinformation.miljoeportal.dk/gis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://arealinformation.miljoeportal.dk/gis/rest/services?f=kmz
 id: arealinformationmiljoeportaldk
 langs:
 - id: DA
   name: Danish
 link: https://arealinformation.miljoeportal.dk/gis/rest/services
-name: arealinformation.miljoeportal.dk/gis/rest/services
+name: Arealinformation - Danmarks Miljøportal
 owner:
   link: https://miljoeportal.dk
   location:
@@ -52,10 +61,9 @@ tags:
 - areal
 - Denmark
 - environment
-- geoportal
-- geospatial
 - GIS
-- land data
+- geodata
+- mapping
 topics:
 - id: ENVI
   name: Environment

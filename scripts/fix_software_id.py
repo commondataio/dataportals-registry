@@ -24,6 +24,9 @@ INVALID_ID_MAPPING = {
     "onegeo": "custom",  # Onegeo Suite - no definition exists, map to custom
 }
 
+# (id, name) aliases: custom + display name -> canonical software id (Huwise is OpenDataSoft)
+SOFTWARE_NAME_ALIASES = {"huwise": "opendatasoft"}
+
 
 def load_software_definitions() -> Dict[str, Dict]:
     """Load all software definitions from data/software directory."""
@@ -64,7 +67,19 @@ def fix_entity_file(filepath: Path, software_defs: Dict[str, Dict], dry_run: boo
         original_name = software_data.get("name", "")
         changed = False
         changes = []
-        
+
+        # Huwise-based portals are OpenDataSoft; normalize custom + Huwise -> opendatasoft
+        if (
+            original_id == "custom"
+            and original_name
+            and "huwise" in original_name.lower()
+            and "opendatasoft" in software_defs
+        ):
+            software_data["id"] = "opendatasoft"
+            software_data["name"] = software_defs["opendatasoft"]["name"]
+            changes.append(f"Huwise -> opendatasoft (id and name)")
+            changed = True
+
         # Fix invalid IDs
         if original_id in INVALID_ID_MAPPING:
             new_id = INVALID_ID_MAPPING[original_id]

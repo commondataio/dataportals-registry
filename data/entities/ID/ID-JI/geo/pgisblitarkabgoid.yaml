@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -29,7 +29,10 @@ owner:
     country:
       id: ID
       name: Indonesia
-    level: 20
+    level: 30
+    subregion:
+      id: ID-JI
+      name: Jawa Timur
   name: Local Government of Blitarkab
   type: Local government
 properties:
@@ -55,3 +58,10 @@ topics:
   name: Government and public sector
   type: eudatatheme
 uid: temp00005203
+endpoints:
+- type: wms130
+  url: http://pgis.blitarkab.go.id:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: http://pgis.blitarkab.go.id:8080/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0

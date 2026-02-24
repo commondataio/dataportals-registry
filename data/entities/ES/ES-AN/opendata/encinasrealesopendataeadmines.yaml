@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-AN
+      name: Andalucia
+description: descripción de la Información básica de la entidad local
+endpoints:
+- type: ckan
+  url: https://encinasreales-opendata.e-admin.es/api/3
+- type: ckan
+  url: https://encinasreales-opendata.e-admin.es/api/3/action/package_list
+- type: dcat
+  url: https://encinasreales-opendata.e-admin.es/catalog.xml
+- type: dcatap
+  url: https://encinasreales-opendata.e-admin.es/catalog.rdf
+- type: dcat:jsonld
+  url: https://encinasreales-opendata.e-admin.es/catalog.jsonld
+- type: ckan
+  url: https://encinasreales-opendata.e-admin.es/api/3
+  version: '3'
+id: encinasrealesopendataeadmines
+langs:
+- id: ES
+  name: Spanish
+link: https://encinasreales-opendata.e-admin.es/
+name: Ayuntamiento de Encinas Reales - Datos Abiertos
+owner:
+  link: https://e-admin.es
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: ES-AN
+      name: Andalucia
+  name: Ayuntamiento de Encinas Reales
+  type: Local government
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00020595
