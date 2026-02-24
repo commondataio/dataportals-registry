@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-02-24
+
+**GitHub Release**: [v1.7.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.7.0) - Published February 24, 2026
+
 ### Added
 - **1,647 new catalog entries** (net from v1.6.0); export snapshot: **14,346** catalog records (entities).
 
