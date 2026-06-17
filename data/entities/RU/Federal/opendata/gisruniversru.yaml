@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,6 +16,13 @@ coverage:
       name: Eastern Europe
 description: Russian borders GEO project by RUNIVERS. open data portal. managed by
   Runivers. powered by NextGIS Web. accessible at gis.runivers.ru.
+endpoints:
+- type: nextgisweb:api
+  url: https://gis.runivers.ru/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://gis.runivers.ru/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://gis.runivers.ru/api/component/pyramid/route
 id: gisruniversru
 langs:
 - id: RU

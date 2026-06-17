@@ -209,6 +209,21 @@ def build_record(row: dict, record_id: str, country: str, subregion: str | None)
     elif "World Bank" in name or "worldbank" in link.lower():
         owner_name = "World Bank"
 
+    link_path = link.split("?")[0].lower()
+    is_static_catalog = link_path.endswith(".json")
+    if description:
+        desc = description
+    elif is_static_catalog:
+        desc = "STAC (SpatioTemporal Asset Catalog) static catalog."
+    else:
+        desc = "STAC (SpatioTemporal Asset Catalog) API."
+    if is_static_catalog:
+        software = {"id": "stacbrowser", "name": "STAC Browser"}
+        if "stac browser" not in desc.lower():
+            desc = desc.rstrip() + " Powered by STAC Browser."
+    else:
+        software = {"id": "stacserver", "name": "Stac-server"}
+
     record = {
         "access_mode": ["open"],
         "api": True,
@@ -216,7 +231,7 @@ def build_record(row: dict, record_id: str, country: str, subregion: str | None)
         "catalog_type": "Geoportal",
         "content_types": ["dataset", "map_layer"],
         "coverage": [coverage_item],
-        "description": description or "STAC (SpatioTemporal Asset Catalog) API.",
+        "description": desc,
         "endpoints": [{"type": "stacserverapi", "url": link}],
         "id": record_id,
         "langs": [{"id": "EN", "name": "English"}],
@@ -228,7 +243,7 @@ def build_record(row: dict, record_id: str, country: str, subregion: str | None)
             "name": owner_name,
             "type": "Other",
         },
-        "software": {"id": "stacserver", "name": "Stac-server"},
+        "software": software,
         "status": "active",
         "tags": ["geospatial", "has_api", "STAC"],
     }

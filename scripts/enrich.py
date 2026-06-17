@@ -1051,7 +1051,7 @@ def update_languages(dryrun=False, mode="entities"):
 def update_subregions(dryrun=False, mode="entities"):
     """Update sub regions names"""
     data_dict = load_csv_dict(
-        "../data/reference/subregions/IP2LOCATION-ISO3166-2.CSV ",
+        "../data/reference/subregions/ISO3166-2.CSV",
         delimiter=",",
         key="code",
     )

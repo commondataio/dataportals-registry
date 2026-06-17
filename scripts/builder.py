@@ -32,12 +32,13 @@ import duckdb
 import hashlib
 import subprocess
 from dataclasses import dataclass, field
-from collections import defaultdict
+from collections import defaultdict, Counter
 from typing import List, Dict, Any, Optional
 
 from constants import (
     ENTRY_TEMPLATE,
     CUSTOM_SOFTWARE_KEYS,
+    MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,
     MAP_CATALOG_TYPE_SUBDIR,
     DOMAIN_LOCATIONS,
@@ -66,7 +67,24 @@ SCHEDULED_DIR = os.path.join(_REPO_ROOT, "data", "scheduled")
 SOFTWARE_DIR = os.path.join(_REPO_ROOT, "data", "software")
 DATASETS_DIR = os.path.join(_REPO_ROOT, "data", "datasets")
 UNPROCESSED_DIR = os.path.join(_REPO_ROOT, "data", "_unprocessed")
-SUBREGIONS_CSV = os.path.join(_REPO_ROOT, "data", "reference", "subregions", "IP2LOCATION-ISO3166-2.CSV")
+SUBREGIONS_DIR = os.path.join(_REPO_ROOT, "data", "reference", "subregions")
+SUBREGIONS_CSV = os.path.join(SUBREGIONS_DIR, "ISO3166-2.CSV")
+SUBREGIONS_CSV_LEGACY = os.path.join(SUBREGIONS_DIR, "IP2LOCATION-ISO3166-2.CSV")
+
+
+def get_subregions_csv_path():
+    """Return preferred subregions reference path with legacy fallback."""
+    if os.path.exists(SUBREGIONS_CSV):
+        return SUBREGIONS_CSV
+    if os.path.exists(SUBREGIONS_CSV_LEGACY):
+        logger.warning(
+            "Using legacy subregions reference %s. Regenerate %s via "
+            "scripts/refresh_subregion_reference.py",
+            SUBREGIONS_CSV_LEGACY,
+            SUBREGIONS_CSV,
+        )
+        return SUBREGIONS_CSV_LEGACY
+    return SUBREGIONS_CSV
 
 app = typer.Typer()
 
@@ -272,7 +290,13 @@ def merge_datasets(list_datasets, result_file):
 
 
 @app.command()
-def build():
+def build(
+    jsonld: bool = typer.Option(
+        False,
+        "--jsonld",
+        help="Emit data/datasets/catalogs.jsonld with JSON-LD framing",
+    ),
+):
     """Build datasets as JSONL from entities as YAML"""
     logger.info("Started building software dataset")
     build_dataset(SOFTWARE_DIR, "software.jsonl")
@@ -395,6 +419,16 @@ def build():
             os.path.join(DATASETS_DIR, "full.parquet"),
         )
     )
+
+    if jsonld:
+        from jsonld_export import export_catalogs_jsonld
+
+        exported = export_catalogs_jsonld()
+        logger.info(
+            "Exported %d catalog records to %s",
+            exported,
+            os.path.join(DATASETS_DIR, "catalogs.jsonld"),
+        )
 
 
 @app.command()
@@ -1575,64 +1609,29 @@ def check_urls(record):
     # Check main link
     link = record.get("link")
     if link:
-        try:
-            parsed = urlparse(link)
-            if not parsed.scheme or not parsed.netloc:
-                issues.append({
-                    "issue_type": "INVALID_URL",
-                    "field": "link",
-                    "current_value": link,
-                    "suggested_action": f"Fix URL format: {link}",
-                })
-        except Exception:
-            issues.append({
-                "issue_type": "INVALID_URL",
-                "field": "link",
-                "current_value": link,
-                "suggested_action": f"Fix URL format: {link}",
-            })
+        issue = _validate_url_format(link, "link", "INVALID_URL")
+        if issue:
+            issues.append(issue)
     
     # Check owner link
     owner_link = record.get("owner", {}).get("link")
     if owner_link:
-        try:
-            parsed = urlparse(owner_link)
-            if not parsed.scheme or not parsed.netloc:
-                issues.append({
-                    "issue_type": "INVALID_OWNER_URL",
-                    "field": "owner.link",
-                    "current_value": owner_link,
-                    "suggested_action": f"Fix owner URL format: {owner_link}",
-                })
-        except Exception:
-            issues.append({
-                "issue_type": "INVALID_OWNER_URL",
-                "field": "owner.link",
-                "current_value": owner_link,
-                "suggested_action": f"Fix owner URL format: {owner_link}",
-            })
+        issue = _validate_url_format(owner_link, "owner.link", "INVALID_OWNER_URL")
+        if issue:
+            issues.append(issue)
     
     # Check endpoint URLs
     endpoints = record.get("endpoints", [])
     for idx, endpoint in enumerate(endpoints):
         endpoint_url = endpoint.get("url")
         if endpoint_url:
-            try:
-                parsed = urlparse(endpoint_url)
-                if not parsed.scheme or not parsed.netloc:
-                    issues.append({
-                        "issue_type": "INVALID_ENDPOINT_URL",
-                        "field": f"endpoints[{idx}].url",
-                        "current_value": endpoint_url,
-                        "suggested_action": f"Fix endpoint URL format: {endpoint_url}",
-                    })
-            except Exception:
-                issues.append({
-                    "issue_type": "INVALID_ENDPOINT_URL",
-                    "field": f"endpoints[{idx}].url",
-                    "current_value": endpoint_url,
-                    "suggested_action": f"Fix endpoint URL format: {endpoint_url}",
-                })
+            issue = _validate_url_format(
+                endpoint_url,
+                f"endpoints[{idx}].url",
+                "INVALID_ENDPOINT_URL",
+            )
+            if issue:
+                issues.append(issue)
     
     return issues if issues else None
 
@@ -1886,7 +1885,22 @@ def check_catalog_software_coherence(record):
     software_id = software.get("id")
     catalog_type = record.get("catalog_type")
     
-    if software_id and catalog_type and software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE:
+    if not software_id or not catalog_type:
+        return None
+
+    allowed = MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.get(software_id)
+    if allowed is not None:
+        if catalog_type not in allowed:
+            allowed_str = ", ".join(f"'{t}'" for t in sorted(allowed))
+            issues.append({
+                "issue_type": "CATALOG_SOFTWARE_MISMATCH",
+                "field": "catalog_type",
+                "current_value": f"catalog_type={catalog_type}, software.id={software_id}",
+                "suggested_action": (
+                    f"Update catalog_type to one of: {allowed_str} to match software.id"
+                ),
+            })
+    elif software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE:
         expected_type = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software_id]
         if catalog_type != expected_type:
             issues.append({
@@ -1899,14 +1913,293 @@ def check_catalog_software_coherence(record):
     return issues if issues else None
 
 
+def _iter_software_yaml_files() -> List[str]:
+    """Return software YAML files excluding dictionaries/templates."""
+    files = []
+    for root, _, filenames in os.walk(SOFTWARE_DIR):
+        for filename in filenames:
+            if not filename.endswith(".yaml"):
+                continue
+            if filename in {"types.yaml", "_template.tmpl"}:
+                continue
+            files.append(os.path.join(root, filename))
+    return files
+
+
+def _load_software_definitions() -> Dict[str, Dict[str, Any]]:
+    """Load software records keyed by software id."""
+    software_defs: Dict[str, Dict[str, Any]] = {}
+    for filename in _iter_software_yaml_files():
+        try:
+            with open(filename, "r", encoding="utf8") as f:
+                record = yaml.load(f, Loader=Loader)
+            if record and record.get("id"):
+                software_defs[record["id"]] = record
+        except Exception as e:
+            logger.warning("Failed to read software record %s: %s", filename, e)
+    return software_defs
+
+
+def _collect_catalog_software_ids() -> Counter:
+    """Collect software.id usage from entities and scheduled YAML files."""
+    usage = Counter()
+    roots = [ROOT_DIR, SCHEDULED_DIR]
+    for base in roots:
+        if not os.path.exists(base):
+            continue
+        for root, _, filenames in os.walk(base):
+            for filename in filenames:
+                if not filename.endswith(".yaml"):
+                    continue
+                filepath = os.path.join(root, filename)
+                try:
+                    with open(filepath, "r", encoding="utf8") as f:
+                        record = yaml.load(f, Loader=Loader)
+                    if not record:
+                        continue
+                    software_id = (record.get("software") or {}).get("id")
+                    if software_id:
+                        usage[software_id] += 1
+                except Exception as e:
+                    logger.warning("Failed to parse catalog file %s: %s", filepath, e)
+    return usage
+
+
+@app.command("validate-software")
+def validate_software(
+    min_license_coverage: float = typer.Option(
+        0.10,
+        "--min-license-coverage",
+        help="Minimum license coverage ratio (0..1)",
+    ),
+    min_version_coverage: float = typer.Option(
+        0.25,
+        "--min-version-coverage",
+        help="Minimum version coverage ratio (0..1)",
+    ),
+    min_docs_coverage: float = typer.Option(
+        0.65,
+        "--min-docs-coverage",
+        help="Minimum documentation_url coverage ratio (0..1)",
+    ),
+    min_repo_coverage: float = typer.Option(
+        0.55,
+        "--min-repo-coverage",
+        help="Minimum repository_url coverage ratio (0..1)",
+    ),
+):
+    """
+    Validate software registry quality gates.
+
+    Gates:
+    - schema validity against data/schemes/software.json
+    - profile checks from validate_software_profile()
+    - unresolved software IDs in references/catalogs
+    - minimum coverage thresholds for key fields
+    """
+    from cerberus import Validator
+
+    schema_file = os.path.join(_REPO_ROOT, "data", "schemes", "software.json")
+    with open(schema_file, "r", encoding="utf8") as f:
+        schema = json.load(f)
+    validator = Validator(schema)
+
+    files = _iter_software_yaml_files()
+    total = 0
+    present = {"license": 0, "version": 0, "documentation_url": 0, "repository_url": 0}
+    schema_errors = []
+    profile_issues = []
+    software_defs = {}
+
+    for filepath in files:
+        total += 1
+        with open(filepath, "r", encoding="utf8") as f:
+            record = yaml.load(f, Loader=Loader)
+        rel_path = os.path.relpath(filepath, _REPO_ROOT)
+
+        if not record or not record.get("id"):
+            schema_errors.append((rel_path, "Missing or invalid software record/id"))
+            continue
+
+        software_defs[record["id"]] = record
+
+        if not validator.validate(record, schema):
+            schema_errors.append((rel_path, dict(validator.errors)))
+
+        for issue in validate_software_profile(record):
+            issue["file_path"] = rel_path
+            profile_issues.append(issue)
+
+        for field in present.keys():
+            value = record.get(field)
+            if value not in (None, "", [], {}):
+                present[field] += 1
+
+    # Resolve IDs referenced in software_ids.yaml
+    software_ids_ref_path = os.path.join(_REPO_ROOT, "data", "reference", "software_ids.yaml")
+    with open(software_ids_ref_path, "r", encoding="utf8") as f:
+        software_ids_ref = set(yaml.safe_load(f) or [])
+    defined_ids = set(software_defs.keys())
+    ref_missing_defs = sorted(software_ids_ref - defined_ids)
+
+    # Resolve IDs used in catalogs
+    catalog_usage = _collect_catalog_software_ids()
+    used_ids = set(catalog_usage.keys())
+    used_missing_defs = sorted(used_ids - defined_ids)
+
+    coverage = {k: (present[k] / total if total else 0.0) for k in present.keys()}
+    threshold_failures = []
+    thresholds = {
+        "license": min_license_coverage,
+        "version": min_version_coverage,
+        "documentation_url": min_docs_coverage,
+        "repository_url": min_repo_coverage,
+    }
+    for field, minimum in thresholds.items():
+        if coverage[field] < minimum:
+            threshold_failures.append((field, coverage[field], minimum))
+
+    typer.echo("Software validation report")
+    typer.echo(f"  Total software records: {total}")
+    typer.echo(
+        "  Coverage: "
+        f"license={coverage['license']:.1%}, "
+        f"version={coverage['version']:.1%}, "
+        f"documentation_url={coverage['documentation_url']:.1%}, "
+        f"repository_url={coverage['repository_url']:.1%}"
+    )
+    typer.echo(f"  Schema errors: {len(schema_errors)}")
+    typer.echo(f"  Profile issues: {len(profile_issues)}")
+    typer.echo(f"  Reference IDs missing definitions: {len(ref_missing_defs)}")
+    typer.echo(f"  Catalog IDs missing definitions: {len(used_missing_defs)}")
+    typer.echo(f"  Threshold failures: {len(threshold_failures)}")
+
+    if schema_errors:
+        typer.echo("\nSchema errors (first 10):")
+        for rel_path, err in schema_errors[:10]:
+            typer.echo(f"  - {rel_path}: {err}")
+    if profile_issues:
+        typer.echo("\nProfile issues (first 10):")
+        for issue in profile_issues[:10]:
+            typer.echo(
+                f"  - {issue.get('file_path')}: "
+                f"{issue.get('issue_type')} ({issue.get('field')})"
+            )
+    if ref_missing_defs:
+        typer.echo("\nReference IDs with no software definition:")
+        for software_id in ref_missing_defs[:20]:
+            typer.echo(f"  - {software_id}")
+    if used_missing_defs:
+        typer.echo("\nCatalog software IDs with no software definition:")
+        for software_id in used_missing_defs[:20]:
+            count = catalog_usage.get(software_id, 0)
+            typer.echo(f"  - {software_id} (used by {count} record(s))")
+    if threshold_failures:
+        typer.echo("\nCoverage threshold failures:")
+        for field, value, minimum in threshold_failures:
+            typer.echo(f"  - {field}: {value:.1%} < {minimum:.1%}")
+
+    has_failures = any(
+        [
+            schema_errors,
+            profile_issues,
+            ref_missing_defs,
+            used_missing_defs,
+            threshold_failures,
+        ]
+    )
+    if has_failures:
+        raise typer.Exit(1)
+    typer.echo("\nAll software quality gates passed.")
+
+
 def validate_software_profile(software_record):
     """Validate extended software profile fields"""
     issues = []
+    allowed_subtypes = {
+        "data_portal_platform",
+        "scientific_repository_platform",
+        "geospatial_catalog_platform",
+        "microdata_catalog_platform",
+        "indicators_data_platform",
+        "metadata_registry_platform",
+        "protocol_or_api_server",
+        "geospatial_service_middleware",
+        "cms_or_app_framework",
+        "managed_saas_service",
+        "domain_data_infrastructure",
+        "general_software",
+    }
+    allowed_subtypes_by_category = {
+        "Open data portal": {
+            "data_portal_platform",
+            "cms_or_app_framework",
+            "managed_saas_service",
+            "protocol_or_api_server",
+            "general_software",
+        },
+        "Geoportal": {
+            "geospatial_catalog_platform",
+            "geospatial_service_middleware",
+            "protocol_or_api_server",
+            "managed_saas_service",
+            "domain_data_infrastructure",
+            "general_software",
+        },
+        "Scientific data repository": {
+            "scientific_repository_platform",
+            "managed_saas_service",
+            "domain_data_infrastructure",
+            "protocol_or_api_server",
+            "general_software",
+        },
+        "Microdata catalog": {
+            "microdata_catalog_platform",
+            "managed_saas_service",
+            "general_software",
+        },
+        "Indicators catalog": {
+            "indicators_data_platform",
+            "managed_saas_service",
+            "protocol_or_api_server",
+            "cms_or_app_framework",
+            "general_software",
+        },
+        "Metadata catalog": {
+            "metadata_registry_platform",
+            "protocol_or_api_server",
+            "general_software",
+        },
+    }
     
     if not software_record or software_record.get("type") != "Software":
         return issues
     
     software_id = software_record.get("id", "unknown")
+    subtype = software_record.get("subtype")
+    category = software_record.get("category")
+
+    if not subtype:
+        issues.append({
+            "issue_type": "SOFTWARE_SUBTYPE_MISSING",
+            "field": "subtype",
+            "current_value": subtype,
+            "suggested_action": "Add subtype using controlled taxonomy values",
+        })
+    elif subtype not in allowed_subtypes:
+        issues.append({
+            "issue_type": "SOFTWARE_SUBTYPE_INVALID",
+            "field": "subtype",
+            "current_value": subtype,
+            "suggested_action": "Use a supported subtype value from software schema",
+        })
+    elif category in allowed_subtypes_by_category and subtype not in allowed_subtypes_by_category[category]:
+        issues.append({
+            "issue_type": "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH",
+            "field": "subtype",
+            "current_value": f"category={category}, subtype={subtype}",
+            "suggested_action": "Align subtype with category-specific subtype taxonomy",
+        })
     
     # Validate version format
     version = software_record.get("version")
@@ -2236,11 +2529,6 @@ def check_contact_info(record):
     return issues if issues else None
 
 
-def check_path_country_consistency(record):
-    """(Deprecated) Path vs metadata country check is currently disabled."""
-    return None
-
-
 def check_status_directory_uid_consistency(record):
     """Check coherence between record status/uid and its logical directory."""
     issues = []
@@ -2269,17 +2557,18 @@ def check_status_directory_uid_consistency(record):
 def _load_valid_iso3166_2_codes():
     """Load valid ISO3166-2 subdivision codes from reference CSV. Returns a set of codes."""
     valid = set()
-    if not os.path.exists(SUBREGIONS_CSV):
+    subregions_csv = get_subregions_csv_path()
+    if not os.path.exists(subregions_csv):
         return valid
     try:
-        with open(SUBREGIONS_CSV, "r", encoding="utf-8") as f:
+        with open(subregions_csv, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 code = (row.get("code") or "").strip()
                 if code:
                     valid.add(code)
     except Exception as e:
-        logger.warning(f"Could not load ISO3166-2 codes from {SUBREGIONS_CSV}: {e}")
+        logger.warning(f"Could not load ISO3166-2 codes from {subregions_csv}: {e}")
     return valid
 
 
@@ -2316,7 +2605,7 @@ def check_subregion_iso3166_2(record):
                 "suggested_action": (
                     f"Subregion code '{sid}' is not a valid ISO3166-2 code. "
                     "Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). "
-                    "Reference: data/reference/subregions/IP2LOCATION-ISO3166-2.CSV"
+                    "Reference: data/reference/subregions/ISO3166-2.CSV"
                 ),
             })
 
@@ -2410,11 +2699,6 @@ def check_subregion_unk_placeholder(record):
             })
 
     return issues if issues else None
-
-
-def check_id_host_correlation(record):
-    """(Deprecated) ID vs host correlation check is currently disabled."""
-    return None
 
 
 def check_status_api_status_coherence_extended(record):
@@ -2571,11 +2855,6 @@ def check_title_quality(record):
     return issues if issues else None
 
 
-def check_owner_coverage_coherence(record):
-    """(Deprecated) Owner vs coverage coherence check is currently disabled."""
-    return None
-
-
 def check_rights_completeness(record):
     """Check that the rights object is not only partially populated."""
     rights = record.get("rights")
@@ -2719,6 +2998,41 @@ def _validate_url_format(url, field_path, issue_type):
             "suggested_action": f"Fix URL format: {url}",
         }
     return None
+
+
+def canonicalize_url(url):
+    """Normalize URL for duplicate comparison."""
+    if not url or not isinstance(url, str):
+        return None
+    raw = url.strip()
+    if not raw:
+        return None
+    try:
+        parsed = urlparse(raw)
+    except Exception:
+        return None
+    if not parsed.scheme or not parsed.netloc:
+        return None
+
+    scheme = (parsed.scheme or "").lower()
+    host = (parsed.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    if not host:
+        return None
+
+    port = parsed.port
+    if port and not ((scheme == "http" and port == 80) or (scheme == "https" and port == 443)):
+        host = f"{host}:{port}"
+
+    path = parsed.path or ""
+    if path == "/":
+        path = ""
+    elif path.endswith("/"):
+        path = path.rstrip("/")
+
+    query = f"?{parsed.query}" if parsed.query else ""
+    return f"{scheme}://{host}{path}{query}"
 
 
 def check_identifier_urls(record):
@@ -2881,16 +3195,17 @@ def _get_country_id_to_name():
 
 
 def _get_subregion_code_to_name():
-    """Load subregion code -> canonical name from IP2LOCATION-ISO3166-2.CSV."""
+    """Load subregion code -> canonical name from ISO 3166-2 reference CSV."""
     cache = getattr(_get_subregion_code_to_name, "_cache", None)
     if cache is not None:
         return cache
     mapping = {}
-    if not os.path.exists(SUBREGIONS_CSV):
+    subregions_csv = get_subregions_csv_path()
+    if not os.path.exists(subregions_csv):
         _get_subregion_code_to_name._cache = mapping
         return mapping
     try:
-        with open(SUBREGIONS_CSV, "r", encoding="utf-8") as f:
+        with open(subregions_csv, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 code = (row.get("code") or "").strip()
@@ -3093,6 +3408,8 @@ ISSUE_PRIORITY_MAP = {
         "INVALID_CATALOG_TYPE",
         "INVALID_STATUS",
         "CATALOG_TYPE_DIRECTORY_MISMATCH",
+        "DUPLICATE_LINK",
+        "DUPLICATE_LINK_NORMALIZED",
     ],
     "MEDIUM": [
         "MISSING_DESCRIPTION",
@@ -3882,6 +4199,10 @@ RULE_DESCRIPTIONS = {
         "Identifies records that share the same portal link. Multiple catalog entries pointing to "
         "the same URL may be duplicates; review and deduplicate or clarify distinct roles."
     ),
+    "DUPLICATE_LINK_NORMALIZED": (
+        "Identifies records that become duplicates after URL canonicalization "
+        "(scheme/host normalization, default ports, trailing slash handling)."
+    ),
     "RIGHTS_INCOMPLETE": (
         "Identifies records whose rights object has only one of license_id, license_name, or "
         "license_url. Add at least two of these fields so license information is complete and unambiguous."
@@ -4119,7 +4440,6 @@ def analyze_quality(output: str = None):
                     check_status_directory_uid_consistency,
                     check_status_api_status_coherence_extended,
                     check_title_quality,
-                    check_owner_coverage_coherence,
                     check_rights_completeness,
                     check_subregion_unk_placeholder,
                     check_subregion_iso3166_2,
@@ -4206,11 +4526,15 @@ def analyze_quality(output: str = None):
 
     # Detect duplicate links across records
     link_to_records = {}
+    normalized_link_to_records = {}
 
     for meta in records_metadata:
         link = meta.get("link")
         if link:
             link_to_records.setdefault(link, []).append(meta)
+            normalized = canonicalize_url(link)
+            if normalized:
+                normalized_link_to_records.setdefault(normalized, []).append(meta)
 
     def _ensure_record_entry(record_id, file_path, country_codes):
         primary_country = country_codes[0] if country_codes else "UNKNOWN"
@@ -4251,6 +4575,51 @@ def analyze_quality(output: str = None):
                 "file_path": file_path,
                 "record_id": record_id,
                 "priority": get_priority_level("DUPLICATE_LINK"),
+                "country_code": primary_country,
+            }
+
+            all_issues.append(base_issue)
+            entry = _ensure_record_entry(record_id, file_path, country_codes)
+            entry["unique_issues"].append(base_issue)
+
+            for country_code in entry.get("all_country_codes", country_codes):
+                issue_copy = base_issue.copy()
+                issue_copy["country_code"] = country_code
+                entry["issues"].append(issue_copy)
+
+    # Duplicate links by canonicalized URL
+    for normalized_link, metas in normalized_link_to_records.items():
+        if not normalized_link or len(metas) <= 1:
+            continue
+
+        unique_raw_links = {m.get("link") for m in metas if m.get("link")}
+        # exact duplicates are handled above; normalized rule focuses on canonical-only collisions
+        if len(unique_raw_links) <= 1:
+            continue
+
+        record_ids_for_link = [m["record_id"] for m in metas]
+
+        for meta in metas:
+            record_id = meta["record_id"]
+            file_path = meta["file_path"]
+            country_codes = meta["country_codes"] or ["UNKNOWN"]
+            primary_country = country_codes[0]
+
+            base_issue = {
+                "issue_type": "DUPLICATE_LINK_NORMALIZED",
+                "field": "link",
+                "current_value": {
+                    "normalized_link": normalized_link,
+                    "raw_link": meta.get("link"),
+                    "record_ids": record_ids_for_link,
+                },
+                "suggested_action": (
+                    "Multiple records resolve to the same canonical URL; review "
+                    "http/https, trailing slash, and host variants and deduplicate."
+                ),
+                "file_path": file_path,
+                "record_id": record_id,
+                "priority": get_priority_level("DUPLICATE_LINK_NORMALIZED"),
                 "country_code": primary_country,
             }
 
@@ -4407,6 +4776,16 @@ def analyze_quality(output: str = None):
     generate_rule_reports(issues_by_type, output_dir)
     rule_count = len([r for r in issues_by_type.keys() if issues_by_type[r]])
     typer.echo(f"  Rule reports: {rule_count} files in {os.path.join(output_dir, 'rules')}")
+
+    # Consistency guard between aggregate outputs
+    aggregate_count = len(all_issues)
+    rules_aggregate_count = sum(len(v) for v in issues_by_type.values())
+    if jsonl_count != aggregate_count or rules_aggregate_count != aggregate_count:
+        typer.echo("Error: inconsistent issue counts across generated reports.")
+        typer.echo(f"  all_issues: {aggregate_count}")
+        typer.echo(f"  full_report.jsonl: {jsonl_count}")
+        typer.echo(f"  rules/*.txt aggregate: {rules_aggregate_count}")
+        raise typer.Exit(1)
     
     # Summary output
     typer.echo(f"\nAnalysis complete!")

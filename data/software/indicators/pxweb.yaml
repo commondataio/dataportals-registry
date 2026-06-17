@@ -1,4 +1,5 @@
 category: Indicators catalog
+subtype: indicators_data_platform
 datatypes:
   datasets: Compatible
   fields: 'Yes'
@@ -9,15 +10,28 @@ has_api: 'Yes'
 has_bulk: 'No'
 id: pxweb
 website: https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/
+description: PX-Web is a statistical data dissemination software used to publish and
+  explore multidimensional statistics online, with support for tabular browsing, API
+  access, and standard statistical exchange formats.
+owner:
+  name: Statistics Sweden (SCB)
+  location:
+    country:
+      id: SE
+      name: Sweden
+logo_url: https://www.scb.se/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'Yes'
   stac: 'No'
@@ -36,7 +50,9 @@ storage_type: Structured
 type: Software
 repository_url: https://github.com/statisticssweden/pxweb
 documentation_url: https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/
-version: 2025.v1
+version: '2025.1'
+license:
+  type: Apache-2.0
 export_formats:
 - CSV
 - Excel

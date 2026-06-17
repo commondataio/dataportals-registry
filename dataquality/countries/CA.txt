@@ -1,0 +1,43 @@
+DATA QUALITY REPORT - COUNTRY: CA
+================================================================================
+Generated: 2026-06-17 15:17:23
+Country Code: CA
+Total Records with Issues: 3
+Total Issues Found: 3
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: CA/Federal/geo/wwwmappmycityca.yaml
+Record ID: wwwmappmycityca
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://mappmycity.ca/arcgis/rest/services', 'raw_link': 'http://www.mappmycity.ca/arcgis/rest/services', 'record_ids': ['wwwmappmycityca', 'mappmycityca']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CA/Federal/geo/mappmycityca.yaml
+Record ID: mappmycityca
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://mappmycity.ca/arcgis/rest/services', 'raw_link': 'http://mappmycity.ca/arcgis/rest/services', 'record_ids': ['wwwmappmycityca', 'mappmycityca']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD]
+Count: 1
+Priority: IMPORTANT
+
+File: CA/Federal/scientific/portalconpca.yaml
+Record ID: portalconpca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD
+Field: endpoints
+Current Value: {'software_id': 'datalad', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datalad' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK_NORMALIZED: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD: 1 issue

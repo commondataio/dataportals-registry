@@ -1,0 +1,98 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: National geoportal for discovering environmental geospatial metadata
+  and map services from the Norwegian Environment Agency (Miljødirektoratet). The
+  catalog uses Esri Geoportal Server with CSW 3.0, OpenSearch feeds, and ArcGIS Online
+  sign-in.
+endpoints:
+- type: esrigeo:geoportal
+  url: https://geoportal.miljodirektoratet.no/geoportal/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://geoportal.miljodirektoratet.no/geoportal/rest/metadata/search
+- type: csw300
+  url: https://geoportal.miljodirektoratet.no/geoportal/csw
+  version: 3.0.0
+- type: atom
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:json
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: rss
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: dcatus11
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:csv
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:kml
+  url: https://geoportal.miljodirektoratet.no/geoportal/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+id: geoportalmiljodirektoratetno
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://geoportal.miljodirektoratet.no
+name: Norwegian Environment Agency Geoportal
+owner:
+  link: https://www.miljodirektoratet.no/
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Environment Agency
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: esrigeo
+  name: Esri Geoportal Server
+status: active
+tags:
+- maps
+- geodata
+- environment
+- Norway
+- metadata
+- INSPIRE
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021877

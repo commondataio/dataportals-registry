@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: SE
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: SE
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE]
+Count: 2
+Priority: IMPORTANT
+
+File: SE/SE-O/opendata/wwwvgregionse.yaml
+Record ID: wwwvgregionse
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {'software_id': 'entryscape', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
+
+File: SE/Federal/opendata/oppnadatanaturvardsverketse.yaml
+Record ID: oppnadatanaturvardsverketse
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {'software_id': 'entryscape', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
 Count: 1
@@ -21,4 +39,5 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue

@@ -1,0 +1,585 @@
+DATA QUALITY REPORT - RULE: DUPLICATE_LINK_NORMALIZED
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: DUPLICATE_LINK_NORMALIZED
+Priority: IMPORTANT
+Total Issues Found: 62
+
+Rule: Identifies records that become duplicates after URL canonicalization (scheme/host normalization, default ports, trailing slash handling).
+
+=== SUMMARY BY COUNTRY ===
+
+CA: 2 issues
+CN: 2 issues
+DE: 10 issues
+FI: 2 issues
+FR: 17 issues
+GB: 2 issues
+GH: 2 issues
+IE: 2 issues
+MQ: 1 issue
+NL: 3 issues
+RU: 2 issues
+US: 14 issues
+World: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+opendata20170918t192802468zsdbitopendataarcgiscom: 2 issues
+datamadininairopendataarcgiscom: 2 issues
+wsdotwagov: 1 issue
+wwwwsdotwagov: 1 issue
+wwwciesincolumbiaedu: 1 issue
+ciesincolumbiaedu: 1 issue
+wwwnativehawaiiandataportalcom: 1 issue
+nativehawaiiandataportalcom: 1 issue
+nebraskamapgov: 1 issue
+wwwnebraskamapgov: 1 issue
+wwwcivicdatacom: 1 issue
+civicdatacom: 1 issue
+coastnoaagov: 1 issue
+wwwcoastnoaagov: 1 issue
+wwwgeospatialorg: 1 issue
+geospatialorg: 1 issue
+wwwwebdeploystatsghanagovgh: 1 issue
+webdeploystatsghanagovgh: 1 issue
+wwwnbsdccn: 1 issue
+nbsdccn: 1 issue
+wwwmappmycityca: 1 issue
+mappmycityca: 1 issue
+gisgovmurmanru: 1 issue
+gisnkgilcru: 1 issue
+wwwocgiscom: 1 issue
+ocgiscom: 1 issue
+wwwdasshacuk: 1 issue
+dasshacuk: 1 issue
+nationaalgeoregisternl: 1 issue
+wwwnationaalgeoregisternl: 1 issue
+wwwoffenedatenkoelnde: 1 issue
+offenedatenkoelnde: 1 issue
+wwwwdcclimatede: 1 issue
+wdcclimatede: 1 issue
+wwwbaysisbayernde: 1 issue
+baysisbayernde: 1 issue
+wwwgeoportaleberswaldede: 1 issue
+geoportaleberswaldede: 1 issue
+coronadatendeutschlandde: 1 issue
+wwwcoronadatendeutschlandde: 1 issue
+paikkatietoafi: 1 issue
+wwwpaikkatietoafi: 1 issue
+datatoulousemetropolefr: 1 issue
+wwwdatatoulousemetropolefr: 1 issue
+geomayennefr: 1 issue
+wwwgeomayennefr: 1 issue
+opendata56fr: 1 issue
+wwwopendata56fr: 1 issue
+wwwdataeconomiegouvfr: 1 issue
+dataeconomiegouvfr: 1 issue
+ppigenpdcfr: 1 issue
+wwwppigenpdcfr: 1 issue
+infofinancierefr: 1 issue
+wwwinfofinancierefr: 1 issue
+transparencesantegouvfr: 1 issue
+wwwtransparencesantegouvfr: 1 issue
+datagouvfr: 1 issue
+wwwdatagouvfr: 1 issue
+isdeie: 1 issue
+wwwisdeie: 1 issue
+
+=== ISSUES ===
+
+File: US/US-WA/geo/wsdotwagov.yaml
+Record ID: wsdotwagov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://wsdot.wa.gov/arcgis/rest/services", "raw_link": "https://wsdot.wa.gov/arcgis/rest/services", "record_ids": ["wsdotwagov", "wwwwsdotwagov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-WA/geo/wwwwsdotwagov.yaml
+Record ID: wwwwsdotwagov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://wsdot.wa.gov/arcgis/rest/services", "raw_link": "https://www.wsdot.wa.gov/arcgis/rest/services", "record_ids": ["wsdotwagov", "wwwwsdotwagov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-NY/geo/wwwciesincolumbiaedu.yaml
+Record ID: wwwciesincolumbiaedu
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://ciesin.columbia.edu/geoserver", "raw_link": "http://www.ciesin.columbia.edu:80/geoserver", "record_ids": ["wwwciesincolumbiaedu", "ciesincolumbiaedu"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-NY/geo/ciesincolumbiaedu.yaml
+Record ID: ciesincolumbiaedu
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://ciesin.columbia.edu/geoserver", "raw_link": "http://ciesin.columbia.edu:80/geoserver", "record_ids": ["wwwciesincolumbiaedu", "ciesincolumbiaedu"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-HI/opendata/wwwnativehawaiiandataportalcom.yaml
+Record ID: wwwnativehawaiiandataportalcom
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nativehawaiiandataportal.com", "raw_link": "https://www.nativehawaiiandataportal.com", "record_ids": ["wwwnativehawaiiandataportalcom", "nativehawaiiandataportalcom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/opendata/nativehawaiiandataportalcom.yaml
+Record ID: nativehawaiiandataportalcom
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nativehawaiiandataportal.com", "raw_link": "https://nativehawaiiandataportal.com", "record_ids": ["wwwnativehawaiiandataportalcom", "nativehawaiiandataportalcom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-NE/geo/nebraskamapgov.yaml
+Record ID: nebraskamapgov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nebraskamap.gov", "raw_link": "https://www.nebraskamap.gov", "record_ids": ["nebraskamapgov", "wwwnebraskamapgov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-NE/geo/wwwnebraskamapgov.yaml
+Record ID: wwwnebraskamapgov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nebraskamap.gov", "raw_link": "https://www.nebraskamap.gov/", "record_ids": ["nebraskamapgov", "wwwnebraskamapgov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/US-CA/geo/opendata20170918t192802468zsdbitopendataarcgiscom.yaml
+Record ID: opendata20170918t192802468zsdbitopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com", "raw_link": "https://opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com", "record_ids": ["opendata20170918t192802468zsdbitopendataarcgiscom", "opendata20170918t192802468zsdbitopendataarcgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: Unknown/geo/opendata20170918t192802468zsdbitopendataarcgiscom.yaml
+Record ID: opendata20170918t192802468zsdbitopendataarcgiscom
+Country: NL
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com", "raw_link": "https://opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com/", "record_ids": ["opendata20170918t192802468zsdbitopendataarcgiscom", "opendata20170918t192802468zsdbitopendataarcgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/opendata/wwwcivicdatacom.yaml
+Record ID: wwwcivicdatacom
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://civicdata.com", "raw_link": "https://www.civicdata.com", "record_ids": ["wwwcivicdatacom", "civicdatacom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/opendata/civicdatacom.yaml
+Record ID: civicdatacom
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://civicdata.com", "raw_link": "https://civicdata.com", "record_ids": ["wwwcivicdatacom", "civicdatacom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/geo/coastnoaagov.yaml
+Record ID: coastnoaagov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://coast.noaa.gov/arcgis/rest/services", "raw_link": "https://coast.noaa.gov/arcgis/rest/services", "record_ids": ["coastnoaagov", "wwwcoastnoaagov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/geo/wwwcoastnoaagov.yaml
+Record ID: wwwcoastnoaagov
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://coast.noaa.gov/arcgis/rest/services", "raw_link": "https://www.coast.noaa.gov/arcgis/rest/services", "record_ids": ["coastnoaagov", "wwwcoastnoaagov"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: US/Federal/geo/wwwgeospatialorg.yaml
+Record ID: wwwgeospatialorg
+Country: US
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://geo-spatial.org/geoserver", "raw_link": "http://www.geo-spatial.org/geoserver", "record_ids": ["wwwgeospatialorg", "geospatialorg"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: World/geo/geospatialorg.yaml
+Record ID: geospatialorg
+Country: World
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://geo-spatial.org/geoserver", "raw_link": "http://geo-spatial.org/geoserver", "record_ids": ["wwwgeospatialorg", "geospatialorg"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: GH/microdata/wwwwebdeploystatsghanagovgh.yaml
+Record ID: wwwwebdeploystatsghanagovgh
+Country: GH
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://webdeploy.statsghana.gov.gh/nada", "raw_link": "https://www.webdeploy.statsghana.gov.gh/nada", "record_ids": ["wwwwebdeploystatsghanagovgh", "webdeploystatsghanagovgh"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: GH/Federal/microdata/webdeploystatsghanagovgh.yaml
+Record ID: webdeploystatsghanagovgh
+Country: GH
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://webdeploy.statsghana.gov.gh/nada", "raw_link": "https://webdeploy.statsghana.gov.gh/nada", "record_ids": ["wwwwebdeploystatsghanagovgh", "webdeploystatsghanagovgh"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CN/Federal/scientific/wwwnbsdccn.yaml
+Record ID: wwwnbsdccn
+Country: CN
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nbsdc.cn", "raw_link": "https://www.nbsdc.cn", "record_ids": ["wwwnbsdccn", "nbsdccn"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CN/Federal/scientific/nbsdccn.yaml
+Record ID: nbsdccn
+Country: CN
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nbsdc.cn", "raw_link": "https://nbsdc.cn", "record_ids": ["wwwnbsdccn", "nbsdccn"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CA/Federal/geo/wwwmappmycityca.yaml
+Record ID: wwwmappmycityca
+Country: CA
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://mappmycity.ca/arcgis/rest/services", "raw_link": "http://www.mappmycity.ca/arcgis/rest/services", "record_ids": ["wwwmappmycityca", "mappmycityca"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CA/Federal/geo/mappmycityca.yaml
+Record ID: mappmycityca
+Country: CA
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://mappmycity.ca/arcgis/rest/services", "raw_link": "http://mappmycity.ca/arcgis/rest/services", "record_ids": ["wwwmappmycityca", "mappmycityca"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: RU/RU-MUR/geo/gisgovmurmanru.yaml
+Record ID: gisgovmurmanru
+Country: RU
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://gisn.kgilc.ru:6443/arcgis/rest/services", "raw_link": "https://gisn.kgilc.ru:6443/arcgis/rest/services/", "record_ids": ["gisgovmurmanru", "gisnkgilcru"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: RU/RU-MUR/geo/gisnkgilcru.yaml
+Record ID: gisnkgilcru
+Country: RU
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://gisn.kgilc.ru:6443/arcgis/rest/services", "raw_link": "https://gisn.kgilc.ru:6443/arcgis/rest/services", "record_ids": ["gisgovmurmanru", "gisnkgilcru"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: World/geo/wwwocgiscom.yaml
+Record ID: wwwocgiscom
+Country: World
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://ocgis.com/arcpub/arcgis/rest/services", "raw_link": "https://www.ocgis.com/arcpub/arcgis/rest/services", "record_ids": ["wwwocgiscom", "ocgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: World/geo/ocgiscom.yaml
+Record ID: ocgiscom
+Country: World
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://ocgis.com/arcpub/arcgis/rest/services", "raw_link": "https://ocgis.com/arcpub/arcgis/rest/services", "record_ids": ["wwwocgiscom", "ocgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: GB/Federal/geo/wwwdasshacuk.yaml
+Record ID: wwwdasshacuk
+Country: GB
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://dassh.ac.uk/geoserver", "raw_link": "http://www.dassh.ac.uk/geoserver", "record_ids": ["wwwdasshacuk", "dasshacuk"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: GB/Federal/geo/dasshacuk.yaml
+Record ID: dasshacuk
+Country: GB
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://dassh.ac.uk/geoserver", "raw_link": "http://dassh.ac.uk/geoserver", "record_ids": ["wwwdasshacuk", "dasshacuk"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: NL/Federal/geo/nationaalgeoregisternl.yaml
+Record ID: nationaalgeoregisternl
+Country: NL
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nationaalgeoregister.nl/geonetwork", "raw_link": "https://nationaalgeoregister.nl/geonetwork", "record_ids": ["nationaalgeoregisternl", "wwwnationaalgeoregisternl"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: NL/Federal/geo/wwwnationaalgeoregisternl.yaml
+Record ID: wwwnationaalgeoregisternl
+Country: NL
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://nationaalgeoregister.nl/geonetwork", "raw_link": "https://www.nationaalgeoregister.nl/geonetwork", "record_ids": ["nationaalgeoregisternl", "wwwnationaalgeoregisternl"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-NW/opendata/wwwoffenedatenkoelnde.yaml
+Record ID: wwwoffenedatenkoelnde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://offenedaten-koeln.de", "raw_link": "https://www.offenedaten-koeln.de", "record_ids": ["wwwoffenedatenkoelnde", "offenedatenkoelnde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-NW/opendata/offenedatenkoelnde.yaml
+Record ID: offenedatenkoelnde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://offenedaten-koeln.de", "raw_link": "https://offenedaten-koeln.de", "record_ids": ["wwwoffenedatenkoelnde", "offenedatenkoelnde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-HH/scientific/wwwwdcclimatede.yaml
+Record ID: wwwwdcclimatede
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://wdc-climate.de", "raw_link": "https://www.wdc-climate.de", "record_ids": ["wwwwdcclimatede", "wdcclimatede"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/scientific/wdcclimatede.yaml
+Record ID: wdcclimatede
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://wdc-climate.de", "raw_link": "https://wdc-climate.de", "record_ids": ["wwwwdcclimatede", "wdcclimatede"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BY/geo/wwwbaysisbayernde.yaml
+Record ID: wwwbaysisbayernde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://baysis.bayern.de/gis/services", "raw_link": "https://www.baysis.bayern.de/gis/services", "record_ids": ["wwwbaysisbayernde", "baysisbayernde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BY/geo/baysisbayernde.yaml
+Record ID: baysisbayernde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://baysis.bayern.de/gis/services", "raw_link": "https://baysis.bayern.de/gis/services", "record_ids": ["wwwbaysisbayernde", "baysisbayernde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BB/geo/wwwgeoportaleberswaldede.yaml
+Record ID: wwwgeoportaleberswaldede
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://geoportal.eberswalde.de:8080/geoserver", "raw_link": "http://www.geoportal.eberswalde.de:8080/geoserver", "record_ids": ["wwwgeoportaleberswaldede", "geoportaleberswaldede"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BB/geo/geoportaleberswaldede.yaml
+Record ID: geoportaleberswaldede
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://geoportal.eberswalde.de:8080/geoserver", "raw_link": "http://geoportal.eberswalde.de:8080/geoserver", "record_ids": ["wwwgeoportaleberswaldede", "geoportaleberswaldede"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/opendata/coronadatendeutschlandde.yaml
+Record ID: coronadatendeutschlandde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://corona-daten-deutschland.de", "raw_link": "https://corona-daten-deutschland.de", "record_ids": ["coronadatendeutschlandde", "wwwcoronadatendeutschlandde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/opendata/wwwcoronadatendeutschlandde.yaml
+Record ID: wwwcoronadatendeutschlandde
+Country: DE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://corona-daten-deutschland.de", "raw_link": "https://www.corona-daten-deutschland.de", "record_ids": ["coronadatendeutschlandde", "wwwcoronadatendeutschlandde"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FI/FI-19/geo/paikkatietoafi.yaml
+Record ID: paikkatietoafi
+Country: FI
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://paikkatietoa.fi/server/rest/services", "raw_link": "http://paikkatietoa.fi/server/rest/services", "record_ids": ["paikkatietoafi", "wwwpaikkatietoafi"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FI/FI-19/geo/wwwpaikkatietoafi.yaml
+Record ID: wwwpaikkatietoafi
+Country: FI
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://paikkatietoa.fi/server/rest/services", "raw_link": "http://www.paikkatietoa.fi/server/rest/services", "record_ids": ["paikkatietoafi", "wwwpaikkatietoafi"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-OCC/opendata/datatoulousemetropolefr.yaml
+Record ID: datatoulousemetropolefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.toulouse-metropole.fr", "raw_link": "https://data.toulouse-metropole.fr", "record_ids": ["datatoulousemetropolefr", "wwwdatatoulousemetropolefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-OCC/opendata/wwwdatatoulousemetropolefr.yaml
+Record ID: wwwdatatoulousemetropolefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.toulouse-metropole.fr", "raw_link": "https://www.data.toulouse-metropole.fr", "record_ids": ["datatoulousemetropolefr", "wwwdatatoulousemetropolefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-PDL/geo/geomayennefr.yaml
+Record ID: geomayennefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://geomayenne.fr/arcgis/rest/services", "raw_link": "https://geomayenne.fr/arcgis/rest/services", "record_ids": ["geomayennefr", "wwwgeomayennefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-PDL/geo/wwwgeomayennefr.yaml
+Record ID: wwwgeomayennefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://geomayenne.fr/arcgis/rest/services", "raw_link": "https://www.geomayenne.fr/arcgis/rest/services", "record_ids": ["geomayennefr", "wwwgeomayennefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-972/geo/datamadininairopendataarcgiscom.yaml
+Record ID: datamadininairopendataarcgiscom
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data-madininair.opendata.arcgis.com", "raw_link": "https://data-madininair.opendata.arcgis.com", "record_ids": ["datamadininairopendataarcgiscom", "datamadininairopendataarcgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: Unknown/geo/datamadininairopendataarcgiscom.yaml
+Record ID: datamadininairopendataarcgiscom
+Country: MQ
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data-madininair.opendata.arcgis.com", "raw_link": "https://data-madininair.opendata.arcgis.com/", "record_ids": ["datamadininairopendataarcgiscom", "datamadininairopendataarcgiscom"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-BRE/opendata/opendata56fr.yaml
+Record ID: opendata56fr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://opendata56.fr", "raw_link": "https://opendata56.fr", "record_ids": ["opendata56fr", "wwwopendata56fr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-BRE/opendata/wwwopendata56fr.yaml
+Record ID: wwwopendata56fr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://opendata56.fr", "raw_link": "https://www.opendata56.fr", "record_ids": ["opendata56fr", "wwwopendata56fr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-IDF/opendata/wwwdataeconomiegouvfr.yaml
+Record ID: wwwdataeconomiegouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.economie.gouv.fr", "raw_link": "https://www.data.economie.gouv.fr", "record_ids": ["wwwdataeconomiegouvfr", "dataeconomiegouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-IDF/opendata/dataeconomiegouvfr.yaml
+Record ID: dataeconomiegouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.economie.gouv.fr", "raw_link": "https://data.economie.gouv.fr", "record_ids": ["wwwdataeconomiegouvfr", "dataeconomiegouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-HDF/geo/ppigenpdcfr.yaml
+Record ID: ppigenpdcfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://ppige-npdc.fr/geoserver", "raw_link": "https://ppige-npdc.fr/geoserver", "record_ids": ["ppigenpdcfr", "wwwppigenpdcfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/FR-HDF/geo/wwwppigenpdcfr.yaml
+Record ID: wwwppigenpdcfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://ppige-npdc.fr/geoserver", "raw_link": "https://www.ppige-npdc.fr:443/geoserver", "record_ids": ["ppigenpdcfr", "wwwppigenpdcfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/infofinancierefr.yaml
+Record ID: infofinancierefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://info-financiere.fr", "raw_link": "https://info-financiere.fr", "record_ids": ["infofinancierefr", "wwwinfofinancierefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/wwwinfofinancierefr.yaml
+Record ID: wwwinfofinancierefr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://info-financiere.fr", "raw_link": "https://www.info-financiere.fr", "record_ids": ["infofinancierefr", "wwwinfofinancierefr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/transparencesantegouvfr.yaml
+Record ID: transparencesantegouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://transparence.sante.gouv.fr", "raw_link": "https://transparence.sante.gouv.fr", "record_ids": ["transparencesantegouvfr", "wwwtransparencesantegouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/wwwtransparencesantegouvfr.yaml
+Record ID: wwwtransparencesantegouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://transparence.sante.gouv.fr", "raw_link": "https://www.transparence.sante.gouv.fr", "record_ids": ["transparencesantegouvfr", "wwwtransparencesantegouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/datagouvfr.yaml
+Record ID: datagouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.gouv.fr", "raw_link": "https://data.gouv.fr", "record_ids": ["datagouvfr", "wwwdatagouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FR/Federal/opendata/wwwdatagouvfr.yaml
+Record ID: wwwdatagouvfr
+Country: FR
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "https://data.gouv.fr", "raw_link": "https://www.data.gouv.fr", "record_ids": ["datagouvfr", "wwwdatagouvfr"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: IE/Federal/geo/isdeie.yaml
+Record ID: isdeie
+Country: IE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://isde.ie/geonetwork", "raw_link": "http://isde.ie/geonetwork", "record_ids": ["isdeie", "wwwisdeie"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Country: IE
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {"normalized_link": "http://isde.ie/geonetwork", "raw_link": "http://www.isde.ie/geonetwork", "record_ids": ["isdeie", "wwwisdeie"]}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.

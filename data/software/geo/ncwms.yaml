@@ -1,4 +1,5 @@
 category: Geoportal
+subtype: geospatial_service_middleware
 datatypes:
   datasets: Compatible
   fields: 'Yes'
@@ -8,16 +9,31 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: ncwms
+name: ncWMS
 website: https://reading-escience-centre.github.io/ncwms/
+description: ncWMS is an open-source web map service for serving NetCDF and other
+  multidimensional environmental data as dynamic map layers. It provides OGC WMS support
+  for scientific and meteorological datasets, enabling rendering, styling, and extraction
+  workflows for geospatial portals and clients.
+owner:
+  name: Reading e-Science Centre, University of Reading
+  location:
+    country:
+      id: GB
+      name: United Kingdom
+logo_url: https://reading-escience-centre.github.io/ncwms/images/ncwms_logo.png
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
@@ -25,7 +41,6 @@ metadata_support:
   wcs: 'No'
   wfs: 'No'
   wms: 'Yes'
-name: ncWMS
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
@@ -36,7 +51,7 @@ storage_type: Structured
 type: Software
 repository_url: https://github.com/Reading-eScience-Centre/ncwms
 documentation_url: https://reading-escience-centre.github.io/ncwms/
-version: ncwms-2.5.2
+version: 2.5.2
 export_formats:
 - CSW
 - GML
@@ -48,4 +63,4 @@ capabilities:
 - REST API
 - WMS service
 changelog_url: https://github.com/Reading-eScience-Centre/ncwms/releases
-last_updated: '2025-12-25T09:19:57Z'
+last_updated: '2026-03-31T12:00:00Z'

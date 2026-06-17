@@ -1,23 +1,38 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'Yes'
 has_api: 'Yes'
-has_bulk: 'No'
+has_bulk: 'Yes'
 id: galaxy
+website: https://usegalaxy.org
+description: Galaxy is an open-source web-based platform for accessible, reproducible,
+  and transparent computational biomedical research, supporting data analysis workflows,
+  tool integration, and collaborative science.
+owner:
+  name: Galaxy Project
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://avatars.githubusercontent.com/u/851546?s=200&v=4
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
@@ -25,13 +40,12 @@ metadata_support:
   wfs: 'No'
   wms: 'No'
 name: Galaxy
-website: https://usegalaxy.org
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
 storage_type: Both
 type: Software
 repository_url: https://github.com/galaxyproject/galaxy
@@ -45,5 +59,11 @@ export_formats:
 - XML
 capabilities:
 - REST API
+- Workflow orchestration
+- Reproducible analysis histories
+- Tool and plugin integration
 changelog_url: https://github.com/galaxyproject/galaxy/releases
-last_updated: '2025-12-25T09:25:35Z'
+license:
+  type: MIT
+  url: https://github.com/galaxyproject/galaxy/blob/dev/LICENSE.txt
+last_updated: '2026-03-31T12:00:00Z'

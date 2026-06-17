@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -20,6 +20,11 @@ coverage:
 description: Data catalog hosted by the School of Ocean and Earth Science and Technology
   (SOEST) at the University of Hawaiʻi, providing access to oceanographic, climate,
   satellite, and related data sets.
+endpoints:
+- type: thredds:catalog
+  url: http://ofes.soest.hawaii.edu:9191/thredds/catalog.xml
+- type: thredds:info
+  url: http://ofes.soest.hawaii.edu:9191/thredds/serverInfo.xml
 id: ofessoesthawaiiedu
 langs:
 - id: EN

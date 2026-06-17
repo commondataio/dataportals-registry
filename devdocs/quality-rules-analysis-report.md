@@ -12,16 +12,16 @@ The `analyze-quality` command runs **27 quality check functions** plus **1 cross
 
 **Key findings:**
 
-- One implemented check (`check_subregion_iso3166_2`) is **not registered** in the analyze-quality pipeline
-- Several schema-constrained fields lack **value validation** rules
-- Multiple schema fields have **no quality checks** at all
-- Three checks are **deprecated** (return `None`) but remain in the pipeline
+- `check_subregion_iso3166_2` is registered in the analyze-quality pipeline
+- Several schema-constrained fields still benefit from stricter cross-field and cross-record validation
+- Multiple schema fields have no dedicated quality checks yet
+- Deprecated stub checks should stay out of the execution list
 
 ---
 
 ## 2. Existing Rules Inventory
 
-###  2.1 Active Check Functions (27)
+###  2.1 Active Check Functions
 
 
 | Check Function                               | Issue Types                                                                                                                                                                               | Priority           | Description                             |
@@ -64,27 +64,27 @@ The `analyze-quality` command runs **27 quality check functions** plus **1 cross
 | Duplicate link detection | DUPLICATE_LINK | IMPORTANT | Multiple records sharing same link |
 
 
-### 2.3 Implemented but NOT Registered
+### 2.3 Implemented and Registered
 
 
 | Check Function              | Issue Type                  | Status                                                                                                                                                     |
 | --------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `check_subregion_iso3166_2` | SUBREGION_INVALID_ISO3166_2 | **Defined and in ISSUE_PRIORITY_MAP but NOT in the checks list** – subregion codes validated against `data/reference/subregions/IP2LOCATION-ISO3166-2.CSV` |
+| `check_subregion_iso3166_2` | SUBREGION_INVALID_ISO3166_2 | Defined and registered in `analyze_quality()` – subregion codes validated against `data/reference/subregions/ISO3166-2.CSV` |
 
 
-**Recommendation:** Add `check_subregion_iso3166_2` to the `checks` list in `analyze_quality()`.
+**Recommendation:** Keep `check_subregion_iso3166_2` in the checks list and improve the reference source to reduce false positives.
 
 ### 2.4 Deprecated / Unused Checks
 
 
 | Check Function                   | In Pipeline | Original Purpose                                             |
 | -------------------------------- | ----------- | ------------------------------------------------------------ |
-| `check_owner_coverage_coherence` | Yes         | Owner vs coverage coherence – returns `None` (deprecated)    |
-| `check_path_country_consistency` | No          | Path vs metadata country – defined but not in checks list    |
-| `check_id_host_correlation`      | No          | ID vs link host correlation – defined but not in checks list |
+| `check_owner_coverage_coherence` | No          | Owner vs coverage coherence – deprecated stub (`return None`) |
+| `check_path_country_consistency` | No          | Path vs metadata country – deprecated stub (`return None`)    |
+| `check_id_host_correlation`      | No          | ID vs link host correlation – deprecated stub (`return None`) |
 
 
-`check_owner_coverage_coherence` is in the pipeline but always returns `None`. Consider removing it or re-implementing if still desired.
+Deprecated stubs are currently excluded from the checks execution list. Keep them out of the runtime pipeline unless re-implemented with real issue emission.
 
 ---
 

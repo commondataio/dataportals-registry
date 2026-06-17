@@ -102,12 +102,12 @@ Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jso
 
 ## Data exports
 
-Latest snapshot (2026-02-21):
+Latest snapshot (2026-06-17):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): 13,877 catalog records
-- `data/datasets/software.jsonl` (+ `.zst`): 136 software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): scheduled sources to crawl
-- `data/datasets/full.jsonl` (+ `.zst`): 13,877 combined entities + scheduled records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): 14,470 catalog records
+- `data/datasets/software.jsonl` (+ `.zst`): 135 software/platform definitions
+- `data/datasets/scheduled.jsonl` (+ `.zst`): scheduled sources to crawl (empty; all promoted or removed)
+- `data/datasets/full.jsonl` (+ `.zst`): 14,470 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 - `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
 
@@ -124,6 +124,12 @@ How to find catalogs in this registry:
 
 **By catalog type**  
 - Under each country (or `scheduled/`), type folders: `opendata/`, `geo/`, `scientific/`, `microdata/`, `indicators/`, `ml/`, `search/`, `api/`, `marketplace/`, `other/`.
+
+**By software taxonomy**  
+- Software definitions in `data/software/` include:
+  - `category`: domain family (Open data portal, Geoportal, Scientific data repository, etc.)
+  - `subtype`: product form/deployment model (for example `data_portal_platform`, `managed_saas_service`, `protocol_or_api_server`)
+- Use `subtype` for cross-category comparisons such as self-hosted platforms vs managed SaaS vs protocol-first components.
 
 **From export artifacts**  
 - **catalogs.jsonl** / **full.jsonl**: line-delimited JSON (entities only, or entities + scheduled).  
@@ -155,7 +161,17 @@ python scripts/builder.py analyze-quality
 
 Reports are written to `dataquality/` (e.g. `full_report.txt`, `primary_priority.jsonl`, and per-country/per-priority breakouts).
 
-## Re3data Enrichment
+See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md) and `dataquality/full_report.txt` for current findings. Helper scripts (`scripts/fix_*_issues.py`) can apply automated fixes based on reported priorities.
+
+## Agent and governance documentation
+
+- [llms.txt](llms.txt) — concise index for LLM agents
+- [DATASHEET.md](DATASHEET.md) — dataset characteristics, bias, and limitations
+- [CITATION.cff](CITATION.cff) — academic citation metadata
+- [SECURITY.md](SECURITY.md) — vulnerability reporting
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — community standards
+
+## Re3Data Enrichment
 
 Catalogs with re3data identifiers can be automatically enriched with metadata from [re3data.org](https://www.re3data.org). The enrichment adds a `_re3data` field containing keywords, content types, contact information, persistent identifiers, software information, and more.
 
@@ -202,19 +218,9 @@ The script automatically:
 
 See [devdocs/ckan_ecosystem_sync.md](devdocs/ckan_ecosystem_sync.md) for detailed documentation.
 
-This generates comprehensive reports on:
-- Duplicate UID's and ID's
-- Missing required fields
-- Filename mismatches
-- Empty files and parsing errors
-
-See `devdocs/duplicates_and_errors_report.md` for detailed findings.
-Generated reports and per-country breakouts are stored in `dataquality/` alongside a summary `data_quality_report.txt`. Helper scripts (`scripts/fix_*_issues.py`) can be used to apply automated fixes based on the reported priorities.
-
 ## How to contribute?
 
 If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/commondataio/dataportals-registry/pulls) or write an [issue](https://github.com/commondataio/dataportals-registry/issues).
-
 
 ## Data sources
 

@@ -558,6 +558,13 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "statsuite": "Indicators catalog",
 }
 
+# Primary catalog_type used when inferring type from software (e.g. add-single). Some
+# platforms are also valid under additional types; see MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.
+MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
+    "drupal": frozenset({"Open data portal", "Geoportal"}),
+    "publishmydata": frozenset({"Open data portal", "Metadata catalog"}),
+}
+
 CUSTOM_SOFTWARE_KEYS = [
     "searchengines",
     "ml",
@@ -640,6 +647,7 @@ SOFTWARE_REPOSITORY_URLS = {
     "mycore": "https://github.com/MyCoRe-Org/mycore",
     "dlibra": "https://github.com/dlibra",
     "stacserver": "https://github.com/stac-utils/stac-server",
+    "stacbrowser": "https://github.com/radiantearth/stac-browser",
     "datacubews": "https://github.com/opendatacube",
     "ncwms": "https://github.com/Reading-eScience-Centre/ncwms",
     "rasdaman": "https://github.com/rasdaman",
@@ -713,6 +721,7 @@ SOFTWARE_DOCUMENTATION_URLS = {
     "mycore": "https://www.mycore.de/documentation",
     "dlibra": "https://dlibra.psnc.pl",
     "stacserver": "https://github.com/stac-utils/stac-server",
+    "stacbrowser": "https://github.com/radiantearth/stac-browser#readme",
     "datacubews": "https://datacube-core.readthedocs.io",
     "ncwms": "https://reading-escience-centre.github.io/ncwms/",
     "rasdaman": "https://rasdaman.com/documentation",

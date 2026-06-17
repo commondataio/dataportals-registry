@@ -15,14 +15,7 @@ coverage:
     macroregion:
       id: '021'
       name: Northern America
-description: 'This open SAR dataset contains > 100 Capella Space scenes.
-
-
-  Imaging modes: Spotlight, Stripmap and Sliding Spotlight.
-
-
-  Image product types: Single Look Complex (SLC), Geocoded Terrain Corrected (GEO),
-  Geocoded Ellipsoid Corrected (GEC) and Sensor Independent Complex Data (SICD)'
+description: 'Open SAR dataset of roughly 1000 Capella Space collects, browsable via STAC on a public S3 bucket; interactive map at https://felt.com/map/Capella-Space-Open-Data-bB24xsH3SuiUlpMdDbVRaA. Imaging modes: Spotlight, Stripmap, Sliding Spotlight. Image product types: Single Look Complex (SLC), Geocoded Terrain Corrected (GEO), Geocoded Ellipsoid Corrected (GEC), Sensor Independent Complex Data (SICD), Sensor Independent Derived Data (SIDD), Compensated Phase History Data (CPHD). Powered by STAC Browser.'
 endpoints:
 - type: stacserverapi
   url: https://capella-open-data.s3.us-west-2.amazonaws.com/stac/catalog.json
@@ -33,6 +26,7 @@ langs:
 link: https://capella-open-data.s3.us-west-2.amazonaws.com/stac/catalog.json
 name: Capella Space Open Data
 owner:
+  link: https://www.capellaspace.com/
   location:
     country:
       id: US
@@ -40,7 +34,6 @@ owner:
     level: 20
   name: Capella Space
   type: Business
-  link: https://amazonaws.com
 properties:
   has_doi: false
   transferable_topics: true
@@ -52,8 +45,8 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: stacserver
-  name: Stac-server
+  id: stacbrowser
+  name: STAC Browser
 status: active
 tags:
 - geospatial

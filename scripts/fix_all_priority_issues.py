@@ -20,7 +20,11 @@ except ImportError:
 
 # Import constants
 sys.path.insert(0, str(Path(__file__).parent))
-from constants import MAP_SOFTWARE_OWNER_CATALOG_TYPE, COUNTRIES
+from constants import (
+    MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
+    MAP_SOFTWARE_OWNER_CATALOG_TYPE,
+    COUNTRIES,
+)
 
 BASE_DIR = Path(__file__).parent.parent
 ISSUES_FILE = BASE_DIR / "dataquality" / "primary_priority.jsonl"
@@ -84,14 +88,31 @@ class IssueFixer:
         """Fix CATALOG_SOFTWARE_MISMATCH by updating catalog_type to match software.id"""
         software = self.record.get("software", {})
         software_id = software.get("id")
-        
-        if software_id and software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE:
+        current_type = self.record.get("catalog_type", "")
+
+        if not software_id:
+            return False
+
+        allowed = MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.get(software_id)
+        if allowed is not None:
+            if current_type in allowed:
+                return False
+            if software_id not in MAP_SOFTWARE_OWNER_CATALOG_TYPE:
+                return False
             expected_type = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software_id]
-            current_type = self.record.get("catalog_type", "")
-            
+            self.record["catalog_type"] = expected_type
+            self.changes.append(
+                f"Updated catalog_type from '{current_type}' to '{expected_type}'"
+            )
+            return True
+
+        if software_id in MAP_SOFTWARE_OWNER_CATALOG_TYPE:
+            expected_type = MAP_SOFTWARE_OWNER_CATALOG_TYPE[software_id]
             if current_type != expected_type:
                 self.record["catalog_type"] = expected_type
-                self.changes.append(f"Updated catalog_type from '{current_type}' to '{expected_type}'")
+                self.changes.append(
+                    f"Updated catalog_type from '{current_type}' to '{expected_type}'"
+                )
                 return True
         return False
     

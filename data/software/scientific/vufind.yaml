@@ -1,4 +1,5 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
   datasets: 'Yes'
   fields: 'No'
@@ -8,16 +9,29 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: vufind
+description: VuFind is an open-source discovery platform used by libraries to index
+  and search catalogs, digital repositories, and research outputs through a unified
+  interface with faceted search and API-based integrations.
+owner:
+  name: Open Library Foundation
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://vufind.org/wiki/lib/tpl/vufind_wiki/images/logo.png
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
-  custom_api: 'No'
-  dcat: Uncertain
-  oai-pmh: Uncertain
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
   ogcrecords: 'No'
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
@@ -36,7 +50,7 @@ storage_type: Raw
 type: Software
 repository_url: https://github.com/vufind-org/vufind
 documentation_url: https://vufind.org/wiki
-version: 11.0.0
+version: 11.0.2
 export_formats:
 - BibTeX
 - JSON
@@ -47,5 +61,8 @@ capabilities:
 - REST API
 - Organization management
 - Topic categorization
+license:
+  type: GPL-2.0
+  url: https://www.gnu.org/licenses/gpl-2.0.html
 changelog_url: https://github.com/vufind-org/vufind/releases
-last_updated: '2025-12-25T09:26:45Z'
+last_updated: '2026-03-31T12:00:00Z'

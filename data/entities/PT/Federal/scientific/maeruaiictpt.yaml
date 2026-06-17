@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -21,6 +21,14 @@ description: The Tropical Research Institute (IICT) promotes tropical knowledge 
   heritage. IICT holds several botanical and zoological collections, mainly representing
   the flora and fauna of Angola, Cape Verde, Guinea-Bissau, Mozambique, São Tomé and
   Príncipe.
+endpoints:
+- type: dcat:ttl
+  url: http://maerua.iict.pt/dcat
+- type: ipt:dataset
+  url: http://maerua.iict.pt/inventory/dataset
+- type: rss
+  url: http://maerua.iict.pt/rss.do
+  version: '2.0'
 id: maeruaiictpt
 langs:
 - id: PT
@@ -38,7 +46,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       name: World
 description: THREDDS Data Server Catalog. open data portal. managed by Not available.
   powered by Thredds. accessible at 193.144.42.171:8080.
+endpoints:
+- type: thredds:catalog
+  url: http://193.144.42.171:8080/thredds/catalog.xml
+- type: thredds:info
+  url: http://193.144.42.171:8080/thredds/serverInfo.xml
 id: '19314442171'
 langs:
 - id: PT

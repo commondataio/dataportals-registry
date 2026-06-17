@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: IE
+================================================================================
+Generated: 2026-06-17 15:17:23
+Country Code: IE
+Total Records with Issues: 2
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: IE/Federal/geo/isdeie.yaml
+Record ID: isdeie
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://isde.ie/geonetwork', 'raw_link': 'http://isde.ie/geonetwork', 'record_ids': ['isdeie', 'wwwisdeie']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: IE/Federal/geo/wwwisdeie.yaml
+Record ID: wwwisdeie
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://isde.ie/geonetwork', 'raw_link': 'http://www.isde.ie/geonetwork', 'record_ids': ['isdeie', 'wwwisdeie']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK_NORMALIZED: 2 issues

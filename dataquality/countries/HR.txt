@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: HR
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: HR
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,26 @@ Field: endpoints
 Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA]
+Count: 2
+Priority: IMPORTANT
+
+File: HR/Federal/scientific/dabarsrcehr.yaml
+Record ID: dabarsrcehr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {'software_id': 'islandora', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions
+
+File: HR/Federal/scientific/datafulirirbhr.yaml
+Record ID: datafulirirbhr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {'software_id': 'islandora', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA: 2 issues

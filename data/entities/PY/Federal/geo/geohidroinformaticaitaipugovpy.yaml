@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -19,7 +20,11 @@ description: El Centro Internacional de Hidroinformática - CIH fue creado en el
   Se especializa en temas ambientales, sociales y tecnológicos, promoviendo la gestión
   eficiente de recursos hídricos y ambientales a través de herramientas y métodos
   de gestión construidos en software de código abierto.
-endpoints: []
+endpoints:
+- type: geonode:datasets
+  url: https://geohidroinformatica.itaipu.gov.py/api/datasets/
+- type: geonode:documents
+  url: https://geohidroinformatica.itaipu.gov.py/api/documents/
 id: geohidroinformaticaitaipugovpy
 langs:
 - id: ES

@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: INSPIRE (SI) Data Portal. Here you will find data, services and maps
+  and more. Search over data sets, services and maps.
+endpoints:
+- type: geonetwork:query
+  url: https://eprostor.gov.si/imps/srv/eng/q
+- type: openapi
+  url: https://eprostor.gov.si/imps/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://eprostor.gov.si/imps/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://eprostor.gov.si/imps/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://eprostor.gov.si/imps/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: eprostorgovsi
+langs:
+- id: EN
+  name: English
+link: https://eprostor.gov.si/imps
+name: Slovenski INSPIRE metapodatkovni sistem - INSPIRE (SI)
+owner:
+  link: https://www.gov.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+  name: GEODET5KA UPRAVA REPUBLIKE SLOVENIJE
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- INSPIRE
+- metadata
+- maps
+- data catalog
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00001487

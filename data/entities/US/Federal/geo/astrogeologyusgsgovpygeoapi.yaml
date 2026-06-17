@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: OGC API Features compliant access to planetary vector data sets from
+  USGS Astrogeology.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://astrogeology.usgs.gov/pygeoapi/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://astrogeology.usgs.gov/pygeoapi/collections/?f=json
+  version: '1.0'
+id: astrogeologyusgsgovpygeoapi
+langs:
+- id: EN
+  name: English
+link: https://astrogeology.usgs.gov/pygeoapi/
+name: USGS Astrogeology Planetary Vector Data API
+owner:
+  link: https://www.usgs.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: USGS Astrogeology Science Center
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: cc-by
+  license_name: CC-BY 4.0 license
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: https://creativecommons.org/licenses/by/4.0/
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- Astrogeology
+- OGC API
+- Planetary
+- USGS
+- geospatial
+- pygeoapi
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00021814

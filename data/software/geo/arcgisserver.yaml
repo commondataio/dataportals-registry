@@ -1,4 +1,5 @@
 category: Geoportal
+subtype: geospatial_service_middleware
 datatypes:
   datasets: Compatible
   fields: 'Yes'
@@ -8,16 +9,32 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: arcgisserver
-website: https://enterprise.arcgis.com/ru/server/
+name: ArcGIS Server
+website: https://enterprise.arcgis.com/en/server/
+description: ArcGIS Server is Esri's on-premises and private-cloud GIS server for
+  publishing maps, feature layers, imagery, and geoprocessing as web services. It
+  provides REST and SOAP endpoints plus OGC interfaces (WMS, WFS, WCS), CSW catalog
+  services, and integrates with ArcGIS Enterprise components such as Portal for ArcGIS
+  for security, licensing, and content management in regulated and air-gapped environments.
+owner:
+  name: Esri
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://developers.arcgis.com/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'Yes'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'Yes'
   oai-pmh: 'No'
-  ogcrecords: 'No'
+  ogcrecords: Limited
   openaire: 'No'
-  opensearch: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
@@ -25,16 +42,17 @@ metadata_support:
   wcs: 'Yes'
   wfs: 'Yes'
   wms: 'Yes'
-name: ArcGIS Server
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
 rights_management:
   licensing_type: Global
   supports_licenses: 'Yes'
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
 storage_type: Structured
 type: Software
-documentation_url: https://enterprise.arcgis.com/docs
+documentation_url: https://enterprise.arcgis.com/en/server/latest/
 export_formats:
 - CSW
 - GML
@@ -48,4 +66,4 @@ capabilities:
 - WMS service
 - WFS service
 - WCS service
-last_updated: '2025-12-25T09:19:43Z'
+last_updated: '2026-03-30T12:00:00Z'

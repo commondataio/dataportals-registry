@@ -1,9 +1,12 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Data search engine
 content_types:
 - dataset
+- publication
+- software
 coverage:
 - location:
     country:
@@ -13,9 +16,16 @@ coverage:
     macroregion:
       id: World
       name: World
-description: OpenAIRE Explore is a data catalog that aggregates scholarly research
-  products, datasets, and related metadata from various research institutions and
-  data sources across Europe.
+description: OpenAIRE EXPLORE is the public discovery interface for the OpenAIRE Graph,
+  a large open linked dataset of scholarly metadata. It covers publications, research
+  data, software, and other research products, together with organisations, funders,
+  grants, and data sources, linked through citations and semantics and sourced from
+  repositories, journals, and registries worldwide.
+endpoints:
+- type: openaire:graph-docs
+  url: https://graph.openaire.eu/docs/
+- type: openaire:public-apis
+  url: https://develop.openaire.eu/
 id: exploreopenaireeu
 langs:
 - id: EN
@@ -23,13 +33,13 @@ langs:
 link: https://explore.openaire.eu
 name: OpenAIRE Explore
 owner:
-  link: https://explore.openaire.eu
+  link: https://www.openaire.eu/
   location:
     country:
-      id: World
-      name: World
+      id: EU
+      name: European Union
     level: 20
-  name: Open Aire
+  name: OpenAIRE
   type: Academy
 rights:
   license_id: null
@@ -44,14 +54,13 @@ software:
 status: active
 tags:
 - europe
+- graph
+- open science
 - openaire
-- research
 - open data
+- research
 - scholarly communication
 topics:
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
 - id: TECH
   name: Science and technology
   type: eudatatheme

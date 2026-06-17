@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MN
+      name: Minnesota
+description: STAC 1.0 catalog of lidar-derived products and aerial photography served
+  as Cloud-Optimized GeoTIFFs (COG) and Virtual Raster Tiles (VRT) for Minnesota.
+  Built on stac-fastapi with OGC API Features and STAC item/collection search.
+endpoints:
+- type: stacserverapi
+  url: https://stac.gisdata.mn.gov/
+- type: openapi
+  url: https://stac.gisdata.mn.gov/api
+  version: '3.0'
+id: stacgisdatamngov
+langs:
+- id: EN
+  name: English
+link: https://stac.gisdata.mn.gov/
+name: Minnesota Geospatial STAC Catalog
+owner:
+  link: https://gisdata.mn.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MN
+      name: Minnesota
+  name: State of Minnesota
+  type: Regional government
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- STAC
+- aerial photography
+- geospatial
+- government
+- has_api
+- lidar
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00021828

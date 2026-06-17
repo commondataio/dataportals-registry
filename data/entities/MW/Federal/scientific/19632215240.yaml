@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,14 @@ coverage:
       name: Eastern Africa
 description: National Commission for Science and Technology (NCST), Integrated Publishing
   Toolkit (IPT)
+endpoints:
+- type: dcat:ttl
+  url: http://196.32.215.240:8081/dcat
+- type: ipt:dataset
+  url: http://196.32.215.240:8081/inventory/dataset
+- type: rss
+  url: http://196.32.215.240:8081/rss.do
+  version: '2.0'
 id: '19632215240'
 langs:
 - id: EN
@@ -33,7 +41,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

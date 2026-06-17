@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       name: Northern Europe
 description: Description not extractable from the given URL path or search results;
   actual website content not retrieved.
+endpoints:
+- type: thredds:catalog
+  url: http://www.stats.bris.ac.uk/R/web/packages/thredds/catalog.xml
+- type: thredds:info
+  url: http://www.stats.bris.ac.uk/R/web/packages/thredds/serverInfo.xml
 id: wwwstatsbrisacuk
 langs:
 - id: EN

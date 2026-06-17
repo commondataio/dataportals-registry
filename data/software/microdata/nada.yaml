@@ -1,6 +1,7 @@
 category: Microdata catalog
+subtype: microdata_catalog_platform
 datatypes:
-  datasets: 'Yes'
+  datasets: Compatible
   fields: 'Yes'
   organizations: 'Yes'
   resources: 'Yes'
@@ -8,17 +9,30 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: nada
+description: NADA (National Data Archive) is an open-source microdata catalog and
+  documentation platform for publishing survey and census metadata with searchable
+  documentation, APIs, and standards-based dissemination workflows.
+owner:
+  name: International Household Survey Network
+  location:
+    country:
+      id: FR
+      name: France
+logo_url: https://nada.ihsn.org/favicon.ico
 website: https://nada.ihsn.org
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'Yes'
   stac: 'No'
   swordapi: 'No'
@@ -36,7 +50,9 @@ storage_type: Both
 type: Software
 repository_url: https://github.com/ihsn/nada
 documentation_url: https://www.ihsn.org/nada
-version: V5.5
+version: v5.5
+license:
+  type: MIT
 export_formats:
 - CSV
 - JSON
@@ -51,4 +67,4 @@ capabilities:
 - Organization management
 - Topic categorization
 changelog_url: https://github.com/ihsn/nada/releases
-last_updated: '2025-12-25T09:23:29Z'
+last_updated: '2026-03-31T12:00:00Z'

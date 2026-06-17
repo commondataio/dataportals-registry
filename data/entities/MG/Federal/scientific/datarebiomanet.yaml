@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,14 @@ coverage:
 description: IPT REBIOMA. scientific data repository. managed by Réseau de la Biodiversité
   de Madagascar (REBIOMA). powered by IPT The Integrated Publishing Toolkit. accessible
   at data.rebioma.net.
+endpoints:
+- type: dcat:ttl
+  url: http://data.rebioma.net/dcat
+- type: ipt:dataset
+  url: http://data.rebioma.net/inventory/dataset
+- type: rss
+  url: http://data.rebioma.net/rss.do
+  version: '2.0'
 id: datarebiomanet
 langs:
 - id: FR
@@ -34,7 +42,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

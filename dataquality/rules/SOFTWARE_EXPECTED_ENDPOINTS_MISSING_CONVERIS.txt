@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+Priority: IMPORTANT
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='converis' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FI: 1 issue
+GB: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+researchcardiffacuk: 1 issue
+converisjyufi: 1 issue
+
+=== ISSUES ===
+
+File: GB/GB-WLS/scientific/researchcardiffacuk.yaml
+Record ID: researchcardiffacuk
+Country: GB
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+Field: endpoints
+Current Value: {"software_id": "converis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='converis' is marked as API-capable in software definitions
+
+File: FI/Federal/scientific/converisjyufi.yaml
+Record ID: converisjyufi
+Country: FI
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+Field: endpoints
+Current Value: {"software_id": "converis", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='converis' is marked as API-capable in software definitions

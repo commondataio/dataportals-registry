@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: GeoNetwork catalog for managing spatially referenced resources (metadata
+  and data). Provides metadata editing, search, and web map viewing capabilities.
+  Not explicitly described as focused on a specific owner type or theme in provided
+  sources.
+endpoints:
+- type: geonetwork:query
+  url: https://prostor.celje.si/geonetwork/srv/eng/q
+- type: csw202
+  url: https://prostor.celje.si/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://prostor.celje.si/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: prostorceljesi
+langs:
+- id: EN
+  name: English
+link: https://prostor.celje.si/geonetwork
+name: Metapodatkovni sistem Mestne občine Celje
+owner:
+  link: https://www.celje.si
+  location:
+    country:
+      id: SI
+      name: Slovenia
+    level: 30
+    subregion:
+      id: SI-011
+      name: Celje
+  name: Mestne občine Celje
+  type: Regional government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- spatial data
+- metadata
+- catalog
+- webmap
+- OGC
+- GeoNetwork
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00001489

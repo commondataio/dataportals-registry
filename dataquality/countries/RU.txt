@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: RU
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: RU
-Total Records with Issues: 10
-Total Issues Found: 10
+Total Records with Issues: 18
+Total Issues Found: 18
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: RU/RU-MUR/geo/gisgovmurmanru.yaml
+Record ID: gisgovmurmanru
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://gisn.kgilc.ru:6443/arcgis/rest/services', 'raw_link': 'https://gisn.kgilc.ru:6443/arcgis/rest/services/', 'record_ids': ['gisgovmurmanru', 'gisnkgilcru']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: RU/RU-MUR/geo/gisnkgilcru.yaml
+Record ID: gisnkgilcru
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://gisn.kgilc.ru:6443/arcgis/rest/services', 'raw_link': 'https://gisn.kgilc.ru:6443/arcgis/rest/services', 'record_ids': ['gisgovmurmanru', 'gisnkgilcru']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS]
 Count: 1
@@ -35,6 +53,38 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX]
+Count: 4
+Priority: IMPORTANT
+
+File: RU/RU-NVS/opendata/opendatanovosibirskru.yaml
+Record ID: opendatanovosibirskru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-RYA/opendata/opendataadmrznru.yaml
+Record ID: opendataadmrznru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-BEL/opendata/opendatabelregionru.yaml
+Record ID: opendatabelregionru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
+
+File: RU/RU-KHM/opendata/dataadmhmaoru.yaml
+Record ID: dataadmhmaoru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX
+Field: endpoints
+Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS]
 Count: 1
@@ -91,6 +141,24 @@ Field: endpoints
 Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB]
+Count: 2
+Priority: IMPORTANT
+
+File: RU/RU-ORE/geo/geois2orbru.yaml
+Record ID: geois2orbru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/ngwfppdcgkipdru.yaml
+Record ID: ngwfppdcgkipdru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
+Field: endpoints
+Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE]
 Count: 2
 Priority: IMPORTANT
@@ -112,11 +180,14 @@ Suggested Action: Add at least one endpoint because software.id='pure' is marked
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE: 2 issues

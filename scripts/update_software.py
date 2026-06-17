@@ -145,8 +145,14 @@ def infer_export_formats(software_id: str, category: str, metadata_support: Dict
             formats.add("CSW")
         if metadata_support.get("oai-pmh") == "Yes":
             formats.add("XML")
-        if metadata_support.get("schema-org") == "Yes":
+        if metadata_support.get("dublin_core") in ["Yes", "Plugin only", "Limited"]:
+            formats.add("XML")
+        if metadata_support.get("iso19115") in ["Yes", "Plugin only", "Limited", "Compatible"]:
+            formats.add("XML")
+        if metadata_support.get("schema-org") in ["Yes", "Limited"]:
             formats.add("JSON-LD")
+        if metadata_support.get("rdf_sparql") in ["Yes", "Plugin only", "Limited"]:
+            formats.add("RDF")
         if metadata_support.get("sdmx") == "Yes":
             formats.add("SDMX")
             formats.add("XML")
@@ -169,14 +175,22 @@ def infer_capabilities(metadata_support: Dict[str, Any], has_api: str, datatypes
             capabilities.append("CKAN API")
         if metadata_support.get("csw") == "Yes":
             capabilities.append("CSW catalog service")
+        if metadata_support.get("ogcrecords") in ["Yes", "Limited"]:
+            capabilities.append("OGC API Records")
         if metadata_support.get("dcat") in ["Yes", "Plugin only"]:
             capabilities.append("DCAT export")
         if metadata_support.get("oai-pmh") == "Yes":
             capabilities.append("OAI-PMH harvesting")
+        if metadata_support.get("dublin_core") in ["Yes", "Plugin only", "Limited"]:
+            capabilities.append("Dublin Core metadata")
+        if metadata_support.get("iso19115") in ["Yes", "Plugin only", "Limited", "Compatible"]:
+            capabilities.append("ISO 19115 metadata")
         if metadata_support.get("openaire") == "Yes":
             capabilities.append("OpenAIRE compatibility")
-        if metadata_support.get("schema-org") == "Yes":
+        if metadata_support.get("schema-org") in ["Yes", "Limited"]:
             capabilities.append("Schema.org markup")
+        if metadata_support.get("rdf_sparql") in ["Yes", "Plugin only", "Limited"]:
+            capabilities.append("RDF or SPARQL endpoint")
         if metadata_support.get("sdmx") == "Yes":
             capabilities.append("SDMX support")
         if metadata_support.get("stac") == "Yes":

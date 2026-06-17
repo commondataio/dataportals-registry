@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +19,13 @@ coverage:
       name: Tatarstan, Respublika
 description: Data catalog platform operated by authorities of the Republic of Tatarstan,
   typically providing geospatial and administrative data.
+endpoints:
+- type: nextgisweb:api
+  url: http://admininvmap.tatarstan.ru/api/resource/
+- type: nextgisweb:pkg-version
+  url: http://admininvmap.tatarstan.ru/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: http://admininvmap.tatarstan.ru/api/component/pyramid/route
 id: admininvmaptatarstanru
 langs:
 - id: RU

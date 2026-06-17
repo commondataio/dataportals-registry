@@ -1,11 +1,40 @@
 DATA QUALITY REPORT - COUNTRY: FI
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: FI
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: FI/FI-19/geo/paikkatietoafi.yaml
+Record ID: paikkatietoafi
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://paikkatietoa.fi/server/rest/services', 'raw_link': 'http://paikkatietoa.fi/server/rest/services', 'record_ids': ['paikkatietoafi', 'wwwpaikkatietoafi']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: FI/FI-19/geo/wwwpaikkatietoafi.yaml
+Record ID: wwwpaikkatietoafi
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://paikkatietoa.fi/server/rest/services', 'raw_link': 'http://www.paikkatietoa.fi/server/rest/services', 'record_ids': ['paikkatietoafi', 'wwwpaikkatietoafi']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS]
+Count: 1
+Priority: IMPORTANT
+
+File: FI/Federal/scientific/converisjyufi.yaml
+Record ID: converisjyufi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+Field: endpoints
+Current Value: {'software_id': 'converis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='converis' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
 Count: 1
@@ -18,7 +47,28 @@ Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI]
+Count: 2
+Priority: IMPORTANT
+
+File: FI/FI-19/geo/wwwseutuatlasfi.yaml
+Record ID: wwwseutuatlasfi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI
+Field: endpoints
+Current Value: {'software_id': 'oskari', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='oskari' is marked as API-capable in software definitions
+
+File: FI/Federal/geo/asiointimaanmittauslaitosfi.yaml
+Record ID: asiointimaanmittauslaitosfi
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI
+Field: endpoints
+Current Value: {'software_id': 'oskari', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='oskari' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI: 2 issues

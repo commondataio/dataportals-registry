@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC 1.0 catalog for the EO2Cube Earth observation data cube initiative,
+  with collection and item search, CQL2 filtering, collection search extensions, and
+  OGC API Features conformance.
+endpoints:
+- type: stacserverapi
+  url: https://staceo.eo2cube.org/
+- type: openapi
+  url: https://staceo.eo2cube.org/api
+  version: '3.0'
+id: staceoeo2cubeorg
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://staceo.eo2cube.org/
+name: EO2Cube STAC Catalog
+owner:
+  link: https://eo2cube.org/
+  location:
+    country: *id001
+    level: 20
+  name: University of Würzburg — Remote Sensing Department (EO2Cube)
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- DLR
+- Earth observation
+- EO2Cube
+- geospatial
+- Germany
+- has_api
+- STAC
+- University of Würzburg
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021833

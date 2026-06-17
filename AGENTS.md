@@ -37,7 +37,16 @@ The registry collects and maintains structured metadata about:
 - Data marketplaces
 - Other data infrastructure
 
-As of February 2026, the registry contains **13,877 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
+As of June 2026, the registry contains **14,470 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
+
+### Scope Boundary (Important)
+
+This repository is a **reference-data registry** and data-quality pipeline.
+
+- In-scope: YAML catalog records, schema/validation, enrichment, quality analysis, and dataset exports.
+- Out-of-scope: production query APIs and MCP servers for runtime search access.
+
+API and MCP delivery surfaces are maintained in separate repositories. Do not propose or implement API/MCP server runtime in this repository unless a maintainer explicitly requests a temporary local-only utility script.
 
 ---
 

@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: AR
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: AR
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
@@ -29,8 +29,20 @@ Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR]
+Count: 1
+Priority: IMPORTANT
+
+File: AR/Federal/opendata/datosabiertosenacomgobar.yaml
+Record ID: datosabiertosenacomgobar
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR
+Field: endpoints
+Current Value: {'software_id': 'junar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='junar' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR: 1 issue

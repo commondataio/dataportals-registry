@@ -1,0 +1,46 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+Priority: IMPORTANT
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='erdasapollo' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+BN: 1 issue
+BR: 1 issue
+ZA: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+cityimgcapetowngovza: 1 issue
+geoportalsurveygovbn: 1 issue
+geocatalogommagovbr: 1 issue
+
+=== ISSUES ===
+
+File: ZA/ZA-WC/geo/cityimgcapetowngovza.yaml
+Record ID: cityimgcapetowngovza
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+Field: endpoints
+Current Value: {"software_id": "erdasapollo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='erdasapollo' is marked as API-capable in software definitions
+
+File: BN/geo/geoportalsurveygovbn.yaml
+Record ID: geoportalsurveygovbn
+Country: BN
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+Field: endpoints
+Current Value: {"software_id": "erdasapollo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='erdasapollo' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/geocatalogommagovbr.yaml
+Record ID: geocatalogommagovbr
+Country: BR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+Field: endpoints
+Current Value: {"software_id": "erdasapollo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='erdasapollo' is marked as API-capable in software definitions

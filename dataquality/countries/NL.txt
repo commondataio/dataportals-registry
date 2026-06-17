@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: NL
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: NL
-Total Records with Issues: 27
-Total Issues Found: 27
+Total Records with Issues: 29
+Total Issues Found: 29
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: NL/Federal/geo/nationaalgeoregisternl.yaml
+Record ID: nationaalgeoregisternl
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://nationaalgeoregister.nl/geonetwork', 'raw_link': 'https://nationaalgeoregister.nl/geonetwork', 'record_ids': ['nationaalgeoregisternl', 'wwwnationaalgeoregisternl']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: NL/Federal/geo/wwwnationaalgeoregisternl.yaml
+Record ID: wwwnationaalgeoregisternl
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://nationaalgeoregister.nl/geonetwork', 'raw_link': 'https://www.nationaalgeoregister.nl/geonetwork', 'record_ids': ['nationaalgeoregisternl', 'wwwnationaalgeoregisternl']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
 Count: 4
@@ -71,17 +89,6 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE]
-Count: 1
-Priority: IMPORTANT
-
-File: NL/Federal/geo/bebasicgrstudelftnl.yaml
-Record ID: bebasicgrstudelftnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
-Field: endpoints
-Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
 Count: 18
@@ -224,13 +231,25 @@ Field: endpoints
 Current Value: {'software_id': 'mapbender', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapbender' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB]
+Count: 1
+Priority: IMPORTANT
+
+File: NL/Federal/opendata/dataaxiellcom.yaml
+Record ID: dataaxiellcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB
+Field: endpoints
+Current Value: {'software_id': 'triplydb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='triplydb' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 18 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB: 1 issue

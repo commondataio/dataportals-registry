@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 20
+    macroregion:
+      id: '002'
+      name: Africa
+description: Soil property predictions at 30 m resolution for the African continent
+  from iSDA (Innovative Solutions for Decision Agriculture). Maps for over 20 soil
+  properties at two depths (0–20 cm and 20–50 cm), with GeoTIFF assets, model error
+  layers, and remote-sensing covariates; distributed as a static STAC 1.0 catalog
+  on a public Amazon S3 bucket.
+endpoints:
+- type: stacserverapi
+  url: https://isdasoil.s3.amazonaws.com/catalog.json
+id: isdasoils3amazonawscom
+langs:
+- id: EN
+  name: English
+link: https://isdasoil.s3.amazonaws.com/
+name: iSDAsoil STAC catalog (AWS S3)
+owner:
+  link: https://isda-africa.com/
+  location:
+    country:
+      id: Africa
+      name: Africa
+    level: 20
+  name: Innovative Solutions for Decision Agriculture (iSDA)
+  type: Other
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- STAC
+- Africa
+- geospatial
+- has_api
+- machine learning
+- soil
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: earth_observation
+  name: Earth observation
+  type: general
+uid: cdi00021851

@@ -165,7 +165,7 @@ def update_ai_enriched(dryrun: bool = True, mode: str = "entities"):
     from pycountry import countries
 
     ip2_data_dict = load_csv_dict(
-        "../data/reference/subregions/IP2LOCATION-ISO3166-2.CSV ",
+        "../data/reference/subregions/ISO3166-2.CSV",
         delimiter=",",
         key="code",
     )

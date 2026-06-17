@@ -1,23 +1,38 @@
 category: Geoportal
+subtype: domain_data_infrastructure
 datatypes:
-  datasets: Compatible
+  datasets: 'Yes'
   fields: 'Yes'
   organizations: 'No'
   resources: 'Yes'
   topics: 'No'
 has_api: 'Yes'
-has_bulk: 'No'
+has_bulk: 'Yes'
 id: opendatacube
 website: https://www.opendatacube.org
+description: Open Data Cube is an open-source platform for indexing, managing, and
+  analyzing large spatiotemporal Earth observation datasets. It provides a Python-centric
+  data cube model and API for scalable analytics, and is commonly integrated with
+  STAC-compatible metadata services in national and regional geospatial data infrastructures.
+owner:
+  name: Open Data Cube community
+  location:
+    country:
+      id: AU
+      name: Australia
+logo_url: https://www.opendatacube.org/images/logos/odc-logo-horizontal.png
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'Yes'
@@ -34,14 +49,17 @@ rights_management:
   supports_licenses: 'Yes'
 storage_type: Structured
 type: Software
+repository_url: https://github.com/opendatacube
+documentation_url: https://datacube-core.readthedocs.io
+changelog_url: https://github.com/opendatacube/releases
 export_formats:
-- CSW
-- GML
 - GeoJSON
 - JSON
-- KML
-- XML
+- NetCDF
+- GeoTIFF
 capabilities:
-- REST API
+- Python API
 - STAC catalog
-last_updated: '2025-12-25T09:19:58Z'
+- Spatiotemporal data cube indexing
+- Raster query and extraction
+last_updated: '2026-03-31T12:00:00Z'

@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Coverage access API for datasets modelled according to the Coverage Implementation
+  Schema (CIS) 1.1 of Spain's National Cartographic System (SCNE), from the Spanish
+  Spatial Data Infrastructure (IDEe). The service follows the OGC API — Coverages
+  standard.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://api-coverages.idee.es/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://api-coverages.idee.es/collections?f=json
+  version: '1.0'
+id: apicoveragesideees
+langs:
+- id: EN
+  name: English
+- id: ES
+  name: Spanish
+link: https://api-coverages.idee.es
+name: API-Coverages of the National Cartographic System of Spain
+owner:
+  link: https://www.cnig.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Infraestructura de Datos Espaciales de España
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: cc-by
+  license_name: CC BY 4.0 scne.es
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: https://creativecommons.org/licenses/by/4.0/
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- Spanish geodata
+- geospatial API
+- government
+- has_api
+- open data
+- pygeoapi
+- OGC API Coverages
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00021884

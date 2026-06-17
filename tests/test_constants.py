@@ -11,6 +11,7 @@ from constants import (
     DOMAIN_LOCATIONS,
     DEFAULT_LOCATION,
     MAP_CATALOG_TYPE_SUBDIR,
+    MAP_SOFTWARE_ALLOWED_CATALOG_TYPES,
     MAP_SOFTWARE_OWNER_CATALOG_TYPE,
     CUSTOM_SOFTWARE_KEYS,
     ENTRY_TEMPLATE,
@@ -85,6 +86,13 @@ class TestConstants:
         assert "ckan" in MAP_SOFTWARE_OWNER_CATALOG_TYPE
         assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["ckan"] == "Open data portal"
         assert MAP_SOFTWARE_OWNER_CATALOG_TYPE["arcgishub"] == "Geoportal"
+
+    def test_map_software_allowed_catalog_types(self):
+        """Multi-type software must list every allowed catalog_type pair used in QA."""
+        assert "drupal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
+        assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
+        assert "publishmydata" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
+        assert "Metadata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["publishmydata"]
 
     def test_custom_software_keys(self):
         """Test CUSTOM_SOFTWARE_KEYS list"""

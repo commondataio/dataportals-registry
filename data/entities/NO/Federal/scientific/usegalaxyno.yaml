@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,11 @@ coverage:
 description: A central, joint & free Galaxy instance for Norway-based researchers
   and their collaborators, with ~2000 bioinformatics tools, 200GB short-term storage
   and project storage on nels.bioinfo.no.
+endpoints:
+- type: galaxy:api
+  url: https://usegalaxy.no/api/version
+- type: galaxy:api:configuration
+  url: https://usegalaxy.no/api/configuration
 id: usegalaxyno
 langs:
 - id: 'NO'

@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: OGC API (pygeoapi) service publishing WMO WIS2 Region IV (Americas) realtime
+  weather and hydrological observations from the NOAA National Weather Service.
+endpoints:
+- type: pygeoapi:openapi
+  url: https://wis2node.globaldata.nws.noaa.gov/openapi
+  version: '1.0'
+- type: pygeoapi:collections
+  url: https://wis2node.globaldata.nws.noaa.gov/collections?f=json
+  version: '1.0'
+id: wis2nodeglobaldatanwsnoaagov
+langs:
+- id: EN
+  name: English
+link: https://wis2node.globaldata.nws.noaa.gov/
+name: WIS2 Region IV Realtime Observations (NOAA NWS)
+owner:
+  link: https://www.noaa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: NOAA
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: pygeoapi
+  name: pygeoapi
+status: active
+tags:
+- WIS2
+- WMO Region IV
+- Meteorology
+- NOAA
+- NWS
+- Weather
+- Climate
+- OGC API
+- pygeoapi
+topics:
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00021882

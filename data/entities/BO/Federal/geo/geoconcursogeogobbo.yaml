@@ -11,6 +11,11 @@ coverage:
       id: '005'
       name: South America
 description: GeoBolivia Geoconcurso - geospatial information portal of Bolivia (GeoNode)
+endpoints:
+- type: geonode:datasets
+  url: https://geoconcurso.geo.gob.bo/api/datasets/
+- type: geonode:documents
+  url: https://geoconcurso.geo.gob.bo/api/documents/
 id: geoconcursogeogobbo
 langs:
 - id: ES
@@ -45,7 +50,8 @@ tags:
 - GIS
 - geospatial
 - government
-api_status: uncertain
+api: true
+api_status: active
 content_types:
 - dataset
 - map_layer

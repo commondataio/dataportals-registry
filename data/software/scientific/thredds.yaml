@@ -1,23 +1,36 @@
 category: Scientific data repository
+subtype: domain_data_infrastructure
 datatypes:
   datasets: 'Yes'
   fields: 'No'
   organizations: 'No'
   resources: 'No'
   topics: 'No'
-has_api: 'No'
-has_bulk: 'No'
+has_api: 'Yes'
+has_bulk: 'Yes'
 id: thredds
 website: https://www.unidata.ucar.edu/software/tds/
+description: THREDDS Data Server (TDS) is an open-source web server for cataloging,
+  accessing, and subsetting scientific datasets via OPeNDAP and OGC web services.
+owner:
+  name: Unidata Program Center, UCAR
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://www.unidata.ucar.edu/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
@@ -47,5 +60,8 @@ export_formats:
 - XML
 capabilities:
 - WMS service
+- OPeNDAP access
+- NetCDF Subset Service
+- THREDDS Catalog discovery
 changelog_url: https://github.com/Unidata/thredds/releases
-last_updated: '2025-12-25T09:26:44Z'
+last_updated: '2026-03-31T12:00:00Z'

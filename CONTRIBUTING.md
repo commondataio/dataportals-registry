@@ -306,7 +306,21 @@ For a complete example, see: `data/entities/US/Federal/opendata/catalogdatagov.y
 
 ### Schema Reference
 
-The complete schema definition is available in `data/schemes/catalog.json`. This file defines all valid fields, their types, and requirements.
+The registry uses a **dual-publish schema policy**:
+
+- **`data/schemes/catalog.json`** — Cerberus schema used by `validate-yaml` today (source of truth for CI validation).
+- **`data/schemes/catalog.schema.json`** — JSON Schema Draft 2020-12 with `description` and `examples` for external tooling and agents.
+- **`data/schemes/catalog.context.jsonld`** — JSON-LD term mappings to DCAT-AP / schema.org (`dct:`, `dcat:`) and `cdi:` for registry-specific fields.
+
+Keep Cerberus and JSON Schema aligned when adding fields or enums. Run `python -m pytest tests/test_schema_parity.py` after schema changes.
+
+Optional JSON-LD export:
+
+```bash
+python scripts/builder.py build --jsonld
+```
+
+This writes `data/datasets/catalogs.jsonld` alongside the usual JSONL exports.
 
 For recommended (optional) fields and quality rules, see [docs/metadata-quality.md](docs/metadata-quality.md).
 

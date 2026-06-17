@@ -1,0 +1,428 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://commondata.io/schemes/dataportals-registry/catalog.schema.json",
+  "title": "Data catalog registry record",
+  "description": "Metadata describing an open data portal, geoportal, scientific repository, or related data catalog.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "access_mode",
+    "catalog_type",
+    "id",
+    "link",
+    "name",
+    "owner",
+    "software",
+    "status",
+    "uid"
+  ],
+  "properties": {
+    "access_mode": {
+      "description": "How users may access data from this catalog.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "open",
+          "restricted",
+          "limited",
+          "public",
+          "protected",
+          "closed",
+          "private"
+        ]
+      },
+      "examples": [["open"]]
+    },
+    "api": {
+      "description": "Whether the catalog exposes a machine-readable API.",
+      "type": "boolean",
+      "examples": [true]
+    },
+    "api_status": {
+      "description": "Operational status of the catalog API, when known.",
+      "type": "string",
+      "examples": ["active"]
+    },
+    "catalog_export": {
+      "description": "Export or syndication format supported by the catalog.",
+      "type": "string",
+      "examples": ["CKAN API"]
+    },
+    "catalog_type": {
+      "description": "High-level category of the catalog.",
+      "type": "string",
+      "enum": [
+        "Open data portal",
+        "Geoportal",
+        "Scientific data repository",
+        "Indicators catalog",
+        "Microdata catalog",
+        "Machine learning catalog",
+        "Data search engine",
+        "API Catalog",
+        "Data marketplace",
+        "Metadata catalog",
+        "Other",
+        "Datasets list",
+        "General research repository"
+      ],
+      "examples": ["Open data portal"]
+    },
+    "content_types": {
+      "description": "Kinds of content available from the catalog.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "examples": [["dataset"]]
+    },
+    "coverage": {
+      "description": "Geographic or administrative scope covered by the catalog.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/coverageEntry"
+      },
+      "examples": [
+        [
+          {
+            "location": {
+              "country": { "id": "US", "name": "United States" },
+              "level": 20
+            }
+          }
+        ]
+      ]
+    },
+    "description": {
+      "description": "Human-readable summary of the catalog.",
+      "type": "string",
+      "examples": ["United States federal open data catalog."]
+    },
+    "endpoints": {
+      "description": "Machine interfaces exposed by the catalog.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/endpoint"
+      },
+      "examples": [
+        [{ "type": "ckanapi", "url": "https://catalog.data.gov/api/3" }]
+      ]
+    },
+    "id": {
+      "description": "Stable lowercase identifier matching the YAML filename.",
+      "type": "string",
+      "minLength": 1,
+      "examples": ["catalogdatagov"]
+    },
+    "identifiers": {
+      "description": "External registry identifiers (Wikidata, Re3Data, etc.).",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/identifier"
+      },
+      "examples": [
+        [{ "id": "wikidata", "value": "Q5227102", "url": "https://www.wikidata.org/wiki/Q5227102" }]
+      ]
+    },
+    "langs": {
+      "description": "Languages supported by the catalog UI or metadata.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lang"
+      },
+      "examples": [[{ "id": "EN", "name": "English" }]]
+    },
+    "link": {
+      "description": "Canonical public URL of the catalog.",
+      "type": "string",
+      "format": "uri",
+      "minLength": 1,
+      "examples": ["https://catalog.data.gov"]
+    },
+    "name": {
+      "description": "Display name of the catalog.",
+      "type": "string",
+      "minLength": 1,
+      "examples": ["Data.gov"]
+    },
+    "owner": {
+      "description": "Organization responsible for the catalog.",
+      "$ref": "#/$defs/owner"
+    },
+    "properties": {
+      "description": "Extension properties not mapped to standard fields.",
+      "$ref": "#/$defs/properties"
+    },
+    "rights": {
+      "description": "Terms of use, privacy, and licensing metadata.",
+      "$ref": "#/$defs/rights"
+    },
+    "software": {
+      "description": "Software platform powering the catalog.",
+      "$ref": "#/$defs/software"
+    },
+    "status": {
+      "description": "Lifecycle status of the catalog record.",
+      "type": "string",
+      "enum": ["active", "inactive", "scheduled", "deprecated"],
+      "examples": ["active"]
+    },
+    "tags": {
+      "description": "Free-form tags; may be strings or structured tag objects.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "object", "additionalProperties": true }
+        ]
+      },
+      "examples": [["government", "has_api"]]
+    },
+    "topics": {
+      "description": "Thematic classifications assigned to the catalog.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/topic"
+      }
+    },
+    "trust_score": {
+      "description": "Computed trust score between 0 and 100.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "trust_score_components": {
+      "description": "Component scores used to compute trust_score.",
+      "$ref": "#/$defs/trustScoreComponents"
+    },
+    "uid": {
+      "description": "Registry-wide unique identifier (cdi######## for entities).",
+      "type": "string",
+      "minLength": 1,
+      "examples": ["cdi00001616"]
+    },
+    "_re3data": {
+      "description": "Optional enrichment payload sourced from Re3Data.",
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "countryRef": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "description": "ISO 3166-1 alpha-2 code or special territory code.",
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "integer" }],
+          "examples": ["US"]
+        },
+        "name": {
+          "description": "Country or territory display name.",
+          "type": "string",
+          "minLength": 1,
+          "examples": ["United States"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "namedRef": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverageEntry": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "object",
+          "properties": {
+            "country": { "$ref": "#/$defs/countryRef" },
+            "level": {
+              "description": "Administrative level (higher number = broader scope).",
+              "type": "number",
+              "examples": [20]
+            },
+            "subregion": { "$ref": "#/$defs/namedRef" },
+            "macroregion": { "$ref": "#/$defs/namedRef" }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "endpoint": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Endpoint protocol or API family.",
+          "type": "string",
+          "examples": ["ckanapi"]
+        },
+        "url": {
+          "description": "Endpoint base URL.",
+          "type": "string",
+          "format": "uri"
+        },
+        "version": {
+          "type": "string"
+        },
+        "url_pattern": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "identifier": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier scheme name.",
+          "type": "string",
+          "examples": ["wikidata"]
+        },
+        "value": {
+          "description": "Identifier value within the scheme.",
+          "type": "string",
+          "examples": ["Q5227102"]
+        },
+        "url": {
+          "description": "Resolvable URL for the identifier.",
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": true
+    },
+    "lang": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "examples": ["EN"]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "examples": ["English"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "owner": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "description": "Owner organization name.",
+          "type": "string",
+          "examples": ["U.S. General Services Administration"]
+        },
+        "type": {
+          "description": "Owner organization category.",
+          "type": "string",
+          "minLength": 1,
+          "examples": ["Central government"]
+        },
+        "link": {
+          "description": "Owner organization website.",
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "country": { "$ref": "#/$defs/countryRef" },
+            "level": { "type": "number" },
+            "subregion": { "$ref": "#/$defs/namedRef" },
+            "subdivision": { "$ref": "#/$defs/namedRef" },
+            "name": { "type": "string" }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "invenio-filters": { "type": "string" },
+        "unfinished": { "type": "boolean" },
+        "transferable_topics": { "type": "boolean" },
+        "has_doi": { "type": "boolean" },
+        "is_national": { "type": "boolean" },
+        "transferable_location": { "type": "boolean" },
+        "base_last_seen": { "type": "string" },
+        "dataset_count_reported": {
+          "oneOf": [{ "type": "integer" }, { "type": "string" }]
+        }
+      },
+      "additionalProperties": true
+    },
+    "rights": {
+      "type": "object",
+      "properties": {
+        "tos_url": { "type": ["string", "null"], "format": "uri" },
+        "privacy_policy_url": { "type": ["string", "null"], "format": "uri" },
+        "rights_type": { "type": ["string", "null"] },
+        "license_id": { "type": ["string", "null"] },
+        "license_name": { "type": ["string", "null"] },
+        "license_url": { "type": ["string", "null"], "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "software": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "description": "Software slug used across the registry.",
+          "type": "string",
+          "minLength": 1,
+          "examples": ["ckan"]
+        },
+        "name": {
+          "description": "Human-readable software name.",
+          "type": "string",
+          "minLength": 1,
+          "examples": ["CKAN"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "topic": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "trustScoreComponents": {
+      "type": "object",
+      "properties": {
+        "owner_type_score": { "type": "number" },
+        "catalog_type_score": { "type": "number" },
+        "license_score": { "type": "number" },
+        "re3data_score": { "type": "number" },
+        "additional_factors_score": { "type": "number" },
+        "base_score": { "type": "number" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,9 +17,16 @@ coverage:
       name: Eastern Europe
     subregion:
       id: RU-IRK
-      name: Irkutskaya oblast'
+      name: Irkutskaja oblast'
 description: Information from urban documentation of Irkutsk, Angarsk, Usolye-Sibirsky,
   Irkutsk and Shelekhovsky districts
+endpoints:
+- type: nextgisweb:api
+  url: https://gis.poligoninfo.ru/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://gis.poligoninfo.ru/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://gis.poligoninfo.ru/api/component/pyramid/route
 id: gispoligoninforu
 langs:
 - id: RU
@@ -34,7 +42,7 @@ owner:
     level: 30
     subregion:
       id: RU-IRK
-      name: Irkutskaya oblast'
+      name: Irkutskaja oblast'
   name: Poligon Info
   type: Business
 rights:

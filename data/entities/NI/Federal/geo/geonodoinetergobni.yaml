@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       id: '013'
       name: Central America
 description: A geospatial data catalog platform hosted by INETER.
+endpoints:
+- type: geonode:datasets
+  url: https://geonodo.ineter.gob.ni/api/datasets/
+- type: geonode:documents
+  url: https://geonodo.ineter.gob.ni/api/documents/
 id: geonodoinetergobni
 langs:
 - id: ES

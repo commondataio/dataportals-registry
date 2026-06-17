@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,8 +16,13 @@ coverage:
       name: Northern America
 description: Oceanographic and coastal monitoring data from the Southern California
   Coastal Ocean Observing System, accessible via THREDDS services.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.sccoos.org/thredds/catalog.xml
+- type: thredds:info
+  url: https://thredds.sccoos.org/thredds/serverInfo.xml
 id: threddssccoosorg
-langs: 
+langs:
 - id: EN
   name: English
 link: https://thredds.sccoos.org/thredds/catalog.html

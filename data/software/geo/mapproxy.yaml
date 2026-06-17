@@ -1,6 +1,7 @@
 category: Geoportal
+subtype: geospatial_service_middleware
 datatypes:
-  datasets: Compatible
+  datasets: 'Yes'
   fields: 'Yes'
   organizations: 'No'
   resources: 'Yes'
@@ -8,24 +9,38 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: mapproxy
+name: MapProxy
 website: https://www.mapproxy.org
+description: MapProxy is an open source proxy and cache for map services that accelerates
+  and unifies access to geospatial data sources. It aggregates, tiles, and republishes
+  map content from OGC and web map services through configurable WMS, WMTS, and TMS
+  endpoints for geoportal and GIS applications.
+owner:
+  name: MapProxy Project
+  location:
+    country:
+      id: DE
+      name: Germany
+logo_url: https://www.mapproxy.org/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
-  stac: 'Yes'
+  stac: 'No'
   swordapi: 'No'
   wcs: 'No'
   wfs: 'No'
   wms: 'Yes'
-name: Mapproxy
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
@@ -38,7 +53,6 @@ repository_url: https://github.com/mapproxy/mapproxy
 documentation_url: https://mapproxy.org/docs
 version: 6.0.1
 export_formats:
-- CSW
 - GML
 - GeoJSON
 - JSON
@@ -46,7 +60,8 @@ export_formats:
 - XML
 capabilities:
 - REST API
-- STAC catalog
 - WMS service
+- WMTS service
+- Tile caching
 changelog_url: https://github.com/mapproxy/mapproxy/releases
-last_updated: '2025-12-25T09:19:55Z'
+last_updated: '2026-03-31T00:00:00Z'

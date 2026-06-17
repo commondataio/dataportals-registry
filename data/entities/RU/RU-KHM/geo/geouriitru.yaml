@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,8 +17,15 @@ coverage:
       name: 'Eastern Europe '
     subregion:
       id: RU-KHM
-      name: Khanty-Mansiyskiy avtonomnyy okrug
+      name: Hanty-Mansijskij avtonomnyj okrug
 description: Geoportal for Ugra Research Institute of Information Technologies
+endpoints:
+- type: nextgisweb:api
+  url: https://geo.uriit.ru/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://geo.uriit.ru/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://geo.uriit.ru/api/component/pyramid/route
 id: geouriitru
 langs:
 - id: RU
@@ -34,7 +41,7 @@ owner:
     level: 30
     subregion:
       id: RU-KHM
-      name: Khanty-Mansiyskiy avtonomnyy okrug
+      name: Hanty-Mansijskij avtonomnyj okrug
   name: Ugra Research Institute of Information Technologies (URIIT)
   type: Academy
 rights:

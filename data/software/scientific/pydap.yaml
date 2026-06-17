@@ -1,4 +1,5 @@
 category: Scientific data repository
+subtype: protocol_or_api_server
 datatypes:
   datasets: 'Yes'
   fields: 'Yes'
@@ -9,15 +10,28 @@ has_api: 'Yes'
 has_bulk: 'No'
 id: pydap
 website: https://pydap.github.io/pydap/
+description: PyDAP is an open-source Python implementation of the OPeNDAP Data Access
+  Protocol, used to publish and access scientific datasets with remote subsetting
+  and variable-level retrieval over HTTP.
+owner:
+  name: PyDAP community
+  location:
+    country:
+      id: World
+      name: World
+logo_url: https://raw.githubusercontent.com/pydap/pydap/master/docs/images/Pydap_logo.png
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
@@ -25,7 +39,7 @@ metadata_support:
   wcs: 'No'
   wfs: 'No'
   wms: 'No'
-name: pydap
+name: PyDAP
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
@@ -45,5 +59,7 @@ export_formats:
 - XML
 capabilities:
 - REST API
+- OPeNDAP protocol access
+- Remote dataset subsetting
 changelog_url: https://github.com/pydap/pydap/releases
-last_updated: '2025-12-25T09:26:44Z'
+last_updated: '2026-03-31T12:00:00Z'

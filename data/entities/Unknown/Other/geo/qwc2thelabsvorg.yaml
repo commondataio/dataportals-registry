@@ -11,11 +11,13 @@ coverage:
     country:
       id: World
       name: World
-    level: 0
+    level: 20
     macroregion:
-      id: '001'
+      id: World
       name: World
-description: QGIS Web Client 2 geoportal instance hosted by The Labs.
+description: Public QGIS Web Client 2 (QWC2) geoportal hosted by The Labs (thelabsv.org),
+  alongside other open-source demo services such as Apache Superset, Directus, and Omeka S.
+  Serves map themes and layers via the standard QWC2 themes API.
 endpoints:
 - type: qwc2:layers
   url: https://qwc2.thelabsv.org/themes.json
@@ -24,7 +26,7 @@ langs:
 - id: EN
   name: English
 link: https://qwc2.thelabsv.org
-name: The Labs QWC2 Geoportal
+name: The Labs QWC2 Demo
 owner:
   link: https://thelabsv.org
   location:
@@ -47,8 +49,11 @@ software:
 status: active
 tags:
 - GIS
+- QGIS
 - geospatial
 - QWC2
+- demonstration
+- open-source
 topics:
 - id: Location
   name: Location

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,11 @@ coverage:
       name: Southern Europe
 description: THREDDS catalog provided by CINECA HPC. This scientific data repository.
   provides access to datasets and resources.
+endpoints:
+- type: thredds:catalog
+  url: https://sphinx.hpc.cineca.it/thredds/catalog.xml
+- type: thredds:info
+  url: https://sphinx.hpc.cineca.it/thredds/serverInfo.xml
 id: sphinxhpccinecait
 langs:
 - id: IT

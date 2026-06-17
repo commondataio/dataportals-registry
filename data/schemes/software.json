@@ -19,10 +19,96 @@
     "empty": false,
     "required": true
   },
+  "subtype": {
+    "type": "string",
+    "allowed": [
+      "data_portal_platform",
+      "scientific_repository_platform",
+      "geospatial_catalog_platform",
+      "microdata_catalog_platform",
+      "indicators_data_platform",
+      "metadata_registry_platform",
+      "protocol_or_api_server",
+      "geospatial_service_middleware",
+      "cms_or_app_framework",
+      "managed_saas_service",
+      "domain_data_infrastructure",
+      "general_software"
+    ],
+    "required": true
+  },
   "website": {
     "type": "string",
     "required": false,
     "nullable": true
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "logo_url": {
+    "type": "string",
+    "required": false,
+    "nullable": true
+  },
+  "owner": {
+    "type": "dict",
+    "required": false,
+    "nullable": true,
+    "schema": {
+      "name": {
+        "type": "string",
+        "required": false,
+        "nullable": true
+      },
+      "location": {
+        "type": "dict",
+        "required": false,
+        "nullable": true,
+        "schema": {
+          "country": {
+            "type": "dict",
+            "required": false,
+            "nullable": true,
+            "schema": {
+              "id": {
+                "type": "string",
+                "required": false,
+                "nullable": true
+              },
+              "name": {
+                "type": "string",
+                "required": false,
+                "nullable": true
+              }
+            }
+          }
+        }
+      },
+      "country": {
+        "required": false,
+        "nullable": true,
+        "anyof": [
+          {"type": "string"},
+          {
+            "type": "dict",
+            "schema": {
+              "id": {
+                "type": "string",
+                "required": false,
+                "nullable": true
+              },
+              "name": {
+                "type": "string",
+                "required": false,
+                "nullable": true
+              }
+            }
+          }
+        ]
+      }
+    }
   },
   "datatypes": {
     "type": "dict",
@@ -72,7 +158,7 @@
       },
       "csw": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
@@ -85,6 +171,18 @@
       "dcat": {
         "anyof": [
           {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "dublin_core": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
+      "iso19115": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
@@ -112,6 +210,12 @@
           {"type": "boolean"}
         ]
       },
+      "rdf_sparql": {
+        "anyof": [
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
+          {"type": "boolean"}
+        ]
+      },
       "schema-org": {
         "anyof": [
           {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
@@ -120,13 +224,13 @@
       },
       "sdmx": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
       "stac": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
@@ -138,19 +242,19 @@
       },
       "wcs": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
       "wfs": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       },
       "wms": {
         "anyof": [
-          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Plugin only", "Limited", "Unclear"]},
+          {"type": "string", "allowed": ["Yes", "No", "Uncertain", "Compatible", "Plugin only", "Limited", "Unclear"]},
           {"type": "boolean"}
         ]
       }
@@ -176,7 +280,7 @@
     "schema": {
       "licensing_type": {
         "type": "string",
-        "allowed": ["Per dataset", "Global", "Uncertain", "Not applicable"]
+        "allowed": ["Per dataset", "Per-dataset", "Per resource", "Per item", "Global", "Open", "Proprietary", "Uncertain", "Not applicable"]
       },
       "supports_licenses": {
         "type": "string",

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,14 @@ coverage:
 description: This platform will be used to publish scietific data associated with
   the Natural History Collections of the National Museum of Natural History and Science,
   Lisbon, Portugal.
+endpoints:
+- type: dcat:ttl
+  url: http://gbifipt.museus.ul.pt/dcat
+- type: ipt:dataset
+  url: http://gbifipt.museus.ul.pt/inventory/dataset
+- type: rss
+  url: http://gbifipt.museus.ul.pt/rss.do
+  version: '2.0'
 id: gbifiptmuseusulpt
 langs:
 - id: PT
@@ -35,7 +43,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

@@ -1,23 +1,37 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
   datasets: 'Yes'
-  fields: 'No'
+  fields: 'Yes'
   organizations: 'Yes'
   resources: 'Yes'
   topics: 'Yes'
 has_api: 'Yes'
-has_bulk: 'No'
+has_bulk: 'Yes'
 id: dataverse
 website: https://dataverse.org
+description: Dataverse is an open-source research data repository platform for publishing,
+  sharing, citing, exploring, and reusing research datasets with rich metadata, versioning,
+  and persistent identifiers.
+owner:
+  name: The President and Fellows of Harvard College
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://dataverse.org/themes/custom/dataverse_org/logo.svg
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
   oai-pmh: 'Yes'
   ogcrecords: 'No'
   openaire: 'Yes'
-  opensearch: Uncertain
+  opensearch: 'No'
+  rdf_sparql: Limited
   schema-org: 'Yes'
   sdmx: 'No'
   stac: 'No'
@@ -32,7 +46,7 @@ pid_support:
 rights_management:
   licensing_type: Per dataset
   supports_licenses: 'Yes'
-storage_type: Raw
+storage_type: Both
 type: Software
 repository_url: https://github.com/IQSS/dataverse
 documentation_url: https://guides.dataverse.org
@@ -56,4 +70,4 @@ license:
   type: Apache-2.0
   url: https://www.apache.org/licenses/LICENSE-2.0
 version: '6.9'
-last_updated: '2025-12-25T09:25:24Z'
+last_updated: '2026-03-31T12:00:00Z'

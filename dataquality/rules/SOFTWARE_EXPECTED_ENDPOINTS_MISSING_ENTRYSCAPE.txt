@@ -1,0 +1,45 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Priority: IMPORTANT
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='entryscape' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+DE: 1 issue
+SE: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+wwwvgregionse: 1 issue
+oppnadatanaturvardsverketse: 1 issue
+wwwopendatasachsende: 1 issue
+
+=== ISSUES ===
+
+File: SE/SE-O/opendata/wwwvgregionse.yaml
+Record ID: wwwvgregionse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {"software_id": "entryscape", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
+
+File: SE/Federal/opendata/oppnadatanaturvardsverketse.yaml
+Record ID: oppnadatanaturvardsverketse
+Country: SE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {"software_id": "entryscape", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
+
+File: DE/DE-SN/opendata/wwwopendatasachsende.yaml
+Record ID: wwwopendatasachsende
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {"software_id": "entryscape", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions

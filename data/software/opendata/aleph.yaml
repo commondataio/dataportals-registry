@@ -1,4 +1,5 @@
 category: Open data portal
+subtype: data_portal_platform
 datatypes:
   datasets: 'Yes'
   fields: 'Yes'
@@ -8,18 +9,32 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: aleph
-website: https://github.com/alephdata/aleph
+website: https://aleph.occrp.org
+description: Aleph is an open-source investigative data platform for indexing, searching,
+  and cross-referencing large collections of documents and structured datasets. It
+  is designed for investigative journalism workflows and entity-centric research across
+  people, companies, and related records.
+owner:
+  name: OCCRP (Organized Crime and Corruption Reporting Project)
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://aleph.occrp.org/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
   wcs: 'No'
@@ -35,7 +50,7 @@ rights_management:
 storage_type: Both
 type: Software
 repository_url: https://github.com/alephdata/aleph
-documentation_url: https://github.com/docs
+documentation_url: https://docs.aleph.occrp.org
 version: 4.1.7
 export_formats:
 - CSV
@@ -47,5 +62,8 @@ capabilities:
 - REST API
 - Organization management
 - Topic categorization
+license:
+  type: MIT
+  url: https://github.com/alephdata/aleph/blob/develop/LICENSE.txt
 changelog_url: https://github.com/alephdata/aleph/releases
 last_updated: '2025-12-25T09:23:31Z'

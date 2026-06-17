@@ -1,0 +1,46 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Priority: IMPORTANT
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='carto' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+ES: 1 issue
+World: 1 issue
+ZA: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+sgsepcartocom: 1 issue
+opendatadurbancartocom: 1 issue
+mappingspaincartocom: 1 issue
+
+=== ISSUES ===
+
+File: World/geo/sgsepcartocom.yaml
+Record ID: sgsepcartocom
+Country: World
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Field: endpoints
+Current Value: {"software_id": "carto", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions
+
+File: ZA/ZA-KZN/geo/opendatadurbancartocom.yaml
+Record ID: opendatadurbancartocom
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Field: endpoints
+Current Value: {"software_id": "carto", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions
+
+File: ES/Federal/geo/mappingspaincartocom.yaml
+Record ID: mappingspaincartocom
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Field: endpoints
+Current Value: {"software_id": "carto", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions

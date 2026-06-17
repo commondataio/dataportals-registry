@@ -1,23 +1,38 @@
 category: Geoportal
+subtype: protocol_or_api_server
 datatypes:
-  datasets: Compatible
+  datasets: 'Yes'
   fields: 'Yes'
   organizations: 'No'
-  resources: Generated
-  topics: 'No'
+  resources: 'Yes'
+  topics: Compatible
 has_api: 'Yes'
 has_bulk: 'No'
 id: stacserver
+name: stac-server
 website: https://github.com/stac-utils/stac-server
+description: stac-server is an open-source STAC API implementation for publishing
+  and querying geospatial metadata and assets. It provides a REST API for STAC catalogs,
+  collections, and item search to support interoperable discovery workflows.
+owner:
+  name: stac-utils
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://avatars.githubusercontent.com/u/49580366?s=200&v=4
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'Yes'
@@ -25,12 +40,11 @@ metadata_support:
   wcs: 'No'
   wfs: 'No'
   wms: 'No'
-name: Stac-server
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Global
+  licensing_type: Per dataset
   supports_licenses: 'Yes'
 storage_type: Structured
 type: Software
@@ -38,14 +52,12 @@ repository_url: https://github.com/stac-utils/stac-server
 documentation_url: https://github.com/stac-utils/stac-server
 version: 4.5.0
 export_formats:
-- CSW
-- GML
 - GeoJSON
 - JSON
-- KML
-- XML
 capabilities:
 - REST API
 - STAC catalog
+- STAC API Item Search
+- STAC collections and items
 changelog_url: https://github.com/stac-utils/stac-server/releases
-last_updated: '2025-12-25T09:20:13Z'
+last_updated: '2026-03-31T12:00:00Z'

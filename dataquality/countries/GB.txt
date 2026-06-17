@@ -1,11 +1,72 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: GB
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: GB/Federal/geo/wwwdasshacuk.yaml
+Record ID: wwwdasshacuk
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://dassh.ac.uk/geoserver', 'raw_link': 'http://www.dassh.ac.uk/geoserver', 'record_ids': ['wwwdasshacuk', 'dasshacuk']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: GB/Federal/geo/dasshacuk.yaml
+Record ID: dasshacuk
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://dassh.ac.uk/geoserver', 'raw_link': 'http://dassh.ac.uk/geoserver', 'record_ids': ['wwwdasshacuk', 'dasshacuk']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS]
+Count: 1
+Priority: IMPORTANT
+
+File: GB/GB-WLS/scientific/researchcardiffacuk.yaml
+Record ID: researchcardiffacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
+Field: endpoints
+Current Value: {'software_id': 'converis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='converis' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
+Count: 4
+Priority: IMPORTANT
+
+File: GB/Federal/metadata/discovermetadataworks.yaml
+Record ID: discovermetadataworks
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB
+Field: endpoints
+Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
+
+File: GB/Federal/metadata/datadigitisingsocialcarecouk.yaml
+Record ID: datadigitisingsocialcarecouk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB
+Field: endpoints
+Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
+
+File: GB/Federal/metadata/onsmetadataworks.yaml
+Record ID: onsmetadataworks
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB
+Field: endpoints
+Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
+
+File: GB/Federal/metadata/datacatalogueadrukorg.yaml
+Record ID: datacatalogueadrukorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB
+Field: endpoints
+Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI]
 Count: 1
@@ -21,4 +82,7 @@ Suggested Action: Add at least one endpoint because software.id='strapi' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI: 1 issue

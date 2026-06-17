@@ -1,46 +1,66 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
-has_api: 'No'
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
 has_bulk: 'No'
 website: https://samvera.org
 id: samvera
+description: Samvera is an open-source, community-driven repository framework ecosystem
+  for building, managing, preserving, and sharing scholarly and cultural heritage
+  digital collections.
+owner:
+  name: Samvera Community
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://samvera.org/favicon.ico
 metadata_support:
-  ckan_api: Uncertain
-  csw: Uncertain
-  custom_api: Uncertain
-  dcat: Uncertain
-  oai-pmh: Uncertain
-  ogcrecords: Uncertain
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
-  stac: Uncertain
-  swordapi: Uncertain
-  wcs: Uncertain
-  wfs: Uncertain
-  wms: Uncertain
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
 name: Samvera
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'No'
 storage_type: Both
 type: Software
 repository_url: https://github.com/samvera
 documentation_url: https://samvera.github.io
+version: null
 export_formats:
 - BibTeX
 - JSON
 - RDF
 - RIS
 - XML
+capabilities:
+- REST API
+- OAI-PMH harvesting
+- Organization management
+- Topic categorization
 changelog_url: https://github.com/samvera/releases
-last_updated: '2025-12-25T09:26:44Z'
+last_updated: '2026-03-31T12:00:00Z'

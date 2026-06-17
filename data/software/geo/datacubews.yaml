@@ -1,51 +1,69 @@
 category: Geoportal
+subtype: protocol_or_api_server
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'No'
+  resources: 'Yes'
+  topics: 'No'
 has_api: 'Yes'
 has_bulk: 'No'
 id: datacubews
-metadata_support:
-  ckan_api: Uncertain
-  csw: Uncertain
-  custom_api: Uncertain
-  dcat: Uncertain
-  oai-pmh: Uncertain
-  ogcrecords: Uncertain
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
-  stac: Uncertain
-  swordapi: Uncertain
-  wcs: 'Yes'
-  wfs: Uncertain
-  wms: 'Yes'
 name: Datacube Open Web Services
 website: https://www.opendatacube.org
+description: Datacube Open Web Services (datacube-ows) is an open-source OGC service
+  layer for Open Data Cube deployments. It publishes multidimensional Earth observation
+  datasets through standards-based WMS and WCS endpoints, enabling map visualization
+  and raster data access for analysis workflows. It is maintained by the Open Data
+  Cube community and is commonly used to expose Analysis Ready Data from national
+  and regional datacube infrastructures.
+owner:
+  name: Open Data Cube community
+  location:
+    country:
+      id: AU
+      name: Australia
+logo_url: https://www.opendatacube.org/images/logos/odc-logo-horizontal.png
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'Yes'
+  wfs: 'No'
+  wms: 'Yes'
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
 storage_type: Both
 type: Software
 repository_url: https://github.com/opendatacube
 documentation_url: https://datacube-core.readthedocs.io
 export_formats:
-- CSW
 - GML
 - GeoJSON
 - JSON
-- KML
+- NetCDF
+- PNG
 - XML
 capabilities:
-- REST API
 - WMS service
 - WCS service
+- OGC-compliant map and coverage services
+- Time-series EO data access
 changelog_url: https://github.com/opendatacube/releases
 last_updated: '2025-12-25T09:19:43Z'

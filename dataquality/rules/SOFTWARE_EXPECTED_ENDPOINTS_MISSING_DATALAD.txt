@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='datalad' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+CA: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+portalconpca: 1 issue
+
+=== ISSUES ===
+
+File: CA/Federal/scientific/portalconpca.yaml
+Record ID: portalconpca
+Country: CA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD
+Field: endpoints
+Current Value: {"software_id": "datalad", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='datalad' is marked as API-capable in software definitions

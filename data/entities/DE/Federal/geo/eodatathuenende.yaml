@@ -8,7 +8,7 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country: 
       id: DE
       name: Germany
     level: 20
@@ -16,26 +16,32 @@ coverage:
       id: '155'
       name: Western Europe
 description: Open-access, satellite-based products for Germany, focusing on seasonal
-  land cover, crop types, and grassland dynamics.
+  land cover, crop types, and grassland dynamics. STAC 1.0 Catalog API (stac-fastapi)
+  with Item Search, Collection Search, and OGC API Features.
 endpoints:
 - type: stacserverapi
   url: https://eodata.thuenen.de/stac/api/v1/
+- type: openapi
+  url: https://eodata.thuenen.de/stac/api/v1/api
+  version: '3.0'
 id: eodatathuenende
 langs:
 - id: EN
   name: English
-link: https://eodata.thuenen.de
+link: https://eodata.thuenen.de/stac/api/v1/
 name: Thünen Earth Observation (ThEO)
 owner:
   link: https://www.thuenen.de
   location:
-    country: *id001
+    country: 
+      id: DE
+      name: Germany
     level: 20
   name: Johann Heinrich von Thünen-Institut
   type: Central government
 software:
   id: stacserver
-  name: Stac-server
+  name: stac-server
 status: active
 topics:
 - id: earth_observation

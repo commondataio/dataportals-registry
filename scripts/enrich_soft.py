@@ -83,6 +83,8 @@ def create_from_csv(filename="../data/_original/software.csv"):
             "custom_api",
             "ckan_api",
             "dcat",
+            "dublin_core",
+            "iso19115",
             "ogcrecords",
             "oai-pmh",
             "swordapi",
@@ -93,10 +95,11 @@ def create_from_csv(filename="../data/_original/software.csv"):
             "csw",
             "stac",
             "opensearch",
+            "rdf_sparql",
             "schema-org",
             "openaire",
         ]:
-            profile["metadata_support"][key] = row[key]
+            profile["metadata_support"][key] = row.get(key, "Uncertain")
 
         filepath = os.path.join(ROOT_DIR, "%s.yaml" % (profile["id"]))
         f = open(filepath, "w", encoding="utf8")

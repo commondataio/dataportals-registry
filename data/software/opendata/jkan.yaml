@@ -1,24 +1,39 @@
 category: Open data portal
+subtype: data_portal_platform
 datatypes:
   datasets: 'Yes'
-  fields: 'No'
+  fields: 'Yes'
   organizations: 'Yes'
   resources: 'Yes'
   topics: 'Yes'
-has_api: 'No'
+has_api: 'Yes'
 has_bulk: 'No'
 id: jkan
 website: https://jkan.io
+description: JKAN is an open-source, lightweight data catalog platform built on Jekyll
+  for publishing open datasets as static sites. It focuses on simple deployment, CKAN-style
+  metadata patterns, and optional API compatibility for small and medium open data
+  portals.
+owner:
+  name: TechOps Recsys
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://jkan.io/favicon.ico
 metadata_support:
-  ckan_api: 'No'
+  ckan_api: Limited
   csw: 'No'
-  custom_api: 'No'
+  custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
@@ -46,4 +61,8 @@ capabilities:
 - Organization management
 - Topic categorization
 changelog_url: https://github.com/techops-recsys/jkan/releases
-last_updated: '2025-12-25T09:23:56Z'
+license:
+  type: MIT
+  url: https://github.com/techops-recsys/jkan/blob/main/LICENSE
+version: 1.4.0
+last_updated: '2026-03-31T00:00:00Z'

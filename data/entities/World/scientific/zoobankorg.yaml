@@ -15,18 +15,14 @@ coverage:
       id: '001'
       name: World
 description: ZooBank is the official registry of zoological nomenclature maintained
-  by the International Commission on Zoological Nomenclature (ICZN). This IPT (Integrated
-  Publishing Toolkit) instance provides a comprehensive platform for publishing and
-  accessing biodiversity datasets related to zoological names and nomenclatural acts.
-  It serves as the global registry for new animal names, supporting taxonomic research,
-  biodiversity informatics, and the scientific community worldwide. The platform enables
-  researchers to register new species, access nomenclatural information, and discover
-  datasets published through the GBIF network, facilitating standardized data sharing
-  and citation in zoological research.
+  by the International Commission on Zoological Nomenclature (ICZN). It provides global
+  access to nomenclatural acts, publications, and registered animal names used in
+  taxonomy and biodiversity research.
 endpoints:
-- type: rss
-  url: http://zoobank.org:8080/ipt/rss.do
-  version: '2.0'
+- type: gbif:dataset
+  url: https://api.gbif.org/v1/dataset/c8227bb4-4143-443f-8cb2-51f9576aff14
+- type: dwca
+  url: https://api.gbif.org/v1/dataset/c8227bb4-4143-443f-8cb2-51f9576aff14/document
 id: zoobankorg
 identifiers:
 - id: wikidata
@@ -35,10 +31,10 @@ identifiers:
 langs:
 - id: EN
   name: English
-link: http://zoobank.org:8080
-name: ICZN IPT
+link: https://zoobank.org
+name: ZooBank
 owner:
-  link: http://iczn.org/
+  link: https://www.iczn.org/
   location:
     country:
       id: World
@@ -57,7 +53,7 @@ rights:
   tos_url: null
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

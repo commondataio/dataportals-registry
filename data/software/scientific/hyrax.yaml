@@ -1,7 +1,8 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
   datasets: 'Yes'
-  fields: 'No'
+  fields: 'Yes'
   organizations: 'Yes'
   resources: 'Yes'
   topics: 'Yes'
@@ -9,16 +10,29 @@ has_api: 'Yes'
 has_bulk: 'No'
 id: hyrax
 website: https://hyrax.samvera.org/
+description: Hyrax is an open-source repository front-end framework in the Samvera
+  ecosystem for publishing, managing, and preserving research outputs and related
+  digital objects with configurable metadata workflows.
+owner:
+  name: Samvera Community
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://hyrax.samvera.org/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
-  custom_api: Uncertain
-  dcat: Uncertain
-  oai-pmh: Uncertain
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
@@ -36,7 +50,9 @@ storage_type: Raw
 type: Software
 repository_url: https://github.com/samvera/hyrax
 documentation_url: https://github.com/samvera/hyrax/wiki
-version: hyrax-chart-3.7.2
+version: 3.7.2
+license:
+  type: Apache-2.0
 export_formats:
 - BibTeX
 - JSON
@@ -48,4 +64,4 @@ capabilities:
 - Organization management
 - Topic categorization
 changelog_url: https://github.com/samvera/hyrax/releases
-last_updated: '2025-12-25T09:25:35Z'
+last_updated: '2026-03-31T12:00:00Z'

@@ -1,0 +1,56 @@
+name: Catalog Liveness
+
+on:
+  schedule:
+    # Weekly Sunday 03:00 UTC
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: "Optional sample size (empty = full catalog)"
+        required: false
+        type: string
+      country:
+        description: "Optional ISO country filter (e.g. US)"
+        required: false
+        type: string
+
+concurrency:
+  group: catalog-liveness
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run liveness probes
+        run: |
+          CMD=(python scripts/check_liveness.py --delay 0.25)
+          if [ -n "${{ github.event.inputs.sample }}" ]; then
+            CMD+=(--sample "${{ github.event.inputs.sample }}")
+          fi
+          if [ -n "${{ github.event.inputs.country }}" ]; then
+            CMD+=(--country "${{ github.event.inputs.country }}")
+          fi
+          "${CMD[@]}"
+
+      - name: Upload liveness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: liveness-report
+          path: dataquality/liveness_report.jsonl
+          if-no-files-found: error

@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - indicator
@@ -15,6 +16,10 @@ coverage:
       name: World
 description: SDMX registry providing access to data and structure through APIs, specifically
   for indicators related to children and development.
+endpoints:
+- type: sdmx:dataflows
+  url: https://sdmx.data.unicef.org/ws/public/sdmxapi/rest/dataflow/all/all/latest?detail=allstubs
+  version: '2.1'
 id: sdmxdatauniceforg
 langs:
 - id: EN

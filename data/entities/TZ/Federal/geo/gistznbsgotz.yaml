@@ -1,0 +1,88 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+    macroregion:
+      id: '014'
+      name: Eastern Africa
+description: ArcGIS Server REST services for the National Bureau of Statistics Tanzania
+  GeoInsight geospatial platform, including map and feature services for population,
+  households, health and education facilities, boreholes, and water infrastructure.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gistz.nbs.go.tz/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gistz.nbs.go.tz/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gistz.nbs.go.tz/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://gistz.nbs.go.tz/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gistz.nbs.go.tz/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gistz.nbs.go.tz/arcgis/rest/services?f=kmz
+id: gistznbsgotz
+langs:
+- id: EN
+  name: English
+link: https://gistz.nbs.go.tz/arcgis/rest/services
+name: Tanzania NBS GeoInsight ArcGIS REST Services
+owner:
+  link: https://www.nbs.go.tz
+  location:
+    country:
+      id: TZ
+      name: Tanzania
+    level: 20
+  name: National Bureau of Statistics (Tanzania)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GeoInsight
+- GIS
+- NBS
+- REST
+- Tanzania
+- geospatial
+- government
+- statistics
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00021889

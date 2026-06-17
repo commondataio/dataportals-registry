@@ -13,7 +13,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
-from builder import load_jsonl, build_dataset, merge_datasets
+from builder import load_jsonl, build_dataset, merge_datasets, validate_software_profile
 
 
 class TestLoadJsonl:
@@ -306,3 +306,33 @@ class TestBuilderApidetectIntegration:
         )
 
         assert calls == [("catalogexampleorg", False, "entries")]
+
+
+class TestSoftwareSubtypeValidation:
+    """Tests for software subtype taxonomy checks"""
+
+    def _base_software(self):
+        return {
+            "id": "sample",
+            "type": "Software",
+            "category": "Open data portal",
+            "subtype": "data_portal_platform",
+        }
+
+    def test_validate_software_profile_requires_subtype(self):
+        record = self._base_software()
+        record.pop("subtype")
+        issues = validate_software_profile(record)
+        assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_MISSING" for i in issues)
+
+    def test_validate_software_profile_rejects_invalid_subtype(self):
+        record = self._base_software()
+        record["subtype"] = "invalid_subtype"
+        issues = validate_software_profile(record)
+        assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_INVALID" for i in issues)
+
+    def test_validate_software_profile_checks_category_compatibility(self):
+        record = self._base_software()
+        record["subtype"] = "scientific_repository_platform"
+        issues = validate_software_profile(record)
+        assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH" for i in issues)

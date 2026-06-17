@@ -1,37 +1,52 @@
 category: Geoportal
+subtype: geospatial_catalog_platform
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
-has_api: 'No'
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
+has_api: 'Yes'
 has_bulk: 'No'
 id: erdasapollo
 website: https://hexagon.com/products/erdas-apollo
+description: ERDAS APOLLO is an enterprise geospatial content management and dissemination
+  platform from Hexagon. It is used to catalog, govern, and publish raster and vector
+  geospatial data and services, with support for metadata-driven discovery and OGC-compliant
+  web service delivery in spatial data infrastructure deployments.
+owner:
+  name: Hexagon AB
+  location:
+    country:
+      id: SE
+      name: Sweden
+logo_url: https://hexagon.com/-/media/project/one-web/master-site/logo/hexagon-logo.svg
 metadata_support:
-  ckan_api: Uncertain
-  csw: Uncertain
-  custom_api: Uncertain
-  dcat: Uncertain
-  oai-pmh: Uncertain
-  ogcrecords: Uncertain
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
-  stac: Uncertain
-  swordapi: Uncertain
-  wcs: Uncertain
-  wfs: Uncertain
-  wms: Uncertain
+  ckan_api: 'No'
+  csw: 'Yes'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'Yes'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'Yes'
+  wfs: 'Yes'
+  wms: 'Yes'
 name: ERDAS APOLLO
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
 storage_type: Both
 type: Software
 export_formats:
@@ -41,4 +56,11 @@ export_formats:
 - JSON
 - KML
 - XML
-last_updated: '2025-12-25T09:19:45Z'
+capabilities:
+- OGC catalog and service publishing
+- WMS service
+- WFS service
+- WCS service
+- Geospatial metadata management
+- Enterprise geospatial content catalog
+last_updated: '2026-03-31T00:00:00Z'

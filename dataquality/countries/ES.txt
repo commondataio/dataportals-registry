@@ -1,11 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: ES
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: ES
-Total Records with Issues: 5
-Total Issues Found: 5
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: ES/ES-AN/opendata/datosabiertosdipucadizes.yaml
+Record ID: datosabiertosdipucadizes
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
+Count: 1
+Priority: IMPORTANT
+
+File: ES/Federal/geo/mappingspaincartocom.yaml
+Record ID: mappingspaincartocom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Field: endpoints
+Current Value: {'software_id': 'carto', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 5
@@ -46,7 +68,21 @@ Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA]
+Count: 1
+Priority: IMPORTANT
+
+File: ES/ES-IB/scientific/repositorysocibes.yaml
+Record ID: repositorysocibes
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA
+Field: endpoints
+Current Value: {'software_id': 'ramadda', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ramadda' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 5 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue

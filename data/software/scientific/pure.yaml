@@ -1,37 +1,51 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
+  datasets: 'No'
+  fields: 'No'
+  organizations: 'No'
+  resources: 'No'
+  topics: 'No'
 has_api: 'Yes'
 has_bulk: 'No'
 id: pure
-metadata_support:
-  ckan_api: Uncertain
-  csw: Uncertain
-  custom_api: 'Yes'
-  dcat: Uncertain
-  oai-pmh: Uncertain
-  ogcrecords: Uncertain
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
-  stac: Uncertain
-  swordapi: Uncertain
-  wcs: Uncertain
-  wfs: Uncertain
-  wms: Uncertain
-name: Pure
 website: https://www.elsevier.com/solutions/pure
+description: Pure is Elsevier's research information management platform for institutions
+  to manage profiles, publications, datasets, and reporting workflows, with support
+  for discovery and interoperability via standard metadata protocols.
+owner:
+  name: Elsevier B.V.
+  location:
+    country:
+      id: NL
+      name: Netherlands
+logo_url: https://www.elsevier.com/etc.clientlibs/relx/elsevier/clientlibs/clientlib-site/resources/images/logos/elsevier-logo.svg
+metadata_support:
+  ckan_api: 'No'
+  csw: 'No'
+  custom_api: 'Yes'
+  dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
+  oai-pmh: 'Yes'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: Pure
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'Yes'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
 storage_type: Both
 type: Software
 export_formats:
@@ -42,4 +56,5 @@ export_formats:
 - XML
 capabilities:
 - REST API
-last_updated: '2025-12-25T09:26:43Z'
+- OAI-PMH harvesting
+last_updated: '2026-03-31T12:00:00Z'

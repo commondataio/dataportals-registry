@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -20,6 +20,11 @@ coverage:
 description: Catalog of sea level data from the global network of tide gauges maintained
   by the University of Hawaii Sea Level Center, offering hourly and daily tide gauge
   water-level datasets with different levels of quality control.
+endpoints:
+- type: thredds:catalog
+  url: https://uhslc.soest.hawaii.edu/thredds/catalog.xml
+- type: thredds:info
+  url: https://uhslc.soest.hawaii.edu/thredds/serverInfo.xml
 id: uhslcsoesthawaiiedu
 langs:
 - id: EN

@@ -1,11 +1,96 @@
 DATA QUALITY REPORT - COUNTRY: DE
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: DE
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 12
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 10
+Priority: IMPORTANT
+
+File: DE/DE-NW/opendata/wwwoffenedatenkoelnde.yaml
+Record ID: wwwoffenedatenkoelnde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://offenedaten-koeln.de', 'raw_link': 'https://www.offenedaten-koeln.de', 'record_ids': ['wwwoffenedatenkoelnde', 'offenedatenkoelnde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-NW/opendata/offenedatenkoelnde.yaml
+Record ID: offenedatenkoelnde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://offenedaten-koeln.de', 'raw_link': 'https://offenedaten-koeln.de', 'record_ids': ['wwwoffenedatenkoelnde', 'offenedatenkoelnde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-HH/scientific/wwwwdcclimatede.yaml
+Record ID: wwwwdcclimatede
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://wdc-climate.de', 'raw_link': 'https://www.wdc-climate.de', 'record_ids': ['wwwwdcclimatede', 'wdcclimatede']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/scientific/wdcclimatede.yaml
+Record ID: wdcclimatede
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://wdc-climate.de', 'raw_link': 'https://wdc-climate.de', 'record_ids': ['wwwwdcclimatede', 'wdcclimatede']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BY/geo/wwwbaysisbayernde.yaml
+Record ID: wwwbaysisbayernde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://baysis.bayern.de/gis/services', 'raw_link': 'https://www.baysis.bayern.de/gis/services', 'record_ids': ['wwwbaysisbayernde', 'baysisbayernde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BY/geo/baysisbayernde.yaml
+Record ID: baysisbayernde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://baysis.bayern.de/gis/services', 'raw_link': 'https://baysis.bayern.de/gis/services', 'record_ids': ['wwwbaysisbayernde', 'baysisbayernde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BB/geo/wwwgeoportaleberswaldede.yaml
+Record ID: wwwgeoportaleberswaldede
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://geoportal.eberswalde.de:8080/geoserver', 'raw_link': 'http://www.geoportal.eberswalde.de:8080/geoserver', 'record_ids': ['wwwgeoportaleberswaldede', 'geoportaleberswaldede']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/DE-BB/geo/geoportaleberswaldede.yaml
+Record ID: geoportaleberswaldede
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://geoportal.eberswalde.de:8080/geoserver', 'raw_link': 'http://geoportal.eberswalde.de:8080/geoserver', 'record_ids': ['wwwgeoportaleberswaldede', 'geoportaleberswaldede']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/opendata/coronadatendeutschlandde.yaml
+Record ID: coronadatendeutschlandde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://corona-daten-deutschland.de', 'raw_link': 'https://corona-daten-deutschland.de', 'record_ids': ['coronadatendeutschlandde', 'wwwcoronadatendeutschlandde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: DE/Federal/opendata/wwwcoronadatendeutschlandde.yaml
+Record ID: wwwcoronadatendeutschlandde
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://corona-daten-deutschland.de', 'raw_link': 'https://www.corona-daten-deutschland.de', 'record_ids': ['coronadatendeutschlandde', 'wwwcoronadatendeutschlandde']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE]
+Count: 1
+Priority: IMPORTANT
+
+File: DE/DE-SN/opendata/wwwopendatasachsende.yaml
+Record ID: wwwopendatasachsende
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
+Field: endpoints
+Current Value: {'software_id': 'entryscape', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
 Count: 1
@@ -21,4 +106,6 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 10 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue

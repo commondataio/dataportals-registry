@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Priority: IMPORTANT
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='islandora' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+HR: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+dabarsrcehr: 1 issue
+datafulirirbhr: 1 issue
+
+=== ISSUES ===
+
+File: HR/Federal/scientific/dabarsrcehr.yaml
+Record ID: dabarsrcehr
+Country: HR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {"software_id": "islandora", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions
+
+File: HR/Federal/scientific/datafulirirbhr.yaml
+Record ID: datafulirirbhr
+Country: HR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {"software_id": "islandora", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions

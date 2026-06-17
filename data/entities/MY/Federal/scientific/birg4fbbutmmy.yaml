@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -15,6 +15,14 @@ coverage:
       id: '035'
       name: South-eastern Asia
 description: We share biodiversity data of species in Malaysia
+endpoints:
+- type: dcat:ttl
+  url: http://birg4.fbb.utm.my:8080/dcat
+- type: ipt:dataset
+  url: http://birg4.fbb.utm.my:8080/inventory/dataset
+- type: rss
+  url: http://birg4.fbb.utm.my:8080/rss.do
+  version: '2.0'
 id: birg4fbbutmmy
 langs:
 - id: MS
@@ -33,7 +41,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

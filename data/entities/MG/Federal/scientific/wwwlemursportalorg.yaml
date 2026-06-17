@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,7 +19,15 @@ description: The lemur portal (http://www.lemursportal.org) tool was established
   exchanges between stakeholders in lemur conservation. Based on the needs of the
   users, the lemur portal includes an online forum to promote real-time exchanges
   between different users, a comprehensive species database, a ready-made and tailored
-  visualizations, and a mobile application integrating iNaturalist for citizen science.
+  visualizations, and a mobile application   integrating iNaturalist for citizen science.
+endpoints:
+- type: dcat:ttl
+  url: https://www.lemursportal.org/dcat
+- type: ipt:dataset
+  url: https://www.lemursportal.org/inventory/dataset
+- type: rss
+  url: https://www.lemursportal.org/rss.do
+  version: '2.0'
 id: wwwlemursportalorg
 langs:
 - id: FR
@@ -37,7 +45,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

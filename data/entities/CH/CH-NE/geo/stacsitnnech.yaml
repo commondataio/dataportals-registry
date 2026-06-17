@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-NE
+      name: Neuchâtel
+description: STAC catalog of geospatial data published by the Neuchâtel territorial
+  information system (SITN), including cantonal collections and Swiss surface and
+  bathymetry 3D data. Powered by STAC Browser.
+endpoints:
+- type: stacserverapi
+  url: https://sitn.ne.ch/services/stac/
+id: stacsitnnech
+langs:
+- id: FR
+  name: French
+link: https://sitn.ne.ch/services/stac/catalog.json
+name: Catalogue STAC du SITN
+owner:
+  link: https://sitn.ne.ch
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: CH-NE
+      name: Neuchâtel
+  name: Système d'Information du Territoire Neuchâtelois (SITN)
+  type: Regional government
+software:
+  id: stacbrowser
+  name: STAC Browser
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+- Neuchâtel
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021846

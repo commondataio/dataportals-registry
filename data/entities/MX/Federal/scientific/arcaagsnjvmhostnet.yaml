@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,14 @@ coverage:
       name: Central America
 description: Herbarium of the Universidad Autónoma de Aguascalientes (HUAA) and DNA
   Bank of the Universidad Autónoma de Aguascalientes (ADNUAA)
+endpoints:
+- type: dcat:ttl
+  url: http://arcaagsn.jvmhost.net:10197/dcat
+- type: ipt:dataset
+  url: http://arcaagsn.jvmhost.net:10197/inventory/dataset
+- type: rss
+  url: http://arcaagsn.jvmhost.net:10197/rss.do
+  version: '2.0'
 id: arcaagsnjvmhostnet
 langs:
 - id: ES
@@ -33,7 +41,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

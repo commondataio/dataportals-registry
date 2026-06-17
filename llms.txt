@@ -1,0 +1,65 @@
+# dataportals-registry — agent index
+
+> Registry of open data portals, geoportals, scientific repositories, and related data infrastructure worldwide. Reference-data repository (YAML source of truth + exported datasets). Production query APIs and MCP servers live in separate repositories.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): project scope, schema, CLI commands, contribution workflow for AI assistants
+- [CONTRIBUTING.md](CONTRIBUTING.md): human contributor guide
+- [DATASHEET.md](DATASHEET.md): dataset purpose, bias, limitations, recommended uses
+- [CITATION.cff](CITATION.cff): academic citation metadata
+- [openspec/ROADMAP.md](openspec/ROADMAP.md): active change proposals and implementation waves
+
+## Data layout
+
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type)
+- `data/scheduled/`: unverified records pending promotion
+- `data/software/`: software/platform definitions
+- `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
+- `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
+- `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings
+- `data/reference/`: vocabularies (countries, subregions, etc.)
+
+## Exports (generated)
+
+Run `python scripts/builder.py build` to regenerate.
+
+- `data/datasets/catalogs.jsonl` (+ `.zst`): entity records only
+- `data/datasets/full.jsonl` (+ `.zst`, `.parquet`, `datasets.duckdb`): entities + scheduled
+- `data/datasets/software.jsonl`: software definitions
+- `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports
+- `data/datasets/catalogs.jsonld`: optional JSON-LD export (`python scripts/builder.py build --jsonld`)
+
+## Quality and monitoring outputs
+
+- `dataquality/full_report.jsonl`: machine-readable quality issues (join on `uid`)
+- `dataquality/full_report.txt`: human-readable summary
+- `dataquality/primary_priority.jsonl`: CRITICAL + IMPORTANT issues
+- `dataquality/baseline_counts.json`: CI regression baseline for priority counts
+- `dataquality/liveness_report.jsonl`: URL reachability probes (weekly workflow)
+
+Commands:
+
+```bash
+python scripts/builder.py validate-yaml
+python scripts/builder.py analyze-quality
+python scripts/update_quality_baseline.py
+python scripts/check_liveness.py --sample 10
+```
+
+## Key devdocs
+
+- [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md): quality analysis, baseline, liveness
+- [devdocs/scheduled-to-entities.md](devdocs/scheduled-to-entities.md): promoting scheduled entries
+- [devdocs/re3data_enrichment.md](devdocs/re3data_enrichment.md): Re3Data enrichment
+- [devdocs/ckan_ecosystem_sync.md](devdocs/ckan_ecosystem_sync.md): CKAN ecosystem sync
+
+## Scope boundary
+
+In-scope: YAML records, validation, enrichment, quality analysis, dataset exports.
+Out-of-scope: production query API/MCP runtime (maintained elsewhere).
+
+## License
+
+- Code: MIT
+- Data: CC-BY 4.0

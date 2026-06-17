@@ -259,6 +259,15 @@ GEONODE_URLMAP = [
         "version": None,
     },
     {
+        "id": "stacserverapi",
+        "display_url": "/geoserver/ogc/stac/v1",
+        "url": "/geoserver/ogc/stac/v1/collections?f=json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
         "id": "geoserver:version",
         "url": "/geoserver/rest/about/version",
         "accept": "application/json",
@@ -791,7 +800,7 @@ ESPLORO_URLMAP = [
     },
 ]
 
-ELSEVIERPURE_URLMAP = [
+PURE_URLMAP = [
     {
         "id": "oaipmh20",
         "url": "/ws/oai?verb=Identify",
@@ -981,6 +990,15 @@ GEOSERVER_URLMAP = [
     {
         "id": "ogc:features",
         "url": "/ogc/features/collections",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "stacserverapi",
+        "display_url": "/ogc/stac/v1",
+        "url": "/ogc/stac/v1/collections?f=json",
+        "accept": "application/json",
         "expected_mime": JSON_MIMETYPES,
         "is_json": True,
         "version": None,
@@ -1745,7 +1763,9 @@ SDMXRI_URLMAP = [
 ]
 
 
-OPENDAP_URLMAP = []
+from apidetect_urlmaps_draft import DRAFT_CATALOGS_URLMAP, OPENDAP_URLMAP_DRAFT
+
+OPENDAP_URLMAP = OPENDAP_URLMAP_DRAFT
 
 OPENDATAREG_URLMAP = [
     {
@@ -2082,7 +2102,7 @@ CATALOGS_URLMAP = {
     "socrata": SOCRATA_URLMAP,
     "dataverse": DATAVERSE_URLMAP,
     "dspace": DSPACE_URLMAP,
-    "elsevierpure": ELSEVIERPURE_URLMAP,
+    "pure": PURE_URLMAP,
     "nada": NADA_URLMAP,
     "geoserver": GEOSERVER_URLMAP,
     "eprints": EPRINTS_URLMAP,
@@ -2123,6 +2143,7 @@ CATALOGS_URLMAP = {
     "ipt": IPT_URLMAP,
     "sdmxri": SDMXRI_URLMAP,
     "opendatareg": OPENDATAREG_URLMAP,
+    **DRAFT_CATALOGS_URLMAP,
 }
 
 
@@ -2156,12 +2177,47 @@ def erddap_url_cleanup_func(url):
     return url.split("/index.html")[0]
 
 
+def ala_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if url.endswith("/datasets"):
+        url = url[: -len("/datasets")]
+    return url.rstrip("/")
+
+
+def lizmap_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if "/index.php" in url:
+        url = url.split("/index.php", 1)[0]
+    elif "/lizmap/" in url:
+        url = url.split("/lizmap/", 1)[0]
+    return url.rstrip("/")
+
+
+def mapbender_url_cleanup_func(url):
+    url = url.rstrip("/")
+    for marker in ("/application/", "/mapbender3/"):
+        if marker in url:
+            return url.split(marker, 1)[0].rstrip("/")
+    return url
+
+
+def nesstar_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if url.endswith("/webview"):
+        return url[: -len("/webview")]
+    return url
+
+
 URL_CLEANUP_MAP = {
     "geoserver": geoserver_url_cleanup_func,
     "arcgisserver": arcgisserver_url_cleanup_func,
     "geonetwork": geonetwork_url_cleanup_func,
     "thredds": thredds_url_cleanup_func,
     "erddap": erddap_url_cleanup_func,
+    "ala": ala_url_cleanup_func,
+    "lizmap": lizmap_url_cleanup_func,
+    "mapbender": mapbender_url_cleanup_func,
+    "nesstar": nesstar_url_cleanup_func,
 }
 
 

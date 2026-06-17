@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,6 +16,13 @@ coverage:
       id: '151'
       name: Eastern Europe
 description: Full stack GIS for fire data collection and automatic reports.
+endpoints:
+- type: nextgisweb:api
+  url: https://clear-horizon.nextgis.com/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://clear-horizon.nextgis.com/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://clear-horizon.nextgis.com/api/component/pyramid/route
 id: clearhorizonnextgiscom
 langs:
 - id: RU
@@ -47,7 +55,6 @@ tags:
 - Emergency
 - Monitoring
 - Nature
-uid: cdi00004768
 topics:
 - id: GOVE
   name: Government and public sector
@@ -58,3 +65,4 @@ topics:
 - id: Boundaries
   name: Boundaries
   type: iso19115
+uid: cdi00004768

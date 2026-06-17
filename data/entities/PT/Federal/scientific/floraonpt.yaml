@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,7 +18,15 @@ description: Sociedade Portuguesa de Botânica is an environmental non-profit or
   dedicated to promote the study, conservation and information exchange of the portuguese
   flora. This IPT publishes datasets compiled from Flora-On.pt, an interactive Flora
   of Portugal backed by a continuously increasing database of species occurrence records,
-  resulting from the work of an array of voluntary collaborators.
+  resulting from the work of an array of   voluntary collaborators.
+endpoints:
+- type: dcat:ttl
+  url: http://flora-on.pt:8080/dcat
+- type: ipt:dataset
+  url: http://flora-on.pt:8080/inventory/dataset
+- type: rss
+  url: http://flora-on.pt:8080/rss.do
+  version: '2.0'
 id: floraonpt
 langs:
 - id: PT
@@ -36,7 +44,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

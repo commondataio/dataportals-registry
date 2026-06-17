@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
+Priority: IMPORTANT
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='datalibrary' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+LS: 1 issue
+MW: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+41771110: 1 issue
+datalibrarygovls: 1 issue
+
+=== ISSUES ===
+
+File: MW/Federal/geo/41771110.yaml
+Record ID: 41771110
+Country: MW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
+Field: endpoints
+Current Value: {"software_id": "datalibrary", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions
+
+File: LS/geo/datalibrarygovls.yaml
+Record ID: datalibrarygovls
+Country: LS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
+Field: endpoints
+Current Value: {"software_id": "datalibrary", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions

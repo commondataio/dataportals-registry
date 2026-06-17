@@ -1,4 +1,5 @@
 category: Scientific data repository
+subtype: scientific_repository_platform
 datatypes:
   datasets: 'Yes'
   fields: 'No'
@@ -9,16 +10,29 @@ has_api: 'Yes'
 has_bulk: 'No'
 id: dspace
 website: https://dspace.lyrasis.org
+description: DSpace is an open source repository platform for managing, preserving,
+  and sharing scholarly and scientific digital assets with support for institutional
+  repositories and long-term access.
+owner:
+  name: Lyrasis
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://dspace.lyrasis.org/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'Yes'
+  iso19115: 'No'
   oai-pmh: 'Yes'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
@@ -36,7 +50,9 @@ storage_type: Raw
 type: Software
 repository_url: https://github.com/DSpace/DSpace
 documentation_url: https://wiki.lyrasis.org/display/DSDOC
-version: dspace-9.2
+version: '9.2'
+license:
+  type: BSD-3-Clause
 export_formats:
 - BibTeX
 - JSON
@@ -48,4 +64,4 @@ capabilities:
 - OAI-PMH harvesting
 - Topic categorization
 changelog_url: https://github.com/DSpace/DSpace/releases
-last_updated: '2025-12-25T09:25:24Z'
+last_updated: '2026-03-31T12:00:00Z'

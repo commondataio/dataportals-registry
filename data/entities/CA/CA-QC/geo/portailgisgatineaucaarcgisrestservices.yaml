@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: ArcGIS Server REST services directory for the Ville de Gatineau municipal
+  GIS portal (portailgis.gatineau.ca).
+endpoints:
+- type: arcgis:rest:info
+  url: https://portailgis.gatineau.ca/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://portailgis.gatineau.ca/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://portailgis.gatineau.ca/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://portailgis.gatineau.ca/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://portailgis.gatineau.ca/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://portailgis.gatineau.ca/arcgis/rest/services?f=kmz
+id: portailgisgatineaucaarcgisrestservices
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://portailgis.gatineau.ca/arcgis/rest/services
+name: Portail GIS - Ville de Gatineau (ArcGIS REST)
+owner:
+  link: https://www.gatineau.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Ville de Gatineau
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- Gatineau
+- GIS
+- Quebec
+- arcgisserver
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021906

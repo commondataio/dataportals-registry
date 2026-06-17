@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: CN
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: CN
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 2
+Priority: IMPORTANT
+
+File: CN/Federal/scientific/wwwnbsdccn.yaml
+Record ID: wwwnbsdccn
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://nbsdc.cn', 'raw_link': 'https://www.nbsdc.cn', 'record_ids': ['wwwnbsdccn', 'nbsdccn']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: CN/Federal/scientific/nbsdccn.yaml
+Record ID: nbsdccn
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://nbsdc.cn', 'raw_link': 'https://nbsdc.cn', 'record_ids': ['wwwnbsdccn', 'nbsdccn']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
 Count: 2
@@ -28,4 +46,5 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues

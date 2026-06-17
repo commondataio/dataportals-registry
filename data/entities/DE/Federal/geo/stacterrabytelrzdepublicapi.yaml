@@ -1,0 +1,62 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Curated STAC 1.0 catalog of the terrabyte platform at LRZ, exposing public
+  collections of Earth observation and geospatial datasets (e.g. Sentinel, Landsat,
+  MODIS, VIIRS, Copernicus DEM, ERA5) with item search and OGC API Features conformance.
+endpoints:
+- type: stacserverapi
+  url: https://stac.terrabyte.lrz.de/public/api/
+- type: openapi
+  url: https://stac.terrabyte.lrz.de/public/api/api
+  version: '3.0'
+id: stacterrabytelrzdepublicapi
+langs:
+- id: EN
+  name: English
+- id: DE
+  name: German
+link: https://stac.terrabyte.lrz.de/public/api/
+name: terrabyte STAC API
+owner:
+  link: https://terrabyte.lrz.de/
+  location:
+    country: *id001
+    level: 20
+  name: Leibniz Supercomputing Centre (LRZ)
+  type: Academy
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- Earth observation
+- geospatial
+- has_api
+- STAC
+- terrabyte
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021821

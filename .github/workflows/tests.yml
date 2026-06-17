@@ -41,3 +41,24 @@ jobs:
         flags: unittests
         name: codecov-umbrella
 
+  quality-regression:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.12"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Analyze data quality
+      run: python scripts/builder.py analyze-quality
+
+    - name: Quality regression guard
+      run: python -m pytest tests/test_quality_regression.py -v
+

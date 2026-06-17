@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,14 @@ description: GBIF-Philippines Node IPT Facility maintained by the Biodiversity M
   Bureau of the Department of Environment and Natural Resources. This IPT will be
   recommended to be used for the GBIF data publication of the Philippine CHM (BIOWEB)
   partner organizations.
+endpoints:
+- type: dcat:ttl
+  url: http://146.88.74.172:8080/ipt/dcat
+- type: ipt:dataset
+  url: http://146.88.74.172:8080/ipt/inventory/dataset
+- type: rss
+  url: http://146.88.74.172:8080/ipt/rss.do
+  version: '2.0'
 id: '1468874172'
 langs:
 - id: TL
@@ -35,7 +43,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

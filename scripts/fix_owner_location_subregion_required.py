@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).parent.parent
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
 SCHEDULED_DIR = BASE_DIR / "data" / "scheduled"
 RULE_REPORT = BASE_DIR / "dataquality" / "rules" / "OWNER_LOCATION_SUBREGION_REQUIRED.txt"
-SUBREGIONS_CSV = BASE_DIR / "data" / "reference" / "subregions" / "IP2LOCATION-ISO3166-2.CSV"
+SUBREGIONS_CSV = BASE_DIR / "data" / "reference" / "subregions" / "ISO3166-2.CSV"
 
 SUPPORTED_OWNER_TYPES = {"local government", "regional government"}
 

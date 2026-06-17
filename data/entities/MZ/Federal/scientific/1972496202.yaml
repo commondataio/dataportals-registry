@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -42,6 +42,14 @@ description: "GBIF Mozambique IPT promove a partilha livre e aberta dos dados pr
   \ of scientific knowledge in the definition of guidelines for the management of\
   \ habitats and species;\r\nf) foster the study of floral and fauna from primary\
   \ education to higher education."
+endpoints:
+- type: dcat:ttl
+  url: http://197.249.6.202:8088/dcat
+- type: ipt:dataset
+  url: http://197.249.6.202:8088/inventory/dataset
+- type: rss
+  url: http://197.249.6.202:8088/rss.do
+  version: '2.0'
 id: '1972496202'
 langs:
 - id: PT
@@ -59,7 +67,7 @@ owner:
   type: Academy
 software:
   id: ipt
-  name: IPT The Integrated Publishing Toolkit
+  name: GBIF Integrated Publishing Toolkit (IPT)
 status: active
 tags:
 - GBIF

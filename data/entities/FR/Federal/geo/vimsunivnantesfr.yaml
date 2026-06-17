@@ -15,9 +15,7 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Cassini VIMS infrared spectral cubes for Saturn's moons (Titan, Enceladus,
-  etc.), hosted by Laboratoire de Planétologie et Géosciences, Université de Nantes.
-  STAC API available.
+description: Osuna STAC 1.0 catalog for the Cassini VIMS infrared dataset at Nantes Université (LPG), with child collections such as Titan flybys. Scientific and solar-system STAC extensions; data acknowledgment NASA/Caltech-JPL/University of Arizona/Osuna-LPG. Powered by STAC Browser.
 endpoints:
 - type: stacserverapi
   url: https://vims.univ-nantes.fr/stac/catalog.json
@@ -26,7 +24,7 @@ langs:
 - id: EN
   name: English
 link: https://vims.univ-nantes.fr/stac/catalog.json
-name: Cassini VIMS Data Portal
+name: Cassini VIMS-IR STAC catalog
 owner:
   link: https://www.univ-nantes.fr
   location:
@@ -34,9 +32,16 @@ owner:
     level: 20
   name: Laboratoire de Planétologie et Géosciences (LPG), Université de Nantes
   type: Academy
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
 software:
-  id: stacserver
-  name: Stac-server
+  id: stacbrowser
+  name: STAC Browser
 status: active
 topics:
 - id: Location
@@ -49,7 +54,12 @@ topics:
   name: Science and technology
   type: eudatatheme
 tags:
+- Cassini
+- Osuna
+- STAC
+- Titan
 - geospatial
 - has_api
-- STAC
+- planetary science
+- remote sensing
 uid: cdi00021405

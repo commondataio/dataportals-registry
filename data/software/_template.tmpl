@@ -1,4 +1,5 @@
 category: Open data portal
+subtype: data_portal_platform
 datatypes:
   datasets: 'Unknown'
   fields: 'Unknown'
@@ -9,15 +10,24 @@ has_api: 'No'
 has_bulk: 'No'
 website:
 id: placeholder
+# metadata_support: interoperability matrix (not every metadata vocabulary worldwide).
+# Values: Yes | No | Uncertain | Compatible | Plugin only | Limited | Unclear (see schema).
+# Overlaps: CSW often carries ISO 19115 XML; OAI-PMH often exposes Dublin Core; DCAT may use RDF;
+# schema-org is often JSON-LD on HTML pages (distinct from a SPARQL endpoint).
+# Newer keys: dublin_core (explicit DC / oai_dc), iso19115 (explicit ISO 19115/19139 without implying
+# full CSW), rdf_sparql (RDF dumps, triple stores, SPARQL endpoints — not only DCAT or schema.org).
 metadata_support:
   ckan_api: 'Uncertain'
   csw: 'Uncertain'
   custom_api: 'Uncertain'
   dcat: Uncertain
+  dublin_core: 'Uncertain'
+  iso19115: 'Uncertain'
   oai-pmh: Uncertain
   ogcrecords: 'Uncertain'
   openaire: 'Uncertain'
   opensearch: Uncertain
+  rdf_sparql: 'Uncertain'
   schema-org: Uncertain
   sdmx: 'Uncertain'
   stac: 'Uncertain'

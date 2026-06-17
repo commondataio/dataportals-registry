@@ -1,37 +1,51 @@
 category: Scientific data repository
+subtype: domain_data_infrastructure
 datatypes:
-  datasets: Unknown
-  fields: Unknown
-  organizations: Unknown
-  resources: Unknown
-  topics: Unknown
+  datasets: 'Yes'
+  fields: 'Yes'
+  organizations: 'Yes'
+  resources: 'Yes'
+  topics: 'Yes'
 has_api: 'Yes'
-has_bulk: 'No'
+has_bulk: 'Yes'
 id: aodn
 metadata_support:
-  ckan_api: Uncertain
-  csw: Uncertain
+  ckan_api: 'No'
+  csw: 'No'
   custom_api: 'Yes'
-  dcat: Uncertain
-  oai-pmh: Uncertain
-  ogcrecords: Uncertain
-  openaire: Uncertain
-  opensearch: Uncertain
-  schema-org: Uncertain
-  sdmx: Uncertain
-  stac: Uncertain
-  swordapi: Uncertain
-  wcs: Uncertain
-  wfs: Uncertain
-  wms: Uncertain
-name: AODN
+  dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
+  oai-pmh: 'No'
+  ogcrecords: 'No'
+  openaire: 'No'
+  opensearch: 'No'
+  rdf_sparql: 'No'
+  schema-org: 'No'
+  sdmx: 'No'
+  stac: 'No'
+  swordapi: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'No'
+name: Australian Ocean Data Network (AODN) Portal
 website: https://portal.aodn.org.au
+description: The Australian Ocean Data Network (AODN) Portal is a marine and climate
+  data discovery platform that provides search, map-based exploration, API access,
+  and download workflows for ocean observations and related environmental datasets.
+owner:
+  name: Australian Ocean Data Network (AODN), Integrated Marine Observing System (IMOS)
+  location:
+    country:
+      id: AU
+      name: Australia
+logo_url: https://portal.aodn.org.au/favicon.ico
 pid_support:
-  has_doi: Uncertain
-  persistent_dataset_url: Uncertain
+  has_doi: 'No'
+  persistent_dataset_url: 'Yes'
 rights_management:
-  licensing_type: Uncertain
-  supports_licenses: Uncertain
+  licensing_type: Per dataset
+  supports_licenses: 'Yes'
 storage_type: Both
 type: Software
 export_formats:
@@ -42,4 +56,7 @@ export_formats:
 - XML
 capabilities:
 - REST API
-last_updated: '2025-12-25T09:25:23Z'
+- Bulk downloads
+- Geospatial search
+- Marine data discovery
+last_updated: '2026-03-31T12:00:00Z'

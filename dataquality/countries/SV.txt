@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: SV
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: SV
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: SV/SV-SS/opendata/datosabiertosopamssorgsv.yaml
+Record ID: datosabiertosopamssorgsv
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA]
 Count: 1
@@ -21,4 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='nada' is marked
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NADA: 1 issue

@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
+================================================================================
+Generated: 2026-06-17 15:17:23
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='opendatareg' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+US: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+registryopendataaws: 1 issue
+
+=== ISSUES ===
+
+File: US/Other/ml/registryopendataaws.yaml
+Record ID: registryopendataaws
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
+Field: endpoints
+Current Value: {"software_id": "opendatareg", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='opendatareg' is marked as API-capable in software definitions

@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-06-17
+
+**GitHub Release**: [v1.8.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.8.0) - Published June 17, 2026
+
+### Added
+- **124 net new catalog entries** (560 added, 460 removed vs v1.7.0); export snapshot: **14,470** catalog records (entities).
+- Quality regression guard (`tests/test_quality_regression.py`) and CI job to prevent quality-issue count regressions.
+- Software taxonomy discovery guidance in `README.md` (`category`, `subtype` fields).
+- Agent and governance documentation links (`llms.txt`, `DATASHEET.md`, `CITATION.cff`, `SECURITY.md`, `CODE_OF_CONDUCT.md`).
+- Expanded `devdocs/quality-fix-workflow.md` and API detection regression tests.
+
+### Changed
+- **3,312 catalog entries updated** with refreshed metadata; regenerated datasets and quality reports.
+- Export snapshots: 14,470 catalog records in `catalogs.jsonl` / `full.jsonl`; 135 software definitions; 0 scheduled.
+- Builder, apidetect, enrichment, and fix scripts improved; scope boundary documented in `AGENTS.md`.
+
+### Removed
+- **460 catalog entries** removed (inactive, duplicate, or consolidated).
+
 ## [1.7.0] - 2026-02-24
 
 **GitHub Release**: [v1.7.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.7.0) - Published February 24, 2026

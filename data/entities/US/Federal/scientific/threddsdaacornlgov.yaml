@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,11 @@ description: The ORNL DAAC's Thematic Real-time Environmental Distributed Data S
   a catalog service and several data access services, allowing users to find and access
   datasets of interest from within a simple, hierarchal catalog within a Web browser
   or a compatible client software.
+endpoints:
+- type: thredds:catalog
+  url: https://thredds.daac.ornl.gov/thredds/catalogs/ornldaac/ornldaac.xml
+- type: thredds:info
+  url: https://thredds.daac.ornl.gov/thredds/serverInfo.xml
 id: threddsdaacornlgov
 langs:
 - id: EN

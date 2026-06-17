@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: TG
+      name: Togo
+    level: 20
+    macroregion:
+      id: '011'
+      name: Western Africa
+description: National institutional geoportal and open geodata catalogue for Togo
+  (Géoportail institutionnel de la République Togolaise), with public map services
+  via GeoServer WMS and a JSON API.
+endpoints:
+- type: wms111
+  url: https://geoserver.geoportail.gouv.tg/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoserver.geoportail.gouv.tg/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: geodatagouvtg
+langs:
+- id: FR
+  name: French
+- id: EN
+  name: English
+link: https://geodata.gouv.tg/
+name: Geodata Togo
+owner:
+  link: https://www.gouv.tg
+  location:
+    country:
+      id: TG
+      name: Togo
+    level: 20
+  name: République Togolaise
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- national geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021892

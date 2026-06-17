@@ -1,8 +1,17 @@
 # SUBREGION_INVALID_ISO3166_2 - Error Verification Analysis
 
-**Date:** 2026-02-24  
-**Total flagged issues:** 244  
-**Reference file:** `data/reference/subregions/IP2LOCATION-ISO3166-2.CSV`
+**Date:** 2026-02-24 (updated 2026-06-17)  
+**Historical flagged issues:** 244  
+**Current reference file:** `data/reference/subregions/ISO3166-2.CSV`
+
+## 2026-06-17 Migration Update
+
+- Replaced legacy IP2Location-based source with generated ISO reference from `pycountry`.
+- New file: `data/reference/subregions/ISO3166-2.CSV` (generated via `scripts/refresh_subregion_reference.py`).
+- Post-migration run (`python scripts/builder.py analyze-quality`) reports:
+  - `SUBREGION_INVALID_ISO3166_2`: **26**
+  - `SUBREGION_NAME_ID_MISMATCH`: **2343** (name canonicalization gap; tracked separately)
+- The invalid-code bucket is now primarily real errors or edge cases, not broad missing-code false positives.
 
 ## Summary
 

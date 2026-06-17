@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Ministry of Agriculture, Forestry and Fisheries (MAFF) site for viewing,
+  downloading, and feedback on agricultural parcel polygon data (筆ポリゴン, fude polygons)
+  for Japan. Open access without user registration.
+endpoints:
+- type: dcatap201
+  url: https://open.fude.maff.go.jp/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://open.fude.maff.go.jp/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://open.fude.maff.go.jp/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://open.fude.maff.go.jp/api/search/v1
+- type: sitemap
+  url: https://open.fude.maff.go.jp/sitemap.xml
+id: openfudemaffgojp
+langs:
+- id: JA
+  name: Japanese
+link: https://open.fude.maff.go.jp
+name: MAFF Fude Polygon Open Site
+owner:
+  link: https://www.maff.go.jp
+  location:
+    country:
+      id: JP
+      name: Japan
+    level: 20
+  name: Ministry of Agriculture, Forestry and Fisheries, Japan
+  type: Central government
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- agriculture
+- cadastre
+- geospatial
+- government
+- Japan
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00021924

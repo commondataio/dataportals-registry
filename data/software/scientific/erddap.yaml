@@ -1,4 +1,5 @@
 category: Scientific data repository
+subtype: protocol_or_api_server
 datatypes:
   datasets: 'Yes'
   fields: 'Yes'
@@ -6,25 +7,38 @@ datatypes:
   resources: 'No'
   topics: 'No'
 has_api: 'Yes'
-has_bulk: 'No'
+has_bulk: 'Yes'
 id: erddap
-website: https://upwell.pfeg.noaa.gov/erddap/information.html
+website: https://coastwatch.pfeg.noaa.gov/erddap/
+description: ERDDAP is an open-source scientific data server for publishing and accessing
+  tabular and gridded environmental datasets through web services, APIs, and multiple
+  machine-readable download formats.
+owner:
+  name: NOAA NMFS Southwest Fisheries Science Center
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://coastwatch.pfeg.noaa.gov/erddap/images/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
   dcat: 'No'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
   opensearch: 'No'
+  rdf_sparql: 'No'
   schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
-  wcs: 'Yes'
-  wfs: 'Yes'
-  wms: 'No'
+  wcs: 'No'
+  wfs: 'No'
+  wms: 'Yes'
 name: ERDDAP
 pid_support:
   has_doi: 'No'
@@ -39,15 +53,18 @@ documentation_url: https://coastwatch.pfeg.noaa.gov/erddap/
 version: 2.29.0
 export_formats:
 - BibTeX
+- CSV
 - GeoJSON
 - JSON
 - KML
+- NetCDF
 - RDF
 - RIS
 - XML
 capabilities:
 - REST API
-- WFS service
-- WCS service
+- OPeNDAP access
+- WMS service
+- Dataset subsetting and server-side processing
 changelog_url: https://github.com/BobSimons/erddap/releases
-last_updated: '2025-12-25T09:25:34Z'
+last_updated: '2026-03-31T12:00:00Z'

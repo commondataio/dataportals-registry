@@ -1,0 +1,60 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: STAC 1.0 API (stac-fastapi) for FAIRiCUBE Hub collections on the EOX
+  Sentinel Hub Open Telekom Cloud (OTC) deployment, with separate child catalogs for
+  ML resources, non-ML resources, and data-access indexing.
+endpoints:
+- type: stacserverapi
+  url: https://stacapi.fairicube.hub-otc-sc.eox.at/
+- type: openapi
+  url: https://stacapi.fairicube.hub-otc-sc.eox.at/api
+  version: '3.0'
+id: stacapifairicubehubotcsceoxat
+langs:
+- id: EN
+  name: English
+link: https://stacapi.fairicube.hub-otc-sc.eox.at/
+name: FAIRiCUBE Hub OTC STAC API
+owner:
+  link: https://hub.fairicube.eu/
+  location:
+    country: *id001
+    level: 20
+  name: FAIRiCUBE Hub
+  type: Other
+software:
+  id: stacserver
+  name: stac-server
+status: active
+tags:
+- FAIRiCUBE
+- STAC
+- earth observation
+- geospatial
+- has_api
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00021845

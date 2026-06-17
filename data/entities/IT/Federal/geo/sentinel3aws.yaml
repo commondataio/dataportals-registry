@@ -15,13 +15,9 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: No data was extracted from the provided URL as the actual content of
-  the catalog.json was not included in the search results or supplied in the request.
-  Without access to the raw content or the JSON file from the given URL, it is not
-  possible to extract or map catalog information using the specified vocabularies
-  (owner_type_reference, data_theme, iso19115_theme) in a precise, non-hallucinated
-  manner. To generate a CSV or JSON output conforming to your schema, you must provide
-  the actual content of the catalog.json file or ensure it is accessible.
+description: Observations from the Sentinel-3 satellite of the European Commission’s
+  Copernicus Earth Observation Programme, available in Level 2 and 3. STAC catalog
+  and assets are hosted in this public AWS S3 bucket by MEEO.
 endpoints:
 - type: stacserverapi
   url: https://meeo-s3.s3.amazonaws.com/catalog.json
@@ -29,8 +25,8 @@ id: sentinel3aws
 langs:
 - id: EN
   name: English
-link: https://meeo-s3.s3.amazonaws.com/catalog.json
-name: Geoportal - Meteorological Environmental Earth Observation
+link: https://meeo-s3.s3.amazonaws.com/
+name: Sentinel 3 Level 2+3 on AWS (MEEO S3)
 owner:
   link: https://www.meeo.it
   location:
@@ -52,7 +48,7 @@ rights:
   tos_url: null
 software:
   id: stacserver
-  name: Stac-server
+  name: stac-server
 status: active
 tags:
 - geospatial

@@ -130,6 +130,35 @@ def test_api_identifier_rejects_wrong_mime_for_string_expected_mime(monkeypatch)
     assert found == []
 
 
+def test_api_identifier_geoserver_stac_uses_display_url_for_endpoint(monkeypatch):
+    """STAC probe hits collections JSON; stored URL is the API root (see GEOSERVER_URLMAP)."""
+    monkeypatch.setitem(
+        apidetect.CATALOGS_URLMAP,
+        "testsw",
+        [
+            {
+                "id": "stacserverapi",
+                "display_url": "/ogc/stac/v1",
+                "url": "/ogc/stac/v1/collections?f=json",
+                "accept": "application/json",
+                "expected_mime": apidetect.JSON_MIMETYPES,
+                "is_json": True,
+                "version": None,
+            }
+        ],
+    )
+    _patch_session(
+        monkeypatch,
+        [_DummyResponse(content=b'{"collections":[],"links":[]}')],
+    )
+
+    found = apidetect.api_identifier("https://example.org/geoserver", "testsw")
+
+    assert len(found) == 1
+    assert found[0]["type"] == "stacserverapi"
+    assert found[0]["url"] == "https://example.org/geoserver/ogc/stac/v1"
+
+
 def test_analyze_robots_returns_empty_for_non_200(monkeypatch):
     _patch_requests_get(
         monkeypatch,
@@ -220,6 +249,87 @@ def test_detect_ckan_uses_ckanapi_endpoint_base_url(monkeypatch):
     apidetect.detect_ckan(dryrun=True, mode="entries")
 
     assert calls == [("https://catalog.example.org", "ckan")]
+
+
+def test_catalogs_urlmap_includes_draft_software():
+  expected = {
+      "stacserver",
+      "galaxy",
+      "udata",
+      "lizmap",
+      "nextgisweb",
+      "fusionregistry",
+      "aristotlemdr",
+  }
+  assert expected.issubset(apidetect.CATALOGS_URLMAP.keys())
+
+
+def test_opendap_urlmap_is_not_empty():
+  assert len(apidetect.OPENDAP_URLMAP) > 0
+
+
+def test_api_identifier_stacserver_collections(monkeypatch):
+  collections = b'{"collections":[],"links":[]}'
+
+  class _StacSession:
+      def get(self, url, **kwargs):
+          if url.endswith("/collections"):
+              return _DummyResponse(content=collections)
+          return _DummyResponse(status_code=404)
+
+      def post(self, *args, **kwargs):
+          return _DummyResponse(status_code=404)
+
+  monkeypatch.setattr(apidetect.requests, "Session", lambda: _StacSession())
+
+  found = apidetect.api_identifier("https://example.org/stac/v1", "stacserver")
+
+  assert any(item["type"] == "stacserverapi:collections" for item in found)
+  assert any(
+      item["url"] == "https://example.org/stac/v1/collections" for item in found
+  )
+
+
+def test_api_identifier_galaxy_version(monkeypatch):
+  class _GalaxySession:
+      def get(self, url, **kwargs):
+          if url.endswith("/api/version"):
+              return _DummyResponse(
+                  content=b'{"version_major":"24.1","version_minor":"0"}',
+              )
+          return _DummyResponse(status_code=404)
+
+      def post(self, *args, **kwargs):
+          return _DummyResponse(status_code=404)
+
+  monkeypatch.setattr(apidetect.requests, "Session", lambda: _GalaxySession())
+
+  found = apidetect.api_identifier("https://usegalaxy.org", "galaxy")
+
+  assert any(item["type"] == "galaxy:api" for item in found)
+  assert any(item["url"] == "https://usegalaxy.org/api/version" for item in found)
+
+
+def test_api_identifier_udata_datasets(monkeypatch):
+  class _UdataSession:
+      def get(self, url, **kwargs):
+          if url.endswith("/api/1/datasets/"):
+              return _DummyResponse(
+                  content=b'{"data":[],"page":1,"page_size":20,"total":0}',
+              )
+          return _DummyResponse(status_code=404)
+
+      def post(self, *args, **kwargs):
+          return _DummyResponse(status_code=404)
+
+  monkeypatch.setattr(apidetect.requests, "Session", lambda: _UdataSession())
+
+  found = apidetect.api_identifier("https://www.data.gouv.fr", "udata")
+
+  assert any(item["type"] == "udataapi" for item in found)
+  assert any(
+      item["url"] == "https://www.data.gouv.fr/api/1/datasets/" for item in found
+  )
 
 
 def test_report_writes_expected_header(tmp_path, monkeypatch):

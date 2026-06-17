@@ -1,6 +1,6 @@
 access_mode:
 - open
-api: false
+api: true
 api_status: active
 catalog_type: Open data portal
 content_types:
@@ -16,13 +16,25 @@ coverage:
       name: Western Asia
     subregion:
       id: AE-AZ
-      name: Abu Zaby
-description: Effective data management and storage platform with enhanced security
-  features. Discover how to optimise your data needs with Abu Dhabi unified system.
+      name: Abū Z̧aby
+description: Abu Dhabi Government open data catalog on DKAN (Drupal) for discovering
+  and reusing datasets published by Abu Dhabi public-sector entities; Arabic and English
+  interfaces.
+endpoints:
+- type: dcatus11
+  url: https://data.abudhabi/opendata/data.json
+- type: dkan:search
+  url: https://data.abudhabi/opendata/api/1/search
+  version: '1'
+- type: dkan:metastore
+  url: https://data.abudhabi/opendata/api/1/metastore
+  version: '1'
 id: dataabudhabi
 langs:
 - id: AR
   name: Arabic
+- id: EN
+  name: English
 link: https://data.abudhabi/opendata/
 name: Abu Dhabi Open Data Platform
 owner:
@@ -34,23 +46,28 @@ owner:
     level: 30
     subregion:
       id: AE-AZ
-      name: Abu Zaby
+      name: Abū Z̧aby
   name: Government of Abu Dhabi
   type: Regional government
+properties:
+  has_doi: false
+  is_national: false
 rights:
   license_id: null
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
+  rights_type: granular
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: dkan
+  name: DKAN
 status: active
 tags:
+- Abu Dhabi
 - open data
 - government data
+- DKAN
 topics:
 - id: REGI
   name: Regions and cities

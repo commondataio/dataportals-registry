@@ -1,24 +1,49 @@
 DATA QUALITY REPORT - COUNTRY: World
 ================================================================================
-Generated: 2026-02-24 19:14:11
+Generated: 2026-06-17 15:17:23
 Country Code: World
-Total Records with Issues: 30
-Total Issues Found: 30
+Total Records with Issues: 32
+Total Issues Found: 32
 
 === ISSUES BY TYPE ===
+
+[DUPLICATE_LINK_NORMALIZED]
+Count: 3
+Priority: IMPORTANT
+
+File: World/geo/geospatialorg.yaml
+Record ID: geospatialorg
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'http://geo-spatial.org/geoserver', 'raw_link': 'http://geo-spatial.org/geoserver', 'record_ids': ['wwwgeospatialorg', 'geospatialorg']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: World/geo/wwwocgiscom.yaml
+Record ID: wwwocgiscom
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'raw_link': 'https://www.ocgis.com/arcpub/arcgis/rest/services', 'record_ids': ['wwwocgiscom', 'ocgiscom']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
+
+File: World/geo/ocgiscom.yaml
+Record ID: ocgiscom
+Issue: DUPLICATE_LINK_NORMALIZED
+Field: link
+Current Value: {'normalized_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'raw_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'record_ids': ['wwwocgiscom', 'ocgiscom']}
+Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
 Count: 2
 Priority: IMPORTANT
 
-File: World/Federal/geo/deafricageocloudcom.yaml
+File: World/geo/deafricageocloudcom.yaml
 Record ID: deafricageocloudcom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/portalairbusdsgeocom.yaml
+File: World/geo/portalairbusdsgeocom.yaml
 Record ID: portalairbusdsgeocom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
 Field: endpoints
@@ -29,12 +54,23 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 Count: 1
 Priority: IMPORTANT
 
-File: World/Federal/metadata/potentialxaristotlecloudio.yaml
+File: World/metadata/potentialxaristotlecloudio.yaml
 Record ID: potentialxaristotlecloudio
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR
 Field: endpoints
 Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
+Count: 1
+Priority: IMPORTANT
+
+File: World/geo/sgsepcartocom.yaml
+Record ID: sgsepcartocom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
+Field: endpoints
+Current Value: {'software_id': 'carto', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 3
@@ -47,14 +83,14 @@ Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: World/Federal/opendata/apidataappsfaoorg.yaml
+File: World/opendata/apidataappsfaoorg.yaml
 Record ID: apidataappsfaoorg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-File: World/Federal/opendata/stominisorg.yaml
+File: World/opendata/stominisorg.yaml
 Record ID: stominisorg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
@@ -72,70 +108,41 @@ Field: endpoints
 Current Value: {'software_id': 'datauniceforg', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datauniceforg' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY]
-Count: 3
-Priority: IMPORTANT
-
-File: World/metadata/registrysdmxorg.yaml
-Record ID: registrysdmxorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
-Field: endpoints
-Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
-
-File: World/metadata/sdmxdatauniceforg.yaml
-Record ID: sdmxdatauniceforg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
-Field: endpoints
-Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
-
-File: World/metadata/sdmxcentralimforg.yaml
-Record ID: sdmxcentralimforg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY
-Field: endpoints
-Current Value: {'software_id': 'fusionregistry', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fusionregistry' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 2
 Priority: IMPORTANT
 
-File: World/Federal/geo/geoserverisciencescom.yaml
+File: World/geo/geoserverisciencescom.yaml
 Record ID: geoserverisciencescom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-File: World/Federal/geo/geossregistriesinfo.yaml
+File: World/geo/geossregistriesinfo.yaml
 Record ID: geossregistriesinfo
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE]
-Count: 2
-Priority: IMPORTANT
-
-File: World/Federal/geo/girasxyz.yaml
-Record ID: girasxyz
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
-Field: endpoints
-Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
-
-File: World/Federal/geo/maspawionet.yaml
-Record ID: maspawionet
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE
-Field: endpoints
-Current Value: {'software_id': 'geonode', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geonode' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
 Count: 9
 Priority: IMPORTANT
+
+File: World/geo/21221923379.yaml
+Record ID: 21221923379
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+
+File: World/geo/helpopenstreetmaporg.yaml
+Record ID: helpopenstreetmaporg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
+Field: endpoints
+Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
 File: World/geo/probavmepesaint.yaml
 Record ID: probavmepesaint
@@ -144,56 +151,42 @@ Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/21221923379.yaml
-Record ID: 21221923379
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/Federal/geo/helpopenstreetmaporg.yaml
-Record ID: helpopenstreetmaporg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/Federal/geo/geo4vicmetrianu.yaml
+File: World/geo/geo4vicmetrianu.yaml
 Record ID: geo4vicmetrianu
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/104155211193.yaml
+File: World/geo/104155211193.yaml
 Record ID: 104155211193
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/geoservercawgcaporg.yaml
+File: World/geo/geoservercawgcaporg.yaml
 Record ID: geoservercawgcaporg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/109238224174.yaml
+File: World/geo/109238224174.yaml
 Record ID: 109238224174
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/avstdocom.yaml
+File: World/geo/avstdocom.yaml
 Record ID: avstdocom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: World/Federal/geo/202154182164.yaml
+File: World/geo/202154182164.yaml
 Record ID: 202154182164
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
 Field: endpoints
@@ -204,41 +197,74 @@ Suggested Action: Add at least one endpoint because software.id='geoserver' is m
 Count: 1
 Priority: IMPORTANT
 
-File: World/Federal/geo/wwwsinasmzcom.yaml
+File: World/geo/wwwsinasmzcom.yaml
 Record ID: wwwsinasmzcom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP
 Field: endpoints
 Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
+Count: 1
+Priority: IMPORTANT
+
+File: World/metadata/ipccbrowseripccdataorg.yaml
+Record ID: ipccbrowseripccdataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB
+Field: endpoints
+Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR]
 Count: 1
 Priority: IMPORTANT
 
-File: World/Federal/opendata/146317531.yaml
+File: World/opendata/146317531.yaml
 Record ID: 146317531
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR
 Field: endpoints
 Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG]
+Count: 1
+Priority: IMPORTANT
+
+File: US/Other/ml/registryopendataaws.yaml
+Record ID: registryopendataaws
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
+Field: endpoints
+Current Value: {'software_id': 'opendatareg', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opendatareg' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT]
 Count: 2
 Priority: IMPORTANT
 
-File: World/Federal/opendata/geocataloguesmavdorg.yaml
+File: World/opendata/geocataloguesmavdorg.yaml
 Record ID: geocataloguesmavdorg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT
 Field: endpoints
 Current Value: {'software_id': 'opendatasoft', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='opendatasoft' is marked as API-capable in software definitions
 
-File: World/Federal/opendata/experiencearcgiscom.yaml
+File: World/opendata/experiencearcgiscom.yaml
 Record ID: experiencearcgiscom
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT
 Field: endpoints
 Current Value: {'software_id': 'opendatasoft', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='opendatasoft' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL]
+Count: 1
+Priority: IMPORTANT
+
+File: World/geo/5417317415.yaml
+Record ID: 5417317415
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
+Field: endpoints
+Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI]
 Count: 1
@@ -272,16 +298,19 @@ Suggested Action: Add at least one endpoint because software.id='stattech' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
+DUPLICATE_LINK_NORMALIZED: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FUSIONREGISTRY: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONODE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 9 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH: 2 issues

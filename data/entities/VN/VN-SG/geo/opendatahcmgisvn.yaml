@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,13 +17,17 @@ coverage:
       name: South-eastern Asia
     subregion:
       id: VN-SG
-      name: Ho Chi Minh
+      name: Hồ Chí Minh
 description: Nền tảng chia sẻ dữ liệu và tài liệu GIS mở cho cộng đồng, phục vụ đào
   tạo, nghiên cỡu, thử nghiệm và các dự án mang tính cộng đồng. Các lớp dữ liệu GIS,
   tài liệu, mã nguồn từ cơ bản đến nâng cao về GIS, viễn thám, GPS và khoa học máy
   tính,... được chia sẻ miễn phí. Hoạt động vì cộng đồng, phát triển nhờ cộng đồng,
   nhằm kiến tạo môi trường chia sẻ dữ liệu GIS mở, cộng tác và kết nối.
-endpoints: []
+endpoints:
+- type: geonode:datasets
+  url: https://opendata.hcmgis.vn/api/datasets/
+- type: geonode:documents
+  url: https://opendata.hcmgis.vn/api/documents/
 id: opendatahcmgisvn
 langs:
 - id: EN
@@ -38,7 +43,7 @@ owner:
     level: 30
     subregion:
       id: VN-SG
-      name: Ho Chi Minh
+      name: Hồ Chí Minh
   name: Ho Chi Minh City
   type: Regional government
 properties:

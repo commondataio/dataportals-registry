@@ -1,4 +1,5 @@
 category: Geoportal
+subtype: geospatial_catalog_platform
 datatypes:
   datasets: 'Yes'
   fields: 'No'
@@ -8,24 +9,40 @@ datatypes:
 has_api: 'Yes'
 has_bulk: 'No'
 id: geoblacklight
+name: GeoBlacklight
 website: https://geoblacklight.org
+description: GeoBlacklight is an open-source geospatial discovery platform built on
+  Blacklight and Apache Solr. It offers map-based and keyword search, faceted browsing,
+  customizable metadata (including OpenGeoMetadata and the GeoBlacklight schema),
+  and download and export options for maps and datasets. It is developed as a multi-institutional
+  collaboration; the software is copyright Stanford University and licensed under
+  Apache 2.0.
+owner:
+  name: Stanford University
+  location:
+    country:
+      id: US
+      name: United States
+logo_url: https://raw.githubusercontent.com/geoblacklight/geoblacklight/main/app/assets/images/favicon.ico
 metadata_support:
   ckan_api: 'No'
   csw: 'No'
   custom_api: 'Yes'
-  dcat: Uncertain
+  dcat: 'Yes'
+  dublin_core: 'No'
+  iso19115: 'No'
   oai-pmh: 'No'
   ogcrecords: 'No'
   openaire: 'No'
-  opensearch: Uncertain
-  schema-org: Uncertain
+  opensearch: 'No'
+  rdf_sparql: 'Yes'
+  schema-org: 'No'
   sdmx: 'No'
   stac: 'No'
   swordapi: 'No'
   wcs: 'No'
   wfs: 'No'
   wms: 'No'
-name: Geoblacklight
 pid_support:
   has_doi: 'No'
   persistent_dataset_url: 'Yes'
@@ -34,18 +51,23 @@ rights_management:
   supports_licenses: 'Yes'
 storage_type: Both
 type: Software
-repository_url: https://github.com/geoblacklight
-documentation_url: https://github.com/geoblacklight/geoblacklight/wiki
+repository_url: https://github.com/geoblacklight/geoblacklight
+documentation_url: https://geoblacklight.org/latest/docs/
 export_formats:
-- CSW
-- GML
-- GeoJSON
 - JSON
-- KML
 - XML
+- GeoJSON
+- KML
 capabilities:
 - REST API
+- Solr-backed search
+- Map-based discovery
+- Faceted browsing
 - Organization management
 - Topic categorization
-changelog_url: https://github.com/geoblacklight/releases
-last_updated: '2025-12-25T09:19:51Z'
+license:
+  type: Apache-2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0.html
+version: 5.2.0
+changelog_url: https://github.com/geoblacklight/geoblacklight/releases
+last_updated: '2026-03-30T12:00:00Z'
