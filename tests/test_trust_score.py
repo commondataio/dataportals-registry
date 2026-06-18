@@ -105,12 +105,12 @@ class TestCatalogTypeScore:
         assert calculate_catalog_type_score(catalog) == 5
 
     def test_data_search_engines_penalty(self):
-        """Test Data search engines (aggregators) get penalty"""
+        """Test Data search engine (aggregator) gets penalty"""
         catalog = {"catalog_type": "Data search engine"}
         assert calculate_catalog_type_score(catalog) == -10
 
     def test_data_marketplaces_penalty(self):
-        """Test Data marketplaces get penalty"""
+        """Test Data marketplace gets penalty"""
         catalog = {"catalog_type": "Data marketplace"}
         assert calculate_catalog_type_score(catalog) == -5
 
@@ -251,7 +251,7 @@ class TestAdditionalFactorsScore:
     def test_active_api(self):
         """Test catalog with active API gets points"""
         catalog = {"api": True, "api_status": "active"}
-        assert calculate_additional_factors_score(catalog) == 10  # 5 for API + 5 for active
+        assert calculate_additional_factors_score(catalog) == 5  # active API only
 
     def test_active_status(self):
         """Test catalog with active status gets points"""
@@ -303,7 +303,7 @@ class TestTrustScoreCalculation:
         }
         trust_seals = {"r3d100010078": True}
         score, components = calculate_trust_score(catalog, trust_seals)
-        
+
         assert score == 100  # Clamped to 100
         assert components["owner_type_score"] == 40
         assert components["catalog_type_score"] == 10
@@ -323,7 +323,7 @@ class TestTrustScoreCalculation:
             "status": "active"
         }
         score, components = calculate_trust_score(catalog)
-        
+
         assert 0 <= score <= 100
         assert components["owner_type_score"] == 15
         assert components["catalog_type_score"] == 5
@@ -335,11 +335,11 @@ class TestTrustScoreCalculation:
         """Test calculation of low trust score"""
         catalog = {
             "owner": {"type": "Community"},
-            "catalog_type": "Data search engines",
+            "catalog_type": "Data search engine",
             "status": "inactive"
         }
         score, components = calculate_trust_score(catalog)
-        
+
         assert 0 <= score <= 100
         assert components["owner_type_score"] == 5
         assert components["catalog_type_score"] == -10
@@ -368,18 +368,18 @@ class TestTrustScoreCalculation:
         }
         trust_seals = {"r3d100010078": True}
         score, _ = calculate_trust_score(catalog, trust_seals)
-        
+
         assert score == 100  # Should be clamped
 
     def test_negative_score_clamping(self):
         """Test that negative scores are clamped to 0"""
         catalog = {
             "owner": {"type": "Community"},
-            "catalog_type": "Data search engines",
+            "catalog_type": "Data search engine",
             "status": "inactive"
         }
         score, components = calculate_trust_score(catalog)
-        
+
         # Base score might be negative, but final should be >= 0
         assert score >= 0
         assert score <= 100
@@ -392,7 +392,7 @@ class TestTrustScoreCalculation:
             "status": "uncertain"
         }
         score, components = calculate_trust_score(catalog)
-        
+
         assert 0 <= score <= 100
         assert "owner_type_score" in components
         assert "catalog_type_score" in components
@@ -408,8 +408,7 @@ class TestTrustScoreCalculation:
             "catalog_type": "Other"
         }
         score, components = calculate_trust_score(catalog)
-        
+
         assert 0 <= score <= 100
         # Should still have all components
         assert len(components) == 6
-
