@@ -82,9 +82,6 @@ def fetch_re3data_page(re3data_id: str, timeout: int = 10) -> Optional[str]:
 
 def parse_re3data_html(html_content: str, re3data_id: str) -> Dict[str, Any]:
     """Parse re3data HTML page and extract metadata."""
-    if not html_content:
-        return {}
-    
     result = {
         "re3data_id": re3data_id,
         "keywords": [],
@@ -111,7 +108,10 @@ def parse_re3data_html(html_content: str, re3data_id: str) -> Dict[str, Any]:
         "apis": [],
         "protocols": []
     }
-    
+
+    if not html_content:
+        return result
+
     if HAS_BS4:
         soup = BeautifulSoup(html_content, 'html.parser')
         
