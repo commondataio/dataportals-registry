@@ -1,44 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-06-17 15:17:23
+Generated: 2026-08-10 21:38:22
 Country Code: TW
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
-Count: 2
-Priority: IMPORTANT
-
-File: TW/Federal/geo/mapelandgovtw.yaml
-Record ID: mapelandgovtw
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: TW/TW-KIN/geo/mapcloudkinmengovtw.yaml
-Record ID: mapcloudkinmengovtw
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
-Count: 1
-Priority: IMPORTANT
-
-File: TW/TW-TNN/geo/tchgistainangovtw.yaml
-Record ID: tchgistainangovtw
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: TW/TW-TPE/indicators/dotstatgovtaipei.yaml
 Record ID: dotstatgovtaipei
@@ -50,6 +21,4 @@ Suggested Action: Add at least one endpoint because software.id='pxweb' is marke
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue

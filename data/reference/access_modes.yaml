@@ -1,4 +1,13 @@
 # Allowed access_mode values (each catalog can have a list of these).
-# See CONTRIBUTING.md and openspec/project.md.
+# Must stay aligned with:
+# - data/schemes/catalog.json (access_mode.schema.allowed)
+# - scripts/constants.py (ACCESS_MODE_ALLOWED)
+# Canonical preferred values for new entries: open, restricted.
+# Other values remain valid for existing records and schema compatibility.
 - open
 - restricted
+- limited
+- public
+- protected
+- closed
+- private

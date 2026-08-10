@@ -1,205 +1,134 @@
 # Data Quality Rules Analysis Report
 
-**Generated:** 2026-02-24  
+**Updated:** 2026-08-10  
 **Scope:** `analyze-quality` command in `scripts/builder.py`  
-**Purpose:** Identify existing rules and suggest missing rules to improve catalog record quality.
+**Purpose:** Document the live rule inventory, current backlog shape, and follow-up work.
+
+> Note: The February 2026 edition of this report listed many enum/directory/URL gaps
+> that have since been implemented. This file reflects the **current** pipeline.
 
 ---
 
-##  1. Executive Summary
+## 1. Executive Summary
 
-The `analyze-quality` command runs **27 quality check functions** plus **1 cross-record check** (duplicate links) on catalog YAML files. This report analyzes the current rule coverage, identifies gaps, and recommends new rules to improve data quality.
+`analyze-quality` runs **41 per-record check functions** plus cross-record checks
+(exact/normalized duplicate links, duplicate record ids) on `data/entities/`.
 
-**Key findings:**
+As of the 2026-06-18 baseline (14,470 records):
 
-- `check_subregion_iso3166_2` is registered in the analyze-quality pipeline
-- Several schema-constrained fields still benefit from stricter cross-field and cross-record validation
-- Multiple schema fields have no dedicated quality checks yet
-- Deprecated stub checks should stay out of the execution list
+| Priority  | Count |
+|-----------|------:|
+| CRITICAL  | 0     |
+| IMPORTANT | 280   |
+| MEDIUM    | 0     |
+| LOW       | 0     |
 
----
+Open IMPORTANT issues are dominated by:
 
-## 2. Existing Rules Inventory
+1. `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` (~76%)
+2. `DUPLICATE_LINK_NORMALIZED` (~22%)
+3. Other (`API_STATUS_MISMATCH`, `COVERAGE_NORMALIZATION`) (~2%)
 
-###  2.1 Active Check Functions
-
-
-| Check Function                               | Issue Types                                                                                                                                                                               | Priority           | Description                             |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --------------------------------------- |
-| `check_missing_topics`                       | MISSING_TOPICS                                                                                                                                                                            | LOW                | Topics field missing or empty           |
-| `check_missing_tags`                         | MISSING_TAGS                                                                                                                                                                              | LOW                | Tags field missing or empty             |
-| `check_missing_description`                  | MISSING_DESCRIPTION                                                                                                                                                                       | MEDIUM             | Placeholder or empty description        |
-| `check_missing_langs`                        | MISSING_LANGS                                                                                                                                                                             | MEDIUM             | Langs field missing or empty            |
-| `check_missing_endpoints`                    | MISSING_ENDPOINTS                                                                                                                                                                         | MEDIUM             | API records without endpoints           |
-| `check_software_expected_endpoints`          | SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*                                                                                                                                                     | IMPORTANT          | API-capable software without endpoints  |
-| `check_owner_info`                           | MISSING_OWNER_NAME, PLACEHOLDER_OWNER_NAME, MISSING_OWNER_TYPE, MISSING_OWNER_LINK, MISSING_OWNER_LOCATION, OWNER_LOCATION_SUBREGION_REQUIRED, OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH | CRITICAL/IMPORTANT | Owner completeness and consistency      |
-| `check_coverage`                             | MISSING_COVERAGE                                                                                                                                                                          | IMPORTANT          | Coverage field missing or empty         |
-| `check_placeholder_values`                   | PLACEHOLDER_CATALOG_TYPE, PLACEHOLDER_STATUS, PLACEHOLDER_SOFTWARE                                                                                                                        | IMPORTANT          | Placeholder values in key fields        |
-| `check_urls`                                 | INVALID_URL, INVALID_OWNER_URL, INVALID_ENDPOINT_URL                                                                                                                                      | CRITICAL           | URL format validation                   |
-| `check_required_fields`                      | MISSING_REQUIRED_FIELD                                                                                                                                                                    | CRITICAL           | Missing id, uid, name, link, etc.       |
-| `check_identifiers`                          | INCOMPLETE_IDENTIFIER                                                                                                                                                                     | IMPORTANT          | Identifier missing id or value          |
-| `check_license_completeness`                 | INCONSISTENT_LICENSE                                                                                                                                                                      | IMPORTANT          | Inconsistent license fields             |
-| `check_api_status_coherence`                 | MISSING_API_STATUS, API_STATUS_MISMATCH                                                                                                                                                   | IMPORTANT          | API status consistency                  |
-| `check_content_types_access_mode`            | MISSING_CONTENT_TYPES, MISSING_ACCESS_MODE                                                                                                                                                | MEDIUM             | Missing content_types or access_mode    |
-| `check_language_validation`                  | INVALID_LANGUAGE                                                                                                                                                                          | MEDIUM             | Lang entries without id and name        |
-| `check_coverage_normalization`               | COVERAGE_NORMALIZATION, DUPLICATE_COVERAGE                                                                                                                                                | IMPORTANT/LOW      | Coverage level, macroregion, duplicates |
-| `check_software_normalization`               | SOFTWARE_ID_UNKNOWN, SOFTWARE_NAME_MISMATCH                                                                                                                                               | IMPORTANT          | Software ID/name validation             |
-| `check_catalog_software_coherence`           | CATALOG_SOFTWARE_MISMATCH                                                                                                                                                                 | CRITICAL           | catalog_type vs software.id             |
-| `check_tag_topic_hygiene`                    | TAG_HYGIENE, DUPLICATE_TAGS, TOPIC_INCOMPLETE                                                                                                                                             | MEDIUM/LOW         | Tag length, duplicates; topic structure |
-| `check_description_quality`                  | SHORT_DESCRIPTION                                                                                                                                                                         | MEDIUM             | Description < 40 chars                  |
-| `check_uid_id_consistency`                   | INVALID_UID, INVALID_ID                                                                                                                                                                   | CRITICAL           | UID format, ID alphanumeric             |
-| `check_contact_info`                         | MISSING_CONTACT_INFO                                                                                                                                                                      | LOW                | Active+restricted without owner link    |
-| `check_status_directory_uid_consistency`     | STATUS_DIRECTORY_MISMATCH                                                                                                                                                                 | IMPORTANT          | Scheduled in entities/                  |
-| `check_status_api_status_coherence_extended` | STATUS_API_STATUS_MISMATCH                                                                                                                                                                | MEDIUM             | status vs api_status coherence          |
-| `check_title_quality`                        | PLACEHOLDER_TITLE                                                                                                                                                                         | MEDIUM             | Short, generic, or URL-like names       |
-| `check_rights_completeness`                  | RIGHTS_INCOMPLETE                                                                                                                                                                         | MEDIUM             | Rights with only 1 of 3 license fields  |
-| `check_subregion_unk_placeholder`            | SUBREGION_UNK_PLACEHOLDER                                                                                                                                                                 | IMPORTANT          | XX-UNK placeholder subregions           |
-
-
-### 2.2 Cross-Record Check (Post-Scan)
-
-
-| Check                    | Issue Type     | Priority  | Description                        |
-| ------------------------ | -------------- | --------- | ---------------------------------- |
-| Duplicate link detection | DUPLICATE_LINK | IMPORTANT | Multiple records sharing same link |
-
-
-### 2.3 Implemented and Registered
-
-
-| Check Function              | Issue Type                  | Status                                                                                                                                                     |
-| --------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `check_subregion_iso3166_2` | SUBREGION_INVALID_ISO3166_2 | Defined and registered in `analyze_quality()` – subregion codes validated against `data/reference/subregions/ISO3166-2.CSV` |
-
-
-**Recommendation:** Keep `check_subregion_iso3166_2` in the checks list and improve the reference source to reduce false positives.
-
-### 2.4 Deprecated / Unused Checks
-
-
-| Check Function                   | In Pipeline | Original Purpose                                             |
-| -------------------------------- | ----------- | ------------------------------------------------------------ |
-| `check_owner_coverage_coherence` | No          | Owner vs coverage coherence – deprecated stub (`return None`) |
-| `check_path_country_consistency` | No          | Path vs metadata country – deprecated stub (`return None`)    |
-| `check_id_host_correlation`      | No          | ID vs link host correlation – deprecated stub (`return None`) |
-
-
-Deprecated stubs are currently excluded from the checks execution list. Keep them out of the runtime pipeline unless re-implemented with real issue emission.
+Completeness rules (topics/tags/langs/description) are largely saturated on entities.
 
 ---
 
-## 3. Schema Fields Without Quality Rules
+## 2. Live Check Inventory
 
-Based on `data/schemes/catalog.json` and the catalog structure:
+### 2.1 Per-record checks (registered in `analyze_quality`)
 
+| Check | Issue types (examples) | Priority band |
+|-------|------------------------|---------------|
+| `check_missing_topics` | MISSING_TOPICS | LOW |
+| `check_missing_tags` | MISSING_TAGS | LOW |
+| `check_missing_description` | MISSING_DESCRIPTION | MEDIUM |
+| `check_missing_langs` | MISSING_LANGS | MEDIUM |
+| `check_missing_endpoints` | MISSING_ENDPOINTS | MEDIUM |
+| `check_software_expected_endpoints` | SOFTWARE_EXPECTED_ENDPOINTS_MISSING_* | IMPORTANT |
+| `check_owner_info` | MISSING_OWNER_*, OWNER_*_DIRECTORY_*, PLACEHOLDER_OWNER_NAME | CRITICAL/IMPORTANT/LOW |
+| `check_coverage` | MISSING_COVERAGE | IMPORTANT |
+| `check_placeholder_values` | PLACEHOLDER_* | IMPORTANT |
+| `check_urls` | INVALID_URL, INVALID_OWNER_URL, INVALID_ENDPOINT_URL, INVALID_CATALOG_EXPORT_URL | CRITICAL/MEDIUM |
+| `check_required_fields` | MISSING_REQUIRED_FIELD | CRITICAL |
+| `check_identifiers` | INCOMPLETE_IDENTIFIER | IMPORTANT |
+| `check_license_completeness` | INCONSISTENT_LICENSE | IMPORTANT |
+| `check_api_status_coherence` | MISSING_API_STATUS, API_STATUS_MISMATCH | IMPORTANT |
+| `check_content_types_access_mode` | MISSING_CONTENT_TYPES, MISSING_ACCESS_MODE | MEDIUM |
+| `check_language_validation` | INVALID_LANGUAGE | MEDIUM |
+| `check_coverage_normalization` | COVERAGE_NORMALIZATION, DUPLICATE_COVERAGE | IMPORTANT/LOW |
+| `check_software_normalization` | SOFTWARE_ID_UNKNOWN, SOFTWARE_NAME_MISMATCH | IMPORTANT |
+| `check_catalog_software_coherence` | CATALOG_SOFTWARE_MISMATCH | CRITICAL |
+| `check_tag_topic_hygiene` | TAG_HYGIENE, DUPLICATE_TAGS, TOPIC_INCOMPLETE, TOPIC_SCHEMA_VIOLATION | MEDIUM/LOW |
+| `check_description_quality` | SHORT_DESCRIPTION | MEDIUM |
+| `check_uid_id_consistency` | INVALID_UID, INVALID_ID | CRITICAL |
+| `check_contact_info` | MISSING_CONTACT_INFO | LOW |
+| `check_status_directory_uid_consistency` | STATUS_DIRECTORY_MISMATCH | IMPORTANT |
+| `check_status_api_status_coherence_extended` | STATUS_API_STATUS_MISMATCH | MEDIUM |
+| `check_title_quality` | PLACEHOLDER_TITLE | MEDIUM |
+| `check_rights_completeness` | RIGHTS_INCOMPLETE | MEDIUM |
+| `check_subregion_unk_placeholder` | SUBREGION_UNK_PLACEHOLDER | IMPORTANT |
+| `check_subregion_iso3166_2` | SUBREGION_INVALID_ISO3166_2 | IMPORTANT |
+| `check_access_mode_values` | INVALID_ACCESS_MODE | IMPORTANT |
+| `check_catalog_type_values` | INVALID_CATALOG_TYPE | IMPORTANT |
+| `check_status_values` | INVALID_STATUS | IMPORTANT |
+| `check_api_status_values` | INVALID_API_STATUS | MEDIUM |
+| `check_trust_score_bounds` | TRUST_SCORE_OUT_OF_BOUNDS | MEDIUM |
+| `check_identifier_urls` | INVALID_IDENTIFIER_URL | MEDIUM |
+| `check_rights_urls` | INVALID_RIGHTS_URL | MEDIUM |
+| `check_catalog_type_directory` | CATALOG_TYPE_DIRECTORY_MISMATCH | IMPORTANT |
+| `check_country_codes` | INVALID_COUNTRY_CODE | MEDIUM |
+| `check_country_subregion_name_consistency` | COUNTRY_NAME_ID_MISMATCH, SUBREGION_NAME_ID_MISMATCH | MEDIUM |
+| `check_unknown_country_macroregion` | UNKNOWN_COUNTRY_OR_MACROREGION | IMPORTANT |
 
-| Field                             | Schema Constraints                                                     | Current Check                           | Gap                                                                                                      |
-| --------------------------------- | ---------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `access_mode`                     | List of: open, restricted, limited, public, protected, closed, private | MISSING_ACCESS_MODE only                | **No validation of values** – invalid strings (e.g. "free", "open_access") not flagged                   |
-| `api_status`                      | String                                                                 | MISSING_API_STATUS, API_STATUS_MISMATCH | **No allowed-value validation** – schema has no allowed list; common values: active, inactive, uncertain |
-| `catalog_type`                    | 13 allowed values                                                      | PLACEHOLDER_CATALOG_TYPE (Unknown/null) | **No validation of invalid values** – typos or non-standard values not caught                            |
-| `status`                          | active, inactive, scheduled, deprecated                                | PLACEHOLDER_STATUS (Unknown/null)       | **No validation of invalid values**                                                                      |
-| `trust_score`                     | 0–100                                                                  | None                                    | **No bounds check** – values outside 0–100 not flagged                                                   |
-| `identifiers[].url`               | URL string                                                             | None                                    | **No URL validation** – identifier URLs not checked                                                      |
-| `rights.tos_url`                  | URL                                                                    | None                                    | **No URL validation**                                                                                    |
-| `rights.privacy_policy_url`       | URL                                                                    | None                                    | **No URL validation**                                                                                    |
-| `rights.license_url`              | URL                                                                    | Checked for presence in license logic   | **No format validation** when present                                                                    |
-| `catalog_export`                  | String (URL)                                                           | None                                    | **No validation**                                                                                        |
-| `owner.type`                      | String                                                                 | MISSING_OWNER_TYPE                      | **No allowed-value validation** – schema expects owner type but no enum                                  |
-| `langs[].id`                      | String                                                                 | Structure check (id+name)               | **No ISO 639-1 format validation**                                                                       |
-| `coverage[].location.country.id`  | String/integer                                                         | Presence only                           | **No ISO 3166-1 country code validation**                                                                |
-| `coverage[].location.macroregion` | id, name                                                               | COVERAGE_NORMALIZATION (missing)        | **No macroregion id format validation** – UN M49 codes expected                                          |
-| `topics`                          | List of {type, id, name}                                               | TOPIC_INCOMPLETE                        | **No schema validation** – topics can be strings (e.g. "Open Data") vs dicts per schema                  |
-| `file path vs catalog_type`       | Convention                                                             | None                                    | **No check** – file in `geo/` but catalog_type "Open data portal"                                        |
+### 2.2 Cross-record checks
 
+| Check | Issue type | Priority |
+|-------|------------|----------|
+| Exact link duplicates | DUPLICATE_LINK | IMPORTANT |
+| Canonical link duplicates | DUPLICATE_LINK_NORMALIZED | IMPORTANT |
+| Same id in multiple paths | DUPLICATE_RECORD_ID | CRITICAL |
 
----
+### 2.3 Intentionally not in pipeline
 
-## 4. Suggested New Rules
-
-### 4.1 High Priority (Immediate Impact)
-
-
-| Rule ID                        | Suggested Check                             | Description                                       | Priority  |
-| ------------------------------ | ------------------------------------------- | ------------------------------------------------- | --------- |
-| **REGISTER_SUBREGION_ISO3166** | Add `check_subregion_iso3166_2` to pipeline | Fix: register existing check                      | —         |
-| **INVALID_ACCESS_MODE**        | `check_access_mode_values`                  | Validate values against schema allowed list       | IMPORTANT |
-| **INVALID_CATALOG_TYPE**       | `check_catalog_type_values`                 | Validate catalog_type against allowed values      | IMPORTANT |
-| **INVALID_STATUS**             | `check_status_values`                       | Validate status against allowed values            | IMPORTANT |
-| **INVALID_API_STATUS**         | `check_api_status_values`                   | Validate api_status (active, inactive, uncertain) | MEDIUM    |
-| **TRUST_SCORE_OUT_OF_BOUNDS**  | `check_trust_score_bounds`                  | trust_score must be 0–100 when present            | MEDIUM    |
-
-
-### 4.2 Medium Priority (Data Consistency)
-
-
-| Rule ID                             | Suggested Check                  | Description                                                                    | Priority  |
-| ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------ | --------- |
-| **INVALID_IDENTIFIER_URL**          | Extend `check_urls` or new check | Validate identifiers[].url when present                                        | MEDIUM    |
-| **INVALID_RIGHTS_URLS**             | `check_rights_urls`              | Validate tos_url, privacy_policy_url, license_url format                       | MEDIUM    |
-| **CATALOG_TYPE_DIRECTORY_MISMATCH** | `check_catalog_type_directory`   | File in geo/ but catalog_type "Open data portal" (use MAP_CATALOG_TYPE_SUBDIR) | IMPORTANT |
-| **INVALID_COUNTRY_CODE**            | `check_country_codes`            | Validate owner/coverage country.id against ISO 3166-1                          | MEDIUM    |
-| **TOPIC_SCHEMA_VIOLATION**          | Extend `check_tag_topic_hygiene` | Topics as bare strings vs dict {type, id, name}                                | LOW       |
-
-
-### 4.3 Lower Priority (Nice to Have)
-
-
-| Rule ID                          | Suggested Check                    | Description                                             | Priority |
-| -------------------------------- | ---------------------------------- | ------------------------------------------------------- | -------- |
-| **INVALID_LANG_CODE**            | Extend `check_language_validation` | Validate langs[].id as ISO 639-1 (2–3 chars)            | LOW      |
-| **DUPLICATE_IDENTIFIERS**        | `check_duplicate_identifiers`      | Same identifier id repeated                             | LOW      |
-| **DESCRIPTION_EXCESSIVE_LENGTH** | Extend `check_description_quality` | Description > 2000 chars (unreasonable)                 | LOW      |
-| **INVALID_OWNER_TYPE**           | `check_owner_type_values`          | Validate against known owner types if vocabulary exists | LOW      |
-| **DEPRECATED_STATUS_ADVISORY**   | `check_deprecated_status`          | Records with status=deprecated – advisory for review    | LOW      |
-
-
-### 4.4 Optional / Future (External or Heavy)
-
-
-| Rule ID                                | Suggested Check                               | Description                                     | Notes                                            |
-| -------------------------------------- | --------------------------------------------- | ----------------------------------------------- | ------------------------------------------------ |
-| **LINK_REACHABILITY**                  | HTTP HEAD/GET check                           | Link returns 4xx/5xx                            | Requires network; consider optional/separate job |
-| **ENDPOINT_REACHABILITY**              | HTTP check on endpoints                       | Endpoint URLs return errors                     | Same as above                                    |
-| **RE-ENABLE_OWNER_COVERAGE_COHERENCE** | Re-implement `check_owner_coverage_coherence` | Owner country vs coverage countries consistency | Was deprecated; could be revived                 |
-
+- `check_owner_coverage_coherence` (deprecated stub)
+- `check_id_host_correlation` / `ID_HOST_MISMATCH` (omitted; historical ids must stay compatible)
 
 ---
 
-## 5. Summary Table: Rules to Add
+## 3. Recent Changes (2026-08)
 
-
-| #   | Rule                                 | Effort  | Impact |
-| --- | ------------------------------------ | ------- | ------ |
-| 1   | Register `check_subregion_iso3166_2` | Trivial | High   |
-| 2   | INVALID_ACCESS_MODE                  | Low     | Medium |
-| 3   | INVALID_CATALOG_TYPE                 | Low     | Medium |
-| 4   | INVALID_STATUS                       | Low     | Medium |
-| 5   | INVALID_API_STATUS                   | Low     | Low    |
-| 6   | TRUST_SCORE_OUT_OF_BOUNDS            | Low     | Low    |
-| 7   | INVALID_IDENTIFIER_URL               | Low     | Medium |
-| 8   | INVALID_RIGHTS_URLS                  | Low     | Medium |
-| 9   | CATALOG_TYPE_DIRECTORY_MISMATCH      | Medium  | High   |
-| 10  | INVALID_COUNTRY_CODE                 | Medium  | Medium |
-| 11  | TOPIC_SCHEMA_VIOLATION               | Low     | Low    |
-
+- **Link-as-endpoint exemption:** GeoServer/ArcGIS Server links that already point at
+  service roots do not raise `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*`.
+- **access_modes.yaml aligned** with schema/`ACCESS_MODE_ALLOWED` (7 values).
+- **`catalog_export` URL validation** via `INVALID_CATALOG_EXPORT_URL`.
+- **Duplicate keeper hints** on exact/normalized link duplicates.
+- **`DUPLICATE_RECORD_ID`** for same id across multiple file paths.
+- **Integrity vs enrichment tracks:** software-expected endpoints are MEDIUM enrichment;
+  CI fails only on integrity CRITICAL/IMPORTANT growth.
+- **Owner-type vocabulary:** `data/reference/owner_types.yaml` +
+  `INVALID_OWNER_TYPE` / `OWNER_TYPE_NONCANONICAL`.
+- **Path consistency:** `PATH_COUNTRY_MISMATCH` (MEDIUM).
+- **Not enforced:** id/host correlation (`ID_HOST_MISMATCH`) — omitted to preserve
+  compatibility with historical catalog ids.
 
 ---
 
-## 6. Implementation Notes
+## 4. Follow-up Work
 
-1. **Value validation:** Reuse schema allowed lists from `catalog.json` where possible, or define constants in `scripts/constants.py`.
-2. **File path checks:** Use `record["_file_path"]` and `MAP_CATALOG_TYPE_SUBDIR`; extend the map to include "Open data portal" → "opendata", "Other" → "other", etc.
-3. **Country codes:** Use `data/reference/` or a standard ISO 3166-1 list; consider existing `COUNTRIES` in constants.
-4. **Priority assignment:** Add new issue types to `ISSUE_PRIORITY_MAP` and `RULE_DESCRIPTIONS` for consistent reporting.
+Remaining themes (not yet proposed/implemented):
+
+1. Semantic checks against `langs.csv`, `data_themes.yaml`, `endpoint_types.yaml`
+2. Optional scheduled-directory scan and liveness advisory import
+3. Modularize quality engine out of `builder.py`
+4. Remediate `DUPLICATE_RECORD_ID` pairs
 
 ---
 
-## 7. References
+## 5. References
 
-- `scripts/builder.py` – check functions (lines ~1242–2595), `analyze_quality` (lines ~3517–3910)
-- `data/schemes/catalog.json` – schema and allowed values
-- `scripts/constants.py` – `MAP_CATALOG_TYPE_SUBDIR`, `MAP_SOFTWARE_OWNER_CATALOG_TYPE`, `COUNTRIES`
-- `AGENTS.md` – catalog types and directory structure
-- `devdocs/quality-fix-workflow.md` – quality workflow
-
+- `scripts/builder.py` – check functions and `analyze_quality`
+- `scripts/constants.py` – allowed-value sets
+- `data/schemes/catalog.json` – Cerberus schema
+- `data/reference/` – vocabularies
+- `dataquality/baseline_counts.json` – CI regression baseline
+- `devdocs/quality-fix-workflow.md` – fix workflow

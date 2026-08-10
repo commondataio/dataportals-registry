@@ -102,12 +102,12 @@ Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jso
 
 ## Data exports
 
-Latest snapshot (2026-06-17):
+Latest snapshot (2026-08-10):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): 14,470 catalog records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): 14,436 catalog records
 - `data/datasets/software.jsonl` (+ `.zst`): 135 software/platform definitions
 - `data/datasets/scheduled.jsonl` (+ `.zst`): scheduled sources to crawl (empty; all promoted or removed)
-- `data/datasets/full.jsonl` (+ `.zst`): 14,470 combined entities + scheduled records
+- `data/datasets/full.jsonl` (+ `.zst`): 14,436 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 - `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
 
@@ -149,9 +149,13 @@ WHERE software LIKE '%"id":"ckan"%'
 
 The repository includes tools for analyzing and validating data quality:
 
-- **Duplicate Detection**: Scripts to identify duplicate UID's and ID's across all records
+- **Duplicate Detection**: Exact and normalized URL duplicates (`DUPLICATE_LINK` / `DUPLICATE_LINK_NORMALIZED`) plus same-id collisions (`DUPLICATE_RECORD_ID`), with a preferred keeper (https, non-www, non-Unknown path)
+- **Path and owner consistency**: File-path country vs owner/coverage country (`PATH_COUNTRY_MISMATCH`); regional/local owners require `owner.location.level=30` and matching subregion directory
+- **Owner type vocabulary**: Canonical values and synonyms in `data/reference/owner_types.yaml` (`OWNER_TYPE_NONCANONICAL` / `INVALID_OWNER_TYPE`)
 - **Schema Validation**: Validation against JSON schemas in `data/schemes/`
-- **Data Quality Reports**: Analysis reports written to the `dataquality/` directory
+- **Data Quality Reports**: Analysis reports written to the `dataquality/` directory (by rule, priority, and country)
+
+Integrity-track CRITICAL/IMPORTANT issues are cleared in the current quality snapshot; remaining open findings are primarily MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` items. CI guards integrity-track regressions via `dataquality/baseline_counts.json`.
 
 To run data quality analysis:
 
@@ -161,7 +165,7 @@ python scripts/builder.py analyze-quality
 
 Reports are written to `dataquality/` (e.g. `full_report.txt`, `primary_priority.jsonl`, and per-country/per-priority breakouts).
 
-See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md) and `dataquality/full_report.txt` for current findings. Helper scripts (`scripts/fix_*_issues.py`) can apply automated fixes based on reported priorities.
+See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md), [docs/metadata-quality.md](docs/metadata-quality.md), and `dataquality/full_report.txt` for current findings. Helper scripts (`scripts/fix_*_issues.py`) can apply automated fixes based on reported priorities.
 
 ## Agent and governance documentation
 

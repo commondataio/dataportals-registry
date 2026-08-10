@@ -50,6 +50,10 @@ from constants import (
     CATALOG_TYPE_ALLOWED,
     STATUS_ALLOWED,
     API_STATUS_ALLOWED,
+    ENRICHMENT_ISSUE_PREFIXES,
+    ENRICHMENT_ISSUE_TYPES,
+    PATH_COUNTRY_ALLOWLIST,
+    PATH_COUNTRY_ALIASES,
 )
 
 # Configure logging
@@ -1344,8 +1348,41 @@ def check_missing_endpoints(record):
     return None
 
 
+def link_serves_as_api_endpoint(software_id, link):
+    """Return True when the catalog link itself is already an API/service URL.
+
+    For platforms like GeoServer and ArcGIS Server, many registry entries point
+    `link` at the service root (e.g. .../geoserver, .../arcgis/rest/services).
+    In those cases a separate `endpoints` list is redundant for discovery.
+    """
+    if not software_id or not isinstance(link, str) or not link.strip():
+        return False
+    try:
+        parsed = urlparse(link.strip())
+    except Exception:
+        return False
+    path = (parsed.path or "").lower()
+    sid = str(software_id).strip().lower()
+
+    if sid in {"geoserver", "geoserver-2"}:
+        return "/geoserver" in path
+    if sid in {"arcgisserver", "arcgis-server", "arcgis_rest", "esri"}:
+        return (
+            "/rest/services" in path
+            or "/arcgis/rest" in path
+            or path.endswith("/mapserver")
+            or path.endswith("/featureserver")
+            or path.endswith("/imageserver")
+        )
+    return False
+
+
 def check_software_expected_endpoints(record):
-    """Check endpoint presence for software that is expected to provide APIs."""
+    """Check endpoint presence for software that is expected to provide APIs.
+
+    Enrichment-track finding (MEDIUM). When ``api: true``, ``check_missing_endpoints``
+    covers the integrity case at IMPORTANT instead.
+    """
     software = record.get("software", {}) or {}
     software_id = software.get("id")
     if not software_id:
@@ -1353,6 +1390,10 @@ def check_software_expected_endpoints(record):
 
     # Skip inactive catalogs because their endpoints may be intentionally unavailable.
     if record.get("status") == "inactive":
+        return None
+
+    # Explicit api=true is an integrity concern handled by MISSING_ENDPOINTS.
+    if record.get("api") is True:
         return None
 
     software_map = get_cached_software_map()
@@ -1366,23 +1407,32 @@ def check_software_expected_endpoints(record):
         return None
 
     endpoints = record.get("endpoints", [])
-    if not isinstance(endpoints, list) or len(endpoints) == 0:
-        software_suffix = (software_id or "").upper().replace("-", "_")
-        issue_type = f"SOFTWARE_EXPECTED_ENDPOINTS_MISSING_{software_suffix}" if software_suffix else "SOFTWARE_EXPECTED_ENDPOINTS_MISSING"
-        return {
-            "issue_type": issue_type,
-            "field": "endpoints",
-            "current_value": {
-                "software_id": software_id,
-                "has_api": has_api,
-                "endpoints_count": len(endpoints) if isinstance(endpoints, list) else 0,
-            },
-            "suggested_action": (
-                f"Add at least one endpoint because software.id='{software_id}' "
-                "is marked as API-capable in software definitions"
-            ),
-        }
-    return None
+    if isinstance(endpoints, list) and len(endpoints) > 0:
+        return None
+
+    # Link already points at the API/service root for known service platforms.
+    if link_serves_as_api_endpoint(software_id, record.get("link")):
+        return None
+
+    software_suffix = (software_id or "").upper().replace("-", "_")
+    issue_type = (
+        f"SOFTWARE_EXPECTED_ENDPOINTS_MISSING_{software_suffix}"
+        if software_suffix
+        else "SOFTWARE_EXPECTED_ENDPOINTS_MISSING"
+    )
+    return {
+        "issue_type": issue_type,
+        "field": "endpoints",
+        "current_value": {
+            "software_id": software_id,
+            "has_api": has_api,
+            "endpoints_count": 0,
+        },
+        "suggested_action": (
+            f"Add at least one endpoint because software.id='{software_id}' "
+            "is marked as API-capable in software definitions"
+        ),
+    }
 
 
 def check_owner_info(record):
@@ -1632,7 +1682,17 @@ def check_urls(record):
             )
             if issue:
                 issues.append(issue)
-    
+
+    catalog_export = record.get("catalog_export")
+    if catalog_export:
+        issue = _validate_url_format(
+            catalog_export,
+            "catalog_export",
+            "INVALID_CATALOG_EXPORT_URL",
+        )
+        if issue:
+            issues.append(issue)
+
     return issues if issues else None
 
 
@@ -3035,6 +3095,42 @@ def canonicalize_url(url):
     return f"{scheme}://{host}{path}{query}"
 
 
+def score_duplicate_keeper(meta):
+    """Higher score = preferred keeper when resolving duplicate link groups."""
+    link = meta.get("link") or ""
+    file_path = (meta.get("file_path") or "").replace("\\", "/")
+    score = 0
+    try:
+        parsed = urlparse(link)
+    except Exception:
+        parsed = None
+
+    if parsed:
+        if (parsed.scheme or "").lower() == "https":
+            score += 100
+        host = (parsed.hostname or "").lower()
+        if host and not host.startswith("www."):
+            score += 50
+        # Prefer cleaner shorter paths among equivalent hosts
+        score -= min(len(parsed.path or ""), 40)
+
+    normalized_path = file_path.lower()
+    if normalized_path.startswith("unknown/") or "/unknown/" in normalized_path:
+        score -= 80
+    if "/federal/" in f"/{normalized_path}":
+        score += 5
+    # Stable tie-breaker
+    score -= len(file_path)
+    return score
+
+
+def choose_duplicate_keeper(metas):
+    """Pick the preferred record to keep from a duplicate group."""
+    if not metas:
+        return None
+    return max(metas, key=score_duplicate_keeper)
+
+
 def check_identifier_urls(record):
     """Validate identifier URLs when present."""
     issues = []
@@ -3372,6 +3468,115 @@ def check_unknown_country_macroregion(record):
     return issues if issues else None
 
 
+def _load_owner_type_vocab():
+    """Load canonical owner types and synonym map from reference YAML (cached)."""
+    cache = getattr(_load_owner_type_vocab, "_cache", None)
+    if cache is not None:
+        return cache
+    path = os.path.join(_REPO_ROOT, "data", "reference", "owner_types.yaml")
+    canonical = set()
+    synonyms = {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = yaml.load(f, Loader=Loader) or {}
+        for item in data.get("canonical") or []:
+            if isinstance(item, str) and item.strip():
+                canonical.add(item.strip())
+        raw_syn = data.get("synonyms") or {}
+        if isinstance(raw_syn, dict):
+            for src, dst in raw_syn.items():
+                if isinstance(src, str) and isinstance(dst, str):
+                    synonyms[src.strip()] = dst.strip()
+    except (OSError, yaml.YAMLError) as e:
+        logger.warning("Could not load owner_types.yaml: %s", e)
+    _load_owner_type_vocab._cache = (frozenset(canonical), dict(synonyms))
+    return _load_owner_type_vocab._cache
+
+
+def check_owner_type_values(record):
+    """Validate owner.type against canonical vocabulary and synonym map."""
+    owner = record.get("owner") or {}
+    owner_type = owner.get("type")
+    if not owner_type or not isinstance(owner_type, str):
+        return None
+    value = owner_type.strip()
+    if not value or value == "Unknown":
+        # Presence/placeholder handled by check_owner_info
+        return None
+
+    canonical, synonyms = _load_owner_type_vocab()
+    if not canonical:
+        return None
+    if value in canonical:
+        return None
+    if value in synonyms:
+        return {
+            "issue_type": "OWNER_TYPE_NONCANONICAL",
+            "field": "owner.type",
+            "current_value": {"owner_type": value, "canonical": synonyms[value]},
+            "suggested_action": (
+                f"Replace owner.type '{value}' with canonical '{synonyms[value]}'."
+            ),
+        }
+    return {
+        "issue_type": "INVALID_OWNER_TYPE",
+        "field": "owner.type",
+        "current_value": value,
+        "suggested_action": (
+            "Use a canonical owner.type from data/reference/owner_types.yaml "
+            f"(e.g. {', '.join(sorted(canonical)[:5])}, ...)."
+        ),
+    }
+
+
+def check_path_country_consistency(record):
+    """Verify file-path country directory matches owner/coverage country metadata."""
+    file_path = record.get("_file_path") or ""
+    parts = file_path.replace("\\", "/").split("/")
+    if len(parts) < 2:
+        return None
+    path_country = parts[0].strip()
+    if not path_country:
+        return None
+    path_upper = path_country.upper()
+    if path_upper in PATH_COUNTRY_ALLOWLIST:
+        return None
+
+    metadata_countries = set()
+    owner = record.get("owner") or {}
+    owner_country = ((owner.get("location") or {}).get("country") or {}).get("id")
+    if owner_country:
+        metadata_countries.add(str(owner_country).strip().upper())
+    for cov in record.get("coverage") or []:
+        cid = (((cov or {}).get("location") or {}).get("country") or {}).get("id")
+        if cid:
+            metadata_countries.add(str(cid).strip().upper())
+    metadata_countries.discard("")
+    metadata_countries.discard("UNKNOWN")
+    if not metadata_countries:
+        return None
+
+    if path_upper in metadata_countries:
+        return None
+    alias = PATH_COUNTRY_ALIASES.get(path_upper)
+    if alias and alias in metadata_countries:
+        return None
+
+    return {
+        "issue_type": "PATH_COUNTRY_MISMATCH",
+        "field": "file_path",
+        "current_value": {
+            "path_country": path_country,
+            "metadata_countries": sorted(metadata_countries),
+            "file_path": file_path,
+        },
+        "suggested_action": (
+            f"File is under '{path_country}/' but owner/coverage countries are "
+            f"{sorted(metadata_countries)}. Move the file or correct country metadata."
+        ),
+    }
+
+
 # Priority mapping for issue types
 ISSUE_PRIORITY_MAP = {
     "CRITICAL": [
@@ -3382,6 +3587,7 @@ ISSUE_PRIORITY_MAP = {
         "INVALID_UID",
         "INVALID_ID",
         "CATALOG_SOFTWARE_MISMATCH",
+        "DUPLICATE_RECORD_ID",
     ],
     "IMPORTANT": [
         "MISSING_OWNER_NAME",
@@ -3410,10 +3616,11 @@ ISSUE_PRIORITY_MAP = {
         "CATALOG_TYPE_DIRECTORY_MISMATCH",
         "DUPLICATE_LINK",
         "DUPLICATE_LINK_NORMALIZED",
+        "MISSING_ENDPOINTS",
+        "INVALID_OWNER_TYPE",
     ],
     "MEDIUM": [
         "MISSING_DESCRIPTION",
-        "MISSING_ENDPOINTS",
         "MISSING_LANGS",
         "MISSING_CONTENT_TYPES",
         "MISSING_ACCESS_MODE",
@@ -3429,9 +3636,12 @@ ISSUE_PRIORITY_MAP = {
         "TRUST_SCORE_OUT_OF_BOUNDS",
         "INVALID_IDENTIFIER_URL",
         "INVALID_RIGHTS_URL",
+        "INVALID_CATALOG_EXPORT_URL",
         "INVALID_COUNTRY_CODE",
         "COUNTRY_NAME_ID_MISMATCH",
         "SUBREGION_NAME_ID_MISMATCH",
+        "OWNER_TYPE_NONCANONICAL",
+        "PATH_COUNTRY_MISMATCH",
     ],
     "LOW": [
         "MISSING_TOPICS",
@@ -3476,10 +3686,20 @@ def extract_country_codes(record):
     return country_codes if country_codes else ["UNKNOWN"]
 
 
+def is_enrichment_issue_type(issue_type):
+    """Return True when an issue type is enrichment debt (non-blocking for CI)."""
+    if not issue_type:
+        return False
+    if issue_type in ENRICHMENT_ISSUE_TYPES:
+        return True
+    return any(issue_type.startswith(prefix) for prefix in ENRICHMENT_ISSUE_PREFIXES)
+
+
 def get_priority_level(issue_type):
     """Get priority level for an issue type."""
-    if issue_type and issue_type.startswith("SOFTWARE_EXPECTED_ENDPOINTS_MISSING_"):
-        return "IMPORTANT"
+    # Software-expected endpoints are enrichment debt (MEDIUM), not integrity.
+    if issue_type and issue_type.startswith("SOFTWARE_EXPECTED_ENDPOINTS_MISSING"):
+        return "MEDIUM"
     return PRIORITY_BY_ISSUE_TYPE.get(issue_type, "MEDIUM")
 
 
@@ -4201,7 +4421,29 @@ RULE_DESCRIPTIONS = {
     ),
     "DUPLICATE_LINK_NORMALIZED": (
         "Identifies records that become duplicates after URL canonicalization "
-        "(scheme/host normalization, default ports, trailing slash handling)."
+        "(scheme/host normalization, default ports, trailing slash handling). "
+        "Reports include a preferred keeper (https, non-www, non-Unknown path)."
+    ),
+    "DUPLICATE_RECORD_ID": (
+        "Identifies the same catalog id appearing in more than one YAML file path. "
+        "IDs must be unique across the registry; merge or rename one of the records."
+    ),
+    "INVALID_CATALOG_EXPORT_URL": (
+        "catalog_export must be a valid URL format (scheme + netloc) when present."
+    ),
+    "INVALID_OWNER_TYPE": (
+        "owner.type must be a canonical value from data/reference/owner_types.yaml."
+    ),
+    "OWNER_TYPE_NONCANONICAL": (
+        "owner.type matches a known synonym; replace with the canonical value "
+        "(e.g. University → Academy)."
+    ),
+    "PATH_COUNTRY_MISMATCH": (
+        "File path country directory must match owner/coverage country metadata, "
+        "except allowlisted roots (EU, World, International, Unknown, ...)."
+    ),
+    "MISSING_ENDPOINTS": (
+        "Records with api=true must list at least one endpoint (integrity/coherence)."
     ),
     "RIGHTS_INCOMPLETE": (
         "Identifies records whose rights object has only one of license_id, license_name, or "
@@ -4454,6 +4696,8 @@ def analyze_quality(output: str = None):
                     check_country_codes,
                     check_country_subregion_name_consistency,
                     check_unknown_country_macroregion,
+                    check_owner_type_values,
+                    check_path_country_consistency,
                 ]
                 
                 for check_func in checks:
@@ -4548,18 +4792,78 @@ def analyze_quality(output: str = None):
             }
         return records_with_issues[record_id]
 
+    def _emit_cross_record_issue(base_issue, meta):
+        record_id = meta["record_id"]
+        file_path = meta["file_path"]
+        country_codes = meta["country_codes"] or ["UNKNOWN"]
+        all_issues.append(base_issue)
+        entry = _ensure_record_entry(record_id, file_path, country_codes)
+        entry["unique_issues"].append(base_issue)
+        for country_code in entry.get("all_country_codes", country_codes):
+            issue_copy = base_issue.copy()
+            issue_copy["country_code"] = country_code
+            entry["issues"].append(issue_copy)
+
+    # Same catalog id used in multiple file paths
+    id_to_metas = {}
+    for meta in records_metadata:
+        rid = meta.get("record_id")
+        if rid and rid != "unknown":
+            id_to_metas.setdefault(rid, []).append(meta)
+
+    for record_id, metas in id_to_metas.items():
+        unique_paths = {m.get("file_path") for m in metas if m.get("file_path")}
+        if len(unique_paths) <= 1:
+            continue
+        file_paths = sorted(unique_paths)
+        for meta in metas:
+            country_codes = meta["country_codes"] or ["UNKNOWN"]
+            base_issue = {
+                "issue_type": "DUPLICATE_RECORD_ID",
+                "field": "id",
+                "current_value": {
+                    "record_id": record_id,
+                    "file_paths": file_paths,
+                },
+                "suggested_action": (
+                    f"Catalog id '{record_id}' appears in multiple files "
+                    f"({', '.join(file_paths)}). Keep one file and remove or rename the other."
+                ),
+                "file_path": meta["file_path"],
+                "record_id": record_id,
+                "priority": get_priority_level("DUPLICATE_RECORD_ID"),
+                "country_code": country_codes[0],
+            }
+            _emit_cross_record_issue(base_issue, meta)
+
     # Duplicate links
     for link, metas in link_to_records.items():
         if not link or len(metas) <= 1:
             continue
 
         record_ids_for_link = [m["record_id"] for m in metas]
+        keeper = choose_duplicate_keeper(metas)
+        keeper_id = keeper.get("record_id") if keeper else None
 
         for meta in metas:
-            record_id = meta["record_id"]
-            file_path = meta["file_path"]
             country_codes = meta["country_codes"] or ["UNKNOWN"]
-            primary_country = country_codes[0]
+            is_keeper = meta.get("record_id") == keeper_id and meta.get("file_path") == (
+                keeper.get("file_path") if keeper else None
+            )
+            action = (
+                f"Preferred keeper is '{keeper_id}' ({keeper.get('link')}). "
+                "Merge or delete the other duplicate(s)."
+                if keeper_id
+                else (
+                    "Multiple records share the same portal link; review them and "
+                    "deduplicate or clarify distinct roles."
+                )
+            )
+            if is_keeper:
+                action = (
+                    f"This record is the preferred keeper for link duplicates among "
+                    f"{record_ids_for_link}. Keep this entry and merge/delete the others."
+                )
 
             base_issue = {
                 "issue_type": "DUPLICATE_LINK",
@@ -4567,25 +4871,16 @@ def analyze_quality(output: str = None):
                 "current_value": {
                     "link": link,
                     "record_ids": record_ids_for_link,
+                    "preferred_keeper": keeper_id,
+                    "is_preferred_keeper": is_keeper,
                 },
-                "suggested_action": (
-                    "Multiple records share the same portal link; review them and "
-                    "deduplicate or clarify distinct roles."
-                ),
-                "file_path": file_path,
-                "record_id": record_id,
+                "suggested_action": action,
+                "file_path": meta["file_path"],
+                "record_id": meta["record_id"],
                 "priority": get_priority_level("DUPLICATE_LINK"),
-                "country_code": primary_country,
+                "country_code": country_codes[0],
             }
-
-            all_issues.append(base_issue)
-            entry = _ensure_record_entry(record_id, file_path, country_codes)
-            entry["unique_issues"].append(base_issue)
-
-            for country_code in entry.get("all_country_codes", country_codes):
-                issue_copy = base_issue.copy()
-                issue_copy["country_code"] = country_code
-                entry["issues"].append(issue_copy)
+            _emit_cross_record_issue(base_issue, meta)
 
     # Duplicate links by canonicalized URL
     for normalized_link, metas in normalized_link_to_records.items():
@@ -4598,12 +4893,28 @@ def analyze_quality(output: str = None):
             continue
 
         record_ids_for_link = [m["record_id"] for m in metas]
+        keeper = choose_duplicate_keeper(metas)
+        keeper_id = keeper.get("record_id") if keeper else None
 
         for meta in metas:
-            record_id = meta["record_id"]
-            file_path = meta["file_path"]
             country_codes = meta["country_codes"] or ["UNKNOWN"]
-            primary_country = country_codes[0]
+            is_keeper = meta.get("record_id") == keeper_id and meta.get("file_path") == (
+                keeper.get("file_path") if keeper else None
+            )
+            action = (
+                f"Preferred keeper is '{keeper_id}' ({keeper.get('link') if keeper else ''}). "
+                "Canonicalize links to match the keeper and merge/delete duplicates."
+                if keeper_id
+                else (
+                    "Multiple records resolve to the same canonical URL; review "
+                    "http/https, trailing slash, and host variants and deduplicate."
+                )
+            )
+            if is_keeper:
+                action = (
+                    f"This record is the preferred keeper for normalized link "
+                    f"{normalized_link}. Keep this entry and merge/delete the others."
+                )
 
             base_issue = {
                 "issue_type": "DUPLICATE_LINK_NORMALIZED",
@@ -4612,25 +4923,16 @@ def analyze_quality(output: str = None):
                     "normalized_link": normalized_link,
                     "raw_link": meta.get("link"),
                     "record_ids": record_ids_for_link,
+                    "preferred_keeper": keeper_id,
+                    "is_preferred_keeper": is_keeper,
                 },
-                "suggested_action": (
-                    "Multiple records resolve to the same canonical URL; review "
-                    "http/https, trailing slash, and host variants and deduplicate."
-                ),
-                "file_path": file_path,
-                "record_id": record_id,
+                "suggested_action": action,
+                "file_path": meta["file_path"],
+                "record_id": meta["record_id"],
                 "priority": get_priority_level("DUPLICATE_LINK_NORMALIZED"),
-                "country_code": primary_country,
+                "country_code": country_codes[0],
             }
-
-            all_issues.append(base_issue)
-            entry = _ensure_record_entry(record_id, file_path, country_codes)
-            entry["unique_issues"].append(base_issue)
-
-            for country_code in entry.get("all_country_codes", country_codes):
-                issue_copy = base_issue.copy()
-                issue_copy["country_code"] = country_code
-                entry["issues"].append(issue_copy)
+            _emit_cross_record_issue(base_issue, meta)
 
     # Group issues by country (for country reports - include issues for all countries a record spans)
     issues_by_country = {}

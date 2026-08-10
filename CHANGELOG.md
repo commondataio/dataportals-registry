@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Regenerated dataset exports and quality reports after integrity cleanup: **14,436** catalog records (entities); 135 software definitions; 0 scheduled.
+- Normalized **240** non-canonical `owner.type` values to the vocabulary in `data/reference/owner_types.yaml` (e.g. `University` → `Academy`, `Private` → `Business`).
+- Corrected path/country placement and metadata for misfiled catalogs (e.g. OpenSLR → `World/`, SoDaNet → `GR/`, SAERI → `FK/`, Gibraltar geoportal → `GI/`, New Caledonia SPREP portal → `NC/`, Italian cadastre geoportal → `IT/`, ITIE Sénégal → `SN/`; Esri China HK and Uruguay INE metadata aligned with path).
+
+### Fixed
+- Cleared all **CRITICAL** and **IMPORTANT** integrity-track quality issues (remaining open issues are MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` only).
+- Resolved `DUPLICATE_RECORD_ID` collisions (kept one record or renamed distinct same-domain services such as GeoServer vs IPT).
+- Resolved `DUPLICATE_LINK_NORMALIZED` pairs (29 groups): kept preferred keepers (https / non-www / non-Unknown), merged useful metadata, deleted www/duplicate copies.
+- Fixed `PATH_COUNTRY_MISMATCH`, `OWNER_LOCATION_SUBREGION_REQUIRED`, `COVERAGE_NORMALIZATION`, and `API_STATUS_MISMATCH` findings.
+
+### Removed
+- Consolidated duplicate catalog YAML entries (duplicate ids and normalized-link twins), net reducing the registry from 14,470 to **14,436** entities.
+
 ## [1.8.0] - 2026-06-17
 
 **GitHub Release**: [v1.8.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.8.0) - Published June 17, 2026

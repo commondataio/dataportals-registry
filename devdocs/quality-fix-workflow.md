@@ -80,23 +80,43 @@ Canonicalization rules:
 - trim trailing `/` from path
 - keep query string when present
 
+Duplicate issue payloads include a **preferred keeper** (`preferred_keeper`, `is_preferred_keeper`) chosen by:
+
+1. Prefer `https` over `http`
+2. Prefer hosts without leading `www.`
+3. Prefer paths outside `Unknown/`
+4. Prefer shorter path / shorter file path as a tie-breaker
+
+Same catalog `id` in multiple YAML paths is flagged as CRITICAL `DUPLICATE_RECORD_ID`.
+
+For GeoServer / ArcGIS Server, when `link` already points at the service root
+(`.../geoserver`, `.../rest/services`, etc.), `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*`
+is not raised.
+
 ## Quality regression baseline
 
-CI guards against increases in high-priority quality issues using `dataquality/baseline_counts.json`.
+CI guards against increases in **integrity-track** CRITICAL/IMPORTANT issues using
+`dataquality/baseline_counts.json`. Enrichment-track growth (e.g.
+`SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*`) is warning-only by default.
 
 Baseline format:
 
 ```json
 {
-  "generated_at": "2026-06-17T10:00:00Z",
+  "generated_at": "2026-08-10T18:00:00Z",
   "source": "dataquality/full_report.jsonl",
   "total_records_analyzed": 14470,
   "by_priority": {
     "CRITICAL": 0,
-    "IMPORTANT": 295,
-    "MEDIUM": 2344,
+    "IMPORTANT": 70,
+    "MEDIUM": 200,
     "LOW": 0
   },
+  "by_track": {
+    "integrity": {"CRITICAL": 0, "IMPORTANT": 70, "MEDIUM": 20, "LOW": 0},
+    "enrichment": {"CRITICAL": 0, "IMPORTANT": 0, "MEDIUM": 180, "LOW": 0}
+  },
+  "enrichment_issue_prefixes": ["SOFTWARE_EXPECTED_ENDPOINTS_MISSING_"],
   "by_issue_type": { "...": 0 }
 }
 ```

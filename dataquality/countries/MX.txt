@@ -1,15 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: MX
 ================================================================================
-Generated: 2026-06-17 15:17:23
+Generated: 2026-08-10 21:38:22
 Country Code: MX
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 5
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 3
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: MX/MX-ROO/opendata/datosqroogobmx.yaml
 Record ID: datosqroogobmx
@@ -32,20 +32,9 @@ Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
-Count: 1
-Priority: IMPORTANT
-
-File: MX/MX-JAL/geo/geodatosjaliscogobmx.yaml
-Record ID: geodatosjaliscogobmx
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: MX/Federal/microdata/esmaestrasinterinspmx.yaml
 Record ID: esmaestrasinterinspmx
@@ -56,7 +45,7 @@ Suggested Action: Add at least one endpoint because software.id='obibamica' is m
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: MX/Federal/scientific/riuacjmx.yaml
 Record ID: riuacjmx
@@ -69,6 +58,5 @@ Suggested Action: Add at least one endpoint because software.id='vufind' is mark
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND: 1 issue

@@ -36,6 +36,18 @@ Controlled values for key fields are maintained under **data/reference/**:
 - **catalog_types.yaml** – Allowed `catalog_type` values.
 - **software_ids.yaml** – Canonical `software.id` values (aligned with `data/software/`).
 - **status.yaml** – Allowed `status` values (`active`, `inactive`, `scheduled`).
-- **access_modes.yaml** – Allowed `access_mode` list values (`open`, `restricted`).
+- **access_modes.yaml** – Allowed `access_mode` list values (`open`, `restricted`, `limited`, `public`, `protected`, `closed`, `private`). Prefer `open` / `restricted` for new entries.
+- **owner_types.yaml** – Canonical `owner.type` values and synonym map (e.g. `University` → `Academy`).
 
 Use these when editing YAMLs or building tooling so that metadata stays consistent.
+
+## Integrity vs enrichment tracks
+
+Quality issues are split into two tracks:
+
+| Track | Examples | CI regression |
+|-------|----------|---------------|
+| **Integrity** | INVALID_*, DUPLICATE_*, MISSING_ENDPOINTS (`api: true`), directory/country mismatches | Hard fail if CRITICAL/IMPORTANT grows |
+| **Enrichment** | SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*, MISSING_TOPICS/TAGS, SHORT_DESCRIPTION | Warning only by default |
+
+See [devdocs/quality-fix-workflow.md](../devdocs/quality-fix-workflow.md).

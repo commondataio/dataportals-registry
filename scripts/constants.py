@@ -485,6 +485,55 @@ CATALOG_TYPE_ALLOWED = frozenset([
 STATUS_ALLOWED = frozenset(["active", "inactive", "scheduled", "deprecated"])
 API_STATUS_ALLOWED = frozenset(["active", "inactive", "uncertain"])
 
+# Quality issue tracks: enrichment debt is reported but does not fail CI by default.
+ENRICHMENT_ISSUE_PREFIXES = (
+    "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_",
+)
+ENRICHMENT_ISSUE_TYPES = frozenset(
+    [
+        "SOFTWARE_EXPECTED_ENDPOINTS_MISSING",
+        "MISSING_TOPICS",
+        "MISSING_TAGS",
+        "MISSING_DESCRIPTION",
+        "MISSING_LANGS",
+        "MISSING_OWNER_LINK",
+        "MISSING_CONTENT_TYPES",
+        "SHORT_DESCRIPTION",
+        "TAG_HYGIENE",
+        "DUPLICATE_TAGS",
+        "TOPIC_INCOMPLETE",
+        "TOPIC_SCHEMA_VIOLATION",
+        "PLACEHOLDER_TITLE",
+        "RIGHTS_INCOMPLETE",
+        "MISSING_CONTACT_INFO",
+        "DUPLICATE_COVERAGE",
+        "OWNER_TYPE_NONCANONICAL",
+    ]
+)
+
+# Special path roots that are not ISO country codes (path-country allowlist)
+PATH_COUNTRY_ALLOWLIST = frozenset(
+    {
+        "UNKNOWN",
+        "WORLD",
+        "EU",
+        "AFRICA",
+        "ASEAN",
+        "CARIBBEAN",
+        "LATINAMERICA",
+        "OCEANIA",
+        "INTERNATIONAL",
+        "AMERICAS",
+        "CENTRALAMERICA",
+    }
+)
+
+# Country code aliases accepted as equivalent for path/metadata consistency
+PATH_COUNTRY_ALIASES = {
+    "UK": "GB",
+    "GB": "UK",
+}
+
 MAP_CATALOG_TYPE_SUBDIR = {
     "Metadata catalog": "metadata",
     "Geoportal": "geo",

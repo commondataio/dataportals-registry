@@ -12,7 +12,10 @@ from quality_regression import (  # noqa: E402
     DEFAULT_BASELINE,
     DEFAULT_REPORT,
     compare_to_baseline,
+    compare_to_baseline_with_warnings,
+    is_enrichment_issue_type,
     load_issue_counts,
+    load_track_counts,
 )
 
 
@@ -28,12 +31,109 @@ def test_baseline_file_present_and_well_formed():
         assert priority in baseline["by_priority"]
 
 
+def test_enrichment_issue_classification():
+    assert is_enrichment_issue_type("SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN")
+    assert is_enrichment_issue_type("MISSING_TOPICS")
+    assert not is_enrichment_issue_type("DUPLICATE_LINK_NORMALIZED")
+    assert not is_enrichment_issue_type("INVALID_URL")
+
+
 def test_quality_counts_do_not_regress():
     if not DEFAULT_REPORT.exists():
         pytest.skip("full_report.jsonl not present; run analyze-quality first")
 
     errors = compare_to_baseline()
     assert not errors, "Quality regression detected:\n" + "\n".join(errors)
+
+
+def test_enrichment_growth_is_warning_by_default(tmp_path):
+    report = tmp_path / "report.jsonl"
+    baseline = tmp_path / "baseline.json"
+    report.write_text(
+        "\n".join(
+            [
+                json.dumps(
+                    {
+                        "issue_type": "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN",
+                        "priority": "MEDIUM",
+                    }
+                ),
+                json.dumps(
+                    {
+                        "issue_type": "SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN",
+                        "priority": "MEDIUM",
+                    }
+                ),
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    baseline.write_text(
+        json.dumps(
+            {
+                "by_priority": {
+                    "CRITICAL": 0,
+                    "IMPORTANT": 0,
+                    "MEDIUM": 1,
+                    "LOW": 0,
+                },
+                "by_track": {
+                    "integrity": {
+                        "CRITICAL": 0,
+                        "IMPORTANT": 0,
+                        "MEDIUM": 0,
+                        "LOW": 0,
+                    },
+                    "enrichment": {
+                        "CRITICAL": 0,
+                        "IMPORTANT": 0,
+                        "MEDIUM": 1,
+                        "LOW": 0,
+                    },
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    errors, warnings = compare_to_baseline_with_warnings(
+        baseline_path=baseline, report_path=report
+    )
+    assert errors == []
+    assert any("Enrichment MEDIUM" in w for w in warnings)
+
+
+def test_integrity_growth_fails(tmp_path):
+    report = tmp_path / "report.jsonl"
+    baseline = tmp_path / "baseline.json"
+    report.write_text(
+        json.dumps({"issue_type": "DUPLICATE_RECORD_ID", "priority": "CRITICAL"}) + "\n",
+        encoding="utf-8",
+    )
+    baseline.write_text(
+        json.dumps(
+            {
+                "by_track": {
+                    "integrity": {
+                        "CRITICAL": 0,
+                        "IMPORTANT": 0,
+                        "MEDIUM": 0,
+                        "LOW": 0,
+                    },
+                    "enrichment": {
+                        "CRITICAL": 0,
+                        "IMPORTANT": 0,
+                        "MEDIUM": 0,
+                        "LOW": 0,
+                    },
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    errors = compare_to_baseline(baseline_path=baseline, report_path=report)
+    assert errors
+    assert "Integrity CRITICAL" in errors[0]
 
 
 def test_current_report_matches_baseline_when_unchanged():
@@ -52,3 +152,7 @@ def test_current_report_matches_baseline_when_unchanged():
             f"{priority} count mismatch between full_report.jsonl ({current}) "
             f"and baseline ({expected}); run scripts/update_quality_baseline.py"
         )
+
+    if "by_track" in baseline:
+        current_tracks = load_track_counts(DEFAULT_REPORT)
+        assert current_tracks == baseline["by_track"]

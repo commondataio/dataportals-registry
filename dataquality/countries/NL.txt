@@ -1,47 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: NL
 ================================================================================
-Generated: 2026-06-17 15:17:23
+Generated: 2026-08-10 21:38:22
 Country Code: NL
-Total Records with Issues: 29
-Total Issues Found: 29
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
-[DUPLICATE_LINK_NORMALIZED]
-Count: 2
-Priority: IMPORTANT
-
-File: NL/Federal/geo/nationaalgeoregisternl.yaml
-Record ID: nationaalgeoregisternl
-Issue: DUPLICATE_LINK_NORMALIZED
-Field: link
-Current Value: {'normalized_link': 'https://nationaalgeoregister.nl/geonetwork', 'raw_link': 'https://nationaalgeoregister.nl/geonetwork', 'record_ids': ['nationaalgeoregisternl', 'wwwnationaalgeoregisternl']}
-Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
-
-File: NL/Federal/geo/wwwnationaalgeoregisternl.yaml
-Record ID: wwwnationaalgeoregisternl
-Issue: DUPLICATE_LINK_NORMALIZED
-Field: link
-Current Value: {'normalized_link': 'https://nationaalgeoregister.nl/geonetwork', 'raw_link': 'https://www.nationaalgeoregister.nl/geonetwork', 'record_ids': ['nationaalgeoregisternl', 'wwwnationaalgeoregisternl']}
-Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
-Count: 4
-Priority: IMPORTANT
-
-File: NL/NL-ZH/geo/geoportaalzoetermeernl.yaml
-Record ID: geoportaalzoetermeernl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: NL/NL-ZH/geo/giszoetermeernl.yaml
-Record ID: giszoetermeernl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
+Count: 2
+Priority: MEDIUM
 
 File: NL/NL-OV/geo/wwwijssellandearthnl.yaml
 Record ID: wwwijssellandearthnl
@@ -59,7 +27,7 @@ Suggested Action: Add at least one endpoint because software.id='arcgisserver' i
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: NL/Federal/scientific/uufigsharecom.yaml
 Record ID: uufigsharecom
@@ -70,7 +38,7 @@ Suggested Action: Add at least one endpoint because software.id='figshare' is ma
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: NL/Federal/scientific/usegalaxynl.yaml
 Record ID: usegalaxynl
@@ -81,7 +49,7 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: NL/NL-ZH/geo/geonetworkbij12nl.yaml
 Record ID: geonetworkbij12nl
@@ -91,78 +59,8 @@ Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count'
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
-Count: 18
-Priority: IMPORTANT
-
-File: NL/NL-FR/geo/geosudwestfryslannl.yaml
-Record ID: geosudwestfryslannl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-NB/geo/geolabhasnl.yaml
-Record ID: geolabhasnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-FL/geo/geo2flevolandnl.yaml
-Record ID: geo2flevolandnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/fastopenearthnl.yaml
-Record ID: fastopenearthnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/mepduinenopenearthnl.yaml
-Record ID: mepduinenopenearthnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/altc004xtrdeltaresnl.yaml
-Record ID: altc004xtrdeltaresnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/geodatarivmnl.yaml
-Record ID: geodatarivmnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/langsdammenopenearthnl.yaml
-Record ID: langsdammenopenearthnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/nedglobefeedbacknedgraphicscsnl.yaml
-Record ID: nedglobefeedbacknedgraphicscsnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/Federal/geo/marineprojectopenearthnl.yaml
-Record ID: marineprojectopenearthnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
+Count: 1
+Priority: MEDIUM
 
 File: NL/Federal/geo/modeldatanhidatadeltaresnl.yaml
 Record ID: modeldatanhidatadeltaresnl
@@ -171,58 +69,9 @@ Field: endpoints
 Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
 
-File: NL/Federal/geo/wwwwioninspirenl.yaml
-Record ID: wwwwioninspirenl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-UT/geo/geoiszfnl.yaml
-Record ID: geoiszfnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-UT/geo/geoservernieuwegeinnl.yaml
-Record ID: geoservernieuwegeinnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-DR/geo/geodrenthenl.yaml
-Record ID: geodrenthenl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-NH/geo/geokoggenlandnl.yaml
-Record ID: geokoggenlandnl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-NH/geo/geowebamstelveennl.yaml
-Record ID: geowebamstelveennl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: NL/NL-NH/geo/plattegrondengooisemerennl.yaml
-Record ID: plattegrondengooisemerennl
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: NL/NL-GE/geo/wwwkaartopmaateu.yaml
 Record ID: wwwkaartopmaateu
@@ -233,7 +82,7 @@ Suggested Action: Add at least one endpoint because software.id='mapbender' is m
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: NL/Federal/opendata/dataaxiellcom.yaml
 Record ID: dataaxiellcom
@@ -245,11 +94,10 @@ Suggested Action: Add at least one endpoint because software.id='triplydb' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK_NORMALIZED: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FIGSHARE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 18 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBENDER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB: 1 issue

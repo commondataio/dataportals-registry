@@ -1,58 +1,15 @@
 DATA QUALITY REPORT - COUNTRY: World
 ================================================================================
-Generated: 2026-06-17 15:17:23
+Generated: 2026-08-10 21:38:22
 Country Code: World
-Total Records with Issues: 32
-Total Issues Found: 32
+Total Records with Issues: 18
+Total Issues Found: 18
 
 === ISSUES BY TYPE ===
 
-[DUPLICATE_LINK_NORMALIZED]
-Count: 3
-Priority: IMPORTANT
-
-File: World/geo/geospatialorg.yaml
-Record ID: geospatialorg
-Issue: DUPLICATE_LINK_NORMALIZED
-Field: link
-Current Value: {'normalized_link': 'http://geo-spatial.org/geoserver', 'raw_link': 'http://geo-spatial.org/geoserver', 'record_ids': ['wwwgeospatialorg', 'geospatialorg']}
-Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
-
-File: World/geo/wwwocgiscom.yaml
-Record ID: wwwocgiscom
-Issue: DUPLICATE_LINK_NORMALIZED
-Field: link
-Current Value: {'normalized_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'raw_link': 'https://www.ocgis.com/arcpub/arcgis/rest/services', 'record_ids': ['wwwocgiscom', 'ocgiscom']}
-Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
-
-File: World/geo/ocgiscom.yaml
-Record ID: ocgiscom
-Issue: DUPLICATE_LINK_NORMALIZED
-Field: link
-Current Value: {'normalized_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'raw_link': 'https://ocgis.com/arcpub/arcgis/rest/services', 'record_ids': ['wwwocgiscom', 'ocgiscom']}
-Suggested Action: Multiple records resolve to the same canonical URL; review http/https, trailing slash, and host variants and deduplicate.
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
-Count: 2
-Priority: IMPORTANT
-
-File: World/geo/deafricageocloudcom.yaml
-Record ID: deafricageocloudcom
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
-File: World/geo/portalairbusdsgeocom.yaml
-Record ID: portalairbusdsgeocom
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER
-Field: endpoints
-Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/metadata/potentialxaristotlecloudio.yaml
 Record ID: potentialxaristotlecloudio
@@ -63,7 +20,7 @@ Suggested Action: Add at least one endpoint because software.id='aristotlemdr' i
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/geo/sgsepcartocom.yaml
 Record ID: sgsepcartocom
@@ -74,7 +31,7 @@ Suggested Action: Add at least one endpoint because software.id='carto' is marke
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 3
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: KE/Federal/opendata/datailriorg.yaml
 Record ID: datailriorg
@@ -99,7 +56,7 @@ Suggested Action: Add at least one endpoint because software.id='ckan' is marked
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/indicators/datauniceforg.yaml
 Record ID: datauniceforg
@@ -110,7 +67,7 @@ Suggested Action: Add at least one endpoint because software.id='datauniceforg' 
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 2
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/geo/geoserverisciencescom.yaml
 Record ID: geoserverisciencescom
@@ -126,76 +83,9 @@ Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
-Count: 9
-Priority: IMPORTANT
-
-File: World/geo/21221923379.yaml
-Record ID: 21221923379
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/helpopenstreetmaporg.yaml
-Record ID: helpopenstreetmaporg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/probavmepesaint.yaml
-Record ID: probavmepesaint
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/geo4vicmetrianu.yaml
-Record ID: geo4vicmetrianu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/104155211193.yaml
-Record ID: 104155211193
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/geoservercawgcaporg.yaml
-Record ID: geoservercawgcaporg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/109238224174.yaml
-Record ID: 109238224174
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/avstdocom.yaml
-Record ID: avstdocom
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
-File: World/geo/202154182164.yaml
-Record ID: 202154182164
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER
-Field: endpoints
-Current Value: {'software_id': 'geoserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='geoserver' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/geo/wwwsinasmzcom.yaml
 Record ID: wwwsinasmzcom
@@ -206,7 +96,7 @@ Suggested Action: Add at least one endpoint because software.id='lizmap' is mark
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/metadata/ipccbrowseripccdataorg.yaml
 Record ID: ipccbrowseripccdataorg
@@ -217,7 +107,7 @@ Suggested Action: Add at least one endpoint because software.id='mwmb' is marked
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/opendata/146317531.yaml
 Record ID: 146317531
@@ -228,7 +118,7 @@ Suggested Action: Add at least one endpoint because software.id='nesstar' is mar
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: US/Other/ml/registryopendataaws.yaml
 Record ID: registryopendataaws
@@ -239,7 +129,7 @@ Suggested Action: Add at least one endpoint because software.id='opendatareg' is
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT]
 Count: 2
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/opendata/geocataloguesmavdorg.yaml
 Record ID: geocataloguesmavdorg
@@ -257,7 +147,7 @@ Suggested Action: Add at least one endpoint because software.id='opendatasoft' i
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/geo/5417317415.yaml
 Record ID: 5417317415
@@ -268,7 +158,7 @@ Suggested Action: Add at least one endpoint because software.id='opengeoportal' 
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/indicators/apidataexplorerunescaporg.yaml
 Record ID: apidataexplorerunescaporg
@@ -279,7 +169,7 @@ Suggested Action: Add at least one endpoint because software.id='sdmxri' is mark
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH]
 Count: 2
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: World/indicators/datauisunescoorg.yaml
 Record ID: datauisunescoorg
@@ -298,14 +188,11 @@ Suggested Action: Add at least one endpoint because software.id='stattech' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
-DUPLICATE_LINK_NORMALIZED: 3 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 9 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue
