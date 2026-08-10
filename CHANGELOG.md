@@ -7,10 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-08-10
+
+**GitHub Release**: [v1.9.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.9.0) - Published August 10, 2026
+
+### Added
+- Canonical `owner.type` vocabulary (`data/reference/owner_types.yaml`) with synonym map and quality rules (`OWNER_TYPE_NONCANONICAL` / `INVALID_OWNER_TYPE`).
+- Path/country consistency check (`PATH_COUNTRY_MISMATCH`) with allowlisted multinational roots.
+- OpenSpec proposals for owner-type/path consistency and endpoint quality priority recalibration.
+
 ### Changed
 - Regenerated dataset exports and quality reports after integrity cleanup: **14,436** catalog records (entities); 135 software definitions; 0 scheduled.
-- Normalized **240** non-canonical `owner.type` values to the vocabulary in `data/reference/owner_types.yaml` (e.g. `University` → `Academy`, `Private` → `Business`).
+- Normalized **240** non-canonical `owner.type` values to the canonical vocabulary (e.g. `University` → `Academy`, `Private` → `Business`).
 - Corrected path/country placement and metadata for misfiled catalogs (e.g. OpenSLR → `World/`, SoDaNet → `GR/`, SAERI → `FK/`, Gibraltar geoportal → `GI/`, New Caledonia SPREP portal → `NC/`, Italian cadastre geoportal → `IT/`, ITIE Sénégal → `SN/`; Esri China HK and Uruguay INE metadata aligned with path).
+- Recalibrated quality priorities so integrity failures remain CRITICAL/IMPORTANT for CI while enrichment-track endpoint gaps stay MEDIUM/warning-only.
+- Added missing runtime dependencies to `requirements.txt`; aligned catalog-type keys and re3data HTML parsing with tests.
 
 ### Fixed
 - Cleared all **CRITICAL** and **IMPORTANT** integrity-track quality issues (remaining open issues are MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` only).
