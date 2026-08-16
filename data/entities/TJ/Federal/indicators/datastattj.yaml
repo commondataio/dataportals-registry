@@ -16,18 +16,22 @@ coverage:
       id: '143'
       name: Central Asia
 description: Open data portal of the Agency on Statistics under the President of the
-  Republic of Tajikistan. Provides access to statistical data and indicators covering
-  various socio-economic aspects of Tajikistan including population, economy, agriculture,
-  industry, trade, transport, education, health, and social indicators.
+  Republic of Tajikistan. Publishes official statistical indicators and time series
+  at national and district level, covering agriculture, industry, construction, trade,
+  transport, communications, services, finance, education, health, social statistics,
+  demography, national accounts, and labour.
 id: datastattj
 langs:
+- id: TG
+  name: Tajik
 - id: RU
   name: Russian
-link: http://data.stat.tj
-name: Agency on Statistics under the President of the Republic of Tajikistan data
-  portal
+- id: EN
+  name: English
+link: https://data.stat.tj
+name: Open Data Portal of the Agency on Statistics of Tajikistan
 owner:
-  link: http://stat.tj
+  link: https://www.stat.tj
   location:
     country:
       id: TJ
@@ -37,12 +41,13 @@ owner:
   type: Central government
 properties:
   has_doi: false
+  is_national: true
 rights:
-  license_id: null
-  license_name: null
-  license_url: null
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
   privacy_policy_url: null
-  rights_type: granular
+  rights_type: global
   tos_url: null
 software:
   id: custom
@@ -52,20 +57,42 @@ tags:
 - statistics
 - government
 - indicators
-- Tajikistan
 - official statistics
+- open data
+- Tajikistan
 topics:
 - id: ECON
   name: Economy and finance
   type: eudatatheme
 - id: SOCI
-  name: Society
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: HEAL
+  name: Health
   type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Transportation
+  name: Transportation
   type: iso19115
 - id: Health
   name: Health

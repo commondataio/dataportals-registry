@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.10.0] - 2026-08-16
+
+**GitHub Release**: [v1.10.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.10.0) - Published August 16, 2026
+
+### Added
+- **92 net new catalog entries** (95 YAML files added, 3 recategorized); registry source now **14,528** entities (0 scheduled).
+- **39 Open Data for Africa** indicators catalogs (country portals plus the continental `dataportal.opendataforafrica.org`), covering many previously missing African countries.
+- **15 REDATAM / RpWebEngine** microdata catalogs across Latin America and the Caribbean.
+- National statistics and open data portals for countries and territories with little or no prior coverage, including first entity roots for **CF, DJ, ER, GQ, GW, MC, SD, SM, ST, SZ, TL, TM, VC** (plus new Andorra, Bhutan, Brunei, Hungary, Iran, Iraq, Jordan, Liechtenstein, Monaco, Mongolia, Oman open data, Palau indicators, Romania TEMPO, San Marino, Timor-Leste, Turkmenistan, and others).
+- Caribbean OECS geoportal (`gis.oecs.int`) and Haiti data search engine (`ayitistats.org`).
+- Language and geography reference support for new coverage: Turkmen (`TK`) in `data/reference/langs.csv` / `langs.tsv`; country entries and domain maps for Eritrea, Eswatini, Monaco, Timor-Leste, and Turkmenistan in `scripts/constants.py`.
+
+### Changed
+- Regenerated dataset exports: **14,528** catalog records (entities); 135 software definitions; 0 scheduled.
+- Recategorized three existing catalogs: New Caledonia `data.gouv.nc` (`FR/FR-NC` → `NC/Federal`), OPT maps portal (`opendata` → `geo`), and NZ PAM geodata (`opendata` → `geo`).
+- Refreshed metadata for Pacific SPREP country portals and selected Australian, Oman, Tajikistan, Samoa, and Minnesota entries (including HTTPS/name updates; Minnesota state portal marked deprecated; Samoa MNRE RIO portal marked inactive).
+- Extended TLD-to-language defaults (`.sz` → English, `.mc` → French, `.tl` → Portuguese, `.tm` → Turkmen).
+
 ## [1.9.0] - 2026-08-10
 
 **GitHub Release**: [v1.9.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.9.0) - Published August 10, 2026

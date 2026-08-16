@@ -37,7 +37,7 @@ The registry collects and maintains structured metadata about:
 - Data marketplaces
 - Other data infrastructure
 
-As of June 2026, the registry contains **14,470 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
+As of August 2026, the registry contains **14,528 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
 
 ### Scope Boundary (Important)
 

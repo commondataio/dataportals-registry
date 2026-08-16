@@ -14,12 +14,18 @@ coverage:
     macroregion:
       id: '145'
       name: Western Asia
-description: Data portal is a free and data-sharing portal where anyone can access
-  data relating to the Sultanate of Oman. The Data Portal provides many datasets from
-  different entities, for everyone - citizen, investor, researcher or developer.
+description: National statistical data portal of Oman, publishing official indicators,
+  datasets, and visualizations from the National Centre for Statistics and Information,
+  with SDMX and API access under the Open Government License of the Sultanate of Oman.
 endpoints:
 - type: opensearch
   url: https://data.gov.om/OpenSearch.xml
+- type: sdmx:datastructure
+  url: https://data.gov.om/api/1.0/sdmx
+  version: '2.0'
+- type: rest
+  url: https://data.gov.om/api/1.0
+  version: '1.0'
 id: datagovom
 identifiers:
 - id: wikidata
@@ -31,7 +37,7 @@ langs:
 - id: AR
   name: Arabic
 link: https://data.gov.om
-name: National Centre For Statistics & Information Data Portal (Oman)
+name: Oman Data Portal
 owner:
   link: https://www.ncsi.gov.om
   location:
@@ -41,31 +47,77 @@ owner:
     level: 20
   name: National Centre For Statistics & Information
   type: Central government
+properties:
+  has_doi: false
+  is_national: true
 rights:
   license_id: null
-  license_name: null
-  license_url: null
+  license_name: Open Government License - Sultanate of Oman
+  license_url: https://data.gov.om/s3/gov_license.pdf
   privacy_policy_url: null
-  rights_type: unknown
-  tos_url: null
+  rights_type: global
+  tos_url: https://data.gov.om/legal/termsofuse
 software:
   id: custom
   name: Custom software
 status: active
 tags:
-- statistics
 - government
+- has_api
+- statistics
+- official statistics
 - Open Data
-- Data Portal
-- Government Data
+- Oman
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: Society
   name: Society
   type: iso19115
 - id: Economy
   name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Farming
+  name: Farming
   type: iso19115
 uid: cdi00001266
