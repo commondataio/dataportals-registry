@@ -1,0 +1,81 @@
+access_mode:
+- open
+- limited
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Research information system and institutional repository of the IT University
+  of Copenhagen. The portal presents researchers, publications, activities, and datasets,
+  and provides access to full-text files for most publications.
+endpoints:
+- type: oaipmh20
+  url: https://pure.itu.dk/ws/oai?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://pure.itu.dk/en/datasets/?search=&isCopyPasteSearch=false&format=rss
+  version: '2.0'
+- type: sitemap
+  url: https://pure.itu.dk/sitemap/datasets.xml
+- type: pure:export_excel
+  url: https://pure.itu.dk/en/datasets/?export=xls
+- type: sitemap
+  url: https://pure.itu.dk/sitemap.xml
+id: pureitudk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://pure.itu.dk
+name: IT University of Copenhagen Research Portal
+owner:
+  link: https://www.itu.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 30
+    subregion:
+      id: DK-84
+      name: Hovedstaden
+  name: IT University of Copenhagen
+  type: Academy
+properties:
+  has_doi: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: pure
+  name: Pure
+status: active
+tags:
+- scientific
+- research data
+- CRIS
+- publications
+- datasets
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00022108

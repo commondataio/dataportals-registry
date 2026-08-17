@@ -1,0 +1,91 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+description: Open data portal of the City Council of A Coruña (Concello da Coruña),
+  providing municipal datasets for reuse by citizens, businesses, and researchers.
+  The catalog covers public administration, urban planning, transport, environment,
+  culture, tourism, health, education, economy, and social welfare. It is the city's
+  current open data catalog, published as part of the municipal open government initiative.
+endpoints:
+- type: ckan
+  url: https://datos.coruna.gal/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.coruna.gal/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.coruna.gal/api/3/action/package_list
+  version: '3'
+id: datoscorunagal
+identifiers: []
+langs:
+- id: ES
+  name: Spanish
+link: https://datos.coruna.gal/es/dataset/
+name: Portal de Datos Abiertos del Ayuntamiento de A Coruña
+owner:
+  link: https://www.coruna.gal
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: ES-GA
+      name: Galicia [Galicia]
+  name: City Council of A Coruña
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- ckan
+- government
+- has_api
+- municipal data
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+uid: cdi00022202

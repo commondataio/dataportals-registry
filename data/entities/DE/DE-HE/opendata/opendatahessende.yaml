@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-HE
+      name: Hessen
+description: Official open data portal of the German state of Hessen. Central metadata
+  catalog of open administrative datasets from Hessian state authorities, municipalities,
+  and other public bodies, provided under the Hessian Open Data Act (HODaG).
+endpoints:
+- type: ckan:package-search
+  url: https://opendata.hessen.de/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.hessen.de/api/3/action/package_list
+  version: '3'
+- type: ckan
+  url: https://opendata.hessen.de/api/3
+  version: '3'
+- type: dcat:n3
+  url: https://opendata.hessen.de/catalog.n3
+- type: dcat:ttl
+  url: https://opendata.hessen.de/catalog.ttl
+- type: dcat:xml
+  url: https://opendata.hessen.de/catalog.xml
+- type: dcat:jsonld
+  url: https://opendata.hessen.de/catalog.jsonld
+- type: dcat:json
+  url: https://opendata.hessen.de/dcat.json
+- type: sparql:web
+  url: https://opendata.hessen.de/sparql
+id: opendatahessende
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://opendata.hessen.de
+name: Offene Daten aus Hessen
+owner:
+  link: https://digitales.hessen.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HE
+      name: Hessen
+  name: Hessisches Ministerium für Digitalisierung und Innovation
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://opendata.hessen.de/pages/privacy
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Hessen
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00022299

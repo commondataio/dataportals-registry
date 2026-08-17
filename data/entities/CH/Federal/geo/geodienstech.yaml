@@ -1,0 +1,129 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+- location:
+    country:
+      id: LI
+      name: Liechtenstein
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Intercantonal portal for accessing official geodata and geoservices.
+  Cantonal and municipal geobasis data are aggregated in a structurally harmonized
+  form for Switzerland and Liechtenstein. Offers WMS, WFS, OGC API Features, Atom,
+  STAC, and a REST API. Access conditions are defined by the cantons.
+endpoints:
+- type: stacserverapi
+  url: https://geodienste.ch/stac
+- type: openapi
+  url: https://geodienste.ch/api-docs/v1/swagger.yaml
+  version: '3.0'
+- type: openapi
+  url: https://geodienste.ch/api-docs/v1/stac.yaml
+  version: '3.0'
+- type: atom
+  url: https://geodienste.ch/atom/download.xml
+- type: opensearch
+  url: https://geodienste.ch/search/description.xml
+- type: sitemap
+  url: https://geodienste.ch/sitemap.xml
+id: geodienstech
+langs:
+- id: DE
+  name: German
+- id: FR
+  name: French
+- id: IT
+  name: Italian
+link: https://geodienste.ch/
+name: geodienste.ch
+owner:
+  link: https://www.kgk-cgc.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 20
+  name: Konferenz der Kantonalen Geoinformations- und Katasterstellen (KGK-CGC)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://geodienste.ch/privacy
+  rights_type: granular
+  tos_url: https://geodienste.ch/terms-of-use
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- has_api
+- geodata
+- government
+- Switzerland
+- STAC
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00022267

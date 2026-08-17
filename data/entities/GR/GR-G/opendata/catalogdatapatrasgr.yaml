@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+description: Open data catalog of the Municipality of Patras (Δήμος Πατρέων), covering
+  municipal operations, infrastructure, spatial planning, finance, environment, transport,
+  and smart-city sensor data.
+endpoints:
+- type: ckan
+  url: https://catalog.data.patras.gr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://catalog.data.patras.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://catalog.data.patras.gr/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://catalog.data.patras.gr/catalog.n3
+- type: dcat:ttl
+  url: https://catalog.data.patras.gr/catalog.ttl
+- type: dcat:jsonld
+  url: https://catalog.data.patras.gr/catalog.jsonld
+id: catalogdatapatrasgr
+langs:
+- id: EL
+  name: Greek
+link: https://catalog.data.patras.gr
+name: Open Data Portal of the Municipality of Patras
+owner:
+  link: https://e-patras.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 30
+    subregion:
+      id: GR-G
+      name: Dytikí Elláda
+  name: Municipality of Patras
+  type: Local government
+properties:
+  has_doi: false
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- municipality
+- Greece
+- Patras
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00022172

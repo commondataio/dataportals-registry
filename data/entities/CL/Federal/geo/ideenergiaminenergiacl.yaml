@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: ArcGIS Server REST services directory for Chile's Ministry of Energy
+  Spatial Data Infrastructure (IDE Energía), publishing geospatial layers on electricity
+  generation, transmission, fuels, renewable energy potential, energy vulnerability,
+  and related energy-sector datasets.
+endpoints:
+- type: arcgis:portals:self
+  url: https://ide-energia.minenergia.cl/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://ide-energia.minenergia.cl/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://ide-energia.minenergia.cl/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://ide-energia.minenergia.cl/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://ide-energia.minenergia.cl/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://ide-energia.minenergia.cl/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://ide-energia.minenergia.cl/server/rest/services?f=kmz
+id: ideenergiaminenergiacl
+langs:
+- id: ES
+  name: Spanish
+link: https://ide-energia.minenergia.cl/server/rest/services
+name: IDE Energía Chile ArcGIS REST Services
+owner:
+  link: https://www.energia.gob.cl
+  location:
+    country:
+      id: CL
+      name: Chile
+    level: 20
+  name: Ministerio de Energía de Chile
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- ArcGIS
+- REST
+- energy
+- Chile
+- IDE
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00022099

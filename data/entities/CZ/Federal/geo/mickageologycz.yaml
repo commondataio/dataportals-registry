@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Metadata catalogue of the Czech Geological Survey based on OGC CSW 2.0.2
+  ISO AP 1.0 and INSPIRE-compliant.
+endpoints:
+- type: csw202
+  url: https://micka.geology.cz/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://micka.geology.cz/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: dcat:xml
+  url: https://micka.geology.cz/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&ElementSetName=brief&outputSchema=http://www.w3.org/ns/dcat%23
+id: mickageologycz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://micka.geology.cz/
+name: Metadata Catalogue of the Czech Geological Survey
+owner:
+  link: https://www.geology.cz/
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Czech Geological Survey
+  type: Central government
+properties:
+  has_doi: false
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geology
+- geospatial
+- inspire
+- metadata
+- csw
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00022300

@@ -611,6 +611,7 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
     "popgis": "Geoportal",
     "colectica": "Microdata catalog",
     "statsuite": "Indicators catalog",
+    "superset": "Indicators catalog",
 }
 
 # Primary catalog_type used when inferring type from software (e.g. add-single). Some

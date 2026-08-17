@@ -102,12 +102,12 @@ Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jso
 
 ## Data exports
 
-Latest snapshot (2026-08-16):
+Latest snapshot (2026-08-17):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): 14,528 catalog records
-- `data/datasets/software.jsonl` (+ `.zst`): 135 software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): scheduled sources to crawl (empty; all promoted or removed)
-- `data/datasets/full.jsonl` (+ `.zst`): 14,528 combined entities + scheduled records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): 14,972 catalog records
+- `data/datasets/software.jsonl` (+ `.zst`): 136 software/platform definitions
+- `data/datasets/scheduled.jsonl` (+ `.zst`): 1 scheduled source to crawl
+- `data/datasets/full.jsonl` (+ `.zst`): 14,973 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 - `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
 

@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Public health statistics portal of the Norwegian Institute of Public
+  Health. Presents aggregated registry statistics as tables, charts, and CSV/Excel
+  downloads, filterable by geography, age, sex, and time. Covers vaccination, causes
+  of death, births, infectious diseases, medicines, cardiovascular disease, abortions,
+  and municipal health and care services.
+endpoints:
+- type: openapi
+  url: https://statistikk-data.fhi.no/swagger/OpenApi_v1/swagger.json
+  version: '3.0'
+- type: rest
+  url: https://statistikk-data.fhi.no/api/open/v1/Common/source
+  version: v1
+- type: docs
+  url: https://statistikk-data.fhi.no/swagger/index.html
+id: statistikkfhino
+identifiers:
+- id: github
+  url: https://github.com/folkehelseinstituttet/Fhi.Statistikk.OpenAPI
+  value: folkehelseinstituttet/Fhi.Statistikk.OpenAPI
+langs:
+- id: 'NO'
+  name: Norwegian
+- id: EN
+  name: English
+link: https://statistikk.fhi.no
+name: FHI Statistikk
+owner:
+  link: https://www.fhi.no
+  location:
+    country:
+      id: 'NO'
+      name: Norway
+    level: 20
+  name: Norwegian Institute of Public Health
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: https://www.fhi.no/om/fhi/personvernerklaring/
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- health
+- Norway
+- indicators
+- has_api
+- registries
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00022090

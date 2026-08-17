@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **444 net new catalog entries** (450 YAML files added; 5 existing records recategorized or replaced); registry source now **14,972** entities (1 scheduled).
+- **64 THREDDS** scientific catalogs, including **48 ESGF** climate-data nodes (DKRZ, NASA NCCS, LLNL, CMCC, DIAS Japan, CEDA, and others).
+- **49 indicators catalogs**, including national SDG portals, statistical databases, and central-bank, health, and finance indicator systems.
+- New catalogs across 64 countries, including **CKAN** (28), **ArcGIS Hub/Server** (39), **Dataverse** (11), **GeoNetwork** (10), **OpenDataSoft** (10), and additional DKAN, Figshare, Pure, and ERDDAP sites.
+- **6 metadata catalogs** (including HDA Belgium, I14Y Switzerland, LETZDATA Luxembourg) and **8 API catalogs** (including Datafordeler, Digitraffic, GUS API, Brønnøysund).
+- **Apache Superset** software definition (`data/software/indicators/superset.yaml`) with catalog-type mapping in `scripts/constants.py`.
+
+### Changed
+- Recategorized or replaced five existing catalogs: Flanders VMM portal (`opendatawsevlaanderenbe` → `opendatawewisvlaanderenbe`), Olomouc geoportal (`EU/CZ-71` → `CZ/CZ-71`), Bordeaux Métropole (`opendatabordeauxmetropolefr` → `datahubbordeauxmetropolefr`), Incheon iMap (`KR-11` → `KR-28`), and Muntinlupa GIS (`muntinlupacitywebgis1com` → `cgismuntinlupacitygovph`).
+- Refreshed metadata for selected Brazilian, Estonian, Italian, Korean, Liechtenstein, Maltese, Montenegrin, and Portuguese catalogs (URL/name updates; some status and software corrections).
+
 ## [1.10.0] - 2026-08-16
 
 **GitHub Release**: [v1.10.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.10.0) - Published August 16, 2026

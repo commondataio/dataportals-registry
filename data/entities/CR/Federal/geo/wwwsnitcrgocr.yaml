@@ -1,0 +1,111 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: Official geoportal of Costa Rica's National Territorial Information System
+  (SNIT), the spatial data infrastructure of Costa Rica (IDECORI). Administered by
+  the Instituto Geográfico Nacional of the Registro Nacional. Provides map viewers,
+  official institutional layers, and OGC services (WMS, WMTS, WFS).
+endpoints:
+- type: wms111
+  url: https://geos.snitcr.go.cr/be/IGN_5/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geos.snitcr.go.cr/be/IGN_5/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://geos.snitcr.go.cr/be/IGN_5/wfs?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://geos.snitcr.go.cr/be/IGN_5/wfs?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://geos.snitcr.go.cr/be/IGN_5/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: wwwsnitcrgocr
+langs:
+- id: ES
+  name: Spanish
+link: https://www.snitcr.go.cr/
+name: SNIT - Sistema Nacional de Información Territorial
+owner:
+  link: https://www.registronacional.go.cr/instituto_geografico/
+  location:
+    country:
+      id: CR
+      name: Costa Rica
+    level: 20
+  name: Instituto Geográfico Nacional (Registro Nacional)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- Costa Rica
+- geospatial
+- geoportal
+- government
+- OGC
+- WMS
+- WFS
+- cadastre
+- cartography
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00022392

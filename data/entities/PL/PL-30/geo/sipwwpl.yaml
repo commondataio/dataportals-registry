@@ -1,0 +1,122 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    macroregion:
+      id: '151'
+      name: 'Eastern Europe '
+    subregion:
+      id: PL-30
+      name: Wielkopolskie
+description: Regional spatial information system of the Wielkopolska Voivodeship providing
+  public access to geospatial datasets, interactive maps, and an INSPIRE-compliant
+  metadata catalogue.
+endpoints:
+- type: geonetwork:query
+  url: https://sipww.pl/geonetwork/srv/eng/q
+- type: openapi
+  url: https://sipww.pl/geonetwork/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://sipww.pl/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://sipww.pl/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://sipww.pl/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://sipww.pl/geonetwork/srv/api/site
+- type: sitemap
+  url: https://sipww.pl/sitemap.xml
+id: sipwwpl
+langs:
+- id: PL
+  name: Polish
+- id: EN
+  name: English
+link: https://sipww.pl/en/
+name: Spatial Information System of the Wielkopolska Voivodeship (SIPWW)
+owner:
+  link: https://www.umww.pl
+  location:
+    country:
+      id: PL
+      name: Poland
+    level: 30
+    subregion:
+      id: PL-30
+      name: Wielkopolskie
+  name: Urząd Marszałkowski Województwa Wielkopolskiego
+  type: Regional government
+properties:
+  has_doi: true
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://sipww.pl/en/privacy-policy/
+  rights_type: granular
+  tos_url: https://sipww.pl/en/regulations/
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- INSPIRE
+- geoportal
+- Wielkopolska
+- Greater Poland
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00022165

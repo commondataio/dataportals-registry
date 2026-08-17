@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Official database of the 2022 German census results, covering population,
+  housing, buildings, households, families, employment and education at all regional
+  levels from municipalities to the federal level. Tables can be configured and downloaded
+  free of charge; a GENESIS REST API is available after free registration.
+endpoints:
+- type: rest
+  url: https://ergebnisse.zensus2022.de/api/rest/2020/
+  version: '2020'
+- type: docs
+  url: https://ergebnisse.zensus2022.de/datenbank/online/docs/ZENSUS-Webservices_Einfuehrung.pdf
+id: ergebnissezensus2022de
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://ergebnisse.zensus2022.de
+name: Census Database of the 2022 Census
+owner:
+  link: https://www.destatis.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+  name: Federal Statistical Office of Germany
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: dl-de/by-2-0
+  license_name: Data licence Germany – attribution – version 2.0
+  license_url: https://www.govdata.de/dl-de/by-2-0
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- official
+- Germany
+- census
+- population
+- housing
+- demographics
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00022305

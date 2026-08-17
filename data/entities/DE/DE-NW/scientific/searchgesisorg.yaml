@@ -1,5 +1,6 @@
 access_mode:
 - open
+- restricted
 api: true
 api_status: active
 catalog_type: Scientific data repository
@@ -14,10 +15,12 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Searchable catalog providing access to social science datasets and documentation,
-  including ALLBUS, Eurobarometer, and other data collections. Allows download of
-  studies and associated materials such as questionnaires, methodology, and supporting
-  documentation.
+description: Data catalog of GESIS – Leibniz Institute for the Social Sciences. Provides
+  search and access to more than 7,000 social science studies for secondary analysis,
+  including national and international surveys such as ALLBUS, Eurobarometer, GLES,
+  and the GESIS Panel, together with documentation, variables, publications, and research
+  instruments. Dataset downloads are available from the catalog; some studies require
+  registration or restricted access.
 endpoints:
 - type: sitemap
   url: https://search.gesis.org/sitemap.xml
@@ -32,7 +35,7 @@ langs:
 - id: DE
   name: German
 link: https://search.gesis.org
-name: The German General Social Survey (ALLBUS)
+name: GESIS Search
 owner:
   link: https://www.gesis.org/en/institute
   location:
@@ -43,9 +46,10 @@ owner:
     subregion:
       id: DE-NW
       name: Nordrhein-Westfalen
-  name: Leibniz Institute for the Social Sciences
+  name: GESIS – Leibniz Institute for the Social Sciences
   type: Academy
 properties:
+  has_doi: true
   transferable_topics: true
 rights:
   license_id: null
@@ -60,6 +64,7 @@ software:
 status: active
 tags:
 - scientific
+- has_api
 - Social science
 - Research data
 - Catalogue
@@ -69,6 +74,8 @@ tags:
 - ALLBUS
 - Eurobarometer
 - Data archive
+- GESIS
+- CESSDA
 topics:
 - id: TECH
   name: Science and technology

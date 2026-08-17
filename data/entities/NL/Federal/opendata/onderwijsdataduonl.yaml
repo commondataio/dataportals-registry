@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Official open education data catalog of Dienst Uitvoering Onderwijs (DUO),
+  the Dutch Education Executive Agency. Publishes datasets on pupils, students, schools,
+  exams, funding, and institutional registrations (RIO), with CSV downloads and a
+  CKAN API.
+endpoints:
+- type: ckan
+  url: https://onderwijsdata.duo.nl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://onderwijsdata.duo.nl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://onderwijsdata.duo.nl/api/3/action/package_list
+  version: '3'
+id: onderwijsdataduonl
+langs:
+- id: NL
+  name: Dutch
+link: https://onderwijsdata.duo.nl
+name: DUO Open Onderwijsdata
+owner:
+  link: https://www.duo.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Dienst Uitvoering Onderwijs (DUO)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- education
+- open data
+- DUO
+- has_api
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00022248

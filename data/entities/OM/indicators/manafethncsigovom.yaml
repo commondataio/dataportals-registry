@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country:
+      id: OM
+      name: Oman
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: Official NCSI portal of Oman for international trade statistics (Manafeth).
+  Provides bilingual Arabic and English access to imports, exports, re-exports, trade
+  balances, HS-coded commodities, partner countries, and customs ports, with Excel
+  downloads, charts, maps, and a REST API.
+endpoints:
+- type: rest
+  url: https://manafeth.ncsi.gov.om/api/Main/GetStatistics
+- type: rest
+  url: https://manafeth.ncsi.gov.om/api/Main/GetStatisticsStartYear
+id: manafethncsigovom
+langs:
+- id: EN
+  name: English
+- id: AR
+  name: Arabic
+link: https://manafeth.ncsi.gov.om/
+name: Manafeth - Oman Statistical Portal for International Trade
+owner:
+  link: https://www.ncsi.gov.om
+  location:
+    country:
+      id: OM
+      name: Oman
+    level: 20
+  name: National Centre For Statistics & Information
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.ncsi.gov.om/en/Disclaimer
+  rights_type: global
+  tos_url: https://www.ncsi.gov.om/en/TermsAndConditions
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- foreign trade
+- trade statistics
+- customs
+- Oman
+- official statistics
+- has_api
+topics:
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00022413

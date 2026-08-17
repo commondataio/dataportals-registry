@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Public catalogue of health and life sciences research datasets in the
+  Netherlands, operated by Health-RI. It publishes HealthDCAT-AP metadata so researchers
+  can find and request data; the data themselves remain with the holders.
+endpoints:
+- type: ckan
+  url: https://ckan.healthdata.nl/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://ckan.healthdata.nl/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://ckan.healthdata.nl/api/3/action/package_list
+  version: '3'
+- type: dcat:ttl
+  url: https://ckan.healthdata.nl/catalog.ttl
+- type: dcat:xml
+  url: https://ckan.healthdata.nl/catalog.xml
+- type: dcat:jsonld
+  url: https://ckan.healthdata.nl/catalog.jsonld
+id: catalogushealthdatanl
+langs:
+- id: NL
+  name: Dutch
+- id: EN
+  name: English
+link: https://catalogus.healthdata.nl/nl
+name: National Health Data Catalogue
+owner:
+  link: https://www.health-ri.nl
+  location:
+    country:
+      id: NL
+      name: Netherlands
+    level: 20
+  name: Health-RI
+  type: Other
+properties:
+  has_doi: false
+  is_national: true
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- health
+- research data
+- FAIR
+- Health-RI
+- has_api
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00022250

@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+    macroregion:
+      id: '145'
+      name: Western Asia
+description: ArcGIS REST API endpoint providing INSPIRE spatial data services from
+  the Department of Lands and Surveys, Ministry of Interior of Cyprus
+endpoints:
+- type: arcgis:rest:info
+  url: https://eservices.dls.moi.gov.cy/inspire/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://eservices.dls.moi.gov.cy/inspire/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://eservices.dls.moi.gov.cy/inspire/services?wsdl
+- type: arcgis:sitemap
+  url: https://eservices.dls.moi.gov.cy/inspire/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://eservices.dls.moi.gov.cy/inspire/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://eservices.dls.moi.gov.cy/inspire/rest/services?f=kmz
+id: eservicesdlsmoigovcyinspire
+langs:
+- id: EL
+  name: Greek
+link: https://eservices.dls.moi.gov.cy/inspire/rest/services
+name: Cyprus Department of Lands and Surveys INSPIRE REST Services
+owner:
+  link: https://www.gov.cy/moi/en/
+  location:
+    country:
+      id: CY
+      name: Cyprus
+    level: 20
+  name: Ministry of Interior, Cyprus
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geo
+- INSPIRE
+- cadastre
+- ArcGIS REST
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00022363

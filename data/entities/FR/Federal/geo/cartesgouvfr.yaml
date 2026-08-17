@@ -1,0 +1,119 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Official French public mapping portal operated by IGN. Successor to Géoportail,
+  it provides national maps and geographic data through the Géoplateforme, with visualization,
+  metadata search, download, and OGC services.
+endpoints:
+- type: csw202
+  url: https://data.geopf.fr/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: wms130
+  url: https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://data.geopf.fr/wms-v/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wmts100
+  url: https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: 1.0.0
+- type: wfs200
+  url: https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+  version: 2.0.0
+- type: atom
+  url: https://data.geopf.fr/telechargement/capabilities
+- type: sitemap
+  url: https://cartes.gouv.fr/sitemap.xml
+id: cartesgouvfr
+identifiers:
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q137712821
+  value: Q137712821
+langs:
+- id: FR
+  name: French
+link: https://cartes.gouv.fr
+name: cartes.gouv.fr
+owner:
+  link: https://www.ign.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 20
+  name: Institut national de l'information géographique et forestière (IGN)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://cartes.gouv.fr/donnees-personnelles/
+  rights_type: granular
+  tos_url: https://cartes.gouv.fr/cgu/
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- government
+- has_api
+- maps
+- IGN
+- France
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00022364

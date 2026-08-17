@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Scientific data repository
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: SILO is Uruguay's national portal for open-access science and technology
+  digital repositories. It aggregates research and development outputs from member
+  institutional repositories, promotes visibility of national scientific production,
+  and provides records to regional and global aggregators through common standards.
+  SILO is an initiative of the Agencia Nacional de Investigación e Innovación (ANII)
+  and is Uruguay's node in LA Referencia.
+endpoints:
+- type: vufind:api
+  url: https://silo.uy/vufind/api/v1/search
+  version: '1'
+- type: openapi
+  url: https://silo.uy/vufind/api?openapi
+  version: '3.0'
+- type: opensearch
+  url: https://silo.uy/vufind/Search/OpenSearch?method=describe
+id: silouy
+langs:
+- id: ES
+  name: Spanish
+link: https://silo.uy/vufind/
+name: SILO. Sistema nacional de repositorios digitales
+owner:
+  link: https://www.anii.org.uy
+  location:
+    country:
+      id: UY
+      name: Uruguay
+    level: 20
+  name: Agencia Nacional de Investigación e Innovación
+  type: Central government
+properties:
+  has_doi: true
+  is_national: true
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: vufind
+  name: VuFind
+status: active
+tags:
+- scientific
+- has_api
+- research
+- open access
+- digital repositories
+- publications
+topics:
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+uid: cdi00022141

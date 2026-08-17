@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: RS-VO
+      name: Vojvodina
+description: Geographic information system of water management in Vojvodina, providing
+  spatial data on water resources and water management infrastructure such as canal
+  networks, pumping stations, locks, and weirs.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.vodevojvodine.com/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.vodevojvodine.com/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.vodevojvodine.com/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.vodevojvodine.com/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.vodevojvodine.com/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://gis.vodevojvodine.com/server/rest/services?f=kmz
+- type: arcgis:portals:self
+  url: https://gis.vodevojvodine.com/portal/sharing/rest/portals/self?f=pjson
+id: gisvodevojvodinecom
+langs:
+- id: SR
+  name: Serbian
+link: https://gis.vodevojvodine.com/server/rest/services
+name: GIS Vode Vojvodine
+owner:
+  link: https://www.vodevojvodine.com
+  location:
+    country:
+      id: RS
+      name: Serbia
+    level: 30
+    subregion:
+      id: RS-VO
+      name: Vojvodina
+  name: JVP Vode Vojvodine
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- water
+- canals
+- irrigation
+- Vojvodina
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00022281

@@ -1,0 +1,118 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-NOR
+      name: Normandie
+description: Regional open data platform of Normandy, managed by Région Normandie
+  with support from the French State, hosting and sharing public datasets from regional
+  and local public bodies.
+endpoints:
+- type: d4c:datasets
+  url: https://www.datanormandie.fr/d4c/api/datasets/2.0/list
+  version: '2.0'
+- type: d4c:search
+  url: https://www.datanormandie.fr/d4c/api/datasets/2.0/search
+  version: '2.0'
+- type: ckan
+  url: https://prd.ckan-normandie.data4citizen.com/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://prd.ckan-normandie.data4citizen.com/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://prd.ckan-normandie.data4citizen.com/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://prd.ckan-normandie.data4citizen.com/catalog.n3
+- type: dcat:ttl
+  url: https://prd.ckan-normandie.data4citizen.com/catalog.ttl
+- type: dcat:xml
+  url: https://prd.ckan-normandie.data4citizen.com/catalog.xml
+- type: dcat:jsonld
+  url: https://prd.ckan-normandie.data4citizen.com/catalog.jsonld
+id: wwwdatanormandiefr
+langs:
+- id: FR
+  name: French
+link: https://www.datanormandie.fr
+name: DataNormandie
+owner:
+  link: https://www.normandie.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-NOR
+      name: Normandie
+  name: Région Normandie
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.datanormandie.fr/mentions_légales
+  rights_type: granular
+  tos_url: https://www.datanormandie.fr/mentions_légales
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- normandy
+- france
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00022361

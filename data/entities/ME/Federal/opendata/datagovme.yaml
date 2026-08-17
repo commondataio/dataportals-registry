@@ -14,25 +14,44 @@ coverage:
     macroregion:
       id: 039
       name: Southern Europe
-description: National Open Data Portal of Montenegro. This open data portal. managed
-  by Government of Montenegro. provides access to datasets and resources.
+description: National open data portal of Montenegro. Central access point for public-sector
+  datasets in open, machine-readable formats, operated by the Ministry of Public Administration.
 endpoints:
+- type: ckan
+  url: https://data.gov.me/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.me/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.me/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.gov.me/catalog.n3
+- type: dcat:ttl
+  url: https://data.gov.me/catalog.ttl
+- type: dcat:xml
+  url: https://data.gov.me/catalog.xml
+- type: dcat:jsonld
+  url: https://data.gov.me/catalog.jsonld
 - type: sitemap
   url: https://data.gov.me/sitemap.xml
 id: datagovme
 langs:
 - id: SR
   name: Serbian
+- id: EN
+  name: English
 link: https://data.gov.me
-name: Open Data Montenegro
+name: Portal otvorenih podataka
 owner:
-  link: https://www.gov.me/en
+  link: https://www.gov.me/mju
   location:
     country:
       id: ME
       name: Montenegro
     level: 20
-  name: Government of Montenegro
+  name: Ministry of Public Administration
   type: Central government
 properties:
   has_doi: false
@@ -42,55 +61,64 @@ rights:
   license_name: null
   license_url: null
   privacy_policy_url: null
-  rights_type: unknown
-  tos_url: null
+  rights_type: granular
+  tos_url: https://data.gov.me/about
 software:
-  id: custom
-  name: Custom software
+  id: ckan
+  name: CKAN
 status: active
 tags:
 - government
+- has_api
 - open data
-- public
-- CKAN
+- Montenegro
 topics:
-- id: REGI
-  name: Regions and cities
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
   type: eudatatheme
 - id: EDUC
   name: Education, culture and sport
   type: eudatatheme
-- id: TECH
-  name: Science and technology
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
-  type: eudatatheme
-- id: ECON
-  name: Economy and finance
+- id: TRAN
+  name: Transport
   type: eudatatheme
 - id: ENVI
   name: Environment
   type: eudatatheme
-- id: TRAN
-  name: Transport
+- id: ENER
+  name: Energy
   type: eudatatheme
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
-- id: Health
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: HEAL
   name: Health
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: JUST
+  name: Justice, legal system and public safety
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Society
+  name: Society
   type: iso19115
 - id: Environment
   name: Environment
   type: iso19115
-- id: Economy
-  name: Economy
+- id: Health
+  name: Health
   type: iso19115
 - id: Transportation
   name: Transportation
-  type: iso19115
-- id: Society
-  name: Society
   type: iso19115
 uid: cdi00001112

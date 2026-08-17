@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+    macroregion:
+      id: '035'
+      name: South-eastern Asia
+description: ArcGIS REST services of the Mines and Geosciences Bureau (MGB), Department
+  of Environment and Natural Resources, providing geospatial data on mining tenements,
+  geology, geohazards, hydrogeology, and coastal hazards of the Philippines.
+endpoints:
+- type: arcgis:portals:self
+  url: https://controlmap.mgb.gov.ph/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://controlmap.mgb.gov.ph/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://controlmap.mgb.gov.ph/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://controlmap.mgb.gov.ph/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://controlmap.mgb.gov.ph/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://controlmap.mgb.gov.ph/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://controlmap.mgb.gov.ph/arcgis/rest/services?f=kmz
+id: controlmapmgbgovph
+langs:
+- id: EN
+  name: English
+link: https://controlmap.mgb.gov.ph/arcgis/rest/services
+name: Mines and Geosciences Bureau (MGB) Control Map
+owner:
+  link: https://mgb.gov.ph
+  location:
+    country:
+      id: PH
+      name: Philippines
+    level: 20
+  name: Mines and Geosciences Bureau
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- gis
+- geology
+- mining
+- geohazard
+- arcgis
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00022070

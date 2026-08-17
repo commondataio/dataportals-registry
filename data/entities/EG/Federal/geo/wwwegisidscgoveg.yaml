@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+    macroregion:
+      id: '015'
+      name: Northern Africa
+description: ArcGIS Server REST services directory for Egypt's Information and Decision
+  Support Center (IDSC) EGIS platform, publishing national geospatial layers including
+  governorate indicators, health and banking facilities, and related government GIS
+  datasets.
+endpoints:
+- type: arcgis:portals:self
+  url: https://www.egis.idsc.gov.eg/portal/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://www.egis.idsc.gov.eg/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.egis.idsc.gov.eg/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://www.egis.idsc.gov.eg/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://www.egis.idsc.gov.eg/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.egis.idsc.gov.eg/server/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.egis.idsc.gov.eg/server/rest/services?f=kmz
+id: wwwegisidscgoveg
+langs:
+- id: AR
+  name: Arabic
+link: https://www.egis.idsc.gov.eg/server/rest/services
+name: IDSC Egypt EGIS ArcGIS REST Services
+owner:
+  link: https://idsc.gov.eg
+  location:
+    country:
+      id: EG
+      name: Egypt
+    level: 20
+  name: Council of Ministers Center for Information and Decision Support
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- ArcGIS
+- REST
+- GIS
+- government
+- Egypt
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+uid: cdi00022152

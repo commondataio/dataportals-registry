@@ -1,0 +1,106 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: CH-AG
+      name: Aargau
+description: Official Online Karten viewer of the Canton of Aargau Geoportal (AGIS),
+  providing browser access to cantonal geodata including thematic layers, parcel and
+  address search, measurement tools, and data download. Public map services are published
+  as WMS.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.ag.ch/geoportal/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://www.ag.ch/geoportal/rest/services?f=pjson
+- type: arcgis:sitemap
+  url: https://www.ag.ch/geoportal/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://www.ag.ch/geoportal/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://www.ag.ch/geoportal/rest/services?f=kmz
+- type: wms111
+  url: https://wms.geo.ag.ch/public/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://wms.geo.ag.ch/public/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: wwwagchgeoportalappsonlinekarten
+langs:
+- id: DE
+  name: German
+link: https://www.ag.ch/geoportal/apps/onlinekarten/
+name: Online Karten Kanton Aargau
+owner:
+  link: https://www.ag.ch
+  location:
+    country:
+      id: CH
+      name: Switzerland
+    level: 30
+    subregion:
+      id: CH-AG
+      name: Aargau
+  name: Kanton Aargau
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- GIS
+- geodata
+- maps
+- AGIS
+- Aargau
+- geospatial
+- government
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00022268

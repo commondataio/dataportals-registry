@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: National Data Portal of Greece. Central access point for public-sector
+  datasets and data services in open, machine-readable formats, operated by the Ministry
+  of Digital Governance.
+endpoints:
+- type: ckan
+  url: https://data.gov.gr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.gov.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.gov.gr/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.gov.gr/catalog.n3
+- type: dcat:ttl
+  url: https://data.gov.gr/catalog.ttl
+- type: dcat:xml
+  url: https://data.gov.gr/catalog.xml
+- type: dcat:jsonld
+  url: https://data.gov.gr/catalog.jsonld
+id: datagovgr
+langs:
+- id: EL
+  name: Greek
+- id: EN
+  name: English
+link: https://data.gov.gr
+name: Greece National Data Portal
+owner:
+  link: https://mindigital.gr
+  location:
+    country:
+      id: GR
+      name: Greece
+    level: 20
+  name: Ministry of Digital Governance
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://data.gov.gr/pages/privacy
+  rights_type: granular
+  tos_url: https://data.gov.gr/pages/terms-of-use
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Greece
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00022173

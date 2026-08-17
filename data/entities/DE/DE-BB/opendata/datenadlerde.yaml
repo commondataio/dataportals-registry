@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+description: Official open data portal of the State of Brandenburg (DatenAdler), providing
+  open datasets from state and municipal administrations, with search, repository,
+  and SPARQL APIs.
+endpoints:
+- type: ckan:package-search
+  url: https://piveau.offene.daten-brandenburg.de/api/hub/search/ckan/package_search
+  version: '3'
+- type: sparql
+  url: https://piveau.offene.daten-brandenburg.de/api/sparql
+- type: sparql:web
+  url: https://piveau.offene.daten-brandenburg.de/api/sparql
+id: datenadlerde
+langs:
+- id: DE
+  name: German
+link: https://datenadler.de
+name: DatenAdler
+owner:
+  link: https://mdjd.brandenburg.de
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+  name: Ministerium der Justiz und für Digitalisierung des Landes Brandenburg
+  type: Regional government
+properties:
+  transferable_location: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://datenadler.de/datenschutz
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- open data
+- Brandenburg
+- government data
+- transparency
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00022302

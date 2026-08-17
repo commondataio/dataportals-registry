@@ -1,0 +1,105 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-NC
+      name: Nafarroako Foru Komunitatea*
+description: Infraestructura de Datos Espaciales de Navarra (IDENA), the spatial data
+  infrastructure of the Government of Navarre. Built on free software, it provides
+  a GeoNetwork metadata catalog, OGC interoperable services (WMS, WMTS, WFS, WCS,
+  CSW, OGC API Features), a map viewer (API SITNA), and data downloads under Creative
+  Commons Attribution 4.0.
+endpoints:
+- type: csw202
+  url: https://idena.navarra.es/catalogo/gn/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://idena.navarra.es/catalogo/gn/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://idena.navarra.es/catalogo/gn/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+id: geoportalnavarraesesidena
+langs:
+- id: ES
+  name: Spanish
+- id: EU
+  name: Basque
+- id: EN
+  name: English
+link: https://geoportal.navarra.es/es/idena
+name: IDENA - Infraestructura de Datos Espaciales de Navarra
+owner:
+  link: https://www.navarra.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-NC
+      name: Nafarroako Foru Komunitatea*
+  name: Gobierno de Navarra
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- geonetwork
+- geoportal
+- geospatial
+- government
+- has_api
+- INSPIRE
+- Navarra
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00022199

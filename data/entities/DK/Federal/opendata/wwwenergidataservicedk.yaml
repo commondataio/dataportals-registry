@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Free open data portal from Energinet with electricity and gas system
+  datasets, including production, consumption, prices, balancing markets, CO2 emissions,
+  and gas flows. Data can be searched, downloaded as CSV, JSON, or Excel, and retrieved
+  through a public REST API.
+endpoints:
+- type: customapi
+  url: https://api.energidataservice.dk/dataset
+- type: customapi
+  url: https://api.energidataservice.dk/meta/dataset
+- type: docs
+  url: https://www.energidataservice.dk/guides/api-guides
+- type: openapi
+  url: https://electricitymarketservice.energinet.dk/swagger/v1/swagger.json
+  version: '3.0'
+id: wwwenergidataservicedk
+langs:
+- id: DA
+  name: Danish
+- id: EN
+  name: English
+link: https://www.energidataservice.dk
+name: Energi Data Service
+owner:
+  link: https://www.energinet.dk
+  location:
+    country:
+      id: DK
+      name: Denmark
+    level: 20
+  name: Energinet
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: CC-BY-4.0
+  license_name: Creative Commons Attribution 4.0 International
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  privacy_policy_url: https://en.energinet.dk/about-us/personal-data/privacy-policy/
+  rights_type: global
+  tos_url: https://www.energidataservice.dk/terms-and-conditions
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- government
+- has_api
+- energy
+- electricity
+- gas
+- Denmark
+- open data
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00022104

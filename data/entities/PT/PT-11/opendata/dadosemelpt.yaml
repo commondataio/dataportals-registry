@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-11
+      name: Lisboa
+description: Open data portal of EMEL (Empresa Municipal de Mobilidade e Estacionamento
+  de Lisboa). Provides datasets on parking, cycling, traffic, electric charging, and
+  pedestrian mobility in Lisbon.
+endpoints:
+- type: ckan
+  url: https://dados.emel.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.emel.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.emel.pt/api/3/action/package_list
+  version: '3'
+id: dadosemelpt
+langs:
+- id: PT
+  name: Portugal
+link: https://dados.emel.pt
+name: EMEL Data Platform
+owner:
+  link: https://www.emel.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-11
+      name: Lisboa
+  name: EMEL - Empresa Municipal de Mobilidade e Estacionamento de Lisboa
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- cycling
+- parking
+- bike-sharing
+- mobility
+- transport
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00022211

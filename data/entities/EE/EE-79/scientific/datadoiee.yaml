@@ -18,26 +18,14 @@ coverage:
     subregion:
       id: EE-79
       name: Tartumaa
-description: DataDOI is an open access repository for publishing research data
+description: DATADOI is a multidisciplinary open repository for sharing and publishing
+  research data.
 endpoints:
-- type: dspace:items
-  url: https://datadoi.ee/rest/items
-  version: '6'
+- type: dataverseapi
+  url: https://datadoi.ee/api/search
 - type: oaipmh20
-  url: https://datadoi.ee/oai/request?verb=Identify
+  url: https://datadoi.ee/oai?verb=Identify
   version: '2.0'
-- type: rss
-  url: https://datadoi.ee/feed/rss_2.0/site
-  version: '2.0'
-- type: atom
-  url: https://datadoi.ee/feed/atom_1.0/site
-  version: '1.0'
-- type: sitemap
-  url: https://datadoi.ee/sitemap
-- type: sitemap
-  url: https://datadoi.ee/htmlmap
-- type: opensearch
-  url: https://datadoi.ee:443/open-search/description.xml
 id: datadoiee
 identifiers:
 - id: re3data
@@ -79,12 +67,14 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: dspace
-  name: DSpace
+  id: dataverse
+  name: Dataverse
 status: active
 tags:
 - scientific
 - has_api
+- Dataverse
+- research data
 topics:
 - id: TECH
   name: Science and technology

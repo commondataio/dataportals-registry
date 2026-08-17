@@ -1,0 +1,115 @@
+access_mode:
+- open
+- restricted
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Official geoportal of the State Geodetic Administration of Croatia (DGU),
+  providing map viewing and OGC services for official state maps, orthophotos, cadastre,
+  spatial units, and INSPIRE datasets.
+endpoints:
+- type: wms111
+  url: https://geoportal.dgu.hr/services/hok/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.dgu.hr/services/hok/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://geoportal.dgu.hr/services/tk/wms?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://geoportal.dgu.hr/services/tk/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://geoportal.dgu.hr/services/inspire/orthophoto_2024/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://geoportal.dgu.hr/services/hok/wfs?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: atom
+  url: https://geoportal.dgu.hr/services/atom/xml
+- type: opensearch
+  url: https://geoportal.dgu.hr/services/atom/opensearchservice.xml
+  version: '1.0'
+id: geoportaldguhr
+langs:
+- id: HR
+  name: Croatian
+- id: EN
+  name: English
+link: https://geoportal.dgu.hr/
+name: Geoportal DGU
+owner:
+  link: https://dgu.gov.hr/
+  location:
+    country:
+      id: HR
+      name: Croatia
+    level: 20
+  name: State Geodetic Administration of Croatia
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- geospatial
+- geoportal
+- INSPIRE
+- cadastre
+- orthophoto
+- topographic maps
+- Croatia
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00022369

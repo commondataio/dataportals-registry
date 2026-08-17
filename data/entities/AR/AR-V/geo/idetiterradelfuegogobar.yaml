@@ -1,0 +1,117 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: AR-V
+      name: Tierra del Fuego
+description: Provincial spatial data infrastructure (IDETDF) of Tierra del Fuego,
+  Antarctica and South Atlantic Islands. Provides a map viewer, downloadable maps,
+  a geographic object catalog, and OGC geoservices (WMS, WFS, WCS) for public and
+  private use of geospatial information.
+endpoints:
+- type: rest
+  url: https://ide.tierradelfuego.gob.ar/wp-json/
+  version: '2.0'
+- type: sitemap
+  url: https://ide.tierradelfuego.gob.ar/wp-sitemap.xml
+- type: rss
+  url: https://ide.tierradelfuego.gob.ar/feed/
+- type: geonode:datasets
+  url: https://tiles.tierradelfuego.gob.ar/api/v2/datasets/
+- type: csw202
+  url: https://tiles.tierradelfuego.gob.ar/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: wms111
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs201
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wps100
+  url: https://tiles.tierradelfuego.gob.ar/geoserver/ows?service=WPS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: idetiterradelfuegogobar
+langs:
+- id: ES
+  name: Spanish
+link: https://ide.tierradelfuego.gob.ar/
+name: Infraestructura de Datos Espaciales de Tierra del Fuego (IDETDF)
+owner:
+  link: https://www.tierradelfuego.gob.ar
+  location:
+    country:
+      id: AR
+      name: Argentina
+    level: 30
+    subregion:
+      id: AR-V
+      name: Tierra del Fuego
+  name: Gobierno de Tierra del Fuego, Antártida e Islas del Atlántico Sur
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- geospatial
+- geoportal
+- Argentina
+- Tierra del Fuego
+- WMS
+- WFS
+- has_api
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00022427
