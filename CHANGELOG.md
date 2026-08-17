@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Quality regression baseline now matches current `analyze-quality` output after the v1.11.0 catalog additions.
 - Pin `pyorc<0.11` on Python 3.9 so CI can install `iterabledata` without building dropped 3.9 wheels.
+- Make `tests/test_schema_parity.py` collect on Python 3.9 (`from __future__ import annotations`).
 - Allow CKAN, WordPress, OpenDataSoft, and Drupal to use additional catalog types they actually host (geoportals, scientific, indicators).
 
 ## [1.11.0] - 2026-08-17
