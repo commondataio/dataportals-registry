@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.11.0] - 2026-08-17
+
+**GitHub Release**: [v1.11.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.11.0) - Published August 17, 2026
+
 ### Added
 - **444 net new catalog entries** (450 YAML files added; 5 existing records recategorized or replaced); registry source now **14,972** entities (1 scheduled).
 - **64 THREDDS** scientific catalogs, including **48 ESGF** climate-data nodes (DKRZ, NASA NCCS, LLNL, CMCC, DIAS Japan, CEDA, and others).
@@ -18,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Recategorized or replaced five existing catalogs: Flanders VMM portal (`opendatawsevlaanderenbe` → `opendatawewisvlaanderenbe`), Olomouc geoportal (`EU/CZ-71` → `CZ/CZ-71`), Bordeaux Métropole (`opendatabordeauxmetropolefr` → `datahubbordeauxmetropolefr`), Incheon iMap (`KR-11` → `KR-28`), and Muntinlupa GIS (`muntinlupacitywebgis1com` → `cgismuntinlupacitygovph`).
 - Refreshed metadata for selected Brazilian, Estonian, Italian, Korean, Liechtenstein, Maltese, Montenegrin, and Portuguese catalogs (URL/name updates; some status and software corrections).
+- Regenerated dataset exports: **14,972** catalog records (entities); 136 software definitions; 1 scheduled.
 
 ## [1.10.0] - 2026-08-16
 
