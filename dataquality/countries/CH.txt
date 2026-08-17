@@ -1,11 +1,62 @@
 DATA QUALITY REPORT - COUNTRY: CH
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: CH
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 4
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: CH/Federal/opendata/datasnfch.yaml
+Record ID: datasnfch
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[DUPLICATE_COVERAGE]
+Count: 1
+Priority: LOW
+
+File: CH/CH-NW/geo/wwwgisdatench.yaml
+Record ID: wwwgisdatench
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {'location': {'country': {'id': 'CH', 'name': 'Switzerland'}, 'level': 30, 'macroregion': {'id': '155', 'name': 'Western Europe'}, 'subregion': {'id': 'CH-OW', 'name': 'Obwalden'}}}
+Suggested Action: Remove duplicate coverage entry
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: CH/Federal/geo/geodienstech.yaml
+Record ID: geodienstech
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodienste.ch
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: CH/Federal/geo/geodienstech.yaml
+Record ID: geodienstech
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodienste.ch
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: CH/Federal/opendata/datasnfch.yaml
+Record ID: datasnfch
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://data.snf.ch/about/open-data-policy', 'privacy_policy_url': None, 'rights_type': 'global', 'tos_url': 'https://data.snf.ch/about/open-data-policy'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
 Count: 1
@@ -21,4 +72,8 @@ Suggested Action: Add at least one endpoint because software.id='mwmb' is marked
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+DUPLICATE_COVERAGE: 1 issue
+PLACEHOLDER_TITLE: 2 issues
+RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue

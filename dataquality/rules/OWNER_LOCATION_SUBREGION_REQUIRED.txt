@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: OWNER_LOCATION_SUBREGION_REQUIRED
+================================================================================
+Generated: 2026-08-17 20:03:50
+Issue Type: OWNER_LOCATION_SUBREGION_REQUIRED
+Priority: IMPORTANT
+Total Issues Found: 1
+
+Rule: Verifies: (1) Regional/Local government owners have owner.location.level=30 and owner.location.subregion with id and name; (2) When owner has subregion, the file must be in the matching subregion directory (not Federal); (3) When file is in a subregion directory (e.g. US-TX/), owner.location.subregion must match that directory.
+
+=== SUMMARY BY COUNTRY ===
+
+TR: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+datamarmaragovtr: 1 issue
+
+=== ISSUES ===
+
+File: TR/Federal/opendata/datamarmaragovtr.yaml
+Record ID: datamarmaragovtr
+Country: TR
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {"country": {"id": "TR", "name": "Turkey"}, "level": 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.

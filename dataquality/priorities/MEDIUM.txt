@@ -1,10 +1,179 @@
 DATA QUALITY REPORT - PRIORITY: MEDIUM
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Priority Level: MEDIUM
-Total Issues Found: 148
+Total Issues Found: 171
 
 === ISSUES BY TYPE ===
+
+[COUNTRY_NAME_ID_MISMATCH]
+Count: 4
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Country: CG
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CG', 'name': 'Congo', 'expected': 'Congo (the) \u200a [h]'}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Country: CG
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CG', 'name': 'Congo', 'expected': 'Congo (the) \u200a [h]'}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Country: CF
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Country: CF
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+[PLACEHOLDER_TITLE]
+Count: 12
+
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Record ID: wwwpensionstatbe
+Country: BE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PensionStat.be
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Record ID: wwwpensionstatbe
+Country: BE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PensionStat.be
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: NO/Federal/microdata/wwwmicrodatano.yaml
+Record ID: wwwmicrodatano
+Country: NO
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microdata.no
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: NO/Federal/microdata/wwwmicrodatano.yaml
+Record ID: wwwmicrodatano
+Country: NO
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: microdata.no
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: CH/Federal/geo/geodienstech.yaml
+Record ID: geodienstech
+Country: CH
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodienste.ch
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: CH/Federal/geo/geodienstech.yaml
+Record ID: geodienstech
+Country: CH
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: geodienste.ch
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: DE/DE-NW/geo/wwwgeoportalnrw.yaml
+Record ID: wwwgeoportalnrw
+Country: DE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: GEOportal.NRW
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: DE/DE-NW/geo/wwwgeoportalnrw.yaml
+Record ID: wwwgeoportalnrw
+Country: DE
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: GEOportal.NRW
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FI/Federal/scientific/researchfi.yaml
+Record ID: researchfi
+Country: FI
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Research.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/scientific/researchfi.yaml
+Record ID: researchfi
+Country: FI
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Research.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: FR/Federal/geo/cartesgouvfr.yaml
+Record ID: cartesgouvfr
+Country: FR
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartes.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/geo/cartesgouvfr.yaml
+Record ID: cartesgouvfr
+Country: FR
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartes.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+[RIGHTS_INCOMPLETE]
+Count: 4
+
+File: CH/Federal/opendata/datasnfch.yaml
+Record ID: datasnfch
+Country: CH
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://data.snf.ch/about/open-data-policy', 'privacy_policy_url': None, 'rights_type': 'global', 'tos_url': 'https://data.snf.ch/about/open-data-policy'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: IT/Federal/opendata/meteohubagenziaitaliameteoit.yaml
+Record ID: meteohubagenziaitaliameteoit
+Country: IT
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://meteohub.agenziaitaliameteo.it/app/license', 'privacy_policy_url': 'https://meteohub.agenziaitaliameteo.it/app/public/privacy', 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: KR/Federal/opendata/openassemblygokr.yaml
+Record ID: openassemblygokr
+Country: KR
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://open.assembly.go.kr/portal/policy/copyRightPage.do', 'privacy_policy_url': 'https://open.assembly.go.kr/portal/policy/privatePolicyPage.do', 'rights_type': 'granular', 'tos_url': 'https://open.assembly.go.kr/portal/policy/userAgreementPage.do'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: BG/BG-22/opendata/sofiaplanbg.yaml
+Record ID: sofiaplanbg
+Country: BG
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://sofiaplan.bg/en/right-of-use-for-published-materials/', 'privacy_policy_url': 'https://sofiaplan.bg/en/personal-data-protection-policy/', 'rights_type': 'global', 'tos_url': 'https://sofiaplan.bg/en/right-of-use-for-published-materials/'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS]
 Count: 1
@@ -1129,7 +1298,7 @@ Current Value: {'software_id': 'pure', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='pure' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
-Count: 6
+Count: 7
 
 File: NO/Federal/indicators/statistikkbankenfiskeridirno.yaml
 Record ID: statistikkbankenfiskeridirno
@@ -1150,6 +1319,14 @@ Suggested Action: Add at least one endpoint because software.id='pxweb' is marke
 File: TW/TW-TPE/indicators/dotstatgovtaipei.yaml
 Record ID: dotstatgovtaipei
 Country: TW
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
+Field: endpoints
+Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
+
+File: PH/Federal/indicators/wwwbspgovph.yaml
+Record ID: wwwbspgovph
+Country: PH
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB
 Field: endpoints
 Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -1304,6 +1481,17 @@ Field: endpoints
 Current Value: {'software_id': 'supermapiserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR]
+Count: 1
+
+File: ZA/Federal/indicators/superwebstatssagovza.yaml
+Record ID: superwebstatssagovza
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR
+Field: endpoints
+Current Value: {'software_id': 'superstar', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='superstar' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SURVEYSOLUTIONS]
 Count: 1
 
@@ -1337,9 +1525,23 @@ Field: endpoints
 Current Value: {'software_id': 'vufind', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='vufind' is marked as API-capable in software definitions
 
+[TAG_HYGIENE]
+Count: 1
+
+File: AT/Federal/scientific/datarepositorynhmat.yaml
+Record ID: datarepositorynhmat
+Country: AT
+Issue: TAG_HYGIENE
+Field: tags[7]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+COUNTRY_NAME_ID_MISMATCH: 4 issues
+PLACEHOLDER_TITLE: 12 issues
+RIGHTS_INCOMPLETE: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 4 issues
@@ -1378,7 +1580,7 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 8 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 6 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 7 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SMW: 1 issue
@@ -1386,37 +1588,42 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SURVEYSOLUTIONS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TRIPLYDB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND: 1 issue
+TAG_HYGIENE: 1 issue
 
 === SUMMARY BY COUNTRY ===
 
 AR: 3 issues
+AT: 1 issue
 AU: 2 issues
 BD: 1 issue
-BE: 2 issues
-BG: 1 issue
+BE: 4 issues
+BG: 2 issues
 BN: 1 issue
 BR: 2 issues
 CA: 1 issue
 CC: 1 issue
-CH: 1 issue
+CF: 2 issues
+CG: 2 issues
+CH: 4 issues
 CL: 2 issues
 CR: 3 issues
-DE: 2 issues
+DE: 4 issues
 DK: 1 issue
 ES: 7 issues
-FI: 3 issues
-FR: 6 issues
+FI: 5 issues
+FR: 8 issues
 GB: 6 issues
 GR: 2 issues
 HR: 3 issues
 ID: 1 issue
 IN: 1 issue
-IT: 2 issues
+IT: 3 issues
 KE: 1 issue
-KR: 1 issue
+KR: 2 issues
 KZ: 1 issue
 LS: 1 issue
 MK: 1 issue
@@ -1426,8 +1633,8 @@ MW: 1 issue
 MX: 5 issues
 NE: 1 issue
 NL: 8 issues
-NO: 4 issues
-PH: 1 issue
+NO: 6 issues
+PH: 2 issues
 PL: 1 issue
 PT: 4 issues
 RU: 14 issues
@@ -1443,4 +1650,4 @@ UG: 1 issue
 US: 18 issues
 VN: 1 issue
 World: 15 issues
-ZA: 2 issues
+ZA: 3 issues

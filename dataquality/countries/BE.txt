@@ -1,11 +1,40 @@
 DATA QUALITY REPORT - COUNTRY: BE
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: BE
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 3
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Record ID: wwwpensionstatbe
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Record ID: wwwpensionstatbe
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PensionStat.be
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Record ID: wwwpensionstatbe
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PensionStat.be
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -32,5 +61,17 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: wwwpensionstatbe
+File: BE/Federal/indicators/wwwpensionstatbe.yaml
+Issue Count: 3
+Issues:
+  - API_STATUS_MISMATCH: api
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name

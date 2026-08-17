@@ -1,0 +1,52 @@
+DATA QUALITY REPORT - RULE: COUNTRY_NAME_ID_MISMATCH
+================================================================================
+Generated: 2026-08-17 20:03:50
+Issue Type: COUNTRY_NAME_ID_MISMATCH
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: When country has both id and name, the name must match the canonical name for that country code (e.g. id=US, name=United States).
+
+=== SUMMARY BY COUNTRY ===
+
+CF: 2 issues
+CG: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+rcongoopendataforafricaorg: 2 issues
+caropendataforafricaorg: 2 issues
+
+=== ISSUES ===
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Country: CG
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {"country_id": "CG", "name": "Congo", "expected": "Congo (the)   [h]"}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Country: CG
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {"country_id": "CG", "name": "Congo", "expected": "Congo (the)   [h]"}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Country: CF
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {"country_id": "CF", "name": "Central African Republic", "expected": "Central African Republic (the)"}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Country: CF
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {"country_id": "CF", "name": "Central African Republic", "expected": "Central African Republic (the)"}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.

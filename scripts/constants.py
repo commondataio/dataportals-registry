@@ -617,8 +617,13 @@ MAP_SOFTWARE_OWNER_CATALOG_TYPE = {
 # Primary catalog_type used when inferring type from software (e.g. add-single). Some
 # platforms are also valid under additional types; see MAP_SOFTWARE_ALLOWED_CATALOG_TYPES.
 MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
-    "drupal": frozenset({"Open data portal", "Geoportal"}),
+    "ckan": frozenset(
+        {"Open data portal", "Geoportal", "Scientific data repository"}
+    ),
+    "drupal": frozenset({"Open data portal", "Geoportal", "Indicators catalog"}),
+    "opendatasoft": frozenset({"Open data portal", "Geoportal"}),
     "publishmydata": frozenset({"Open data portal", "Metadata catalog"}),
+    "wordpress": frozenset({"Open data portal", "Geoportal"}),
 }
 
 CUSTOM_SOFTWARE_KEYS = [

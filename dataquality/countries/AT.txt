@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - COUNTRY: AT
+================================================================================
+Generated: 2026-08-17 20:03:50
+Country Code: AT
+Total Records with Issues: 2
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: AT/Federal/indicators/unidatagvat.yaml
+Record ID: unidatagvat
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[TAG_HYGIENE]
+Count: 1
+Priority: MEDIUM
+
+File: AT/Federal/scientific/datarepositorynhmat.yaml
+Record ID: datarepositorynhmat
+Issue: TAG_HYGIENE
+Field: tags[7]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 1 issue
+TAG_HYGIENE: 1 issue

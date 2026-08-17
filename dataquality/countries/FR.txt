@@ -1,11 +1,61 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: FR
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 11
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 4
+Priority: IMPORTANT
+
+File: HT/search/ayitistatsorg.yaml
+Record ID: ayitistatsorg
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: FR/Federal/opendata/datasenatfr.yaml
+Record ID: datasenatfr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: FR/Federal/opendata/dataassembleenationalefr.yaml
+Record ID: dataassembleenationalefr
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: FR/Federal/scientific/esg2umrcnrmfr.yaml
+Record ID: esg2umrcnrmfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: FR/Federal/geo/cartesgouvfr.yaml
+Record ID: cartesgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartes.gouv.fr
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FR/Federal/geo/cartesgouvfr.yaml
+Record ID: cartesgouvfr
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: cartes.gouv.fr
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -68,6 +118,8 @@ Suggested Action: Add at least one endpoint because software.id='mapproxy' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 4 issues
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 3 issues

@@ -1,0 +1,34 @@
+DATA QUALITY REPORT - RULE: DUPLICATE_COVERAGE
+================================================================================
+Generated: 2026-08-17 20:03:50
+Issue Type: DUPLICATE_COVERAGE
+Priority: LOW
+Total Issues Found: 2
+
+=== SUMMARY BY COUNTRY ===
+
+CH: 1 issue
+RO: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+wwwgisdatench: 1 issue
+wwwadizmbroobservator: 1 issue
+
+=== ISSUES ===
+
+File: CH/CH-NW/geo/wwwgisdatench.yaml
+Record ID: wwwgisdatench
+Country: CH
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {"location": {"country": {"id": "CH", "name": "Switzerland"}, "level": 30, "macroregion": {"id": "155", "name": "Western Europe"}, "subregion": {"id": "CH-OW", "name": "Obwalden"}}}
+Suggested Action: Remove duplicate coverage entry
+
+File: RO/RO-B/geo/wwwadizmbroobservator.yaml
+Record ID: wwwadizmbroobservator
+Country: RO
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {"location": {"country": {"id": "RO", "name": "Romania"}, "level": 30, "macroregion": {"id": "151", "name": "Eastern Europe"}, "subregion": {"id": "RO-IF", "name": "Ilfov"}}}
+Suggested Action: Remove duplicate coverage entry

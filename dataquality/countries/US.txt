@@ -1,11 +1,50 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: US
-Total Records with Issues: 18
-Total Issues Found: 18
+Total Records with Issues: 23
+Total Issues Found: 23
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 5
+Priority: IMPORTANT
+
+File: US/Federal/scientific/esgfdata1llnlgov.yaml
+Record ID: esgfdata1llnlgov
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/Federal/scientific/esgfanlgov.yaml
+Record ID: esgfanlgov
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/Federal/scientific/esgfdata2llnlgov.yaml
+Record ID: esgfdata2llnlgov
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/Federal/scientific/aims3llnlgov.yaml
+Record ID: aims3llnlgov
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/Federal/scientific/wwwnceinoaagovthreddsocean.yaml
+Record ID: wwwnceinoaagovthreddsocean
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -172,6 +211,7 @@ Suggested Action: Add at least one endpoint because software.id='socrata' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELSEVIERDIGITALCOMMONS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESRIGEO: 1 issue

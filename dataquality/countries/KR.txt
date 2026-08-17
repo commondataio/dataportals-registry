@@ -1,11 +1,100 @@
 DATA QUALITY REPORT - COUNTRY: KR
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: KR
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 12
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: KR/Federal/scientific/esgfnimscmip6apcc21org.yaml
+Record ID: esgfnimscmip6apcc21org
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: KR/Federal/scientific/distnmlabsnuackr.yaml
+Record ID: distnmlabsnuackr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: KR/Federal/scientific/polarispknuackr.yaml
+Record ID: polarispknuackr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 7
+Priority: IMPORTANT
+
+File: KR/KR-44/opendata/alldamchungnamgokr.yaml
+Record ID: alldamchungnamgokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-28/opendata/dataincheongokr.yaml
+Record ID: dataincheongokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datasongpaseoulkr.yaml
+Record ID: datasongpaseoulkr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-30/opendata/bigdatadaejeongokr.yaml
+Record ID: bigdatadaejeongokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/Federal/opendata/datamafragokr.yaml
+Record ID: datamafragokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/Federal/opendata/wwwfairdatagokr.yaml
+Record ID: wwwfairdatagokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-46/opendata/datajeonnamgokr.yaml
+Record ID: datajeonnamgokr
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: KR/Federal/opendata/openassemblygokr.yaml
+Record ID: openassemblygokr
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://open.assembly.go.kr/portal/policy/copyRightPage.do', 'privacy_policy_url': 'https://open.assembly.go.kr/portal/policy/privatePolicyPage.do', 'rights_type': 'granular', 'tos_url': 'https://open.assembly.go.kr/portal/policy/userAgreementPage.do'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER]
 Count: 1
@@ -21,4 +110,7 @@ Suggested Action: Add at least one endpoint because software.id='geoserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 3 issues
+MISSING_ENDPOINTS: 7 issues
+RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOSERVER: 1 issue

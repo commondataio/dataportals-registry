@@ -91,8 +91,13 @@ class TestConstants:
         """Multi-type software must list every allowed catalog_type pair used in QA."""
         assert "drupal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
         assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
+        assert "Indicators catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["drupal"]
         assert "publishmydata" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES
         assert "Metadata catalog" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["publishmydata"]
+        assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["ckan"]
+        assert "Scientific data repository" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["ckan"]
+        assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["opendatasoft"]
+        assert "Geoportal" in MAP_SOFTWARE_ALLOWED_CATALOG_TYPES["wordpress"]
 
     def test_custom_software_keys(self):
         """Test CUSTOM_SOFTWARE_KEYS list"""

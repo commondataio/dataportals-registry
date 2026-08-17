@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: CF
+================================================================================
+Generated: 2026-08-17 20:03:50
+Country Code: CF
+Total Records with Issues: 1
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[COUNTRY_NAME_ID_MISMATCH]
+Count: 2
+Priority: MEDIUM
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+File: CF/indicators/caropendataforafricaorg.yaml
+Record ID: caropendataforafricaorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+COUNTRY_NAME_ID_MISMATCH: 2 issues

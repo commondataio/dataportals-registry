@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: CG
+================================================================================
+Generated: 2026-08-17 20:03:50
+Country Code: CG
+Total Records with Issues: 1
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[COUNTRY_NAME_ID_MISMATCH]
+Count: 2
+Priority: MEDIUM
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CG', 'name': 'Congo', 'expected': 'Congo (the) \u200a [h]'}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+File: CG/indicators/rcongoopendataforafricaorg.yaml
+Record ID: rcongoopendataforafricaorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CG', 'name': 'Congo', 'expected': 'Congo (the) \u200a [h]'}
+Suggested Action: Country code 'CG' has canonical name 'Congo (the)   [h]'. Update name from 'Congo' to 'Congo (the)   [h]' for consistency.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+COUNTRY_NAME_ID_MISMATCH: 2 issues

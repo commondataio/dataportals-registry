@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Quality regression baseline now matches current `analyze-quality` output after the v1.11.0 catalog additions.
+- Pin `pyorc<0.11` on Python 3.9 so CI can install `iterabledata` without building dropped 3.9 wheels.
+- Allow CKAN, WordPress, OpenDataSoft, and Drupal to use additional catalog types they actually host (geoportals, scientific, indicators).
+
 ## [1.11.0] - 2026-08-17
 
 **GitHub Release**: [v1.11.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.11.0) - Published August 17, 2026

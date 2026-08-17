@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: TW
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: TW/Federal/scientific/esgfrcecsinicaedutw.yaml
+Record ID: esgfrcecsinicaedutw
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
 Count: 1
@@ -21,4 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='pxweb' is marke
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue

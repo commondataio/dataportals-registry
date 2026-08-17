@@ -1,11 +1,36 @@
 DATA QUALITY REPORT - COUNTRY: ES
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: ES
-Total Records with Issues: 7
-Total Issues Found: 7
+Total Records with Issues: 10
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: ES/ES-GA/opendata/datoscorunagal.yaml
+Record ID: datoscorunagal
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ES/Federal/scientific/datameteounicanes.yaml
+Record ID: datameteounicanes
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ES/Federal/scientific/esgfbsces.yaml
+Record ID: esgfbsces
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
 Count: 1
@@ -71,6 +96,7 @@ Suggested Action: Add at least one endpoint because software.id='ramadda' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue

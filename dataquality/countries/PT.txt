@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: PT
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: PT
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: PT/PT-30/indicators/estatisticamadeiragovpt.yaml
+Record ID: estatisticamadeiragovpt
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: PT/Federal/scientific/repositoriopolenfccnpt.yaml
+Record ID: repositoriopolenfccnpt
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -54,6 +72,7 @@ Suggested Action: Add at least one endpoint because software.id='obibamica' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue

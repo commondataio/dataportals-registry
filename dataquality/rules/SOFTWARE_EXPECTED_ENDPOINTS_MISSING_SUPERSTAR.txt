@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR
+================================================================================
+Generated: 2026-08-17 20:03:50
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='superstar' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+ZA: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+superwebstatssagovza: 1 issue
+
+=== ISSUES ===
+
+File: ZA/Federal/indicators/superwebstatssagovza.yaml
+Record ID: superwebstatssagovza
+Country: ZA
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR
+Field: endpoints
+Current Value: {"software_id": "superstar", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='superstar' is marked as API-capable in software definitions

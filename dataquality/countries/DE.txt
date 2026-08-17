@@ -1,11 +1,75 @@
 DATA QUALITY REPORT - COUNTRY: DE
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: DE
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 10
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 6
+Priority: IMPORTANT
+
+File: DE/Federal/scientific/esgf3dkrzde.yaml
+Record ID: esgf3dkrzde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/esgf1dkrzde.yaml
+Record ID: esgf1dkrzde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/esgfdwdde.yaml
+Record ID: esgfdwdde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/eridanuseocdlrde.yaml
+Record ID: eridanuseocdlrde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/esgf2dkrzde.yaml
+Record ID: esgf2dkrzde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/esgpikpotsdamde.yaml
+Record ID: esgpikpotsdamde
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: DE/DE-NW/geo/wwwgeoportalnrw.yaml
+Record ID: wwwgeoportalnrw
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: GEOportal.NRW
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: DE/DE-NW/geo/wwwgeoportalnrw.yaml
+Record ID: wwwgeoportalnrw
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: GEOportal.NRW
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE]
 Count: 1
@@ -29,8 +93,22 @@ Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
+[SOFTWARE_ID_UNKNOWN]
+Count: 1
+Priority: IMPORTANT
+
+File: DE/Federal/opendata/datenatlaszivilgesellschaftde.yaml
+Record ID: datenatlaszivilgesellschaftde
+Issue: SOFTWARE_ID_UNKNOWN
+Field: software.id
+Current Value: piveau
+Suggested Action: Verify software.id 'piveau' exists in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 6 issues
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
+SOFTWARE_ID_UNKNOWN: 1 issue

@@ -1,11 +1,40 @@
 DATA QUALITY REPORT - COUNTRY: FI
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: FI
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 5
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: FI/Federal/scientific/esgfdatacscfi.yaml
+Record ID: esgfdatacscfi
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: FI/Federal/scientific/researchfi.yaml
+Record ID: researchfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Research.fi
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: FI/Federal/scientific/researchfi.yaml
+Record ID: researchfi
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Research.fi
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS]
 Count: 1
@@ -39,5 +68,7 @@ Suggested Action: Add at least one endpoint because software.id='oskari' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI: 2 issues

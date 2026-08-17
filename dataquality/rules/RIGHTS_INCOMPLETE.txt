@@ -1,0 +1,56 @@
+DATA QUALITY REPORT - RULE: RIGHTS_INCOMPLETE
+================================================================================
+Generated: 2026-08-17 20:03:50
+Issue Type: RIGHTS_INCOMPLETE
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: Identifies records whose rights object has only one of license_id, license_name, or license_url. Add at least two of these fields so license information is complete and unambiguous.
+
+=== SUMMARY BY COUNTRY ===
+
+BG: 1 issue
+CH: 1 issue
+IT: 1 issue
+KR: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+datasnfch: 1 issue
+meteohubagenziaitaliameteoit: 1 issue
+openassemblygokr: 1 issue
+sofiaplanbg: 1 issue
+
+=== ISSUES ===
+
+File: CH/Federal/opendata/datasnfch.yaml
+Record ID: datasnfch
+Country: CH
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": "https://data.snf.ch/about/open-data-policy", "privacy_policy_url": null, "rights_type": "global", "tos_url": "https://data.snf.ch/about/open-data-policy"}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: IT/Federal/opendata/meteohubagenziaitaliameteoit.yaml
+Record ID: meteohubagenziaitaliameteoit
+Country: IT
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": "https://meteohub.agenziaitaliameteo.it/app/license", "privacy_policy_url": "https://meteohub.agenziaitaliameteo.it/app/public/privacy", "rights_type": "granular", "tos_url": null}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: KR/Federal/opendata/openassemblygokr.yaml
+Record ID: openassemblygokr
+Country: KR
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": "https://open.assembly.go.kr/portal/policy/copyRightPage.do", "privacy_policy_url": "https://open.assembly.go.kr/portal/policy/privatePolicyPage.do", "rights_type": "granular", "tos_url": "https://open.assembly.go.kr/portal/policy/userAgreementPage.do"}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+File: BG/BG-22/opendata/sofiaplanbg.yaml
+Record ID: sofiaplanbg
+Country: BG
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": "https://sofiaplan.bg/en/right-of-use-for-published-materials/", "privacy_policy_url": "https://sofiaplan.bg/en/personal-data-protection-policy/", "rights_type": "global", "tos_url": "https://sofiaplan.bg/en/right-of-use-for-published-materials/"}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.

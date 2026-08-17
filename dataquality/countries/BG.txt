@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: BG
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: BG
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: BG/BG-22/opendata/sofiaplanbg.yaml
+Record ID: sofiaplanbg
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://sofiaplan.bg/en/right-of-use-for-published-materials/', 'privacy_policy_url': 'https://sofiaplan.bg/en/personal-data-protection-policy/', 'rights_type': 'global', 'tos_url': 'https://sofiaplan.bg/en/right-of-use-for-published-materials/'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 1
@@ -21,4 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='geonetwork' is 
 
 === SUMMARY BY ISSUE TYPE ===
 
+RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue

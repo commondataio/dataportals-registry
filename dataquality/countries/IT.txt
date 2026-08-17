@@ -1,11 +1,61 @@
 DATA QUALITY REPORT - COUNTRY: IT
 ================================================================================
-Generated: 2026-08-10 21:38:22
+Generated: 2026-08-17 20:03:50
 Country Code: IT
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 8
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 5
+Priority: IMPORTANT
+
+File: IT/IT-42/opendata/datigenovametropoliit.yaml
+Record ID: datigenovametropoliit
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IT/Federal/opendata/wwwdatisalutegovit.yaml
+Record ID: wwwdatisalutegovit
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: IT/Federal/scientific/esgfnodecmccit.yaml
+Record ID: esgfnodecmccit
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IT/Federal/scientific/esgfnode2cmccit.yaml
+Record ID: esgfnode2cmccit
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IT/Federal/scientific/esgfcnrhpccinecait.yaml
+Record ID: esgfcnrhpccinecait
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: IT/Federal/opendata/meteohubagenziaitaliameteoit.yaml
+Record ID: meteohubagenziaitaliameteoit
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://meteohub.agenziaitaliameteo.it/app/license', 'privacy_policy_url': 'https://meteohub.agenziaitaliameteo.it/app/public/privacy', 'rights_type': 'granular', 'tos_url': None}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -32,5 +82,7 @@ Suggested Action: Add at least one endpoint because software.id='opengeoportal' 
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 5 issues
+RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
