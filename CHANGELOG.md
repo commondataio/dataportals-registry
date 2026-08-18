@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.12.0] - 2026-08-18
+
+**GitHub Release**: [v1.12.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.12.0) - Published August 18, 2026
+
 ### Added
 - **1,304 net new catalog entries** (1,318 YAML files added; 14 removed); registry source now **16,276** entities (1 scheduled).
 - **166 Polish eWMAPA** county and city geoportals, plus **91 Swedish EntryScape** open data catalogs and **62 Lizmap** geoportals (mostly French).
