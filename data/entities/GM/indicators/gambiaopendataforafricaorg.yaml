@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,15 @@ coverage:
 description: Gambia country portal on the African Development Bank Open Data for Africa
   platform (Africa Information Highway / Knoema). Provides official national statistical
   indicators compiled with the Gambia Bureau of Statistics.
+endpoints:
+- type: knoema:search
+  url: https://gambia.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://gambia.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://gambia.opendataforafrica.org/OpenSearch.xml
 id: gambiaopendataforafricaorg
 langs:
 - id: EN
@@ -44,10 +53,11 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: knoema
+  name: Knoema
 status: active
 tags:
+- has_api
 - statistics
 - government
 - official statistics

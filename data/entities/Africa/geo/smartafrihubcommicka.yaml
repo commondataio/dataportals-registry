@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: Africa
+      name: Africa
+    level: 20
+    macroregion:
+      id: '002'
+      name: Africa
+description: Spatial metadata catalogue (Micka) of SmartAfriHub, a digital innovation
+  hub for smart agriculture in Africa. Implements OGC CSW 2.0.2 ISO AP 1.0 for African
+  agricultural, land-use, and Earth observation geospatial datasets.
+endpoints:
+- type: csw202
+  url: https://www.smartafrihub.com/micka/csw/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://www.smartafrihub.com/micka/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: opensearch
+  url: https://www.smartafrihub.com/micka/opensearch
+  version: '1.0'
+id: smartafrihubcommicka
+langs:
+- id: EN
+  name: English
+- id: CS
+  name: Czech
+link: https://www.smartafrihub.com/micka/
+name: SmartAfriHub Spatial Metadata Catalogue
+owner:
+  link: https://www.smartafrihub.com
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: Plan4all
+  type: Civil society
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: micka
+  name: Micka
+status: active
+tags:
+- CSW
+- INSPIRE
+- Micka
+- Africa
+- agriculture
+- geospatial
+- metadata
+topics:
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00023428

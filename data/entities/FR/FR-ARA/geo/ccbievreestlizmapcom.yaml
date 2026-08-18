@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+description: Public Lizmap Cloud geoportal of the Communauté de communes Bièvre Est.
+endpoints:
+- type: lizmap:service
+  url: https://ccbievreest.lizmap.com/carto/index.php/lizmap/service
+- type: wms130
+  url: https://ccbievreest.lizmap.com/carto/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: ccbievreestlizmapcom
+langs:
+- id: FR
+  name: French
+link: https://ccbievreest.lizmap.com/carto/
+name: Portail cartographique de Bièvre Est
+owner:
+  link: https://www.cc-bievre-est.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-ARA
+      name: Auvergne-Rhône-Alpes
+  name: CC Bièvre Est
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023453

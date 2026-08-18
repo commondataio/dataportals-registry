@@ -1,0 +1,95 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-SD
+      name: South Dakota
+description: Official ArcGIS REST services for Rapid City and Pennington County, South
+  Dakota, providing GIS data and map layers including RapidMap parcels, aerial imagery,
+  addresses, utilities, and planning data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.rcgov.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.rcgov.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.rcgov.org/server/services?wsdl
+- type: arcgis:sitemap
+  url: https://gis.rcgov.org/server/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://gis.rcgov.org/server/rest/services?f=geositemap
+id: gisrcgovorg
+langs:
+- id: EN
+  name: English
+link: https://gis.rcgov.org/server/rest/services
+name: Rapid City GIS REST Services
+owner:
+  link: https://www.rcgov.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-SD
+      name: South Dakota
+  name: City of Rapid City GIS Division
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Rapid City
+- South Dakota
+- geospatial
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning Cadastre
+  name: Planning Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Utilities / Communication
+  name: Utilities / Communication
+  type: iso19115
+uid: cdi00022588

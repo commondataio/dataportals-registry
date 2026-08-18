@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Cube4EnvSec aviation weather datacubes with DWD-based 48-hour 4D x/y/z/t
+  forecasts and accumulating nowcast timeseries, offered through OGC WCS, WCPS, and
+  WMS.
+endpoints:
+- type: wcs201
+  url: https://weather.cube4envsec.org/rasdaman/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wms130
+  url: https://weather.cube4envsec.org/rasdaman/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: weathercube4envsecorg
+langs:
+- id: EN
+  name: English
+link: https://weather.cube4envsec.org/rasdaman/ows
+name: Aviation Weather Datacubes
+owner:
+  link: https://constructor.university
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HB
+      name: Bremen
+  name: Constructor University Bremen
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: rasdaman
+  name: Rasdaman
+status: active
+tags:
+- geospatial
+- datacube
+- earthserver
+- aviation
+- weather
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00023098

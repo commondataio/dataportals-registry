@@ -17,7 +17,8 @@ coverage:
     subregion:
       id: JP-11
       name: Saitama
-description: オープンデータを検索・ダウンロードできる「カタログ」サービスです。ダウンロードしたデータは、商用・非商用を問わず、誰でも自由に再利用できます。
+description: Joint open data catalog for Saitama Prefecture and municipalities on the
+  DataEye platform.
 id: opendataprefsaitamalgjp
 langs:
 - id: JA
@@ -36,30 +37,34 @@ owner:
       name: Saitama
   name: Saitama Prefecture
   type: Regional government
+properties:
+  has_doi: false
+  transferable_location: true
 rights:
   license_id: null
   license_name: null
   license_url: null
-  privacy_policy_url: null
+  privacy_policy_url: https://opendata.pref.saitama.lg.jp/pages/privacy
   rights_type: granular
-  tos_url: null
+  tos_url: https://opendata.pref.saitama.lg.jp/pages/terms
 software:
-  id: ckan
-  name: CKAN
+  id: dataeye
+  name: data eye
 status: active
 tags:
+- government
+- has_api
 - open data
-- public sector
-- statistics
-- population
-- tourism
-- education
-- health
-- welfare
-- environment
+- DataEye
+- Japan
+- Saitama
+- prefecture
 topics:
 - id: GOVE
   name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
   type: eudatatheme
 - id: SOCI
   name: Population and society
@@ -77,6 +82,8 @@ topics:
   name: Economy
   type: iso19115
 endpoints:
-- type: ckan
-  url: https://opendata.pref.saitama.lg.jp/api/3/action/package_list
+- type: ckan:package-search
+  url: https://opendata.pref.saitama.lg.jp/ckan_api/package_search
+- type: ckan:package-list
+  url: https://opendata.pref.saitama.lg.jp/ckan_api/package_list
 uid: temp00004731

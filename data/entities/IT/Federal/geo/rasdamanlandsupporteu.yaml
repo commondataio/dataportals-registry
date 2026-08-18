@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: active
+api: true
+api_status: uncertain
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -8,31 +9,43 @@ content_types:
 coverage:
 - location:
     country:
-      id: World
-      name: World
-    level: 10
+      id: EU
+      name: European Union
+    level: 20
     macroregion:
-      id: World
-      name: World
-description: The Landsupport project aims at developing a web-based completely free,
-  open-access GeoSpatial Decision Support System (S-DSS) devoted to
+      id: '155'
+      name: Western Europe
+description: Landsupport EarthServer datacube node backing an open geospatial decision
+  support system for agriculture, forestry, and land-use planning.
+endpoints:
+- type: wcs201
+  url: https://rasdaman.landsupport.eu/rasdaman/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wms130
+  url: https://rasdaman.landsupport.eu/rasdaman/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: rasdamanlandsupporteu
 langs:
-- id: IT
-  name: Italian
 - id: EN
   name: English
+- id: IT
+  name: Italian
 link: https://rasdaman.landsupport.eu/rasdaman/ows
-name: The Landsupport datacube
+name: Landsupport datacube
 owner:
   link: https://www.unina.it
   location:
     country:
       id: IT
       name: Italy
-    level: 20
+    level: 30
+    subregion:
+      id: IT-72
+      name: Campania
   name: CRISP Università di Napoli Federico II
   type: Academy
+properties:
+  has_doi: false
 rights:
   license_id: null
   license_name: null
@@ -46,19 +59,20 @@ software:
 status: active
 tags:
 - geospatial
+- datacube
+- earthserver
+- land use
 topics:
-- id: Location
-  name: Location
-  type: iso19115
-- id: Boundaries
-  name: Boundaries
-  type: iso19115
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00004748
-endpoints:
-- type: wcs201
-  url: https://rasdaman.landsupport.eu/rasdaman/ows?service=WCS&version=2.0.1&request=GetCapabilities
-  version: 2.0.1
-api: true

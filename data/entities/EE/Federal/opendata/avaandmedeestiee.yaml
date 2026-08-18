@@ -13,29 +13,37 @@ coverage:
     macroregion:
       id: '154'
       name: Northern Europe
-description: Estonian national open data portal, providing access to various datasets
-  published by public sector organizations.
+description: National data portal (Andmete teabevärav, ATV), launched in 2025 as the
+  successor to avaandmed.eesti.ee. Catalogues open data and metadata for restricted
+  public-sector datasets.
 endpoints:
 - type: openapi
-  url: https://avaandmed.eesti.ee/api/dataset-docs/
+  url: https://andmed.eesti.ee/api/dataset-docs/
+- type: openapi
+  url: https://andmed.eesti.ee/api/dataset-docs/json
+  version: '3.0'
+- type: customapi
+  url: https://andmed.eesti.ee/api/v3/datasets/search
 id: avaandmedeestiee
 identifiers:
 - id: wikidata
   url: https://wikidata.org/wiki/Q97011195
   value: Q97011195
 langs:
+- id: ET
+  name: Estonian
 - id: EN
   name: English
-link: https://avaandmed.eesti.ee
-name: Estonian open data
+link: https://andmed.eesti.ee
+name: Andmete teabevärav
 owner:
-  link: https://www.gov.ee
+  link: https://www.ria.ee
   location:
     country:
       id: EE
       name: Estonia
     level: 20
-  name: Government of Estonia
+  name: Information System Authority (RIA)
   type: Central government
 properties:
   has_doi: false

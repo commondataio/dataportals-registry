@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+description: Departmental geoportal of the Gard publishing thematic maps for citizens,
+  including landscape, heritage and territorial data.
+endpoints:
+- type: lizmap:service
+  url: https://sig.gard.fr/index.php/lizmap/service
+- type: wms130
+  url: https://sig.gard.fr/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: siggardfr
+langs:
+- id: FR
+  name: French
+link: https://sig.gard.fr/
+name: SIG du Gard
+owner:
+  link: https://www.gard.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-OCC
+      name: Occitanie
+  name: Département du Gard
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- geoportal
+- France
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023384

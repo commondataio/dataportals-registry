@@ -23,6 +23,8 @@ endpoints:
 - type: csw202
   url: https://metadata.nature.cz/csw/?service=CSW&version=2.0.2&request=GetCapabilities
   version: 2.0.2
+- type: atom
+  url: https://metadata.nature.cz/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
 - type: opensearch
   url: https://metadata.nature.cz/opensearch
   version: '1.0'
@@ -53,12 +55,13 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: micka
+  name: Micka
 status: active
 tags:
 - CSW
 - INSPIRE
+- Micka
 - geospatial
 - metadata
 - nature conservation

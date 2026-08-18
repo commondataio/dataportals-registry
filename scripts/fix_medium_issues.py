@@ -204,6 +204,12 @@ def infer_endpoints(record):
             endpoints.extend([
                 {"type": "socrata:api", "url": f"{base_url}/api/views"},
             ])
+        elif software_id == "knoema":
+            endpoints.extend([
+                {"type": "knoema:search", "url": f"{base_url}/api/1.0/search", "version": "1.0"},
+                {"type": "sdmx:datastructure", "url": f"{base_url}/api/1.0/sdmx", "version": "2.0"},
+                {"type": "opensearch", "url": f"{base_url}/OpenSearch.xml"},
+            ])
         
         # Always try sitemap
         if not any(e.get("type") == "sitemap" for e in endpoints):

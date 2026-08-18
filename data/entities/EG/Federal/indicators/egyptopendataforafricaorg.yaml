@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -19,6 +19,15 @@ description: Egypt country portal on the African Development Bank Open Data for 
   platform (Africa Information Highway / Knoema). Provides official national statistical
   indicators compiled with the Central Agency for Public Mobilization and Statistics
   (CAPMAS).
+endpoints:
+- type: knoema:search
+  url: https://egypt.opendataforafrica.org/api/1.0/search
+  version: '1.0'
+- type: sdmx:datastructure
+  url: https://egypt.opendataforafrica.org/api/1.0/sdmx
+  version: '2.0'
+- type: opensearch
+  url: https://egypt.opendataforafrica.org/OpenSearch.xml
 id: egyptopendataforafricaorg
 langs:
 - id: EN
@@ -45,10 +54,11 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: knoema
+  name: Knoema
 status: active
 tags:
+- has_api
 - statistics
 - government
 - official statistics

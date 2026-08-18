@@ -1,0 +1,97 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: EC-T
+      name: Tungurahua
+description: Municipal geospatial services catalog of the GAD Municipalidad de Ambato,
+  providing cadastral, land-use planning, imagery, base maps, and open-government
+  geographic data through ArcGIS REST services.
+endpoints:
+- type: arcgis:portals:self
+  url: https://arcgis.ambato.gob.ec/terra/sharing/rest/portals/self?f=pjson
+- type: arcgis:rest:info
+  url: https://arcgis.ambato.gob.ec/mapas/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://arcgis.ambato.gob.ec/mapas/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://arcgis.ambato.gob.ec/mapas/services?wsdl
+- type: arcgis:sitemap
+  url: https://arcgis.ambato.gob.ec/mapas/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://arcgis.ambato.gob.ec/mapas/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://arcgis.ambato.gob.ec/mapas/rest/services?f=kmz
+id: arcgisambatogobec
+langs:
+- id: ES
+  name: Spanish
+link: https://arcgis.ambato.gob.ec/mapas/rest/services
+name: Ambato Municipal Geoportal
+owner:
+  link: https://www.ambato.gob.ec
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    subregion:
+      id: EC-T
+      name: Tungurahua
+  name: GAD Municipalidad de Ambato
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- ArcGIS
+- geospatial
+- municipal
+- Ambato
+- Tungurahua
+- Ecuador
+- cadastre
+- land use
+- REST services
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00022557

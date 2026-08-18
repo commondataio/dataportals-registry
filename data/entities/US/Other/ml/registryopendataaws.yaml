@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Machine learning catalog
 content_types:
 - dataset
@@ -53,6 +54,7 @@ tags:
 - datasets
 - AWS
 - cloud
+- has_api
 topics:
 - id: ENVI
   name: Environment
@@ -120,6 +122,13 @@ topics:
 - id: Transportation
   name: Transportation
   type: iso19115
+endpoints:
+- type: sitemap
+  url: https://registry.opendata.aws/sitemap.txt
+- type: customapi
+  url: https://registry.opendata.aws/index.yaml
+- type: customapi
+  url: https://registry.opendata.aws/index.ndjson
 uid: cdi00001991
 _re3data:
   re3data_id: r3d100010855

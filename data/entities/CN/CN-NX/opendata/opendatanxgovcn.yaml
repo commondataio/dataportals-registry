@@ -7,36 +7,31 @@ content_types:
 - dataset
 coverage:
 - location:
-    country:
+    country: &id001
       id: CN
       name: China
     level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-    subregion:
+    subregion: &id002
       id: CN-NX
       name: Ningxia Huizu Zizhiqu
-description: No extractable information in the provided search results about the contents
-  or structure of https://opendata.nx.gov.cn.
+description: Provincial public data open platform of Ningxia Hui Autonomous Region.
 id: opendatanxgovcn
 langs:
 - id: ZH
   name: Chinese
-link: https://opendata.nx.gov.cn
-name: Not available in search results
+link: https://opendata.nx.gov.cn/portal/index
+name: Ningxia Public Data Open Platform
 owner:
   link: https://opendata.nx.gov.cn
   location:
-    country:
-      id: CN
-      name: China
+    country: *id001
     level: 30
-    subregion:
-      id: CN-NX
-      name: Ningxia Huizu Zizhiqu
-  name: Not available in search results
-  type: Central government
+    subregion: *id002
+  name: Ningxia Hui Autonomous Region Government
+  type: Regional government
 rights:
   license_id: null
   license_name: null
@@ -45,14 +40,28 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: oportal
+  name: oPortal
 status: active
 tags:
+- government
+- open data
+- Ningxia
 - China
-- custom
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00000148

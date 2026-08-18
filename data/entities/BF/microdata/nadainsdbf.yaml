@@ -15,26 +15,29 @@ coverage:
     macroregion:
       id: '011'
       name: Western Africa
-description: 'Catalogue de données de l''Institut National de la Statistique et de
-  la Démographie (INSD), Direction des Statistiques Générales (DSG/INSD). Collection:
-  Enquêtes réalisées par l''INSD.'
+description: Catalogue de microdonnées du Burkina Faso, géré par l'Institut national
+  de la statistique et de la démographie (INSD). Diffuse enquêtes, recensements et
+  fichiers de microdonnées (démographie, conditions de vie, agriculture, nutrition,
+  emploi).
 endpoints:
 - type: nada:catalog-search
-  url: http://www.insd.bf/nada/index.ph/api/catalog/search
+  url: https://microdata.insd.bf/index.php/api/catalog/search
+- type: nada:csvexport
+  url: https://microdata.insd.bf/index.php/catalog/export/csv?ps=5000&collection[]
 id: nadainsdbf
 langs:
 - id: FR
   name: French
-link: http://www.insd.bf/nada
-name: INSD microdata catalog
+link: https://microdata.insd.bf
+name: Catalogue de Microdonnées du Burkina Faso
 owner:
-  link: http://www.insd.bf
+  link: https://www.insd.bf
   location:
     country:
       id: BF
       name: Burkina Faso
     level: 20
-  name: INSD Burkina Faso
+  name: Institut National de la Statistique et de la Démographie (INSD)
   type: Central government
 properties:
   has_doi: false

@@ -19,14 +19,18 @@ description: This IPT has been configured for a thematic portal on Natura 2000 s
   used for contributing data to GBIF, because the MNHNL is contributing all its datat
   to BioCASE and through that channel it gets fed into GBIF's data portal.
 endpoints:
+- type: dcat:ttl
+  url: https://ipt.mnhn.lu/ipt/dcat
+- type: ipt:dataset
+  url: https://ipt.mnhn.lu/ipt/inventory/dataset
 - type: rss
-  url: https://gbif.mnhn.lu/ipt/rss.do
+  url: https://ipt.mnhn.lu/ipt/rss.do
   version: '2.0'
 id: gbifmnhnlu
 langs:
 - id: FR
   name: French
-link: https://gbif.mnhn.lu/ipt
+link: https://ipt.mnhn.lu/ipt
 name: IPT_MNHNL
 owner:
   link: http://www.mnhn.lu

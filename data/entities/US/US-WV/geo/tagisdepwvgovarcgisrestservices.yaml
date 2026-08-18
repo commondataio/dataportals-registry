@@ -1,0 +1,82 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WV
+      name: West Virginia
+description: ArcGIS REST services directory for the WVDEP Geographic Information Server
+  (TAGIS). Provides map, feature, geocode, and related GIS web services supporting
+  environmental permitting, hydrology, mining, and other West Virginia DEP activities.
+  Enterprise GIS services are primarily under the WVDEP_enterprise folder.
+endpoints:
+- type: arcgis:rest:info
+  url: https://tagis.dep.wv.gov/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://tagis.dep.wv.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://tagis.dep.wv.gov/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://tagis.dep.wv.gov/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://tagis.dep.wv.gov/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://tagis.dep.wv.gov/arcgis/rest/services?f=kmz
+id: tagisdepwvgovarcgisrestservices
+langs:
+- id: EN
+  name: English
+link: https://tagis.dep.wv.gov/arcgis/rest/services
+name: WVDEP/TAGIS ArcGIS REST Services
+owner:
+  link: https://tagis.dep.wv.gov/home/
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WV
+      name: West Virginia
+  name: West Virginia Department of Environmental Protection
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- GIS
+- mapping
+- environmental data
+- ArcGIS
+- web services
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00022600

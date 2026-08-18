@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+description: Lizmap Cloud geoportal of Audiar, the urban planning agency of the Rennes
+  area, including housing maps.
+endpoints:
+- type: lizmap:service
+  url: https://audiar.lizmap.com/index.php/lizmap/service
+- type: wms130
+  url: https://audiar.lizmap.com/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: audiarlizmapcom
+langs:
+- id: FR
+  name: French
+link: https://audiar.lizmap.com/
+name: Audiar Lizmap
+owner:
+  link: https://www.audiar.org
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BRE
+      name: Bretagne
+  name: Audiar
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- geoportal
+- urban planning
+- housing
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023442

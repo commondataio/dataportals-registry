@@ -7,37 +7,30 @@ content_types:
 - dataset
 coverage:
 - location:
-    country:
+    country: &id001
       id: CN
       name: China
     level: 30
     macroregion:
       id: '030'
       name: Eastern Asia
-    subregion:
+    subregion: &id002
       id: CN-AH
       name: Anhui Sheng
-description: Extraction from the provided URL did not yield structured dataset or
-  metadata for analysis. No public data catalogs or API responses available; the site
-  may require further access or is not a standard open data catalog based on current
-  retrieval.
+description: Municipal public data open platform of Suzhou, Anhui.
 id: wwwahszgovcn
 langs:
 - id: ZH
   name: Chinese
-link: https://www.ahsz.gov.cn/opendata/index
-name: No dataset or metadata found in provided URL
+link: https://www.ahsz.gov.cn/oportal/index
+name: Suzhou Anhui Public Data Open Platform
 owner:
   link: https://www.ahsz.gov.cn
   location:
-    country:
-      id: CN
-      name: China
+    country: *id001
     level: 30
-    subregion:
-      id: CN-AH
-      name: Anhui Sheng
-  name: No owner identified
+    subregion: *id002
+  name: Suzhou Municipal Government
   type: Local government
 rights:
   license_id: null
@@ -47,14 +40,29 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: oportal
+  name: oPortal
 status: active
 tags:
+- government
+- open data
+- Suzhou
+- Anhui
 - China
-- custom
 topics:
 - id: GOVE
   name: Government and public sector
   type: eudatatheme
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Society
+  name: Society
+  type: iso19115
 uid: temp00000152

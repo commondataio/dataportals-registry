@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+description: Lizmap Cloud geoportal of ADDRN, the urban planning agency for the Dunkerque
+  area, including Datagences maps.
+endpoints:
+- type: lizmap:service
+  url: https://addrn.lizmap.com/index.php/lizmap/service
+- type: wms130
+  url: https://addrn.lizmap.com/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: addrnlizmapcom
+langs:
+- id: FR
+  name: French
+link: https://addrn.lizmap.com/
+name: ADDRN WebCarto
+owner:
+  link: https://www.addrn.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-HDF
+      name: Hauts-de-France
+  name: ADDRN
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- geoportal
+- urban planning
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023451

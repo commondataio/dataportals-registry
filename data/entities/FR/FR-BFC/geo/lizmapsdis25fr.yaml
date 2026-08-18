@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+description: Public Lizmap portal of SDIS 25 presenting the territorial organisation
+  of the Doubs fire and rescue service.
+endpoints:
+- type: lizmap:service
+  url: https://lizmap.sdis25.fr/index.php/lizmap/service
+- type: wms130
+  url: https://lizmap.sdis25.fr/index.php/lizmap/service/?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: lizmapsdis25fr
+langs:
+- id: FR
+  name: French
+link: https://lizmap.sdis25.fr/
+name: Portail public SDIS 25
+owner:
+  link: https://www.sdis25.fr
+  location:
+    country:
+      id: FR
+      name: France
+    level: 30
+    subregion:
+      id: FR-BFC
+      name: Bourgogne-Franche-Comté
+  name: SDIS 25
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: lizmap
+  name: Lizmap
+status: active
+tags:
+- geospatial
+- lizmap
+- geoportal
+- emergency
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023399

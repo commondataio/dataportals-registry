@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+    macroregion:
+      id: '030'
+      name: Eastern Asia
+description: Visualisation website for the Mongolian Data Cube (SIBELIUs), providing
+  satellite-derived pasture, snow, drought, and temperature products plus true-colour
+  imagery for Mongolia. Data are sourced from Sentinel-2, Landsat-8, MODIS, and VIIRS,
+  and are also available via WMS and WCS.
+endpoints:
+- type: wms130
+  url: https://mongolia.sibelius-datacube.org:5000/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wcs100
+  url: https://mongolia.sibelius-datacube.org:5000/wcs?service=WCS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+id: mongoliasibeliusdatacubeorg
+langs:
+- id: EN
+  name: English
+- id: MN
+  name: Mongolian
+link: https://mongolia.sibelius-datacube.org/map/EN
+name: Mongolian Data Cube (SIBELIUs)
+owner:
+  link: https://namem.gov.mn
+  location:
+    country:
+      id: MN
+      name: Mongolia
+    level: 20
+  name: National Agency for Meteorology and Environmental Monitoring (NAMEM)
+  type: Central government
+properties:
+  has_doi: false
+  transferable_topics: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: opendatacube
+  name: Open Data Cube
+status: active
+tags:
+- geospatial
+- has_api
+- satellite
+- remote sensing
+- earth observation
+- pasture
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Farming
+  name: Farming
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00023052

@@ -3202,7 +3202,7 @@ def check_catalog_type_directory(record):
 # Special country/region codes valid in the registry (not ISO 3166-1 alpha-2)
 _VALID_COUNTRY_SPECIAL = frozenset({
     "UNKNOWN", "WORLD", "EU", "AFRICA", "ASEAN", "CARIBBEAN", "LATINAMERICA", "OCEANIA",
-    "INTERNATIONAL", "AMERICAS", "CENTRALAMERICA",
+    "INTERNATIONAL", "AMERICAS", "CENTRALAMERICA", "XK",
 })
 # Common abbreviations accepted as valid (e.g. UK for GB)
 _VALID_COUNTRY_ABBREVIATIONS = frozenset({"UK"})

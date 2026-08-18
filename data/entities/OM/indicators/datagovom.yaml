@@ -18,6 +18,9 @@ description: National statistical data portal of Oman, publishing official indic
   datasets, and visualizations from the National Centre for Statistics and Information,
   with SDMX and API access under the Open Government License of the Sultanate of Oman.
 endpoints:
+- type: knoema:search
+  url: https://data.gov.om/api/1.0/search
+  version: '1.0'
 - type: opensearch
   url: https://data.gov.om/OpenSearch.xml
 - type: sdmx:datastructure
@@ -58,8 +61,8 @@ rights:
   rights_type: global
   tos_url: https://data.gov.om/legal/termsofuse
 software:
-  id: custom
-  name: Custom software
+  id: knoema
+  name: Knoema
 status: active
 tags:
 - government

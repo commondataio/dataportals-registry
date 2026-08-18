@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: DE
+      name: Germany
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Cube4EnvSec thunderstorm datacubes with DWD precipitation radar and Meteosat
+  RGB products, offered through OGC WCS, WCPS, and WMS.
+endpoints:
+- type: wcs201
+  url: https://thunderstorm.cube4envsec.org/rasdaman/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1
+- type: wms130
+  url: https://thunderstorm.cube4envsec.org/rasdaman/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+id: thunderstormcube4envsecorg
+langs:
+- id: EN
+  name: English
+link: https://thunderstorm.cube4envsec.org/rasdaman/ows
+name: Thunderstorm Service
+owner:
+  link: https://constructor.university
+  location:
+    country:
+      id: DE
+      name: Germany
+    level: 30
+    subregion:
+      id: DE-HB
+      name: Bremen
+  name: Constructor University Bremen
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: rasdaman
+  name: Rasdaman
+status: active
+tags:
+- geospatial
+- datacube
+- earthserver
+- weather
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Climatology / Meteorology / Atmosphere
+  name: Climatology / Meteorology / Atmosphere
+  type: iso19115
+uid: cdi00023099

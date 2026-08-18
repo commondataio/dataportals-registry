@@ -610,6 +610,31 @@ PXWEB_URLMAP = [
     }
 ]
 
+KNOEMA_URLMAP = [
+    {
+        "id": "knoema:search",
+        "display_url": "/api/1.0/search",
+        "url": "/api/1.0/search?query=test",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1.0",
+    },
+    {
+        "id": "sdmx:datastructure",
+        "url": "/api/1.0/sdmx",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "opensearch",
+        "url": "/OpenSearch.xml",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
 STATSUITE_URLMAP = [
     {
         "id": "statsuite:search",
@@ -2099,6 +2124,7 @@ CATALOGS_URLMAP = {
     "geonetwork": GEONETWORK_URLMAP,
     "openwis": GEONETWORK_URLMAP,
     "pxweb": PXWEB_URLMAP,
+    "knoema": KNOEMA_URLMAP,
     "socrata": SOCRATA_URLMAP,
     "dataverse": DATAVERSE_URLMAP,
     "dspace": DSPACE_URLMAP,

@@ -1,0 +1,85 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Metadata catalogue of the Czech National INSPIRE Geoportal (Micka), operated
+  by CENIA. Implements OGC CSW 2.0.2 ISO AP 1.0 and harvests INSPIRE-compliant metadata
+  for spatial datasets and services across Czech public providers.
+endpoints:
+- type: csw202
+  url: https://geoportal.gov.cz/php/micka/csw/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://geoportal.gov.cz/php/micka/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: dcat:xml
+  url: https://geoportal.gov.cz/php/micka/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&ElementSetName=brief&outputSchema=http://www.w3.org/ns/dcat%23
+- type: opensearch
+  url: https://geoportal.gov.cz/php/micka/opensearch
+  version: '1.0'
+id: mickageoportalgovcz
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://geoportal.gov.cz/php/micka/
+name: National INSPIRE Geoportal Metadata Catalogue
+owner:
+  link: https://www.cenia.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: CENIA
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: micka
+  name: Micka
+status: active
+tags:
+- CSW
+- INSPIRE
+- Micka
+- geospatial
+- metadata
+- national geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00023424

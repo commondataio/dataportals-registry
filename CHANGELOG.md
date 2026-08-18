@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **1,304 net new catalog entries** (1,318 YAML files added; 14 removed); registry source now **16,276** entities (1 scheduled).
+- **166 Polish eWMAPA** county and city geoportals, plus **91 Swedish EntryScape** open data catalogs and **62 Lizmap** geoportals (mostly French).
+- **151 CKAN** open data portals, including **80 Thai** government catalogs and **34 Indonesian** Satu Data sites.
+- **73 GBIF IPT** scientific catalogs, **59 Chinese InstDB** research-data repositories, **32 Japanese data eye** municipal portals, and **25 Chinese Inspur oPortal** sites.
+- **101 indicators catalogs**, including **29 Open Data for Africa / Knoema** portals, **18 Datawheel** observatories, and additional national statistical systems.
+- **26 microdata catalogs**, including **19 REDATAM** census/survey sites, with first entity roots for **Aruba (AW), Cayman Islands (KY), and Montserrat (MS)**; Kosovo (**XK**) ASKdata recategorized from Serbia.
+- Scientific and geospatial coverage: **25 WMO WIS 2.0 in a box** nodes, **21 DataONE** repositories, **20 NASA GES DISC OPeNDAP/Hyrax** endpoints, **22 NextGIS Web** geoportals, **17 Japanese WEKO3** repositories, and **12 rasdaman** datacube services.
+- **6 API catalogs** (Tallinn, Estonia RIHA and X-tee, Latvia VISS, Malaysia Kijang, Taiwan TDX) plus additional ArcGIS Hub/Server (50), OpenDataSoft (22), JKAN (14), and Piveau (8) sites.
+- **12 software definitions**: Micka, Knoema, REDATAM, Copernicus Data Stores, data eye, Gipuzkoa Irekia, Liferay, OGD Platform India, Inspur oPortal, Piveau, SEU-e, and Ensembl.
+
+### Changed
+- Recategorized misplaced catalogs: Lithuania SDG ArcGIS hubs (`Unknown` → `LT/Federal`), American Samoa GIS (`US-AR` → `US-AS`), Bakersfield GIS (`US-DC` → `US-CA`), St. Petersburg stats (`US-TN` → `US-FL`), Guam geoportals (`US/Federal` → `US-GU`), Northern Mariana BECQ (`US-CA` → `US-MP`), Dazhou open data (`CN-NX` → `CN-SC`), and Kosovo ASKdata (`RS` → `XK`).
+- Reassigned software IDs on existing records after new platform definitions: Liferay (104), Knoema (41), OGD Platform India (37), SEU-e (18), REDATAM (16), Data Fair (12), Gipuzkoa Irekia (7), oPortal (6), Micka (5), Piveau (4), and others.
+- Refreshed metadata (names, links, endpoints, API status) across **327** existing catalogs, including large Spanish and Indian batches.
+- Regenerated dataset exports: **16,276** catalog records (entities); 148 software definitions; 1 scheduled.
+
+### Removed
+- **14 catalog entries** removed (inactive, duplicate, or replaced), including misplaced WIS 2.0 nodes, US ArcGIS Hub copies, and retired Chinese open-data URLs.
+
 ### Fixed
 - Quality regression baseline now matches current `analyze-quality` output after the v1.11.0 catalog additions.
 - Pin `pyorc<0.11` on Python 3.9 so CI can install `iterabledata` without building dropped 3.9 wheels.

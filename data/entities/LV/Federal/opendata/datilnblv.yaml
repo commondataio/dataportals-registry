@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+    macroregion:
+      id: '154'
+      name: Northern Europe
+description: Dataset catalog of the National Library of Latvia. Publishes bibliographic,
+  authority, corpus, and linked-data collections for research reuse, including national
+  bibliography records and RDF datasets.
+endpoints:
+- type: dcatap21
+  url: https://dati.lnb.lv/catalog.rdf
+- type: ckan
+  url: https://dati.lnb.lv/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dati.lnb.lv/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dati.lnb.lv/api/3/action/package_list
+  version: '3'
+id: datilnblv
+langs:
+- id: LV
+  name: Latvian
+- id: EN
+  name: English
+link: https://dati.lnb.lv
+name: LNB Datu portāls
+owner:
+  link: https://lnb.gov.lv
+  location:
+    country:
+      id: LV
+      name: Latvia
+    level: 20
+  name: National Library of Latvia
+  type: Academy
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- library
+- cultural heritage
+- open data
+- Latvia
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00023882

@@ -1,0 +1,94 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: EC-W
+      name: Galápagos
+description: Open geospatial data platform of the Charles Darwin Foundation for the
+  Galápagos Islands, providing maps, layers, and downloadable datasets for conservation
+  and research.
+endpoints:
+- type: geonode:datasets
+  url: https://geodata.fcdarwin.org.ec/api/datasets/
+- type: geonode:documents
+  url: https://geodata.fcdarwin.org.ec/api/documents/
+- type: csw202
+  url: https://geodata.fcdarwin.org.ec/catalogue/csw?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: oaipmh20
+  url: https://geodata.fcdarwin.org.ec/catalogue/csw?mode=oaipmh&verb=Identify
+  version: '2.0'
+- type: opensearch
+  url: https://geodata.fcdarwin.org.ec/catalogue/csw?mode=opensearch&service=CSW&version=2.0.2&request=GetCapabilities
+  version: '1.0'
+- type: wms111
+  url: https://geodata.fcdarwin.org.ec/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://geodata.fcdarwin.org.ec/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wcs111
+  url: https://geodata.fcdarwin.org.ec/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+id: geodatafcdarwinorgec
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://geodata.fcdarwin.org.ec
+name: Galapagos Geoportal
+owner:
+  link: https://www.darwinfoundation.org
+  location:
+    country:
+      id: EC
+      name: Ecuador
+    level: 30
+    subregion:
+      id: EC-W
+      name: Galápagos
+  name: Fundación Charles Darwin
+  type: Civil society
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- geospatial
+- galapagos
+- conservation
+- biodiversity
+- GeoNode
+- Ecuador
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Oceans
+  name: Oceans
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00022561

@@ -22,6 +22,17 @@ endpoints:
   url: https://data.europa.eu/sitemap.xml
 - type: sitemap
   url: https://data.europa.eu/sitemap.xml.gz
+- type: customapi
+  url: https://data.europa.eu/api/hub/search/search
+- type: customapi
+  url: https://data.europa.eu/api/hub/repo/catalogues
+- type: ckan:package-search
+  url: https://data.europa.eu/api/hub/search/ckan/package_search
+  version: '3'
+- type: sparql
+  url: https://data.europa.eu/sparql
+- type: docs
+  url: https://data.europa.eu/api/hub/search/
 id: dataeuropaeu
 identifiers:
 - id: re3data
@@ -52,8 +63,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: piveau
+  name: Piveau
 status: active
 tags:
 - has_api
@@ -61,6 +72,7 @@ tags:
 - linked data
 - metadata
 - DCAT-AP
+- piveau
 topics:
 - id: GOVE
   name: Government and public sector

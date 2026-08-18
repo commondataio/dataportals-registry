@@ -1,0 +1,84 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Spatial metadata catalogue (Micka) of the National Heritage Institute
+  monument care geoportal. Implements OGC CSW 2.0.2 ISO AP 1.0 and INSPIRE discovery
+  for cultural heritage geospatial datasets and services.
+endpoints:
+- type: csw202
+  url: https://geoportal.npu.cz/metadataserver/csw/?service=CSW&version=2.0.2&request=GetCapabilities
+  version: 2.0.2
+- type: atom
+  url: https://geoportal.npu.cz/metadataserver/csw/?request=GetRecords&query=&format=application/xml&MaxRecords=9999&outputSchema=http://www.w3.org/2005/Atom
+- type: opensearch
+  url: https://geoportal.npu.cz/metadataserver/opensearch
+  version: '1.0'
+id: geoportalnpuczmetadataserver
+langs:
+- id: CS
+  name: Czech
+- id: EN
+  name: English
+link: https://geoportal.npu.cz/metadataserver/
+name: Monument Care Geoportal Spatial Metadata Catalogue
+owner:
+  link: https://www.npu.cz
+  location:
+    country:
+      id: CZ
+      name: Czech Republic
+    level: 20
+  name: National Heritage Institute
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: micka
+  name: Micka
+status: active
+tags:
+- CSW
+- INSPIRE
+- Micka
+- cultural heritage
+- geospatial
+- metadata
+- protected sites
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00023426
