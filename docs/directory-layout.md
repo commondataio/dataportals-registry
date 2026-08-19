@@ -63,3 +63,5 @@ data/datasets/           # generated exports (do not edit)
 | `data/scheduled/**/*.yaml` | `dataquality/**` (except when regenerating reports) |
 | `data/software/**/*.yaml` | |
 | `data/reference/**` | |
+
+New catalog files: [discovery.md](discovery.md) then [agents/contribute.md](agents/contribute.md).

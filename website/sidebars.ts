@@ -9,6 +9,7 @@ const sidebars: SidebarsConfig = {
         'getting-started',
         'when-to-use',
         'architecture',
+        'discovery',
         'directory-layout',
         'cli',
       ],
@@ -36,6 +37,7 @@ const sidebars: SidebarsConfig = {
       label: 'Agent workflows',
       items: [
         'agents/query',
+        'agents/discover',
         'agents/contribute',
         'agents/openspec-quickstart',
       ],

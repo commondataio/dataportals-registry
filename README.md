@@ -126,7 +126,7 @@ All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB e
 
 ## Discovery
 
-How to find catalogs in this registry:
+How to find catalogs **already in this registry**:
 
 **By geography**  
 - Entity YAMLs live under `data/entities/COUNTRY_CODE/` (e.g. `US`, `FR`, `BR`).  
@@ -155,6 +155,8 @@ FROM catalogs
 WHERE software LIKE '%"id":"ckan"%'
   AND coverage LIKE '%"id":"US"%';
 ```
+
+How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents.
 
 ## Data Quality and Validation
 

@@ -519,6 +519,13 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 3. Agent workflows live in `docs/agents/`
 4. Site deploys from `.github/workflows/deploy-docs.yml` on `main`
 
+### Task: Discover catalogs not yet in the registry
+
+1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk
+2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md))
+3. Prefer vendor/government lists and targeted GETs; do not scan the open internet
+4. Add verified finds with `add-single --scheduled`, then the contribute checklist below
+
 ### Task: Add a New Catalog Entry
 
 1. Check if catalog already exists in `data/entities/` or `data/scheduled/`

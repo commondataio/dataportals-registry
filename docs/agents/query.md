@@ -9,6 +9,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 2. Use **exports** — do not walk `data/entities/**/*.yaml` unless authoring.
 3. Full contract: [ai-consumers.md](../ai-consumers.md).
 4. Recipes: [query-examples.md](../query-examples.md).
+5. If the user wants catalogs that are **not** in the registry yet, switch to [discover.md](discover.md).
 
 ## Access paths
 
@@ -51,4 +52,4 @@ SELECT count(*) FROM software;
 
 ## After answering
 
-Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md).
+Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md). If they want catalogs that are missing from the registry, switch to [discover.md](discover.md).

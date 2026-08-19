@@ -94,6 +94,10 @@ const config: Config = {
               to: '/docs/architecture',
             },
             {
+              label: 'Discover catalogs',
+              to: '/docs/discovery',
+            },
+            {
               label: 'AI consumers',
               to: '/docs/ai-consumers',
             },
@@ -109,6 +113,10 @@ const config: Config = {
             {
               label: 'Query workflow',
               to: '/docs/agents/query',
+            },
+            {
+              label: 'Discover workflow',
+              to: '/docs/agents/discover',
             },
             {
               label: 'Contribute workflow',

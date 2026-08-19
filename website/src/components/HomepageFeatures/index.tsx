@@ -34,6 +34,11 @@ const sections: DocSection[] = [
         description: 'Source YAML, validation, enrichment, and exports.',
       },
       {
+        to: '/docs/discovery',
+        label: 'Discover catalogs',
+        description: 'Find portals not yet in the registry, then add them.',
+      },
+      {
         to: '/docs/directory-layout',
         label: 'Directory layout',
         description: 'Country, type, and filename conventions.',
@@ -102,6 +107,11 @@ const sections: DocSection[] = [
         to: '/docs/agents/query',
         label: 'Query workflow',
         description: 'Look up catalogs from exports, not YAML.',
+      },
+      {
+        to: '/docs/agents/discover',
+        label: 'Discover workflow',
+        description: 'Find unregistered catalogs without duplicating records.',
       },
       {
         to: '/docs/agents/contribute',

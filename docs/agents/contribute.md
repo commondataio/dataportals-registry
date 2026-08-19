@@ -4,7 +4,7 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 
 ## Before editing
 
-1. Search `data/entities/` and `data/scheduled/` (and exports) so you do not duplicate `link` / `id`.
+1. Search exports (and `data/scheduled/`) so you do not duplicate `link` / `id`. Finding candidates: [discover.md](discover.md).
 2. Read [directory-layout.md](../directory-layout.md) and [data-model.md](../data-model.md).
 3. Consumers querying data should use [ai-consumers.md](../ai-consumers.md) — do not parse YAML unless authoring.
 

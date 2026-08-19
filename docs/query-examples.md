@@ -79,6 +79,16 @@ ORDER BY name
 LIMIT 50;
 ```
 
+## Is this URL already registered?
+
+```sql
+SELECT id, name, link, catalog_type, status
+FROM catalogs
+WHERE lower(link) LIKE '%example.gov%';
+```
+
+Use this before adding a catalog. Full workflow: [discovery.md](discovery.md).
+
 ## Software table
 
 ```sql

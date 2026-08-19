@@ -20,7 +20,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
 ## Quick decision guide
 
 1. “Is there an open data portal for city X / country Y?”  
-   Use this registry: filter `catalog_type` and `coverage`.
+   Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) before adding a record.
 
 2. “Which catalogs run CKAN / GeoNetwork / Dataverse?”  
    Use this registry: filter `software.id`, or read `data/datasets/bysoftware/`.

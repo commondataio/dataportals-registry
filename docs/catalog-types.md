@@ -30,3 +30,5 @@ Controlled list: `data/reference/catalog_types.yaml` and `data/schemes/catalog.j
 - Sites that only search other catalogs → **Data search engine** (aggregators score lower on [trust-score.md](trust-score.md))
 
 If a site is both a geoportal and an open data portal, pick the **primary** user-facing product (map/CSW → geo; dataset catalog → opendata).
+
+Finding catalogs that are not in the registry yet: [discovery.md](discovery.md).

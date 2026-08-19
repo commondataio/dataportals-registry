@@ -16,6 +16,7 @@
 - [x] 3.3 Query examples (DuckDB / Parquet)
 - [x] 3.4 Agent workflows: query, contribute, OpenSpec quickstart
 - [x] 3.5 CLI reference
+- [x] 3.6 Catalog discovery: humans (`docs/discovery.md`) and agents (`docs/agents/discover.md`)
 
 ## 4. Validation
 

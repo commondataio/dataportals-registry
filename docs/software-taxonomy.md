@@ -58,3 +58,5 @@ LIMIT 20;
 ```
 
 Or read `data/datasets/bysoftware/` for pre-sliced JSONL.
+
+Matching a live site to a `software.id`: [discovery.md](discovery.md).

@@ -42,7 +42,10 @@ python scripts/re3data_enrichment.py enrich --dry-run
 python scripts/re3data_enrichment.py enrich
 python scripts/sync_ckan_ecosystem.py --dry-run
 python scripts/sync_ckan_ecosystem.py
+python scripts/apidetect.py detect-single {id} --dryrun
 ```
+
+Finding catalogs that are not yet in the registry: [discovery.md](discovery.md) (humans) and [agents/discover.md](agents/discover.md) (agents). CKAN sync details: [devdocs/ckan_ecosystem_sync.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/ckan_ecosystem_sync.md).
 
 ## Quality helpers
 

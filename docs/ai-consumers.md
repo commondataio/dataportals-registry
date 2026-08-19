@@ -92,3 +92,5 @@ Exports are regenerated with `python scripts/builder.py build`. There is no per-
 - [data-model.md](data-model.md)
 - [query-examples.md](query-examples.md)
 - [agents/query.md](agents/query.md)
+- [agents/discover.md](agents/discover.md)
+- [discovery.md](discovery.md)

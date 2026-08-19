@@ -32,3 +32,17 @@ The documentation site MUST serve the repository `llms.txt` index at a stable UR
 - **WHEN** an agent requests `llms.txt` from the GitHub Pages origin
 - **THEN** the file is available at `/dataportals-registry/llms.txt`
 - **AND** a copy is available at `/dataportals-registry/.well-known/llms.txt`
+
+### Requirement: Catalog discovery instructions
+The published documentation MUST explain how humans and agents find catalogs that are not yet in the registry, including duplicate checks against exports.
+
+#### Scenario: Human reads discovery guide
+- **WHEN** a contributor opens `docs/discovery.md`
+- **THEN** the page distinguishes querying existing records from finding unregistered catalogs
+- **AND** it lists high-yield external lists, software probe patterns, and the add-single / scheduled handoff
+
+#### Scenario: Agent follows discovery workflow
+- **WHEN** an agent opens `docs/agents/discover.md`
+- **THEN** the page requires an export duplicate check before probing the web
+- **AND** it forbids internet-wide scanning and authentication bypass
+- **AND** it hands off accepted finds to the contribute workflow

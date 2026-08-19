@@ -65,7 +65,7 @@ If you find a bug, error, or have a suggestion:
 
 ### Adding New Catalog Entries
 
-The most common contribution is adding new data catalog entries. See the [Adding New Catalog Entries](#adding-new-catalog-entries) section below for detailed instructions.
+The most common contribution is adding new data catalog entries. See [docs/discovery.md](docs/discovery.md) for how to find catalogs that are not yet in the registry, then the [Adding New Catalog Entries](#adding-new-catalog-entries) section below for how to write the YAML.
 
 ### Improving Existing Entries
 
@@ -93,6 +93,8 @@ Contributions to the codebase are welcome:
 - Test coverage
 
 ## Adding New Catalog Entries
+
+Check [docs/discovery.md](docs/discovery.md) first so you do not add a duplicate `link`. Coding agents should use [docs/agents/discover.md](docs/agents/discover.md), then [docs/agents/contribute.md](docs/agents/contribute.md).
 
 ### Method 1: Using the Script (Recommended for Quick Additions)
 

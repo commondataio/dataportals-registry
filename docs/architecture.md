@@ -62,6 +62,7 @@ Out-of-scope: production query APIs and MCP servers.
 ## Related
 
 - [directory-layout.md](directory-layout.md)
+- [discovery.md](discovery.md)
 - [exports.md](exports.md)
 - [cli.md](cli.md)
 - [metadata-quality.md](metadata-quality.md)
