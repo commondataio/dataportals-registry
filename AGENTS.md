@@ -66,6 +66,7 @@ API and MCP delivery surfaces are maintained in separate repositories. Do not pr
 | **YAML Processing** | PyYAML |
 | **Terminal UI** | rich (progress bars, tables) |
 | **Web Scraping** | beautifulsoup4 |
+| **Docs site** | Docusaurus 3 (GitHub Pages) |
 
 ---
 
@@ -109,12 +110,14 @@ dataportals-registry/
 │   ├── primary_priority.jsonl  # Machine-readable issues
 │   ├── countries/          # Per-country breakdowns
 │   └── priorities/         # By priority level
+├── docs/                   # Published internals docs (Docusaurus content)
+├── website/                # Docusaurus site (GitHub Pages)
 ├── openspec/               # OpenSpec for spec-driven dev
 │   ├── AGENTS.md           # OpenSpec instructions
 │   ├── project.md          # Project conventions
 │   ├── specs/              # Current capability specs
 │   └── changes/            # Proposed changes
-├── devdocs/                # Development documentation
+├── devdocs/                # Working notes and analysis (not the public site)
 │   ├── quality-fix-workflow.md
 │   ├── ckan_ecosystem_sync.md
 │   └── scheduled-to-entities.md
@@ -509,6 +512,13 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 ## Common Tasks for AI Agents
 
+### Task: Read or update published documentation
+
+1. Edit Markdown under `docs/` (not `devdocs/` unless it is a working note)
+2. Preview with `cd website && npm start`
+3. Agent workflows live in `docs/agents/`
+4. Site deploys from `.github/workflows/deploy-docs.yml` on `main`
+
 ### Task: Add a New Catalog Entry
 
 1. Check if catalog already exists in `data/entities/` or `data/scheduled/`
@@ -565,6 +575,8 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 ## References
 
 - [README.md](README.md) - Project overview and data sources
+- [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
+- [docs/agents/query.md](docs/agents/query.md) / [docs/agents/contribute.md](docs/agents/contribute.md) - Agent workflows
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Full contribution guidelines
 - [openspec/project.md](openspec/project.md) - Project conventions
 - [openspec/AGENTS.md](openspec/AGENTS.md) - OpenSpec instructions

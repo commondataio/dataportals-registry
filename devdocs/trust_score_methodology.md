@@ -1,3 +1,5 @@
+> Canonical published page: [`docs/trust-score.md`](../docs/trust-score.md). This file keeps the longer methodology notes.
+
 # Trust Score Methodology
 
 ## Overview
@@ -6,7 +8,7 @@ The trust score is a numerical indicator (0-100) that helps users identify more 
 
 ## Purpose
 
-The trust score addresses the need identified in [issue #50](https://github.com/commondataio/dataportals-registry/issues/50) to help users distinguish between:
+The trust score addresses the need identified in [issue #50](https://github.com/datenoio/dataportals-registry/issues/50) to help users distinguish between:
 - Highly trusted sources (academic institutions, government agencies)
 - Moderately trusted sources (NGOs, businesses)
 - Less trusted sources (community catalogs, aggregators without clear licensing)
@@ -200,7 +202,7 @@ Potential improvements to the methodology:
 
 ## References
 
-- [Issue #50: Consider methodology of trust score for data catalogs](https://github.com/commondataio/dataportals-registry/issues/50)
+- [Issue #50: Consider methodology of trust score for data catalogs](https://github.com/datenoio/dataportals-registry/issues/50)
 - [Re3Data Registry](https://www.re3data.org/)
 - [CoreTrustSeal](https://www.coretrustseal.org/)
 - [World Data System](https://www.worlddatasystem.org/)

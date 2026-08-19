@@ -12,6 +12,17 @@ This is the first pillar of the open search engine project. Other pillars includ
 
 Please take a look at [project mindmap](/assets/commondataindex.png) to see it's goals and structure.
 
+## Documentation
+
+Published internals for humans and coding agents:
+
+- Site (GitHub Pages): <https://datenoio.github.io/dataportals-registry/>
+- Source markdown: [`docs/`](docs/)
+- Agent index: [`llms.txt`](llms.txt) (also served at `/dataportals-registry/llms.txt`)
+- Local preview: `cd website && npm install && npm run start`
+
+Working notes and one-off analyses live in [`devdocs/`](devdocs/), not on the site.
+
 ## What kind of data catalogs collected?
 
 This registry includes description of the following data catalogs:
@@ -102,12 +113,12 @@ Run ```python builder.py build``` in *scripts* folder to regenerate catalogs.jso
 
 ## Data exports
 
-Latest snapshot (2026-08-18):
+Latest snapshot (2026-08-19):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): 16,276 catalog records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): 16,896 catalog records
 - `data/datasets/software.jsonl` (+ `.zst`): 148 software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): 1 scheduled source to crawl
-- `data/datasets/full.jsonl` (+ `.zst`): 16,277 combined entities + scheduled records
+- `data/datasets/scheduled.jsonl` (+ `.zst`): 0 scheduled sources to crawl
+- `data/datasets/full.jsonl` (+ `.zst`): 16,896 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 - `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
 
@@ -155,7 +166,7 @@ The repository includes tools for analyzing and validating data quality:
 - **Schema Validation**: Validation against JSON schemas in `data/schemes/`
 - **Data Quality Reports**: Analysis reports written to the `dataquality/` directory (by rule, priority, and country)
 
-Integrity-track CRITICAL/IMPORTANT issues are cleared in the current quality snapshot; remaining open findings are primarily MEDIUM enrichment-track `SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*` items. CI guards integrity-track regressions via `dataquality/baseline_counts.json`.
+CI guards integrity-track regressions via `dataquality/baseline_counts.json`.
 
 To run data quality analysis:
 
@@ -224,7 +235,7 @@ See [devdocs/ckan_ecosystem_sync.md](devdocs/ckan_ecosystem_sync.md) for detaile
 
 ## How to contribute?
 
-If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/commondataio/dataportals-registry/pulls) or write an [issue](https://github.com/commondataio/dataportals-registry/issues).
+If you find any mistake or you have an additional data catalog to add, please generate [pull request](https://github.com/datenoio/dataportals-registry/pulls) or write an [issue](https://github.com/datenoio/dataportals-registry/issues).
 
 ## Data sources
 

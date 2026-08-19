@@ -1,3 +1,5 @@
+> Working analysis note moved from `docs/`. Not part of the published documentation site.
+
 # GeoSeer Geospatial Search Engine - Comprehensive Analysis
 
 **Analysis Date:** December 2025  

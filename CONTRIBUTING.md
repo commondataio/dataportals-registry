@@ -26,7 +26,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
    ```
 3. Add the upstream repository:
    ```bash
-   git remote add upstream https://github.com/commondataio/dataportals-registry.git
+   git remote add upstream https://github.com/datenoio/dataportals-registry.git
    ```
 
 ### Development Environment Setup
@@ -46,7 +46,9 @@ Thank you for your interest in contributing to the dataportals-registry project!
 - `data/reference/` - Reference data and vocabularies
 - `scripts/` - Python scripts for building, validating, and managing the registry
 - `tests/` - Test files
-- `devdocs/` - Development documentation and analysis tools
+- `docs/` - Published documentation (source for the Docusaurus site)
+- `website/` - Docusaurus project deployed to GitHub Pages
+- `devdocs/` - Working notes and analysis tools (not published on the docs site)
 
 ## Ways to Contribute
 
@@ -54,7 +56,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 
 If you find a bug, error, or have a suggestion:
 
-1. Check if the issue already exists in the [Issues](https://github.com/commondataio/dataportals-registry/issues) page
+1. Check if the issue already exists in the [Issues](https://github.com/datenoio/dataportals-registry/issues) page
 2. If not, create a new issue with:
    - Clear description of the problem or suggestion
    - Steps to reproduce (if applicable)
@@ -78,6 +80,7 @@ You can improve existing entries by:
 Help improve documentation by:
 - Fixing typos or unclear explanations
 - Adding examples
+- Improving pages under `docs/` (the GitHub Pages site in `website/` reads that folder)
 - Improving structure and organization
 - Translating documentation
 
@@ -552,7 +555,7 @@ Reports are saved in `devdocs/` and `dataquality/` directories.
 
 If you need help or have questions:
 
-1. Check existing [Issues](https://github.com/commondataio/dataportals-registry/issues)
+1. Check existing [Issues](https://github.com/datenoio/dataportals-registry/issues)
 2. Check the [README.md](README.md) for project overview
 3. Check `devdocs/README.md` for development documentation
 4. Open a new issue with your question

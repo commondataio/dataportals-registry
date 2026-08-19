@@ -10,7 +10,7 @@ The dataportals-registry catalogs metadata about open data portals, geoportals, 
 
 ### Who created the dataset and on behalf of which entity?
 
-Maintained by the [Common Data Index](https://github.com/commondataio) community. Individual catalog records are contributed via pull requests and automated enrichment pipelines.
+Maintained by the [Dateno](https://dateno.io) / Common Data Index community. Individual catalog records are contributed via pull requests and automated enrichment pipelines.
 
 ## Composition
 
@@ -95,4 +95,4 @@ See [CITATION.cff](CITATION.cff).
 
 ## Feedback
 
-Report issues via [GitHub Issues](https://github.com/commondataio/dataportals-registry/issues). Security concerns: [SECURITY.md](SECURITY.md).
+Report issues via [GitHub Issues](https://github.com/datenoio/dataportals-registry/issues). Security concerns: [SECURITY.md](SECURITY.md).

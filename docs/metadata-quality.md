@@ -1,53 +1,54 @@
-# Metadata quality and recommended fields
+# Metadata quality
 
-This document lists **recommended** (non-required) fields that improve catalog discoverability and consistency. The schema in `data/schemes/catalog.json` defines required fields; the quality analysis in `dataquality/` flags missing or inconsistent values.
+Recommended (non-required) fields that improve discoverability. Required fields are in [data-model.md](data-model.md). The analyzer writes findings to `dataquality/`.
 
 ## Recommended fields
 
-Fill these when possible so that catalogs are easier to discover and maintain:
-
 | Field | Purpose |
-|-------|--------|
-| **description** | Short human-readable description of the catalog. Quality rules flag missing or very short descriptions. |
-| **endpoints** | API endpoints (e.g. `type: ckan`, `url: ...`) so crawlers and tools can access catalog data. |
-| **identifiers** | External IDs (e.g. wikidata, re3data, fairsharing) for linking and enrichment. |
-| **langs** | Supported languages (e.g. `id: EN`, `name: English`). |
-| **tags** | Keywords for search and filtering (e.g. `government`, `has_api`, `open data`). |
-| **topics** | Thematic classification (e.g. EU data themes: `type: eudatatheme`, `id: GOVE`, `name: Government and public sector`). |
-| **owner.link** | URL of the owning organization. |
-| **owner.location** | Full location (country and, when relevant, subregion/macroregion) for geographic discovery. |
-| **api_status** | When `api: true`, set `api_status` to `active`, `inactive`, or `uncertain`. |
+|-------|---------|
+| `description` | Human-readable summary. Missing or very short text is flagged. |
+| `endpoints` | Harvestable APIs (`type` + `url`) |
+| `identifiers` | wikidata, re3data, fairsharing, … |
+| `langs` | `{id, name}` (e.g. `EN` / `English`) |
+| `tags` | Keywords (`government`, `has_api`) |
+| `topics` | EU data themes or ISO 19115 |
+| `owner.link` | Owning organization URL |
+| `owner.location` | Country and, when relevant, subregion |
+| `api_status` | Required in practice when `api: true` (`active`, `inactive`, `uncertain`) |
 
-## Quality rules and reports
+## Reports
 
-The quality pipeline (`python scripts/builder.py analyze-quality`) writes reports under **dataquality/**.
+```bash
+python scripts/builder.py analyze-quality
+```
 
-- **dataquality/rules/** – Per-rule breakdowns (e.g. `MISSING_DESCRIPTION.txt`, `MISSING_ENDPOINTS.txt`, `MISSING_API_STATUS.txt`, `MISSING_LANGS.txt`, `MISSING_TAGS.txt`, `MISSING_TOPICS.txt`, `MISSING_OWNER_LINK.txt`, `MISSING_OWNER_LOCATION.txt`, `COVERAGE_NORMALIZATION.txt`, `TAG_HYGIENE.txt`, `SHORT_DESCRIPTION.txt`).
-- **dataquality/priorities/** – Issues grouped by priority (CRITICAL, IMPORTANT, MEDIUM, LOW).
-- **dataquality/full_report.txt** – Summary and full list of issues.
-- **dataquality/primary_priority.jsonl** – Machine-readable list of records with issues (for fix scripts and Cursor/agent workflows).
+| Path | Contents |
+|------|----------|
+| `dataquality/full_report.txt` | Human-readable summary |
+| `dataquality/full_report.jsonl` | Machine-readable issues (join on `uid`) |
+| `dataquality/primary_priority.jsonl` | CRITICAL + IMPORTANT |
+| `dataquality/baseline_counts.json` | CI regression baseline |
+| `dataquality/rules/` | Per-rule breakdowns |
+| `dataquality/priorities/` | By CRITICAL / IMPORTANT / MEDIUM / LOW |
+| `dataquality/countries/` | Per-country |
 
-See [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md) for how to fix issues and re-run validation.
+## Integrity vs enrichment
 
-## Reference vocabularies
+| Track | Examples | CI |
+|-------|----------|----|
+| Integrity | `INVALID_*`, `DUPLICATE_*`, `MISSING_ENDPOINTS` when `api: true`, path/country mismatches | Hard fail if CRITICAL/IMPORTANT counts grow |
+| Enrichment | missing topics/tags, short description, expected software endpoints | Warning only by default |
 
-Controlled values for key fields are maintained under **data/reference/**:
+## Vocabularies
 
-- **catalog_types.yaml** – Allowed `catalog_type` values.
-- **software_ids.yaml** – Canonical `software.id` values (aligned with `data/software/`).
-- **status.yaml** – Allowed `status` values (`active`, `inactive`, `scheduled`).
-- **access_modes.yaml** – Allowed `access_mode` list values (`open`, `restricted`, `limited`, `public`, `protected`, `closed`, `private`). Prefer `open` / `restricted` for new entries.
-- **owner_types.yaml** – Canonical `owner.type` values and synonym map (e.g. `University` → `Academy`).
+Under `data/reference/`:
 
-Use these when editing YAMLs or building tooling so that metadata stays consistent.
+- `catalog_types.yaml`
+- `software_ids.yaml`
+- `status.yaml`
+- `access_modes.yaml` — prefer `open` / `restricted` for new entries
+- `owner_types.yaml` — canonical values plus synonym map
 
-## Integrity vs enrichment tracks
+## Fix workflow
 
-Quality issues are split into two tracks:
-
-| Track | Examples | CI regression |
-|-------|----------|---------------|
-| **Integrity** | INVALID_*, DUPLICATE_*, MISSING_ENDPOINTS (`api: true`), directory/country mismatches | Hard fail if CRITICAL/IMPORTANT grows |
-| **Enrichment** | SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*, MISSING_TOPICS/TAGS, SHORT_DESCRIPTION | Warning only by default |
-
-See [devdocs/quality-fix-workflow.md](../devdocs/quality-fix-workflow.md).
+See [devdocs/quality-fix-workflow.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/quality-fix-workflow.md). Helper scripts: `scripts/fix_critical_issues.py`, `scripts/fix_important_issues.py`, and related `fix_*` tools.

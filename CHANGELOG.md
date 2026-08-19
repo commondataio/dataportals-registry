@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Docusaurus documentation site (`website/`) publishing `docs/` to GitHub Pages at `https://datenoio.github.io/dataportals-registry/`, with internals docs for humans and agents (query, contribute, OpenSpec).
+- Relocated working notes `geoseer-analysis.md`, `metadata-quality.md`, and `trust_score_methodology.md` from `docs/` to `devdocs/`.
+
+### Changed
+- Moved the GitHub repository from `commondataio/dataportals-registry` to `datenoio/dataportals-registry`. Old GitHub URLs redirect.
+
 ## [1.12.0] - 2026-08-18
 
-**GitHub Release**: [v1.12.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.12.0) - Published August 18, 2026
+**GitHub Release**: [v1.12.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.12.0) - Published August 18, 2026
 
 ### Added
 - **1,304 net new catalog entries** (1,318 YAML files added; 14 removed); registry source now **16,276** entities (1 scheduled).
@@ -39,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.11.0] - 2026-08-17
 
-**GitHub Release**: [v1.11.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.11.0) - Published August 17, 2026
+**GitHub Release**: [v1.11.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.11.0) - Published August 17, 2026
 
 ### Added
 - **444 net new catalog entries** (450 YAML files added; 5 existing records recategorized or replaced); registry source now **14,972** entities (1 scheduled).
@@ -56,7 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.10.0] - 2026-08-16
 
-**GitHub Release**: [v1.10.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.10.0) - Published August 16, 2026
+**GitHub Release**: [v1.10.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.10.0) - Published August 16, 2026
 
 ### Added
 - **92 net new catalog entries** (95 YAML files added, 3 recategorized); registry source now **14,528** entities (0 scheduled).
@@ -74,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.9.0] - 2026-08-10
 
-**GitHub Release**: [v1.9.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.9.0) - Published August 10, 2026
+**GitHub Release**: [v1.9.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.9.0) - Published August 10, 2026
 
 ### Added
 - Canonical `owner.type` vocabulary (`data/reference/owner_types.yaml`) with synonym map and quality rules (`OWNER_TYPE_NONCANONICAL` / `INVALID_OWNER_TYPE`).
@@ -99,7 +106,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.8.0] - 2026-06-17
 
-**GitHub Release**: [v1.8.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.8.0) - Published June 17, 2026
+**GitHub Release**: [v1.8.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.8.0) - Published June 17, 2026
 
 ### Added
 - **124 net new catalog entries** (560 added, 460 removed vs v1.7.0); export snapshot: **14,470** catalog records (entities).
@@ -118,7 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.0] - 2026-02-24
 
-**GitHub Release**: [v1.7.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.7.0) - Published February 24, 2026
+**GitHub Release**: [v1.7.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.7.0) - Published February 24, 2026
 
 ### Added
 - **1,647 new catalog entries** (net from v1.6.0); export snapshot: **14,346** catalog records (entities).
@@ -136,7 +143,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.6.0] - 2026-02-21
 
-**GitHub Release**: [v1.6.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.6.0) - Published February 21, 2026
+**GitHub Release**: [v1.6.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.6.0) - Published February 21, 2026
 
 ### Added
 - **95 new catalog entries** (including Community Statistics Yukon — community-statistics.service.yukon.ca).
@@ -153,7 +160,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.5.0] - 2026-02-12
 
-**GitHub Release**: [v1.5.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.5.0) - Published February 12, 2026
+**GitHub Release**: [v1.5.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.5.0) - Published February 12, 2026
 
 ### Changed
 - Refreshed catalog metadata across entity YAML records and rebuilt generated dataset artifacts.
@@ -165,7 +172,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.4.0] - 2026-02-09
 
-**GitHub Release**: [v1.4.0](https://github.com/commondataio/dataportals-registry/releases/tag/v1.4.0) - Published February 9, 2026
+**GitHub Release**: [v1.4.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.4.0) - Published February 9, 2026
 
 ### Added
 - **208 new catalog entries** (12,489 total catalogs, up from 12,281)

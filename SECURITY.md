@@ -8,7 +8,7 @@ Security fixes are applied to the default branch of this repository. There are n
 
 If you believe you have found a security vulnerability, please report it responsibly:
 
-1. **Preferred:** open a [GitHub Security Advisory](https://github.com/commondataio/dataportals-registry/security/advisories/new) (private disclosure).
+1. **Preferred:** open a [GitHub Security Advisory](https://github.com/datenoio/dataportals-registry/security/advisories/new) (private disclosure).
 2. **Alternative:** open a GitHub issue labeled `security` with a minimal description and request a private follow-up if the issue must stay confidential.
 
 Please include:
