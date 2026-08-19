@@ -25,6 +25,11 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -130,6 +135,9 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Dateno. dataportals-registry is part of the Dateno open-source project. Code is MIT; data and documentation are CC BY 4.0.`,
+    },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'dark'},
     },
     prism: {
       theme: prismThemes.github,
