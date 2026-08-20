@@ -3,7 +3,7 @@
 ## 1. Update CHANGELOG and README
 
 - In `CHANGELOG.md`: add a new `## [X.Y.Z] - YYYY-MM-DD` section under `[Unreleased]` with Added/Changed/Fixed/Removed entries.
-- Add a **GitHub Release** link line: `**GitHub Release**: [vX.Y.Z](https://github.com/commondataio/dataportals-registry/releases/tag/vX.Y.Z) - Published Month DD, YYYY`
+- Add a **GitHub Release** link line: `**GitHub Release**: [vX.Y.Z](https://github.com/datenoio/dataportals-registry/releases/tag/vX.Y.Z) - Published Month DD, YYYY`
 - In `README.md`: update the "Latest snapshot" date and dataset counts under **Data exports** to match the current build.
 
 ## 2. Create the release notes (optional)
@@ -22,7 +22,7 @@ git push origin vX.Y.Z
 
 ## 4. Create the GitHub release
 
-1. Go to [Releases](https://github.com/commondataio/dataportals-registry/releases).
+1. Go to [Releases](https://github.com/datenoio/dataportals-registry/releases).
 2. Click **Draft a new release**.
 3. Choose tag `vX.Y.Z`.
 4. Set title to `vX.Y.Z` (e.g. `v1.6.0`).

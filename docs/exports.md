@@ -14,7 +14,7 @@ Generated artifacts live in `data/datasets/`. Rebuild with `python scripts/build
 | `datasets.duckdb` | Tables `catalogs` and `software` |
 | `catalogs.jsonld` | Optional; `build --jsonld` |
 
-August 2026 snapshot: **16,896** catalog records, **148** software definitions.
+August 2026 snapshot: **17,718** catalog records, **192** software definitions.
 
 ## Slices
 

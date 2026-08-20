@@ -20,7 +20,7 @@ Each record describes one data catalog or repository: name, URL, owner, geograph
 
 ### How many instances?
 
-Approximately **16,276** verified entity records (August 2026), plus scheduled/unverified entries in `data/scheduled/`. Export counts are listed in [README.md](README.md#data-exports).
+Approximately **17,718** verified entity records (August 2026). The scheduled queue is empty. Export counts are listed in [README.md](README.md#data-exports).
 
 ### What data does each instance consist of?
 

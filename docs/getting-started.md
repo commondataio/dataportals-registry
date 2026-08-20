@@ -2,7 +2,7 @@
 
 dataportals-registry is a **reference-data registry** of open data portals, geoportals, scientific repositories, and related data infrastructure. Source records are YAML; consumers should prefer the exported datasets. Code is MIT; data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Latest snapshot (August 2026): **16,896** verified catalog entities and **148** software definitions.
+Latest snapshot (August 2026): **17,718** verified catalog entities and **192** software definitions.
 
 ## Fastest path (analytics)
 
