@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,14 +18,17 @@ coverage:
     subregion:
       id: RU-NVS
       name: Novosibirskaja oblast'
-description: Каталог интерактивных карт Новосибирска, включая карты по системам жизнеобеспечения,
-  здравоохранению, образованию, ЖКХ, благоустройству, культуре и другим социально
-  значимым объектам.
+description: CoGIS Portal catalog of interactive maps for Novosibirsk, covering
+  utilities, health, education, housing, amenities, culture, and other public
+  facilities. Map services remain on eLiteGIS at /elitegis/rest/services.
+endpoints:
+- type: arcgis:rest:services
+  url: https://map.novo-sibirsk.ru/elitegis/rest/services
 id: mapnovosibirskru
 langs:
 - id: RU
   name: Russian
-link: https://map.novo-sibirsk.ru
+link: https://map.novo-sibirsk.ru/portal/catalog
 name: Каталог интерактивных карт | Мой Новосибирск
 owner:
   link: https://www.novo-sibirsk.ru
@@ -49,10 +52,11 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: elitegis
-  name: eLiteGIS
+  id: cogis
+  name: CoGIS
 status: active
 tags:
+- CoGIS
 - карты
 - интерактивные карты
 - жизнеобеспечение

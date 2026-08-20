@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Official Esri Geoportal Server 3.x sandbox catalog for testing metadata
+  search, CSW, and OpenSearch interfaces.
+endpoints:
+- type: esrigeo:geoportal
+  url: https://gpt.geocloud.com/geoportal3/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://gpt.geocloud.com/geoportal3/rest/metadata/search
+- type: csw300
+  url: https://gpt.geocloud.com/geoportal3/csw
+  version: 3.0.0
+- type: atom
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:json
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: rss
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: dcatus11
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:csv
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:kml
+  url: https://gpt.geocloud.com/geoportal3/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+id: gptgeocloudcomgeoportal3
+langs:
+- id: EN
+  name: English
+link: https://gpt.geocloud.com/geoportal3
+name: Esri Geoportal Server 3.0 sandbox
+owner:
+  link: https://www.esri.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Esri
+  type: Other
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: esrigeo
+  name: Esri Geoportal Server
+status: active
+tags:
+- geospatial
+- metadata
+- sandbox
+- Esri
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00024665

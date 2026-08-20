@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Nola providing GIS
-  data and map layers via ArcGIS REST API.
+    subregion:
+      id: US-LA
+      name: Louisiana
+description: ArcGIS REST services catalog at maps.nola.gov for the City of New Orleans.
 endpoints:
 - type: arcgis:rest:info
   url: https://maps.nola.gov/server/arcgis/rest/services/info?f=pjson
@@ -29,7 +31,7 @@ langs:
 - id: EN
   name: English
 link: https://maps.nola.gov/server/arcgis/rest/services
-name: City of Nola GIS Portal
+name: City of New Orleans GIS Portal (maps.nola.gov)
 owner:
   link: https://nola.gov
   location:
@@ -40,7 +42,7 @@ owner:
     subregion:
       id: US-LA
       name: Louisiana
-  name: City of Nola
+  name: City of New Orleans
   type: Local government
 properties:
   has_doi: false

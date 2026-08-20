@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: EE
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: EE
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,38 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+[MISSING_ENDPOINTS]
+Count: 2
+Priority: IMPORTANT
+
+File: EE/Federal/opendata/keskkonnaportaalee.yaml
+Record ID: keskkonnaportaalee
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: EE/Federal/api/wwwxteeee.yaml
+Record ID: wwwxteeee
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
+Count: 1
+Priority: MEDIUM
+
+File: EE/EE-79/scientific/elurikkusee.yaml
+Record ID: elurikkusee
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 1 issue
+MISSING_ENDPOINTS: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue

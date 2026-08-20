@@ -1,15 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: TW
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 10
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 1
+Count: 2
 Priority: IMPORTANT
+
+File: TW/Federal/geo/gdxp1pcolifeorgtw.yaml
+Record ID: gdxp1pcolifeorgtw
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: TW/Federal/scientific/esgfrcecsinicaedutw.yaml
 Record ID: esgfrcecsinicaedutw
@@ -17,6 +24,59 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 7
+Priority: IMPORTANT
+
+File: TW/TW-CYI/opendata/datachiayigovtw.yaml
+Record ID: datachiayigovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/opendata/datalygovtw.yaml
+Record ID: datalygovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/opendata/datafdagovtw.yaml
+Record ID: datafdagovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/opendata/datamoagovtw.yaml
+Record ID: datamoagovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/opendata/opendataculturetw.yaml
+Record ID: opendataculturetw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/api/tdxtransportdatatw.yaml
+Record ID: tdxtransportdatatw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/Federal/scientific/portaltaibiftw.yaml
+Record ID: portaltaibiftw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
 Count: 1
@@ -32,5 +92,6 @@ Suggested Action: Add at least one endpoint because software.id='pxweb' is marke
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
+API_STATUS_MISMATCH: 2 issues
+MISSING_ENDPOINTS: 7 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue

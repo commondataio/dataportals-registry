@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 20
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Esri Geoportal Server sandbox catalog of satellite and image metadata
+  used to demonstrate large-catalog search and discovery.
+endpoints:
+- type: esrigeo:geoportal
+  url: https://gpt.geocloud.com/imagecatalog/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://gpt.geocloud.com/imagecatalog/rest/metadata/search
+- type: atom
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:json
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: rss
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: dcatus11
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:csv
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:kml
+  url: https://gpt.geocloud.com/imagecatalog/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+id: gptgeocloudcomimagecatalog
+langs:
+- id: EN
+  name: English
+link: https://gpt.geocloud.com/imagecatalog/
+name: Esri Geoportal Server image catalog
+owner:
+  link: https://www.esri.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 20
+  name: Esri
+  type: Other
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: esrigeo
+  name: Esri Geoportal Server
+status: active
+tags:
+- geospatial
+- imagery
+- metadata
+- sandbox
+- Esri
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024663

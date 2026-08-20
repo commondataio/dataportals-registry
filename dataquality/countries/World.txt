@@ -1,11 +1,58 @@
 DATA QUALITY REPORT - COUNTRY: World
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: World
-Total Records with Issues: 18
-Total Issues Found: 18
+Total Records with Issues: 25
+Total Issues Found: 26
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: DE/DE-HB/geo/ogctestbed19geodatacuberasdamancom.yaml
+Record ID: ogctestbed19geodatacuberasdamancom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/geo/dataawide.yaml
+Record ID: dataawide
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: World/indicators/comtradeplusunorg.yaml
+Record ID: comtradeplusunorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: World/geo/mapsunirest.yaml
+Record ID: mapsunirest
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: MAPS.UNI.REST
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: World/geo/mapsunirest.yaml
+Record ID: mapsunirest
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: MAPS.UNI.REST
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR]
 Count: 1
@@ -116,17 +163,6 @@ Field: endpoints
 Current Value: {'software_id': 'nesstar', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='nesstar' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG]
-Count: 1
-Priority: MEDIUM
-
-File: US/Other/ml/registryopendataaws.yaml
-Record ID: registryopendataaws
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
-Field: endpoints
-Current Value: {'software_id': 'opendatareg', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='opendatareg' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT]
 Count: 2
 Priority: MEDIUM
@@ -156,6 +192,17 @@ Field: endpoints
 Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
+Count: 1
+Priority: MEDIUM
+
+File: World/microdata/wwwredatamorg.yaml
+Record ID: wwwredatamorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM
+Field: endpoints
+Current Value: {'software_id': 'redatam', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='redatam' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI]
 Count: 1
 Priority: MEDIUM
@@ -166,6 +213,24 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI
 Field: endpoints
 Current Value: {'software_id': 'sdmxri', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='sdmxri' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE]
+Count: 2
+Priority: MEDIUM
+
+File: World/indicators/datauniceforgdvidx.yaml
+Record ID: datauniceforgdvidx
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE
+Field: endpoints
+Current Value: {'software_id': 'statsuite', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='statsuite' is marked as API-capable in software definitions
+
+File: World/indicators/childmortalityorg.yaml
+Record ID: childmortalityorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE
+Field: endpoints
+Current Value: {'software_id': 'statsuite', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='statsuite' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH]
 Count: 2
@@ -185,9 +250,23 @@ Field: endpoints
 Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
 
+[TAG_HYGIENE]
+Count: 1
+Priority: MEDIUM
+
+File: World/geo/3dnextgiscom.yaml
+Record ID: 3dnextgiscom
+Issue: TAG_HYGIENE
+Field: tags[1]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 2 issues
+MISSING_ENDPOINTS: 1 issue
+PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
@@ -196,8 +275,10 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH: 2 issues
+TAG_HYGIENE: 1 issue

@@ -18,6 +18,25 @@ coverage:
 description: Portal to geospatial data, mapping applications, and related services
   provided by the Hong Kong government.
 endpoints:
+- type: esrigeo:geoportal
+  url: https://portal.csdi.gov.hk/geoportal/rest/geoportal
+- type: esrigeo:metadata:search
+  url: https://portal.csdi.gov.hk/geoportal/rest/metadata/search
+- type: csw202
+  url: https://portal.csdi.gov.hk/geoportal/csw
+  version: 2.0.2
+- type: atom
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=atom&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:json
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=json&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: rss
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=rss&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: dcatus11
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=dcat&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:csv
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=csv&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
+- type: esrigeo:kml
+  url: https://portal.csdi.gov.hk/geoportal/opensearch?f=kml&from=1&size=10&sort=title.sort%3Aasc&esdsl=%7B%7D
 - type: sitemap
   url: https://portal.csdi.gov.hk/csdi-webpage/sitemap.txt
 id: portalcsdigovhk
@@ -43,8 +62,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: esrigeo
+  name: Esri Geoportal Server
 status: active
 tags:
 - geospatial

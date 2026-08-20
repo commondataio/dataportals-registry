@@ -1,0 +1,31 @@
+DATA QUALITY REPORT - COUNTRY: KM
+================================================================================
+Generated: 2026-08-19 14:33:57
+Country Code: KM
+Total Records with Issues: 1
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[COUNTRY_NAME_ID_MISMATCH]
+Count: 2
+Priority: MEDIUM
+
+File: KM/Federal/geo/cartocomoresorg.yaml
+Record ID: cartocomoresorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'KM', 'name': 'Comoros (the)', 'expected': 'Comoros'}
+Suggested Action: Country code 'KM' has canonical name 'Comoros'. Update name from 'Comoros (the)' to 'Comoros' for consistency.
+
+File: KM/Federal/geo/cartocomoresorg.yaml
+Record ID: cartocomoresorg
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'KM', 'name': 'Comoros (the)', 'expected': 'Comoros'}
+Suggested Action: Country code 'KM' has canonical name 'Comoros'. Update name from 'Comoros (the)' to 'Comoros' for consistency.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+COUNTRY_NAME_ID_MISMATCH: 2 issues

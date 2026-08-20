@@ -174,6 +174,31 @@ ARISTOTLEMDR_URLMAP = [
     },
 ]
 
+EVERGIS_URLMAP = [
+    # https://everpoint.github.io/api/resources/layer_list.html
+    {
+        "id": "evergis:layers",
+        "url": "/sp/layers?group=public",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "evergis:projects",
+        "url": "/sp/projects?group=public",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "evergis:tables",
+        "url": "/sp/tables?group=public",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
 NEXTGISWEB_URLMAP = [
     # https://docs.nextgis.com/docs_ngweb_dev/doc/developer/
     {
@@ -765,6 +790,7 @@ DRAFT_CATALOGS_URLMAP = {
     "fusionregistry": FUSIONREGISTRY_URLMAP,
     "aristotlemdr": ARISTOTLEMDR_URLMAP,
     "nextgisweb": NEXTGISWEB_URLMAP,
+    "evergis": EVERGIS_URLMAP,
     "vufind": VUFIND_URLMAP,
     "wordpress": WORDPRESS_URLMAP,
     "ontoportal": ONTOPORTAL_URLMAP,

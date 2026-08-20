@@ -224,7 +224,7 @@ def main() -> None:
     session = requests.Session()
     session.headers.update(
         {
-            "User-Agent": "dataportals-registry-liveness/1.0 (+https://github.com/commondataio/dataportals-registry)",
+            "User-Agent": "dataportals-registry-liveness/1.0 (+https://github.com/datenoio/dataportals-registry)",
             "Accept": "*/*",
         }
     )

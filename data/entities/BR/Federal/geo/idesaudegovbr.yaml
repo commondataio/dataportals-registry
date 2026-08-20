@@ -1,0 +1,80 @@
+access_mode:
+- open
+api: true
+api_status: uncertain
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: Spatial data infrastructure of Brazil's Ministry of Health (IDE-MS),
+  a GeoNode catalog of public-health layers aligned with INDE.
+endpoints:
+- type: wms111
+  url: https://ide.saude.gov.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://ide.saude.gov.br/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://ide.saude.gov.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://ide.saude.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: idesaudegovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://ide.saude.gov.br
+name: IDE-MS Ministério da Saúde
+owner:
+  link: https://www.gov.br/saude
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Ministério da Saúde
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geonode
+  name: GeoNode
+status: active
+tags:
+- Brazil
+- health
+- GeoNode
+- INDE
+- geospatial
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025172

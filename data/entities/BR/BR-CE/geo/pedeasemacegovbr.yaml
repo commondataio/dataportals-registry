@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    macroregion:
+      id: '005'
+      name: South America
+    subregion:
+      id: BR-CE
+      name: Ceará
+description: PEDEA environmental geoportal of Ceará's environment secretariat, with
+  GeoServer services listed in INDE.
+endpoints:
+- type: wms111
+  url: https://pedea.sema.ce.gov.br/geoserver/inde/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://pedea.sema.ce.gov.br/geoserver/inde/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://pedea.sema.ce.gov.br/geoserver/inde/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://pedea.sema.ce.gov.br/geoserver/inde/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: pedeasemacegovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://pedea.sema.ce.gov.br
+name: PEDEA SEMA Ceará
+owner:
+  link: https://www.sema.ce.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-CE
+      name: Ceará
+  name: Secretaria do Meio Ambiente e Mudança do Clima do Ceará
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Brazil
+- Ceará
+- environment
+- geoserver
+- geospatial
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025159

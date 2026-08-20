@@ -73,6 +73,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | GeoNetwork | `/srv/api`, `/srv/eng/csw` | CSW `GetCapabilities` |
 | GeoNode | `/api/layers/`, `/api/datasets/` | `/api/layers/` |
 | GeoServer | `/geoserver/ows`, `/geoserver/rest` | WMS `GetCapabilities` |
+| NetGIS Server | `/keos/`, `/Netgis7` | Page title `NetGIS Server 7`; optional `wms.ashx` GetCapabilities |
+| Sampaş WebGIS | `/KentrehberiApp/Index` | Page title contains `SAMPAŞ WEBGIS` |
+| GiSoftGis | `/GiSoftGis/#/cityguidepublic` | Angular SPA; `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması” |
+| BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
 | ArcGIS Server | `/rest/services`, `/arcgis/rest/services` | `/rest/info?f=pjson` |
 | ArcGIS Hub | `/api/search/v1`, portal sharing REST | `/api/search/v1` |
 | Dataverse | `/api/dataverses`, `/api/info/version` | `/api/info/version` |
@@ -104,6 +108,10 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 
 - GeoNetwork: `/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities`
 - GeoServer: `/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities`
+- NetGIS Server: `/Netgis7` (version title) and `/keos/` (public KEOS viewer)
+- Sampaş WebGIS: `/KentrehberiApp/Index` (title `SAMPAŞ WEBGIS`)
+- GiSoftGis: `/GiSoftGis/` (city-guide hash `#/cityguidepublic`)
+- BelsisIMS: `/Projects/{NAME}/Pages/KRH.aspx` on an `ims.` host
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 
 **Scientific**

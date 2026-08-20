@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-NY
+      name: New York
+description: Monroe County, New York ArcGIS REST services for base layers, parcels,
+  elections, 911, census, and other county GIS data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.monroecounty.gov/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.monroecounty.gov/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.monroecounty.gov/server/services?wsdl
+id: mapsmonroecountygov
+langs:
+- id: EN
+  name: English
+link: https://maps.monroecounty.gov/server/rest/services
+name: Monroe County, NY GIS REST Services
+owner:
+  link: https://www.monroecounty.gov/gis
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-NY
+      name: New York
+  name: Monroe County, New York
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- county government
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00013244

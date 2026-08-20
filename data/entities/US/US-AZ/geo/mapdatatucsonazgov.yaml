@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Tucsonaz providing
-  GIS data and map layers via ArcGIS REST API.
+    subregion:
+      id: US-AZ
+      name: Arizona
+description: ArcGIS REST services directory for City of Tucson map data.
 endpoints:
 - type: arcgis:rest:info
   url: https://mapdata.tucsonaz.gov/arcgis/rest/services/info?f=pjson
@@ -29,9 +31,9 @@ langs:
 - id: EN
   name: English
 link: https://mapdata.tucsonaz.gov/arcgis/rest/services
-name: City of Tucsonaz GIS Portal
+name: City of Tucson Map Data GIS REST Services
 owner:
-  link: https://mapdata.tucsonaz.gov
+  link: https://www.tucsonaz.gov
   location:
     country:
       id: US
@@ -40,7 +42,7 @@ owner:
     subregion:
       id: US-AZ
       name: Arizona
-  name: City of Tucsonaz
+  name: City of Tucson
   type: Local government
 properties:
   has_doi: false

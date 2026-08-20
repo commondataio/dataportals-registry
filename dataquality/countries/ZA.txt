@@ -1,11 +1,40 @@
 DATA QUALITY REPORT - COUNTRY: ZA
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: ZA
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: ZA/ZA-WC/geo/wwwgroundwaterinfoafrica.yaml
+Record ID: wwwgroundwaterinfoafrica
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/dataknpsanparksorg.yaml
+Record ID: dataknpsanparksorg
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: ZA/Federal/geo/wwwcdngiportalcoza.yaml
+Record ID: wwwcdngiportalcoza
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
 Count: 1
@@ -43,6 +72,8 @@ Suggested Action: Add at least one endpoint because software.id='superstar' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 2 issues
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR: 1 issue

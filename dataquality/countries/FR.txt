@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: FR
-Total Records with Issues: 11
-Total Issues Found: 12
+Total Records with Issues: 27
+Total Issues Found: 28
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 4
+Count: 13
 Priority: IMPORTANT
 
 File: HT/search/ayitistatsorg.yaml
@@ -17,6 +17,27 @@ Issue: API_STATUS_MISMATCH
 Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: FR/FR-OCC/geo/siggardfr.yaml
+Record ID: siggardfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-OCC/geo/lizmaplegrandnarbonnecom.yaml
+Record ID: lizmaplegrandnarbonnecom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-ARA/geo/geomeylanfr.yaml
+Record ID: geomeylanfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: FR/Federal/opendata/datasenatfr.yaml
 Record ID: datasenatfr
@@ -32,12 +53,65 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: FR/Federal/geo/dcpcnwpmeteofr.yaml
+Record ID: dcpcnwpmeteofr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: FR/Federal/scientific/esg2umrcnrmfr.yaml
 Record ID: esg2umrcnrmfr
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/metadonneesgbiffr.yaml
+Record ID: metadonneesgbiffr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/pndbfr.yaml
+Record ID: pndbfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/openobsmnhnfr.yaml
+Record ID: openobsmnhnfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-BFC/geo/lizmapsdis25fr.yaml
+Record ID: lizmapsdis25fr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-NOR/geo/atlascalvadosfr.yaml
+Record ID: atlascalvadosfr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[CATALOG_SOFTWARE_MISMATCH]
+Count: 1
+Priority: CRITICAL
+
+File: FR/Federal/scientific/pndbopendatasoftcom.yaml
+Record ID: pndbopendatasoftcom
+Issue: CATALOG_SOFTWARE_MISMATCH
+Field: catalog_type
+Current Value: catalog_type=Scientific data repository, software.id=opendatasoft
+Suggested Action: Update catalog_type to one of: 'Geoportal', 'Open data portal' to match software.id
 
 [PLACEHOLDER_TITLE]
 Count: 2
@@ -58,8 +132,15 @@ Current Value: cartes.gouv.fr
 Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
-Count: 1
+Count: 2
 Priority: MEDIUM
+
+File: FR/FR-IDF/opendata/gargesdata4citizencom.yaml
+Record ID: gargesdata4citizencom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: FR/FR-PAC/opendata/opendatanicecotedazurorg.yaml
 Record ID: opendatanicecotedazurorg
@@ -78,6 +159,42 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
 Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT]
+Count: 1
+Priority: MEDIUM
+
+File: FR/Federal/scientific/humanorganatlasesrfeu.yaml
+Record ID: humanorganatlasesrfeu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+Field: endpoints
+Current Value: {'software_id': 'icat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO]
+Count: 3
+Priority: MEDIUM
+
+File: FR/FR-PDL/geo/geomayennefrportailaccesauxdonneesdonnees.yaml
+Record ID: geomayennefrportailaccesauxdonneesdonnees
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {'software_id': 'isigeo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
+
+File: FR/FR-NOR/geo/portailgeomanchefr.yaml
+Record ID: portailgeomanchefr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {'software_id': 'isigeo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
+
+File: FR/FR-NOR/geo/mapeocalvadosfr.yaml
+Record ID: mapeocalvadosfr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {'software_id': 'isigeo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
 Count: 3
@@ -115,12 +232,27 @@ Field: endpoints
 Current Value: {'software_id': 'mapproxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapproxy' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: FR/Federal/opendata/dataenedisfr.yaml
+Record ID: dataenedisfr
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 4 issues
+API_STATUS_MISMATCH: 13 issues
+CATALOG_SOFTWARE_MISMATCH: 1 issue
 PLACEHOLDER_TITLE: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue

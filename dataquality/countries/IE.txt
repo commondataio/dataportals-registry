@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: IE
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: IE
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,19 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR]
+Count: 1
+Priority: MEDIUM
+
+File: IE/IE-D/metadata/hseiearistotlecloudio.yaml
+Record ID: hseiearistotlecloudio
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR
+Field: endpoints
+Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue

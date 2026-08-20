@@ -1,0 +1,69 @@
+DATA QUALITY REPORT - COUNTRY: EU
+================================================================================
+Generated: 2026-08-19 14:33:57
+Country Code: EU
+Total Records with Issues: 5
+Total Issues Found: 6
+
+=== ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 3
+Priority: IMPORTANT
+
+File: IT/Federal/geo/rasdamanlandsupporteu.yaml
+Record ID: rasdamanlandsupporteu
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: EU/Federal/geo/creodiasrasdamancom.yaml
+Record ID: creodiasrasdamancom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: EU/Federal/scientific/dataltereuropenet.yaml
+Record ID: dataltereuropenet
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: IT/Federal/geo/rasdamanlandsupporteu.yaml
+Record ID: rasdamanlandsupporteu
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'IT-72', 'file_admin_dir': 'Federal', 'file_path': 'IT/Federal/geo/rasdamanlandsupporteu.yaml'}
+Suggested Action: Move this record from 'Federal' to the 'IT-72' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
+
+File: EU/Federal/geo/copernicubeeu.yaml
+Record ID: copernicubeeu
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'DE-HB', 'file_admin_dir': 'Federal', 'file_path': 'EU/Federal/geo/copernicubeeu.yaml'}
+Suggested Action: Move this record from EU/Federal/ to DE/DE-HB/geo/ under data/entities (owner country DE), or remove owner.location.subregion if the record is truly federal.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COPERNICUSCDS]
+Count: 1
+Priority: MEDIUM
+
+File: EU/Federal/opendata/cdsclimatecopernicuseu.yaml
+Record ID: cdsclimatecopernicuseu
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COPERNICUSCDS
+Field: endpoints
+Current Value: {'software_id': 'copernicuscds', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='copernicuscds' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+API_STATUS_MISMATCH: 3 issues
+OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COPERNICUSCDS: 1 issue

@@ -8,17 +8,18 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: US
       name: United States
     level: 30
-    subregion: &id002
-      id: US-MS
-      name: Mississippi
     macroregion:
       id: '021'
       name: Northern America
-description: Geospatial data catalog providing arcgis server via gis.mijackson.org
+    subregion:
+      id: US-MS
+      name: Mississippi
+description: Geospatial data catalog providing ArcGIS Server services for Jackson
+  County, Mississippi.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.mijackson.org/countygis/arcgis/rest/services/info?f=pjson
@@ -31,15 +32,19 @@ langs:
 - id: EN
   name: English
 link: https://gis.mijackson.org/countygis/arcgis/rest/services
-name: Mijackson Geoportal
+name: Jackson County GIS REST Services
 owner:
-  link: https://mijackson.org
+  link: https://www.co.jackson.ms.us
   location:
-    country: *id001
+    country:
+      id: US
+      name: United States
     level: 30
-    subregion: *id002
-  name: Mijackson
-  type: Civil society
+    subregion:
+      id: US-MS
+      name: Mississippi
+  name: Jackson County
+  type: Local government
 properties:
   has_doi: false
 rights:
@@ -58,7 +63,7 @@ tags:
 - REST
 - GIS
 - County
-- arcgisserver
+- Mississippi
 - geospatial
 topics:
 - id: Imagery / Base Maps / Earth Cover

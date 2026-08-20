@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+    macroregion:
+      id: '013'
+      name: Central America
+description: CONABIO ERDAS APOLLO catalog (SSIG) publishing national biodiversity
+  and satellite image web services.
+endpoints:
+- type: wms130
+  url: http://ssig.conabio.gob.mx/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: wmts100
+  url: http://ssig.conabio.gob.mx/erdas-iws/ogc/wmts/conabio?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: 1.0.0
+id: ssigconabiogobmx
+langs:
+- id: ES
+  name: Spanish
+link: http://ssig.conabio.gob.mx/erdas-apollo
+name: CONABIO SSIG ERDAS APOLLO Catalog
+owner:
+  link: https://www.gob.mx/conabio
+  location:
+    country:
+      id: MX
+      name: Mexico
+    level: 20
+  name: Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (CONABIO)
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: erdasapollo
+  name: ERDAS APOLLO
+status: active
+tags:
+- government
+- geoportal
+- biodiversity
+- imagery
+- CONABIO
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024642

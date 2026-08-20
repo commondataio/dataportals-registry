@@ -1,21 +1,31 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA
 Priority: MEDIUM
-Total Issues Found: 1
+Total Issues Found: 2
 
 Rule: Identifies records using software.id='ramadda' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
 ES: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+landknowledgeorg: 1 issue
 repositorysocibes: 1 issue
 
 === ISSUES ===
+
+File: US/Federal/scientific/landknowledgeorg.yaml
+Record ID: landknowledgeorg
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA
+Field: endpoints
+Current Value: {"software_id": "ramadda", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ramadda' is marked as API-capable in software definitions
 
 File: ES/ES-IB/scientific/repositorysocibes.yaml
 Record ID: repositorysocibes

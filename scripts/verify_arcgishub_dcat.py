@@ -18,7 +18,7 @@ INPUT_PATH = os.path.join(_REPO_ROOT, "dev", "data", "arcgishub_working.txt")
 OUTPUT_PATH = os.path.join(_REPO_ROOT, "dev", "data", "arcgishub_verified.txt")
 
 DCAT_URL_TEMPLATE = "https://{domain}/api/feed/dcat-us/1.1.json"
-USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/commondataio/dataportals-registry)"
+USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/datenoio/dataportals-registry)"
 TIMEOUT = 15
 
 

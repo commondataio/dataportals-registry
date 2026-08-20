@@ -1,11 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: TZ
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: TZ
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
+
+[OWNER_LOCATION_SUBREGION_REQUIRED]
+Count: 1
+Priority: IMPORTANT
+
+File: TZ/Federal/microdata/ocgsgotz.yaml
+Record ID: ocgsgotz
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {'country': {'id': 'TZ', 'name': 'Tanzania'}, 'level': 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
+Count: 1
+Priority: MEDIUM
+
+File: TZ/Federal/geo/maproommeteogotz.yaml
+Record ID: maproommeteogotz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
+Field: endpoints
+Current Value: {'software_id': 'datalibrary', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SURVEYSOLUTIONS]
 Count: 1
@@ -21,4 +43,6 @@ Suggested Action: Add at least one endpoint because software.id='surveysolutions
 
 === SUMMARY BY ISSUE TYPE ===
 
+OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SURVEYSOLUTIONS: 1 issue

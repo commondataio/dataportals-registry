@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Priority: MEDIUM
-Total Issues Found: 21
+Total Issues Found: 22
 
 Rule: Identifies records using software.id='ckan' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
@@ -13,7 +13,7 @@ AR: 1 issue
 BR: 1 issue
 CC: 1 issue
 ES: 5 issues
-FR: 1 issue
+FR: 2 issues
 GR: 1 issue
 ID: 1 issue
 IN: 1 issue
@@ -40,6 +40,7 @@ www2imssgobmx: 1 issue
 datoscicymx: 1 issue
 geoinfodadosembrapabr: 1 issue
 sdiniasutarakabgoid: 1 issue
+gargesdata4citizencom: 1 issue
 opendatanicecotedazurorg: 1 issue
 mindsetccgeoinfo: 1 issue
 moguerckaninnovasurcom: 1 issue
@@ -157,6 +158,14 @@ Suggested Action: Add at least one endpoint because software.id='ckan' is marked
 File: ID/ID-SU/opendata/sdiniasutarakabgoid.yaml
 Record ID: sdiniasutarakabgoid
 Country: ID
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: FR/FR-IDF/opendata/gargesdata4citizencom.yaml
+Record ID: gargesdata4citizencom
+Country: FR
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}

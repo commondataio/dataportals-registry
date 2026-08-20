@@ -18,8 +18,9 @@ coverage:
     subregion:
       id: RU-KO
       name: Komi, Respublika
-description: Геопортальная платформа Республики Коми, предоставляющая доступ к пространственным
-  данным и сервисам на территории региона
+description: Public geoportal of the Komi Republic on GP Atlas. The catalog at
+  gis.rkomi.ru opens the Atlas map viewer at geo.rkomi.ru/viewer/. An ArcGIS
+  Server REST directory remains on the same host.
 endpoints:
 - type: arcgis:rest:services
   url: http://gis.rkomi.ru/arcgis/rest/services/?f=pjson
@@ -51,14 +52,15 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: gpatlas
+  name: GP Atlas
 status: active
 tags:
+- GP Atlas
 - geospatial
 - government
 - geoportal
-- gis
+- GIS
 topics:
 - id: REGI
   name: Regions and cities

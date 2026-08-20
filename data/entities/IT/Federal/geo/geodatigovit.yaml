@@ -20,11 +20,11 @@ description: The National Catalog for Spatial Data (RNDT) is the official catalo
   administrations, including metadata for spatial data of common interest listed in
   Annex 1 of the Ministerial Decree of 10 November 2011.
 endpoints:
-- type: customapi
-  url: https://geodati.gov.it/RNDT/rest/find/document?f=pjson
-- type: csw202
-  url: https://geodati.gov.it/RNDT/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-  version: 2.0.2
+- type: esrigeo:metadata:search
+  url: https://geodati.gov.it/RNDT/rest/metadata/search
+- type: csw300
+  url: https://geodati.gov.it/RNDT/csw
+  version: 3.0.0
 - type: opensearch
   url: https://geodati.gov.it/geoportale/eng/component/search/?id=136&Itemid=287&format=opensearch
 id: geodatigovit
@@ -52,8 +52,8 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: esrigeo
+  name: Esri Geoportal Server
 status: active
 tags:
 - geospatial

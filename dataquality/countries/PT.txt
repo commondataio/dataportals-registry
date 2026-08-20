@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: PT
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: PT
-Total Records with Issues: 6
-Total Issues Found: 6
+Total Records with Issues: 7
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
 
@@ -24,6 +24,17 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+[OWNER_LOCATION_SUBREGION_REQUIRED]
+Count: 1
+Priority: IMPORTANT
+
+File: PT/Federal/geo/pdmrevisaomunicipioarraiolospt.yaml
+Record ID: pdmrevisaomunicipioarraiolospt
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {'country': {'id': 'PT', 'name': 'Portugal'}, 'level': 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -73,6 +84,7 @@ Suggested Action: Add at least one endpoint because software.id='obibamica' is m
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 2 issues
+OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue

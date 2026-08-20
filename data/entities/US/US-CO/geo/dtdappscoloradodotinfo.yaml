@@ -8,17 +8,17 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: US
       name: United States
     level: 30
-    subregion: &id002
+    subregion:
       id: US-CO
       name: Colorado
     macroregion:
       id: '021'
       name: Northern America
-description: Geospatial data catalog providing arcgis server via dtdapps.coloradodot.info
+description: Colorado Department of Transportation ArcGIS REST services directory.
 endpoints:
 - type: arcgis:rest:info
   url: https://dtdapps.coloradodot.info/arcgis/rest/services/info?f=pjson
@@ -31,15 +31,19 @@ langs:
 - id: EN
   name: English
 link: https://dtdapps.coloradodot.info/arcgis/rest/services
-name: Dtdapps.Coloradodot Geoportal
+name: CDOT GIS REST Services
 owner:
-  link: https://dtdapps.coloradodot.info
+  link: https://www.codot.gov
   location:
-    country: *id001
+    country:
+      id: US
+      name: United States
     level: 30
-    subregion: *id002
-  name: Dtdapps.Coloradodot
-  type: Central government
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: Colorado Department of Transportation
+  type: Regional government
 properties:
   has_doi: false
 rights:

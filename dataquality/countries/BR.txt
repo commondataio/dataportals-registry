@@ -1,15 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: BR
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: BR
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 12
+Total Issues Found: 13
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 1
+Count: 4
 Priority: IMPORTANT
+
+File: BR/BR-RJ/opendata/dadosabertosrjgovbr.yaml
+Record ID: dadosabertosrjgovbr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/BR-RO/opendata/dadosrogovbr.yaml
+Record ID: dadosrogovbr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: BR/BR-RS/scientific/cedapdadosufrgsbr.yaml
 Record ID: cedapdadosufrgsbr
@@ -17,6 +31,71 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/BR-DF/opendata/dadosdfgovbr.yaml
+Record ID: dadosdfgovbr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: IMPORTANT
+
+File: BR/Federal/scientific/iptsibbrgovbrpeld.yaml
+Record ID: iptsibbrgovbrpeld
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://ipt.sibbr.gov.br/peld', 'record_ids': ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld'], 'preferred_keeper': 'iptsibbrgovbrpeld', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld']. Keep this entry and merge/delete the others.
+
+File: BR/Federal/scientific/iptsibbrgovbrpeldipt.yaml
+Record ID: iptsibbrgovbrpeldipt
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://ipt.sibbr.gov.br/peld', 'record_ids': ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld'], 'preferred_keeper': 'iptsibbrgovbrpeld', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'iptsibbrgovbrpeld' (https://ipt.sibbr.gov.br/peld). Merge or delete the other duplicate(s).
+
+[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: BR/Federal/indicators/datavivainfo.yaml
+Record ID: datavivainfo
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'BR-MG', 'file_admin_dir': 'Federal', 'file_path': 'BR/Federal/indicators/datavivainfo.yaml'}
+Suggested Action: Move this record from 'Federal' to the 'BR-MG' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
+
+[PLACEHOLDER_TITLE]
+Count: 2
+Priority: MEDIUM
+
+File: BR/Federal/scientific/iptsibbrgovbrinpa.yaml
+Record ID: iptsibbrgovbrinpa
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: INPA
+Suggested Action: Expand the portal title to be more descriptive than a few characters.
+
+File: BR/Federal/scientific/iptsibbrgovbrpeld.yaml
+Record ID: iptsibbrgovbrpeld
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: PELD
+Suggested Action: Expand the portal title to be more descriptive than a few characters.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
+Count: 1
+Priority: MEDIUM
+
+File: BR/Federal/scientific/collectorysibbrgovbr.yaml
+Record ID: collectorysibbrgovbr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+Field: endpoints
+Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -28,6 +107,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN]
+Count: 1
+Priority: MEDIUM
+
+File: BR/BR-MA/opendata/dadosmagovbr.yaml
+Record ID: dadosmagovbr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN
+Field: endpoints
+Current Value: {'software_id': 'dkan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dkan' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO]
 Count: 1
@@ -43,6 +133,11 @@ Suggested Action: Add at least one endpoint because software.id='erdasapollo' is
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
+API_STATUS_MISMATCH: 4 issues
+DUPLICATE_LINK: 2 issues
+OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 1 issue
+PLACEHOLDER_TITLE: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO: 1 issue

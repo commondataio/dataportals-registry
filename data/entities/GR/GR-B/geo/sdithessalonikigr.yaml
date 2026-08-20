@@ -11,13 +11,15 @@ coverage:
     country:
       id: GR
       name: Greece
-    level: 20
+    level: 30
     macroregion:
       id: 039
       name: Southern Europe
-description: SDI Thessaloniki Geonetwork is a spatial data catalog, likely managed
-  by the municipality or urban authority of Thessaloniki. It provides access to geospatial
-  datasets and metadata for the city.
+    subregion:
+      id: GR-B
+      name: Kentrikí Makedonía
+description: Municipal spatial data infrastructure of Thessaloniki. GET SDI Portal
+  over GeoServer and GeoNetwork, with urban planning, environmental, and GeoKPI layers.
 endpoints:
 - type: geonetwork:query
   url: https://sdi.thessaloniki.gr/geonetwork/srv/eng/q
@@ -41,8 +43,8 @@ id: sdithessalonikigr
 langs:
 - id: EL
   name: Greek
-link: https://sdi.thessaloniki.gr/geonetwork
-name: City of Thessaloniki SDI geodata catalog
+link: https://sdi.thessaloniki.gr/
+name: Thessaloniki Geoportal
 owner:
   link: https://thessaloniki.gr
   location:
@@ -53,8 +55,8 @@ owner:
     subregion:
       id: GR-B
       name: Kentrikí Makedonía
-  name: City of Thessaloniki
-  type: Regional government
+  name: Municipality of Thessaloniki
+  type: Local government
 properties:
   has_doi: true
   transferable_location: true
@@ -66,18 +68,17 @@ rights:
   rights_type: granular
   tos_url: null
 software:
-  id: geonetwork
-  name: GeoNetwork
+  id: getsdiportal
+  name: GET SDI Portal
 status: active
 tags:
 - geospatial
-- government
+- geoportal
+- municipality
+- Greece
+- GET SDI Portal
 - has_api
 - SDI
-- spatial data
-- infrastructure
-- metadata
-- catalog
 topics:
 - id: REGI
   name: Regions and cities

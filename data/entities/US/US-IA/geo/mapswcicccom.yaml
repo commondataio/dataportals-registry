@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IA
+      name: Iowa
+description: Official geospatial data services portal for Woodbury County and Sioux
+  City providing GIS data and map layers via ArcGIS REST API.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.wcicc.com/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.wcicc.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.wcicc.com/arcgis/services?wsdl
+id: mapswcicccom
+langs:
+- id: EN
+  name: English
+link: https://maps.wcicc.com/arcgis/rest/services
+name: Woodbury County GIS Portal
+owner:
+  link: https://www.woodburycountyiowa.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IA
+      name: Iowa
+  name: Woodbury County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- Iowa
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024182

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: ArcGIS REST services for the Texas Boll Weevil Eradication Foundation,
+  providing GIS data and map layers related to boll weevil eradication in Texas.
+endpoints:
+- type: arcgis:rest:info
+  url: https://esri.txbollweevil.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://esri.txbollweevil.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://esri.txbollweevil.org/arcgis/services?wsdl
+id: esritxbollweevilorg
+langs:
+- id: EN
+  name: English
+link: https://esri.txbollweevil.org/arcgis/rest/services
+name: Texas Boll Weevil Eradication Foundation GIS Portal
+owner:
+  link: https://www.txbollweevil.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas Boll Weevil Eradication Foundation
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012106

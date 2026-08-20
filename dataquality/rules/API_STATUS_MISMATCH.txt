@@ -1,82 +1,130 @@
 DATA QUALITY REPORT - RULE: API_STATUS_MISMATCH
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Issue Type: API_STATUS_MISMATCH
 Priority: IMPORTANT
-Total Issues Found: 53
+Total Issues Found: 94
 
 === SUMMARY BY COUNTRY ===
 
+AD: 1 issue
 AT: 1 issue
+AU: 1 issue
 BE: 1 issue
-BR: 1 issue
+BF: 1 issue
+BR: 4 issues
 CH: 1 issue
-CN: 4 issues
+CN: 5 issues
+CO: 1 issue
 CZ: 1 issue
-DE: 6 issues
+DE: 8 issues
 DK: 1 issue
 EE: 1 issue
 ES: 3 issues
+EU: 2 issues
 FI: 1 issue
-FR: 4 issues
+FR: 13 issues
 GR: 1 issue
+ID: 8 issues
 IE: 1 issue
-IT: 5 issues
+IT: 8 issues
 JP: 5 issues
+KH: 1 issue
 KR: 3 issues
 LK: 1 issue
 MX: 1 issue
 PT: 2 issues
 RS: 1 issue
+SE: 1 issue
+TG: 1 issue
 TH: 1 issue
-TW: 1 issue
-US: 5 issues
+TW: 2 issues
+US: 8 issues
 WS: 1 issue
+ZA: 2 issues
 
 === SUMMARY BY RECORD ===
 
+skogsdataportalenskogsstyrelsense: 1 issue
+dataonenorthwestknowledgenet: 1 issue
+dataonesensornevadaedu: 1 issue
 esgfdata1llnlgov: 1 issue
 esgfanlgov: 1 issue
 esgfdata2llnlgov: 1 issue
 aims3llnlgov: 1 issue
 wwwnceinoaagovthreddsocean: 1 issue
+opendata20170918t192802468zsdbitopendataarcgiscom: 1 issue
+collectionsgbifad: 1 issue
 wwwpensionstatbe: 1 issue
 metricsektgr: 1 issue
 esglasgaccn: 1 issue
 esgcamscmacn: 1 issue
 cmipdesstsinghuaeducn: 1 issue
 cmipfioorgcn: 1 issue
+dataencernaccn: 1 issue
 datadoiutee: 1 issue
 datasnfch: 1 issue
 ldflkgithubio: 1 issue
+wwwcolombiaenmapasgovco: 1 issue
+webgisarpasiciliait: 1 issue
 datigenovametropoliit: 1 issue
 wwwdatisalutegovit: 1 issue
+saocomputeeuracedu: 1 issue
+rasdamanlandsupporteu: 1 issue
 esgfnodecmccit: 1 issue
 esgfnode2cmccit: 1 issue
 esgfcnrhpccinecait: 1 issue
 datampsvcz: 1 issue
+gdxp1pcolifeorgtw: 1 issue
 esgfrcecsinicaedutw: 1 issue
 enaukagovrs: 1 issue
 estatisticamadeiragovpt: 1 issue
 repositoriopolenfccnpt: 1 issue
+wwwgroundwaterinfoafrica: 1 issue
+dataknpsanparksorg: 1 issue
 esgfnimscmip6apcc21org: 1 issue
 distnmlabsnuackr: 1 issue
 polarispknuackr: 1 issue
 ayitistatsorg: 1 issue
+geooneddburkinainfo: 1 issue
+nationalmapgovau: 1 issue
 unidatagvat: 1 issue
 agenda2030mx: 1 issue
+ogctestbed19geodatacuberasdamancom: 1 issue
+dataawide: 1 issue
 esgf3dkrzde: 1 issue
 esgf1dkrzde: 1 issue
 esgfdwdde: 1 issue
 eridanuseocdlrde: 1 issue
 esgf2dkrzde: 1 issue
 esgpikpotsdamde: 1 issue
+ncsdmoegovkh: 1 issue
 dmiesgf0dmidk: 1 issue
+dadosabertosrjgovbr: 1 issue
+dadosrogovbr: 1 issue
 cedapdadosufrgsbr: 1 issue
+dadosdfgovbr: 1 issue
 esgfdatacscfi: 1 issue
+opendatajatimprovgoid: 1 issue
+satudatahaltengkabgoid: 1 issue
+datasabangkotagoid: 1 issue
+satudatamanokwarikabgoid: 1 issue
+satudataluwukabgoid: 1 issue
+opendatakarokabgoid: 1 issue
+satudatataptenggoid: 1 issue
+satudatamuaraenimkabgoid: 1 issue
+siggardfr: 1 issue
+lizmaplegrandnarbonnecom: 1 issue
+geomeylanfr: 1 issue
 datasenatfr: 1 issue
 dataassembleenationalefr: 1 issue
+dcpcnwpmeteofr: 1 issue
 esg2umrcnrmfr: 1 issue
+metadonneesgbiffr: 1 issue
+pndbfr: 1 issue
+openobsmnhnfr: 1 issue
+lizmapsdis25fr: 1 issue
+atlascalvadosfr: 1 issue
 datoscorunagal: 1 issue
 datameteounicanes: 1 issue
 esgfbsces: 1 issue
@@ -86,10 +134,37 @@ esgfdata01diasjpnet: 1 issue
 esgfdata1diasjpnet: 1 issue
 esgfdata02diasjpnet: 1 issue
 esgfichecie: 1 issue
+creodiasrasdamancom: 1 issue
+dataltereuropenet: 1 issue
+collectionsafricanherbariaorg: 1 issue
 esgdn1ruacth: 1 issue
 riosamoamnregovws: 1 issue
 
 === ISSUES ===
+
+File: SE/Federal/geo/skogsdataportalenskogsstyrelsense.yaml
+Record ID: skogsdataportalenskogsstyrelsense
+Country: SE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: US/US-ID/scientific/dataonenorthwestknowledgenet.yaml
+Record ID: dataonenorthwestknowledgenet
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-NV/scientific/dataonesensornevadaedu.yaml
+Record ID: dataonesensornevadaedu
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: US/Federal/scientific/esgfdata1llnlgov.yaml
 Record ID: esgfdata1llnlgov
@@ -129,6 +204,22 @@ Country: US
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-SD/geo/opendata20170918t192802468zsdbitopendataarcgiscom.yaml
+Record ID: opendata20170918t192802468zsdbitopendataarcgiscom
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: AD/Federal/scientific/collectionsgbifad.yaml
+Record ID: collectionsgbifad
+Country: AD
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: BE/Federal/indicators/wwwpensionstatbe.yaml
@@ -179,6 +270,14 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: CN/Federal/scientific/dataencernaccn.yaml
+Record ID: dataencernaccn
+Country: CN
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: EE/Federal/scientific/datadoiutee.yaml
 Record ID: datadoiutee
 Country: EE
@@ -203,6 +302,22 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: CO/Federal/geo/wwwcolombiaenmapasgovco.yaml
+Record ID: wwwcolombiaenmapasgovco
+Country: CO
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: IT/IT-82/geo/webgisarpasiciliait.yaml
+Record ID: webgisarpasiciliait
+Country: IT
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: IT/IT-42/opendata/datigenovametropoliit.yaml
 Record ID: datigenovametropoliit
 Country: IT
@@ -218,6 +333,22 @@ Issue: API_STATUS_MISMATCH
 Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: IT/Federal/geo/saocomputeeuracedu.yaml
+Record ID: saocomputeeuracedu
+Country: IT
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IT/Federal/geo/rasdamanlandsupporteu.yaml
+Record ID: rasdamanlandsupporteu
+Country: IT
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: IT/Federal/scientific/esgfnodecmccit.yaml
 Record ID: esgfnodecmccit
@@ -251,6 +382,14 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: TW/Federal/geo/gdxp1pcolifeorgtw.yaml
+Record ID: gdxp1pcolifeorgtw
+Country: TW
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: TW/Federal/scientific/esgfrcecsinicaedutw.yaml
 Record ID: esgfrcecsinicaedutw
 Country: TW
@@ -281,6 +420,22 @@ Country: PT
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/ZA-WC/geo/wwwgroundwaterinfoafrica.yaml
+Record ID: wwwgroundwaterinfoafrica
+Country: ZA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ZA/Federal/scientific/dataknpsanparksorg.yaml
+Record ID: dataknpsanparksorg
+Country: ZA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: KR/Federal/scientific/esgfnimscmip6apcc21org.yaml
@@ -315,6 +470,22 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: BF/Federal/geo/geooneddburkinainfo.yaml
+Record ID: geooneddburkinainfo
+Country: BF
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: AU/Federal/geo/nationalmapgovau.yaml
+Record ID: nationalmapgovau
+Country: AU
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: AT/Federal/indicators/unidatagvat.yaml
 Record ID: unidatagvat
 Country: AT
@@ -329,6 +500,22 @@ Country: MX
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/DE-HB/geo/ogctestbed19geodatacuberasdamancom.yaml
+Record ID: ogctestbed19geodatacuberasdamancom
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/geo/dataawide.yaml
+Record ID: dataawide
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: DE/Federal/scientific/esgf3dkrzde.yaml
@@ -379,12 +566,36 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: KH/Federal/opendata/ncsdmoegovkh.yaml
+Record ID: ncsdmoegovkh
+Country: KH
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
 File: DK/Federal/scientific/dmiesgf0dmidk.yaml
 Record ID: dmiesgf0dmidk
 Country: DK
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/BR-RJ/opendata/dadosabertosrjgovbr.yaml
+Record ID: dadosabertosrjgovbr
+Country: BR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/BR-RO/opendata/dadosrogovbr.yaml
+Record ID: dadosrogovbr
+Country: BR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: BR/BR-RS/scientific/cedapdadosufrgsbr.yaml
@@ -395,9 +606,105 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: BR/BR-DF/opendata/dadosdfgovbr.yaml
+Record ID: dadosdfgovbr
+Country: BR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: FI/Federal/scientific/esgfdatacscfi.yaml
 Record ID: esgfdatacscfi
 Country: FI
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-JI/opendata/opendatajatimprovgoid.yaml
+Record ID: opendatajatimprovgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-MU/opendata/satudatahaltengkabgoid.yaml
+Record ID: satudatahaltengkabgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-AC/opendata/datasabangkotagoid.yaml
+Record ID: datasabangkotagoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-PB/opendata/satudatamanokwarikabgoid.yaml
+Record ID: satudatamanokwarikabgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-SN/opendata/satudataluwukabgoid.yaml
+Record ID: satudataluwukabgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-SU/opendata/opendatakarokabgoid.yaml
+Record ID: opendatakarokabgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-SU/opendata/satudatataptenggoid.yaml
+Record ID: satudatataptenggoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: ID/ID-SS/opendata/satudatamuaraenimkabgoid.yaml
+Record ID: satudatamuaraenimkabgoid
+Country: ID
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-OCC/geo/siggardfr.yaml
+Record ID: siggardfr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-OCC/geo/lizmaplegrandnarbonnecom.yaml
+Record ID: lizmaplegrandnarbonnecom
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-ARA/geo/geomeylanfr.yaml
+Record ID: geomeylanfr
+Country: FR
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
@@ -419,8 +726,56 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: FR/Federal/geo/dcpcnwpmeteofr.yaml
+Record ID: dcpcnwpmeteofr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=3
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: FR/Federal/scientific/esg2umrcnrmfr.yaml
 Record ID: esg2umrcnrmfr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/metadonneesgbiffr.yaml
+Record ID: metadonneesgbiffr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/pndbfr.yaml
+Record ID: pndbfr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/Federal/scientific/openobsmnhnfr.yaml
+Record ID: openobsmnhnfr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-BFC/geo/lizmapsdis25fr.yaml
+Record ID: lizmapsdis25fr
+Country: FR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: FR/FR-NOR/geo/atlascalvadosfr.yaml
+Record ID: atlascalvadosfr
 Country: FR
 Issue: API_STATUS_MISMATCH
 Field: api_status
@@ -497,6 +852,30 @@ Country: IE
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: EU/Federal/geo/creodiasrasdamancom.yaml
+Record ID: creodiasrasdamancom
+Country: EU
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: EU/Federal/scientific/dataltereuropenet.yaml
+Record ID: dataltereuropenet
+Country: EU
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: Africa/scientific/collectionsafricanherbariaorg.yaml
+Record ID: collectionsafricanherbariaorg
+Country: TG
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: TH/Federal/scientific/esgdn1ruacth.yaml

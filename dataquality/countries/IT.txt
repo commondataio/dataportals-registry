@@ -1,15 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: IT
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: IT
-Total Records with Issues: 8
-Total Issues Found: 8
+Total Records with Issues: 11
+Total Issues Found: 13
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 5
+Count: 8
 Priority: IMPORTANT
+
+File: IT/IT-82/geo/webgisarpasiciliait.yaml
+Record ID: webgisarpasiciliait
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: IT/IT-42/opendata/datigenovametropoliit.yaml
 Record ID: datigenovametropoliit
@@ -24,6 +31,20 @@ Issue: API_STATUS_MISMATCH
 Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: IT/Federal/geo/saocomputeeuracedu.yaml
+Record ID: saocomputeeuracedu
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: IT/Federal/geo/rasdamanlandsupporteu.yaml
+Record ID: rasdamanlandsupporteu
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: IT/Federal/scientific/esgfnodecmccit.yaml
 Record ID: esgfnodecmccit
@@ -45,6 +66,24 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: IT/Federal/geo/saocomputeeuracedu.yaml
+Record ID: saocomputeeuracedu
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'IT-32', 'file_admin_dir': 'Federal', 'file_path': 'IT/Federal/geo/saocomputeeuracedu.yaml'}
+Suggested Action: Move this record from 'Federal' to the 'IT-32' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
+
+File: IT/Federal/geo/rasdamanlandsupporteu.yaml
+Record ID: rasdamanlandsupporteu
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'IT-72', 'file_admin_dir': 'Federal', 'file_path': 'IT/Federal/geo/rasdamanlandsupporteu.yaml'}
+Suggested Action: Move this record from 'Federal' to the 'IT-72' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
 
 [RIGHTS_INCOMPLETE]
 Count: 1
@@ -82,7 +121,8 @@ Suggested Action: Add at least one endpoint because software.id='opengeoportal' 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 5 issues
+API_STATUS_MISMATCH: 8 issues
+OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 2 issues
 RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue

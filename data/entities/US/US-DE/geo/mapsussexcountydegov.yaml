@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Sussexcountyde providing
-  GIS data and map layers via ArcGIS REST API.
+    subregion:
+      id: US-DE
+      name: Delaware
+description: Sussex County ArcGIS REST services for parcels, addresses, infrastructure,
+  and other county geospatial layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://map.sussexcountyde.gov/server/arcgis/rest/services/info?f=pjson
@@ -29,9 +32,9 @@ langs:
 - id: EN
   name: English
 link: https://map.sussexcountyde.gov/server/arcgis/rest/services
-name: City of Sussexcountyde GIS Portal
+name: Sussex County GIS Server
 owner:
-  link: https://map.sussexcountyde.gov
+  link: https://sussexcountyde.gov
   location:
     country:
       id: US
@@ -40,7 +43,7 @@ owner:
     subregion:
       id: US-DE
       name: Delaware
-  name: City of Sussexcountyde
+  name: Sussex County, Delaware
   type: Local government
 properties:
   has_doi: false
@@ -60,7 +63,7 @@ tags:
 - REST
 - GIS
 - geospatial data
-- city government
+- county government
 topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for CodBus providing GIS data
-  and map layers via ArcGIS REST API.
+description: Official geospatial REST services for the City of Durango, Colorado.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis2.codb.us/arcgis/rest/services/info?f=pjson
@@ -29,19 +31,18 @@ langs:
 - id: EN
   name: English
 link: https://gis2.codb.us/arcgis/rest/services
-name: CodBus GIS Portal
+name: City of Durango GIS REST Services
 owner:
-  link: https://www.codb.us
+  link: https://www.durangogov.org
   location:
     country:
       id: US
       name: United States
     level: 30
-    name: CodBus
     subregion:
       id: US-CO
       name: Colorado
-  name: CodBus
+  name: City of Durango
   type: Local government
 properties:
   has_doi: false

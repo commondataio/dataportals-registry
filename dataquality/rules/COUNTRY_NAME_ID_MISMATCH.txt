@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: COUNTRY_NAME_ID_MISMATCH
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Issue Type: COUNTRY_NAME_ID_MISMATCH
 Priority: MEDIUM
-Total Issues Found: 4
+Total Issues Found: 8
 
 Rule: When country has both id and name, the name must match the canonical name for that country code (e.g. id=US, name=United States).
 
@@ -11,14 +11,34 @@ Rule: When country has both id and name, the name must match the canonical name 
 
 CF: 2 issues
 CG: 2 issues
+KM: 2 issues
+VE: 2 issues
 
 === SUMMARY BY RECORD ===
 
+cartocomoresorg: 2 issues
 rcongoopendataforafricaorg: 2 issues
 caropendataforafricaorg: 2 issues
+redataminegobve: 2 issues
 
 === ISSUES ===
 
+File: KM/Federal/geo/cartocomoresorg.yaml
+Record ID: cartocomoresorg
+Country: KM
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {"country_id": "KM", "name": "Comoros (the)", "expected": "Comoros"}
+Suggested Action: Country code 'KM' has canonical name 'Comoros'. Update name from 'Comoros (the)' to 'Comoros' for consistency.
+
+File: KM/Federal/geo/cartocomoresorg.yaml
+Record ID: cartocomoresorg
+Country: KM
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {"country_id": "KM", "name": "Comoros (the)", "expected": "Comoros"}
+Suggested Action: Country code 'KM' has canonical name 'Comoros'. Update name from 'Comoros (the)' to 'Comoros' for consistency.
+
 File: CG/indicators/rcongoopendataforafricaorg.yaml
 Record ID: rcongoopendataforafricaorg
 Country: CG
@@ -50,3 +70,19 @@ Issue: COUNTRY_NAME_ID_MISMATCH
 Field: coverage[0].location.country.name
 Current Value: {"country_id": "CF", "name": "Central African Republic", "expected": "Central African Republic (the)"}
 Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+File: VE/Federal/microdata/redataminegobve.yaml
+Record ID: redataminegobve
+Country: VE
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {"country_id": "VE", "name": "Venezuela", "expected": "Venezuela (Bolivarian Republic of)"}
+Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
+
+File: VE/Federal/microdata/redataminegobve.yaml
+Record ID: redataminegobve
+Country: VE
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {"country_id": "VE", "name": "Venezuela", "expected": "Venezuela (Bolivarian Republic of)"}
+Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.

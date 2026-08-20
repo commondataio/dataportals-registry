@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: ncWMS service for EMODnet gridded marine products, providing OGC WMS
+  visualization of environmental layers such as Mediterranean loggerhead turtle density
+  and Baltic total suspended matter.
+endpoints:
+- type: wms111
+  url: https://erddap.emodnet.eu/ncWMS2/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+  version: 1.1.1
+- type: wms130
+  url: https://erddap.emodnet.eu/ncWMS2/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+id: erddapemodneteuncwms
+langs:
+- id: EN
+  name: English
+link: https://erddap.emodnet.eu/ncWMS2/
+name: EMODnet ncWMS Server
+owner:
+  link: https://www.emodnet.eu
+  location:
+    country:
+      id: EU
+      name: European Union
+    level: 20
+  name: European Marine Observation and Data Network (EMODnet)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ncwms
+  name: ncWMS
+status: active
+tags:
+- ncWMS
+- WMS
+- marine data
+- oceanography
+- EMODnet
+- NetCDF
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Oceans
+  name: Oceans
+  type: iso19115
+uid: cdi00024662

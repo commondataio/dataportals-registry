@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MI
+      name: Michigan
+description: Allegan County ArcGIS REST services catalog including parcels, FEMA flood
+  hazard zones, and the county visual geographic library.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.allegancounty.org/server/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.allegancounty.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.allegancounty.org/server/services?wsdl
+id: gisallegancountyorg
+langs:
+- id: EN
+  name: English
+link: https://gis.allegancounty.org/server/rest/services
+name: Allegan County GIS REST Services
+owner:
+  link: https://www.allegancounty.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MI
+      name: Michigan
+  name: Allegan County
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Allegan County
+- Michigan
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00024526

@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id002
+      id: US-MO
+      name: Missouri
+description: MSDIS ArcGIS REST services for additional Missouri imagery beyond the
+  statewide 6-inch imagery server.
+endpoints:
+- type: arcgis:rest:info
+  url: https://imagery.msdis.missouri.edu/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://imagery.msdis.missouri.edu/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://imagery.msdis.missouri.edu/arcgis/services?wsdl
+id: imagerymsdismissouriedu
+langs:
+- id: EN
+  name: English
+link: https://imagery.msdis.missouri.edu/arcgis/rest/services
+name: MSDIS Imagery Services
+owner:
+  link: https://msdis.missouri.edu
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Missouri Spatial Data Information Service (MSDIS), University of Missouri
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- imagery
+- MSDIS
+- Missouri
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024507

@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-OK
+      name: Oklahoma
+description: ArcGIS REST services catalog of the Oklahoma Biological Survey, including
+  Oklahoma Natural Heritage Inventory layers and the Protected Areas Database of Oklahoma.
+endpoints:
+- type: arcgis:rest:info
+  url: https://obsgis.csa.ou.edu:6443/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://obsgis.csa.ou.edu:6443/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://obsgis.csa.ou.edu:6443/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://obsgis.csa.ou.edu:6443/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://obsgis.csa.ou.edu:6443/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://obsgis.csa.ou.edu:6443/arcgis/rest/services?f=kmz
+id: obsgiscsouedu
+langs:
+- id: EN
+  name: English
+link: https://obsgis.csa.ou.edu:6443/arcgis/rest/services
+name: Oklahoma Biological Survey GIS
+owner:
+  link: https://www.ou.edu/biosurvey
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-OK
+      name: Oklahoma
+  name: Oklahoma Biological Survey
+  type: Academy
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- biodiversity
+- conservation
+- Oklahoma
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Biota
+  name: Biota
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025109

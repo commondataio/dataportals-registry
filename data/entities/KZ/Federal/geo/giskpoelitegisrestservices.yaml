@@ -15,8 +15,9 @@ coverage:
     macroregion:
       id: '143'
       name: Central Asia
-description: CoGIS Server REST API providing geospatial services and data access for
-  Karachaganak Petroleum Operating operations.
+description: Public CoGIS Portal catalog for Karachaganak Petroleum Operating
+  (Экомонитор / ГИС-КПО). Map services remain on eLiteGIS at
+  /elitegis/rest/services.
 endpoints:
 - type: arcgis:rest:services
   url: https://gis.kpo.kz/elitegis/rest/services/?f=pjson
@@ -24,8 +25,8 @@ id: giskpoelitegisrestservices
 langs:
 - id: RU
   name: Russian
-link: https://gis.kpo.kz/elitegis/rest/services/
-name: KPO CoGIS Server REST API
+link: https://gis.kpo.kz/cogis
+name: KPO CoGIS catalog
 owner:
   link: https://www.kpo.kz
   location:
@@ -45,10 +46,11 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: cogis
+  name: CoGIS
 status: active
 tags:
+- CoGIS
 - geospatial
 - oil and gas
 - field monitoring

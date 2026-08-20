@@ -1,11 +1,44 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: AU
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 4
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: AU/Federal/geo/nationalmapgovau.yaml
+Record ID: nationalmapgovau
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: AU/Federal/geo/mapfindandconnectgovau.yaml
+Record ID: mapfindandconnectgovau
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: AU/Federal/geo/mapfindandconnectgovau.yaml
+Record ID: mapfindandconnectgovau
+Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
+Field: owner.location.subregion
+Current Value: {'owner_subregion_id': 'AU-VIC', 'file_admin_dir': 'Federal', 'file_path': 'AU/Federal/geo/mapfindandconnectgovau.yaml'}
+Suggested Action: Move this record from 'Federal' to the 'AU-VIC' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -32,5 +65,8 @@ Suggested Action: Add at least one endpoint because software.id='mytardis' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+MISSING_ENDPOINTS: 1 issue
+OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MYTARDIS: 1 issue

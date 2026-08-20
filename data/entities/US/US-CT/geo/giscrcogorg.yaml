@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+    macroregion:
+      id: '021'
+      name: Northern America
+description: Capitol Region Council of Governments (Hartford, Connecticut) ArcGIS
+  REST services directory.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.crcog.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.crcog.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.crcog.org/arcgis/services?wsdl
+id: giscrcogorg
+langs:
+- id: EN
+  name: English
+link: https://gis.crcog.org/arcgis/rest/services
+name: Capitol Region Council of Governments GIS REST Services
+owner:
+  link: https://crcog.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+  name: Capitol Region Council of Governments
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- CRCOG
+- Connecticut
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: temp00006076

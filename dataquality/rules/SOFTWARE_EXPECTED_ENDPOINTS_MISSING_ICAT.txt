@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+================================================================================
+Generated: 2026-08-19 14:33:57
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='icat' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FR: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+humanorganatlasesrfeu: 1 issue
+
+=== ISSUES ===
+
+File: FR/Federal/scientific/humanorganatlasesrfeu.yaml
+Record ID: humanorganatlasesrfeu
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+Field: endpoints
+Current Value: {"software_id": "icat", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions

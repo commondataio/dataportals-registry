@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: JP
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: JP
-Total Records with Issues: 5
-Total Issues Found: 5
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
@@ -46,7 +46,19 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+[TAG_HYGIENE]
+Count: 1
+Priority: MEDIUM
+
+File: JP/JP-13/geo/3dviewtokyodigitaltwinmetrotokyolgjp.yaml
+Record ID: 3dviewtokyodigitaltwinmetrotokyolgjp
+Issue: TAG_HYGIENE
+Field: tags[2]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 5 issues
+TAG_HYGIENE: 1 issue

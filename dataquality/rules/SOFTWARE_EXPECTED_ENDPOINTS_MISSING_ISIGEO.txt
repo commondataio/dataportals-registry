@@ -1,0 +1,44 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+================================================================================
+Generated: 2026-08-19 14:33:57
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='isigeo' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+FR: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+geomayennefrportailaccesauxdonneesdonnees: 1 issue
+portailgeomanchefr: 1 issue
+mapeocalvadosfr: 1 issue
+
+=== ISSUES ===
+
+File: FR/FR-PDL/geo/geomayennefrportailaccesauxdonneesdonnees.yaml
+Record ID: geomayennefrportailaccesauxdonneesdonnees
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {"software_id": "isigeo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
+
+File: FR/FR-NOR/geo/portailgeomanchefr.yaml
+Record ID: portailgeomanchefr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {"software_id": "isigeo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
+
+File: FR/FR-NOR/geo/mapeocalvadosfr.yaml
+Record ID: mapeocalvadosfr
+Country: FR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
+Field: endpoints
+Current Value: {"software_id": "isigeo", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions

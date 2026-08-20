@@ -1,0 +1,81 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: World
+      name: World
+    level: 20
+    macroregion:
+      id: World
+      name: World
+description: KB Panorama bank of digital maps and remote sensing data (GeoDB SE).
+  Publishes vector maps in SXF, elevation matrices, and related spatial datasets for
+  Russian regions and other countries, with GIS WebService SE WMS access.
+endpoints:
+- type: wmts100
+  url: https://spatialdb.net/GISWebServiceSE/service.php?SERVICE=WMTS&REQUEST=GetCapabilities&VERSION=1.0.0
+  version: 1.0.0
+- type: wms130
+  url: https://spatialdb.net/GISWebServiceSE/service.php?SERVICE=WMS&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://spatialdb.net/GISWebServiceSE/service.php?SERVICE=WFS&REQUEST=GetCapabilities
+  version: 2.0.0
+id: spatialdbnet
+langs:
+- id: RU
+  name: Russian
+- id: EN
+  name: English
+link: https://spatialdb.net/
+name: Банк пространственных данных
+owner:
+  link: https://www.gisinfo.ru
+  location:
+    country:
+      id: RU
+      name: Russian Federation
+    level: 20
+  name: KB Panorama
+  type: Business
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: giswebse
+  name: GIS WebServer SE
+status: active
+tags:
+- geospatial
+- maps
+- remote sensing
+- Panorama
+- GeoDB SE
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Elevation
+  name: Elevation
+  type: iso19115
+uid: cdi00024670

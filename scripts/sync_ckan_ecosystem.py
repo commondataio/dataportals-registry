@@ -65,7 +65,7 @@ CKAN_ECOSYSTEM_API = f"{CKAN_ECOSYSTEM_BASE}/api/3/action"
 CKAN_SITES_DATASET = "ckan-sites-metadata"
 
 # User agent for requests
-USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/commondataio/dataportals-registry)"
+USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/datenoio/dataportals-registry)"
 
 # Rate limiting: delay between requests (seconds)
 REQUEST_DELAY = 1.0

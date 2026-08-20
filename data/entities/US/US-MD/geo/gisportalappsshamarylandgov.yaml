@@ -1,0 +1,78 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-MD
+      name: Maryland
+description: Public ArcGIS Server for the Maryland Department of Transportation State
+  Highway Administration, including One Maryland One Centerline, traffic monitoring,
+  parcels, environment, and transportation services.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisportalapps.sha.maryland.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisportalapps.sha.maryland.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisportalapps.sha.maryland.gov/arcgis/services?wsdl
+id: gisportalappsshamarylandgov
+langs:
+- id: EN
+  name: English
+link: https://gisportalapps.sha.maryland.gov/arcgis/rest/services
+name: MDOT SHA GIS REST Services
+owner:
+  link: https://roads.maryland.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-MD
+      name: Maryland
+  name: MDOT State Highway Administration
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- transportation
+- Maryland
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024425

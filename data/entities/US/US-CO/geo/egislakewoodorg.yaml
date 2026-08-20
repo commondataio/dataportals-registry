@@ -8,17 +8,17 @@ content_types:
 - map_layer
 coverage:
 - location:
-    country: &id001
+    country:
       id: US
       name: United States
     level: 30
-    subregion: &id002
+    subregion:
       id: US-CO
       name: Colorado
     macroregion:
       id: '021'
       name: Northern America
-description: Geospatial data catalog providing arcgis server via egis.lakewood.org
+description: Official geospatial REST services for the City of Lakewood, Colorado.
 endpoints:
 - type: arcgis:rest:info
   url: https://egis.lakewood.org/server/arcgis/rest/services/info?f=pjson
@@ -31,15 +31,19 @@ langs:
 - id: EN
   name: English
 link: https://egis.lakewood.org/server/arcgis/rest/services
-name: Lakewood Geoportal
+name: City of Lakewood GIS REST Services
 owner:
-  link: https://egis.lakewood.org
+  link: https://www.lakewood.org
   location:
-    country: *id001
+    country:
+      id: US
+      name: United States
     level: 30
-    subregion: *id002
-  name: Lakewood
-  type: Civil society
+    subregion:
+      id: US-CO
+      name: Colorado
+  name: City of Lakewood
+  type: Local government
 properties:
   has_doi: false
 rights:

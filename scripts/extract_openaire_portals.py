@@ -58,7 +58,7 @@ OPENAIRE_OAI_PMH = f"{OPENAIRE_API_BASE}/oai"
 OPENAIRE_EXPLORE_API = "https://explore.openaire.eu"
 
 # User agent for requests
-USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/commondataio/dataportals-registry)"
+USER_AGENT = "Mozilla/5.0 (compatible; DataPortalsRegistry/1.0; +https://github.com/datenoio/dataportals-registry)"
 
 
 def query_openaire_graphql(query: str, variables: Dict = None, timeout: int = 30) -> Optional[Dict]:

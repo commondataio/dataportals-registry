@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: GeoServer catalog of ANATEL geospatial services listed in the Brazilian
+  INDE geoservices directory.
+endpoints:
+- type: wms111
+  url: https://sistemas.anatel.gov.br/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://sistemas.anatel.gov.br/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs110
+  url: https://sistemas.anatel.gov.br/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://sistemas.anatel.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+id: sistemasanatelgovbr
+langs:
+- id: PT
+  name: Portugal
+link: https://sistemas.anatel.gov.br/geoserver
+name: GeoServer ANATEL
+owner:
+  link: https://www.anatel.gov.br
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+  name: Agência Nacional de Telecomunicações (ANATEL)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: geoserver
+  name: GeoServer
+status: active
+tags:
+- Brazil
+- ANATEL
+- geoserver
+- geospatial
+- telecommunications
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Structure
+  name: Structure
+  type: iso19115
+uid: cdi00025171

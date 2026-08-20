@@ -11,12 +11,14 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
+    subregion:
+      id: US-CO
+      name: Colorado
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Frederickco providing
-  GIS data and map layers via ArcGIS REST API.
+description: Official geospatial REST services for the Town of Frederick, Colorado.
 endpoints:
 - type: arcgis:rest:info
   url: https://gis.frederickco.gov/arcgis/rest/services/info?f=pjson
@@ -29,9 +31,9 @@ langs:
 - id: EN
   name: English
 link: https://gis.frederickco.gov/arcgis/rest/services
-name: City of Frederickco GIS Portal
+name: Town of Frederick GIS REST Services
 owner:
-  link: https://frederickco.gov
+  link: https://www.frederickco.gov
   location:
     country:
       id: US
@@ -40,7 +42,7 @@ owner:
     subregion:
       id: US-CO
       name: Colorado
-  name: City of Frederickco
+  name: Town of Frederick
   type: Local government
 properties:
   has_doi: false

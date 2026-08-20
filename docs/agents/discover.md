@@ -57,6 +57,10 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | `/api/layers/` | `geonode` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
+| `/keos/` city guide plus `/Netgis7` titled NetGIS Server 7 | `netgisserver` | Geoportal |
+| `/KentrehberiApp/` titled SAMPAŞ WEBGIS | `sampaswebgis` | Geoportal |
+| `/GiSoftGis/` Angular city guide (`gi-ajax-loading-indicator`) | `gisoftgis` | Geoportal |
+| `ims.*/Projects/*/Pages/KRH.aspx` (BelsisIMS KRH) | `belsisims` | Geoportal |
 | `/rest/info?f=pjson` ArcGIS Server | `arcgisserver` | Geoportal |
 | ArcGIS Hub search API / hub site | `arcgishub` | Geoportal or Open data portal (primary UI) |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |

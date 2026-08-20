@@ -1,0 +1,73 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-FL
+      name: Florida
+description: ArcGIS REST services for the City of Ocala, Florida, providing GIS data
+  and map layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gis.ocalafl.org/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gis.ocalafl.org/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gis.ocalafl.org/arcgis/services?wsdl
+id: gisocalaflorg
+langs:
+- id: EN
+  name: English
+link: https://gis.ocalafl.org/arcgis/rest/services
+name: City of Ocala GIS Portal
+owner:
+  link: https://www.ocalafl.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-FL
+      name: Florida
+  name: City of Ocala
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Ocala
+topics:
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00024274

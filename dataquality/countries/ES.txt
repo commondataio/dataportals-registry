@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: ES
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: ES
-Total Records with Issues: 10
-Total Issues Found: 10
+Total Records with Issues: 11
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
 
@@ -31,6 +31,17 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: ES/Federal/scientific/datacellses.yaml
+Record ID: datacellses
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
 Count: 1
@@ -97,6 +108,7 @@ Suggested Action: Add at least one endpoint because software.id='ramadda' is mar
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 3 issues
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue

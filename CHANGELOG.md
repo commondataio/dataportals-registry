@@ -8,12 +8,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Catalog discovery instructions for humans (`docs/discovery.md`) and coding agents (`docs/agents/discover.md`).
+- **1,442 net new catalog entries**; registry source now **17,718** entities (0 scheduled).
+- **44 software definitions**; software catalog now **192** platforms.
 - Docusaurus documentation site (`website/`) publishing `docs/` to GitHub Pages at `https://datenoio.github.io/dataportals-registry/`, with internals docs for humans and agents (query, contribute, OpenSpec).
+- Catalog discovery instructions for humans (`docs/discovery.md`) and coding agents (`docs/agents/discover.md`).
 - Relocated working notes `geoseer-analysis.md`, `metadata-quality.md`, and `trust_score_methodology.md` from `docs/` to `devdocs/`.
+- **546 US catalogs**, including **213** geoportals (ArcGIS Hub/Server, MangoMap), **129** scientific repositories (**57 Elsevier Digital Commons**, **27 DSpace**), **121** state and local indicators catalogs (including **6 IBIS-PH**), and **79** open data portals (including Socrata).
+- **197 Japanese catalogs**, including **166 わが街ガイド (`wagmap`)** municipal and prefectural geoportals, **15 GC Navi** viewers, national GSI/MLIT/JAXA geoportals, and PLATEAU VIEW on Re:Earth (Saitama City and Osaka City).
+- **178 Chinese catalogs**, including **109** municipal and provincial open data portals, **48 Tianditu** geoportals (national, provincial, and municipal, including 8 Guangdong and 8 Henan city viewers plus Chengdu), **9** Inspur oPortal sites, national indicators (Customs, PBOC, SAFE, ChinaBond, exchanges), and microdata (CFPS, CHARLS, NBS, CNSDA).
+- **98 German catalogs**, including **34 Masterportal** community-gallery geoportals, **17 cardo** viewers, **13 NOL-IS** municipal portals, **6 map.apps**, and **5 GENESIS-Online** statistical databases.
+- **76 GeoMapFish geoportals**, mostly Swiss cantonal and Vaud geocommunes viewers, plus Liechtenstein, Saint-Pierre (Réunion), Grand Châtellerault, and Pro Natura.
+- **56 Turkish municipal geoportals**: **20** NetGIS Server / KEOS city guides, **12 GiSoftGis**, **7 Sampaş WebGIS**, and **3 BelsisIMS**, after live checks against vendor reference lists.
+- **32 NADA microdata catalogs** (national statistical archives in Africa, Latin America, and Asia, including AFRISTAT, LSB Lao, Lesotho BOS, ENADA, LISGIS, and INE Honduras).
+- **30 Greek geoportals**: **25 GET SDI Portal** municipal and regional viewers (Crete, Heraklion, Chania, Corfu, Piraeus, DAFNI island SDI, Central Macedonia, HNMS Climatic Atlas, and others) and **4 GIS4Smart** Epirus municipal viewers.
+- **26 Brazil geoportals** from INDE geoservices and related SDI lists (ANATEL, SGB/CPRM, IPHAN, IBGE Censo 2022, FUNAI, IDE-MS, IDEA-SP, Minas Gerais, Fortaleza, IDE Bahia, Projeto Brumadinho, IDE-DF) plus **22 MapBiomas** land-cover platforms across Brazil, Latin America, and Antarctica.
+- **24 Italian catalogs**, including Regione Marche and Calabria CKAN, Napoli and Modena open data, Liguria/Calabria/Basilicata RSDI, AGEA, and **6 MapStore** geoportals (Bolzano, Genova, Arno basin, Toscana).
+- **18 ERDAS Apollo** image-catalog geoportals (Madrid, Aragón, BRIN SpaceMap, Sachsenforst, CONABIO, and others).
+- **16 MapStore** geoportals (Italy, Portugal Azores municipalities, CRAIG, Moldova GEODATA, Austro Control, Regionalverband Ruhr).
+- **16 Seoul Open Data Plaza** district catalogs (Jongno-gu through Seocho-gu).
+- **5 Czech LKOD** open data catalogs (ČHMÚ, Liberec, Zlín, Ústecký kraj, and Orlová).
+- **12 SciCat** scientific catalogs (ESS, MAX IV, ALS, DESY, RFI, HZDR, ILL) and **7 FAIRDOM-SEEK** instances (FAIRDOMHub, ELIXIR Belgium, IBISBA, LiSyM, Leipzig Health Atlas, MeDIZ.Rostock, ArmLifeBank).
+- **10 Omega-PSIR** Polish scientific catalogs that publish research datasets, **10 Axiom Data Science Portal** catalogs (IOOS, MBON, CeNCOOS, SCCOOS, CalOOS-related, AOOS, SoundCoop, ADAC), and **7 InvenioRDM** repositories (Münster, Tübingen, Freiburg, Bamberg, KTH, plus existing CU Anschutz retag).
+- **9 ActiveMap GIS** geoportals in Russia and Kirov Oblast GP Atlas; **3 Geometa** GIS OGD portals (Omsk, Murmansk, Tyumen); EverGIS Online.
+- **3 SuperMap iPortal** geoportals: SuperMap Online, the official iPortal demo, and the Heilongjiang Tianditu iPortal resource catalog.
+- **3 Copernicus DHuS** national Sentinel catalogs: Finland FINHub, Greece Hellenic National Sentinel Data Hub, and Poland IMGW Copernicus hub.
+- Additional catalogs for **Canada** (British Columbia, Ontario, Nunavut geoportals; CMHC housing-market indicators), **Nicaragua**, **Venezuela**, **Mongolia**, **Azerbaijan**, **United Kingdom** (verified geoportals promoted from scheduled), and Moscow city GIS, open data, and budget sites.
+- Promoted **22 verified catalogs** from scheduled to entities after live checks, including UK geoportals, DataLad catalogs and hubs, GIS OGD portals for Omsk, Murmansk, and Tyumen, UFMG Projeto Brumadinho GeoNode, IDE-DF ArcGIS Server, and the Slovak GeoMINV geoportal.
+- Software definitions for shared geoportal products: わが街ガイド (`wagmap`), GC Navi (`gcnavi`), Re:Earth (`reearth`), GET SDI Portal (`getsdiportal`), GIS4Smart (`gis4smart`), GeoMapFish (`geomapfish`), MapBiomas (`mapbiomas`), NOL-IS (`nolis`), mf-geoadmin3 (`mfgeoadmin3`), cardo (`cardo`), map.apps (`mapapps`), InGrid (`ingrid`), MangoMap (`mangomap`), Copernicus DHuS (`copernicusdhus`), MapStore (`mapstore`), Masterportal (`masterportal`), SuperMap iPortal (`supermapiportal`), Tianditu (`tianditu`), NetGIS Server (`netgisserver`), Sampaş WebGIS (`sampaswebgis`), GiSoftGis (`gisoftgis`), BelsisIMS (`belsisims`), CoGIS (`cogis`), GP Atlas (`gpatlas`), Geonomics (`geonomics`), DATUM GIS (`datumgis`), InGeo (`ingeo`), Farvater GIS OGD (`farvatergisogd`), EverGIS (`evergis`), Geometa (`geometa`).
+- Software definitions for shared scientific, open data, and indicators products: NYU Data Catalog (`nyudatacatalog`), Axiom Data Science Portal (`axiomportal`), SciCat (`scicat`), FAIRDOM-SEEK (`seek`), Open Science Framework (`osf`), GIN (`gin`), PHAIDRA (`phaidra`), Seoul Open Data Plaza (`seoulopendataplaza`), Our Open Data (`ouropendata`), MODA Open Data Platform (`modaopendata`), LKOD (`lkod`), JDOP (`jdop`), GENESIS-Online (`genesisonline`), IBIS-PH (`ibisph`).
 
 ### Changed
 - Moved the GitHub repository from `commondataio/dataportals-registry` to `datenoio/dataportals-registry`. Old GitHub URLs redirect.
+- Cleared the scheduled queue (22 promoted, 31 removed). `data/scheduled/` is now empty.
+- Recategorized **252** misplaced catalogs, mostly US state, Federal, Other, Unknown, and World path corrections (including a large Oregon `.org` geoportal batch that belonged in other states; NPGeo Corona → Germany; MLIT data hub → Japan; IGG-CIGEO Hub → Nicaragua; GRID Nigeria GeoNetwork → Nigeria).
+- Recategorized catalog types where needed (THREDDS/OPeNDAP and academic repositories → scientific; Lexington/Louisville → open data; Maine public health → indicators).
+- Refreshed metadata on **485** existing catalogs.
+- Retagged 15 Japan geoportals from custom to わが街ガイド (`wagmap`), Shizuoka Prefecture GIS to GC Navi, and PLATEAU VIEW to Re:Earth.
+- Retagged seven CoGIS Portal catalogs from eLiteGIS to CoGIS and pointed `link` at the portal catalog. eLiteGIS REST endpoints are kept.
+- Retagged RAE GeoPortal and Thessaloniki SDI to GET SDI Portal; Arkhangelsk forest dispatcher, Komi geoportal, and GIS OGD sites onto GP Atlas / Geometa; RGIS Novosibirsk region and Yamal ЕКС to CoGIS.
+- Reclassified nine Kazakhstan regional geoportals from custom to Geonomics, and four Russia geoportals previously tagged custom to NextGIS Web, ORBISMap, and DATUM GIS.
+- Reclassified custom catalogs onto existing and new shared-product IDs across geoportals (GeoMapFish, MapBiomas, NOL-IS, mf-geoadmin3, cardo, map.apps, InGrid, MangoMap, Copernicus DHuS, MapStore, Masterportal), scientific repositories (NYU Data Catalog, Axiom, SciCat, FAIRDOM-SEEK, OSF, GIN, PHAIDRA, DSpace, Dataverse, Hyrax, InvenioRDM, DataONE), and open data portals (Seoul Open Data Plaza, Our Open Data, MODA, LKOD, JDOP, CKAN, OpenDataSoft).
+- Retagged three Taiwan MODA catalogs (Taoyuan URL updated from dead `data.tycg.gov.tw`), Prague open data from CKAN to LKOD, and Shizuoka/Ehime/Kakegawa from CKAN to Our Open Data.
+- Merged the duplicate Zhejiang provincial JDOP catalog `datazjgovcn` (`data.zj.gov.cn`, which redirects to `data.zjzwfw.gov.cn`) into `datazjzwfwgovcn`.
+- Regenerated dataset exports: **17,718** catalog records (entities); 192 software definitions; 0 scheduled.
+
+### Fixed
+- Rehomed four Ohio geoportals that were filed under the wrong place: CAGIS Open Data Hub (`data-cagisportal.opendata.arcgis.com`) from Unknown/California, Lorain County GIS Open Data from California, Butler County Auditor GIS REST from Oregon, and NEORSD GIS REST from South Dakota.
+
+### Removed
+- **16 catalog entries** removed (ArcGIS Hub templates and copies, Socrata demo sites, duplicate or inactive Hawaii GIS endpoints, and the duplicate Zhejiang JDOP catalog `datazjgovcn`).
+- Dropped **31 scheduled catalogs** that timed out, returned 403, required login for listing, or could not be verified as a public catalog: Turkish municipal Sampaş WebGIS and GiSoftGis city guides, remaining Brazilian INDE candidates, several Russian GIS OGD/InGeo/CoGIS sites (including Terrascop, Yakutsk, and Bashkortostan), ATRIS, DataLad Edu Hub, and the Sainsbury Wellcome Centre GIN instance.
 
 ## [1.12.0] - 2026-08-18
 

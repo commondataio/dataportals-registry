@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: CR
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: CR
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
 
@@ -32,7 +32,19 @@ Field: endpoints
 Current Value: {'software_id': 'junar', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='junar' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
+Count: 1
+Priority: MEDIUM
+
+File: CR/Federal/microdata/sistemasineccrbininecmm.yaml
+Record ID: sistemasineccrbininecmm
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM
+Field: endpoints
+Current Value: {'software_id': 'redatam', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='redatam' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue

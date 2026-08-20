@@ -11,12 +11,15 @@ coverage:
     country:
       id: US
       name: United States
-    level: 20
+    level: 30
     macroregion:
       id: '021'
       name: Northern America
-description: Official geospatial data services portal for City of Arc providing GIS
-  data and map layers via ArcGIS REST API.
+    subregion:
+      id: US-IN
+      name: Indiana
+description: ArcGIS image services hosted for Indiana state GIS, including statewide
+  imagery layers.
 endpoints:
 - type: arcgis:rest:info
   url: https://di-ingov.img.arcgis.com/arcgis/rest/services/info?f=pjson
@@ -29,9 +32,9 @@ langs:
 - id: EN
   name: English
 link: https://di-ingov.img.arcgis.com/arcgis/rest/services
-name: City of Arc GIS Portal
+name: Indiana GIS Image Services
 owner:
-  link: https://di-ingov.img.arcgis.com
+  link: https://www.in.gov/gis
   location:
     country:
       id: US
@@ -40,8 +43,8 @@ owner:
     subregion:
       id: US-IN
       name: Indiana
-  name: City of Arc
-  type: Local government
+  name: Indiana Geographic Information Office
+  type: Regional government
 properties:
   has_doi: false
 rights:

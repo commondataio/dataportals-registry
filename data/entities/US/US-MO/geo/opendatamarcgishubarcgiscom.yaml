@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion: &id002
+      id: US-MO
+      name: Missouri
+description: Mid-America Regional Council open data portal for Kansas City region
+  datasets, interactive maps, dashboards, and stories.
+endpoints:
+- type: dcatap201
+  url: https://opendata-marc-gis.hub.arcgis.com/api/feed/dcat-ap/2.0.1.json
+- type: dcatus11
+  url: https://opendata-marc-gis.hub.arcgis.com/api/feed/dcat-us/1.1.json
+- type: rss
+  url: https://opendata-marc-gis.hub.arcgis.com/api/feed/rss/2.0
+- type: ogcrecordsapi
+  url: https://opendata-marc-gis.hub.arcgis.com/api/search/v1
+- type: sitemap
+  url: https://opendata-marc-gis.hub.arcgis.com/sitemap.xml
+id: opendatamarcgishubarcgiscom
+langs:
+- id: EN
+  name: English
+link: https://opendata-marc-gis.hub.arcgis.com/
+name: MARC Open Data Portal
+owner:
+  link: https://www.marc.org
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mid-America Regional Council
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: https://www.esri.com/en-us/privacy/overview
+  rights_type: granular
+  tos_url: https://www.esri.com/en-us/legal/terms/full-master-agreement
+software:
+  id: arcgishub
+  name: ArcGIS Hub
+status: active
+tags:
+- GIS
+- Kansas City
+- Missouri
+- MARC
+- open data
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00024509

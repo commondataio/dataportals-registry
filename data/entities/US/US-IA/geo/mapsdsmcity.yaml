@@ -1,0 +1,71 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-IA
+      name: Iowa
+description: City of Des Moines ArcGIS REST services directory for public GIS map
+  layers, including external and utility services used with city mapping applications.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.dsm.city/p2/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.dsm.city/p2/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.dsm.city/p2/services?wsdl
+id: mapsdsmcity
+langs:
+- id: EN
+  name: English
+link: https://maps.dsm.city/p2/rest/services
+name: City of Des Moines GIS REST Services
+owner:
+  link: https://www.dsm.city
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-IA
+      name: Iowa
+  name: City of Des Moines
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- geospatial data
+- Iowa
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00024194

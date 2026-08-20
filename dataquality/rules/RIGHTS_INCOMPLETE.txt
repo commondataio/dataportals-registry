@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: RIGHTS_INCOMPLETE
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Issue Type: RIGHTS_INCOMPLETE
 Priority: MEDIUM
-Total Issues Found: 4
+Total Issues Found: 5
 
 Rule: Identifies records whose rights object has only one of license_id, license_name, or license_url. Add at least two of these fields so license information is complete and unambiguous.
 
@@ -13,15 +13,25 @@ BG: 1 issue
 CH: 1 issue
 IT: 1 issue
 KR: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+wwwdgsudeledu: 1 issue
 datasnfch: 1 issue
 meteohubagenziaitaliameteoit: 1 issue
 openassemblygokr: 1 issue
 sofiaplanbg: 1 issue
 
 === ISSUES ===
+
+File: US/US-DE/geo/wwwdgsudeledu.yaml
+Record ID: wwwdgsudeledu
+Country: US
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {"license_id": null, "license_name": null, "license_url": "https://www.dgs.udel.edu/about-this-site", "privacy_policy_url": null, "rights_type": "global", "tos_url": "https://www.dgs.udel.edu/about-this-site"}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 File: CH/Federal/opendata/datasnfch.yaml
 Record ID: datasnfch

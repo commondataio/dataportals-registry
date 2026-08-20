@@ -18,8 +18,9 @@ coverage:
     subregion:
       id: RU-ARK
       name: Arhangel'skaja oblast'
-description: Картографический обозреватель «АТЛАС». geoportal. managed by Arkhangelsk
-  region administration. powered by GeoServer. accessible at fires.dvinaland.ru.
+description: Public GP Atlas catalog of the Arkhangelsk IAS «Лесной диспетчер»
+  forest-fire monitoring system. The Atlas UI is at fires.dvinaland.ru; map
+  services remain on GeoServer at /geoserver.
 endpoints:
 - type: wms111
   url: https://fires.dvinaland.ru/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
@@ -49,8 +50,8 @@ id: firesdvinalandru
 langs:
 - id: RU
   name: Russian
-link: https://fires.dvinaland.ru/geoserver/web/
-name: ATLAS cartographic module geoserver
+link: https://fires.dvinaland.ru/
+name: ИАС «Лесной диспетчер» Архангельской области
 owner:
   link: https://www.dvinaland.ru
   location:
@@ -73,14 +74,24 @@ rights:
   rights_type: inapplicable
   tos_url: null
 software:
-  id: geoserver
-  name: GeoServer
+  id: gpatlas
+  name: GP Atlas
 status: active
 tags:
-- geoserver
-- data catalog
+- GP Atlas
+- geospatial
+- government
+- geoportal
+- GIS
+- forest fires
 topics:
 - id: REGI
   name: Regions and cities
   type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
 uid: cdi00004769

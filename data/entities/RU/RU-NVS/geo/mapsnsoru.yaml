@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,12 +18,17 @@ coverage:
     subregion:
       id: RU-NVS
       name: Novosibirskaja oblast'
-description: REST Endpoint for GIS data services hosted by NSO.
+description: Regional Geographic Information System of Novosibirsk Oblast (RGIS
+  NSO) published as a CoGIS Portal catalog of interactive maps. Map services
+  remain on ArcGIS Server at /arcgis3/rest/services.
+endpoints:
+- type: arcgis:rest:services
+  url: https://maps.nso.ru/arcgis3/rest/services
 id: mapsnsoru
 langs:
 - id: RU
   name: Russian
-link: https://maps.nso.ru/arcgis3/rest/services
+link: https://maps.nso.ru
 name: Novosibirsk regional geoinformation system
 owner:
   link: https://www.nso.ru
@@ -47,12 +52,15 @@ rights:
   rights_type: global
   tos_url: null
 software:
-  id: arcgisserver
-  name: ArcGIS Server
+  id: cogis
+  name: CoGIS
 status: active
 tags:
+- CoGIS
+- geospatial
+- government
+- GIS
 - ArcGIS
-- REST
 topics:
 - id: REGI
   name: Regions and cities

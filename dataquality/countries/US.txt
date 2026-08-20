@@ -1,15 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: US
 ================================================================================
-Generated: 2026-08-17 20:03:50
+Generated: 2026-08-19 14:33:57
 Country Code: US
-Total Records with Issues: 23
-Total Issues Found: 23
+Total Records with Issues: 77
+Total Issues Found: 543
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 5
+Count: 8
 Priority: IMPORTANT
+
+File: US/US-ID/scientific/dataonenorthwestknowledgenet.yaml
+Record ID: dataonenorthwestknowledgenet
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-NV/scientific/dataonesensornevadaedu.yaml
+Record ID: dataonesensornevadaedu
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: US/Federal/scientific/esgfdata1llnlgov.yaml
 Record ID: esgfdata1llnlgov
@@ -45,6 +59,3681 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-SD/geo/opendata20170918t192802468zsdbitopendataarcgiscom.yaml
+Record ID: opendata20170918t192802468zsdbitopendataarcgiscom
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+[COVERAGE_NORMALIZATION]
+Count: 84
+Priority: IMPORTANT
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.level
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add level field to coverage location
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Suggested Action: Add macroregion information to coverage location
+
+[DUPLICATE_COVERAGE]
+Count: 4
+Priority: LOW
+
+File: US/US-NJ/geo/gisdatadrbcopendataarcgiscom.yaml
+Record ID: gisdatadrbcopendataarcgiscom
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {'location': {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'macroregion': {'id': '021', 'name': 'Northern America'}, 'subregion': {'id': 'US-NJ', 'name': 'New Jersey'}}}
+Suggested Action: Remove duplicate coverage entry
+
+File: US/US-NJ/geo/gisdatadrbcopendataarcgiscom.yaml
+Record ID: gisdatadrbcopendataarcgiscom
+Issue: DUPLICATE_COVERAGE
+Field: coverage[2]
+Current Value: {'location': {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'macroregion': {'id': '021', 'name': 'Northern America'}, 'subregion': {'id': 'US-NY', 'name': 'New York'}}}
+Suggested Action: Remove duplicate coverage entry
+
+File: US/US-NJ/geo/gisdatadrbcopendataarcgiscom.yaml
+Record ID: gisdatadrbcopendataarcgiscom
+Issue: DUPLICATE_COVERAGE
+Field: coverage[3]
+Current Value: {'location': {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'macroregion': {'id': '021', 'name': 'Northern America'}, 'subregion': {'id': 'US-PA', 'name': 'Pennsylvania'}}}
+Suggested Action: Remove duplicate coverage entry
+
+File: US/US-NH/geo/keys2thevalleyuvlsrpchubarcgiscom.yaml
+Record ID: keys2thevalleyuvlsrpchubarcgiscom
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {'location': {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'macroregion': {'id': '021', 'name': 'Northern America'}, 'subregion': {'id': 'US-VT', 'name': 'Vermont'}}}
+Suggested Action: Remove duplicate coverage entry
+
+[MISSING_DESCRIPTION]
+Count: 42
+Priority: MEDIUM
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_DESCRIPTION
+Field: description
+Current Value: This is a temporary record with some data collected but it should be updated befor adding to the index
+Suggested Action: Add meaningful description based on portal content and purpose
+
+[MISSING_LANGS]
+Count: 42
+Priority: MEDIUM
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 42
+Priority: LOW
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_OWNER_NAME]
+Count: 42
+Priority: IMPORTANT
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_OWNER_NAME
+Field: owner.name
+Current Value: 
+Suggested Action: Add owner organization name
+
+[MISSING_OWNER_TYPE]
+Count: 42
+Priority: IMPORTANT
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_OWNER_TYPE
+Field: owner.type
+Current Value: Unknown
+Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+
+[MISSING_REQUIRED_FIELD]
+Count: 42
+Priority: CRITICAL
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_REQUIRED_FIELD
+Field: owner.name
+Current Value: {'link': None, 'location': {'country': {'id': 'US', 'name': 'United States'}}, 'name': '', 'type': 'Unknown'}
+Suggested Action: Add required field: owner.name
+
+[MISSING_TAGS]
+Count: 42
+Priority: LOW
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 42
+Priority: LOW
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[OWNER_LOCATION_SUBREGION_REQUIRED]
+Count: 1
+Priority: IMPORTANT
+
+File: US/US-AK/scientific/goanceasucsbedu.yaml
+Record ID: goanceasucsbedu
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location.subregion
+Current Value: {'file_admin_dir': 'US-AK', 'owner_subregion_id': None, 'file_path': 'US/US-AK/scientific/goanceasucsbedu.yaml'}
+Suggested Action: Record is in subregion directory 'US-AK' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='US-AK' and name, or move the file to Federal.
+
+[PLACEHOLDER_TITLE]
+Count: 89
+Priority: MEDIUM
+
+File: US/US-WV/geo/wwwmapwvgov.yaml
+Record ID: wwwmapwvgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: MapWV.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/US-WV/geo/wwwmapwvgov.yaml
+Record ID: wwwmapwvgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: MapWV.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.glendaleca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataglendalecagov.yaml
+Record ID: dataglendalecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.glendaleca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.chico.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datachicogov.yaml
+Record ID: datachicogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.chico.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cccounty.us
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacccountyus.yaml
+Record ID: datacccountyus
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cccounty.us
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.calpoly.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacalpolyedu.yaml
+Record ID: datacalpolyedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.calpoly.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/wwwusaspendinggov.yaml
+Record ID: wwwusaspendinggov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: USAspending.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/wwwusaspendinggov.yaml
+Record ID: wwwusaspendinggov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: USAspending.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofirvine.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Record ID: datacityofirvineorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofirvine.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsacramento.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Record ID: datacityofsacramentoorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsacramento.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santabarca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datasantabarcagov.yaml
+Record ID: datasantabarcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santabarca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ocgov.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataocgovcom.yaml
+Record ID: dataocgovcom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ocgov.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.mountainview.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datamountainviewgov.yaml
+Record ID: datamountainviewgov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.mountainview.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.carlsbadca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Record ID: datacarlsbadcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.carlsbadca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.fresnocounty.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Record ID: datafresnocountycagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.fresnocounty.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.imperialcounty.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Record ID: dataimperialcountyorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.imperialcounty.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.anaheim.net
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataanaheimnet.yaml
+Record ID: dataanaheimnet
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.anaheim.net
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.dmv.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datadmvcagov.yaml
+Record ID: datadmvcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.dmv.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santa-clarita.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Record ID: datasantaclaritacom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santa-clarita.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ontarioca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataontariocagov.yaml
+Record ID: dataontariocagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ontarioca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsanrafael.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Record ID: datacityofsanrafaelorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsanrafael.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.torranceca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datatorrancecagov.yaml
+Record ID: datatorrancecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.torranceca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.toaks.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datatoaksorg.yaml
+Record ID: datatoaksorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.toaks.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kerncounty.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datakerncountycom.yaml
+Record ID: datakerncountycom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.kerncounty.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santaclara.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datasantaclaragov.yaml
+Record ID: datasantaclaragov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.santaclara.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.caltrans.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacaltranscagov.yaml
+Record ID: datacaltranscagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.caltrans.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.huntingtonbeachca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Record ID: datahuntingtonbeachcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.huntingtonbeachca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsantamaria.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Record ID: datacityofsantamariaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofsantamaria.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.abag.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataabagcagov.yaml
+Record ID: dataabagcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.abag.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.sunnyvale.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Record ID: datasunnyvalecagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.sunnyvale.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.redding.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datareddinggov.yaml
+Record ID: datareddinggov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.redding.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.srcity.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datasrcityorg.yaml
+Record ID: datasrcityorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.srcity.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tularecounty.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datatularecountycagov.yaml
+Record ID: datatularecountycagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.tularecounty.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofdavis.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Record ID: datacityofdavisorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofdavis.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityoffullerton.com
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Record ID: datacityoffullertoncom
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityoffullerton.com
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ucop.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataucopedu.yaml
+Record ID: dataucopedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ucop.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.countyofventura.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Record ID: datacountyofventuraorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.countyofventura.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.bayareametro.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/databayareametrogov.yaml
+Record ID: databayareametrogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.bayareametro.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.arb.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataarbcagov.yaml
+Record ID: dataarbcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.arb.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.caloes.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacaloescagov.yaml
+Record ID: datacaloescagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.caloes.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.fresno.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datafresnogov.yaml
+Record ID: datafresnogov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.fresno.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.onehealth.california.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Record ID: dataonehealthcaliforniagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.onehealth.california.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.burbankca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/databurbankcagov.yaml
+Record ID: databurbankcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.burbankca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ucdavis.edu
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/dataucdavisedu.yaml
+Record ID: dataucdavisedu
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.ucdavis.edu
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cdph.ca.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacdphcagov.yaml
+Record ID: datacdphcagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cdph.ca.gov
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofpetaluma.org
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Record ID: datacityofpetalumaorg
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: data.cityofpetaluma.org
+Suggested Action: Replace domain/path-based title with a descriptive portal name.
+
+File: US/US-GA/opendata/opengagov.yaml
+Record ID: opengagov
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: Open.Georgia.gov
+Suggested Action: Use a human-readable portal title instead of a URL/domain string.
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: US/US-DE/geo/wwwdgsudeledu.yaml
+Record ID: wwwdgsudeledu
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': None, 'license_url': 'https://www.dgs.udel.edu/about-this-site', 'privacy_policy_url': None, 'rights_type': 'global', 'tos_url': 'https://www.dgs.udel.edu/about-this-site'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 1
+Priority: MEDIUM
+
+File: US/US-CA/opendata/livingatlasarcgiscom.yaml
+Record ID: livingatlasarcgiscom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -101,17 +3790,6 @@ Field: endpoints
 Current Value: {'software_id': 'junar', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='junar' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG]
-Count: 1
-Priority: MEDIUM
-
-File: US/Other/ml/registryopendataaws.yaml
-Record ID: registryopendataaws
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG
-Field: endpoints
-Current Value: {'software_id': 'opendatareg', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='opendatareg' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL]
 Count: 6
 Priority: MEDIUM
@@ -157,6 +3835,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL
 Field: endpoints
 Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA]
+Count: 1
+Priority: MEDIUM
+
+File: US/Federal/scientific/landknowledgeorg.yaml
+Record ID: landknowledgeorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA
+Field: endpoints
+Current Value: {'software_id': 'ramadda', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ramadda' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SMW]
 Count: 1
@@ -208,16 +3897,766 @@ Field: endpoints
 Current Value: {'software_id': 'socrata', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='socrata' is marked as API-capable in software definitions
 
+[TAG_HYGIENE]
+Count: 1
+Priority: MEDIUM
+
+File: US/US-NC/scientific/morphosourceorg.yaml
+Record ID: morphosourceorg
+Issue: TAG_HYGIENE
+Field: tags[1]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 5 issues
+API_STATUS_MISMATCH: 8 issues
+COVERAGE_NORMALIZATION: 84 issues
+DUPLICATE_COVERAGE: 4 issues
+MISSING_DESCRIPTION: 42 issues
+MISSING_LANGS: 42 issues
+MISSING_OWNER_LINK: 42 issues
+MISSING_OWNER_NAME: 42 issues
+MISSING_OWNER_TYPE: 42 issues
+MISSING_REQUIRED_FIELD: 42 issues
+MISSING_TAGS: 42 issues
+MISSING_TOPICS: 42 issues
+OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue
+PLACEHOLDER_TITLE: 89 issues
+RIGHTS_INCOMPLETE: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELSEVIERDIGITALCOMMONS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESRIGEO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATAREG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 6 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SMW: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SOCRATA: 5 issues
+TAG_HYGIENE: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: dataglendalecagov
+File: US/Federal/opendata/dataglendalecagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datachicogov
+File: US/Federal/opendata/datachicogov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacccountyus
+File: US/Federal/opendata/datacccountyus.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacalpolyedu
+File: US/Federal/opendata/datacalpolyedu.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofirvineorg
+File: US/Federal/opendata/datacityofirvineorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofsacramentoorg
+File: US/Federal/opendata/datacityofsacramentoorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datasantabarcagov
+File: US/Federal/opendata/datasantabarcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataocgovcom
+File: US/Federal/opendata/dataocgovcom.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datamountainviewgov
+File: US/Federal/opendata/datamountainviewgov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacarlsbadcagov
+File: US/Federal/opendata/datacarlsbadcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datafresnocountycagov
+File: US/Federal/opendata/datafresnocountycagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataimperialcountyorg
+File: US/Federal/opendata/dataimperialcountyorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataanaheimnet
+File: US/Federal/opendata/dataanaheimnet.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datadmvcagov
+File: US/Federal/opendata/datadmvcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datasantaclaritacom
+File: US/Federal/opendata/datasantaclaritacom.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataontariocagov
+File: US/Federal/opendata/dataontariocagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofsanrafaelorg
+File: US/Federal/opendata/datacityofsanrafaelorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datatorrancecagov
+File: US/Federal/opendata/datatorrancecagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datatoaksorg
+File: US/Federal/opendata/datatoaksorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datakerncountycom
+File: US/Federal/opendata/datakerncountycom.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datasantaclaragov
+File: US/Federal/opendata/datasantaclaragov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacaltranscagov
+File: US/Federal/opendata/datacaltranscagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datahuntingtonbeachcagov
+File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofsantamariaorg
+File: US/Federal/opendata/datacityofsantamariaorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataabagcagov
+File: US/Federal/opendata/dataabagcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datasunnyvalecagov
+File: US/Federal/opendata/datasunnyvalecagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datareddinggov
+File: US/Federal/opendata/datareddinggov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datasrcityorg
+File: US/Federal/opendata/datasrcityorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datatularecountycagov
+File: US/Federal/opendata/datatularecountycagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofdavisorg
+File: US/Federal/opendata/datacityofdavisorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityoffullertoncom
+File: US/Federal/opendata/datacityoffullertoncom.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataucopedu
+File: US/Federal/opendata/dataucopedu.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacountyofventuraorg
+File: US/Federal/opendata/datacountyofventuraorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: databayareametrogov
+File: US/Federal/opendata/databayareametrogov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataarbcagov
+File: US/Federal/opendata/dataarbcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacaloescagov
+File: US/Federal/opendata/datacaloescagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datafresnogov
+File: US/Federal/opendata/datafresnogov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataonehealthcaliforniagov
+File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: databurbankcagov
+File: US/Federal/opendata/databurbankcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: dataucdavisedu
+File: US/Federal/opendata/dataucdavisedu.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacdphcagov
+File: US/Federal/opendata/datacdphcagov.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: datacityofpetalumaorg
+File: US/Federal/opendata/datacityofpetalumaorg.yaml
+Issue Count: 12
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_DESCRIPTION: description
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_NAME: owner.name
+  - MISSING_OWNER_TYPE: owner.type
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_REQUIRED_FIELD: owner.name
+  - COVERAGE_NORMALIZATION: coverage[0].location.level
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - PLACEHOLDER_TITLE: name
+  - PLACEHOLDER_TITLE: name
+
+Record ID: gisdatadrbcopendataarcgiscom
+File: US/US-NJ/geo/gisdatadrbcopendataarcgiscom.yaml
+Issue Count: 3
+Issues:
+  - DUPLICATE_COVERAGE: coverage[1]
+  - DUPLICATE_COVERAGE: coverage[2]
+  - DUPLICATE_COVERAGE: coverage[3]

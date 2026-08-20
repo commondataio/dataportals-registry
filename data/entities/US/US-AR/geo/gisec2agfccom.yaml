@@ -1,0 +1,83 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-AR
+      name: Arkansas
+description: ArcGIS REST services for Arkansas Game and Fish Commission wildlife
+  management areas, fisheries, facilities, and related map layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://gisec2.agfc.com/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://gisec2.agfc.com/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://gisec2.agfc.com/arcgis/services?wsdl
+id: gisec2agfccom
+langs:
+- id: EN
+  name: English
+link: https://gisec2.agfc.com/arcgis/rest/services
+name: AGFC GIS REST Services
+owner:
+  link: https://www.agfc.com
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-AR
+      name: Arkansas
+  name: Arkansas Game and Fish Commission
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- wildlife
+- Arkansas
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: AGRI
+  name: Agriculture, fisheries, forestry and food
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Inland Waters
+  name: Inland Waters
+  type: iso19115
+- id: Biota
+  name: Biota
+  type: iso19115
+uid: temp00006051
