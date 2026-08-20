@@ -91,7 +91,7 @@ const sections: DocSection[] = [
       {
         to: '/docs/exports',
         label: 'Exports',
-        description: 'JSONL, Parquet, DuckDB, and sliced dumps.',
+        description: 'JSONL, Parquet, and DuckDB exports.',
       },
       {
         to: '/docs/metadata-quality',

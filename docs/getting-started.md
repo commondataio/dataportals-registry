@@ -41,15 +41,14 @@ con.execute("SELECT count(*) FROM 'data/datasets/full.parquet'").fetchone()
 
 - `data/datasets/catalogs.jsonl` — one JSON object per verified catalog
 - `data/datasets/full.parquet` — same records, analytics-friendly
-- `data/datasets/bytype/` and `data/datasets/bysoftware/` — pre-sliced JSONL
 
-Decompress `.zst` files with `unzstd file.zst`.
+Decompress `.zst` files with `unzstd file.zst`. Filter by type or software with DuckDB ([query-examples.md](query-examples.md)).
 
 ## Authoring path (YAML)
 
 Edit source YAML only when adding or correcting a catalog:
 
-1. Place the file at `data/entities/{COUNTRY}/{type}/{id}.yaml`
+1. Place the file at `data/entities/{COUNTRY}/{Federal|SUBREGION}/{type}/{id}.yaml` (see [directory-layout.md](directory-layout.md))
 2. Match `id` to the filename (lowercase letters and digits only)
 3. Run `python scripts/builder.py assign` if `uid` is missing
 4. Validate with `python scripts/builder.py validate-yaml --id {id}`

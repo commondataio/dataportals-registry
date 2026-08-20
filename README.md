@@ -93,9 +93,8 @@ Latest snapshot (2026-08-20):
 - `data/datasets/scheduled.jsonl` (+ `.zst`): 0 scheduled sources to crawl
 - `data/datasets/full.jsonl` (+ `.zst`): 17,718 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
-- `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports by catalog type or platform
 
-All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB exports can be queried directly with `duckdb` or Python's `duckdb` package.
+All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB exports can be queried directly with `duckdb` or Python's `duckdb` package. Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
 
 ## Discovery
 
@@ -117,8 +116,7 @@ How to find catalogs **already in this registry**:
 
 **From export artifacts**  
 - **catalogs.jsonl** / **full.jsonl**: line-delimited JSON (entities only, or entities + scheduled).  
-- **full.parquet**, **data/datasets/datasets.duckdb**: for analytics; query with DuckDB or pandas.  
-- **data/datasets/bytype/** and **data/datasets/bysoftware/**: pre-sliced JSONL by catalog type or software platform.
+- **full.parquet**, **data/datasets/datasets.duckdb**: for analytics; query with DuckDB or pandas.
 
 Example DuckDB query (all CKAN catalogs in the US from the full export). The built DuckDB store normalizes nested fields to JSON strings, so filter on the `software` and `coverage` string columns:
 

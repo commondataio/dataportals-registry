@@ -67,7 +67,7 @@ The registry is organized as a collection of YAML files that will eventually be 
     - `ml/` - Machine learning catalogs
     - `search/` - Data search engine
     - `api/` - API Catalogs
-    - `marketplace/` - Data marketplaceы
+    - `marketplace/` - Data marketplace
     - `other/` - Other types
 - **Scripts**:
   - Main build script: `scripts/builder.py`
@@ -78,7 +78,7 @@ The registry is organized as a collection of YAML files that will eventually be 
   - Compressed with zstd (`.zst` files)
   - DuckDB format for analytics
   - Parquet format for data analysis
-  - Sliced exports by type and software in `data/datasets/bytype/` and `data/datasets/bysoftware/`
+  - Filter by catalog type or software via DuckDB / Parquet queries (no `bytype/` / `bysoftware/` slice directories)
 
 ### Testing Strategy
 - **Framework**: pytest with pytest-cov for coverage

@@ -12,7 +12,7 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 
 | Path | Rule |
 |------|------|
-| `data/entities/{CC}/{Federal\|SUB}/ {type}/{id}.yaml` | Verified records; filename = `id` |
+| `data/entities/{CC}/{Federal\|SUB}/{type}/{id}.yaml` | Verified records; filename = `id` |
 | `data/scheduled/` | Unverified; promote later ([scheduled.md](../scheduled.md)) |
 | `data/software/` | Platform definitions ([software-taxonomy.md](../software-taxonomy.md)) |
 | `data/datasets/` | **Generated only** — never hand-edit |

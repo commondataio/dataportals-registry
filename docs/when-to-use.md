@@ -23,7 +23,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
    Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) before adding a record.
 
 2. “Which catalogs run CKAN / GeoNetwork / Dataverse?”  
-   Use this registry: filter `software.id`, or read `data/datasets/bysoftware/`.
+   Use this registry: filter `software.id` in DuckDB / Parquet ([query-examples.md](query-examples.md)).
 
 3. “Give me the API URL to harvest.”  
    Use this registry: read `endpoints[]` and `api_status`. Then harvest the remote catalog.

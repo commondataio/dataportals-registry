@@ -17,6 +17,9 @@ Stored on YAML as `trust_score` and `trust_score_components` when calculated. Mi
 | Civil society | 15 |
 | Business | 10 |
 | Community | 5 |
+| Federal government, Other, unknown | 0 |
+
+`Federal government` is a valid canonical owner type but is not scored in the current formula (treats as 0).
 
 ### Catalog type (−10 to +10)
 
@@ -26,7 +29,10 @@ Stored on YAML as `trust_score` and `trust_score_components` when calculated. Mi
 | Open data portal, Geoportal, Indicators, Microdata | +5 |
 | Data marketplace | −5 |
 | Data search engine (aggregator) | −10 |
-| ML catalog, API Catalog, Other | 0 |
+| ML catalog, API Catalog, Metadata catalog, Other | 0 |
+| Datasets list, General research repository (unlisted) | 0 |
+
+Types absent from the scorer map also score **0**.
 
 ### License / rights (−15 to +15)
 

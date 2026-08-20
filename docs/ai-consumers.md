@@ -33,7 +33,6 @@ Do **not** expect:
 | JSONL entities | `data/datasets/catalogs.jsonl` (+ `.zst`) |
 | JSONL + scheduled | `data/datasets/full.jsonl` |
 | Software definitions | `data/datasets/software.jsonl` and DuckDB table `software` |
-| Slices | `data/datasets/bytype/`, `data/datasets/bysoftware/` |
 | YAML source | `data/entities/**/*.yaml` — **authoring only** |
 
 Prefer DuckDB or Parquet over parsing thousands of YAML files.

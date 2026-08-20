@@ -16,10 +16,9 @@ Generated artifacts live in `data/datasets/`. Rebuild with `python scripts/build
 
 August 2026 snapshot: **17,718** catalog records, **192** software definitions.
 
-## Slices
+Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 
-- `data/datasets/bytype/` — JSONL per catalog type
-- `data/datasets/bysoftware/` — JSONL per `software.id`
+Incidental files such as `software_stats.csv` or `fulldbreg.parquet` may appear in `data/datasets/` from older tooling — prefer the primary dumps above.
 
 ## Compression
 

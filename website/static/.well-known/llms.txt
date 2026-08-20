@@ -35,8 +35,9 @@ Run `python scripts/builder.py build` to regenerate.
 - `data/datasets/catalogs.jsonl` (+ `.zst`): entity records only
 - `data/datasets/full.jsonl` (+ `.zst`, `.parquet`, `datasets.duckdb`): entities + scheduled
 - `data/datasets/software.jsonl`: software definitions
-- `data/datasets/bytype/`, `data/datasets/bysoftware/`: sliced JSONL exports
 - `data/datasets/catalogs.jsonld`: optional JSON-LD export (`python scripts/builder.py build --jsonld`)
+
+Filter by catalog type or `software.id` in DuckDB / Parquet; there are no `bytype/` or `bysoftware/` slice directories.
 
 ## Quality and monitoring
 

@@ -178,7 +178,7 @@ link: https://catalog.data.gov        # URL to catalog
 catalog_type: Open data portal        # One of the allowed types
 access_mode:                          # List of access modes
   - open
-status: active                        # active, inactive, or scheduled
+status: active                        # active, inactive, scheduled, or deprecated
 software:                             # Software platform info
   id: ckan
   name: CKAN
@@ -210,7 +210,7 @@ Schema is defined in `data/schemes/catalog.json` using Cerberus format. Key vali
 
 - `access_mode`: Must be list of "open" or "restricted"
 - `catalog_type`: Must be one of the allowed types (see table above)
-- `status`: Must be "active", "inactive", or "scheduled"
+- `status`: Must be "active", "inactive", "scheduled", or "deprecated"
 - `software`: Must have `id` and `name` subfields
 - `owner`: Must have `name`, `type`, and `location` with country info
 - `uid`: Format `cdi########` for entities, `temp########` for scheduled
