@@ -87,7 +87,7 @@ Software platform is inferred or contributor-supplied and may be outdated after 
 
 ### Scope
 
-This repository is **reference data only**. Runtime query APIs and MCP servers are maintained in separate repositories.
+This repository is **reference data only**. Runtime search is [dateno-api](https://github.com/datenoio/dateno-api); harvesting catalog contents is [reaper](https://github.com/datenoio/reaper). MCP servers are not part of this repository.
 
 ## Citation
 

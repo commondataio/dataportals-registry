@@ -48,6 +48,16 @@ const sections: DocSection[] = [
         label: 'CLI',
         description: 'builder.py commands for build, validate, and quality.',
       },
+      {
+        to: '/docs/scheduled',
+        label: 'Scheduled entries',
+        description: 'Promote unverified YAML from scheduled to entities.',
+      },
+      {
+        to: '/docs/releasing',
+        label: 'Releases',
+        description: 'Tag, changelog, and GitHub release checklist.',
+      },
     ],
   },
   {
@@ -74,6 +84,11 @@ const sections: DocSection[] = [
         description: 'Platform IDs, categories, and subtypes.',
       },
       {
+        to: '/docs/vocabularies',
+        label: 'Vocabularies',
+        description: 'Geographic levels, identifiers, endpoints, topics.',
+      },
+      {
         to: '/docs/exports',
         label: 'Exports',
         description: 'JSONL, Parquet, DuckDB, and sliced dumps.',
@@ -84,15 +99,35 @@ const sections: DocSection[] = [
         description: 'Recommended fields and quality-report tracks.',
       },
       {
+        to: '/docs/quality-rules',
+        label: 'Quality issue types',
+        description: 'Every analyze-quality code, track, and fix hint.',
+      },
+      {
         to: '/docs/trust-score',
         label: 'Trust score',
         description: '0–100 scoring components and interpretation.',
       },
     ],
   },
-  {
-    title: 'Query examples',
-    items: [
+    {
+      title: 'Pipelines',
+      items: [
+        {
+          to: '/docs/re3data',
+          label: 'Re3Data enrichment',
+          description: 'Fill _re3data from re3data.org identifiers.',
+        },
+        {
+          to: '/docs/ckan-sync',
+          label: 'CKAN ecosystem sync',
+          description: 'Import CKAN sites from ecosystem.ckan.org.',
+        },
+      ],
+    },
+    {
+      title: 'Query examples',
+      items: [
       {
         to: '/docs/query-examples',
         label: 'DuckDB / Parquet',

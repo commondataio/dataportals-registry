@@ -31,7 +31,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 
 **In:** catalog identity, owner, coverage, software, endpoints, identifiers.
 
-**Out:** dataset records inside a portal; production search API/MCP in this repo.
+**Out:** dataset records inside a portal; production search API/MCP in this repo ([dateno-api](https://github.com/datenoio/dateno-api)).
 
 ## Canonical queries
 

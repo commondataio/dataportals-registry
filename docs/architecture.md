@@ -57,7 +57,7 @@ flowchart LR
 
 In-scope: YAML records, schema/validation, enrichment, quality analysis, dataset exports.
 
-Out-of-scope: production query APIs and MCP servers.
+Out-of-scope: production query APIs and MCP servers ([dateno-api](https://github.com/datenoio/dateno-api) and related Dateno services).
 
 ## Related
 
@@ -66,3 +66,5 @@ Out-of-scope: production query APIs and MCP servers.
 - [exports.md](exports.md)
 - [cli.md](cli.md)
 - [metadata-quality.md](metadata-quality.md)
+- [re3data.md](re3data.md)
+- [ckan-sync.md](ckan-sync.md)

@@ -13,8 +13,8 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 | Path | Rule |
 |------|------|
 | `data/entities/{CC}/{Federal\|SUB}/ {type}/{id}.yaml` | Verified records; filename = `id` |
-| `data/scheduled/` | Unverified; promote later |
-| `data/software/` | Platform definitions |
+| `data/scheduled/` | Unverified; promote later ([scheduled.md](../scheduled.md)) |
+| `data/software/` | Platform definitions ([software-taxonomy.md](../software-taxonomy.md)) |
 | `data/datasets/` | **Generated only** — never hand-edit |
 
 ## New catalog checklist
@@ -57,4 +57,6 @@ Validate a single file with `--file path/to/file.yaml`. Run full `validate-yaml`
 
 ## Quality
 
-If `analyze-quality` flags the record, follow [metadata-quality.md](../metadata-quality.md). Integrity-track issues (invalid enums, duplicates, path mismatches) must be fixed; enrichment-track gaps are optional in the same PR.
+If `analyze-quality` flags the record, follow [metadata-quality.md](../metadata-quality.md) and [quality-rules.md](../quality-rules.md). Integrity-track issues (invalid enums, duplicates, path mismatches) must be fixed; enrichment-track gaps are optional in the same PR.
+
+New shared platforms: [software-taxonomy.md](../software-taxonomy.md#adding-a-software-definition).

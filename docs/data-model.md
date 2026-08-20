@@ -1,6 +1,6 @@
 # Data model
 
-Each catalog is one YAML document validated against `data/schemes/catalog.json` (Cerberus). JSON Schema with descriptions: `data/schemes/catalog.schema.json`. DCAT/schema.org mappings: `data/schemes/catalog.context.jsonld`.
+Each catalog is one YAML document validated against `data/schemes/catalog.json` (Cerberus). JSON Schema with descriptions: `data/schemes/catalog.schema.json`. DCAT/schema.org mappings: `data/schemes/catalog.context.jsonld` ([exports.md](exports.md#json-ld--dcat)). Vocabularies: [vocabularies.md](vocabularies.md).
 
 ## Required fields
 
@@ -30,7 +30,18 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 | `api` / `api_status` | Set together when an API exists |
 | `owner.link` | Owning organization URL |
 | `content_types` | e.g. `dataset`, `map_layer` |
-| `rights` | license / ToS / privacy URLs |
+| `rights` | `license_id`, `license_name`, `license_url`, `rights_type`, `tos_url`, `privacy_policy_url` |
+
+## Optional / enrichment fields
+
+| Field | Purpose |
+|-------|---------|
+| `properties` | Flags such as `has_doi`, `is_national`, `transferable_topics`, `transferable_location`, `unfinished` |
+| `catalog_export` | Export/syndication label (e.g. `CKAN API`) |
+| `trust_score` / `trust_score_components` | Optional 0–100 score; see [trust-score.md](trust-score.md) |
+| `_re3data` | Re3Data payload; see [re3data.md](re3data.md) |
+
+Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](scheduled.md) promotion.
 
 ## Owner
 
@@ -40,7 +51,7 @@ Canonical `owner.type` values (see `data/reference/owner_types.yaml`):
 
 Synonyms such as `University` → `Academy` are accepted by quality checks but new entries should use canonical values.
 
-`owner.location.level` is a geographic level code (commonly `20` national, `30` subnational). Regional/local owners should use level `30` and a matching subregion directory.
+`owner.location.level` uses the same scale as coverage: **20 national, 30+ subnational** (higher = more local). Regional/local owners need level 30 or higher and a matching subregion directory. Full table: [vocabularies.md](vocabularies.md#geographic-levels).
 
 ## Coverage location
 
@@ -59,7 +70,7 @@ coverage:
       name: California
 ```
 
-`level` is numeric. Subregion `id` uses ISO 3166-2 style when the catalog is not national.
+`level` is numeric (higher = more local). Subregion `id` uses ISO 3166-2 style when the catalog is not national. Identifier and endpoint vocabularies: [vocabularies.md](vocabularies.md).
 
 ## Endpoints
 

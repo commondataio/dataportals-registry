@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, and CKAN ecosystem sync.
+- CLI reference now covers all `builder.py` commands; software taxonomy lists all 12 subtypes and a new-platform checklist.
+- JSON-LD/DCAT field mapping table and DuckDB column inventory on the exports page.
+
+### Changed
+- README catalog example uses `software.{id,name}` and geographic `level` 20; CONTRIBUTING requires Python 3.9–3.12 and canonical owner types.
+- JSON Schema `location.level` description: higher numbers are more local (20 national, 30+ subnational).
+- `llms.txt` indexes the full published docs set.
+
 ## [1.13.0] - 2026-08-20
 
 **GitHub Release**: [v1.13.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.13.0) - Published August 20, 2026

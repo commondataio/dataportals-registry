@@ -554,10 +554,12 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 ### Task: Add New Software Definition
 
+Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-definition).
+
 1. Check existing software in `data/software/`
-2. Create new YAML file with software metadata
-3. Update `scripts/constants.py` if needed for mappings
-4. Run `python scripts/builder.py build` to regenerate
+2. Create new YAML file with software metadata (`type: Software`, `category`, `subtype`)
+3. Update `data/reference/software_ids.yaml` / `scripts/constants.py` if needed
+4. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`
 5. Validate and test
 
 ---
@@ -583,8 +585,10 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 - [README.md](README.md) - Project overview and data sources
 - [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
-- [docs/agents/query.md](docs/agents/query.md) / [docs/agents/contribute.md](docs/agents/contribute.md) - Agent workflows
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Full contribution guidelines
+- [docs/data-model.md](docs/data-model.md) / [docs/vocabularies.md](docs/vocabularies.md) / [docs/quality-rules.md](docs/quality-rules.md) / [docs/cli.md](docs/cli.md)
+- [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md)
+- [llms.txt](llms.txt) - Agent index of published docs
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Human contribution guidelines
 - [openspec/project.md](openspec/project.md) - Project conventions
 - [openspec/AGENTS.md](openspec/AGENTS.md) - OpenSpec instructions
-- [devdocs/quality-fix-workflow.md](devdocs/quality-fix-workflow.md) - Quality fix procedures
+- [docs/metadata-quality.md](docs/metadata-quality.md) - Quality reports and fix loop

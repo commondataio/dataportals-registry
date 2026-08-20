@@ -19,9 +19,24 @@ Software records declare:
 - `category` — domain family, aligned with catalog types (Open data portal, Geoportal, Scientific data repository, …)
 - `subtype` — product form, for cross-category comparison
 
-Typical subtypes include `data_portal_platform`, `managed_saas_service`, and `protocol_or_api_server`. Use `subtype` to compare self-hosted platforms vs managed SaaS vs protocol-first components.
+Typical subtypes:
 
-Human-readable category notes: `data/software/types.yaml`.
+| `subtype` | Use for |
+|-----------|---------|
+| `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData) |
+| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub |
+| `microdata_catalog_platform` | NADA, NESSTAR, REDATAM |
+| `indicators_data_platform` | PxWeb, OpenSDG, Knoema |
+| `metadata_registry_platform` | Metadata catalogs / MDRs |
+| `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints |
+| `geospatial_service_middleware` | GeoServer, MapServer, rasdaman |
+| `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
+| `managed_saas_service` | Socrata, OpenDataSoft, vendor-hosted Hub |
+| `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat) |
+| `general_software` | Catch-all, including `custom` |
+
+Human-readable category notes: `data/software/types.yaml`. Allowed list: `data/schemes/software.json`.
 
 ## Layout
 
@@ -46,6 +61,17 @@ Beyond `id` / `name` / `category`, records may include:
 - `repository_url`, `documentation_url`, `website`
 
 Quality checks flag catalogs whose software implies endpoints that are missing (`SOFTWARE_EXPECTED_ENDPOINTS_MISSING_*`) on the enrichment track — they do not fail CI by themselves.
+
+## Adding a software definition
+
+1. Confirm the product is shared (not a one-off site). One-off sites keep `software.id: custom`.
+2. Pick `id`: lowercase letters/digits, matching the filename (`data/software/{category}/{id}.yaml`).
+3. Set `type: Software`, `name`, `category` (aligned with catalog types), and `subtype` from the table above.
+4. Fill `has_api`, `metadata_support`, `website`, and `documentation_url` when known. See `data/software/opendata/ckan.yaml`.
+5. Add the id to `data/reference/software_ids.yaml` if that list is maintained in the same change.
+6. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`.
+
+Do not create a new software id for a single catalog unless several independent installations exist or are expected.
 
 ## Querying software usage
 

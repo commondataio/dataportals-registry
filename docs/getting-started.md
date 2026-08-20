@@ -72,9 +72,14 @@ https://github.com/datenoio/dataportals-registry
 |------|-----|
 | Scope and when not to use this repo | [when-to-use.md](when-to-use.md) |
 | Pipeline diagram | [architecture.md](architecture.md) |
+| CLI | [cli.md](cli.md) |
 | Find catalogs not yet registered | [discovery.md](discovery.md) |
 | Field reference | [data-model.md](data-model.md) |
-| Join keys and gotchas | [ai-consumers.md](ai-consumers.md) |
+| Vocabularies (levels, identifiers, endpoints) | [vocabularies.md](vocabularies.md) |
+| Catalog types | [catalog-types.md](catalog-types.md) |
+| Software IDs and new platform YAML | [software-taxonomy.md](software-taxonomy.md) |
+| Join keys and DuckDB columns | [ai-consumers.md](ai-consumers.md) |
+| Quality issue codes | [quality-rules.md](quality-rules.md) |
 | Verified SQL | [query-examples.md](query-examples.md) |
 | Agent query workflow | [agents/query.md](agents/query.md) |
 | Agent discovery workflow | [agents/discover.md](agents/discover.md) |

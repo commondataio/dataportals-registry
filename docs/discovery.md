@@ -15,7 +15,7 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 
 1. Confirm the candidate is a catalog: it lists or serves datasets, maps, indicators, or metadata — not a news site, a single spreadsheet, or a login-only intranet.
 2. Search the registry first. Duplicate `link` values fail quality checks (`DUPLICATE_LINK` / `DUPLICATE_LINK_NORMALIZED`).
-3. Prefer `data/scheduled/` for unverified finds. Promote later; see [devdocs/scheduled-to-entities.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/scheduled-to-entities.md).
+3. Prefer `data/scheduled/` for unverified finds. Promote later; see [scheduled.md](scheduled.md).
 
 Duplicate check against the DuckDB export:
 
@@ -141,7 +141,7 @@ Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so 
 | `python scripts/apidetect.py detect-single {id}` | Probe known API paths on an existing record |
 | `python scripts/re3data_enrichment.py enrich --dry-run` | Fill `_re3data` when a re3data identifier is present |
 
-CKAN sync details: [devdocs/ckan_ecosystem_sync.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/ckan_ecosystem_sync.md).
+CKAN sync details: [ckan-sync.md](ckan-sync.md). Re3Data: [re3data.md](re3data.md).
 
 Do not write internet-wide scanners in this repository. Targeted GETs against candidate hosts, plus vendor/government lists, are enough.
 

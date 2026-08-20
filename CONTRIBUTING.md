@@ -31,7 +31,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 
 ### Development Environment Setup
 
-1. Ensure you have Python 3.7+ installed
+1. Ensure you have Python 3.9–3.12 installed (CI runs on those versions)
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
@@ -40,7 +40,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 ### Project Structure
 
 - `data/entities/` - Verified data catalog records as individual YAML files
-- `data/scheduled/` - Unverified (scheduled) data catalog records (see [devdocs/scheduled-to-entities.md](devdocs/scheduled-to-entities.md) for promoting to entities)
+- `data/scheduled/` - Unverified (scheduled) data catalog records (see [docs/scheduled.md](docs/scheduled.md) for promoting to entities)
 - `data/schemes/` - JSON schema definitions for validation
 - `data/software/` - Software/platform definitions
 - `data/reference/` - Reference data and vocabularies
@@ -120,7 +120,7 @@ python scripts/builder.py add-single \
 - `--lang`: Language code (e.g., "EN", "ES", "FR")
 - `--owner-name`: Name of the organization/owner
 - `--owner-link`: URL of the owner organization
-- `--owner-type`: Type of owner (e.g., "Central government", "Local government")
+- `--owner-type`: Canonical owner type (e.g., "Central government", "Local government", "Civil society")
 - `--scheduled`: Add to scheduled directory (default) or use `--no-scheduled` for entities
 
 This will create a YAML file in the appropriate location based on the catalog type and country.
@@ -150,21 +150,9 @@ For more control or when adding multiple entries, create YAML files manually:
 
 3. **Create the YAML file** with all required fields (see [YAML File Structure](#yaml-file-structure))
 
-### Catalog Types
+### Catalog types and file names
 
-The following catalog types are supported:
-
-- **Open data portal** - Default for most open data portals
-- **Geoportal** - Geographic/spatial data portals
-- **Scientific data repository** - Research data repositories
-- **Indicators catalog** - Statistical indicators catalogs
-- **Microdata catalog** - Microdata/survey data catalogs
-- **Machine learning catalog** - ML datasets and models
-- **Data search engines** - Search engines for datasets
-- **API Catalog** - API directories and catalogs
-- **Data marketplaces** - Commercial data marketplaces
-- **Metadata catalog** - Metadata registries
-- **Other** - Other types not listed above
+Allowed `catalog_type` values and type folders: [docs/catalog-types.md](docs/catalog-types.md) and [docs/directory-layout.md](docs/directory-layout.md).
 
 ### File Naming Convention
 
@@ -175,71 +163,11 @@ The following catalog types are supported:
 
 ## YAML File Structure
 
-### Required Fields
+Field reference, owner types, geographic levels, identifiers, and endpoints: [docs/data-model.md](docs/data-model.md) and [docs/vocabularies.md](docs/vocabularies.md). Re3Data enrichment: [docs/re3data.md](docs/re3data.md).
 
-Every catalog entry must include these required fields:
+Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software` (`id` + `name`), `owner` (`name`, `type`, `location.country`), `coverage`. Use canonical `owner.type` values (`Civil society`, not `NGO`).
 
-- `id` (string): Unique identifier matching the filename
-- `uid` (string): Unique identifier (typically in format `cdi0000####`)
-- `name` (string): Display name of the catalog
-- `link` (string): URL of the catalog
-- `catalog_type` (string): Type of catalog (see catalog types above)
-- `access_mode` (list of strings): Access modes (e.g., `["open"]`, `["restricted"]`)
-- `status` (string): Status of the catalog (e.g., `"active"`, `"inactive"`, `"scheduled"`)
-- `software` (dict): Software/platform information
-  - `id` (string): Software ID
-  - `name` (string): Software name
-- `owner` (dict): Owner/organization information
-  - `name` (string): Owner name
-  - `type` (string): Owner type (e.g., "Central government", "Local government", "NGO")
-  - `location` (dict): Location information
-    - `country` (dict): Country information
-      - `id` (string): ISO country code
-      - `name` (string): Country name
-- `coverage` (list): Geographic coverage
-  - Each item contains `location` with country information
-
-### Optional Fields
-
-- `description` (string): Description of the catalog
-- `api` (boolean): Whether the catalog has an API
-- `api_status` (string): API status (e.g., `"active"`, `"inactive"`, `"uncertain"`)
-- `content_types` (list of strings): Types of content (e.g., `["dataset"]`, `["map_layer"]`)
-- `endpoints` (list): API endpoints
-  - `type` (string): Endpoint type (e.g., `"ckan"`, `"dcat:jsonld"`)
-  - `url` (string): Endpoint URL
-  - `version` (string): API version (optional)
-- `identifiers` (list): External identifiers
-  - `id` (string): Identifier type (e.g., `"wikidata"`, `"re3data"`)
-  - `value` (string): Identifier value
-  - `url` (string): URL to the identifier
-- `_re3data` (dict, optional): Enriched metadata from re3data.org (automatically added by enrichment script)
-  - Contains keywords, content types, contact email, description, persistent identifiers, software, versioning, institutions, repository type, and more
-  - See [devdocs/re3data_enrichment.md](../devdocs/re3data_enrichment.md) for details
-- `langs` (list): Supported languages
-  - `id` (string): Language code (e.g., `"EN"`, `"ES"`)
-  - `name` (string): Language name
-- `tags` (list of strings): Tags/keywords
-- `topics` (list): Topics/subjects
-  - `type` (string): Topic type
-  - `id` (string): Topic ID
-  - `name` (string): Topic name
-- `properties` (dict): Additional properties
-  - `has_doi` (boolean): Whether datasets have DOIs
-  - `is_national` (boolean): Whether it's a national catalog
-  - `transferable_topics` (boolean): Whether topics can be transferred
-  - `transferable_location` (boolean): Whether location can be transferred
-  - `unfinished` (boolean): Whether the entry is incomplete
-- `rights` (dict): Rights and licensing information
-  - `license_id` (string): License identifier
-  - `license_name` (string): License name
-  - `license_url` (string): License URL
-  - `rights_type` (string): Type of rights
-  - `tos_url` (string): Terms of service URL
-  - `privacy_policy_url` (string): Privacy policy URL
-- `catalog_export` (string): Export standard (e.g., `"CKAN API"`)
-
-### Example YAML File
+Minimal verified-entity example (`data/entities/US/Federal/opendata/catalogdatafaagov.yaml`):
 
 ```yaml
 access_mode:
@@ -247,67 +175,23 @@ access_mode:
 api: true
 api_status: active
 catalog_type: Open data portal
-content_types:
-- dataset
-coverage:
-- location:
-    country:
-      id: US
-      name: United States
-    level: 20
-    macroregion:
-      id: '021'
-      name: Northern America
-description: United States government's open data website providing access to datasets
-  published by agencies across the federal government.
-endpoints:
-- type: ckan
-  url: https://catalog.data.gov/api/3
-  version: '3'
-- type: ckan:package-search
-  url: https://catalog.data.gov/api/3/action/package_search
-  version: '3'
-id: catalogdatagov
-identifiers:
-- id: wikidata
-  url: https://www.wikidata.org/wiki/Q5227102
-  value: Q5227102
-langs:
-- id: EN
-  name: English
-link: https://catalog.data.gov
-name: The Home of the U.S. Government Open Data
+id: catalogdatafaagov
+link: https://catalog.data.faa.gov
+name: Federal Aviation Administration Open Data Portal
 owner:
-  link: https://www.gsa.gov
+  name: Federal Aviation Administration
+  type: Central government
   location:
     country:
       id: US
       name: United States
-    level: 30
-    subregion:
-      id: US-DC
-      name: District of Columbia
-  name: GSA Technology Transformation Services
-  type: Central government
-properties:
-  has_doi: false
-  is_national: true
-rights:
-  rights_type: granular
+    level: 20
 software:
   id: ckan
   name: CKAN
 status: active
-tags:
-- government
-- has_api
-- open data
-- federal
-- datasets
-uid: cdi00001616
+uid: cdi00005263
 ```
-
-For a complete example, see: `data/entities/US/Federal/opendata/catalogdatagov.yaml`
 
 ### Schema Reference
 
@@ -487,13 +371,7 @@ The project includes tools for analyzing data quality:
 python scripts/builder.py analyze-quality
 ```
 
-Reports are written to `dataquality/`. This generates reports on:
-- Duplicate UID's and ID's
-- Missing required fields
-- Filename mismatches
-- Empty files and parsing errors
-
-Reports are saved in `devdocs/` and `dataquality/` directories.
+Reports are written to `dataquality/`. Issue codes: [docs/quality-rules.md](docs/quality-rules.md).
 
 ### Best Practices for Data Entry
 
@@ -507,9 +385,9 @@ Reports are saved in `devdocs/` and `dataquality/` directories.
 5. **Provide identifiers**: Add Wikidata, re3data, or other identifiers when available
 6. **Re3data enrichment**: If a catalog has a re3data identifier, you can enrich it with metadata from re3data.org using:
    ```bash
-   python scripts/re3data_enrichment.py enrich --id <re3data_id>
+   python scripts/re3data_enrichment.py enrich --dry-run
    ```
-   See [devdocs/re3data_enrichment.md](../devdocs/re3data_enrichment.md) for more information.
+   See [docs/re3data.md](docs/re3data.md) for more information.
 7. **CKAN Ecosystem Sync**: To discover and add CKAN sites from the official ecosystem dataset:
    ```bash
    # Preview what would be added
@@ -518,7 +396,7 @@ Reports are saved in `devdocs/` and `dataquality/` directories.
    # Sync and add missing CKAN sites
    python scripts/sync_ckan_ecosystem.py
    ```
-   The script automatically detects duplicates and enriches metadata from both the dataset and web scraping.
+   See [docs/ckan-sync.md](docs/ckan-sync.md) for flags and duplicate handling.
 8. **Include endpoints**: Add API endpoints if the catalog has an API
 9. **Write clear descriptions**: Provide helpful descriptions for users
 

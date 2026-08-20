@@ -13,7 +13,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** â
 ## Do not use this repository for
 
 - Querying dataset records inside a portal (CKAN packages, Dataverse studies, STAC items)
-- Production search APIs or MCP servers â€” those live in separate repositories
+- Production search APIs or MCP servers â€” this repository is reference data only. Search: [dateno-api](https://github.com/datenoio/dateno-api). Catalog browse UI: [dataportals-web](https://github.com/datenoio/dataportals-web). Harvesting catalog contents: [reaper](https://github.com/datenoio/reaper).
 - Real-time uptime SLAs â€” liveness probes are report-only
 - Exhaustive coverage of every country; the United States is heavily over-represented
 
@@ -38,5 +38,9 @@ Use dataportals-registry when you need **stable metadata about data catalogs** â
 
 | Need | Where |
 |------|--------|
+| Catalog metadata (this repo) | YAML + DuckDB/Parquet exports |
+| Production catalog/dataset search API | [dateno-api](https://github.com/datenoio/dateno-api) |
+| Harvest datasets listed in catalogs | [reaper](https://github.com/datenoio/reaper) |
+| Public catalog website | [dataportals-web](https://github.com/datenoio/dataportals-web) |
 | Country and organization reference data | [internacia-db](https://github.com/datenoio/internacia-db) |
 | Unified file reading/writing | [iterabledata](https://github.com/datenoio/iterabledata) |

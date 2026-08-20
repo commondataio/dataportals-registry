@@ -20,7 +20,7 @@ Metadata about **catalogs** (portals, geoportals, repositories, and related infr
 Do **not** expect:
 
 - Dataset-level records (the contents of each catalog)
-- A production HTTP search API or MCP server in this repository
+- A production HTTP search API or MCP server in this repository (use [dateno-api](https://github.com/datenoio/dateno-api) for search)
 - Uniform `last_verified_at` timestamps on every record
 - Balanced geographic coverage (US records are over-represented)
 
@@ -67,6 +67,8 @@ FROM catalogs
 WHERE json_extract_string(software, '$.id') = 'geonetwork';
 ```
 
+Column inventory: [exports.md](exports.md#duckdb-columns). Identifier types: [vocabularies.md](vocabularies.md#identifiers).
+
 ## Status and access
 
 | Field | Values | Notes |
@@ -90,6 +92,8 @@ Exports are regenerated with `python scripts/builder.py build`. There is no per-
 ## Related
 
 - [data-model.md](data-model.md)
+- [exports.md](exports.md)
+- [vocabularies.md](vocabularies.md)
 - [query-examples.md](query-examples.md)
 - [agents/query.md](agents/query.md)
 - [agents/discover.md](agents/discover.md)

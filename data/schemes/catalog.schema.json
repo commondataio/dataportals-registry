@@ -250,7 +250,7 @@
           "properties": {
             "country": { "$ref": "#/$defs/countryRef" },
             "level": {
-              "description": "Administrative level (higher number = broader scope).",
+              "description": "Administrative level (higher number = more local). Use 20 for national coverage and 30+ for subnational.",
               "type": "number",
               "examples": [20]
             },
@@ -346,7 +346,11 @@
           "type": "object",
           "properties": {
             "country": { "$ref": "#/$defs/countryRef" },
-            "level": { "type": "number" },
+            "level": {
+              "description": "Administrative level of the owning organization (higher number = more local). Use 20 for national owners and 30+ for regional or local owners.",
+              "type": "number",
+              "examples": [20]
+            },
             "subregion": { "$ref": "#/$defs/namedRef" },
             "subdivision": { "$ref": "#/$defs/namedRef" },
             "name": { "type": "string" }

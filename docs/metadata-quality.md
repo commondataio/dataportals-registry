@@ -39,16 +39,21 @@ python scripts/builder.py analyze-quality
 | Integrity | `INVALID_*`, `DUPLICATE_*`, `MISSING_ENDPOINTS` when `api: true`, path/country mismatches | Hard fail if CRITICAL/IMPORTANT counts grow |
 | Enrichment | missing topics/tags, short description, expected software endpoints | Warning only by default |
 
-## Vocabularies
-
-Under `data/reference/`:
-
-- `catalog_types.yaml`
-- `software_ids.yaml`
-- `status.yaml`
-- `access_modes.yaml` — prefer `open` / `restricted` for new entries
-- `owner_types.yaml` — canonical values plus synonym map
+Integrity-track CRITICAL and IMPORTANT counts must not grow. Full code list: [quality-rules.md](quality-rules.md). Vocabularies: [vocabularies.md](vocabularies.md).
 
 ## Fix workflow
 
-See [devdocs/quality-fix-workflow.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/quality-fix-workflow.md). Helper scripts: `scripts/fix_critical_issues.py`, `scripts/fix_important_issues.py`, and related `fix_*` tools.
+```bash
+python scripts/builder.py analyze-quality
+python scripts/fix_critical_issues.py
+python scripts/fix_important_issues.py
+python scripts/builder.py validate-yaml
+python scripts/builder.py analyze-quality
+python scripts/update_quality_baseline.py   # only after an intentional baseline change
+```
+
+Agent-driven loop: `python scripts/generate_cursor_commands.py` then the generated prompts, or `python scripts/builder.py fix` if `cursor-agent` is installed.
+
+Liveness probes (`scripts/check_liveness.py`, weekly workflow) write `dataquality/liveness_report.jsonl`. They do not update YAML `status`.
+
+Maintainer notes: [devdocs/quality-fix-workflow.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/quality-fix-workflow.md).

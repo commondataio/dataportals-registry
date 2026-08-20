@@ -12,6 +12,8 @@ const sidebars: SidebarsConfig = {
         'discovery',
         'directory-layout',
         'cli',
+        'scheduled',
+        'releasing',
       ],
     },
     {
@@ -22,10 +24,17 @@ const sidebars: SidebarsConfig = {
         'data-model',
         'catalog-types',
         'software-taxonomy',
+        'vocabularies',
         'exports',
         'metadata-quality',
+        'quality-rules',
         'trust-score',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Pipelines',
+      items: ['re3data', 'ckan-sync'],
     },
     {
       type: 'category',
