@@ -61,12 +61,17 @@ Public MetadataWorks UI. There may be no stable open list API. Harvest the publi
 
 ## DCAT without an FDP
 
-Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, or `mwmb`.
+Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat-and-datajson). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, or `mwmb`.
 
 ## Related
 
 - [harvest.md](harvest.md)
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-indicators.md](harvest-indicators.md)
+- [harvest-protocols.md](harvest-protocols.md)
+- [harvest-incremental.md](harvest-incremental.md)
+- [harvest-identifiers.md](harvest-identifiers.md)
+- [harvest-output.md](harvest-output.md)
 - [discovery-metadata.md](discovery-metadata.md)
 - [apidetect.md](apidetect.md)
+- [agents/harvest.md](agents/harvest.md)

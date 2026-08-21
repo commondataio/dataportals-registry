@@ -12,15 +12,26 @@ Aggregators search **other** catalogs (Idra, national dataset search, harvested 
 
 If the user explicitly wants the federation view:
 
-- **Idra** (`idra`): `/Idra/api/v1/` dataset search. Keep federated **datasets**. Record the source catalog URL when Idra provides it. Typical `catalog_type` is Data search engine — see [harvest-opendata.md](harvest-opendata.md).
-- **Aleph** (`aleph`): `/api/2/collections` — collections of documents; keep collections that are dataset corpora, not every document.
+- **Idra** (`idra`): `/Idra/api/v1/` dataset search. Keep federated **datasets**. Record the source catalog URL when Idra provides it.
+- **OpenAIRE** (`openaire`): Graph/CONNECT **datasets** only — [harvest-opendata.md](harvest-opendata.md#openaire-openaire). Prefer source IRs.
+- **Aleph** (`aleph`): see [below](#aleph-aleph).
 - **custom** search engines: use their documented search API; store `source` identifiers.
 
 Do not add harvested member catalogs as new registry YAML (that is [discovery.md](discovery.md)).
 
+## Aleph (`aleph`)
+
+OCCRP-style investigative collections.
+
+```text
+GET https://host/api/2/collections
+```
+
+Keep **collections** that are dataset corpora. Drop entity/document search hits (`/api/2/entities`) as datasets. Page collection results; do not crawl every PDF. Skip aleph.occrp.org if you only needed the existing registry record.
+
 ## Machine learning catalogs
 
-**OpenML** (`openmlorg`):
+## OpenML (`openmlorg`)
 
 ```text
 GET https://www.openml.org/api/v1/json/data/list/limit/100/offset/0
@@ -34,11 +45,11 @@ Hugging Face, Kaggle, and Papers with Code are usually **one** registered hub. H
 
 ## API catalogs
 
-The product is a **list of APIs**, not datasets. Harvest API entries (name, docs URL, publisher) only when the user wants an API inventory. A CKAN Action API stays an open-data harvest ([harvest-opendata.md](harvest-opendata.md)).
+The product is a **list of APIs**, not datasets. Harvest API entries (name, docs URL, publisher) only when the user wants an API inventory. Store the API’s stable id + the catalog `uid` ([harvest-identifiers.md](harvest-identifiers.md)). A CKAN Action API stays an open-data harvest ([harvest-opendata.md](harvest-opendata.md)).
 
 ## Data marketplaces
 
-Public catalog of datasets for sale or license. Harvest **public** listing APIs only. Stop on paywalls and `401`. Do not scrape prices into this repository. `access_mode` on the **catalog** record is often `restricted` — still harvest metadata if it is public.
+Public catalog of datasets for sale or license. Harvest **public** listing APIs only (dataset id, title, landing URL). Stop on paywalls and `401`. Do not scrape prices, buyer lists, or sample files into this repository. `access_mode` on the **catalog** record is often `restricted` — still harvest metadata if it is public.
 
 ## Datasets lists
 
@@ -58,5 +69,10 @@ About one catalog in eight. Do not guess CKAN or DSpace filters.
 - [harvest.md](harvest.md)
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-scientific.md](harvest-scientific.md)
+- [harvest-protocols.md](harvest-protocols.md)
+- [harvest-incremental.md](harvest-incremental.md)
+- [harvest-identifiers.md](harvest-identifiers.md)
+- [harvest-output.md](harvest-output.md)
 - [discovery-other.md](discovery-other.md)
 - [apidetect.md](apidetect.md)
+- [agents/harvest.md](agents/harvest.md)

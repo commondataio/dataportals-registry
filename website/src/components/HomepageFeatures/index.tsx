@@ -143,6 +143,41 @@ const sections: DocSection[] = [
         label: 'Search, ML, and other APIs',
         description: 'Aggregators, OpenML, marketplaces, custom catalogs.',
       },
+      {
+        to: '/docs/harvest-protocols',
+        label: 'Harvest by protocol',
+        description: 'OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST.',
+      },
+      {
+        to: '/docs/harvest-incremental',
+        label: 'Incremental harvests',
+        description: 'from=, updated filters, tokens, checkpoints.',
+      },
+      {
+        to: '/docs/harvest-earthdata',
+        label: 'Earth-observation APIs',
+        description: 'THREDDS, ERDDAP, STAC collections, Copernicus.',
+      },
+      {
+        to: '/docs/harvest-biodiversity',
+        label: 'Biodiversity and genomics',
+        description: 'IPT, Symbiota, ALA, GBIF datasets, Ensembl.',
+      },
+      {
+        to: '/docs/harvest-viewers',
+        label: 'Map viewers',
+        description: 'Layer lists from QWC2, Masterportal, Lizmap — not tiles.',
+      },
+      {
+        to: '/docs/harvest-identifiers',
+        label: 'Dataset identifiers',
+        description: 'Native id + catalog uid; DOI/handle; no cdi ids for datasets.',
+      },
+      {
+        to: '/docs/harvest-output',
+        label: 'Harvest output',
+        description: 'JSON record shape, skip counts, empty-harvest checklist.',
+      },
     ],
   },
   {

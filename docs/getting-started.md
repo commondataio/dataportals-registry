@@ -76,7 +76,7 @@ https://github.com/datenoio/dataportals-registry
 | Google, Censys, and other search tools | [discovery-search-tools.md](discovery-search-tools.md) |
 | Configure search tools in Cursor / ChatGPT | [discovery-agent-tools.md](discovery-agent-tools.md) |
 | Open data / geo / scientific / metadata / indicators / other types | [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), [discovery-other.md](discovery-other.md) |
-| Harvest datasets from catalog APIs | [harvest.md](harvest.md), [harvest-scientific.md](harvest-scientific.md), [harvest-opendata.md](harvest-opendata.md), [harvest-geoportals.md](harvest-geoportals.md), [harvest-indicators.md](harvest-indicators.md), [harvest-metadata.md](harvest-metadata.md), [harvest-other.md](harvest-other.md) |
+| Harvest datasets from catalog APIs | [harvest.md](harvest.md), [harvest-scientific.md](harvest-scientific.md), [harvest-opendata.md](harvest-opendata.md), [harvest-geoportals.md](harvest-geoportals.md), [harvest-indicators.md](harvest-indicators.md), [harvest-metadata.md](harvest-metadata.md), [harvest-other.md](harvest-other.md), [harvest-protocols.md](harvest-protocols.md), [harvest-incremental.md](harvest-incremental.md), [harvest-earthdata.md](harvest-earthdata.md), [harvest-biodiversity.md](harvest-biodiversity.md), [harvest-viewers.md](harvest-viewers.md), [harvest-identifiers.md](harvest-identifiers.md), [harvest-output.md](harvest-output.md) |
 | Endpoint detection / URL liveness | [apidetect.md](apidetect.md), [liveness.md](liveness.md) |
 | Field reference | [data-model.md](data-model.md) |
 | Vocabularies (levels, identifiers, endpoints) | [vocabularies.md](vocabularies.md) |
@@ -87,4 +87,5 @@ https://github.com/datenoio/dataportals-registry
 | Verified SQL | [query-examples.md](query-examples.md) |
 | Agent query workflow | [agents/query.md](agents/query.md) |
 | Agent discovery workflow | [agents/discover.md](agents/discover.md) |
+| Agent harvest workflow | [agents/harvest.md](agents/harvest.md) |
 | Add or edit YAML | [agents/contribute.md](agents/contribute.md) |

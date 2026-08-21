@@ -11,11 +11,11 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
 | Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `librecat`, `vufind` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `radar`, `scicat`, `dataone`, `thredds`, `erddap`, `opendap`, `ipt`, `seek`, `icat`, `instdb` | Little or none — still skip files, collections, and login-only rows |
+| Dataset-native | `dataverse`, `radar`, `scicat`, `dataone`, `thredds`, `erddap`, `opendap`, `ipt`, `symbiota`, `ala`, `seek`, `icat`, `instdb`, `yoda` | Little or none — still skip files, occurrences, vault collab folders, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
 
-When REST search has no type filter, use OAI-PMH.
+When REST search has no type filter, use OAI-PMH ([harvest-protocols.md](harvest-protocols.md#oai-pmh)).
 
 1. `GET https://host/oai/request?verb=Identify` (DSpace) or the Identify URL in `endpoints[]`.
 2. `verb=ListSets` — keep `setSpec` values that mean data (`ResearchData`, `doc-type:researchdata`, `datasets`, `Dataset`, `Forschungsdaten`). Ignore `com_` / `col_` sets that are the whole repository.
@@ -236,6 +236,164 @@ CRIS with separate publications vs data modules when configured. Prefer URLs/API
 
 Discovery layers over mixed IRs. Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. Unfiltered VuFind search is the library catalog, not a data catalog.
 
+## GBIF IPT (`ipt`)
+
+Biodiversity publishing toolkit. Each Darwin Core archive is one dataset.
+
+```text
+GET https://host/inventory/dataset
+GET https://host/rss.do
+GET https://host/dcat
+```
+
+Keep inventory/RSS **datasets**. Do not harvest occurrence rows. Full grain: [harvest-biodiversity.md](harvest-biodiversity.md). Skip gbif.org itself if you only needed publisher IPTs already in the registry. Prefer the IPT root from the catalog `link`.
+
+## THREDDS (`thredds`)
+
+```text
+GET https://host/thredds/catalog.xml
+GET https://host/thredds/catalog.html
+```
+
+The catalog XML is a **tree**. Recurse `catalogRef`; harvest `dataset` elements that have an ID or OPeNDAP/WMS service — not every nested directory. Do not treat NetCDF files inside a datasetScan as separate catalog records unless they are independently cited. Prefer THREDDS over `opendap` when both exist on the same TDS. Earth-observation grain: [harvest-earthdata.md](harvest-earthdata.md).
+
+## ERDDAP (`erddap`)
+
+```text
+GET https://host/erddap/info/index.json
+GET https://host/erddap/index.json
+```
+
+Each row in `info/index.json` is a dataset (`datasetID`). Drop the `allDatasets` helper table if present. Grid vs table datasets are both in scope.
+
+## Symbiota (`symbiota`)
+
+Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
+
+```text
+GET https://host/collections/index.php
+GET https://host/collections/datasets/rsshandler.php
+```
+
+**Keep:** published Darwin Core **datasets** (RSS) and, if the user wants collection-level catalogs, one record per public collection (`collid`). **Drop:** individual occurrences, images, and checklists as datasets. One portal = one harvest scope (not per collection unless asked). Login-only portals: stop. Detail: [harvest-biodiversity.md](harvest-biodiversity.md#symbiota-symbiota).
+
+## InstDB (`instdb`)
+
+FairStack institutional research-data nodes. Harvest the public dataset/API list on the node (`/api` when present). Skip fairstack.cn marketing and per-file URLs.
+
+## Atlas of Living Australia (`ala`)
+
+Living Atlases stack.
+
+```text
+GET https://host/ws/registry/collections
+```
+
+Harvest **collections** (data resources), not `/ws/occurrences/search` hits (those are occurrence records). Species autocomplete is not a dataset list.
+
+## DataONE (`dataone`)
+
+Harvest the **member node** dataset search (`formatType=DATA` when supported). Do not crawl CN-wide duplicates of nodes already in this registry unless the user asked for the coordinating-node view.
+
+## OPeNDAP (`opendap`)
+
+Hyrax/OPeNDAP directory or `catalog.xml`. Harvest dataset nodes in the catalog, not every `.nc` URL. If the same host is THREDDS or ERDDAP, use those IDs and recipes instead.
+
+## Axiom portal (`axiomportal`)
+
+Axiom Data Science catalogs often sit in front of ERDDAP. Harvest the portal dataset list or the ERDDAP `info/index.json` on that host. Do not scrape map tiles.
+
+## OntoPortal (`ontoportal`)
+
+```text
+GET https://host/ontologies
+```
+
+This is an **ontology** catalog (BioPortal-style), not research-data files. Harvest ontology ids only when the user wants vocabularies. Do not treat `/search` term hits as datasets.
+
+## RAMADDA (`ramadda`)
+
+Folder/entry repository. Harvest **entry** types that are data collections, not every file under a folder. Skip a single file URL as the crawl seed.
+
+## Galaxy (`galaxy`)
+
+Public **data libraries** are the dataset catalog. Histories, workflows, and job outputs are not. Stop on `401` for user workspaces.
+
+## NYU Data Catalog (`nyudatacatalog`)
+
+Medical-library dataset catalog (schema.org DataCatalog JSON-LD on listing pages). Harvest **Dataset** objects from JSON-LD or the public search listing. Drop expert/person pages. Drupal JSON:API only if a dataset bundle exists.
+
+## DataLad (`datalad`) and GIN (`gin`)
+
+DataLad: harvest the published **catalog** dataset list (`catalog.json` or the catalog site’s dataset pages), not git-annex keys. GIN: Gogs `/api/v1/repos/search` — each **repository** can be a dataset; do not harvest git objects. Stop on `401`.
+
+## HUBzero (`hubzero`)
+
+Scientific gateway. Harvest public **resources** typed as datasets/databases. Drop tools, tickets, and login-only groups.
+
+## LinkAhead (`linkahead`)
+
+CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop files and properties as extra datasets.
+
+## Fedora (`fedora`) and Islandora (`islandora`)
+
+Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA recipes on the same host. Islandora: Solr/REST with a Dataset content model — not every Drupal node.
+
+## CONTENTdm (`contentdm`) and Omeka S (`omekas`)
+
+Only when the site was accepted as a **dataset** catalog ([discovery-scientific.md](discovery-scientific.md)). CONTENTdm: `/digital/api/collections` plus OAI; keep statistical/climate collections, skip photo exhibits. Omeka S: `/api/items` filtered to Dataset / DataCatalog classes; skip exhibit images.
+
+## MyTardis (`mytardis`)
+
+```text
+GET https://host/api/v1/dataset/
+```
+
+TastyPie `dataset` objects. Drop `datafile` rows when a parent dataset exists. Stop on `401`.
+
+## OSF (`osf`)
+
+Harvest **institution** or named project catalogs only (`https://api.osf.io/v2/`). Keep nodes/registrations that are data. Do not crawl all of osf.io. Stop on `401`.
+
+## Converis (`converis`)
+
+Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, not publications or persons. Public OAI/listing if present; stop on `/ws` keys.
+
+## Djehuty (`djehuty`)
+
+4TU.ResearchData stack. Harvest the public dataset search (Invenio-like `resource_type` filter when exposed).
+
+## RADAR (`radar`)
+
+```text
+GET https://host/radar/api/datasets
+GET https://host/oai/OAIHandler?verb=Identify
+```
+
+Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar-radar).
+
+## Yoda (`yoda`)
+
+Utrecht / SURF research-data vault on iRODS. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
+
+## FAIRDOM-SEEK (`seek`)
+
+```text
+GET https://host/data_files.json
+GET https://host/assays.json
+GET https://host/api
+```
+
+Keep **data files** / assays / studies that deposit data. Drop SOP-only pages, documents, and presentations. WorkflowHub uses the same stack — still keep data assets, not every CWL workflow, unless the user asked for workflows. Skip seek4science.org marketing.
+
+## ICAT (`icat`)
+
+Facility catalog (REST and/or OAI in `endpoints[]`). Harvest **datasets** / investigations that are data. Skip icatproject.org itself and login-only metadata. Stop on `401`.
+
+## dLibra (`dlibra`)
+
+Polish digital library. Use OAI-PMH with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). Skip manuscript/photo libraries that were never accepted as dataset catalogs.
+
 ## Dataset-native platforms (short)
 
 Little publication noise. Still skip non-dataset objects.
@@ -243,24 +401,17 @@ Little publication noise. Still skip non-dataset objects.
 | Platform | List | Notes |
 |----------|------|-------|
 | Dataverse | see above | `type=dataset` only |
-| RADAR (`radar`) | `/radar/api/datasets` | Already datasets; skip a single `/radar/de/dataset/` landing page as a seed |
 | SciCat (`scicat`) | `/api/v3/datasets` or `/api/v3/Datasets` | Facility datasets; may require token for full metadata — stop on `401` |
-| DataONE (`dataone`) | MN/CN search | `formatType=DATA` when the API supports it |
-| THREDDS (`thredds`) | `/thredds/catalog.xml` | Catalogs of **data services**, not papers |
-| ERDDAP (`erddap`) | `/erddap/info/index.json` | Datasets table |
-| IPT (`ipt`) | `/inventory/dataset` | Darwin Core archives |
-| FAIRDOM-SEEK (`seek`) | investigations / data files API | Keep data files / assays, not SOP-only pages |
-| ICAT (`icat`) | documented REST/OAI | Facility catalog; skip icatproject.org itself |
-| InstDB (`instdb`) | node home / API | Institutional research data |
+| Yoda (`yoda`) | Public landing / DataCite | Published datasets only; skip the authenticated vault |
 
-Omeka S and CONTENTdm: only harvest when the catalog was accepted as a **dataset** site ([discovery-scientific.md](discovery-scientific.md)). Filter item classes to Dataset / DataCatalog; skip exhibit images.
+Omeka S and CONTENTdm: see sections above.
 
 ## Pagination checklist
 
 1. Read `total` / `nHits` / `page.totalPages` / OAI `resumptionToken` from the first response.
 2. Cap page size; do not request `size=10000` on Solr-backed IRs.
-3. Deduplicate on DOI, handle, or native id plus catalog `uid`.
-4. Re-run with `from=` (OAI) or `updated` sort for incremental harvests when the API supports it.
+3. Deduplicate on DOI, handle, or native id plus catalog `uid` ([harvest-identifiers.md](harvest-identifiers.md)). Emit [output records](harvest-output.md).
+4. Re-run with `from=` (OAI) or `updated` sort for incremental harvests when the API supports it ([harvest-incremental.md](harvest-incremental.md)).
 
 ## Related
 
@@ -268,5 +419,11 @@ Omeka S and CONTENTdm: only harvest when the catalog was accepted as a **dataset
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)
 - [discovery-scientific.md](discovery-scientific.md)
+- [harvest-protocols.md](harvest-protocols.md)
+- [harvest-biodiversity.md](harvest-biodiversity.md)
+- [harvest-earthdata.md](harvest-earthdata.md)
+- [harvest-incremental.md](harvest-incremental.md)
+- [harvest-identifiers.md](harvest-identifiers.md)
+- [harvest-output.md](harvest-output.md)
 - [apidetect.md](apidetect.md)
 - [agents/harvest.md](agents/harvest.md)

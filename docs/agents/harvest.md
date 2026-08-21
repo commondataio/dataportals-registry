@@ -1,6 +1,6 @@
 # Agent guide: harvesting datasets from catalogs
 
-List **datasets inside** registered catalogs via their public APIs. Human narrative: [harvest.md](../harvest.md). Per type: [scientific](../harvest-scientific.md), [opendata](../harvest-opendata.md), [geoportals](../harvest-geoportals.md), [indicators](../harvest-indicators.md), [metadata](../harvest-metadata.md), [other](../harvest-other.md).
+List **datasets inside** registered catalogs via their public APIs. Human narrative: [harvest.md](../harvest.md). Per type: [scientific](../harvest-scientific.md), [opendata](../harvest-opendata.md), [geoportals](../harvest-geoportals.md), [indicators](../harvest-indicators.md), [metadata](../harvest-metadata.md), [other](../harvest-other.md). Shared protocols: [harvest-protocols.md](../harvest-protocols.md). Incremental: [harvest-incremental.md](../harvest-incremental.md). Identifiers: [harvest-identifiers.md](../harvest-identifiers.md). EO: [harvest-earthdata.md](../harvest-earthdata.md). Biodiversity: [harvest-biodiversity.md](../harvest-biodiversity.md). Viewers: [harvest-viewers.md](../harvest-viewers.md). Output: [harvest-output.md](../harvest-output.md).
 
 This is **not** catalog discovery ([discover.md](discover.md)) and **not** registry query ([query.md](query.md)).
 
@@ -10,7 +10,7 @@ For catalogs the user named (or a scoped DuckDB selection), produce dataset iden
 
 - catalog `uid` / `id` / `link`
 - `software.id`
-- native dataset id and/or DOI/handle
+- native dataset id and/or DOI/handle ([harvest-identifiers.md](../harvest-identifiers.md))
 - the type filter you applied
 - skip counts (publications, files, showcases)
 
@@ -36,8 +36,9 @@ WHERE id = 'examplegov'
 1. **Identify** (OAI Identify, CKAN `status_show`, Dataverse `info/version`, DSpace `/server/api`).
 2. **List type vocabularies** (OAI `ListSets`, search facets, CKAN `fq` types).
 3. **Apply the platform dataset filter** from the harvest guides. Do not page an unfiltered IR search.
-4. **Paginate** with the documented cursor (`start`, `page`, `resumptionToken`). Small page size.
+4. **Paginate** with the documented cursor (`start`, `page`, `resumptionToken`). Small page size. Incremental later: [harvest-incremental.md](../harvest-incremental.md).
 5. **Drop** publications, theses, files-under-datasets, showcases, harvest sources ([keep vs drop](../harvest.md#keep-vs-drop-shared-vocabulary)).
+6. **Emit** one JSON record per kept dataset plus skip counts ([harvest-output.md](../harvest-output.md)).
 
 ## Platform shortcuts
 
@@ -50,22 +51,47 @@ WHERE id = 'examplegov'
 | `hyrax` | `/catalog.json?f[human_readable_type_sim][]=Dataset` |
 | `opus` | OAI set `doc-type:researchdata` |
 | `pure` | `/sitemap/datasets.xml` or `/en/datasets/` — not `/publications/` |
+| `ipt` | `/inventory/dataset` or `/rss.do` — Darwin Core archives, not occurrences |
+| `thredds` | `/thredds/catalog.xml` — recurse `catalogRef`; harvest dataset nodes |
+| `erddap` | `/erddap/info/index.json` — `datasetID` rows |
+| `symbiota` | collection list or `/collections/datasets/rsshandler.php` — not occurrences |
 | `ckan` / `dkan` / `datapress` | `package_search` (packages, not resources) |
 | `opendatasoft` | `/api/explore/v2.1/catalog/datasets` |
 | `socrata` | `/api/catalog/v1?only=datasets` |
+| `datafair` | `/data-fair/api/v1/datasets` |
+| `triplydb` | `/_api/facets/datasets` |
 | `radar` / `scicat` | Native datasets API — little extra filtering |
+| `yoda` | Public DataCite-listed datasets — not the login vault |
+| `dhis2` | `/api/dataSets.json` / indicators — not orgUnits |
+| `ipums` | Collection/sample metadata via IPUMS API — not a finished extract |
+| `openaire` | Graph/CONNECT `search/datasets` — not publications |
+| `seek` | `/data_files.json` / assays — not SOP-only pages |
 | `geonetwork` | CSW `GetRecords`; keep `hierarchyLevel` dataset/series |
 | `geonode` | `/api/datasets/` (v4) or `/api/layers/` (v3) — not maps |
 | `stacserver` | `/collections` (items only if that is the grain) |
 | `arcgisserver` | `/arcgis/rest/services?f=pjson` — Feature/Map/Image, not GPServer |
 | `pygeoapi` / `wis20box` | `/collections?f=json` |
+| `lizmap` / `qwc2` / `mapserver` | WMS GetCapabilities layers |
+| `geomapfish` | `/themes` JSON layers |
+| `oskari` | `GetMapLayers` action |
+| `esrigeo` | `/rest/metadata/search` or CSW |
+| `masterportal` / `mapstore` / `terria` | Theme/catalog JSON layers — not tiles ([harvest-viewers.md](../harvest-viewers.md)) |
 | `pxweb` | Walk `/api/v1/` — tables (`type: t`), not folders |
+| `eurostat` / `ecb` / `ilostat` | SDMX **dataflow** list (`eurostat` dissemination API, `data-api.ecb.europa.eu`, `sdmx.ilo.org`) — not observation `/data` |
+| `dataworldbankorg` | `/v2/indicator` — not country time-series queries |
+| `whoint` | GHO `Indicator` list — not observation rows |
+| `databisorg` | `stats.bis.org` SDMX `/dataflow` — not POST `/api/v0/search` |
+| `datauniceforg` | `sdmx.data.unicef.org` dataflows — not country profiles |
+| `datagovmy` | Catalogue **ids** from the UI/docs — `/data-catalogue?id=` is observations, not a list |
 | `opensdg` | Indicator JSON under `/data/` |
 | `nada` | `/index.php/api/catalog/search` — studies, not videos |
+| `ifremercatalog` | SEANOE OAI `ListRecords` — datasets, not every file |
 | `fairdatapoint` | RDF catalog root; follow `dcat:dataset` |
 | `fusionregistry` | SDMX dataflows, not every codelist |
 | `openmlorg` | OpenML `data/list` — not tasks/runs |
 | `idra` | Federation search only if asked; prefer source catalogs |
+| `aleph` | `/api/2/collections` — collections, not every document |
+| `gvsigonline` | Published project layers or GeoServer GetCapabilities |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.
 
@@ -73,7 +99,7 @@ If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets
 
 **Accept** when the API object is a dataset (or data collection) with a stable id.
 
-**Reject:** article, thesis, poster, presentation, person, project, org unit, CKAN resource row, Dataverse `type=file`, showcase, harvest source, login-only metadata, WMS tiles, ArcGIS GPServer, STAC items when collections are the grain, PxWeb folders, SDMX codelists-as-datasets, aggregator duplicates of source portals.
+**Reject:** article, thesis, poster, presentation, person, project, org unit, CKAN resource row, Dataverse `type=file`, showcase, harvest source, login-only metadata, WMS tiles, ArcGIS GPServer, STAC items when collections are the grain, PxWeb folders, SDMX codelists-as-datasets, aggregator duplicates of source portals, IPUMS extracts, DHIS2 analytics cells, OpenAIRE publications.
 
 ## Do not
 
@@ -92,6 +118,13 @@ If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets
 - [harvest-indicators.md](../harvest-indicators.md)
 - [harvest-metadata.md](../harvest-metadata.md)
 - [harvest-other.md](../harvest-other.md)
+- [harvest-protocols.md](../harvest-protocols.md)
+- [harvest-incremental.md](../harvest-incremental.md)
+- [harvest-earthdata.md](../harvest-earthdata.md)
+- [harvest-biodiversity.md](../harvest-biodiversity.md)
+- [harvest-viewers.md](../harvest-viewers.md)
+- [harvest-identifiers.md](../harvest-identifiers.md)
+- [harvest-output.md](../harvest-output.md)
 - [apidetect.md](../apidetect.md)
 - [query.md](query.md)
 - [discover.md](discover.md)

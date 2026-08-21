@@ -69,6 +69,7 @@ MetadataWorks catalog UI for datasets, standards, and terminologies. Site: [meta
 - [discovery-opendata.md](discovery-opendata.md) (DCAT portals that are not FDP)
 - [discovery-indicators.md](discovery-indicators.md) (Fusion Registry vs PxWeb/.Stat)
 - [harvest-metadata.md](harvest-metadata.md)
+- [harvest.md](harvest.md)
 - [discovery-scientific.md](discovery-scientific.md)
 - [software-taxonomy.md](software-taxonomy.md)
 - [catalog-types.md](catalog-types.md)

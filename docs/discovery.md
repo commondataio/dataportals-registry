@@ -20,10 +20,10 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress |
 | [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box, NetGIS, cardo, GC Navi, NOL-IS, map.apps, CoGIS |
-| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, RADAR, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT, Symbiota |
+| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, RADAR, Yoda, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT, Symbiota |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica |
-| [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (besides Idra), ML catalogs, API directories, data marketplaces |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS |
+| [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
 
@@ -73,6 +73,10 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [FAIR Data Point index](https://home.fairdatapoint.org) | FAIR Data Point metadata catalogs |
 | [KOBV OPUS 4 references](https://www.kobv.de/entwicklung/software/opus-4/referenzen/) | OPUS institutional repositories |
 | [About RADAR](https://radar.products.fiz-karlsruhe.de/en/radarabout/ueber-radar) | RADAR Cloud and RADAR Local research data repositories |
+| [DHIS2](https://dhis2.org/) | National HMIS / public health indicator portals |
+| [Yoda](https://www.uu.nl/en/research/yoda) | Dutch university research-data vaults |
+| [OpenAIRE CONNECT](https://connect.openaire.eu/) | National and community research gateways |
+| [IPUMS](https://www.ipums.org) | Harmonized census and survey microdata collections |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
@@ -108,6 +112,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | SDMX-RI | `NSIWebService` / NSIStdV20Service | Public NSI/SDMX catalog |
 | GENESIS-Online | `/genesis/online` | Table catalog (POST-heavy API) |
 | IBIS-PH | `/ibisph-view/`, IBIS-Q | Public indicator home |
+| DHIS2 | `/api/system/info`, `/dhis-web-commons/` | JSON `version` from system info; skip login-only HMIS |
+| IPUMS | `*.ipums.org`, extract UI | Collection home (USA, International, CPS, …), not a single extract |
+| OpenAIRE | `explore.openaire.eu`, `*.openaire.eu` CONNECT gateway | EXPLORE or national/community gateway home, not a single research product |
+| Yoda | `yoda.`, public landing + DataCite | Institutional public dataset landing, not the login vault |
 | Our Open Data | `/assets/cms/public.css` | Catalog home, not a numeric dataset page |
 | DataPress | CKAN API plus DataPress chrome | Prefer `datapress` over `ckan` when branded |
 | Haplo | Haplo research repository | Public outputs/data catalog |
@@ -258,4 +266,5 @@ Do not write internet-wide scanners in this repository. Vendor/government lists,
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)
+- [harvest.md](harvest.md) — datasets *inside* a registered catalog (not this discovery job)
 - [cli.md](cli.md)

@@ -426,6 +426,8 @@ Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten
 - [discovery-indicators.md](discovery-indicators.md)
 - [discovery-other.md](discovery-other.md)
 - [harvest-opendata.md](harvest-opendata.md)
+- [harvest.md](harvest.md)
+- [harvest-protocols.md](harvest-protocols.md)
 - [apidetect.md](apidetect.md)
 - [ckan-sync.md](ckan-sync.md)
 - [catalog-types.md](catalog-types.md)

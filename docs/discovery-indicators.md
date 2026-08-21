@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica.
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS.
 
 ## PxWeb (`pxweb`)
 
@@ -101,6 +101,21 @@ US state public-health indicator system. Community: [Adopt IBIS](https://ibis.ut
 | Google | `"IBIS-PH" OR "IBIS PH" (indicators OR "public health") site:.gov` |
 | Censys | `web.endpoints.http.body: "ibisph"` |
 
+## DHIS2 (`dhis2`)
+
+Open-source health management information system (HISP / University of Oslo). More than 70 ministries run national HMIS instances. Docs: [docs.dhis2.org](https://docs.dhis2.org). Public FlexiPortal front-ends also count when they publish indicators from a DHIS2 backend.
+
+**Signals:** `/dhis-web-commons/`, `/dhis-web-dashboard/`, login chrome “DHIS 2”; REST `/api/system/info`.
+
+**Confirm:** `GET https://host/api/system/info` JSON with a `version` field, or a public portal that is documented as DHIS2. Skip staff-only logins with no public indicator catalog. Do not label a CKAN health document site `dhis2` from a tag alone.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DHIS2" OR "DHIS 2" (HMIS OR "health information" OR portal) -site:dhis2.org -site:github.com` |
+| Google | `inurl:/dhis-web-commons OR inurl:/api/system/info` |
+| Censys | `web.endpoints.http.body: "dhis-web-commons"` |
+| Censys | `web.endpoints.http.html_title: "DHIS 2"` |
+
 ## Other indicator platforms
 
 | `software.id` | Where to look | Typical query |
@@ -139,6 +154,20 @@ IHSN National Data Archive for survey microdata. Site: [nada.ihsn.org](https://n
 | Censys | `web.endpoints.http.body: "IHSN"` |
 
 **False positives:** nada.ihsn.org itself (the software site), WordPress blogs named NADA. Need a **study list** with DDI-style metadata.
+
+## IPUMS (`ipums`)
+
+University of Minnesota extract platform for harmonized census and survey microdata. Collections share one API and extract engine: IPUMS USA, International, CPS, DHS, NHIS, Higher Ed, PMA, MICS, Time Use, plus geographic NHGIS and IHGIS. Developer docs: [developer.ipums.org](https://developer.ipums.org).
+
+**Signals:** `*.ipums.org` or `idhsdata.org` / `nhgis.org`; extract-system UI; “IPUMS” branding.
+
+**Confirm:** GET the **collection home** (variable/sample selector), not a completed extract download. One registry record per public collection. Do not add every extract or variable page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"IPUMS" (extract OR microdata OR census) site:.org -site:github.com` |
+| Google | `site:ipums.org (USA OR International OR CPS OR NHIS)` |
+| Censys | `web.names: "ipums.org"` |
 
 ## NESSTAR (`nesstar`)
 
@@ -207,5 +236,7 @@ Central banks (`indicators` more often than microdata): `site:{bank-domain} (sta
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
 - [harvest-indicators.md](harvest-indicators.md)
+- [harvest.md](harvest.md)
+- [harvest-protocols.md](harvest-protocols.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

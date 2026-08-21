@@ -2,7 +2,7 @@
 
 How to find **scientific data repository** installations (`catalog_type: Scientific data repository`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Cross-check [re3data](https://www.re3data.org/) and the Dataverse installations JSON before adding a well-known platform — many are already registered.
 
-Also in `data/software/scientific/`: OPUS, RADAR, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, Esploro, Elsevier Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Omega-PSIR, Atlas of Living Australia, Haplo, Worktribe, FAIRDOM-SEEK, RAMADDA, and Symbiota. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
+Also in `data/software/scientific/`: OPUS, RADAR, Yoda, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, Esploro, Elsevier Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Omega-PSIR, Atlas of Living Australia, Haplo, Worktribe, FAIRDOM-SEEK, RAMADDA, and Symbiota. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
 
 ## Dataverse (`dataverse`)
 
@@ -176,6 +176,20 @@ Register distinct **Local** hosts (KonDATA, WueData, Datathek, FoDaSi, OstData, 
 | re3data | software filter **RADAR** |
 
 Skip the FIZ product/marketing site (`radar.products.fiz-karlsruhe.de`) and dataset landing pages (`/radar/de/dataset/{id}`).
+
+## Yoda (`yoda`)
+
+Dutch research-data management platform (Utrecht University / Yoda Consortium, often hosted by SURF) on iRODS. Docs: [utrechtuniversity.github.io/yoda](https://utrechtuniversity.github.io/yoda/). Public catalogs are institutional **publication landings** (DataCite-indexed datasets), not the authenticated vault.
+
+**Confirm:** a public dataset landing or portal titled Yoda / Your Data for that institution. Hostnames often `public.yoda.*`, `portal.yoda.*`, or `*-landing.irods.surfsara.nl`. Skip login-only workspaces and SURF marketing pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Yoda" ("research data" OR "data publication") (university OR SURF) site:.nl` |
+| Google | `inurl:yoda. "data" (portal OR public)` |
+| Censys | `web.names: "yoda."` |
+
+Register one catalog per **institution** public landing. Do not add every DataCite DOI.
 
 ## CONTENTdm (`contentdm`)
 
@@ -484,6 +498,7 @@ Facility scientific catalog. Site: [icatproject.org](https://icatproject.org).
 | `librecat` | LibreCat | `"LibreCat" repository` |
 | `gin` | G-Node gin (gogs+git-annex) | `site:gin.g-node.org` or `"GIN" g-node` |
 | `symbiota` | see above | |
+| `yoda` | see above | |
 | `gbifplatform` | GBIF.org itself | do not re-add; use `ipt` for publisher IPTs |
 | `converis` | Clarivate Converis CRIS | `"Converis" (research OR repository)` |
 | `aodn` | AODN Portal | `"AODN" portal` |
@@ -517,4 +532,5 @@ Google: ``"research data repository" {university}``, ``"repositorio de datos" {u
 - [discovery-other.md](discovery-other.md)
 - [re3data.md](re3data.md)
 - [harvest.md](harvest.md) — crawl datasets from repository APIs (filter publications vs data)
+- [harvest-scientific.md](harvest-scientific.md), [harvest-biodiversity.md](harvest-biodiversity.md), [harvest-earthdata.md](harvest-earthdata.md)
 - [software-taxonomy.md](software-taxonomy.md)

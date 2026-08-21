@@ -53,4 +53,4 @@ SELECT count(*) FROM software;
 
 ## After answering
 
-Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md). If they want catalogs that are missing from the registry, switch to [discover.md](discover.md). If they want **datasets inside** a catalog, switch to [harvest.md](../harvest.md).
+Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md). If they want catalogs that are missing from the registry, switch to [discover.md](discover.md). If they want **datasets inside** a catalog, switch to [harvest.md](../harvest.md) (agent checklist: [agents/harvest.md](harvest.md)).

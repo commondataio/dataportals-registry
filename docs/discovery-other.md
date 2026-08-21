@@ -8,7 +8,17 @@ These types are uncommon compared with open data, geo, and scientific repositori
 
 Sites whose **primary** product is search across other catalogs (aggregators). They score lower on [trust-score.md](trust-score.md).
 
-**Idra** (`idra`) is the main shared platform — fingerprints live in [discovery-opendata.md](discovery-opendata.md#idra-idra). Typical `catalog_type` is **Data search engine**, not Open data portal.
+**Idra** (`idra`) is a shared Open Data Federation Platform — fingerprints live in [discovery-opendata.md](discovery-opendata.md#idra-idra). Typical `catalog_type` is **Data search engine**, not Open data portal.
+
+**OpenAIRE** (`openaire`) is the other high-volume shared search stack: EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`netherlands.openaire.eu`, Canada.EXPLORE, and similar). Docs: [graph.openaire.eu/docs](https://graph.openaire.eu/docs/).
+
+**Confirm OpenAIRE:** the UI searches the OpenAIRE Graph (publications, datasets, software, organisations). Register EXPLORE once and each distinct **national/community gateway**. Do not add a single research-product landing page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenAIRE" (Explore OR CONNECT OR "research portal") -site:openaire.eu/about` |
+| Google | `site:openaire.eu (Explore OR CONNECT)` |
+| Censys | `web.names: "openaire.eu"` |
 
 Other aggregators (national dataset search, harvested CKAN unions, commercial catalog search) are usually `software.id: custom`.
 
@@ -89,5 +99,6 @@ Do not invent a new `software.id` for a one-off.
 - [discovery-opendata.md](discovery-opendata.md) (Idra)
 - [discovery-scientific.md](discovery-scientific.md) (OpenML, Galaxy)
 - [harvest-other.md](harvest-other.md)
+- [harvest.md](harvest.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

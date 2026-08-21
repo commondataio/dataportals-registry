@@ -744,4 +744,6 @@ Also try `/themes` (GeoMapFish), `/demo/` (MapProxy), `/net3/public/` (cardo), `
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-opendata.md](discovery-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)
+- [harvest-viewers.md](harvest-viewers.md)
+- [harvest-earthdata.md](harvest-earthdata.md)
 - [software-taxonomy.md](software-taxonomy.md)

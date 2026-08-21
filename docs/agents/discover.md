@@ -104,6 +104,10 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
 | OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
 | `/oai/OAIHandler` + `/radar/api/datasets` (RADAR) | `radar` | Scientific data repository |
+| Public Yoda / DataCite landing (`yoda.`) | `yoda` | Scientific data repository |
+| `/api/system/info` DHIS2 | `dhis2` | Indicators catalog |
+| IPUMS collection home (`*.ipums.org`) | `ipums` | Microdata catalog (or Geoportal for NHGIS/IHGIS) |
+| OpenAIRE EXPLORE or CONNECT gateway | `openaire` | Data search engine |
 | `/collections/datasets/rsshandler.php` or “Powered by Symbiota” | `symbiota` | Scientific data repository |
 | CONTENTdm `/digital/api/collections` (dataset collections only) | `contentdm` | Scientific data repository or Indicators catalog |
 | Omeka S `/api/items` JSON-LD (dataset catalogs, not exhibit-only) | `omekas` | Scientific data repository or Open data portal |

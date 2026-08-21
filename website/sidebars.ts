@@ -105,6 +105,41 @@ const sidebars: SidebarsConfig = {
           id: 'harvest-other',
           label: 'Search, ML, API, marketplaces',
         },
+        {
+          type: 'doc',
+          id: 'harvest-protocols',
+          label: 'Protocols',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-incremental',
+          label: 'Incremental harvests',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-earthdata',
+          label: 'Earth observation',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-biodiversity',
+          label: 'Biodiversity and genomics',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-viewers',
+          label: 'Map viewers',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-identifiers',
+          label: 'Dataset identifiers',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-output',
+          label: 'Harvest output',
+        },
       ],
     },
     {
