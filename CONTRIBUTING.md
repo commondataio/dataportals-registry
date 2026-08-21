@@ -435,8 +435,8 @@ Reports are written to `dataquality/`. Issue codes: [docs/quality-rules.md](docs
 If you need help or have questions:
 
 1. Check existing [Issues](https://github.com/datenoio/dataportals-registry/issues)
-2. Check the [README.md](README.md) for project overview
-3. Check `devdocs/README.md` for development documentation
+2. Check the [README.md](README.md) and the [documentation site](https://datenoio.github.io/dataportals-registry/)
+3. Check [docs/](docs/) (published) and `devdocs/README.md` (working notes)
 4. Open a new issue with your question
 
 ## License

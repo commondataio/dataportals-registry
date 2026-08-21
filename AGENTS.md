@@ -35,9 +35,10 @@ The registry collects and maintains structured metadata about:
 - Data search engines
 - API Catalogs
 - Data marketplaces
+- Metadata catalogs
 - Other data infrastructure
 
-As of August 2026, the registry contains **17,718 catalog entries** from countries worldwide, stored as individual YAML files and exported as JSONL, Parquet, and DuckDB formats.
+As of 21 August 2026, source YAML contains **18,208** verified catalog entries across **217** country/territory folders, **88** scheduled records, and **205** software definitions. Last published exports (v1.13.0, 20 August 2026) still have **17,718** catalogs and **192** software IDs until `python scripts/builder.py build`.
 
 ### Scope Boundary (Important)
 
@@ -80,7 +81,7 @@ dataportals-registry/
 │   │   │   ├── Federal/    # Federal-level catalogs
 │   │   │   ├── US-CA/      # Subregion (state) catalogs
 │   │   │   └── ...
-│   │   └── ...             # 195+ countries/territories
+│   │   └── ...             # 217 country/territory folders
 │   ├── scheduled/          # Unverified/scheduled entries
 │   ├── software/           # Software/platform definitions (YAML)
 │   ├── schemes/            # JSON schemas for validation
@@ -522,7 +523,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk
 2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md))
-3. Prefer vendor/government lists, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-indicators.md`)
+3. Prefer vendor/government lists, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`)
 4. Configure Cursor / ChatGPT / Censys MCP using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
 6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
@@ -560,8 +561,9 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 1. Check existing software in `data/software/`
 2. Create new YAML file with software metadata (`type: Software`, `category`, `subtype`)
 3. Update `data/reference/software_ids.yaml` / `scripts/constants.py` if needed
-4. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`
-5. Validate and test
+4. Add fingerprints to the matching discovery guide ([software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-definition))
+5. Run `python scripts/builder.py validate-software` and `python scripts/builder.py build`
+6. Validate and test
 
 ---
 
@@ -588,7 +590,7 @@ Follow [docs/software-taxonomy.md](docs/software-taxonomy.md#adding-a-software-d
 - [docs/getting-started.md](docs/getting-started.md) - Published internals (GitHub Pages source)
 - [docs/data-model.md](docs/data-model.md) / [docs/vocabularies.md](docs/vocabularies.md) / [docs/quality-rules.md](docs/quality-rules.md) / [docs/cli.md](docs/cli.md)
 - [docs/agents/query.md](docs/agents/query.md) / [docs/agents/discover.md](docs/agents/discover.md) / [docs/agents/contribute.md](docs/agents/contribute.md)
-- [docs/discovery.md](docs/discovery.md) / [docs/discovery-search-tools.md](docs/discovery-search-tools.md) / [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) — find catalogs not yet registered; configure Cursor, ChatGPT, Censys MCP
+- [docs/discovery.md](docs/discovery.md) / [docs/discovery-search-tools.md](docs/discovery-search-tools.md) / [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) / [docs/discovery-metadata.md](docs/discovery-metadata.md) — find catalogs not yet registered; configure Cursor, ChatGPT, Censys MCP
 - [llms.txt](llms.txt) - Agent index of published docs
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Human contribution guidelines
 - [openspec/project.md](openspec/project.md) - Project conventions

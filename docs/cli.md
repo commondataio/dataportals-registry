@@ -61,7 +61,7 @@ python scripts/calculate_trust_scores.py --dry-run
 python scripts/promote_scheduled.py --dry-run
 ```
 
-Re3Data: [re3data.md](re3data.md). Liveness writes `dataquality/liveness_report.jsonl` (weekly workflow, report-only).
+Re3Data: [re3data.md](re3data.md). Liveness writes `dataquality/liveness_report.jsonl` (weekly workflow, report-only). `apidetect.py` has URL maps for many platforms (CKAN, GeoServer, GeoMapFish, MapStore, gvSIG Online, Open SDG, SciCat, and others); probe only after a catalog YAML exists.
 
 ## Quality helpers
 

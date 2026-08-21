@@ -58,4 +58,4 @@ Validate a single file with `--file path/to/file.yaml`. Run full `validate-yaml`
 
 If `analyze-quality` flags the record, follow [metadata-quality.md](../metadata-quality.md) and [quality-rules.md](../quality-rules.md). Integrity-track issues (invalid enums, duplicates, path mismatches) must be fixed; enrichment-track gaps are optional in the same PR.
 
-New shared platforms: [software-taxonomy.md](../software-taxonomy.md#adding-a-software-definition).
+New shared platforms: [software-taxonomy.md](../software-taxonomy.md#adding-a-software-definition). After adding a `data/software/` YAML, add fingerprints to the matching [discovery](../discovery.md) guide.

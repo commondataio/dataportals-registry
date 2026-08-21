@@ -6,7 +6,7 @@ Maintainer checklist for GitHub releases. Update snapshot counts in [README.md](
 
 - In `CHANGELOG.md`, add `## [X.Y.Z] - YYYY-MM-DD` under `[Unreleased]` with Added/Changed/Fixed/Removed.
 - Add a GitHub Release line: `**GitHub Release**: [vX.Y.Z](https://github.com/datenoio/dataportals-registry/releases/tag/vX.Y.Z) - Published Month DD, YYYY`
-- Update “Latest snapshot” dates and record counts in `README.md`, `docs/getting-started.md`, and `docs/exports.md`.
+- Update “Latest snapshot” dates and record counts in `README.md`, `docs/getting-started.md`, `docs/exports.md`, `DATASHEET.md`, and `AGENTS.md`.
 
 ## 2. Release notes (optional)
 
@@ -15,7 +15,7 @@ Copy or adapt `.github/RELEASE_NOTES_vX.Y.Z.md`, or use the CHANGELOG section as
 ## 3. Commit, tag, and push
 
 ```bash
-git add CHANGELOG.md README.md docs/getting-started.md docs/exports.md AGENTS.md .github/RELEASE_NOTES_v*.md
+git add CHANGELOG.md README.md docs/getting-started.md docs/exports.md DATASHEET.md AGENTS.md .github/RELEASE_NOTES_v*.md
 git commit -m "Release vX.Y.Z"
 git tag -a vX.Y.Z -m "Release vX.Y.Z"
 git push origin main

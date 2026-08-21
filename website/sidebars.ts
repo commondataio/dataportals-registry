@@ -51,6 +51,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'discovery-metadata',
+          label: 'Metadata catalogs',
+        },
+        {
+          type: 'doc',
           id: 'discovery-indicators',
           label: 'Indicators and microdata',
         },

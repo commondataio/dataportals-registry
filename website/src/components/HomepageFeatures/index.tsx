@@ -76,17 +76,22 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-opendata',
         label: 'Open data portals',
-        description: 'CKAN, OpenDataSoft, Socrata, uData, Magda, and related CMS.',
+        description: 'CKAN, OpenDataSoft, Socrata, uData, Magda, Idra, and related CMS.',
       },
       {
         to: '/docs/discovery-geoportals',
         label: 'Geoportals',
-        description: 'GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, and SDI software.',
+        description: 'GeoNetwork, GeoServer, ArcGIS, MapServer, gvSIG Online, and SDI software.',
       },
       {
         to: '/docs/discovery-scientific',
         label: 'Scientific repositories',
-        description: 'Dataverse, DSpace, Invenio, EPrints, IPT, THREDDS, ERDDAP.',
+        description: 'Dataverse, DSpace, Invenio, OPUS, CONTENTdm, Omeka S, Fedora, PHAIDRA.',
+      },
+      {
+        to: '/docs/discovery-metadata',
+        label: 'Metadata catalogs',
+        description: 'FAIR Data Point and RDF/DCAT metadata registries.',
       },
       {
         to: '/docs/discovery-indicators',

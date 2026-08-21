@@ -2,6 +2,8 @@
 
 How to find **geoportal** installations (`catalog_type: Geoportal`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). If a site is both a map viewer and a dataset portal, pick the **primary** product ([catalog-types.md](catalog-types.md)).
 
+This page covers shared SDI platforms with stable fingerprints. Also in `data/software/geo/`: MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, and Mapbender. Regional products (NetGIS, Sampaş, GiSoftGis, BelsisIMS, わが街ガイド, Tianditu, GeoMapFish, Masterportal) use the same accept/reject rules with the titles and paths in [discovery.md](discovery.md#identify-the-software).
+
 ## GeoNetwork (`geonetwork`)
 
 ISO 19115 / CSW catalog. Gallery: [gallery-urls.csv](https://github.com/geonetwork/doc/blob/develop/source/annexes/gallery/gallery-urls.csv). European nodes also appear in the [INSPIRE geoportal](https://inspire-geoportal.ec.europa.eu/).
@@ -140,14 +142,104 @@ QGIS Web Client 2. **Signals:** `qwc2`, `qwc-services`, `/theme/` map UI.
 | Google | `"QWC2" OR "QGIS Web Client" geoportal` |
 | Censys | `web.endpoints.http.body: "qwc2"` |
 
-## deegree (`deegree`)
+## Mapbender (`mapbender`)
 
-OGC services and CSW. **Confirm:** GetCapabilities on `/deegree-webservices` or documented service paths.
+Open-source geoportal framework (WhereGroup). **Signals:** Mapbender application UI, `/application/`, configurable map viewers on OGC services. Vendor: [mapbender.org](https://mapbender.org).
 
 | Tool | Query |
 |------|-------|
-| Google | `"deegree" (CSW OR WMS) GetCapabilities -site:github.com` |
+| Google | `"Mapbender" (geoportal OR Anwendung OR "map application") -site:github.com -site:mapbender.org` |
+| Google | `inurl:/application/ mapbender` |
+| Censys | `web.endpoints.http.body: "Mapbender"` |
+
+Do not register a Mapbender app that is only a login shell with no public map list.
+
+## MapTiler Server (`maptilerserver`)
+
+Self-hosted tile and map-style catalog. Default port **3650**; production sites often sit behind HTTPS on 443. **Signals:** HTML title `MapTiler Server`, `/admin` login, Next.js `pageProps.serverName` / `type` (`list` = public catalog, `logoOnly` = tile backend only).
+
+**Confirm:** `GET https://host/api/maps/{mapId}/style.json` (common ids: `streets`, `basic`, `bright`). Bare `/api/maps` 404s on current versions. Register the public catalog root, not `/admin`. Skip `logoOnly` and staging hosts.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"MapTiler Server" -site:maptiler.com -site:github.com` |
+| Censys | `web.endpoints.http.html_title: "MapTiler Server"` |
+| Censys | `host.services.endpoints.http.html_title: "MapTiler Server"` |
+| Shodan | `http.title:"MapTiler Server"` |
+
+## MapServer (`mapserver`)
+
+OGC service middleware (WMS/WFS/WCS from a mapfile). Register it when MapServer is the **public catalog** (GetCapabilities or a map list as the product), not merely the renderer behind Lizmap, QWC2, or GeoNetwork.
+
+**Confirm:** WMS `GetCapabilities` whose service metadata mentions MapServer (`cgi-bin/mapserv`, `mapserv.exe`, or a `MapServer` keyword). Typical paths: `/cgi-bin/mapserv`, `/cgi-bin/mapserv.cgi`, or a named `.map` URL.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:cgi-bin/mapserv (WMS OR GetCapabilities)` |
+| Google | `"MapServer" GetCapabilities -site:mapserver.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "MapServer"` |
+| Shodan | `http.html:"MapServer"` |
+
+Do not add a second record for MapServer on a host that already has a Lizmap, QWC2, or GeoNetwork catalog pointing at the same services.
+
+## gvSIG Online (`gvsigonline`)
+
+Municipal / regional SDI built by the gvSIG Association. Demo and docs: [demo.gvsigonline.com](https://demo.gvsigonline.com/gvsigonline/core/documentation/). GeoServer is required underneath; optionally GeoNetwork.
+
+**Signals:** path `/gvsigonline/`; public project picker `select_public_project`; title or footer “gvSIG Online”.
+
+**Confirm:** GET `https://host/gvsigonline/` (or the catalog `link`) and match the gvSIG Online UI. Prefer the public viewer root, not `/geoserver/web`. Skip the demo unless the task is to record it.
+
+| Tool | Query |
+|------|-------|
+| Google | `"gvSIG Online" (geoportal OR visor OR IDE) -site:gvsig.com -site:github.com` |
+| Google | `inurl:/gvsigonline/ select_public_project` |
+| Censys | `web.endpoints.http.body: "gvSIG Online"` |
+| Censys | `web.endpoints.http.body: "select_public_project"` |
+
+One record per public SDI UI. Do not also register the bundled GeoServer as a separate catalog on the same host.
+
+## deegree (`deegree`)
+
+Open-source Java SDI stack (WMS, WFS, WMTS, CSW, WPS, and deegree ogcapi). Used as INSPIRE service middleware.
+
+**Confirm:** GetCapabilities on `/deegree-webservices`, `/services`, or a documented service path whose XML mentions deegree. CSW and OGC API Features are enough to treat it as a catalog when that is the public product.
+
+| Tool | Query |
+|------|-------|
+| Google | `"deegree" (CSW OR WMS OR "ogcapi") GetCapabilities -site:github.com -site:deegree.org` |
 | Censys | `web.endpoints.http.body: "deegree"` |
+| Shodan | `http.html:"deegree"` |
+
+## VertiGIS WebOffice (`weboffice`)
+
+Commercial web GIS (formerly SynerGIS WebOffice) on ArcGIS Enterprise. Vendor: [vertigis.com](https://www.vertigis.com). Multi-tenant hosts: `wo-hosting.vertigis.com`, `map.geoportal.at`.
+
+**Signals:** `/synserver` or `/WebOffice/synserver`; HTML title `VertiGIS WebOffice`; `weboffice_packed.css`; core, flex, or mobile clients.
+
+**Confirm:** GET the synserver URL and match the title plus `weboffice_packed.css`. One record per public client (tenant), not per map project.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"VertiGIS WebOffice" OR inurl:/synserver WebOffice` |
+| Google | `site:wo-hosting.vertigis.com OR site:map.geoportal.at` |
+| Censys | `web.endpoints.http.html_title: "VertiGIS WebOffice"` |
+| Censys | `web.endpoints.http.body: "weboffice_packed.css"` |
+
+## GeoMedia WebMap (`geomediawebmap`)
+
+Hexagon / Intergraph Geospatial Portal (GeoMedia WebMap Publisher Portal). Typical paths: `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`.
+
+**Signals:** `Version:` and `Licensed to:` in the UI; `Intergraph.WebSolutions`; `$GP.` JavaScript; title may say Geospatial Portal or GeoMedia WebMap Publisher Portal.
+
+**Confirm:** GET the portal URL and match at least two of those fingerprints. Skip staff-only intranet portals that require authentication for any map list.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Geospatial Portal" ("Licensed to" OR Intergraph) -site:hexagon.com` |
+| Google | `"GeoMedia WebMap" (portal OR geoportal)` |
+| Google | `inurl:/geoportal01/ OR inurl:/cdngiportal/ OR inurl:/msip/Full.aspx` |
+| Censys | `web.endpoints.http.body: "Intergraph.WebSolutions"` |
 
 ## Micka (`micka`)
 
@@ -185,17 +277,6 @@ Older Esri metadata catalog (not Hub). **Signals:** `/geoportal`, Geoportal Serv
 | Google | `"Geoportal Server" Esri OR inurl:/geoportal/csw` |
 | Censys | `web.endpoints.http.body: "Geoportal Server"` |
 
-## Generic geospatial probes
-
-On a **named** mapping-agency or city GIS host:
-
-```text
-/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
-/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
-/arcgis/rest/services?f=pjson
-/rest/info?f=pjson
-```
-
 ## disy Cadenza (`cadenza`)
 
 German public-sector geoanalytics / geoportal (Cadenza Web and Cadenza Workbooks). Vendor: [disy.net](https://www.disy.net/en/products/disy-cadenza/overview/).
@@ -208,6 +289,7 @@ German public-sector geoanalytics / geoportal (Cadenza Web and Cadenza Workbooks
 |------|-------|
 | Google | `"Cadenza Web" OR "disy Cadenza" (Umwelt OR Kartendienst OR Geoportal) site:.de` |
 | Google | `inurl:/cadenza/ (UDO OR iDA OR Kartendienst)` |
+| Censys | `web.endpoints.http.body: "cadenza"` |
 
 ## Generic geospatial probes
 
@@ -216,13 +298,17 @@ On a **named** mapping-agency or city GIS host:
 ```text
 /geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
 /geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+/cgi-bin/mapserv?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+/gvsigonline/
+/synserver
+/cadenza/
 /arcgis/rest/services?f=pjson
 /rest/info?f=pjson
 ```
 
-Google patterns: `geoportal {agency}`, `INSPIRE {country}`, `IDE {country}` (infraestructura de datos espaciales), `GDI {land}`, `géoportail {région}`.
+Google patterns: ``geoportal {agency}``, ``INSPIRE {country}``, ``IDE {country}`` (infraestructura de datos espaciales), ``GDI {land}``, ``géoportail {région}``.
 
-Regional GIS vendors (NetGIS, Sampaş, GiSoftGis, BelsisIMS, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza) have distinctive titles and paths listed in [discovery.md](discovery.md#identify-the-software) and [agents/discover.md](agents/discover.md). Search those titles with `site:` for the country TLD rather than inventing new probes.
+Regional GIS vendors (NetGIS, Sampaş, GiSoftGis, BelsisIMS) have distinctive titles and paths listed in [discovery.md](discovery.md#identify-the-software) and [agents/discover.md](agents/discover.md). Search those titles with `site:` for the country TLD rather than inventing new probes.
 
 ## Related
 

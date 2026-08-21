@@ -97,6 +97,18 @@ FROM software
 ORDER BY name;
 ```
 
+## Metadata catalogs (FAIR Data Point)
+
+```sql
+SELECT id, name, link, status
+FROM catalogs
+WHERE catalog_type = 'Metadata catalog'
+   OR software LIKE '%"id":"fairdatapoint"%'
+ORDER BY name;
+```
+
+DuckDB/Parquet lag source YAML until the next `build`. Duplicate-check `data/scheduled/` as well as exports.
+
 ## JSONL without DuckDB
 
 ```python

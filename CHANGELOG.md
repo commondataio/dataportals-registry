@@ -8,13 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- HTTP-verified default API probes for GeoMapFish, GET SDI Portal, REDATAM, SciCat, MapStore, Open SDG, SuperMap iServer, gvSIG Online, InGrid, ERDAS APOLLO, Drupal JSON:API, and ICAT OAI-PMH, written onto catalog `endpoints[]` only when a GET succeeds.
+- CONTENTdm software definition (`contentdm`) and two catalogs that publish research datasets: Stats NZ Digital Library long-term data series (`statsnz.contentdm.oclc.org`) and Indiana University Climate Data Indianapolis (`iuidigital.contentdm.oclc.org`).
+- Omeka S software definition (`omekas`), retagged Indiana Spatial Data Portal (`gisiuedu`) from `custom`, and added the Gouda Tijdmachine linked open data catalog (`goudatijdmachinenl`).
+- Idra Open Data Federation Platform software definition (`idra`) and **4 inactive Idra catalogs** (`idra.site`, `idra.opsilab.it`, `idra.eng.it`, `idra-sandbox.eng.it`). Retagged the existing OPSILab sandbox from `custom` to `idra` and marked it inactive.
+- Software definitions now **205** platforms (`data/software/` plus `software_ids.yaml`), including Idra, FAIR Data Point, MapServer, MapTiler Server, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, CONTENTdm, Omeka S, Fedora, and OPUS.
+- MapTiler Server geoportals: San Francisco (`tile.sf.gov`), Martínez de la Torre (`mapas.martinezdelatorre.gob.mx`), EMERCOM Atlas tiles (`tiles.atlas.mchs.gov.ru`), Zurich Airport DDS (`maps.dds-c2.zurich-airport.com`), and CGC Slovakia (`mapovy-server1.cgc.sk:3651`).
 - Catalog discovery guides: Google / Censys / Shodan / FOFA search-engine recipes (`docs/discovery-search-tools.md`), per-platform queries, and agent/LLM client setup for Cursor, ChatGPT, Claude, and MCP (`docs/discovery-agent-tools.md`).
 - Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, and CKAN ecosystem sync.
 - CLI reference now covers all `builder.py` commands; software taxonomy lists all 12 subtypes and a new-platform checklist.
 - JSON-LD/DCAT field mapping table and DuckDB column inventory on the exports page.
 
 ### Changed
+- Quality-fixer `infer_endpoints` helpers now probe `apidetect` URL maps over HTTP and write only endpoints that respond. They no longer construct unverified CKAN/GeoServer/`/sitemap.xml` URLs.
 - Discovery docs now include search-engine (Google, Censys, Shodan, FOFA) and per-platform guides; scoped catalog hunts may use those queries. Do not add internet-wide scanners to this repository.
+- Discovery guides now include fingerprints and search recipes for recently added software IDs: Idra (`idra`), FAIR Data Point (`fairdatapoint`), MapServer (`mapserver`), Mapbender (`mapbender`), gvSIG Online (`gvsigonline`), VertiGIS WebOffice (`weboffice`), GeoMedia WebMap (`geomediawebmap`), CONTENTdm (`contentdm`), Omeka S (`omekas`), Fedora (`fedora`), OPUS (`opus`), PHAIDRA (`phaidra`), Esploro (`esploro`), MapTiler Server (`maptilerserver`), and disy Cadenza (`cadenza`). New page: [docs/discovery-metadata.md](docs/discovery-metadata.md).
+- Registry counts and indexes refreshed for current source YAML: **18,208** entities, **88** scheduled, **205** software definitions, **217** country/territory folders. Last published exports remain v1.13.0 (**17,718** / **192**) until `python scripts/builder.py build`. Updated README, getting-started, exports, DATASHEET, AGENTS.md, software taxonomy, catalog types, scheduled, query examples, architecture, when-to-use, releasing, and `llms.txt`.
 - README catalog example uses `software.{id,name}` and geographic `level` 20; CONTRIBUTING requires Python 3.9–3.12 and canonical owner types.
 - JSON Schema `location.level` description: higher numbers are more local (20 national, 30+ subnational).
 - `llms.txt` indexes the full published docs set.

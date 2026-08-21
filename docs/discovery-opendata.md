@@ -1,6 +1,6 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md).
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**.
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun`.
 
@@ -147,6 +147,25 @@ inurl:hub.arcgis.com
 
 crt.sh: `%.hub.arcgis.com`. Gallery: [hub.arcgis.com](https://hub.arcgis.com/).
 
+## Idra (`idra`)
+
+Open Data Federation Platform (FIWARE / Engineering Ingegneria Informatica). It harvests CKAN, DKAN, Socrata, OpenDataSoft, NGSI, and DCAT-AP sources into one search UI. Docs: [idra.readthedocs.io](https://idra.readthedocs.io). Source: [OPSILab/Idra](https://github.com/OPSILab/Idra).
+
+Typical `catalog_type` is **Data search engine** (folder `search/`), not Open data portal: Idra is an aggregator over other ODMS catalogues.
+
+**Signals:** path `/IdraPortal/`; REST under `/Idra/api/v1/`; SPARQL; DCAT-AP / DCAT-AP_IT branding.
+
+**Confirm:** GET `https://host/IdraPortal/` (or `/Idra/api/v1/` JSON). Prefer a live production federation. The public demos (`idra.site`, `idra.opsilab.it`, `idra.eng.it`, sandbox hosts) are already registered and mostly **inactive** — do not re-add them.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Idra" ("Open Data Federation" OR IdraPortal OR "DCAT-AP_IT") -site:github.com -site:readthedocs.io` |
+| Google | `inurl:/IdraPortal/ OR inurl:/Idra/api/v1/` |
+| Censys | `web.endpoints.http.body: "IdraPortal"` |
+| Censys | `web.endpoints.http.body: "Idra"` |
+
+Do not register harvested source catalogs a second time as Idra. Duplicate-check the underlying CKAN/Socrata/OpenDataSoft `link` as well.
+
 ## Generic open-data URL patterns
 
 Try these on a **named** government or city host only (not as an internet-wide scan):
@@ -155,6 +174,7 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `/data.json`, `/catalog.json`, `/catalog.xml` (DCAT)
 - `/api/3/action/status_show` (CKAN)
 - `/api/explore/v2.1/catalog/datasets` (OpenDataSoft)
+- `/IdraPortal/` and `/Idra/api/v1/` (Idra)
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 
@@ -162,6 +182,7 @@ Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten
 
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
+- [discovery-metadata.md](discovery-metadata.md)
 - [ckan-sync.md](ckan-sync.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

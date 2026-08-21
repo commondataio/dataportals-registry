@@ -49,6 +49,7 @@ flowchart LR
 |----------|-------------------|--------|
 | Re3Data metadata | `scripts/re3data_enrichment.py` | `_re3data` on matching entities |
 | CKAN ecosystem sync | `scripts/sync_ckan_ecosystem.py` | new scheduled or entity YAML |
+| API endpoint probe | `scripts/apidetect.py` | `endpoints[]` on known `software.id` maps |
 | Quality analysis | `python scripts/builder.py analyze-quality` | `dataquality/` |
 | URL liveness | `.github/workflows/liveness.yml` | `dataquality/liveness_report.jsonl` |
 | Integrity regression | `tests/test_quality_regression.py` | fails CI if CRITICAL/IMPORTANT counts grow |

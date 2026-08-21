@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'dataportals-registry',
-  tagline: 'Registry of data portals, catalogs, and repositories',
+  tagline: 'Registry of data portals, geoportals, repositories, and metadata catalogs',
   favicon: 'img/favicon.svg',
 
   future: {

@@ -43,7 +43,7 @@ Prefer add-single --scheduled, then assign and validate-yaml --id {id}.
 
 Search-tool config: docs/discovery-agent-tools.md
 Platform fingerprints: docs/discovery-opendata.md, discovery-geoportals.md,
-discovery-scientific.md, discovery-indicators.md.
+discovery-scientific.md, discovery-metadata.md, discovery-indicators.md.
 ```
 
 Keep secrets **out** of these instructions. Put API keys in the client’s env / MCP config / GPT Action auth, never in git.

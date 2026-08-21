@@ -23,16 +23,16 @@ Typical subtypes:
 
 | `subtype` | Use for |
 |-----------|---------|
-| `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData) |
-| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare |
-| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub |
+| `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData, Idra) |
+| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Mapbender |
 | `microdata_catalog_platform` | NADA, NESSTAR, REDATAM |
 | `indicators_data_platform` | PxWeb, OpenSDG, Knoema |
-| `metadata_registry_platform` | Metadata catalogs / MDRs |
+| `metadata_registry_platform` | FAIR Data Point, Aristotle MDR |
 | `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints |
-| `geospatial_service_middleware` | GeoServer, MapServer, rasdaman |
+| `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
-| `managed_saas_service` | Socrata, OpenDataSoft, vendor-hosted Hub |
+| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub |
 | `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat) |
 | `general_software` | Catch-all, including `custom` |
 
@@ -43,10 +43,14 @@ Human-readable category notes: `data/software/types.yaml`. Allowed list: `data/s
 ```
 data/software/
 ├── opendata/ckan.yaml
+├── opendata/idra.yaml
 ├── geo/geonetwork.yaml
+├── geo/mapserver.yaml
 ├── scientific/dataverse.yaml
+├── scientific/opus.yaml
 ├── indicators/opensdg.yaml
 ├── microdata/nada.yaml
+├── metadata/fairdatapoint.yaml
 └── custom.yaml
 ```
 
@@ -73,6 +77,8 @@ Quality checks flag catalogs whose software implies endpoints that are missing (
 
 Do not create a new software id for a single catalog unless several independent installations exist or are expected.
 
+When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), or [discovery-indicators.md](discovery-indicators.md).
+
 ## Querying software usage
 
 ```sql
@@ -83,4 +89,4 @@ ORDER BY n DESC
 LIMIT 20;
 ```
 
-Matching a live site to a `software.id`: [discovery.md](discovery.md). Per-platform Google and Censys queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-indicators.md](discovery-indicators.md).
+Matching a live site to a `software.id`: [discovery.md](discovery.md). Per-platform Google and Censys queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md).

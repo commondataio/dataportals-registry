@@ -11,7 +11,7 @@ data/entities/
 │   └── Federal/opendata/...
 └── ...
 data/scheduled/          # unverified records pending promotion
-data/software/           # platform definitions (ckan.yaml, geonetwork.yaml, …)
+data/software/           # platform definitions under opendata/, geo/, scientific/, indicators/, microdata/, metadata/
 data/schemes/            # Cerberus + JSON Schema
 data/reference/          # controlled vocabularies
 data/datasets/           # generated exports (do not edit)

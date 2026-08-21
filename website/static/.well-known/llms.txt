@@ -13,7 +13,7 @@
 - [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human)
 - [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md): configure Cursor, ChatGPT, Claude, MCP, and search APIs for discovery
-- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-indicators.md](docs/discovery-indicators.md): per-platform discovery queries
+- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md): per-platform discovery queries
 - [docs/agents/query.md](docs/agents/query.md), [docs/agents/discover.md](docs/agents/discover.md), [docs/agents/contribute.md](docs/agents/contribute.md), [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md)
 - [AGENTS.md](AGENTS.md): project scope, schema, CLI commands, contribution workflow for AI assistants
 - [CONTRIBUTING.md](CONTRIBUTING.md): human contributor guide
@@ -23,9 +23,9 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type)
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md)
-- `data/software/`: software/platform definitions
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 21 August 2026: **18,208** files in **217** country/territory folders.
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**88** as of 21 August 2026)
+- `data/software/`: software/platform definitions (**205** YAML files; last published `software.jsonl` still has 192 until the next build)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
 - `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings

@@ -4,7 +4,7 @@ Use these tools **after** vendor and government lists ([discovery.md](discovery.
 
 This page is for **public catalog discovery** for the registry. It is not a scanner playbook. Do not write internet-wide crawlers in this repository. Query existing search indexes, then confirm each candidate with one or two public GETs.
 
-Agent checklist: [agents/discover.md](agents/discover.md). Platform fingerprints: [opendata](discovery-opendata.md), [geoportals](discovery-geoportals.md), [scientific](discovery-scientific.md), [indicators and microdata](discovery-indicators.md).
+Agent checklist: [agents/discover.md](agents/discover.md). Platform fingerprints: [opendata](discovery-opendata.md), [geoportals](discovery-geoportals.md), [scientific](discovery-scientific.md), [metadata](discovery-metadata.md), [indicators and microdata](discovery-indicators.md).
 
 ## Workflow
 
@@ -370,6 +370,7 @@ Match `www` vs bare host, `http` vs `https`, and `/data` vs `/`. `DUPLICATE_LINK
 - [discovery-opendata.md](discovery-opendata.md)
 - [discovery-geoportals.md](discovery-geoportals.md)
 - [discovery-scientific.md](discovery-scientific.md)
+- [discovery-metadata.md](discovery-metadata.md)
 - [discovery-indicators.md](discovery-indicators.md)
 - [agents/discover.md](agents/discover.md)
 - [discovery-agent-tools.md](discovery-agent-tools.md)

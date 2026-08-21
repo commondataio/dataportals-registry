@@ -34,6 +34,7 @@ This registry includes description of the following data catalogs:
 * Data search engines
 * API Catalogs
 * Data marketplaces
+* Metadata catalogs
 * Other 
 
 
@@ -86,7 +87,7 @@ Do not hand-edit `data/datasets/`.
 
 ## Data exports
 
-Latest snapshot (2026-08-20):
+Last published snapshot (**v1.13.0**, 2026-08-20):
 
 - `data/datasets/catalogs.jsonl` (+ `.zst`): 17,718 catalog records
 - `data/datasets/software.jsonl` (+ `.zst`): 192 software/platform definitions
@@ -94,7 +95,14 @@ Latest snapshot (2026-08-20):
 - `data/datasets/full.jsonl` (+ `.zst`): 17,718 combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 
-All `.zst` files can be decompressed with `unzstd file.zst` (zstd), and DuckDB exports can be queried directly with `duckdb` or Python's `duckdb` package. Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
+Current source YAML (2026-08-21, not yet rebuilt into exports):
+
+- `data/entities/`: **18,208** catalog records
+- `data/scheduled/`: **88** unverified records (mostly FAIR Data Point and MapServer)
+- `data/software/`: **205** platform definitions
+- **217** country/territory folders
+
+Run `python scripts/builder.py build` to refresh JSONL, Parquet, and DuckDB to match source. All `.zst` files can be decompressed with `unzstd file.zst` (zstd). Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
 
 ## Discovery
 
@@ -127,7 +135,7 @@ WHERE software LIKE '%"id":"ckan"%'
   AND coverage LIKE '%"id":"US"%';
 ```
 
-How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents. Search-engine recipes (Google, Censys, Shodan, FOFA): [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Configure those tools in Cursor, ChatGPT, and other LLM clients: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Per-platform queries: [open data](docs/discovery-opendata.md), [geoportals](docs/discovery-geoportals.md), [scientific](docs/discovery-scientific.md), [indicators and microdata](docs/discovery-indicators.md).
+How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents. Search-engine recipes (Google, Censys, Shodan, FOFA): [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Configure those tools in Cursor, ChatGPT, and other LLM clients: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Per-platform queries: [open data](docs/discovery-opendata.md), [geoportals](docs/discovery-geoportals.md), [scientific](docs/discovery-scientific.md), [metadata](docs/discovery-metadata.md), [indicators and microdata](docs/discovery-indicators.md).
 
 ## Data Quality and Validation
 

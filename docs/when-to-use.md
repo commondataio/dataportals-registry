@@ -4,7 +4,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
 
 ## Use this repository for
 
-- Finding portals, geoportals, repositories, and related infrastructure by country, type, or software
+- Finding portals, geoportals, repositories, metadata catalogs, and related infrastructure by country, type, or software
 - Joining catalogs to Wikidata, re3data, FAIRsharing, and similar identifiers
 - Landscape analysis (how many CKAN sites in France, which geoportals expose CSW, …)
 - Training or evaluating catalog-metadata classifiers, with the biases in [DATASHEET.md](https://github.com/datenoio/dataportals-registry/blob/main/DATASHEET.md)
@@ -20,7 +20,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
 ## Quick decision guide
 
 1. “Is there an open data portal for city X / country Y?”  
-   Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) (search engines: [discovery-search-tools.md](discovery-search-tools.md)) before adding a record.
+   Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) (search engines: [discovery-search-tools.md](discovery-search-tools.md); platforms: [opendata](discovery-opendata.md), [geoportals](discovery-geoportals.md), [scientific](discovery-scientific.md), [metadata](discovery-metadata.md), [indicators](discovery-indicators.md)) before adding a record.
 
 2. “Which catalogs run CKAN / GeoNetwork / Dataverse?”  
    Use this registry: filter `software.id` in DuckDB / Parquet ([query-examples.md](query-examples.md)).

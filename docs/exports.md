@@ -14,7 +14,9 @@ Generated artifacts live in `data/datasets/`. Rebuild with `python scripts/build
 | `datasets.duckdb` | Tables `catalogs` and `software` |
 | `catalogs.jsonld` | Optional; `build --jsonld` |
 
-August 2026 snapshot: **17,718** catalog records, **192** software definitions.
+Last published snapshot (v1.13.0, 20 August 2026): **17,718** catalog records, **192** software definitions.
+
+Current source YAML (21 August 2026): **18,208** entities, **88** scheduled, **205** software definitions. Rebuild exports with `python scripts/builder.py build` before treating DuckDB/Parquet as current.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 

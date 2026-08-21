@@ -23,12 +23,14 @@ Controlled list: `data/reference/catalog_types.yaml` and `data/schemes/catalog.j
 ## Choosing a type
 
 - Government CKAN / Socrata / OpenDataSoft / uData → **Open data portal**
-- GeoNetwork, ArcGIS Hub (GIS-first), Lizmap, NextGIS → **Geoportal**
-- Dataverse, DSpace, Invenio, Pure, GBIF IPT → **Scientific data repository**
+- GeoNetwork, ArcGIS Hub (GIS-first), Lizmap, NextGIS, MapServer, MapTiler Server, gvSIG Online → **Geoportal**
+- Dataverse, DSpace, Invenio, Pure, Esploro, GBIF IPT, OPUS, PHAIDRA → **Scientific data repository**
 - PxWeb, OpenSDG, Knoema, national indicator sites → **Indicators catalog**
 - NADA, NESSTAR, REDATAM, Colectica → **Microdata catalog**
-- Sites that only search other catalogs → **Data search engine** (aggregators score lower on [trust-score.md](trust-score.md))
+- Sites that only search other catalogs → **Data search engine** (aggregators score lower on [trust-score.md](trust-score.md); Idra federations use `software.id: idra`)
+- FAIR Data Point and similar RDF/DCAT registries → **Metadata catalog** (`software.id: fairdatapoint`)
+- CONTENTdm / Omeka S → scientific (or indicators/opendata) **only** when the public product is a dataset catalog, not an exhibit-only collection
 
 If a site is both a geoportal and an open data portal, pick the **primary** user-facing product (map/CSW → geo; dataset catalog → opendata).
 
-Finding catalogs that are not in the registry yet: [discovery.md](discovery.md). Platform-specific search queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-indicators.md](discovery-indicators.md).
+Finding catalogs that are not in the registry yet: [discovery.md](discovery.md). Platform-specific search queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md).

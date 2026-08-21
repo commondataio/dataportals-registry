@@ -40,7 +40,7 @@ Match on hostname, not display name. `id` is not a URL.
    python scripts/sync_ckan_ecosystem.py --dry-run
    ```
 
-3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [indicators](../discovery-indicators.md)).
+3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)).
 4. **Endpoint probes** on the candidate host only (table below). GET, short timeout, public URLs.
 
 You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, or TLD. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
@@ -57,18 +57,30 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | `/api/layers/` | `geonode` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
+| `/cgi-bin/mapserv` WMS GetCapabilities mentions MapServer | `mapserver` | Geoportal |
+| `/application/` Mapbender viewer | `mapbender` | Geoportal |
 | `/gvsigonline/` titled gvSIG Online (`select_public_project`) | `gvsigonline` | Geoportal |
+| deegree GetCapabilities / CSW / ogcapi | `deegree` | Geoportal |
 | `/keos/` city guide plus `/Netgis7` titled NetGIS Server 7 | `netgisserver` | Geoportal |
 | `/KentrehberiApp/` titled SAMPAŞ WEBGIS | `sampaswebgis` | Geoportal |
 | `/GiSoftGis/` Angular city guide (`gi-ajax-loading-indicator`) | `gisoftgis` | Geoportal |
 | `ims.*/Projects/*/Pages/KRH.aspx` (BelsisIMS KRH) | `belsisims` | Geoportal |
 | `/synserver` titled VertiGIS WebOffice (`weboffice_packed.css`, core/flex client) | `weboffice` | Geoportal |
+| Title `MapTiler Server`, `/admin`, `/api/maps/{id}/style.json` (often port 3650) | `maptilerserver` | Geoportal |
 | `/cadenza/`, Cadenza Web/Workbooks (`disy`, guest login, workbook navigator) | `cadenza` | Geoportal |
 | Geospatial Portal UI (`Version:`/`Licensed to:`, `Intergraph.WebSolutions`, `$GP.`) e.g. `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `geomediawebmap` | Geoportal |
 | `/rest/info?f=pjson` ArcGIS Server | `arcgisserver` | Geoportal |
 | ArcGIS Hub search API / hub site | `arcgishub` | Geoportal or Open data portal (primary UI) |
+| `/IdraPortal/` or `/Idra/api/v1/` | `idra` | Data search engine |
+| FAIR Data Point RDF DCAT (`fdp-client`, Turtle/JSON-LD at `/`) | `fairdatapoint` | Metadata catalog |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
+| OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
+| CONTENTdm `/digital/api/collections` (dataset collections only) | `contentdm` | Scientific data repository or Indicators catalog |
+| Omeka S `/api/items` JSON-LD (dataset catalogs, not exhibit-only) | `omekas` | Scientific data repository or Open data portal |
+| Fedora `/fcrepo/rest` as the public catalog (else use Hyrax/Islandora/PHAIDRA) | `fedora` | Scientific data repository |
+| PHAIDRA `/api/oai` or `/api/search/select` | `phaidra` | Scientific data repository |
+| Esploro research-outputs portal (`esploro.exlibrisgroup.com`) | `esploro` | Scientific data repository |
 | `/api/v1/` PxWeb | `pxweb` | Indicators catalog |
 
 Types: [catalog-types.md](../catalog-types.md). If a site is both a map viewer and a dataset portal, pick the **primary** product.
@@ -116,7 +128,7 @@ python scripts/apidetect.py detect-single {id} --dryrun
 - [discovery.md](../discovery.md)
 - [discovery-search-tools.md](../discovery-search-tools.md)
 - [discovery-agent-tools.md](../discovery-agent-tools.md)
-- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-indicators.md](../discovery-indicators.md)
+- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md)
 - [contribute.md](contribute.md)
 - [query.md](query.md)
 - [cli.md](../cli.md)

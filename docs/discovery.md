@@ -17,9 +17,10 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub |
-| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, and related SDI software |
-| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, Pure |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra |
+| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza |
+| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure |
+| [Metadata catalogs](discovery-metadata.md) | FAIR Data Point |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, NADA, NESSTAR, REDATAM, Colectica |
 
 ## Before you search
@@ -67,6 +68,8 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [GBIF IPT](https://www.gbif.org/ipt) | Biodiversity IPT nodes |
 | [ArcGIS Hub](https://hub.arcgis.com/) | ArcGIS Hub sites |
 | [EntryScape customers](https://entryscape.com/en/customers/) | EntryScape catalogs |
+| [FAIR Data Point index](https://home.fairdatapoint.org) | FAIR Data Point metadata catalogs |
+| [KOBV OPUS 4 references](https://www.kobv.de/entwicklung/software/opus-4/referenzen/) | OPUS institutional repositories |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
@@ -84,18 +87,31 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | GeoNetwork | `/srv/api`, `/srv/eng/csw` | CSW `GetCapabilities` |
 | GeoNode | `/api/layers/`, `/api/datasets/` | `/api/layers/` |
 | GeoServer | `/geoserver/ows`, `/geoserver/rest` | WMS `GetCapabilities` |
+| MapTiler Server | Title `MapTiler Server`, `/admin`, port 3650 | `/api/maps/{id}/style.json` (e.g. `streets`) |
+| MapServer | `/cgi-bin/mapserv`, WMS GetCapabilities mentions MapServer | WMS `GetCapabilities` |
+| Mapbender | `/application/`, Mapbender viewer | HTML or title mentions Mapbender |
+| gvSIG Online | `/gvsigonline/`, `select_public_project` | Page title or footer `gvSIG Online` |
+| deegree | `/deegree-webservices`, CSW/WMS XML mentions deegree | OGC `GetCapabilities` |
 | NetGIS Server | `/keos/`, `/Netgis7` | Page title `NetGIS Server 7`; optional `wms.ashx` GetCapabilities |
 | Sampaş WebGIS | `/KentrehberiApp/Index` | Page title contains `SAMPAŞ WEBGIS` |
 | GiSoftGis | `/GiSoftGis/#/cityguidepublic` | Angular SPA; `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması” |
 | BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
-| VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at/{TENANT}/` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
+| VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
+| GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
 | disy Cadenza | `/cadenza/`, `/public/`, `/pages/map/`, `/fachauswertungweb/` | `cadenza`/`disy` in HTML; Cadenza Web or Workbooks UI; guest login plus theme/workbook navigator |
-| GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`, `/portalsigcba/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
 | ArcGIS Server | `/rest/services`, `/arcgis/rest/services` | `/rest/info?f=pjson` |
 | ArcGIS Hub | `/api/search/v1`, portal sharing REST | `/api/search/v1` |
+| Idra | `/IdraPortal/`, `/Idra/api/v1/` | Federation UI or REST JSON; usually `catalog_type: Data search engine` |
+| FAIR Data Point | RDF DCAT at `/`, `fdp-client`, `/swagger-ui` | GET with `Accept: text/turtle` or `application/ld+json` |
 | Dataverse | `/api/dataverses`, `/api/info/version` | `/api/info/version` |
 | DSpace | `/oai/request?verb=Identify`, `/handle/` | OAI-PMH `Identify` |
 | Invenio / Zenodo-like | `/api/records` | `/api/records?size=1` |
+| OPUS | `/oai?verb=Identify`, OPUS 4 UI | repository-root `/oai?verb=Identify` |
+| CONTENTdm | `*.contentdm.oclc.org`, `/digital/api/collections` | that path and/or `/oai/oai.php?verb=Identify` |
+| Omeka S | `/api` JSON-LD, `/api/items` | `/api/items` |
+| Fedora Repository | `/fcrepo/rest` or `/rest` | Fedora version headers; prefer Hyrax/Islandora/PHAIDRA if that is the public UI |
+| PHAIDRA | `/api/oai`, `/api/search/select` | OAI `Identify` |
+| Esploro | `*.esploro.exlibrisgroup.com` or campus `/esploro` | Institutional research-outputs portal |
 | PxWeb | `/api/v1/` | `/api/v1/` |
 | NADA | `/index.php/api` or microdata UI | site home + API path |
 
@@ -117,23 +133,29 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - `/api/3`, `/api/3/action/package_search`
 - `/data.json`, `/catalog.json`, `/catalog.xml` (DCAT)
 - `/api/explore/v2.1/catalog/datasets` (OpenDataSoft)
+- `/IdraPortal/` and `/Idra/api/v1/` (Idra)
 
 **Geospatial**
 
 - GeoNetwork: `/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities`
 - GeoServer: `/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities`
+- MapServer: `/cgi-bin/mapserv?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+- gvSIG Online: `/gvsigonline/`
 - NetGIS Server: `/Netgis7` (version title) and `/keos/` (public KEOS viewer)
 - Sampaş WebGIS: `/KentrehberiApp/Index` (title `SAMPAŞ WEBGIS`)
 - GiSoftGis: `/GiSoftGis/` (city-guide hash `#/cityguidepublic`)
-- BelsisIMS: `/Projects/{NAME}/Pages/KRH.aspx` on an `ims.` host
+- BelsisIMS: `/Projects/.../Pages/KRH.aspx` on an `ims.` host
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 
-**Scientific**
+**Scientific and metadata**
 
-- OAI-PMH: `/oai/request?verb=Identify`
+- OAI-PMH: `/oai/request?verb=Identify` or `/oai?verb=Identify`
 - Dataverse: `/api/info/version`
+- CONTENTdm: `/digital/api/collections`
+- Omeka S: `/api/items`
+- FAIR Data Point: catalog root with `Accept: text/turtle`
 
 **Generic**
 
@@ -181,7 +203,7 @@ Do not write internet-wide scanners in this repository. Vendor/government lists,
 
 - [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [discovery-agent-tools.md](discovery-agent-tools.md) — Cursor, ChatGPT, Claude, MCP, and API setup
-- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-indicators.md](discovery-indicators.md)
+- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md)
 - [agents/discover.md](agents/discover.md) — agent checklist
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)

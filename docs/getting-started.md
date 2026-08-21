@@ -2,7 +2,7 @@
 
 dataportals-registry is a **reference-data registry** of open data portals, geoportals, scientific repositories, and related data infrastructure. Source records are YAML; consumers should prefer the exported datasets. Code is MIT; data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Latest snapshot (August 2026): **17,718** verified catalog entities and **192** software definitions.
+Latest source YAML (21 August 2026): **18,208** verified catalog entities, **88** scheduled records, and **205** software definitions across **217** country/territory folders. Last published exports (v1.13.0, 20 August 2026) still have **17,718** catalogs and **192** software IDs until `python scripts/builder.py build`.
 
 ## Fastest path (analytics)
 
@@ -75,6 +75,7 @@ https://github.com/datenoio/dataportals-registry
 | Find catalogs not yet registered | [discovery.md](discovery.md) |
 | Google, Censys, and other search tools | [discovery-search-tools.md](discovery-search-tools.md) |
 | Configure search tools in Cursor / ChatGPT | [discovery-agent-tools.md](discovery-agent-tools.md) |
+| Open data / geo / scientific / metadata / indicators hunts | [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md) |
 | Field reference | [data-model.md](data-model.md) |
 | Vocabularies (levels, identifiers, endpoints) | [vocabularies.md](vocabularies.md) |
 | Catalog types | [catalog-types.md](catalog-types.md) |
