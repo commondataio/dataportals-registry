@@ -28,9 +28,10 @@ Controlled list: `data/reference/catalog_types.yaml` and `data/schemes/catalog.j
 - PxWeb, OpenSDG, Knoema, national indicator sites → **Indicators catalog**
 - NADA, NESSTAR, REDATAM, Colectica → **Microdata catalog**
 - Sites that only search other catalogs → **Data search engine** (aggregators score lower on [trust-score.md](trust-score.md); Idra federations use `software.id: idra`)
-- FAIR Data Point and similar RDF/DCAT registries → **Metadata catalog** (`software.id: fairdatapoint`)
+- FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser → **Metadata catalog**
+- OpenML-style ML dataset catalogs → **Machine learning catalog** when that is the primary product ([discovery-other.md](discovery-other.md))
 - CONTENTdm / Omeka S → scientific (or indicators/opendata) **only** when the public product is a dataset catalog, not an exhibit-only collection
 
 If a site is both a geoportal and an open data portal, pick the **primary** user-facing product (map/CSW → geo; dataset catalog → opendata).
 
-Finding catalogs that are not in the registry yet: [discovery.md](discovery.md). Platform-specific search queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md).
+Finding catalogs that are not in the registry yet: [discovery.md](discovery.md). Platform-specific search queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), [discovery-other.md](discovery-other.md).

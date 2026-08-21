@@ -30,6 +30,28 @@ git push origin vX.Y.Z
 4. Paste notes from `.github/RELEASE_NOTES_vX.Y.Z.md` or CHANGELOG.
 5. Publish. Attach `data/datasets/full.jsonl.zst`, `full.parquet`, and `datasets.duckdb` when you want consumers to download dumps without cloning.
 
+## Documentation site (GitHub Pages)
+
+The published site is https://datenoio.github.io/dataportals-registry/. It builds from `docs/` plus the Docusaurus app in `website/`.
+
+`.github/workflows/deploy-docs.yml` runs on pushes to `main` that touch `docs/**`, `website/**`, `llms.txt`, or the workflow file itself, and on `workflow_dispatch`.
+
+Preview locally:
+
+```bash
+cd website
+npm start
+```
+
+Production build check:
+
+```bash
+cd website
+npm run build
+```
+
+Docs-only commits should not include `data/entities/**`, `data/software/**`, or generated `data/datasets/**` unless the release is meant to ship those changes.
+
 ## Citation
 
 `CITATION.cff` is the citation source. There is no Zenodo DOI yet; add `doi:` to `CITATION.cff` when a deposit exists. Preferred string:

@@ -55,13 +55,13 @@ Finding catalogs: [discovery.md](discovery.md), [agents/discover.md](agents/disc
 ```bash
 python scripts/re3data_enrichment.py enrich --dry-run
 python scripts/sync_ckan_ecosystem.py --dry-run
-python scripts/apidetect.py detect-single {id} --dryrun
+python scripts/apidetect.py detect-single catalogdatagov --dryrun
 python scripts/check_liveness.py --sample 10
 python scripts/calculate_trust_scores.py --dry-run
 python scripts/promote_scheduled.py --dry-run
 ```
 
-Re3Data: [re3data.md](re3data.md). Liveness writes `dataquality/liveness_report.jsonl` (weekly workflow, report-only). `apidetect.py` has URL maps for many platforms (CKAN, GeoServer, GeoMapFish, MapStore, gvSIG Online, Open SDG, SciCat, and others); probe only after a catalog YAML exists.
+Re3Data: [re3data.md](re3data.md). Endpoint maps: [apidetect.md](apidetect.md) (`detect-software`, `detect-country`; dry-run first). URL reachability: [liveness.md](liveness.md) (weekly workflow, report-only JSONL; does not change YAML `status`). Probe APIs only after a catalog YAML exists.
 
 ## Quality helpers
 

@@ -2,15 +2,29 @@
 
 Source: [dev/docs/genspark_report_20260616.md](../dev/docs/genspark_report_20260616.md)
 
-This document maps audit recommendations to OpenSpec change proposals, records dependencies, and defines acceptance criteria. Implementation follows the OpenSpec workflow in [openspec/AGENTS.md](AGENTS.md).
+This document maps audit recommendations to OpenSpec change proposals. Implementation follows [openspec/AGENTS.md](AGENTS.md).
+
+**Status (August 2026):** Waves 1–4 are implemented in the tree. Change folders still live under `openspec/changes/` until a maintainer runs `openspec archive <change-id> --yes`. Do not open duplicate proposals for the same capability.
+
+Deferred on purpose: production HTTP API / MCP (other repositories), per-record license, `_re3data` rename, AI description backfill, embeddings.
 
 ## Existing OpenSpec Changes (do not duplicate)
 
 | Change ID | Status | Genspark overlap | Notes |
 |-----------|--------|------------------|-------|
-| `add-schema-allowed-values` | In progress (3/5 tasks) | Enum validation for `catalog_type`, `status`, `access_mode` | Finish verification tasks; do not create a new enum-validation change |
-| `update-apidetect-reliability` | Complete | Endpoint detection reliability | Orthogonal to liveness monitoring; liveness is a separate scheduled probe |
-| `add-ckan-ecosystem-sync` | Complete | Catalog discovery automation | Orthogonal to API/MCP surface |
+| `add-schema-allowed-values` | Implemented; archive pending | Enum validation for `catalog_type`, `status`, `access_mode` | Schema `allowed` lists are in `catalog.json`. Tasks 2.1–2.2 are ongoing validation, not a new change. |
+| `update-apidetect-reliability` | Implemented; archive pending | Endpoint detection reliability | Orthogonal to liveness; see [docs/apidetect.md](../docs/apidetect.md) |
+| `add-ckan-ecosystem-sync` | Implemented; archive pending | Catalog discovery automation | See [docs/ckan-sync.md](../docs/ckan-sync.md) |
+| `refactor-quality-reporting-pipeline` | Implemented; archive pending | Quality reporter aggregation | Remaining task is pytest cleanup in unrelated files |
+| `update-subregion-reference-source` | Implemented; archive pending | ISO-3166-2 reference | |
+| `add-normalized-url-quality-checks` | Implemented; archive pending | Duplicate URL detection | |
+| `add-regression-guard-for-quality-counts` | Implemented; archive pending | CI quality baseline | |
+| `add-liveness-monitoring-workflow` | Implemented; archive pending | Weekly HTTP liveness | See [docs/liveness.md](../docs/liveness.md) |
+| `add-agent-facing-data-contract` | Implemented; archive pending | llms.txt, DATASHEET, SECURITY.md | Zenodo DOI still not minted |
+| `add-json-schema-and-linked-data-mapping` | Implemented; archive pending | JSON Schema + JSON-LD | |
+| `add-docusaurus-documentation-site` | Implemented; archive pending | GitHub Pages docs | See [docs/releasing.md](../docs/releasing.md) |
+| `add-owner-type-and-path-consistency-rules` | Implemented; archive pending | Owner type vocabulary | |
+| `recalibrate-endpoint-quality-priorities` | Implemented; archive pending | Endpoint issue priorities | |
 
 ## Genspark → OpenSpec Mapping
 

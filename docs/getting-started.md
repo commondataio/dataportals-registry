@@ -75,7 +75,8 @@ https://github.com/datenoio/dataportals-registry
 | Find catalogs not yet registered | [discovery.md](discovery.md) |
 | Google, Censys, and other search tools | [discovery-search-tools.md](discovery-search-tools.md) |
 | Configure search tools in Cursor / ChatGPT | [discovery-agent-tools.md](discovery-agent-tools.md) |
-| Open data / geo / scientific / metadata / indicators hunts | [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md) |
+| Open data / geo / scientific / metadata / indicators / other types | [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), [discovery-other.md](discovery-other.md) |
+| Endpoint detection / URL liveness | [apidetect.md](apidetect.md), [liveness.md](liveness.md) |
 | Field reference | [data-model.md](data-model.md) |
 | Vocabularies (levels, identifiers, endpoints) | [vocabularies.md](vocabularies.md) |
 | Catalog types | [catalog-types.md](catalog-types.md) |

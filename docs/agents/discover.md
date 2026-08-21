@@ -73,6 +73,23 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | ArcGIS Hub search API / hub site | `arcgishub` | Geoportal or Open data portal (primary UI) |
 | `/IdraPortal/` or `/Idra/api/v1/` | `idra` | Data search engine |
 | FAIR Data Point RDF DCAT (`fdp-client`, Turtle/JSON-LD at `/`) | `fairdatapoint` | Metadata catalog |
+| Aristotle MDR public registry / data elements | `aristotlemdr` | Metadata catalog |
+| Fusion Registry SDMX structural metadata | `fusionregistry` | Metadata catalog |
+| MetadataWorks Metadata Browser | `mwmb` | Metadata catalog |
+| `www2.wagmap.jp` / わが街ガイド / GeoAccessJS | `wagmap` | Geoportal |
+| `geoportal2.pl` / EWMAPA / GEOBID | `ewmapa` | Geoportal |
+| GeoMapFish `ngeo` / `/themes` | `geomapfish` | Geoportal |
+| 天地图 / Tianditu node | `tianditu` | Geoportal |
+| Masterportal / LGV viewer | `masterportal` | Geoportal |
+| wis2box / WIS2 node | `wis20box` | Geoportal |
+| `/oportal/` Inspur catalog | `oportal` | Open data portal |
+| `data.gov.in` OGD tenant | `ogdindia` | Open data portal |
+| Liferay RISP / datos abiertos listing (not a CMS homepage) | `liferay` | Open data portal |
+| Digital Commons / bepress IR | `elsevierdigitalcommons` | Scientific data repository |
+| InstDB / FairStack node | `instdb` | Scientific data repository |
+| WEKO3 institutional repository | `weko3` | Scientific data repository |
+| OPeNDAP / Hyrax directory (not THREDDS-only) | `opendap` | Scientific data repository |
+| OBiBa Mica study catalog | `obibamica` | Microdata catalog |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
 | OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
@@ -88,8 +105,10 @@ Types: [catalog-types.md](../catalog-types.md). If a site is both a map viewer a
 After a YAML file exists, optional endpoint fill:
 
 ```bash
-python scripts/apidetect.py detect-single {id} --dryrun
+python scripts/apidetect.py detect-single catalogdatagov --dryrun
 ```
+
+See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as a CLI.
 
 ## Accept / reject
 
@@ -112,7 +131,7 @@ python scripts/apidetect.py detect-single {id} --dryrun
 
 1. `python scripts/builder.py add-single URL --scheduled` (preferred) or write YAML per [contribute.md](contribute.md).
 2. `python scripts/builder.py assign`
-3. `python scripts/builder.py validate-yaml --id {id}`
+3. `python scripts/builder.py validate-yaml --id` for that catalog id
 4. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`.
 
 ## Do not
@@ -128,7 +147,8 @@ python scripts/apidetect.py detect-single {id} --dryrun
 - [discovery.md](../discovery.md)
 - [discovery-search-tools.md](../discovery-search-tools.md)
 - [discovery-agent-tools.md](../discovery-agent-tools.md)
-- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md)
+- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md) / [discovery-other.md](../discovery-other.md)
+- [apidetect.md](../apidetect.md) / [liveness.md](../liveness.md)
 - [contribute.md](contribute.md)
 - [query.md](query.md)
 - [cli.md](../cli.md)

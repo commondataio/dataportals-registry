@@ -59,6 +59,11 @@ const sidebars: SidebarsConfig = {
           id: 'discovery-indicators',
           label: 'Indicators and microdata',
         },
+        {
+          type: 'doc',
+          id: 'discovery-other',
+          label: 'Search, ML, API, marketplaces',
+        },
       ],
     },
     {
@@ -79,7 +84,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Pipelines',
-      items: ['re3data', 'ckan-sync'],
+      items: ['re3data', 'ckan-sync', 'apidetect', 'liveness'],
     },
     {
       type: 'category',

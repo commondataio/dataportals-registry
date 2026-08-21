@@ -36,12 +36,29 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 
 | Field | Purpose |
 |-------|---------|
-| `properties` | Flags such as `has_doi`, `is_national`, `transferable_topics`, `transferable_location`, `unfinished` |
+| `properties` | Flags such as `has_doi`, `is_national`, `transferable_topics`, `transferable_location`, `unfinished`, `dataset_count_reported` |
 | `catalog_export` | Export/syndication label (e.g. `CKAN API`) |
 | `trust_score` / `trust_score_components` | Optional 0–100 score; see [trust-score.md](trust-score.md) |
 | `_re3data` | Re3Data payload; see [re3data.md](re3data.md) |
 
 Do not invent `uid`. Scheduled records use `temp########` until [scheduled.md](scheduled.md) promotion.
+
+## Properties
+
+`properties` is an optional object of catalog flags (schema: `data/schemes/catalog.json`). Common keys:
+
+| Key | Type | Meaning |
+|-----|------|---------|
+| `has_doi` | boolean | Catalog or datasets routinely expose DOIs |
+| `is_national` | boolean | National-level catalog (helps coverage checks) |
+| `transferable_topics` | boolean | Topics may be copied onto related records |
+| `transferable_location` | boolean | Location may be copied onto related records |
+| `unfinished` | boolean | Record is known incomplete; do not treat as fully curated |
+| `dataset_count_reported` | integer or string | Count claimed by the source (not verified by this repo) |
+| `base_last_seen` | string | Internal harvest/seen stamp; do not invent for new YAML |
+| `invenio-filters` | string | Invenio search filter used during enrichment |
+
+Omit keys you cannot verify. These flags are not a substitute for `status` or `coverage`.
 
 ## Owner
 

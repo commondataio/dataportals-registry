@@ -2,7 +2,7 @@
 
 How to find **geoportal** installations (`catalog_type: Geoportal`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). If a site is both a map viewer and a dataset portal, pick the **primary** product ([catalog-types.md](catalog-types.md)).
 
-This page covers shared SDI platforms with stable fingerprints. Also in `data/software/geo/`: MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, and Mapbender. Regional products (NetGIS, Sampaş, GiSoftGis, BelsisIMS, わが街ガイド, Tianditu, GeoMapFish, Masterportal) use the same accept/reject rules with the titles and paths in [discovery.md](discovery.md#identify-the-software).
+This page covers shared SDI platforms with stable fingerprints, including high-volume regional products (Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box). Also in `data/software/geo/`: MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, and Mapbender. Turkish municipal GIS (NetGIS, Sampaş, GiSoftGis, BelsisIMS) stays in the compact table at the end.
 
 ## GeoNetwork (`geonetwork`)
 
@@ -291,6 +291,190 @@ German public-sector geoanalytics / geoportal (Cadenza Web and Cadenza Workbooks
 | Google | `inurl:/cadenza/ (UDO OR iDA OR Kartendienst)` |
 | Censys | `web.endpoints.http.body: "cadenza"` |
 
+## Wagmap / わが街ガイド (`wagmap`)
+
+PASCO hosted public WebGIS for Japanese prefectures and municipalities. Vendor: [pasco.co.jp](https://www.pasco.co.jp/biz/app-soft/wagamachiguide/). Tenants usually live under `www2.wagmap.jp` plus a city path, or a city custom domain loading GeoAccessJS portal assets.
+
+**Signals:** hostname `www2.wagmap.jp`; title or branding わが街ガイド / Wagmap; GeoAccessJS; optional open-data catalog alongside the map gallery.
+
+**Confirm:** GET the tenant URL and match Wagmap / GeoAccessJS branding. One record per public tenant, not per map layer. Skip staff-only municipal GIS that requires login for any map list.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:www2.wagmap.jp` |
+| Google | `"わが街ガイド" OR Wagmap (オープンデータ OR 地図) site:.jp` |
+| Censys | `web.names: "www2.wagmap.jp"` |
+| crt.sh | `%.wagmap.jp` |
+
+## EWMAPA (`ewmapa`)
+
+GEOBID GIS used for Polish cadastral, utility, and municipal map publication. Vendor: [geobid.pl](https://geobid.pl/). Many public viewers are hosted on `*.geoportal2.pl`.
+
+**Signals:** `geoportal2.pl` host; EWMAPA / GEOBID branding; municipal SIP / geoportal UI.
+
+**Confirm:** GET the public map catalog (not a single WMS layer URL). Duplicate-check the same gmina under GeoServer or ArcGIS before adding a second record.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:geoportal2.pl` |
+| Google | `"EWMAPA" OR "GEOBID" (geoportal OR SIP) site:.pl` |
+| Censys | `web.names: "geoportal2.pl"` |
+| crt.sh | `%.geoportal2.pl` |
+
+## GeoMapFish (`geomapfish`)
+
+Open-source WebGIS (c2cgeoportal + ngeo). Common in Swiss cantons and other European public geoportals. Site: [geomapfish.org](https://geomapfish.org).
+
+**Signals:** `ngeo` / `gmf-` CSS classes; `/themes` JSON; WMS/WMTS theme tree; `c2cgeoportal` in HTML or JS bundles.
+
+**Confirm:** GET `/themes` (or the documented theme API) and a public map UI. One record per public geoportal, not per theme.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GeoMapFish" OR c2cgeoportal (geoportail OR geoportal) -site:github.com` |
+| Google | `inurl:/themes ngeo OR geomapfish` |
+| Censys | `web.endpoints.http.body: "c2cgeoportal"` |
+| Censys | `web.endpoints.http.body: "gmf-"` |
+
+## Tianditu (`tianditu`)
+
+China National Geographic Information Public Service Platform (Map World). National, provincial, and municipal nodes share NGCC APIs and branding. Site: [tianditu.gov.cn](https://www.tianditu.gov.cn).
+
+**Signals:** `tianditu` in hostname or HTML; 天地图 branding; Map World API keys / `tianditu.gov.cn` tile or widget hosts.
+
+**Confirm:** GET the public node (province or city) and match 天地图 / Tianditu. One record per public node, not per map API key. Skip pure tile endpoints with no catalog UI.
+
+| Tool | Query |
+|------|-------|
+| Google | `"天地图" (省 OR 市 OR 地理信息) -site:tianditu.gov.cn` |
+| Google | `inurl:tianditu OR "Map World" 地理` |
+| Censys | `web.endpoints.http.body: "tianditu"` |
+
+## Masterportal (`masterportal`)
+
+Hamburg LGV open-source map viewer used by German federal, state, and municipal agencies. Site: [masterportal.org](https://www.masterportal.org).
+
+**Signals:** `Masterportal` in title or footer; `lgv-config` / `config.js` portal JSON; OGC WMS/WFS/CSW theme tree.
+
+**Confirm:** GET the viewer URL and match Masterportal config plus a public layer tree. One record per public portal instance.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Masterportal" (Geoportal OR Kartendienst) site:.de -site:masterportal.org` |
+| Censys | `web.endpoints.http.body: "Masterportal"` |
+| Censys | `web.endpoints.http.body: "lgv-config"` |
+
+## WIS 2.0 Box (`wis20box`)
+
+WMO WIS2 reference node for publishing meteorological and related geospatial data. Source: [wmo-im/wis2box](https://github.com/wmo-im/wis2box).
+
+**Signals:** `wis2box` in HTML or API; pygeoapi / OGC API Features alongside WIS2 messaging; WMO WIS2 branding.
+
+**Confirm:** GET the public discovery UI or OGC API landing page. Register the node catalog, not an individual dataset or MQTT topic.
+
+| Tool | Query |
+|------|-------|
+| Google | `"wis2box" OR "WIS 2.0 Box" (pygeoapi OR "OGC API") -site:github.com` |
+| Censys | `web.endpoints.http.body: "wis2box"` |
+
+## GET SDI Portal (`getsdiportal`)
+
+Geospatial Enabling Technologies SDI client over GeoServer / GeoNetwork. Common in Greek municipal and regional SDIs.
+
+**Signals:** tabbed UI (map, metadata, files, services); GET SDI / GETMAP branding; CSW plus WMS/WFS.
+
+**Confirm:** GET the portal home and match the tabbed SDI UI. Do not also register the bundled GeoServer on the same host.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GET SDI Portal" OR "GETMAP" (geoportal OR CSW) -site:getmap.eu` |
+| Censys | `web.endpoints.http.body: "GET SDI"` |
+
+## MapProxy (`mapproxy`)
+
+Open-source map cache/proxy. Register only when MapProxy is the **public catalog** (demo viewer + service list), not a silent cache behind another geoportal.
+
+**Confirm:** GET `/demo/` or WMTS/WMS GetCapabilities whose service title mentions MapProxy.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"MapProxy" (demo OR WMTS) -site:github.com -site:mapproxy.org` |
+| Censys | `web.endpoints.http.body: "MapProxy"` |
+
+## Terria (`terria`)
+
+Open-source catalog-driven map portal (TerriaJS). Site: [terria.io](https://terria.io).
+
+**Signals:** TerriaJS / National Map-style catalog tree; `config.json` + `catalog.json`; Magda or CKAN-backed catalogs behind the viewer.
+
+**Confirm:** GET the viewer and a working catalog JSON. If the same datasets are already a CKAN/Magda catalog on that host, prefer the dataset CMS unless the map is the primary product.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Terria" (catalog OR "National Map") -site:github.com` |
+| Censys | `web.endpoints.http.body: "Terria"` |
+
+## MapBiomas (`mapbiomas`)
+
+Land-cover collections and map viewers. Country nodes (Brazil, Indonesia, and others) share the MapBiomas web app. Site: [mapbiomas.org](https://mapbiomas.org).
+
+**Confirm:** GET the country node and match MapBiomas collections UI. One record per public country/program portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `"MapBiomas" (coleções OR collections OR geoportal)` |
+| Censys | `web.endpoints.http.body: "MapBiomas"` |
+
+## ERDAS APOLLO (`erdasapollo`)
+
+Hexagon geospatial content management. Vendor: [hexagon.com](https://hexagon.com/products/erdas-apollo).
+
+**Signals:** APOLLO Image Manager / Web Client; ERDAS APOLLO in HTML; WMS/WMTS/CSW from an APOLLO catalog.
+
+**Confirm:** GET the public discovery client (not an intranet Image Manager). Skip login-only enterprise catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ERDAS APOLLO" (WMS OR catalog OR geoportal) -site:hexagon.com` |
+| Censys | `web.endpoints.http.body: "ERDAS APOLLO"` |
+
+## pycsw (`pycsw`)
+
+OGC CSW and OGC API – Records server. Site: [pycsw.org](https://pycsw.org/). Register when pycsw is the public catalog, not only the CSW backend of GeoNode/GeoNetwork.
+
+**Confirm:** CSW `GetCapabilities` or OGC API Records landing page mentioning pycsw.
+
+| Tool | Query |
+|------|-------|
+| Google | `"pycsw" (CSW OR "OGC API" Records) -site:github.com -site:pycsw.org` |
+| Censys | `web.endpoints.http.body: "pycsw"` |
+
+## Koordinates (`koordinates`)
+
+Cloud geospatial data platform. Hosts: `*.koordinates.com` plus custom government domains. Site: [koordinates.com](https://koordinates.com).
+
+**Confirm:** GET the public data catalog (not a single layer). One record per tenant catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:koordinates.com (data OR layers)` |
+| Google | `"Powered by Koordinates" OR "koordinates" "open data"` |
+| crt.sh | `%.koordinates.com` |
+
+## Other high-volume regional GIS
+
+Use the same accept/reject rules. Search the product title with the country TLD; do not invent extra probes.
+
+| `software.id` | Typical signals | Notes |
+|---------------|-----------------|-------|
+| `gcnavi` | `geocloud.jp/webgis/` (org subdomain), GC Navi / GeoCloud | Japanese local-government WebGIS (Informatix) |
+| `nolis` | `maps.nol-is.de`, `static.nol-is.de`, NOL-IS | German municipal WebGIS |
+| `cardo` | `/net3/public/`, cardo.Map | IDU IT public-sector geoportals |
+| `netgisserver` | `/keos/`, `/Netgis7`, title `NetGIS Server 7` | Turkish municipal |
+| `sampaswebgis` | `/KentrehberiApp/Index`, title `SAMPAŞ WEBGIS` | Turkish municipal |
+| `gisoftgis` | `/GiSoftGis/#/cityguidepublic` | Turkish city guide SPA |
+| `belsisims` | `ims.*/Projects/*/Pages/KRH.aspx` | Do not confuse with Netcad Netigma |
+
 ## Generic geospatial probes
 
 On a **named** mapping-agency or city GIS host:
@@ -308,7 +492,7 @@ On a **named** mapping-agency or city GIS host:
 
 Google patterns: ``geoportal {agency}``, ``INSPIRE {country}``, ``IDE {country}`` (infraestructura de datos espaciales), ``GDI {land}``, ``géoportail {région}``.
 
-Regional GIS vendors (NetGIS, Sampaş, GiSoftGis, BelsisIMS) have distinctive titles and paths listed in [discovery.md](discovery.md#identify-the-software) and [agents/discover.md](agents/discover.md). Search those titles with `site:` for the country TLD rather than inventing new probes.
+Also try `/themes` (GeoMapFish), `/demo/` (MapProxy), and tenant hosts `www2.wagmap.jp`, `*.geoportal2.pl`, `*.geocloud.jp`.
 
 ## Related
 

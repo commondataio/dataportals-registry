@@ -104,6 +104,20 @@ DDI metadata catalogs / portals.
 | Google | `"Colectica" (portal OR repository OR DDI)` |
 | Censys | `web.endpoints.http.body: "Colectica"` |
 
+## OBiBa Mica (`obibamica`)
+
+Epidemiological / population-health study catalog (OBiBa). Often paired with Opal; register the **public Mica** discovery UI.
+
+**Signals:** Mica / OBiBa branding; study and network search; `/ws/` REST.
+
+**Confirm:** GET the public study catalog. Skip login-only research networks.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Mica" OBiBa (studies OR catalog) -site:github.com` |
+| Censys | `web.endpoints.http.body: "obiba"` |
+| Censys | `web.endpoints.http.body: "Mica"` |
+
 ## Generic statistics-office patterns
 
 ```text
@@ -118,5 +132,6 @@ Central banks (`indicators` more often than microdata): `site:{bank-domain} (sta
 
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
+- [discovery-metadata.md](discovery-metadata.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

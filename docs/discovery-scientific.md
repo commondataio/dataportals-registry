@@ -2,7 +2,7 @@
 
 How to find **scientific data repository** installations (`catalog_type: Scientific data repository`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Cross-check [re3data](https://www.re3data.org/) and the Dataverse installations JSON before adding a well-known platform — many are already registered.
 
-Also in `data/software/scientific/`: OPUS, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, and Esploro. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
+Also in `data/software/scientific/`: OPUS, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, Esploro, Elsevier Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Omega-PSIR, and Atlas of Living Australia. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
 
 ## Dataverse (`dataverse`)
 
@@ -231,6 +231,104 @@ Register the institutional research portal that lists datasets, not a single out
 | Censys | `web.names: "esploro.exlibrisgroup.com"` |
 | crt.sh | `%.esploro.exlibrisgroup.com` |
 
+## Elsevier Digital Commons (`elsevierdigitalcommons`)
+
+Hosted institutional repository (bepress / Elsevier). Hosts often `*.bepress.com`, `digitalcommons.` plus a campus domain, or `dc.` plus a campus host.
+
+**Signals:** Digital Commons branding; `/do/oai/` or bepress OAI; article/dataset collections.
+
+**Confirm:** GET the IR home and OAI Identify when public. Register the repository root, not a single series. Skip exhibit-only faculty profile sites with no dataset or research-output catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Digital Commons" (bepress OR Elsevier) (datasets OR repository) -site:elsevier.com` |
+| Google | `site:bepress.com OR inurl:digitalcommons` |
+| Censys | `web.endpoints.http.body: "bepress"` |
+| crt.sh | `%.bepress.com` |
+
+## InstDB (`instdb`)
+
+FairStack institutional research-data repository (CAS / CNIC). Site: [fairstack.cn](https://fairstack.cn/product/software/InstDB).
+
+**Signals:** InstDB / FairStack branding; Chinese Academy of Sciences data-center portals; DOI/CSTR assignment UI.
+
+**Confirm:** GET the public catalog home. One record per institutional node, not per dataset.
+
+| Tool | Query |
+|------|-------|
+| Google | `"InstDB" OR "FairStack" (数据仓储 OR repository) -site:fairstack.cn` |
+| Censys | `web.endpoints.http.body: "InstDB"` |
+
+## WEKO3 (`weko3`)
+
+NII / RCOS open-source institutional repository. Docs: [weko3.readthedocs.io](https://weko3.readthedocs.io).
+
+**Signals:** WEKO3 / WEKO branding; Invenio-like item types; `/api` search; OAI-PMH.
+
+**Confirm:** GET the repository home and `/oai?verb=Identify` when exposed. Register the IR root.
+
+| Tool | Query |
+|------|-------|
+| Google | `"WEKO3" OR "WEKO 3" (repository OR 機関リポジトリ) -site:github.com` |
+| Censys | `web.endpoints.http.body: "WEKO3"` |
+
+## OPeNDAP (`opendap`)
+
+Remote subsetting protocol and Hyrax/THREDDS-style servers. Site: [opendap.org](https://www.opendap.org). Use `opendap` when the public catalog is an OPeNDAP/Hyrax directory, not when OPeNDAP is only a download option on THREDDS (`thredds`) or ERDDAP (`erddap`).
+
+**Confirm:** GET a catalog XML or Hyrax/OPeNDAP directory listing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OPeNDAP" (Hyrax OR "catalog.xml") -site:opendap.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "OPeNDAP"` |
+
+## DataONE (`dataone`)
+
+Earth-science member-node network. Site: [dataone.org](https://www.dataone.org). Prefer the **member node** catalog URL, not every harvested dataset.
+
+**Confirm:** GET the member-node home. Duplicate-check before adding nodes already in re3data / this registry.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DataONE" ("member node" OR MN) repository` |
+| Censys | `web.endpoints.http.body: "DataONE"` |
+
+## Galaxy (`galaxy`)
+
+Usable-analysis platform that sometimes publishes public data libraries. Site: [usegalaxy.org](https://usegalaxy.org). Register **public Galaxy instances with a data library / shared histories catalog**, not every private analysis server.
+
+**Confirm:** GET the instance and a public data-library or toolshed-adjacent dataset listing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Galaxy" ("data libraries" OR usegalaxy) -site:galaxyproject.org` |
+| Censys | `web.endpoints.http.body: "usegalaxy"` |
+
+## Omega-PSIR (`omegapsir`)
+
+Polish university CRIS + repository. Site: [omegapsir.io](https://www.omegapsir.io).
+
+**Signals:** Omega-PSIR / “Baza Wiedzy”; researcher profiles plus research-data records.
+
+**Confirm:** GET the public CRIS/repository home. One record per university instance.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Omega-PSIR" OR "Baza Wiedzy" (repozytorium OR CRIS) site:.pl` |
+| Censys | `web.endpoints.http.body: "Omega-PSIR"` |
+
+## Atlas of Living Australia (`ala`)
+
+Biodiversity occurrence catalogs (ALA and national living-atlas forks). Site: [ala.org.au](https://www.ala.org.au).
+
+**Confirm:** GET the public occurrence/search portal. One record per national atlas, not per collection.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Atlas of Living Australia" OR "Living Atlas" (occurrences OR biocache)` |
+| Censys | `web.endpoints.http.body: "biocache"` |
+
 ## Generic scientific probes
 
 On a **named** university or lab host:
@@ -252,5 +350,6 @@ Google: ``"research data repository" {university}``, ``"repositorio de datos" {u
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
+- [discovery-other.md](discovery-other.md)
 - [re3data.md](re3data.md)
 - [software-taxonomy.md](software-taxonomy.md)

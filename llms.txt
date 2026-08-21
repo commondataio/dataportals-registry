@@ -13,13 +13,16 @@
 - [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human)
 - [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md): configure Cursor, ChatGPT, Claude, MCP, and search APIs for discovery
-- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md): per-platform discovery queries
+- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md), [docs/discovery-other.md](docs/discovery-other.md): per-platform discovery queries
+- [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md): endpoint probes and URL reachability
 - [docs/agents/query.md](docs/agents/query.md), [docs/agents/discover.md](docs/agents/discover.md), [docs/agents/contribute.md](docs/agents/contribute.md), [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md)
 - [AGENTS.md](AGENTS.md): project scope, schema, CLI commands, contribution workflow for AI assistants
 - [CONTRIBUTING.md](CONTRIBUTING.md): human contributor guide
 - [DATASHEET.md](DATASHEET.md): dataset purpose, bias, limitations, recommended uses
 - [CITATION.cff](CITATION.cff): academic citation metadata
-- [openspec/ROADMAP.md](openspec/ROADMAP.md): active change proposals and implementation waves
+- [SECURITY.md](SECURITY.md): vulnerability reporting
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): contributor covenant
+- [openspec/ROADMAP.md](openspec/ROADMAP.md): OpenSpec change proposals (implementation waves; archive when a change is complete)
 
 ## Data layout
 
@@ -62,8 +65,10 @@ python scripts/check_liveness.py --sample 10
 
 - [docs/re3data.md](docs/re3data.md): Re3Data enrichment
 - [docs/ckan-sync.md](docs/ckan-sync.md): CKAN ecosystem sync
+- [docs/apidetect.md](docs/apidetect.md): fill `endpoints[]` for known `software.id` maps
+- [docs/liveness.md](docs/liveness.md): weekly `link` probes (`dataquality/liveness_report.jsonl`)
 - [docs/architecture.md](docs/architecture.md), [docs/directory-layout.md](docs/directory-layout.md)
-- [docs/releasing.md](docs/releasing.md): GitHub release checklist
+- [docs/releasing.md](docs/releasing.md): GitHub release checklist and docs GitHub Pages deploy
 - Tests: [tests/README.md](tests/README.md)
 
 ## Scope boundary

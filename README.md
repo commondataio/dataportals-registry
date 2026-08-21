@@ -135,7 +135,7 @@ WHERE software LIKE '%"id":"ckan"%'
   AND coverage LIKE '%"id":"US"%';
 ```
 
-How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents. Search-engine recipes (Google, Censys, Shodan, FOFA): [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Configure those tools in Cursor, ChatGPT, and other LLM clients: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Per-platform queries: [open data](docs/discovery-opendata.md), [geoportals](docs/discovery-geoportals.md), [scientific](docs/discovery-scientific.md), [metadata](docs/discovery-metadata.md), [indicators and microdata](docs/discovery-indicators.md).
+How to find catalogs **not yet in this registry** (search lists, identify software, avoid duplicates): [docs/discovery.md](docs/discovery.md) for humans and [docs/agents/discover.md](docs/agents/discover.md) for coding agents. Search-engine recipes (Google, Censys, Shodan, FOFA): [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Configure those tools in Cursor, ChatGPT, and other LLM clients: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Per-platform queries: [open data](docs/discovery-opendata.md), [geoportals](docs/discovery-geoportals.md), [scientific](docs/discovery-scientific.md), [metadata](docs/discovery-metadata.md), [indicators and microdata](docs/discovery-indicators.md), [search / ML / API / marketplaces](docs/discovery-other.md). Endpoint fill: [docs/apidetect.md](docs/apidetect.md). URL liveness: [docs/liveness.md](docs/liveness.md).
 
 ## Data Quality and Validation
 

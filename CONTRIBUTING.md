@@ -1,6 +1,8 @@
 # Contributing to dataportals-registry
 
-Thank you for your interest in contributing to the dataportals-registry project! This document provides guidelines and instructions for contributing to the registry of data portals, catalogs, and repositories.
+Thank you for your interest in contributing to the dataportals-registry project! This document is the human contributor guide. The published internals site (schema, discovery, CLI, quality) is https://datenoio.github.io/dataportals-registry/. Agents should start at [llms.txt](llms.txt) and [docs/agents/contribute.md](docs/agents/contribute.md).
+
+**Do not duplicate that site here.** Field rules: [docs/data-model.md](docs/data-model.md). Finding catalogs: [docs/discovery.md](docs/discovery.md). Adding YAML: [docs/agents/contribute.md](docs/agents/contribute.md).
 
 ## Table of Contents
 

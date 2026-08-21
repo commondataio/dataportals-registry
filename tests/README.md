@@ -1,6 +1,18 @@
 # Tests for dataportals-registry
 
-This directory contains the test suite for the dataportals-registry project.
+Pytest suite for `scripts/` (configured in `pytest.ini` at the repository root). Python **3.9–3.12**. Published CLI notes: [docs/cli.md](../docs/cli.md).
+
+From the repository root:
+
+```bash
+pip install -r requirements.txt
+pytest
+pytest tests/test_builder.py -v
+pytest -m unit
+pytest --no-cov
+```
+
+CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest, and the quality regression guard.
 
 ## Running Tests
 

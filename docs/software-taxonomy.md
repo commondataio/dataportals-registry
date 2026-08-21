@@ -77,7 +77,7 @@ Quality checks flag catalogs whose software implies endpoints that are missing (
 
 Do not create a new software id for a single catalog unless several independent installations exist or are expected.
 
-When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), or [discovery-indicators.md](discovery-indicators.md).
+When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), or [discovery-other.md](discovery-other.md).
 
 ## Querying software usage
 
@@ -89,4 +89,4 @@ ORDER BY n DESC
 LIMIT 20;
 ```
 
-Matching a live site to a `software.id`: [discovery.md](discovery.md). Per-platform Google and Censys queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md).
+Matching a live site to a `software.id`: [discovery.md](discovery.md). Per-platform Google and Censys queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), [discovery-other.md](discovery-other.md). After YAML exists: [apidetect.md](apidetect.md).

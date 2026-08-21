@@ -166,6 +166,143 @@ Typical `catalog_type` is **Data search engine** (folder `search/`), not Open da
 
 Do not register harvested source catalogs a second time as Idra. Duplicate-check the underlying CKAN/Socrata/OpenDataSoft `link` as well.
 
+## Liferay (`liferay`)
+
+Digital experience CMS. **Only** register when a public Open Data / RISP dataset listing exists (common on Spanish provincial sites), not a generic Liferay intranet.
+
+**Signals:** Liferay portal paths (`/web/guest/`); “datos abiertos” / RISP module; Excel/XML/JSON/CSV dataset tables.
+
+**Confirm:** GET the open-data page and verify a reusable dataset list. Skip city hall homepages that only mention open data in a news article.
+
+| Tool | Query |
+|------|-------|
+| Google | `"datos abiertos" Liferay OR RISP (ayuntamiento OR diputación) site:.es` |
+| Google | `inurl:/web/guest/ "datos abiertos"` |
+| Censys | `web.endpoints.http.body: "Liferay"` |
+
+## POMOSAM (`pomosam`)
+
+CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (contracts, invoices, orders, public datasets). Vendor: [pomosam.sk](http://www.pomosam.sk).
+
+**Signals:** POMOSAM / CG eGOV branding; municipal zverejňovanie / open-data modules.
+
+**Confirm:** GET the public dataset or disclosure catalog. One record per municipality tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `"POMOSAM" OR "CG eGOV" (otvorené OR zverejňovanie) site:.sk` |
+| Censys | `web.endpoints.http.body: "POMOSAM"` |
+
+## oPortal (`oportal`)
+
+Inspur Chinese government open-data product. Deployments share `/oportal/` catalogs, a developer center, and an application gallery.
+
+**Signals:** path `/oportal/`; 浪潮 / Inspur; data-service / API gallery pages.
+
+**Confirm:** GET `/oportal/` (or the documented catalog path) and match a dataset listing. One record per government tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/oportal/ (数据 OR 开放)` |
+| Google | `"浪潮" 开放数据 oportal` |
+| Censys | `web.endpoints.http.body: "/oportal/"` |
+
+## OGD Platform India (`ogdindia`)
+
+NIC SaaS on data.gov.in for ministries and states. Site: [data.gov.in](https://data.gov.in).
+
+**Signals:** `data.gov.in` tenant host or path; OGD Platform India; CKAN-like catalog UI on NIC hosting.
+
+**Confirm:** GET the ministry/state catalog home. Do not re-add the national portal if it is already registered; add only distinct tenant catalogs.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:data.gov.in (catalog OR dataset)` |
+| Google | `"OGD Platform" OR "Open Government Data" site:.gov.in` |
+| crt.sh | `%.data.gov.in` |
+
+## data eye (`dataeye`)
+
+Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://dataeye.jp). Some tenants expose a CKAN-compatible metadata API.
+
+**Confirm:** GET the prefecture/city catalog. One record per tenant (including joint prefecture-municipality group portals).
+
+| Tool | Query |
+|------|-------|
+| Google | `site:dataeye.jp` |
+| Google | `"data eye" オープンデータ (市 OR 県)` |
+| crt.sh | `%.dataeye.jp` |
+
+## Seoul Open Data Plaza (`seoulopendataplaza`)
+
+Shared catalog used by Seoul Metropolitan Government district (`gu`) portals. Titles of the form 열린 데이터 광장; `/openinf/` JSP pages.
+
+**Confirm:** GET the district plaza home. One record per `gu` tenant, plus the city portal if it is a distinct catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"열린 데이터 광장" site:.go.kr` |
+| Google | `inurl:/openinf/ seoul` |
+| Censys | `web.endpoints.http.body: "openinf"` |
+
+## Data Fair (`datafair`)
+
+Koumoul open-source data portals. Docs: [data-fair.github.io](https://data-fair.github.io/3/en/).
+
+**Signals:** Data Fair / Koumoul; `/data-fair/` or dataset explorer APIs.
+
+**Confirm:** GET the public portal and a dataset list API. Skip the vendor docs site.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Data Fair" (Koumoul OR datasets) -site:github.com` |
+| Censys | `web.endpoints.http.body: "data-fair"` |
+
+## Datawheel (`datawheel`)
+
+Datawheel-hosted open-data / economic-complexity portals. Site: [datawheel.us](https://datawheel.us).
+
+**Confirm:** GET the public data portal (not a marketing page). One record per government or international-organization catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Datawheel" (open data OR "data portal") -site:datawheel.us` |
+| Censys | `web.endpoints.http.body: "datawheel"` |
+
+## SEU-e (`seue`)
+
+Consorci AOC electronic office / transparency / open-data service for Catalan administrations. Hosts under `seu-e.cat`.
+
+**Confirm:** GET the municipality’s open-data or transparency dataset listing on `seu-e.cat`. One record per public-administration tenant that publishes datasets.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:seu-e.cat (dades OR datasets OR "dades obertes")` |
+| crt.sh | `%.seu-e.cat` |
+
+## TriplyDB (`triplydb`)
+
+Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https://triplydb.com).
+
+**Confirm:** GET the public dataset catalog or SPARQL UI. One record per public instance, not per named graph.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:triplydb.com` |
+| Google | `"TriplyDB" (SPARQL OR datasets) -site:triplydb.com` |
+| crt.sh | `%.triplydb.com` |
+
+## Drupal (`drupal`) and WordPress (`wordpress`)
+
+Use these IDs only when the **public product is a dataset catalog** (DKAN-like Drupal open data, WordPress dataset plugins, CKAN-theme WP sites). Do not register ordinary CMS homepages.
+
+**Confirm:** a queryable dataset list or harvestable API (`/jsonapi` for Drupal, a dataset plugin or CKAN proxy for WordPress). If the site is DKAN, use `dkan` instead of `drupal`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"powered by Drupal" ("open data" OR datasets) inurl:/data` |
+| Google | `"open data" WordPress (CKAN OR dataset) -site:wordpress.org` |
+
 ## Generic open-data URL patterns
 
 Try these on a **named** government or city host only (not as an internet-wide scan):
@@ -175,6 +312,8 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `/api/3/action/status_show` (CKAN)
 - `/api/explore/v2.1/catalog/datasets` (OpenDataSoft)
 - `/IdraPortal/` and `/Idra/api/v1/` (Idra)
+- `/oportal/` (Inspur oPortal)
+- `/openinf/` (Seoul Open Data Plaza)
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 
@@ -183,6 +322,9 @@ Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
+- [discovery-indicators.md](discovery-indicators.md)
+- [discovery-other.md](discovery-other.md)
+- [apidetect.md](apidetect.md)
 - [ckan-sync.md](ckan-sync.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

@@ -17,11 +17,12 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra |
-| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza |
-| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure |
-| [Metadata catalogs](discovery-metadata.md) | FAIR Data Point |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, NADA, NESSTAR, REDATAM, Colectica |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye |
+| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box |
+| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy |
+| [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica |
+| [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (besides Idra), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
 
@@ -103,6 +104,22 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | ArcGIS Hub | `/api/search/v1`, portal sharing REST | `/api/search/v1` |
 | Idra | `/IdraPortal/`, `/Idra/api/v1/` | Federation UI or REST JSON; usually `catalog_type: Data search engine` |
 | FAIR Data Point | RDF DCAT at `/`, `fdp-client`, `/swagger-ui` | GET with `Accept: text/turtle` or `application/ld+json` |
+| Aristotle MDR | Aristotle registry of data elements / vocabularies | Public registry home or `/api/v4/` |
+| Fusion Registry | SDMX structural metadata, Fusion Registry branding | SDMX REST catalog |
+| Metadata Browser | MetadataWorks catalog UI | Public browser home |
+| Wagmap / わが街ガイド | `www2.wagmap.jp`, GeoAccessJS | Tenant map gallery |
+| EWMAPA | `*.geoportal2.pl`, GEOBID | Public municipal SIP |
+| GeoMapFish | `ngeo` / `gmf-`, `/themes` JSON | Theme API plus map UI |
+| Tianditu | 天地图 / `tianditu` | Public province or city node |
+| Masterportal | Masterportal config / LGV viewer | Public layer tree |
+| WIS2 Box | `wis2box`, pygeoapi | OGC API or discovery UI |
+| Liferay (open data only) | RISP / datos abiertos module | Dataset listing, not a CMS homepage |
+| oPortal | `/oportal/` | Government catalog home |
+| OGD Platform India | `data.gov.in` tenant | Ministry/state catalog |
+| Elsevier Digital Commons | bepress / Digital Commons | IR root + OAI |
+| InstDB | FairStack / InstDB | Institutional node home |
+| WEKO3 | WEKO3 IR | Repository root |
+| OBiBa Mica | Mica / OBiBa study catalog | Public `/ws/` or study search |
 | Dataverse | `/api/dataverses`, `/api/info/version` | `/api/info/version` |
 | DSpace | `/oai/request?verb=Identify`, `/handle/` | OAI-PMH `Identify` |
 | Invenio / Zenodo-like | `/api/records` | `/api/records?size=1` |
@@ -134,6 +151,8 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - `/data.json`, `/catalog.json`, `/catalog.xml` (DCAT)
 - `/api/explore/v2.1/catalog/datasets` (OpenDataSoft)
 - `/IdraPortal/` and `/Idra/api/v1/` (Idra)
+- `/oportal/` (Inspur oPortal)
+- `/openinf/` (Seoul Open Data Plaza)
 
 **Geospatial**
 
@@ -148,6 +167,9 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
+- GeoMapFish: `/themes`
+- Wagmap: `https://www2.wagmap.jp/` plus tenant path
+- WIS2 Box / pygeoapi: OGC API landing page
 
 **Scientific and metadata**
 
@@ -156,6 +178,8 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - CONTENTdm: `/digital/api/collections`
 - Omeka S: `/api/items`
 - FAIR Data Point: catalog root with `Accept: text/turtle`
+- Digital Commons: repository root or `/do/oai/`
+- Fusion Registry: SDMX REST catalog
 
 **Generic**
 
@@ -164,11 +188,11 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 After the record exists, `scripts/apidetect.py` can fill `endpoints[]` for known platforms:
 
 ```bash
-python scripts/apidetect.py detect-single {id} --dryrun
+python scripts/apidetect.py detect-single catalogdatagov --dryrun
 python scripts/apidetect.py detect-software ckan --dryrun
 ```
 
-Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so existing endpoints are kept.
+Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so existing endpoints are kept. Full command list: [apidetect.md](apidetect.md). URL reachability of `link` is a separate report: [liveness.md](liveness.md).
 
 ## Automated helpers in this repository
 
@@ -176,7 +200,8 @@ Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so 
 |------|-----|
 | `python scripts/sync_ckan_ecosystem.py --dry-run` | CKAN sites from ecosystem.ckan.org; then sync without `--dry-run` into `data/scheduled/` |
 | `python scripts/builder.py add-single URL --scheduled` | Create one YAML from a verified URL |
-| `python scripts/apidetect.py detect-single {id}` | Probe known API paths on an existing record |
+| `python scripts/apidetect.py detect-single catalogdatagov` | Probe known API paths on an existing record ([apidetect.md](apidetect.md)) |
+| `python scripts/check_liveness.py --sample 10` | Probe `link` reachability ([liveness.md](liveness.md)) |
 | `python scripts/re3data_enrichment.py enrich --dry-run` | Fill `_re3data` when a re3data identifier is present |
 
 CKAN sync details: [ckan-sync.md](ckan-sync.md). Re3Data: [re3data.md](re3data.md).
@@ -203,7 +228,8 @@ Do not write internet-wide scanners in this repository. Vendor/government lists,
 
 - [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [discovery-agent-tools.md](discovery-agent-tools.md) — Cursor, ChatGPT, Claude, MCP, and API setup
-- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md)
+- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md) / [discovery-other.md](discovery-other.md)
+- [apidetect.md](apidetect.md) / [liveness.md](liveness.md)
 - [agents/discover.md](agents/discover.md) — agent checklist
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)
