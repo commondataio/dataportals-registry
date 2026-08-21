@@ -6,7 +6,7 @@ Do not add dataset-level records (a single Dataverse dataset, a Zenodo depositio
 
 ## Dataverse (`dataverse`)
 
-Installations JSON: [dataverse-installations data.json](https://iqss.github.io/dataverse-installations/data/data.json). Branding is often “{Org} Dataverse”.
+Installations JSON: [dataverse-installations data.json](https://iqss.github.io/dataverse-installations/data/data.json). Branding is often `{Org} Dataverse`.
 
 **Confirm:** `https://host/api/info/version` and/or `/api/search?q=*&type=dataset`. OAI-PMH: `/oai?verb=Identify`.
 
