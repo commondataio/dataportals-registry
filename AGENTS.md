@@ -528,6 +528,14 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
 6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
 
+### Task: Harvest datasets from a catalog API
+
+1. Resolve the catalog from exports (`endpoints[]`, `software.id`) — [docs/agents/query.md](docs/agents/query.md)
+2. Follow [docs/agents/harvest.md](docs/agents/harvest.md) (human: [docs/harvest.md](docs/harvest.md))
+3. Scientific IRs mix publications and data — apply type filters in [docs/harvest-scientific.md](docs/harvest-scientific.md)
+4. Open data: packages not resources — [docs/harvest-opendata.md](docs/harvest-opendata.md). Geo: CSW/STAC/layers not tiles — [docs/harvest-geoportals.md](docs/harvest-geoportals.md). Indicators: tables/dataflows/studies — [docs/harvest-indicators.md](docs/harvest-indicators.md). Metadata: DCAT/SDMX structure — [docs/harvest-metadata.md](docs/harvest-metadata.md). Aggregators/ML/`custom` — [docs/harvest-other.md](docs/harvest-other.md)
+5. Do not write dataset YAML into this repository; do not implement a crawler here
+
 ### Task: Add a New Catalog Entry
 
 1. Check if catalog already exists in `data/entities/` or `data/scheduled/`

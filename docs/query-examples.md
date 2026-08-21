@@ -109,6 +109,23 @@ ORDER BY name;
 
 DuckDB/Parquet lag source YAML until the next `build`. Duplicate-check `data/scheduled/` as well as exports.
 
+## Scientific IRs to harvest (mixed publications + data)
+
+```sql
+SELECT id, name, link, json_extract_string(software, '$.id') AS software_id
+FROM catalogs
+WHERE catalog_type = 'Scientific data repository'
+  AND status = 'active'
+  AND json_extract_string(software, '$.id') IN (
+    'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
+    'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons'
+  )
+ORDER BY software_id, name
+LIMIT 50;
+```
+
+API recipes and dataset-vs-publication filters: [harvest.md](harvest.md).
+
 ## JSONL without DuckDB
 
 ```python

@@ -76,17 +76,17 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-opendata',
         label: 'Open data portals',
-        description: 'CKAN, OpenDataSoft, Socrata, uData, Magda, Idra, Liferay, oPortal.',
+        description: 'CKAN, OpenDataSoft, Socrata, Idra, Piveau, Our Open Data, DataPress.',
       },
       {
         to: '/docs/discovery-geoportals',
         label: 'Geoportals',
-        description: 'GeoNetwork, GeoServer, ArcGIS, Wagmap, GeoMapFish, Tianditu, Masterportal.',
+        description: 'GeoNetwork, ArcGIS, Wagmap, NetGIS, cardo, GC Navi, map.apps, CoGIS.',
       },
       {
         to: '/docs/discovery-scientific',
         label: 'Scientific repositories',
-        description: 'Dataverse, DSpace, Digital Commons, InstDB, WEKO3, OPeNDAP, Galaxy.',
+        description: 'Dataverse, DSpace, Digital Commons, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT.',
       },
       {
         to: '/docs/discovery-metadata',
@@ -96,12 +96,52 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-indicators',
         label: 'Indicators and microdata',
-        description: 'PxWeb, OpenSDG, NADA, NESSTAR, REDATAM, Mica, and related catalogs.',
+        description: 'PxWeb, OpenSDG, Knoema, SDMX-RI, GENESIS-Online, NADA, REDATAM, Mica.',
       },
       {
         to: '/docs/discovery-other',
         label: 'Search, ML, API, marketplaces',
         description: 'Aggregators, ML dataset catalogs, API directories, and data markets.',
+      },
+    ],
+  },
+  {
+    title: 'Harvest',
+    items: [
+      {
+        to: '/docs/harvest',
+        label: 'Harvest datasets',
+        description: 'Crawl catalog APIs; filter datasets from publications.',
+      },
+      {
+        to: '/docs/harvest-scientific',
+        label: 'Scientific repository APIs',
+        description: 'DSpace, Invenio, EPrints, Pure, Esploro, and mixed IRs.',
+      },
+      {
+        to: '/docs/harvest-opendata',
+        label: 'Open data portal APIs',
+        description: 'CKAN packages vs resources; OpenDataSoft; Socrata.',
+      },
+      {
+        to: '/docs/harvest-geoportals',
+        label: 'Geoportal APIs',
+        description: 'CSW, GeoNode, ArcGIS, STAC, OGC API collections.',
+      },
+      {
+        to: '/docs/harvest-indicators',
+        label: 'Indicators and microdata APIs',
+        description: 'PxWeb tables, SDMX dataflows, NADA studies, OpenSDG.',
+      },
+      {
+        to: '/docs/harvest-metadata',
+        label: 'Metadata catalog APIs',
+        description: 'FAIR Data Point DCAT, Aristotle MDR, Fusion Registry.',
+      },
+      {
+        to: '/docs/harvest-other',
+        label: 'Search, ML, and other APIs',
+        description: 'Aggregators, OpenML, marketplaces, custom catalogs.',
       },
     ],
   },
@@ -207,6 +247,11 @@ const sections: DocSection[] = [
         to: '/docs/agents/discover',
         label: 'Discover workflow',
         description: 'Find unregistered catalogs without duplicating records.',
+      },
+      {
+        to: '/docs/agents/harvest',
+        label: 'Harvest workflow',
+        description: 'Crawl catalog APIs and keep dataset records only.',
       },
       {
         to: '/docs/agents/contribute',

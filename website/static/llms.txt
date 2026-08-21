@@ -11,11 +11,12 @@
 - [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md), [docs/software-taxonomy.md](docs/software-taxonomy.md)
 - [docs/exports.md](docs/exports.md), [docs/query-examples.md](docs/query-examples.md), [docs/cli.md](docs/cli.md)
 - [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human)
+- [docs/harvest.md](docs/harvest.md): crawl datasets from catalog APIs; filter datasets from publications in scientific IRs ([harvest-scientific.md](docs/harvest-scientific.md), [harvest-opendata.md](docs/harvest-opendata.md), [harvest-geoportals.md](docs/harvest-geoportals.md), [harvest-indicators.md](docs/harvest-indicators.md), [harvest-metadata.md](docs/harvest-metadata.md), [harvest-other.md](docs/harvest-other.md))
 - [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md): configure Cursor, ChatGPT, Claude, MCP, and search APIs for discovery
 - [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md), [docs/discovery-other.md](docs/discovery-other.md): per-platform discovery queries
 - [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md): endpoint probes and URL reachability
-- [docs/agents/query.md](docs/agents/query.md), [docs/agents/discover.md](docs/agents/discover.md), [docs/agents/contribute.md](docs/agents/contribute.md), [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md)
+- [docs/agents/query.md](docs/agents/query.md), [docs/agents/discover.md](docs/agents/discover.md), [docs/agents/harvest.md](docs/agents/harvest.md), [docs/agents/contribute.md](docs/agents/contribute.md), [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md)
 - [AGENTS.md](AGENTS.md): project scope, schema, CLI commands, contribution workflow for AI assistants
 - [CONTRIBUTING.md](CONTRIBUTING.md): human contributor guide
 - [DATASHEET.md](DATASHEET.md): dataset purpose, bias, limitations, recommended uses
@@ -65,6 +66,7 @@ python scripts/check_liveness.py --sample 10
 
 - [docs/re3data.md](docs/re3data.md): Re3Data enrichment
 - [docs/ckan-sync.md](docs/ckan-sync.md): CKAN ecosystem sync
+- [docs/harvest.md](docs/harvest.md): crawl datasets from catalog APIs (not a crawler in this repo; production harvest: reaper). Type guides: scientific, opendata, geoportals, indicators, metadata, other.
 - [docs/apidetect.md](docs/apidetect.md): fill `endpoints[]` for known `software.id` maps
 - [docs/liveness.md](docs/liveness.md): weekly `link` probes (`dataquality/liveness_report.jsonl`)
 - [docs/enrichment.md](docs/enrichment.md): quality-fix scripts and legacy enrich CLIs

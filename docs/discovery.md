@@ -1,15 +1,16 @@
 # Discovering data catalogs
 
-Two different jobs share the word *discovery*:
+Three different jobs:
 
 | Job | What you want | Where to go |
 |-----|----------------|-------------|
 | Find catalogs **already in this registry** | Filter by country, type, software, or URL | [query-examples.md](query-examples.md), [agents/query.md](agents/query.md) |
 | Find catalogs **not yet registered** | New portals, geoportals, repositories | This page, then [CONTRIBUTING.md](https://github.com/datenoio/dataportals-registry/blob/main/CONTRIBUTING.md) |
+| List **datasets inside** a registered catalog | Remote catalog APIs, with type filters | [harvest.md](harvest.md) |
 
 This page is for the second job: locating real catalog installations in the wild, checking they are not duplicates, and preparing them for a pull request. Coding agents should follow the shorter checklist in [agents/discover.md](agents/discover.md).
 
-The registry records **catalogs** (portals, geoportals, repositories, and similar infrastructure). It does not store the datasets inside those catalogs.
+The registry records **catalogs** (portals, geoportals, repositories, and similar infrastructure). It does not store the datasets inside those catalogs. To crawl those datasets, see [harvest.md](harvest.md).
 
 ## Guides
 
@@ -17,11 +18,11 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 |-------|----------|
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
-| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye |
-| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box |
-| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress |
+| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box, NetGIS, cardo, GC Navi, NOL-IS, map.apps, CoGIS |
+| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, RADAR, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT, Symbiota |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (besides Idra), ML catalogs, API directories, data marketplaces |
 
 ## Before you search
@@ -71,6 +72,7 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [EntryScape customers](https://entryscape.com/en/customers/) | EntryScape catalogs |
 | [FAIR Data Point index](https://home.fairdatapoint.org) | FAIR Data Point metadata catalogs |
 | [KOBV OPUS 4 references](https://www.kobv.de/entwicklung/software/opus-4/referenzen/) | OPUS institutional repositories |
+| [About RADAR](https://radar.products.fiz-karlsruhe.de/en/radarabout/ueber-radar) | RADAR Cloud and RADAR Local research data repositories |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
@@ -96,6 +98,22 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | NetGIS Server | `/keos/`, `/Netgis7` | Page title `NetGIS Server 7`; optional `wms.ashx` GetCapabilities |
 | Sampaş WebGIS | `/KentrehberiApp/Index` | Page title contains `SAMPAŞ WEBGIS` |
 | GiSoftGis | `/GiSoftGis/#/cityguidepublic` | Angular SPA; `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması” |
+| cardo | `/net3/public/`, cardo.Map | Public map/catalog under `/net3/public/` |
+| GC Navi | `geocloud.jp/webgis/` | Tenant WebGIS home |
+| NOL-IS | `maps.nol-is.de` / `static.nol-is.de` | Public municipal geoportal |
+| map.apps | `/mapapps/` | con terra viewer; catalog UI may be `smartfindersdi` |
+| CoGIS | CoGIS Portal | Portal home; `elitegis` only if that is the branded viewer |
+| OpenGeoPortal | federated layer search | Geoportal home, not a single layer |
+| Knoema | `*.knoema.com` or branded hub | Portal home only — not every dataset URL |
+| SDMX-RI | `NSIWebService` / NSIStdV20Service | Public NSI/SDMX catalog |
+| GENESIS-Online | `/genesis/online` | Table catalog (POST-heavy API) |
+| IBIS-PH | `/ibisph-view/`, IBIS-Q | Public indicator home |
+| Our Open Data | `/assets/cms/public.css` | Catalog home, not a numeric dataset page |
+| DataPress | CKAN API plus DataPress chrome | Prefer `datapress` over `ckan` when branded |
+| Haplo | Haplo research repository | Public outputs/data catalog |
+| FAIRDOM-SEEK | FAIRDOMHub / WorkflowHub | Investigations/catalog home |
+| RAMADDA | RAMADDA repository UI | Folder/catalog entry |
+| ICAT | facility data catalog | Public search or documented REST/OAI |
 | BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
 | VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
 | GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
@@ -124,6 +142,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | DSpace | `/oai/request?verb=Identify`, `/handle/` | OAI-PMH `Identify` |
 | Invenio / Zenodo-like | `/api/records` | `/api/records?size=1` |
 | OPUS | `/oai?verb=Identify`, OPUS 4 UI | repository-root `/oai?verb=Identify` |
+| RADAR | `/radar/de/home`, `/oai/OAIHandler`, `/radar/api/datasets` | OAI `Identify` and datasets JSON with `totalHits` |
 | CONTENTdm | `*.contentdm.oclc.org`, `/digital/api/collections` | that path and/or `/oai/oai.php?verb=Identify` |
 | Omeka S | `/api` JSON-LD, `/api/items` | `/api/items` |
 | Fedora Repository | `/fcrepo/rest` or `/rest` | Fedora version headers; prefer Hyrax/Islandora/PHAIDRA if that is the public UI |
@@ -153,6 +172,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - `/IdraPortal/` and `/Idra/api/v1/` (Idra)
 - `/oportal/` (Inspur oPortal)
 - `/openinf/` (Seoul Open Data Plaza)
+- `/assets/cms/public.css` (Our Open Data)
 
 **Geospatial**
 
@@ -164,6 +184,9 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - Sampaş WebGIS: `/KentrehberiApp/Index` (title `SAMPAŞ WEBGIS`)
 - GiSoftGis: `/GiSoftGis/` (city-guide hash `#/cityguidepublic`)
 - BelsisIMS: `/Projects/.../Pages/KRH.aspx` on an `ims.` host
+- cardo: `/net3/public/`
+- GC Navi: tenant on `geocloud.jp/webgis/`
+- map.apps: `/mapapps/`
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
@@ -180,6 +203,7 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - FAIR Data Point: catalog root with `Accept: text/turtle`
 - Digital Commons: repository root or `/do/oai/`
 - Fusion Registry: SDMX REST catalog
+- Knoema: branded hub home (not a dataset page)
 
 **Generic**
 

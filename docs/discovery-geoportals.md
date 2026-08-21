@@ -2,7 +2,7 @@
 
 How to find **geoportal** installations (`catalog_type: Geoportal`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). If a site is both a map viewer and a dataset portal, pick the **primary** product ([catalog-types.md](catalog-types.md)).
 
-This page covers shared SDI platforms with stable fingerprints, including high-volume regional products (Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box). Also in `data/software/geo/`: MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, and Mapbender. Turkish municipal GIS (NetGIS, Sampaş, GiSoftGis, BelsisIMS) stays in the compact table at the end.
+This page covers shared SDI platforms with stable fingerprints, including high-volume regional products (Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box) and municipal GIS stacks (NetGIS Server, cardo, GC Navi, NOL-IS, GiSoftGis, Sampaş, ActiveMap, map.apps, CoGIS, OpenGeoPortal, smart.finder SDI). Also in `data/software/geo/`: MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, and Mapbender. Other regional viewers stay in the compact table at the end.
 
 ## GeoNetwork (`geonetwork`)
 
@@ -529,28 +529,173 @@ Hosted map galleries. Tenants on `mangomap.com`. Site: [mangomap.com](https://ma
 | Google | `site:mangomap.com` |
 | crt.sh | `%.mangomap.com` |
 
+## NetGIS Server (`netgisserver`)
+
+Netcad GIS server, common in Turkish municipalities. Product: [NetGIS Server](https://www.netcad.com/tr/urunler/netgis-server).
+
+**Signals:** `/Netgis7`, `/keos/` city guide, title `NetGIS Server 7`.
+
+**Confirm:** GET the KEOS viewer or `/Netgis7` title page. Optional WMS: `wms.ashx` GetCapabilities. Do not confuse with Sampaş `/KentrehberiApp/` or GiSoftGis Angular city guides.
+
+| Tool | Query |
+|------|-------|
+| Google | `intitle:"NetGIS Server 7" OR inurl:/Netgis7 OR inurl:/keos/` |
+| Censys | `web.endpoints.http.html_title: "NetGIS Server"` |
+
+## cardo (`cardo`)
+
+IDU IT geospatial platform (Germany and neighbours). Site: [cardogis.com](https://cardogis.com).
+
+**Signals:** `/net3/public/`, cardo.Map, `cardo` in HTML/JS.
+
+**Confirm:** GET the public map/catalog UI under `/net3/public/` (or the branded geoportal home). Skip intranet-only cardo installs.
+
+| Tool | Query |
+|------|-------|
+| Google | `"cardo.Map" OR inurl:/net3/public/` |
+| Censys | `web.endpoints.http.body: "cardo.Map"` |
+
+## GC Navi (`gcnavi`)
+
+Informatix GeoCloud WebGIS for Japanese local governments. Product: [GC Navi](https://www.informatix.co.jp/gc/navi/).
+
+**Signals:** `geocloud.jp/webgis/`, GC Navi, `bt=` / `p=` query parameters.
+
+**Confirm:** GET the tenant WebGIS home (org subdomain on `geocloud.jp`). Distinct from internal GC Planets. One record per municipality tenant.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GC Navi" OR inurl:geocloud.jp/webgis/` |
+| Censys | `web.names: "geocloud.jp"` |
+| crt.sh | `%.geocloud.jp` |
+
+## NOL-IS (`nolis`)
+
+German municipal WebGIS. Site: [nol-is.de](https://www.nol-is.de).
+
+**Signals:** assets from `maps.nol-is.de` or `static.nol-is.de`; NOL-IS / NOLIS branding.
+
+**Confirm:** GET the public geoportal home. Skip vendor marketing pages.
+
+| Tool | Query |
+|------|-------|
+| Google | `"NOL-IS" OR "NOLIS" Geoportal site:.de` |
+| Censys | `web.names: "nol-is.de"` |
+
+## GiSoftGis (`gisoftgis`)
+
+Turkish municipal Angular city guide. Path `/GiSoftGis/` with hash `#/cityguidepublic`.
+
+**Signals:** `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması”.
+
+**Confirm:** GET `/GiSoftGis/`. Distinct from NetGIS `/keos/` and Sampaş `/KentrehberiApp/`.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/GiSoftGis/` |
+| Censys | `web.endpoints.http.body: "GiSoftGis"` |
+
+## Sampaş WebGIS (`sampaswebgis`)
+
+AKOS municipal city-guide map. Typical path `/KentrehberiApp/Index`.
+
+**Confirm:** GET that path; page title contains `SAMPAŞ WEBGIS`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SAMPAŞ WEBGIS" OR inurl:/KentrehberiApp/` |
+| Censys | `web.endpoints.http.html_title: "SAMPA"` |
+
+## ActiveMap GIS (`activemapgis`)
+
+Gradoservice municipal GIS (often Russian cities). Product: [ActiveMap](https://gradoservice.ru/products/activemap/).
+
+**Confirm:** GET the public map portal home. Skip desktop-only marketing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ActiveMap" GIS (портал OR Gradoservice)` |
+| Censys | `web.endpoints.http.body: "ActiveMap"` |
+
+## map.apps (`mapapps`)
+
+con terra WebGIS framework. Product: [map.apps](https://www.conterra.de/portfolio/mapapps). Often paired with smart.finder SDI (`smartfindersdi`).
+
+**Signals:** `/mapapps/`; con terra / map.apps in HTML.
+
+**Confirm:** GET the public `/mapapps/` viewer (not a login-only intranet). If smart.finder is the catalog UI, prefer `smartfindersdi` for that catalog.
+
+| Tool | Query |
+|------|-------|
+| Google | `inurl:/mapapps/ (Geoportal OR "map.apps")` |
+| Censys | `web.endpoints.http.body: "/mapapps/"` |
+
+## CoGIS (`cogis`)
+
+Data East geoportal stack. Site: [cogis.dataeast.com](https://cogis.dataeast.com). Map services may be CoGIS Server, eLiteGIS (`elitegis`), or ArcGIS Server — register the **public catalog UI**.
+
+**Confirm:** GET CoGIS Portal home. Prefer `elitegis` only when that is the branded viewer with no CoGIS Portal.
+
+| Tool | Query |
+|------|-------|
+| Google | `"CoGIS" (портал OR Portal OR geoportal) -site:dataeast.com` |
+| Censys | `web.endpoints.http.body: "CoGIS"` |
+
+## OpenGeoPortal (`opengeoportal`)
+
+Federated academic geoportal (Tufts and partners).
+
+**Confirm:** GET the search/home UI that lists layers across institutions. Do not add a single layer preview URL.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OpenGeoPortal" OR "Open Geoportal" (layers OR geodata)` |
+| Censys | `web.endpoints.http.body: "OpenGeoPortal"` |
+
+## smart.finder SDI (`smartfindersdi`)
+
+con terra metadata/search portal. Product: [smart.finder SDI](https://www.conterra.de/portfolio/smartfinder-sdi). Often sits next to `mapapps`.
+
+**Confirm:** GET the public catalog search (CSW or finder UI). If only `/mapapps/` is public, use `mapapps`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"smart.finder SDI" OR "smart.finder" Geoportal site:.de` |
+| Censys | `web.endpoints.http.body: "smart.finder"` |
+
+## GIS WebServer SE (`giswebse`)
+
+KB Panorama web GIS. Site: [gisweb.ru](https://www.gisweb.ru).
+
+**Confirm:** GET the public geoportal (layer tree / map). Skip desktop GIS marketing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"GIS WebServer SE" (геопортал OR geoportal)` |
+| Censys | `web.endpoints.http.body: "GIS WebServer SE"` |
+
 ## Other geoportal platforms
 
 Search the product title with the country TLD. One record per public catalog UI.
 
 | `software.id` | Signals / confirm | Typical query |
 |---------------|-------------------|---------------|
-| `gcnavi` | `geocloud.jp/webgis/`, GC Navi | `"GC Navi" OR geocloud.jp webgis` |
-| `nolis` | `maps.nol-is.de`, NOL-IS | `"NOL-IS" Geoportal site:.de` |
-| `cardo` | `/net3/public/`, cardo.Map | `"cardo.Map" OR inurl:/net3/public/` |
-| `netgisserver` | `/keos/`, `/Netgis7` | `intitle:"NetGIS Server 7"` |
-| `sampaswebgis` | `/KentrehberiApp/Index` | `"SAMPAŞ WEBGIS"` |
-| `gisoftgis` | `/GiSoftGis/#/cityguidepublic` | `inurl:/GiSoftGis/` |
+| `gcnavi` | see above | |
+| `nolis` | see above | |
+| `cardo` | see above | |
+| `netgisserver` | see above | |
+| `sampaswebgis` | see above | |
+| `gisoftgis` | see above | |
+| `activemapgis` | see above | |
+| `mapapps` | see above | |
 | `belsisims` | `ims.*/Projects/*/Pages/KRH.aspx` | `KRH.aspx Belsis` |
-| `activemapgis` | Gradoservice ActiveMap | `"ActiveMap" GIS Gradoservice` |
 | `orbismap` | ORBISMap Russian GIS | `"ORBISMap" геопортал` |
-| `opengeoportal` | OpenGeoPortal federated search | `"OpenGeoPortal" OR "Open Geoportal"` |
+| `opengeoportal` | see above | |
 | `geonomics` | Vue/Mapbox, geonomix.kz | `"Geonomics" OR geonomix геопортал` |
-| `cogis` | Data East CoGIS Portal | `"CoGIS" (портал OR geoportal)` |
+| `cogis` | see above | |
 | `elitegis` | ArcGIS-compatible REST (Atemiko) | `"eLiteGIS" OR elitegis REST` |
-| `smartfindersdi` | con terra smart.finder SDI | `"smart.finder SDI" OR smartfinder` |
-| `mapapps` | `/mapapps/`, con terra | `inurl:/mapapps/` |
-| `giswebse` | GIS WebServer SE | `"GIS WebServer SE"` |
+| `smartfindersdi` | see above | |
+| `giswebse` | see above | |
 | `ingrid` | German InGrid CSW/OpenSearch | `"InGrid" (CSW OR Geoportal) site:.de` |
 | `metagis` | MetaGIS (SE) | `"MetaGIS" geoportal site:.se` |
 | `isigeo` | IsiGéo / Geomatika | `"IsiGéo" OR Isigeo géoportail` |
@@ -591,11 +736,12 @@ On a **named** mapping-agency or city GIS host:
 
 Google patterns: ``geoportal {agency}``, ``INSPIRE {country}``, ``IDE {country}`` (infraestructura de datos espaciales), ``GDI {land}``, ``géoportail {région}``.
 
-Also try `/themes` (GeoMapFish), `/demo/` (MapProxy), and tenant hosts `www2.wagmap.jp`, `*.geoportal2.pl`, `*.geocloud.jp`.
+Also try `/themes` (GeoMapFish), `/demo/` (MapProxy), `/net3/public/` (cardo), `/mapapps/` (map.apps), and tenant hosts `www2.wagmap.jp`, `geoportal2.pl`, `geocloud.jp`.
 
 ## Related
 
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-opendata.md](discovery-opendata.md)
+- [harvest-geoportals.md](harvest-geoportals.md)
 - [software-taxonomy.md](software-taxonomy.md)

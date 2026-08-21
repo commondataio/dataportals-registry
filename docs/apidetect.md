@@ -2,7 +2,7 @@
 
 Fill `endpoints[]` on catalog YAML after the record exists. The script GETs known URL templates for a `software.id` and writes types/URLs that respond.
 
-This is **enrichment**, not discovery. Find catalogs with [discovery.md](discovery.md); add YAML with [cli.md](cli.md); then optionally run apidetect.
+This is **enrichment**, not discovery and not a dataset crawl. Find catalogs with [discovery.md](discovery.md); add YAML with [cli.md](cli.md); then optionally run apidetect. To list datasets inside a catalog, use [harvest.md](harvest.md).
 
 Do not treat `scripts/apidetect_urlmaps_draft.py` as a CLI. Draft maps are merged into `CATALOGS_URLMAP` inside `apidetect.py` at import time.
 
@@ -41,7 +41,7 @@ Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge). High-tr
 |------|----------------|
 | Open data | `ckan`, `dkan`, `opendatasoft`, `socrata`, `udata`, `magda`, `jkan`, `junar`, `entryscape`, `drupal`, `wordpress`, `triplydb` |
 | Geo | `geonetwork`, `geonode`, `geoserver`, `arcgishub`, `arcgisserver`, `pycsw`, `pygeoapi`, `mapproxy`, `qwc2`, `mapstore`, `lizmap`, `mapbender`, `geomapfish`, `getsdiportal`, `terria`, `gvsigonline`, `erdasapollo`, `wis20box`, `koordinates`, `nextgisweb` |
-| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare` |
+| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `radar`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare` |
 | Indicators / microdata | `pxweb`, `opensdg`, `statsuite`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema` |
 | Metadata | `fusionregistry`, `aristotlemdr`, `mwmb` |
 
@@ -56,6 +56,7 @@ If `detect-single` reports no map for the ID, stop. Do not copy URLs from a diff
 ## Related
 
 - [cli.md](cli.md)
+- [harvest.md](harvest.md) (dataset crawl recipes; not this script)
 - [liveness.md](liveness.md) (URL reachability of `link`, not API maps)
 - [architecture.md](architecture.md)
 - [quality-rules.md](quality-rules.md)

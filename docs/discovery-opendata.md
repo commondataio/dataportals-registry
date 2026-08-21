@@ -1,8 +1,8 @@
 # Discovering open data portals
 
-How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**.
+How to find **open data portal** installations (`catalog_type: Open data portal`) that are not yet in this registry. Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Overview and accept/reject rules: [discovery.md](discovery.md). Also covered here: Idra (`idra`), a DCAT-AP federation layer that is usually typed as a **Data search engine**; Piveau, Our Open Data, Gipuzkoa Irekia, DataPress, and Taiwan MODA.
 
-Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun`.
+Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
 ## CKAN (`ckan`)
 
@@ -338,14 +338,60 @@ OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://ale
 | Google | `"Aleph" OCCRP (datasets OR documents) -site:occrp.org` |
 | Censys | `web.endpoints.http.body: "aleph"` |
 
+## Our Open Data (`ouropendata`)
+
+Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). Shared assets: `/assets/cms/public.css`, numeric `/dataset/` HTML pages, plus an application market and idea box.
+
+**Confirm:** GET the catalog home (not a single dataset HTML page). Distinct from CKAN and data.go.jp.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Our Open Data" オープンデータ OR inurl:/assets/cms/public.css` |
+| Censys | `web.endpoints.http.body: "assets/cms/public.css"` |
+
+## Gipuzkoa Irekia (`gipuzkoairekia`)
+
+Shared open-government / open-data platform for Gipuzkoa municipalities. Hub: [gipuzkoairekia.eus](https://www.gipuzkoairekia.eus).
+
+**Confirm:** GET a **tenant** catalog (municipality or foral entity), not only the provincial hub if that hub is already registered. DCAT feeds are a plus.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:gipuzkoairekia.eus (datos OR datuak OR catalog)` |
+| Google | `"Gipuzkoa Irekia" (opendata OR "datos abiertos")` |
+| Censys | `web.names: "gipuzkoairekia.eus"` |
+
+## DataPress (`datapress`)
+
+Managed CKAN plus CMS. Site: [datapress.com](https://datapress.com). Prefer `datapress` when the public product is branded DataPress; otherwise `ckan` if only the CKAN API is visible.
+
+**Confirm:** CKAN `status_show` **and** DataPress chrome (or vendor docs naming DataPress). Do not double-register the same host as both `ckan` and `datapress`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"DataPress" ("open data" OR CKAN)` |
+| Censys | `web.endpoints.http.body: "datapress"` |
+
+## MODA Open Data Platform (`modaopendata`)
+
+Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clones). Source: moda-gov-tw/opendata-frontend.
+
+**Confirm:** GET a **tenant** catalog (city/ministry), not a duplicate of the national hub if that hub is already registered. Shared `_nuxt` stack plus catalog API.
+
+| Tool | Query |
+|------|-------|
+| Google | `"data.gov.tw" OR inurl:_nuxt (opendata OR 開放資料) site:.tw` |
+| Google | `"moda-gov-tw" opendata` |
+| Censys | `web.names: "data.gov.tw"` |
+
 ## Other open-data platforms
 
 | `software.id` | Signals | Typical query |
 |---------------|---------|---------------|
-| `ouropendata` | Japanese CMS, `/assets/cms/public.css`, numeric dataset HTML | `"Our Open Data" オープンデータ` |
-| `gipuzkoairekia` | Gipuzkoa Irekia tenants, DCAT | `site:gipuzkoairekia.eus` or `"Gipuzkoa Irekia"` |
-| `modaopendata` | Taiwan MODA Nuxt frontend, data.gov.tw family | `"data.gov.tw" OR "moda" opendata` (do not re-add national) |
-| `datapress` | CKAN + CMS (DataPress) | `"DataPress" "open data"` |
+| `ouropendata` | see above | |
+| `gipuzkoairekia` | see above | |
+| `datapress` | see above | |
+| `modaopendata` | see above | |
 | `bitrix` | 1C-Bitrix **dataset catalog only** | `"Битрикс" открытые данные` (skip ordinary CMS) |
 | `jdop` | Japanese JDOP | `"JDOP" オープンデータ` |
 | `publishmydata` | Linked-data publisher | `"PublishMyData" OR publishmydata` |
@@ -368,6 +414,7 @@ Try these on a **named** government or city host only (not as an internet-wide s
 - `/IdraPortal/` and `/Idra/api/v1/` (Idra)
 - `/oportal/` (Inspur oPortal)
 - `/openinf/` (Seoul Open Data Plaza)
+- `/assets/cms/public.css` (Our Open Data)
 
 Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten "Leipzig"`, `开放数据 市`.
 
@@ -378,6 +425,7 @@ Search with local terms plus the city: `datos abiertos "Rosario"`, `offene Daten
 - [discovery-metadata.md](discovery-metadata.md)
 - [discovery-indicators.md](discovery-indicators.md)
 - [discovery-other.md](discovery-other.md)
+- [harvest-opendata.md](harvest-opendata.md)
 - [apidetect.md](apidetect.md)
 - [ckan-sync.md](ckan-sync.md)
 - [catalog-types.md](catalog-types.md)

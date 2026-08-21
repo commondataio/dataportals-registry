@@ -26,10 +26,10 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
    Use this registry: filter `software.id` in DuckDB / Parquet ([query-examples.md](query-examples.md)).
 
 3. “Give me the API URL to harvest.”  
-   Use this registry: read `endpoints[]` and `api_status`. Then harvest the remote catalog.
+   Use this registry: read `endpoints[]` and `api_status`. Then harvest the remote catalog ([harvest.md](harvest.md)). Scientific IRs: [harvest-scientific.md](harvest-scientific.md). Geo: [harvest-geoportals.md](harvest-geoportals.md). Indicators: [harvest-indicators.md](harvest-indicators.md).
 
 4. “Search for a specific dataset titled …”  
-   Out of scope. Harvest the catalog or use a downstream search index.
+   Out of scope for this repo’s data. Harvest the catalog ([harvest.md](harvest.md)) or use a downstream search index.
 
 5. “Is this URL currently up?”  
    Optional signal only: `dataquality/liveness_report.jsonl`. Status in YAML is curated, not a live probe.
@@ -40,7 +40,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
 |------|--------|
 | Catalog metadata (this repo) | YAML + DuckDB/Parquet exports |
 | Production catalog/dataset search API | [dateno-api](https://github.com/datenoio/dateno-api) |
-| Harvest datasets listed in catalogs | [reaper](https://github.com/datenoio/reaper) |
+| Harvest datasets listed in catalogs | [reaper](https://github.com/datenoio/reaper) (production); recipes: [harvest.md](harvest.md) |
 | Public catalog website | [dataportals-web](https://github.com/datenoio/dataportals-web) |
 | Country and organization reference data | [internacia-db](https://github.com/datenoio/internacia-db) |
 | Unified file reading/writing | [iterabledata](https://github.com/datenoio/iterabledata) |

@@ -2,7 +2,7 @@
 
 How to find **scientific data repository** installations (`catalog_type: Scientific data repository`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md). Cross-check [re3data](https://www.re3data.org/) and the Dataverse installations JSON before adding a well-known platform — many are already registered.
 
-Also in `data/software/scientific/`: OPUS, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, Esploro, Elsevier Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Omega-PSIR, and Atlas of Living Australia. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
+Also in `data/software/scientific/`: OPUS, RADAR, CONTENTdm, Omeka S, Fedora Repository, PHAIDRA, Esploro, Elsevier Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Omega-PSIR, Atlas of Living Australia, Haplo, Worktribe, FAIRDOM-SEEK, RAMADDA, and Symbiota. Do not add dataset-level records (a single Dataverse dataset, a Zenodo deposition, a STAC item).
 
 ## Dataverse (`dataverse`)
 
@@ -89,6 +89,20 @@ Integrated Publishing Toolkit for biodiversity data. List: [gbif.org/ipt](https:
 
 Prefer GBIF’s official installation list, then fill gaps with search.
 
+## Symbiota (`symbiota`)
+
+Open-source biodiversity collections CMS. Official portal directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/). Docs: [docs.symbiota.org](https://docs.symbiota.org/).
+
+Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish specimen occurrences, images, checklists, and Darwin Core datasets. Register **one catalog per portal**, not per collection or GBIF IPT mirror.
+
+**Confirm:** public collection search (`/collections/index.php` or `/portal/collections/`) and/or dataset RSS at `/collections/datasets/rsshandler.php`. Page signals include “Symbiota”, `collid=`, and “Search Collections”. Skip login-only portals and the vendor homepage.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Powered by Symbiota" OR "Symbiota portal" (collections OR occurrences) -site:symbiota.org -site:github.com` |
+| Google | `inurl:/collections/datasets/rsshandler.php` |
+| Censys | `web.endpoints.http.body: "Symbiota"` |
+
 ## Figshare (`figshare`)
 
 Institutional Figshare (not figshare.com itself). **Signals:** `{org}.figshare.com` or a custom domain with Figshare UI.
@@ -145,6 +159,23 @@ Prefer instances that publish research data (`doc-type:ResearchData` in OAI-PMH 
 | Censys | `web.endpoints.http.body: "OPUS 4"` |
 
 Skip intranet-only thesis portals (Hochschulnetz / account required). Register the repository root, not a single document frontdoor.
+
+## RADAR (`radar`)
+
+FIZ Karlsruhe research data repositories (RADAR Cloud and RADAR Local). Official instance notes: [About RADAR](https://radar.products.fiz-karlsruhe.de/en/radarabout/ueber-radar). re3data lists them under software **RADAR**.
+
+**Confirm:** `{base}/radar/en/home` or `{base}/radar/de/home` titled RADAR / the local brand, `{base}/oai/OAIHandler?verb=Identify`, and `{base}/radar/api/datasets` JSON with `totalHits` > 0. Prefer instances that already publish datasets.
+
+Register distinct **Local** hosts (KonDATA, WueData, Datathek, FoDaSi, OstData, RADAR-BB). Do **not** add `radar.kit.edu` or NFDI branded subdomains (`radar4chem.radar-service.eu`, `radar4culture.radar-service.eu`, `radar4memory.radar-service.eu`) — those share the already-registered Cloud catalog at `www.radar-service.eu`.
+
+| Tool | Query |
+|------|-------|
+| Google | `"RADAR" (Forschungsdaten OR "research data") (repositorium OR repository) site:.de` |
+| Google | `inurl:/radar/de/home OR inurl:/radar/en/home` |
+| Censys | `web.endpoints.http.html_title: "Forschungsdaten"` plus RADAR body hints |
+| re3data | software filter **RADAR** |
+
+Skip the FIZ product/marketing site (`radar.products.fiz-karlsruhe.de`) and dataset landing pages (`/radar/de/dataset/{id}`).
 
 ## CONTENTdm (`contentdm`)
 
@@ -379,16 +410,71 @@ Public **repository UI** on Fedora. Prefer these IDs over `fedora` when Drupal-I
 | Google | `"Islandora" (repository OR collections) -site:github.com` |
 | Google | `"Samvera" OR "Hyrax" (repository OR "research data") -site:samvera.org` |
 
+## Haplo (`haplo`)
+
+Research information / repository platform. Site: [haplo.com](https://www.haplo.com).
+
+**Confirm:** GET the public research-outputs or dataset catalog (not a staff-only CRIS). Skip haplo.com marketing.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Haplo" (repository OR "research outputs" OR "research data") -site:haplo.com` |
+| Censys | `web.endpoints.http.body: "haplo"` |
+
+## Worktribe (`worktribe`)
+
+University research hub. Site: [worktribe.com](https://worktribe.com).
+
+**Confirm:** GET a public repository or research-data listing. Skip grant-admin-only tenants.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Worktribe" (repository OR "research data") -site:worktribe.com` |
+| Censys | `web.endpoints.http.body: "worktribe"` |
+
+## FAIRDOM-SEEK (`seek`)
+
+Catalog for datasets, models, SOPs, and workflows. Site: [seek4science.org](https://seek4science.org). Includes WorkflowHub / FAIRDOMHub-style Rails apps.
+
+**Confirm:** GET the public SEEK home or `/investigations` listing. JSON API is a plus. Do not add a single assay page.
+
+| Tool | Query |
+|------|-------|
+| Google | `"FAIRDOM-SEEK" OR "FAIRDOMHub" OR WorkflowHub (datasets OR catalog)` |
+| Censys | `web.endpoints.http.body: "fairdom"` |
+
+## RAMADDA (`ramadda`)
+
+Repository for Archiving, Managing and Accessing Diverse Data. Site: [ramadda.org](https://www.ramadda.org).
+
+**Confirm:** GET the repository entry page (folder/catalog UI). Skip a single file download.
+
+| Tool | Query |
+|------|-------|
+| Google | `"RAMADDA" (repository OR catalog OR "data portal") -site:github.com` |
+| Censys | `web.endpoints.http.body: "RAMADDA"` |
+
+## ICAT (`icat`)
+
+Facility scientific catalog. Site: [icatproject.org](https://icatproject.org).
+
+**Confirm:** GET the public dataset search UI or documented ICAT REST/OAI. Skip facility login-only stores. Do not clone icatproject.org itself.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ICAT" (facility OR "data catalog" OR "scientific data") -site:icatproject.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "icat"` |
+
 ## Other scientific platforms
 
 | `software.id` | Signals | Typical query |
 |---------------|---------|---------------|
-| `haplo` | Haplo repository / CRIS | `"Haplo" (repository OR "research outputs")` |
-| `worktribe` | Worktribe research hub | `"Worktribe" (repository OR "research data")` |
-| `seek` | FAIRDOM-SEEK, WorkflowHub | `"FAIRDOM-SEEK" OR WorkflowHub` |
-| `ramadda` | RAMADDA repository | `"RAMADDA" (repository OR catalog)` |
+| `haplo` | see above | |
+| `worktribe` | see above | |
+| `seek` | see above | |
+| `ramadda` | see above | |
 | `nyudatacatalog` | NYU Data Catalog forks | `"NYU Data Catalog" OR "data-catalog" medical library` |
-| `icat` | ICAT facility catalog | `"ICAT" (facility OR "data catalog") -site:icatproject.org` |
+| `icat` | see above | |
 | `ensembl` | Ensembl genome browsers | `site:ensembl.org` taxon portals only (do not clone www) |
 | `datalad` | DataLad catalogs / GIN-like | `"DataLad" (catalog OR datasets)` |
 | `hubzero` | HUBzero scientific gateway | `"HUBzero" (resources OR database)` |
@@ -397,6 +483,7 @@ Public **repository UI** on Fedora. Prefer these IDs over `fedora` when Drupal-I
 | `mytardis` | MyTardis | `"MyTardis" (data OR repository)` |
 | `librecat` | LibreCat | `"LibreCat" repository` |
 | `gin` | G-Node gin (gogs+git-annex) | `site:gin.g-node.org` or `"GIN" g-node` |
+| `symbiota` | see above | |
 | `gbifplatform` | GBIF.org itself | do not re-add; use `ipt` for publisher IPTs |
 | `converis` | Clarivate Converis CRIS | `"Converis" (research OR repository)` |
 | `aodn` | AODN Portal | `"AODN" portal` |
@@ -429,4 +516,5 @@ Google: ``"research data repository" {university}``, ``"repositorio de datos" {u
 - [discovery-metadata.md](discovery-metadata.md)
 - [discovery-other.md](discovery-other.md)
 - [re3data.md](re3data.md)
+- [harvest.md](harvest.md) — crawl datasets from repository APIs (filter publications vs data)
 - [software-taxonomy.md](software-taxonomy.md)

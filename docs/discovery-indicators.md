@@ -2,7 +2,7 @@
 
 How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **microdata catalogs** (`catalog_type: Microdata catalog`). Search-engine syntax: [discovery-search-tools.md](discovery-search-tools.md).
 
-Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform.
+Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica.
 
 ## PxWeb (`pxweb`)
 
@@ -46,15 +46,66 @@ SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat S
 | Google | `inurl:/nsi OR "DotStat" SDMX` |
 | Censys | `web.endpoints.http.body: ".Stat"` |
 
+## Knoema (`knoema`)
+
+Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema.com). Ministries and banks often run a branded hub on a `knoema.com` subdomain or a custom domain.
+
+**Signals:** Knoema chrome; `/atlas` or dataset explorer; REST under `/api/1.0/` or `/api/3.0/`.
+
+**Confirm:** GET the **portal home** (a catalog of datasets). Do **not** add every Knoema dataset URL. Skip the global knoema.com hub if it is already registered; add only distinct institutional sites.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:knoema.com (atlas OR "data portal")` |
+| Google | `"powered by Knoema" OR "Knoema" (statistics OR indicators) -site:knoema.com` |
+| Censys | `web.names: "knoema.com"` |
+| crt.sh | `%.knoema.com` |
+
+## SDMX-RI (`sdmxri`)
+
+Eurostat SDMX Reference Infrastructure (NSI web service). Site: [sdmx.org](https://sdmx.org/?page_id=4666).
+
+**Signals:** `NSIWebService`, SDMX-RI; `/NSIStdV20Service` or SDMX REST 2.1.
+
+**Confirm:** GET a working SDMX query or the public NSI page that lists dataflows. If PxWeb or .Stat is the human UI, register that catalog instead of a raw SOAP URL.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SDMX-RI" OR "NSI Web Service" OR NSIStdV20Service` |
+| Censys | `web.endpoints.http.body: "NSIWebService"` |
+
+## GENESIS-Online (`genesisonline`)
+
+Destatis / Länder statistical database. Example: [www-genesis.destatis.de](https://www-genesis.destatis.de). Table retrieval is often **POST-only** — do not invent GET API paths.
+
+**Signals:** GENESIS-Online; `genesisclient`; `/genesis/online`.
+
+**Confirm:** GET the public table catalog. One record per statistical-office instance (Bund vs Land).
+
+| Tool | Query |
+|------|-------|
+| Google | `"GENESIS-Online" (Statistik OR Destatis) site:.de` |
+| Google | `inurl:/genesis/online` |
+| Censys | `web.endpoints.http.body: "GENESIS-Online"` |
+
+## IBIS-PH (`ibisph`)
+
+US state public-health indicator system. Community: [Adopt IBIS](https://ibis.utah.gov/ibisph-view/resource/AdoptIBIS.html).
+
+**Signals:** IBIS-PH / IBIS-Q; `/ibisph-view/`; XML-driven indicator pages.
+
+**Confirm:** GET a public indicator home or query module. Skip login-only health department tools.
+
+| Tool | Query |
+|------|-------|
+| Google | `"IBIS-PH" OR "IBIS PH" (indicators OR "public health") site:.gov` |
+| Censys | `web.endpoints.http.body: "ibisph"` |
+
 ## Other indicator platforms
 
 | `software.id` | Where to look | Typical query |
 |---------------|---------------|---------------|
-| `knoema` | Knoema-branded country hubs | `site:knoema.com "{country}"` (only add distinct portals, not every dataset) |
 | `superstar` | Census table browsers | `"SuperSTAR" (census OR "table builder")` |
-| `genesisonline` | Destatis GENESIS and clones | `"GENESIS-Online" site:.de` |
-| `sdmxri` | SDMX-RI / NSI web | `"SDMX-RI" OR "NSI Web Service"` |
-| `ibisph` | US state public-health indicators | `"IBIS-PH" OR "IBIS PH" health indicators` |
 | `statsuite` | see above | |
 | `stattech` | SIS-CC .Stat technology / SDMX APIs | `"Stat Technology" OR "SIS-CC" SDMX` |
 | `oracleapex` | Oracle APEX **indicator apps** | `"Oracle APEX" (statistika OR indicators)` (skip generic APEX sites) |
@@ -155,5 +206,6 @@ Central banks (`indicators` more often than microdata): `site:{bank-domain} (sta
 - [discovery.md](discovery.md)
 - [discovery-search-tools.md](discovery-search-tools.md)
 - [discovery-metadata.md](discovery-metadata.md)
+- [harvest-indicators.md](harvest-indicators.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

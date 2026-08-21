@@ -2,7 +2,7 @@
 
 Find catalog installations that are **not yet in this registry**, then hand off to [contribute.md](contribute.md). Human narrative: [discovery.md](../discovery.md). Search-engine and per-platform queries: [discovery-search-tools.md](../discovery-search-tools.md).
 
-This is **not** the query workflow. To look up existing records, use [query.md](query.md).
+This is **not** the query workflow. To look up existing records, use [query.md](query.md). To list datasets *inside* a catalog, use [harvest.md](harvest.md).
 
 ## Goal
 
@@ -93,10 +93,18 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | SciCat facility dataset catalogue | `scicat` | Scientific data repository |
 | Piveau DCAT-AP catalog UI | `piveau` | Open data portal |
 | `/mapapps/` con terra | `mapapps` | Geoportal |
+| `geocloud.jp/webgis/` GC Navi | `gcnavi` | Geoportal |
+| `/net3/public/` cardo.Map | `cardo` | Geoportal |
+| CoGIS Portal | `cogis` | Geoportal |
+| `/assets/cms/public.css` Our Open Data | `ouropendata` | Open data portal |
+| Knoema branded hub (portal home only) | `knoema` | Indicators catalog |
+| `"FAIRDOM-SEEK"` / WorkflowHub | `seek` | Scientific data repository |
 | Islandora collection browser (Drupal+Fedora) | `islandora` | Scientific data repository |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
 | OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
+| `/oai/OAIHandler` + `/radar/api/datasets` (RADAR) | `radar` | Scientific data repository |
+| `/collections/datasets/rsshandler.php` or “Powered by Symbiota” | `symbiota` | Scientific data repository |
 | CONTENTdm `/digital/api/collections` (dataset collections only) | `contentdm` | Scientific data repository or Indicators catalog |
 | Omeka S `/api/items` JSON-LD (dataset catalogs, not exhibit-only) | `omekas` | Scientific data repository or Open data portal |
 | Fedora `/fcrepo/rest` as the public catalog (else use Hyrax/Islandora/PHAIDRA) | `fedora` | Scientific data repository |

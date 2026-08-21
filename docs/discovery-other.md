@@ -88,5 +88,6 @@ Do not invent a new `software.id` for a one-off.
 - [discovery.md](discovery.md)
 - [discovery-opendata.md](discovery-opendata.md) (Idra)
 - [discovery-scientific.md](discovery-scientific.md) (OpenML, Galaxy)
+- [harvest-other.md](harvest-other.md)
 - [catalog-types.md](catalog-types.md)
 - [software-taxonomy.md](software-taxonomy.md)

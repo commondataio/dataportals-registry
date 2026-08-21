@@ -68,6 +68,47 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Harvest',
+      items: [
+        {
+          type: 'doc',
+          id: 'harvest',
+          label: 'Overview',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-scientific',
+          label: 'Scientific repositories',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-opendata',
+          label: 'Open data portals',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-geoportals',
+          label: 'Geoportals',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-indicators',
+          label: 'Indicators and microdata',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-metadata',
+          label: 'Metadata catalogs',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-other',
+          label: 'Search, ML, API, marketplaces',
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Data contracts',
       items: [
         'ai-consumers',
@@ -97,6 +138,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'agents/query',
         'agents/discover',
+        'agents/harvest',
         'agents/contribute',
         'agents/openspec-quickstart',
       ],

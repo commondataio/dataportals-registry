@@ -10,6 +10,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 3. Full contract: [ai-consumers.md](../ai-consumers.md).
 4. Recipes: [query-examples.md](../query-examples.md).
 5. If the user wants catalogs that are **not** in the registry yet, switch to [discover.md](discover.md) (client setup: [discovery-agent-tools.md](../discovery-agent-tools.md)).
+6. If the user wants **datasets inside** a catalog, switch to [harvest.md](../harvest.md).
 
 ## Access paths
 
@@ -31,7 +32,7 @@ Works with Cursor, Claude Code, Copilot, Codex, and any agent with file access.
 
 **In:** catalog identity, owner, coverage, software, endpoints, identifiers.
 
-**Out:** dataset records inside a portal; production search API/MCP in this repo ([dateno-api](https://github.com/datenoio/dateno-api)).
+**Out:** dataset records inside a portal; production search API/MCP in this repo ([dateno-api](https://github.com/datenoio/dateno-api)). To crawl those datasets, switch to [harvest.md](harvest.md).
 
 ## Canonical queries
 
@@ -52,4 +53,4 @@ SELECT count(*) FROM software;
 
 ## After answering
 
-Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md). If they want catalogs that are missing from the registry, switch to [discover.md](discover.md).
+Cite `uid` or `id` + `link`. If the user wants to **edit** a record, switch to [contribute.md](contribute.md). If they want catalogs that are missing from the registry, switch to [discover.md](discover.md). If they want **datasets inside** a catalog, switch to [harvest.md](../harvest.md).
