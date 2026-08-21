@@ -1,40 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: ZA
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: ZA
-Total Records with Issues: 5
-Total Issues Found: 5
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 2
-Priority: IMPORTANT
-
-File: ZA/ZA-WC/geo/wwwgroundwaterinfoafrica.yaml
-Record ID: wwwgroundwaterinfoafrica
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ZA/Federal/scientific/dataknpsanparksorg.yaml
-Record ID: dataknpsanparksorg
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: ZA/Federal/geo/wwwcdngiportalcoza.yaml
-Record ID: wwwcdngiportalcoza
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO]
 Count: 1
@@ -46,6 +17,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO
 Field: endpoints
 Current Value: {'software_id': 'carto', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='carto' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO]
+Count: 1
+Priority: MEDIUM
+
+File: ZA/Federal/geo/wwwcdngiportalcoza.yaml
+Record ID: wwwcdngiportalcoza
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO
+Field: endpoints
+Current Value: {'software_id': 'erdasapollo', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='erdasapollo' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR]
 Count: 1
@@ -61,7 +43,6 @@ Suggested Action: Add at least one endpoint because software.id='superstar' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 2 issues
-MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERSTAR: 1 issue

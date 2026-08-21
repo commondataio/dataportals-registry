@@ -1,54 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: RU
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: RU
-Total Records with Issues: 28
-Total Issues Found: 39
+Total Records with Issues: 27
+Total Issues Found: 29
 
 === ISSUES BY TYPE ===
-
-[COVERAGE_NORMALIZATION]
-Count: 4
-Priority: IMPORTANT
-
-File: RU/RU-SA/geo/942312552.yaml
-Record ID: 942312552
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-SA', 'name': 'Saha, Respublika'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: RU/Federal/geo/9123819084.yaml
-Record ID: 9123819084
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-File: RU/Federal/geo/maprgoru.yaml
-Record ID: maprgoru
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
-Record ID: dkbiznextgiscom
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-KDA', 'name': 'Krasnodarskij kraj'}}
-Suggested Action: Add macroregion information to coverage location
-
-[DUPLICATE_COVERAGE]
-Count: 1
-Priority: LOW
-
-File: RU/RU-MOW/opendata/77rosstatgovru.yaml
-Record ID: 77rosstatgovru
-Issue: DUPLICATE_COVERAGE
-Field: coverage[1]
-Current Value: {'location': {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}, 'subregion': {'id': 'RU-MOS', 'name': "Moskovskaja oblast'"}}}
-Suggested Action: Remove duplicate coverage entry
 
 [MISSING_CONTACT_INFO]
 Count: 1
@@ -103,49 +60,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 4
-Priority: LOW
-
-File: RU/RU-SA/geo/942312552.yaml
-Record ID: 942312552
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RU/Federal/geo/9123819084.yaml
-Record ID: 9123819084
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RU/Federal/geo/maprgoru.yaml
-Record ID: maprgoru
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
-Record ID: dkbiznextgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[OWNER_LOCATION_SUBREGION_REQUIRED]
-Count: 1
-Priority: IMPORTANT
-
-File: RU/RU-MOW/opendata/77rosstatgovru.yaml
-Record ID: 77rosstatgovru
-Issue: OWNER_LOCATION_SUBREGION_REQUIRED
-Field: owner.location.subregion
-Current Value: {'file_admin_dir': 'RU-MOW', 'owner_subregion_id': None, 'file_path': 'RU/RU-MOW/opendata/77rosstatgovru.yaml'}
-Suggested Action: Record is in subregion directory 'RU-MOW' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='RU-MOW' and name, or move the file to Federal.
 
 [PLACEHOLDER_TITLE]
 Count: 1
@@ -351,13 +265,9 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 4 issues
-DUPLICATE_COVERAGE: 1 issue
 MISSING_CONTACT_INFO: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 4 issues
-MISSING_TOPICS: 4 issues
-OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue
 PLACEHOLDER_TITLE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: 10 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
@@ -371,30 +281,6 @@ TAG_HYGIENE: 1 issue
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: 942312552
-File: RU/RU-SA/geo/942312552.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: 9123819084
-File: RU/Federal/geo/9123819084.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: maprgoru
-File: RU/Federal/geo/maprgoru.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
 Record ID: kazanspmgeofsmru
 File: RU/RU-TA/geo/kazanspmgeofsmru.yaml
 Issue Count: 3
@@ -402,11 +288,3 @@ Issues:
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: endpoints
   - MISSING_OWNER_LINK: owner.link
   - MISSING_CONTACT_INFO: owner.link
-
-Record ID: dkbiznextgiscom
-File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

@@ -1,25 +1,25 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
 Priority: MEDIUM
-Total Issues Found: 14
+Total Issues Found: 13
 
 Rule: Identifies records using software.id='ipums' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
-US: 14 issues
+US: 13 issues
 
 === SUMMARY BY RECORD ===
 
-internationalipumsorg: 2 issues
 nhisipumsorg: 1 issue
 usaipumsorg: 1 issue
 higheredipumsorg: 1 issue
 mepsipumsorg: 1 issue
 timeuseipumsorg: 1 issue
 wwwidhsdataorg: 1 issue
+internationalipumsorg: 1 issue
 pmaipumsorg: 1 issue
 micsipumsorg: 1 issue
 cpsipumsorg: 1 issue
@@ -28,14 +28,6 @@ ihgisipumsorg: 1 issue
 wwwnhgisorg: 1 issue
 
 === ISSUES ===
-
-File: US/Federal/opendata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Country: US
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
-Field: endpoints
-Current Value: {"software_id": "ipums", "has_api": "Yes", "endpoints_count": 0}
-Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
 
 File: US/US-MN/microdata/nhisipumsorg.yaml
 Record ID: nhisipumsorg

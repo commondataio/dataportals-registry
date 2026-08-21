@@ -1,74 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: SY
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: SY
 Total Records with Issues: 1
-Total Issues Found: 5
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[API_STATUS_MISMATCH]
+[STATUS_API_STATUS_MISMATCH]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: SY/Federal/geo/maprojatlascom.yaml
 Record ID: maprojatlascom
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=6
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[DUPLICATE_LINK]
-Count: 2
-Priority: IMPORTANT
-
-File: SY/geo/maprojatlascom.yaml
-Record ID: maprojatlascom
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://map.rojatlas.com', 'record_ids': ['maprojatlascom', 'maprojatlascom'], 'preferred_keeper': 'maprojatlascom', 'is_preferred_keeper': True}
-Suggested Action: This record is the preferred keeper for link duplicates among ['maprojatlascom', 'maprojatlascom']. Keep this entry and merge/delete the others.
-
-File: SY/Federal/geo/maprojatlascom.yaml
-Record ID: maprojatlascom
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://map.rojatlas.com', 'record_ids': ['maprojatlascom', 'maprojatlascom'], 'preferred_keeper': 'maprojatlascom', 'is_preferred_keeper': False}
-Suggested Action: Preferred keeper is 'maprojatlascom' (https://map.rojatlas.com). Merge or delete the other duplicate(s).
-
-[DUPLICATE_RECORD_ID]
-Count: 2
-Priority: CRITICAL
-
-File: SY/geo/maprojatlascom.yaml
-Record ID: maprojatlascom
-Issue: DUPLICATE_RECORD_ID
-Field: id
-Current Value: {'record_id': 'maprojatlascom', 'file_paths': ['SY/Federal/geo/maprojatlascom.yaml', 'SY/geo/maprojatlascom.yaml']}
-Suggested Action: Catalog id 'maprojatlascom' appears in multiple files (SY/Federal/geo/maprojatlascom.yaml, SY/geo/maprojatlascom.yaml). Keep one file and remove or rename the other.
-
-File: SY/Federal/geo/maprojatlascom.yaml
-Record ID: maprojatlascom
-Issue: DUPLICATE_RECORD_ID
-Field: id
-Current Value: {'record_id': 'maprojatlascom', 'file_paths': ['SY/Federal/geo/maprojatlascom.yaml', 'SY/geo/maprojatlascom.yaml']}
-Suggested Action: Catalog id 'maprojatlascom' appears in multiple files (SY/Federal/geo/maprojatlascom.yaml, SY/geo/maprojatlascom.yaml). Keep one file and remove or rename the other.
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
-DUPLICATE_LINK: 2 issues
-DUPLICATE_RECORD_ID: 2 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: maprojatlascom
-File: SY/Federal/geo/maprojatlascom.yaml
-Issue Count: 5
-Issues:
-  - API_STATUS_MISMATCH: api
-  - DUPLICATE_RECORD_ID: id
-  - DUPLICATE_RECORD_ID: id
-  - DUPLICATE_LINK: link
-  - DUPLICATE_LINK: link
+STATUS_API_STATUS_MISMATCH: 1 issue

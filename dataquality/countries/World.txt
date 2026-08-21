@@ -1,122 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: World
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: World
-Total Records with Issues: 37
-Total Issues Found: 47
+Total Records with Issues: 34
+Total Issues Found: 35
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 2
-Priority: IMPORTANT
-
-File: DE/DE-HB/geo/ogctestbed19geodatacuberasdamancom.yaml
-Record ID: ogctestbed19geodatacuberasdamancom
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: DE/Federal/geo/dataawide.yaml
-Record ID: dataawide
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[COVERAGE_NORMALIZATION]
-Count: 5
-Priority: IMPORTANT
-
-File: US/US-MN/microdata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
-Suggested Action: Add macroregion information to coverage location
-
-File: US/US-MN/microdata/wwwidhsdataorg.yaml
-Record ID: wwwidhsdataorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
-Suggested Action: Add macroregion information to coverage location
-
-File: US/US-MN/microdata/pmaipumsorg.yaml
-Record ID: pmaipumsorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
-Suggested Action: Add macroregion information to coverage location
-
-File: US/US-MN/microdata/micsipumsorg.yaml
-Record ID: micsipumsorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
-Suggested Action: Add macroregion information to coverage location
-
-File: US/US-MN/geo/ihgisipumsorg.yaml
-Record ID: ihgisipumsorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
-Suggested Action: Add macroregion information to coverage location
-
-[DUPLICATE_LINK]
-Count: 2
-Priority: IMPORTANT
-
-File: US/Federal/opendata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://international.ipums.org', 'record_ids': ['internationalipumsorg', 'internationalipumsorg'], 'preferred_keeper': 'internationalipumsorg', 'is_preferred_keeper': True}
-Suggested Action: This record is the preferred keeper for link duplicates among ['internationalipumsorg', 'internationalipumsorg']. Keep this entry and merge/delete the others.
-
-File: US/US-MN/microdata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://international.ipums.org', 'record_ids': ['internationalipumsorg', 'internationalipumsorg'], 'preferred_keeper': 'internationalipumsorg', 'is_preferred_keeper': False}
-Suggested Action: Preferred keeper is 'internationalipumsorg' (https://international.ipums.org). Merge or delete the other duplicate(s).
-
-[DUPLICATE_RECORD_ID]
-Count: 2
-Priority: CRITICAL
-
-File: US/Federal/opendata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Issue: DUPLICATE_RECORD_ID
-Field: id
-Current Value: {'record_id': 'internationalipumsorg', 'file_paths': ['US/Federal/opendata/internationalipumsorg.yaml', 'US/US-MN/microdata/internationalipumsorg.yaml']}
-Suggested Action: Catalog id 'internationalipumsorg' appears in multiple files (US/Federal/opendata/internationalipumsorg.yaml, US/US-MN/microdata/internationalipumsorg.yaml). Keep one file and remove or rename the other.
-
-File: US/US-MN/microdata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
-Issue: DUPLICATE_RECORD_ID
-Field: id
-Current Value: {'record_id': 'internationalipumsorg', 'file_paths': ['US/Federal/opendata/internationalipumsorg.yaml', 'US/US-MN/microdata/internationalipumsorg.yaml']}
-Suggested Action: Catalog id 'internationalipumsorg' appears in multiple files (US/Federal/opendata/internationalipumsorg.yaml, US/US-MN/microdata/internationalipumsorg.yaml). Keep one file and remove or rename the other.
-
-[MISSING_ENDPOINTS]
-Count: 2
-Priority: IMPORTANT
-
-File: World/indicators/comtradeplusunorg.yaml
-Record ID: comtradeplusunorg
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: DE/Federal/search/registrydataladorg.yaml
-Record ID: registrydataladorg
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [PLACEHOLDER_TITLE]
 Count: 2
@@ -266,15 +155,15 @@ Suggested Action: Add at least one endpoint because software.id='geonetwork' is 
 Count: 5
 Priority: MEDIUM
 
-File: US/US-MN/microdata/internationalipumsorg.yaml
-Record ID: internationalipumsorg
+File: US/US-MN/microdata/wwwidhsdataorg.yaml
+Record ID: wwwidhsdataorg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
 Field: endpoints
 Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
 
-File: US/US-MN/microdata/wwwidhsdataorg.yaml
-Record ID: wwwidhsdataorg
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
 Field: endpoints
 Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -410,6 +299,17 @@ Field: endpoints
 Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: DE/Federal/geo/dataawide.yaml
+Record ID: dataawide
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 [TAG_HYGIENE]
 Count: 2
 Priority: MEDIUM
@@ -431,11 +331,6 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 2 issues
-COVERAGE_NORMALIZATION: 5 issues
-DUPLICATE_LINK: 2 issues
-DUPLICATE_RECORD_ID: 2 issues
-MISSING_ENDPOINTS: 2 issues
 PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
@@ -453,17 +348,5 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH: 2 issues
+STATUS_API_STATUS_MISMATCH: 1 issue
 TAG_HYGIENE: 2 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: internationalipumsorg
-File: US/US-MN/microdata/internationalipumsorg.yaml
-Issue Count: 6
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-  - DUPLICATE_RECORD_ID: id
-  - DUPLICATE_RECORD_ID: id
-  - DUPLICATE_LINK: link
-  - DUPLICATE_LINK: link

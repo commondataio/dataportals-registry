@@ -1,48 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: SK
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: SK
-Total Records with Issues: 2
-Total Issues Found: 3
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}}
-Suggested Action: Add level field to coverage location
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: SK/Federal/geo/mapovyserver1cgcsk.yaml
-Record ID: mapovyserver1cgcsk
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_LANGS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER]
 Count: 1
 Priority: MEDIUM
 
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
+File: SK/Federal/geo/mapovyserver1cgcsk.yaml
+Record ID: mapovyserver1cgcsk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {'software_id': 'maptilerserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_ENDPOINTS: 1 issue
-MISSING_LANGS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER: 1 issue

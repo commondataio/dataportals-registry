@@ -1,22 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: ET
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: ET
 Total Records with Issues: 3
 Total Issues Found: 3
 
 === ISSUES BY TYPE ===
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: ET/Federal/indicators/dhismohgovet.yaml
-Record ID: dhismohgovet
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
@@ -28,6 +17,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
 Field: endpoints
 Current Value: {'software_id': 'datalibrary', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2]
+Count: 1
+Priority: MEDIUM
+
+File: ET/Federal/indicators/dhismohgovet.yaml
+Record ID: dhismohgovet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2
+Field: endpoints
+Current Value: {'software_id': 'dhis2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dhis2' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
 Count: 1
@@ -43,6 +43,6 @@ Suggested Action: Add at least one endpoint because software.id='redatam' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue

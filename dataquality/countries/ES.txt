@@ -1,125 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: ES
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: ES
-Total Records with Issues: 22
-Total Issues Found: 50
+Total Records with Issues: 19
+Total Issues Found: 30
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 4
-Priority: IMPORTANT
-
-File: ES/ES-VC/geo/bomberosgvsigonlinecom.yaml
-Record ID: bomberosgvsigonlinecom
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/ES-GA/opendata/datoscorunagal.yaml
-Record ID: datoscorunagal
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/Federal/scientific/datameteounicanes.yaml
-Record ID: datameteounicanes
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/Federal/scientific/esgfbsces.yaml
-Record ID: esgfbsces
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[COVERAGE_NORMALIZATION]
-Count: 8
-Priority: IMPORTANT
-
-File: ES/ES-CM/metadata/jbclmlinkeddatasystems.yaml
-Record ID: jbclmlinkeddatasystems
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-CM', 'name': 'Castilla-La Mancha'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-IB/metadata/jbsbgvcbgpupmes.yaml
-Record ID: jbsbgvcbgpupmes
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-IB', 'name': 'Illes Balears [Islas Baleares]'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-CL/metadata/bgusalbgvcbgpupmes.yaml
-Record ID: bgusalbgvcbgpupmes
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-CL', 'name': 'Castilla y León'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-MD/metadata/fdpmulviriskcbgpupmes.yaml
-Record ID: fdpmulviriskcbgpupmes
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-MD', 'name': 'Madrid, Comunidad de'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-MD/metadata/bgvlinkeddatasystems.yaml
-Record ID: bgvlinkeddatasystems
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-MD', 'name': 'Madrid, Comunidad de'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-MD/metadata/urjclinkeddatasystems.yaml
-Record ID: urjclinkeddatasystems
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-MD', 'name': 'Madrid, Comunidad de'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/Federal/geo/agroclimapaemetes.yaml
-Record ID: agroclimapaemetes
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-File: ES/ES-PV/metadata/jbolinkeddatasystems.yaml
-Record ID: jbolinkeddatasystems
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ES', 'name': 'Spain'}, 'level': 30, 'subregion': {'id': 'ES-PV', 'name': 'Euskal Herria'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: ES/Federal/scientific/datacellses.yaml
-Record ID: datacellses
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: ES/Federal/geo/agroclimapaemetes.yaml
-Record ID: agroclimapaemetes
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 3
@@ -205,66 +91,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 8
-Priority: LOW
-
-File: ES/ES-CM/metadata/jbclmlinkeddatasystems.yaml
-Record ID: jbclmlinkeddatasystems
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-IB/metadata/jbsbgvcbgpupmes.yaml
-Record ID: jbsbgvcbgpupmes
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-CL/metadata/bgusalbgvcbgpupmes.yaml
-Record ID: bgusalbgvcbgpupmes
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-MD/metadata/fdpmulviriskcbgpupmes.yaml
-Record ID: fdpmulviriskcbgpupmes
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-MD/metadata/bgvlinkeddatasystems.yaml
-Record ID: bgvlinkeddatasystems
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-MD/metadata/urjclinkeddatasystems.yaml
-Record ID: urjclinkeddatasystems
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/Federal/geo/agroclimapaemetes.yaml
-Record ID: agroclimapaemetes
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: ES/ES-PV/metadata/jbolinkeddatasystems.yaml
-Record ID: jbolinkeddatasystems
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [PLACEHOLDER_TITLE]
 Count: 1
@@ -388,6 +214,17 @@ Field: endpoints
 Current Value: {'software_id': 'gvsigonline', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='gvsigonline' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT]
+Count: 1
+Priority: MEDIUM
+
+File: ES/Federal/scientific/datacellses.yaml
+Record ID: datacellses
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+Field: endpoints
+Current Value: {'software_id': 'icat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
 Count: 1
 Priority: MEDIUM
@@ -421,100 +258,56 @@ Field: endpoints
 Current Value: {'software_id': 'ramadda', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ramadda' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: ES/ES-VC/geo/bomberosgvsigonlinecom.yaml
+Record ID: bomberosgvsigonlinecom
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 4 issues
-COVERAGE_NORMALIZATION: 8 issues
-MISSING_ENDPOINTS: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 3 issues
 MISSING_TAGS: 8 issues
-MISSING_TOPICS: 8 issues
 PLACEHOLDER_TITLE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: 7 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GVSIGONLINE: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_RAMADDA: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
-Record ID: agroclimapaemetes
-File: ES/Federal/geo/agroclimapaemetes.yaml
-Issue Count: 6
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
 Record ID: jbclmlinkeddatasystems
 File: ES/ES-CM/metadata/jbclmlinkeddatasystems.yaml
-Issue Count: 5
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: agroclimapaemetes
+File: ES/Federal/geo/agroclimapaemetes.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
 
 Record ID: jbolinkeddatasystems
 File: ES/ES-PV/metadata/jbolinkeddatasystems.yaml
-Issue Count: 5
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: jbsbgvcbgpupmes
-File: ES/ES-IB/metadata/jbsbgvcbgpupmes.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: bgusalbgvcbgpupmes
-File: ES/ES-CL/metadata/bgusalbgvcbgpupmes.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: fdpmulviriskcbgpupmes
-File: ES/ES-MD/metadata/fdpmulviriskcbgpupmes.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: bgvlinkeddatasystems
-File: ES/ES-MD/metadata/bgvlinkeddatasystems.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: urjclinkeddatasystems
-File: ES/ES-MD/metadata/urjclinkeddatasystems.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

@@ -1,36 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: BB
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: BB
 Total Records with Issues: 3
-Total Issues Found: 9
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
-
-[COVERAGE_NORMALIZATION]
-Count: 3
-Priority: IMPORTANT
-
-File: BB/Federal/indicators/wwwcentralbankorgbb.yaml
-Record ID: wwwcentralbankorgbb
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-File: BB/Federal/indicators/statsgovbb.yaml
-Record ID: statsgovbb
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-File: BB/Federal/geo/geoportalbdslsdepthubarcgiscom.yaml
-Record ID: geoportalbdslsdepthubarcgiscom
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
 
 [MISSING_TAGS]
 Count: 3
@@ -57,60 +32,7 @@ Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
-[MISSING_TOPICS]
-Count: 3
-Priority: LOW
-
-File: BB/Federal/indicators/wwwcentralbankorgbb.yaml
-Record ID: wwwcentralbankorgbb
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BB/Federal/indicators/statsgovbb.yaml
-Record ID: statsgovbb
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: BB/Federal/geo/geoportalbdslsdepthubarcgiscom.yaml
-Record ID: geoportalbdslsdepthubarcgiscom
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 3 issues
 MISSING_TAGS: 3 issues
-MISSING_TOPICS: 3 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: wwwcentralbankorgbb
-File: BB/Federal/indicators/wwwcentralbankorgbb.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: statsgovbb
-File: BB/Federal/indicators/statsgovbb.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: geoportalbdslsdepthubarcgiscom
-File: BB/Federal/geo/geoportalbdslsdepthubarcgiscom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Priority: MEDIUM
-Total Issues Found: 18
+Total Issues Found: 19
 
 Rule: Identifies records using software.id='ckan' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
@@ -17,6 +17,7 @@ FR: 3 issues
 IT: 1 issue
 KE: 1 issue
 MX: 3 issues
+NP: 1 issue
 US: 1 issue
 VN: 1 issue
 World: 2 issues
@@ -30,6 +31,7 @@ clhckanappsfaoorg: 1 issue
 apidataappsfaoorg: 1 issue
 stominisorg: 1 issue
 mcconsejomagistraturagobar: 1 issue
+datashuddhodhanmunrupandehigovnp: 1 issue
 datosqroogobmx: 1 issue
 www2imssgobmx: 1 issue
 datoscicymx: 1 issue
@@ -95,6 +97,14 @@ Suggested Action: Add at least one endpoint because software.id='ckan' is marked
 File: AR/Federal/opendata/mcconsejomagistraturagobar.yaml
 Record ID: mcconsejomagistraturagobar
 Country: AR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+File: NP/NP-P5/opendata/datashuddhodhanmunrupandehigovnp.yaml
+Record ID: datashuddhodhanmunrupandehigovnp
+Country: NP
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
 Current Value: {"software_id": "ckan", "has_api": "Yes", "endpoints_count": 0}

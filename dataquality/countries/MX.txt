@@ -1,69 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: MX
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: MX
-Total Records with Issues: 10
-Total Issues Found: 19
+Total Records with Issues: 9
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: MX/Federal/indicators/agenda2030mx.yaml
-Record ID: agenda2030mx
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[COVERAGE_NORMALIZATION]
-Count: 2
-Priority: IMPORTANT
-
-File: MX/MX-PUE/geo/sigempimplanpueblagobmx.yaml
-Record ID: sigempimplanpueblagobmx
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'MX', 'name': 'Mexico'}, 'level': 30, 'subregion': {'id': 'MX-PUE', 'name': 'Puebla'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: MX/MX-CAM/geo/champotoninfocamgobmx.yaml
-Record ID: champotoninfocamgobmx
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'MX', 'name': 'Mexico'}, 'level': 30, 'subregion': {'id': 'MX-CAM', 'name': 'Campeche'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: MX/MX-VER/geo/mapasmartinezdelatorregobmx.yaml
-Record ID: mapasmartinezdelatorregobmx
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_LANGS]
-Count: 2
-Priority: MEDIUM
-
-File: MX/MX-PUE/geo/sigempimplanpueblagobmx.yaml
-Record ID: sigempimplanpueblagobmx
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: MX/MX-CAM/geo/champotoninfocamgobmx.yaml
-Record ID: champotoninfocamgobmx
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 2
@@ -100,24 +42,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 2
-Priority: LOW
-
-File: MX/MX-PUE/geo/sigempimplanpueblagobmx.yaml
-Record ID: sigempimplanpueblagobmx
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: MX/MX-CAM/geo/champotoninfocamgobmx.yaml
-Record ID: champotoninfocamgobmx
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 3
@@ -166,6 +90,17 @@ Field: endpoints
 Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: MX/MX-VER/geo/mapasmartinezdelatorregobmx.yaml
+Record ID: mapasmartinezdelatorregobmx
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {'software_id': 'maptilerserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA]
 Count: 1
 Priority: MEDIUM
@@ -191,16 +126,12 @@ Suggested Action: Add at least one endpoint because software.id='vufind' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
-COVERAGE_NORMALIZATION: 2 issues
-MISSING_ENDPOINTS: 1 issue
-MISSING_LANGS: 2 issues
 MISSING_OWNER_LINK: 2 issues
 MISSING_TAGS: 2 issues
-MISSING_TOPICS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OBIBAMICA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND: 1 issue
 
@@ -208,21 +139,8 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_VUFIND: 1 issue
 
 Record ID: champotoninfocamgobmx
 File: MX/MX-CAM/geo/champotoninfocamgobmx.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
-
-Record ID: sigempimplanpueblagobmx
-File: MX/MX-PUE/geo/sigempimplanpueblagobmx.yaml
-Issue Count: 5
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
-  - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

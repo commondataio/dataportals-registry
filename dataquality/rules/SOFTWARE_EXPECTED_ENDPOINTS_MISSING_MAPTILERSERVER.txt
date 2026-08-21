@@ -1,0 +1,56 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+================================================================================
+Generated: 2026-08-21 21:22:12
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: Identifies records using software.id='maptilerserver' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+CH: 1 issue
+MX: 1 issue
+SK: 1 issue
+US: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+mapovyserver1cgcsk: 1 issue
+tilesfgov: 1 issue
+mapsddsc2zurichairportcom: 1 issue
+mapasmartinezdelatorregobmx: 1 issue
+
+=== ISSUES ===
+
+File: SK/Federal/geo/mapovyserver1cgcsk.yaml
+Record ID: mapovyserver1cgcsk
+Country: SK
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {"software_id": "maptilerserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions
+
+File: US/US-CA/geo/tilesfgov.yaml
+Record ID: tilesfgov
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {"software_id": "maptilerserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions
+
+File: CH/CH-ZH/geo/mapsddsc2zurichairportcom.yaml
+Record ID: mapsddsc2zurichairportcom
+Country: CH
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {"software_id": "maptilerserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions
+
+File: MX/MX-VER/geo/mapasmartinezdelatorregobmx.yaml
+Record ID: mapasmartinezdelatorregobmx
+Country: MX
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER
+Field: endpoints
+Current Value: {"software_id": "maptilerserver", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='maptilerserver' is marked as API-capable in software definitions

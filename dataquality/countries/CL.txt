@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: CL
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: CL
 Total Records with Issues: 6
-Total Issues Found: 11
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: CL/CL-VS/geo/mapalabtesuplacl.yaml
-Record ID: mapalabtesuplacl
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'CL', 'name': 'Chile'}, 'level': 30, 'subregion': {'id': 'CL-VS', 'name': 'Valparaíso'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: CL/CL-VS/geo/mapalabtesuplacl.yaml
-Record ID: mapalabtesuplacl
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 1
@@ -50,17 +28,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: CL/CL-VS/geo/mapalabtesuplacl.yaml
-Record ID: mapalabtesuplacl
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
@@ -127,11 +94,8 @@ Suggested Action: Add at least one endpoint because software.id='mapserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR: 2 issues
@@ -142,11 +106,8 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 
 Record ID: mapalabtesuplacl
 File: CL/CL-VS/geo/mapalabtesuplacl.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

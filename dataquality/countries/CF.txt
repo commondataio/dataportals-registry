@@ -1,67 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: CF
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: CF
-Total Records with Issues: 2
-Total Issues Found: 5
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[COUNTRY_NAME_ID_MISMATCH]
-Count: 4
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2]
+Count: 1
 Priority: MEDIUM
 
-File: CF/indicators/caropendataforafricaorg.yaml
-Record ID: caropendataforafricaorg
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: owner.location.country.name
-Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
-Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
-
-File: CF/indicators/caropendataforafricaorg.yaml
-Record ID: caropendataforafricaorg
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: coverage[0].location.country.name
-Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
-Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
-
 File: CF/Federal/indicators/snissantegouvcf.yaml
 Record ID: snissantegouvcf
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: owner.location.country.name
-Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
-Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
-
-File: CF/Federal/indicators/snissantegouvcf.yaml
-Record ID: snissantegouvcf
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: coverage[0].location.country.name
-Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
-Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: CF/Federal/indicators/snissantegouvcf.yaml
-Record ID: snissantegouvcf
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'dhis2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dhis2' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-COUNTRY_NAME_ID_MISMATCH: 4 issues
-MISSING_ENDPOINTS: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: snissantegouvcf
-File: CF/Federal/indicators/snissantegouvcf.yaml
-Issue Count: 3
-Issues:
-  - MISSING_ENDPOINTS: endpoints
-  - COUNTRY_NAME_ID_MISMATCH: owner.location.country.name
-  - COUNTRY_NAME_ID_MISMATCH: coverage[0].location.country.name
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2: 1 issue

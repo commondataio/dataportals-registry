@@ -1,100 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: TW
-Total Records with Issues: 13
-Total Issues Found: 13
+Total Records with Issues: 5
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
 
-[API_STATUS_MISMATCH]
-Count: 2
-Priority: IMPORTANT
-
-File: TW/Federal/geo/gdxp1pcolifeorgtw.yaml
-Record ID: gdxp1pcolifeorgtw
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: TW/Federal/scientific/esgfrcecsinicaedutw.yaml
-Record ID: esgfrcecsinicaedutw
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[MISSING_ENDPOINTS]
-Count: 9
-Priority: IMPORTANT
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA]
+Count: 3
+Priority: MEDIUM
 
 File: TW/TW-TAO/opendata/datatycggovtw.yaml
 Record ID: datatycggovtw
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/TW-CYI/opendata/datachiayigovtw.yaml
-Record ID: datachiayigovtw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'modaopendata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='modaopendata' is marked as API-capable in software definitions
 
 File: TW/TW-TXG/opendata/opendatataichunggovtw.yaml
 Record ID: opendatataichunggovtw
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/opendata/datalygovtw.yaml
-Record ID: datalygovtw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/opendata/datafdagovtw.yaml
-Record ID: datafdagovtw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/opendata/datamoagovtw.yaml
-Record ID: datamoagovtw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/opendata/opendataculturetw.yaml
-Record ID: opendataculturetw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/api/tdxtransportdatatw.yaml
-Record ID: tdxtransportdatatw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: TW/Federal/scientific/portaltaibiftw.yaml
-Record ID: portaltaibiftw
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA]
-Count: 1
-Priority: MEDIUM
+Current Value: {'software_id': 'modaopendata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='modaopendata' is marked as API-capable in software definitions
 
 File: TW/TW-TPE/opendata/datataipei.yaml
 Record ID: datataipei
@@ -114,10 +43,20 @@ Field: endpoints
 Current Value: {'software_id': 'pxweb', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='pxweb' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: TW/Federal/geo/gdxp1pcolifeorgtw.yaml
+Record ID: gdxp1pcolifeorgtw
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 2 issues
-MISSING_ENDPOINTS: 9 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue

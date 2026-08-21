@@ -1,54 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: VE
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: VE
-Total Records with Issues: 6
-Total Issues Found: 9
+Total Records with Issues: 4
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
-
-[COUNTRY_NAME_ID_MISMATCH]
-Count: 4
-Priority: MEDIUM
-
-File: VE/Federal/microdata/redataminegobve.yaml
-Record ID: redataminegobve
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: owner.location.country.name
-Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
-Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
-
-File: VE/Federal/microdata/redataminegobve.yaml
-Record ID: redataminegobve
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: coverage[0].location.country.name
-Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
-Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
-
-File: VE/Federal/geo/citizenproblemreporter6esrivenhubarcgiscom.yaml
-Record ID: citizenproblemreporter6esrivenhubarcgiscom
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: owner.location.country.name
-Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
-Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
-
-File: VE/Federal/geo/citizenproblemreporter6esrivenhubarcgiscom.yaml
-Record ID: citizenproblemreporter6esrivenhubarcgiscom
-Issue: COUNTRY_NAME_ID_MISMATCH
-Field: coverage[0].location.country.name
-Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
-Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: VE/Federal/api/apisegenapngobve.yaml
-Record ID: apisegenapngobve
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
@@ -93,18 +50,6 @@ Suggested Action: Add at least one endpoint because software.id='redatam' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
-COUNTRY_NAME_ID_MISMATCH: 4 issues
-MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: redataminegobve
-File: VE/Federal/microdata/redataminegobve.yaml
-Issue Count: 3
-Issues:
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: endpoints
-  - COUNTRY_NAME_ID_MISMATCH: owner.location.country.name
-  - COUNTRY_NAME_ID_MISMATCH: coverage[0].location.country.name

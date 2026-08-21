@@ -1,93 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: ID
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: ID
-Total Records with Issues: 10
-Total Issues Found: 15
+Total Records with Issues: 2
+Total Issues Found: 4
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 8
-Priority: IMPORTANT
-
-File: ID/ID-JI/opendata/opendatajatimprovgoid.yaml
-Record ID: opendatajatimprovgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-MU/opendata/satudatahaltengkabgoid.yaml
-Record ID: satudatahaltengkabgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-AC/opendata/datasabangkotagoid.yaml
-Record ID: datasabangkotagoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-PB/opendata/satudatamanokwarikabgoid.yaml
-Record ID: satudatamanokwarikabgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SN/opendata/satudataluwukabgoid.yaml
-Record ID: satudataluwukabgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SU/opendata/opendatakarokabgoid.yaml
-Record ID: opendatakarokabgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SU/opendata/satudatataptenggoid.yaml
-Record ID: satudatataptenggoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SS/opendata/satudatamuaraenimkabgoid.yaml
-Record ID: satudatamuaraenimkabgoid
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: ID/ID-SU/geo/webgisperindagsumutprovgoid.yaml
-Record ID: webgisperindagsumutprovgoid
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'ID', 'name': 'Indonesia'}, 'level': 30, 'subregion': {'id': 'ID-SU', 'name': 'Sumatera Utara'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: ID/ID-SU/geo/webgisperindagsumutprovgoid.yaml
-Record ID: webgisperindagsumutprovgoid
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 1
@@ -110,17 +28,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: ID/ID-SU/geo/webgisperindagsumutprovgoid.yaml
-Record ID: webgisperindagsumutprovgoid
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS]
 Count: 1
@@ -147,12 +54,8 @@ Suggested Action: Add at least one endpoint because software.id='mapserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 8 issues
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 
@@ -160,11 +63,8 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 
 Record ID: webgisperindagsumutprovgoid
 File: ID/ID-SU/geo/webgisperindagsumutprovgoid.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

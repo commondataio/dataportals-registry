@@ -1,24 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: JO
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: JO
 Total Records with Issues: 1
 Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT]
 Count: 1
-Priority: IMPORTANT
+Priority: MEDIUM
 
 File: JO/Federal/scientific/sedsesameorgjo.yaml
 Record ID: sedsesameorgjo
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'icat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT: 1 issue

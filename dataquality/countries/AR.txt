@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: AR
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: AR
 Total Records with Issues: 8
-Total Issues Found: 13
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: AR/AR-C/geo/mapabuenosairesgobar.yaml
-Record ID: mapabuenosairesgobar
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'AR', 'name': 'Argentina'}, 'level': 30, 'subregion': {'id': 'AR-C', 'name': 'Ciudad Autónoma de Buenos Aires'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: AR/AR-C/geo/mapabuenosairesgobar.yaml
-Record ID: mapabuenosairesgobar
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 1
@@ -50,17 +28,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: AR/AR-C/geo/mapabuenosairesgobar.yaml
-Record ID: mapabuenosairesgobar
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -141,11 +108,8 @@ Suggested Action: Add at least one endpoint because software.id='mapserver' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_JUNAR: 1 issue
@@ -156,11 +120,8 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 
 Record ID: mapabuenosairesgobar
 File: AR/AR-C/geo/mapabuenosairesgobar.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

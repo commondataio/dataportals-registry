@@ -729,7 +729,7 @@ MAP_SOFTWARE_ALLOWED_CATALOG_TYPES = {
         {"Data search engine", "Scientific data repository", "Open data portal"}
     ),
     "ipums": frozenset(
-        {"Microdata catalog", "Geoportal", "Open data portal"}
+        {"Microdata catalog", "Geoportal", "Open data portal", "Indicators catalog"}
     ),
     "dhis2": frozenset({"Indicators catalog", "Open data portal"}),
     "yoda": frozenset({"Scientific data repository"}),

@@ -1,100 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: IT
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: IT
-Total Records with Issues: 16
-Total Issues Found: 23
+Total Records with Issues: 8
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 9
-Priority: IMPORTANT
-
-File: IT/IT-82/geo/webgisarpasiciliait.yaml
-Record ID: webgisarpasiciliait
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/IT-42/opendata/datigenovametropoliit.yaml
-Record ID: datigenovametropoliit
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/Federal/opendata/wwwdatisalutegovit.yaml
-Record ID: wwwdatisalutegovit
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: IT/Federal/opendata/opendatacreagovit.yaml
-Record ID: opendatacreagovit
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: IT/Federal/geo/saocomputeeuracedu.yaml
-Record ID: saocomputeeuracedu
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/Federal/geo/rasdamanlandsupporteu.yaml
-Record ID: rasdamanlandsupporteu
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/Federal/scientific/esgfnodecmccit.yaml
-Record ID: esgfnodecmccit
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/Federal/scientific/esgfnode2cmccit.yaml
-Record ID: esgfnode2cmccit
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IT/Federal/scientific/esgfcnrhpccinecait.yaml
-Record ID: esgfcnrhpccinecait
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: IT/Federal/geo/mapserverovingvit.yaml
-Record ID: mapserverovingvit
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'IT', 'name': 'Italy'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: IT/Federal/geo/mapserverovingvit.yaml
-Record ID: mapserverovingvit
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 1
@@ -117,35 +28,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: IT/Federal/geo/mapserverovingvit.yaml
-Record ID: mapserverovingvit
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
-Count: 2
-Priority: IMPORTANT
-
-File: IT/Federal/geo/saocomputeeuracedu.yaml
-Record ID: saocomputeeuracedu
-Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
-Field: owner.location.subregion
-Current Value: {'owner_subregion_id': 'IT-32', 'file_admin_dir': 'Federal', 'file_path': 'IT/Federal/geo/saocomputeeuracedu.yaml'}
-Suggested Action: Move this record from 'Federal' to the 'IT-32' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
-
-File: IT/Federal/geo/rasdamanlandsupporteu.yaml
-Record ID: rasdamanlandsupporteu
-Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
-Field: owner.location.subregion
-Current Value: {'owner_subregion_id': 'IT-72', 'file_admin_dir': 'Federal', 'file_path': 'IT/Federal/geo/rasdamanlandsupporteu.yaml'}
-Suggested Action: Move this record from 'Federal' to the 'IT-72' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
 
 [RIGHTS_INCOMPLETE]
 Count: 1
@@ -216,31 +98,35 @@ Field: endpoints
 Current Value: {'software_id': 'opengeoportal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='opengeoportal' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: IT/IT-42/opendata/datigenovametropoliit.yaml
+Record ID: datigenovametropoliit
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 9 issues
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
-OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 2 issues
 RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===
 
 Record ID: mapserverovingvit
 File: IT/Federal/geo/mapserverovingvit.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

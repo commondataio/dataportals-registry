@@ -1,40 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: EE
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: EE
-Total Records with Issues: 4
-Total Issues Found: 4
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: EE/Federal/scientific/datadoiutee.yaml
-Record ID: datadoiutee
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[MISSING_ENDPOINTS]
-Count: 2
-Priority: IMPORTANT
-
-File: EE/Federal/opendata/keskkonnaportaalee.yaml
-Record ID: keskkonnaportaalee
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: EE/Federal/api/wwwxteeee.yaml
-Record ID: wwwxteeee
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -47,9 +18,19 @@ Field: endpoints
 Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: EE/Federal/scientific/datadoiutee.yaml
+Record ID: datadoiutee
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
-MISSING_ENDPOINTS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue

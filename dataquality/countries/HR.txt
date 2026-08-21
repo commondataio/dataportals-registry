@@ -1,22 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: HR
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: HR
 Total Records with Issues: 4
-Total Issues Found: 7
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: HR/Federal/metadata/gdicroatianodeorg.yaml
-Record ID: gdicroatianodeorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'HR', 'name': 'Croatia'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
 
 [MISSING_TAGS]
 Count: 1
@@ -28,17 +17,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: HR/Federal/metadata/gdicroatianodeorg.yaml
-Record ID: gdicroatianodeorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -83,20 +61,7 @@ Suggested Action: Add at least one endpoint because software.id='islandora' is m
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA: 2 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: gdicroatianodeorg
-File: HR/Federal/metadata/gdicroatianodeorg.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

@@ -1,31 +1,36 @@
 DATA QUALITY REPORT - COUNTRY: NP
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: NP
 Total Records with Issues: 2
 Total Issues Found: 2
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
-Count: 2
-Priority: IMPORTANT
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
+Count: 1
+Priority: MEDIUM
 
 File: NP/NP-P5/opendata/datashuddhodhanmunrupandehigovnp.yaml
 Record ID: datashuddhodhanmunrupandehigovnp
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2]
+Count: 1
+Priority: MEDIUM
 
 File: NP/Federal/indicators/hmisgovnp.yaml
 Record ID: hmisgovnp
-Issue: MISSING_ENDPOINTS
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2
 Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
+Current Value: {'software_id': 'dhis2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dhis2' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2: 1 issue

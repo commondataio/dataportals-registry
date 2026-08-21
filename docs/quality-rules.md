@@ -86,7 +86,7 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `MISSING_TAGS` | Add keywords (`government`, `has_api`, …) |
 | `MISSING_OWNER_LINK` | Set `owner.link` |
 | `DUPLICATE_TAGS` | Deduplicate `tags` |
-| `DUPLICATE_COVERAGE` | Remove repeated coverage entries |
+| `DUPLICATE_COVERAGE` | Remove repeated coverage entries (same country, level, and subregion) |
 | `MISSING_CONTACT_INFO` | Add contact when the catalog publishes it |
 | `TOPIC_SCHEMA_VIOLATION` | Fix `topics` shape (`type`, `id`, `name`) |
 

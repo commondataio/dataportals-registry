@@ -1,22 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: ZM
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: ZM
 Total Records with Issues: 2
 Total Issues Found: 2
 
 === ISSUES BY TYPE ===
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: ZM/Federal/indicators/dhis2mohgovzm.yaml
-Record ID: dhis2mohgovzm
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
@@ -29,8 +18,19 @@ Field: endpoints
 Current Value: {'software_id': 'datalibrary', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2]
+Count: 1
+Priority: MEDIUM
+
+File: ZM/Federal/indicators/dhis2mohgovzm.yaml
+Record ID: dhis2mohgovzm
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2
+Field: endpoints
+Current Value: {'software_id': 'dhis2', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='dhis2' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DHIS2: 1 issue

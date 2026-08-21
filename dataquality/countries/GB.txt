@@ -1,29 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: GB
 Total Records with Issues: 12
 Total Issues Found: 12
 
 === ISSUES BY TYPE ===
-
-[MISSING_ENDPOINTS]
-Count: 2
-Priority: IMPORTANT
-
-File: GB/Federal/scientific/icatdiamondacuk.yaml
-Record ID: icatdiamondacuk
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-File: GB/Federal/scientific/parasitewormbaseorg.yaml
-Record ID: parasitewormbaseorg
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
 
 [PLACEHOLDER_TITLE]
 Count: 1
@@ -58,6 +40,17 @@ Field: endpoints
 Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENSEMBL]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/scientific/parasitewormbaseorg.yaml
+Record ID: parasitewormbaseorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENSEMBL
+Field: endpoints
+Current Value: {'software_id': 'ensembl', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ensembl' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP]
 Count: 1
 Priority: MEDIUM
@@ -68,6 +61,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
 Field: endpoints
 Current Value: {'software_id': 'geomediawebmap', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geomediawebmap' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/scientific/icatdiamondacuk.yaml
+Record ID: icatdiamondacuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT
+Field: endpoints
+Current Value: {'software_id': 'icat', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
 Count: 4
@@ -126,11 +130,12 @@ Suggested Action: Add at least one endpoint because software.id='strapi' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 2 issues
 PLACEHOLDER_TITLE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENSEMBL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 4 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI: 1 issue

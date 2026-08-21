@@ -1,0 +1,46 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+================================================================================
+Generated: 2026-08-21 21:22:12
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='mapstore' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+AT: 1 issue
+NZ: 1 issue
+US: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+mapstorecmparksnet: 1 issue
+datawhanganuigovtnz: 1 issue
+mapsaustrocontrolat: 1 issue
+
+=== ISSUES ===
+
+File: US/US-OH/geo/mapstorecmparksnet.yaml
+Record ID: mapstorecmparksnet
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {"software_id": "mapstore", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
+
+File: NZ/NZ-MWT/geo/datawhanganuigovtnz.yaml
+Record ID: datawhanganuigovtnz
+Country: NZ
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {"software_id": "mapstore", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
+
+File: AT/AT-9/geo/mapsaustrocontrolat.yaml
+Record ID: mapsaustrocontrolat
+Country: AT
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {"software_id": "mapstore", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions

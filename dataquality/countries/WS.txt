@@ -1,22 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: WS
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: WS
 Total Records with Issues: 2
 Total Issues Found: 2
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: WS/Federal/opendata/riosamoamnregovws.yaml
-Record ID: riosamoamnregovws
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
 Count: 1
@@ -29,8 +18,19 @@ Field: endpoints
 Current Value: {'software_id': 'redatam', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='redatam' is marked as API-capable in software definitions
 
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: WS/Federal/opendata/riosamoamnregovws.yaml
+Record ID: riosamoamnregovws
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue

@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 
 from builder import (
+    check_coverage_normalization,
     check_owner_type_values,
     check_path_country_consistency,
     check_software_expected_endpoints,
@@ -160,3 +161,72 @@ def test_choose_duplicate_keeper_penalizes_unknown_path():
     ]
     keeper = choose_duplicate_keeper(metas)
     assert keeper["record_id"] == "portalus"
+
+
+def _coverage_entry(country_id, country_name, level, subregion_id=None, subregion_name=None):
+    location = {
+        "country": {"id": country_id, "name": country_name},
+        "level": level,
+        "macroregion": {"id": "021", "name": "Northern America"},
+    }
+    if subregion_id:
+        location["subregion"] = {"id": subregion_id, "name": subregion_name or subregion_id}
+    return {"location": location}
+
+
+def test_duplicate_coverage_allows_distinct_subregions():
+    record = {
+        "coverage": [
+            _coverage_entry("US", "United States", 30, "US-NJ", "New Jersey"),
+            _coverage_entry("US", "United States", 30, "US-NY", "New York"),
+            _coverage_entry("US", "United States", 30, "US-PA", "Pennsylvania"),
+        ]
+    }
+    result = check_coverage_normalization(record)
+    duplicate_issues = [
+        issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
+    ]
+    assert duplicate_issues == []
+
+
+def test_duplicate_coverage_flags_repeated_subregion():
+    record = {
+        "coverage": [
+            _coverage_entry("US", "United States", 30, "US-NJ", "New Jersey"),
+            _coverage_entry("US", "United States", 30, "US-NJ", "New Jersey"),
+        ]
+    }
+    result = check_coverage_normalization(record)
+    duplicate_issues = [
+        issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
+    ]
+    assert len(duplicate_issues) == 1
+    assert duplicate_issues[0]["field"] == "coverage[1]"
+
+
+def test_duplicate_coverage_flags_repeated_national_entry():
+    record = {
+        "coverage": [
+            _coverage_entry("US", "United States", 20),
+            _coverage_entry("US", "United States", 20),
+        ]
+    }
+    result = check_coverage_normalization(record)
+    duplicate_issues = [
+        issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
+    ]
+    assert len(duplicate_issues) == 1
+
+
+def test_duplicate_coverage_allows_multi_country():
+    record = {
+        "coverage": [
+            _coverage_entry("US", "United States", 20),
+            _coverage_entry("CA", "Canada", 20),
+        ]
+    }
+    result = check_coverage_normalization(record)
+    duplicate_issues = [
+        issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
+    ]
+    assert duplicate_issues == []

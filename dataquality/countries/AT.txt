@@ -1,55 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: AT
-Total Records with Issues: 6
-Total Issues Found: 12
+Total Records with Issues: 5
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: AT/Federal/indicators/unidatagvat.yaml
-Record ID: unidatagvat
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-[COVERAGE_NORMALIZATION]
-Count: 1
-Priority: IMPORTANT
-
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Record ID: ffrmhangwasserat
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'AT', 'name': 'Austria'}, 'level': 20}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: AT/AT-9/geo/mapsaustrocontrolat.yaml
-Record ID: mapsaustrocontrolat
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[MISSING_LANGS]
-Count: 1
-Priority: MEDIUM
-
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Record ID: ffrmhangwasserat
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 1
@@ -73,17 +29,6 @@ Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
 
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Record ID: ffrmhangwasserat
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
 [SHORT_DESCRIPTION]
 Count: 1
 Priority: MEDIUM
@@ -105,6 +50,17 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
 Field: endpoints
 Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE]
+Count: 1
+Priority: MEDIUM
+
+File: AT/AT-9/geo/mapsaustrocontrolat.yaml
+Record ID: mapsaustrocontrolat
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE
+Field: endpoints
+Current Value: {'software_id': 'mapstore', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapstore' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASTERPORTAL]
 Count: 1
@@ -142,15 +98,11 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
-COVERAGE_NORMALIZATION: 1 issue
-MISSING_ENDPOINTS: 1 issue
-MISSING_LANGS: 1 issue
 MISSING_OWNER_LINK: 1 issue
 MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
 SHORT_DESCRIPTION: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASTERPORTAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PHAIDRA: 1 issue
 TAG_HYGIENE: 1 issue
@@ -159,12 +111,9 @@ TAG_HYGIENE: 1 issue
 
 Record ID: ffrmhangwasserat
 File: AT/Federal/geo/ffrmhangwasserat.yaml
-Issue Count: 7
+Issue Count: 4
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
   - SHORT_DESCRIPTION: description

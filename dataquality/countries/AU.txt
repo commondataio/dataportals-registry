@@ -1,44 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: AU
 Total Records with Issues: 5
-Total Issues Found: 6
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: AU/Federal/geo/nationalmapgovau.yaml
-Record ID: nationalmapgovau
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[MISSING_ENDPOINTS]
-Count: 1
-Priority: IMPORTANT
-
-File: AU/Federal/geo/mapfindandconnectgovau.yaml
-Record ID: mapfindandconnectgovau
-Issue: MISSING_ENDPOINTS
-Field: endpoints
-Current Value: []
-Suggested Action: Add API endpoints based on software type and portal structure
-
-[OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
-Count: 1
-Priority: IMPORTANT
-
-File: AU/Federal/geo/mapfindandconnectgovau.yaml
-Record ID: mapfindandconnectgovau
-Issue: OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH
-Field: owner.location.subregion
-Current Value: {'owner_subregion_id': 'AU-VIC', 'file_admin_dir': 'Federal', 'file_path': 'AU/Federal/geo/mapfindandconnectgovau.yaml'}
-Suggested Action: Move this record from 'Federal' to the 'AU-VIC' subregion directory under data/entities, or remove owner.location.subregion if the record is truly federal.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
 Count: 1
@@ -69,11 +36,32 @@ Field: endpoints
 Current Value: {'software_id': 'fedora', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='fedora' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA]
+Count: 1
+Priority: MEDIUM
+
+File: AU/AU-VIC/geo/mapfindandconnectgovau.yaml
+Record ID: mapfindandconnectgovau
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
+Field: endpoints
+Current Value: {'software_id': 'terria', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='terria' is marked as API-capable in software definitions
+
+[STATUS_API_STATUS_MISMATCH]
+Count: 1
+Priority: MEDIUM
+
+File: AU/Federal/geo/nationalmapgovau.yaml
+Record ID: nationalmapgovau
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {'status': 'inactive', 'api_status': 'active'}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 1 issue
-MISSING_ENDPOINTS: 1 issue
-OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA: 1 issue
+STATUS_API_STATUS_MISMATCH: 1 issue

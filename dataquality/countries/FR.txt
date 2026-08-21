@@ -1,153 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-08-21 20:45:45
+Generated: 2026-08-21 21:22:12
 Country Code: FR
-Total Records with Issues: 30
-Total Issues Found: 41
+Total Records with Issues: 16
+Total Issues Found: 21
 
 === ISSUES BY TYPE ===
-
-[API_STATUS_MISMATCH]
-Count: 13
-Priority: IMPORTANT
-
-File: HT/search/ayitistatsorg.yaml
-Record ID: ayitistatsorg
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: FR/FR-OCC/geo/siggardfr.yaml
-Record ID: siggardfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-OCC/geo/lizmaplegrandnarbonnecom.yaml
-Record ID: lizmaplegrandnarbonnecom
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-ARA/geo/geomeylanfr.yaml
-Record ID: geomeylanfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/opendata/datasenatfr.yaml
-Record ID: datasenatfr
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=2
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: FR/Federal/opendata/dataassembleenationalefr.yaml
-Record ID: dataassembleenationalefr
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: FR/Federal/geo/dcpcnwpmeteofr.yaml
-Record ID: dcpcnwpmeteofr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/esg2umrcnrmfr.yaml
-Record ID: esg2umrcnrmfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/metadonneesgbiffr.yaml
-Record ID: metadonneesgbiffr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/pndbfr.yaml
-Record ID: pndbfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/openobsmnhnfr.yaml
-Record ID: openobsmnhnfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-BFC/geo/lizmapsdis25fr.yaml
-Record ID: lizmapsdis25fr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-NOR/geo/atlascalvadosfr.yaml
-Record ID: atlascalvadosfr
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-[CATALOG_SOFTWARE_MISMATCH]
-Count: 1
-Priority: CRITICAL
-
-File: FR/Federal/scientific/pndbopendatasoftcom.yaml
-Record ID: pndbopendatasoftcom
-Issue: CATALOG_SOFTWARE_MISMATCH
-Field: catalog_type
-Current Value: catalog_type=Scientific data repository, software.id=opendatasoft
-Suggested Action: Update catalog_type to one of: 'Geoportal', 'Open data portal' to match software.id
-
-[COVERAGE_NORMALIZATION]
-Count: 2
-Priority: IMPORTANT
-
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Record ID: cpie47observatoireenvironnementorg
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'FR', 'name': 'France'}, 'level': 30, 'subregion': {'id': 'FR-NAQ', 'name': 'Nouvelle-Aquitaine'}}
-Suggested Action: Add macroregion information to coverage location
-
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Record ID: geoportailepamafr
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'FR', 'name': 'France'}, 'level': 30, 'subregion': {'id': 'FR-GES', 'name': 'Grand-Est'}}
-Suggested Action: Add macroregion information to coverage location
-
-[MISSING_LANGS]
-Count: 2
-Priority: MEDIUM
-
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Record ID: cpie47observatoireenvironnementorg
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
-
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Record ID: geoportailepamafr
-Issue: MISSING_LANGS
-Field: langs
-Current Value: []
-Suggested Action: Add language codes based on portal content and location
 
 [MISSING_OWNER_LINK]
 Count: 2
@@ -184,24 +42,6 @@ Issue: MISSING_TAGS
 Field: tags
 Current Value: []
 Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 2
-Priority: LOW
-
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Record ID: cpie47observatoireenvironnementorg
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Record ID: geoportailepamafr
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
 
 [PLACEHOLDER_TITLE]
 Count: 2
@@ -365,13 +205,8 @@ Suggested Action: Catalog is inactive but API is marked active; update api_statu
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 13 issues
-CATALOG_SOFTWARE_MISMATCH: 1 issue
-COVERAGE_NORMALIZATION: 2 issues
-MISSING_LANGS: 2 issues
 MISSING_OWNER_LINK: 2 issues
 MISSING_TAGS: 2 issues
-MISSING_TOPICS: 2 issues
 PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
@@ -387,22 +222,16 @@ STATUS_API_STATUS_MISMATCH: 1 issue
 
 Record ID: cpie47observatoireenvironnementorg
 File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
 
 Record ID: geoportailepamafr
 File: FR/FR-GES/geo/geoportailepamafr.yaml
-Issue Count: 6
+Issue Count: 3
 Issues:
-  - MISSING_TOPICS: topics
   - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
   - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
   - MISSING_OWNER_LINK: owner.link
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

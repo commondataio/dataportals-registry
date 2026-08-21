@@ -1866,7 +1866,9 @@ def check_coverage_normalization(record):
     issues = []
     coverage = record.get("coverage", [])
     
-    # Track seen country+level combinations for duplicates
+    # Track seen country+level+subregion combinations for duplicates.
+    # Distinct subregions at the same country and level (e.g. US-NJ and US-NY)
+    # are legitimate multi-jurisdiction coverage, not duplicates.
     seen_combinations = set()
     
     for idx, cov_entry in enumerate(coverage):
@@ -1893,9 +1895,10 @@ def check_coverage_normalization(record):
                     "suggested_action": "Add macroregion information to coverage location",
                 })
             
-            # Check for duplicates
+            # Check for duplicates of the same location, not extra subregions
             level = location.get("level")
-            combo = (country_id, level)
+            subregion_id = (location.get("subregion") or {}).get("id")
+            combo = (country_id, level, subregion_id)
             if combo in seen_combinations:
                 issues.append({
                     "issue_type": "DUPLICATE_COVERAGE",
