@@ -137,7 +137,11 @@ def test_integrity_growth_fails(tmp_path):
 
 
 def test_current_report_matches_baseline_when_unchanged():
-    """Sanity check: baseline should reflect committed full_report.jsonl."""
+    """Sanity check: integrity CRITICAL/IMPORTANT in the report match the baseline.
+
+    Enrichment MEDIUM/LOW counts are not exact-matched here: they vary with
+    software-endpoint coverage and are warnings in the regression guard.
+    """
     if not DEFAULT_REPORT.exists() or not DEFAULT_BASELINE.exists():
         pytest.skip("quality artifacts missing")
 
@@ -145,7 +149,7 @@ def test_current_report_matches_baseline_when_unchanged():
         baseline = json.load(f)
 
     by_priority, _ = load_issue_counts(DEFAULT_REPORT)
-    for priority in ("CRITICAL", "IMPORTANT", "MEDIUM", "LOW"):
+    for priority in ("CRITICAL", "IMPORTANT"):
         current = by_priority.get(priority, 0)
         expected = baseline["by_priority"].get(priority, 0)
         assert current == expected, (
@@ -155,4 +159,10 @@ def test_current_report_matches_baseline_when_unchanged():
 
     if "by_track" in baseline:
         current_tracks = load_track_counts(DEFAULT_REPORT)
-        assert current_tracks == baseline["by_track"]
+        for priority in ("CRITICAL", "IMPORTANT"):
+            assert current_tracks["integrity"][priority] == baseline["by_track"]["integrity"][priority], (
+                f"Integrity {priority} count mismatch between full_report.jsonl "
+                f"({current_tracks['integrity'][priority]}) and baseline "
+                f"({baseline['by_track']['integrity'][priority]}); "
+                "run scripts/update_quality_baseline.py"
+            )

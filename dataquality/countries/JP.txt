@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: JP
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: JP
 Total Records with Issues: 7
-Total Issues Found: 12
+Total Issues Found: 10
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: JP/Federal/geo/mapsjmcorjp.yaml
-Record ID: mapsjmcorjp
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: JP/Federal/geo/mapsjmcorjp.yaml
-Record ID: mapsjmcorjp
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [PLACEHOLDER_TITLE]
 Count: 2
@@ -118,19 +96,7 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issue
-MISSING_TAGS: 1 issue
 PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REEARTH: 3 issues
 TAG_HYGIENE: 4 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: mapsjmcorjp
-File: JP/Federal/geo/mapsjmcorjp.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link

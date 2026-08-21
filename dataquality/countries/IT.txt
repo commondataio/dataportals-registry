@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: IT
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: IT
 Total Records with Issues: 8
-Total Issues Found: 10
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: IT/Federal/geo/mapserverovingvit.yaml
-Record ID: mapserverovingvit
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: IT/Federal/geo/mapserverovingvit.yaml
-Record ID: mapserverovingvit
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [RIGHTS_INCOMPLETE]
 Count: 1
@@ -112,21 +90,9 @@ Suggested Action: Catalog is inactive but API is marked active; update api_statu
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issue
-MISSING_TAGS: 1 issue
 RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
 STATUS_API_STATUS_MISMATCH: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: mapserverovingvit
-File: IT/Federal/geo/mapserverovingvit.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link

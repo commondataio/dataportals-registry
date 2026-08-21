@@ -1,33 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: AT
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: AT
 Total Records with Issues: 5
-Total Issues Found: 8
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 1
-Priority: LOW
-
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Record ID: ffrmhangwasserat
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Record ID: ffrmhangwasserat
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [SHORT_DESCRIPTION]
 Count: 1
@@ -98,22 +76,9 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 1 issue
-MISSING_TAGS: 1 issue
 SHORT_DESCRIPTION: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSTORE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASTERPORTAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PHAIDRA: 1 issue
 TAG_HYGIENE: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: ffrmhangwasserat
-File: AT/Federal/geo/ffrmhangwasserat.yaml
-Issue Count: 4
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
-  - SHORT_DESCRIPTION: description

@@ -1,54 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: CH
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: CH
 Total Records with Issues: 20
-Total Issues Found: 27
+Total Issues Found: 22
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: CH/Federal/geo/bfumapserverch.yaml
-Record ID: bfumapserverch
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: CH/CH-FR/geo/mapgeovillefribourgch.yaml
-Record ID: mapgeovillefribourgch
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 3
-Priority: LOW
-
-File: CH/Federal/geo/bfumapserverch.yaml
-Record ID: bfumapserverch
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CH/Federal/metadata/fdpdccsibswiss.yaml
-Record ID: fdpdccsibswiss
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: CH/CH-FR/geo/mapgeovillefribourgch.yaml
-Record ID: mapgeovillefribourgch
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [PLACEHOLDER_TITLE]
 Count: 4
@@ -243,8 +200,6 @@ Suggested Action: Add at least one endpoint because software.id='scicat' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 3 issues
 PLACEHOLDER_TITLE: 4 issues
 RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: 1 issue
@@ -254,21 +209,3 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPTILERSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SCICAT: 2 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: bfumapserverch
-File: CH/Federal/geo/bfumapserverch.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: mapgeovillefribourgch
-File: CH/CH-FR/geo/mapgeovillefribourgch.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link

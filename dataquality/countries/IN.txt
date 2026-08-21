@@ -1,47 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: IN
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: IN
 Total Records with Issues: 39
-Total Issues Found: 43
+Total Issues Found: 39
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: IN/Federal/geo/wwwmaptellcom.yaml
-Record ID: wwwmaptellcom
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
-Record ID: vanagniportalfsiforestfiregovin
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: IN/Federal/geo/wwwmaptellcom.yaml
-Record ID: wwwmaptellcom
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
-Record ID: vanagniportalfsiforestfiregovin
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
 Count: 2
@@ -327,25 +291,5 @@ Suggested Action: Add at least one endpoint because software.id='ogdindia' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OGDINDIA: 37 issues
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: wwwmaptellcom
-File: IN/Federal/geo/wwwmaptellcom.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: vanagniportalfsiforestfiregovin
-File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link

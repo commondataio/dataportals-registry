@@ -1,47 +1,11 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-08-21 21:22:12
+Generated: 2026-08-21 21:44:57
 Country Code: FR
 Total Records with Issues: 16
-Total Issues Found: 21
+Total Issues Found: 17
 
 === ISSUES BY TYPE ===
-
-[MISSING_OWNER_LINK]
-Count: 2
-Priority: LOW
-
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Record ID: cpie47observatoireenvironnementorg
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Record ID: geoportailepamafr
-Issue: MISSING_OWNER_LINK
-Field: owner.link
-Current Value: None
-Suggested Action: Add owner organization website URL
-
-[MISSING_TAGS]
-Count: 2
-Priority: LOW
-
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Record ID: cpie47observatoireenvironnementorg
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Record ID: geoportailepamafr
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
 
 [PLACEHOLDER_TITLE]
 Count: 2
@@ -205,8 +169,6 @@ Suggested Action: Catalog is inactive but API is marked active; update api_statu
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_OWNER_LINK: 2 issues
-MISSING_TAGS: 2 issues
 PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
@@ -217,21 +179,3 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
 STATUS_API_STATUS_MISMATCH: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: cpie47observatoireenvironnementorg
-File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
-
-Record ID: geoportailepamafr
-File: FR/FR-GES/geo/geoportailepamafr.yaml
-Issue Count: 3
-Issues:
-  - MISSING_TAGS: tags
-  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
-  - MISSING_OWNER_LINK: owner.link
