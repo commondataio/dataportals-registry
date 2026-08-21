@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: GB
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: GB
-Total Records with Issues: 7
-Total Issues Found: 7
+Total Records with Issues: 12
+Total Issues Found: 12
 
 === ISSUES BY TYPE ===
 
 [MISSING_ENDPOINTS]
-Count: 1
+Count: 2
 Priority: IMPORTANT
 
 File: GB/Federal/scientific/icatdiamondacuk.yaml
@@ -17,6 +17,24 @@ Issue: MISSING_ENDPOINTS
 Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
+
+File: GB/Federal/scientific/parasitewormbaseorg.yaml
+Record ID: parasitewormbaseorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[PLACEHOLDER_TITLE]
+Count: 1
+Priority: MEDIUM
+
+File: GB/GB-ENG/scientific/ubirboltonacuk.yaml
+Record ID: ubirboltonacuk
+Issue: PLACEHOLDER_TITLE
+Field: name
+Current Value: UBIR
+Suggested Action: Expand the portal title to be more descriptive than a few characters.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS]
 Count: 1
@@ -28,6 +46,28 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS
 Field: endpoints
 Current Value: {'software_id': 'converis', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='converis' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/opendata/wwwenvironmentdataorg.yaml
+Record ID: wwwenvironmentdataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP]
+Count: 1
+Priority: MEDIUM
+
+File: GB/GB-ENG/geo/mapsipswichgovuk.yaml
+Record ID: mapsipswichgovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
+Field: endpoints
+Current Value: {'software_id': 'geomediawebmap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geomediawebmap' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB]
 Count: 4
@@ -61,6 +101,17 @@ Field: endpoints
 Current Value: {'software_id': 'mwmb', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mwmb' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG]
+Count: 1
+Priority: MEDIUM
+
+File: GB/Federal/indicators/oifdatadefragovuk.yaml
+Record ID: oifdatadefragovuk
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG
+Field: endpoints
+Current Value: {'software_id': 'opensdg', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opensdg' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI]
 Count: 1
 Priority: MEDIUM
@@ -75,7 +126,11 @@ Suggested Action: Add at least one endpoint because software.id='strapi' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issue
+MISSING_ENDPOINTS: 2 issues
+PLACEHOLDER_TITLE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CONVERIS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 4 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STRAPI: 1 issue

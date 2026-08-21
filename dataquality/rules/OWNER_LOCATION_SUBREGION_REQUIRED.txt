@@ -1,19 +1,22 @@
 DATA QUALITY REPORT - RULE: OWNER_LOCATION_SUBREGION_REQUIRED
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Issue Type: OWNER_LOCATION_SUBREGION_REQUIRED
 Priority: IMPORTANT
-Total Issues Found: 170
+Total Issues Found: 175
 
 Rule: Verifies: (1) Regional/Local government owners have owner.location.level=30 and owner.location.subregion with id and name; (2) When owner has subregion, the file must be in the matching subregion directory (not Federal); (3) When file is in a subregion directory (e.g. US-TX/), owner.location.subregion must match that directory.
 
 === SUMMARY BY COUNTRY ===
 
+EU: 1 issue
 PL: 166 issues
 PT: 1 issue
+RU: 1 issue
+SO: 1 issue
 TR: 1 issue
 TZ: 1 issue
-US: 1 issue
+US: 3 issues
 
 === SUMMARY BY RECORD ===
 
@@ -183,8 +186,13 @@ ostrolekageoportal2pl: 1 issue
 zwolenpowiatgeoportal2pl: 1 issue
 powiatpultuskigeoportal2pl: 1 issue
 grojecgeoportal2pl: 1 issue
+mapscorgov: 1 issue
+gisdatagcoosorg: 1 issue
 goanceasucsbedu: 1 issue
+77rosstatgovru: 1 issue
+mopicplgovnet: 1 issue
 pdmrevisaomunicipioarraiolospt: 1 issue
+heospopenaireeu: 1 issue
 ocgsgotz: 1 issue
 datamarmaragovtr: 1 issue
 
@@ -1518,6 +1526,22 @@ Field: owner.location
 Current Value: {"country": {"id": "PL", "name": "Poland"}, "level": 40, "subregion": {"id": "PL-14", "name": "Mazowieckie"}}
 Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
 
+File: US/Other/geo/mapscorgov.yaml
+Record ID: mapscorgov
+Country: US
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {"country": {"id": "US", "name": "United States"}, "level": 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
+File: US/Federal/geo/gisdatagcoosorg.yaml
+Record ID: gisdatagcoosorg
+Country: US
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {"country": {"id": "US", "name": "United States"}, "level": 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
 File: US/US-AK/scientific/goanceasucsbedu.yaml
 Record ID: goanceasucsbedu
 Country: US
@@ -1526,6 +1550,22 @@ Field: owner.location.subregion
 Current Value: {"file_admin_dir": "US-AK", "owner_subregion_id": null, "file_path": "US/US-AK/scientific/goanceasucsbedu.yaml"}
 Suggested Action: Record is in subregion directory 'US-AK' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='US-AK' and name, or move the file to Federal.
 
+File: RU/RU-MOW/opendata/77rosstatgovru.yaml
+Record ID: 77rosstatgovru
+Country: RU
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location.subregion
+Current Value: {"file_admin_dir": "RU-MOW", "owner_subregion_id": null, "file_path": "RU/RU-MOW/opendata/77rosstatgovru.yaml"}
+Suggested Action: Record is in subregion directory 'RU-MOW' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='RU-MOW' and name, or move the file to Federal.
+
+File: SO/Federal/microdata/mopicplgovnet.yaml
+Record ID: mopicplgovnet
+Country: SO
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {"country": {"id": "SO", "name": "Somalia"}, "level": 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
 File: PT/Federal/geo/pdmrevisaomunicipioarraiolospt.yaml
 Record ID: pdmrevisaomunicipioarraiolospt
 Country: PT
@@ -1533,6 +1573,14 @@ Issue: OWNER_LOCATION_SUBREGION_REQUIRED
 Field: owner.location
 Current Value: {"country": {"id": "PT", "name": "Portugal"}, "level": 20}
 Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
+File: DE/DE-HE/search/heospopenaireeu.yaml
+Record ID: heospopenaireeu
+Country: EU
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location.subregion
+Current Value: {"file_admin_dir": "DE-HE", "owner_subregion_id": null, "file_path": "DE/DE-HE/search/heospopenaireeu.yaml"}
+Suggested Action: Record is in subregion directory 'DE-HE' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='DE-HE' and name, or move the file to Federal.
 
 File: TZ/Federal/microdata/ocgsgotz.yaml
 Record ID: ocgsgotz

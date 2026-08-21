@@ -1,14 +1,25 @@
 DATA QUALITY REPORT - COUNTRY: NZ
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: NZ
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 3
+Total Issues Found: 8
 
 === ISSUES BY TYPE ===
 
-[MISSING_ENDPOINTS]
+[COVERAGE_NORMALIZATION]
 Count: 1
+Priority: IMPORTANT
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NZ', 'name': 'New Zealand'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_ENDPOINTS]
+Count: 2
 Priority: IMPORTANT
 
 File: NZ/NZ-AUK/api/devportalatgovtnz.yaml
@@ -18,7 +29,88 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: NZ/NZ-MWT/geo/datawhanganuigovtnz.yaml
+Record ID: datawhanganuigovtnz
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-MISSING_ENDPOINTS: 1 issue
+COVERAGE_NORMALIZATION: 1 issue
+MISSING_ENDPOINTS: 2 issues
+MISSING_LANGS: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: mapsscinfoorgnz
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

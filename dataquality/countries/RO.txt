@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: RO
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: RO
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 7
 
 === ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 1
+Priority: IMPORTANT
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RO', 'name': 'Romania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
 
 [DUPLICATE_COVERAGE]
 Count: 1
@@ -18,7 +29,81 @@ Field: coverage[1]
 Current Value: {'location': {'country': {'id': 'RO', 'name': 'Romania'}, 'level': 30, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}, 'subregion': {'id': 'RO-IF', 'name': 'Ilfov'}}}
 Suggested Action: Remove duplicate coverage entry
 
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+COVERAGE_NORMALIZATION: 1 issue
 DUPLICATE_COVERAGE: 1 issue
+MISSING_LANGS: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: mapcimecro
+File: RO/Federal/geo/mapcimecro.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

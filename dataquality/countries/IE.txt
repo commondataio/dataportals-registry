@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: IE
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: IE
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 5
+Total Issues Found: 11
 
 === ISSUES BY TYPE ===
 
@@ -18,6 +18,60 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+[COVERAGE_NORMALIZATION]
+Count: 2
+Priority: IMPORTANT
+
+File: IE/Federal/metadata/fdpgdiulie.yaml
+Record ID: fdpgdiulie
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IE', 'name': 'Ireland'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: IE/Federal/metadata/fairvascfdpadaptcentreie.yaml
+Record ID: fairvascfdpadaptcentreie
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IE', 'name': 'Ireland'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: IE/Federal/metadata/fdpgdiulie.yaml
+Record ID: fdpgdiulie
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: IE/Federal/metadata/fairvascfdpadaptcentreie.yaml
+Record ID: fairvascfdpadaptcentreie
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: IE/Federal/metadata/fdpgdiulie.yaml
+Record ID: fdpgdiulie
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: IE/Federal/metadata/fairvascfdpadaptcentreie.yaml
+Record ID: fairvascfdpadaptcentreie
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR]
 Count: 1
 Priority: MEDIUM
@@ -29,8 +83,62 @@ Field: endpoints
 Current Value: {'software_id': 'aristotlemdr', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='aristotlemdr' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT]
+Count: 2
+Priority: MEDIUM
+
+File: IE/Federal/metadata/fdpgdiulie.yaml
+Record ID: fdpgdiulie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT
+Field: endpoints
+Current Value: {'software_id': 'fairdatapoint', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fairdatapoint' is marked as API-capable in software definitions
+
+File: IE/Federal/metadata/fairvascfdpadaptcentreie.yaml
+Record ID: fairvascfdpadaptcentreie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT
+Field: endpoints
+Current Value: {'software_id': 'fairdatapoint', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fairdatapoint' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA]
+Count: 1
+Priority: MEDIUM
+
+File: IE/Federal/scientific/repositorydriie.yaml
+Record ID: repositorydriie
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA
+Field: endpoints
+Current Value: {'software_id': 'fedora', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fedora' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 1 issue
+COVERAGE_NORMALIZATION: 2 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: fdpgdiulie
+File: IE/Federal/metadata/fdpgdiulie.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: fairvascfdpadaptcentreie
+File: IE/Federal/metadata/fairvascfdpadaptcentreie.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

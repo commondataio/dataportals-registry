@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: CZ
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: CZ
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 7
+Total Issues Found: 19
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,195 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+[COUNTRY_NAME_ID_MISMATCH]
+Count: 8
+Priority: MEDIUM
+
+File: CZ/Federal/geo/mapyexprojektcz.yaml
+Record ID: mapyexprojektcz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/Federal/geo/mapyexprojektcz.yaml
+Record ID: mapyexprojektcz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/Federal/geo/seismickamapacz.yaml
+Record ID: seismickamapacz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/Federal/geo/seismickamapacz.yaml
+Record ID: seismickamapacz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/Federal/scientific/digiarchivaiscrcz.yaml
+Record ID: digiarchivaiscrcz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/Federal/scientific/digiarchivaiscrcz.yaml
+Record ID: digiarchivaiscrcz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/CZ-63/geo/qwccerniccz.yaml
+Record ID: qwccerniccz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+File: CZ/CZ-63/geo/qwccerniccz.yaml
+Record ID: qwccerniccz
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CZ', 'name': 'Czechia', 'expected': 'Czech Republic'}
+Suggested Action: Country code 'CZ' has canonical name 'Czech Republic'. Update name from 'Czechia' to 'Czech Republic' for consistency.
+
+[COVERAGE_NORMALIZATION]
+Count: 2
+Priority: IMPORTANT
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CZ', 'name': 'Czech Republic'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Record ID: fdpgdicloudeinfracz
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CZ', 'name': 'Czech Republic'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Record ID: fdpgdicloudeinfracz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Record ID: fdpgdicloudeinfracz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT]
+Count: 1
+Priority: MEDIUM
+
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Record ID: fdpgdicloudeinfracz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT
+Field: endpoints
+Current Value: {'software_id': 'fairdatapoint', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='fairdatapoint' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 1 issue
+COUNTRY_NAME_ID_MISMATCH: 8 issues
+COVERAGE_NORMALIZATION: 2 issues
+MISSING_LANGS: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: mapserverczechglobecz
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: fdpgdicloudeinfracz
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Issue Count: 4
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FAIRDATAPOINT: endpoints
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

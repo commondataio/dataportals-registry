@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
+================================================================================
+Generated: 2026-08-21 20:45:45
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='geomediawebmap' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+ES: 1 issue
+GB: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+mapsipswichgovuk: 1 issue
+geoportaldipbadajozes: 1 issue
+
+=== ISSUES ===
+
+File: GB/GB-ENG/geo/mapsipswichgovuk.yaml
+Record ID: mapsipswichgovuk
+Country: GB
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
+Field: endpoints
+Current Value: {"software_id": "geomediawebmap", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geomediawebmap' is marked as API-capable in software definitions
+
+File: ES/ES-EX/geo/geoportaldipbadajozes.yaml
+Record ID: geoportaldipbadajozes
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMEDIAWEBMAP
+Field: endpoints
+Current Value: {"software_id": "geomediawebmap", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='geomediawebmap' is marked as API-capable in software definitions

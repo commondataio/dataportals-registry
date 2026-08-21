@@ -1,11 +1,232 @@
 DATA QUALITY REPORT - COUNTRY: CA
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: CA
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 9
+Total Issues Found: 32
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 2
+Priority: IMPORTANT
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[COVERAGE_NORMALIZATION]
+Count: 5
+Priority: IMPORTANT
+
+File: CA/CA-QC/geo/sssmedaminenextgiscom.yaml
+Record ID: sssmedaminenextgiscom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 30, 'subregion': {'id': 'CA-QC', 'name': 'Quebec'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 30, 'subregion': {'id': 'CA-QC', 'name': 'Quebec'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[INCONSISTENT_LICENSE]
+Count: 1
+Priority: IMPORTANT
+
+File: CA/Federal/indicators/wwwcmhcschlgcca.yaml
+Record ID: wwwcmhcschlgcca
+Issue: INCONSISTENT_LICENSE
+Field: rights.license_url
+Current Value: {'license_name': 'CMHC Licence Agreement for the Use of Data', 'license_url': None}
+Suggested Action: Add license_url to complement license_name
+
+[MISSING_LANGS]
+Count: 4
+Priority: MEDIUM
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 4
+Priority: LOW
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 5
+Priority: LOW
+
+File: CA/CA-QC/geo/sssmedaminenextgiscom.yaml
+Record ID: sssmedaminenextgiscom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 5
+Priority: LOW
+
+File: CA/CA-QC/geo/sssmedaminenextgiscom.yaml
+Record ID: sssmedaminenextgiscom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[RIGHTS_INCOMPLETE]
+Count: 1
+Priority: MEDIUM
+
+File: CA/Federal/indicators/wwwcmhcschlgcca.yaml
+Record ID: wwwcmhcschlgcca
+Issue: RIGHTS_INCOMPLETE
+Field: rights
+Current Value: {'license_id': None, 'license_name': 'CMHC Licence Agreement for the Use of Data', 'license_url': None, 'privacy_policy_url': 'https://www.cmhc-schl.gc.ca/about-us/legal/privacy-policy', 'rights_type': 'global', 'tos_url': 'https://www.cmhc-schl.gc.ca/about-us/legal'}
+Suggested Action: Add complementary license fields (id, name, and/or url) to make rights information complete and unambiguous.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD]
 Count: 1
@@ -18,7 +239,107 @@ Field: endpoints
 Current Value: {'software_id': 'datalad', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datalad' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MANGOMAP]
+Count: 2
+Priority: MEDIUM
+
+File: CA/CA-MB/geo/mangomapcomspcw.yaml
+Record ID: mangomapcomspcw
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MANGOMAP
+Field: endpoints
+Current Value: {'software_id': 'mangomap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mangomap' is marked as API-capable in software definitions
+
+File: CA/CA-AB/geo/mangomapcomgsire.yaml
+Record ID: mangomapcomgsire
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MANGOMAP
+Field: endpoints
+Current Value: {'software_id': 'mangomap', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mangomap' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 2
+Priority: MEDIUM
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 2 issues
+COVERAGE_NORMALIZATION: 5 issues
+INCONSISTENT_LICENSE: 1 issue
+MISSING_LANGS: 4 issues
+MISSING_OWNER_LINK: 4 issues
+MISSING_TAGS: 5 issues
+MISSING_TOPICS: 5 issues
+RIGHTS_INCOMPLETE: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MANGOMAP: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: zonesinondablesmrnfgouvqcca
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: wwwsimplemapprnet
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: geoweathergcca
+File: CA/Federal/geo/geoweathergcca.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_LINK: owner.link
+  - API_STATUS_MISMATCH: api
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: geoweathergccageometclimate
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_LINK: owner.link
+  - API_STATUS_MISMATCH: api
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: sssmedaminenextgiscom
+File: CA/CA-QC/geo/sssmedaminenextgiscom.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

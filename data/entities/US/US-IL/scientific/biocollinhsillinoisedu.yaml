@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,7 +19,11 @@ coverage:
       name: Illinois
 description: Illinois Natural History Survey biological collections catalog of more
   than 9.5 million specimens across amphibian, fish, insect, plant, fungi, and related
-  collections, with public specimen-record search.
+  collections, with public specimen-record search. Powered by Symbiota.
+endpoints:
+- type: rss
+  url: https://biocoll.inhs.illinois.edu/portal/collections/datasets/rsshandler.php
+  version: '2.0'
 id: biocollinhsillinoisedu
 langs:
 - id: EN
@@ -48,14 +52,17 @@ rights:
   rights_type: unknown
   tos_url: null
 software:
-  id: custom
-  name: Custom software
+  id: symbiota
+  name: Symbiota
 status: active
 tags:
 - biodiversity
 - specimens
 - natural history
 - Illinois
+- scientific
+- has_api
+- symbiota
 topics:
 - id: ENVI
   name: Environment

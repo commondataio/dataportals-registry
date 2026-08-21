@@ -1,0 +1,36 @@
+DATA QUALITY REPORT - COUNTRY: SO
+================================================================================
+Generated: 2026-08-21 20:45:45
+Country Code: SO
+Total Records with Issues: 2
+Total Issues Found: 2
+
+=== ISSUES BY TYPE ===
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: SO/Federal/indicators/hmismohgovso.yaml
+Record ID: hmismohgovso
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+[OWNER_LOCATION_SUBREGION_REQUIRED]
+Count: 1
+Priority: IMPORTANT
+
+File: SO/Federal/microdata/mopicplgovnet.yaml
+Record ID: mopicplgovnet
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location
+Current Value: {'country': {'id': 'SO', 'name': 'Somalia'}, 'level': 20}
+Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_ENDPOINTS: 1 issue
+OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue

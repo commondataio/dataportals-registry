@@ -1,11 +1,66 @@
 DATA QUALITY REPORT - COUNTRY: KZ
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: KZ
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 12
+Total Issues Found: 16
 
 === ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 1
+Priority: IMPORTANT
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'KZ', 'name': 'Kazakhstan'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER]
 Count: 1
@@ -18,7 +73,104 @@ Field: endpoints
 Current Value: {'software_id': 'arcgisserver', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='arcgisserver' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS]
+Count: 9
+Priority: MEDIUM
+
+File: KZ/KZ-39/geo/mapikostanaykz.yaml
+Record ID: mapikostanaykz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-47/geo/mapemangistaukz.yaml
+Record ID: mapemangistaukz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-35/geo/geoqaroblkz.yaml
+Record ID: geoqaroblkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-61/geo/mapiturkistankz.yaml
+Record ID: mapiturkistankz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-33/geo/mapezhetisukz.yaml
+Record ID: mapezhetisukz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-27/geo/mapebatyskz.yaml
+Record ID: mapebatyskz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-75/geo/alagkz.yaml
+Record ID: alagkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-43/geo/ordageoportalkz.yaml
+Record ID: ordageoportalkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+File: KZ/KZ-19/geo/mapalmoblkz.yaml
+Record ID: mapalmoblkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS
+Field: endpoints
+Current Value: {'software_id': 'geonomics', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geonomics' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG]
+Count: 1
+Priority: MEDIUM
+
+File: KZ/Federal/indicators/sdgdatastatgovkz.yaml
+Record ID: sdgdatastatgovkz
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG
+Field: endpoints
+Current Value: {'software_id': 'opensdg', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='opensdg' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
+COVERAGE_NORMALIZATION: 1 issue
+MISSING_LANGS: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONOMICS: 9 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENSDG: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gissmartforestkz
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Issue Count: 5
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

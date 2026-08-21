@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: FR
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: FR
-Total Records with Issues: 27
-Total Issues Found: 28
+Total Records with Issues: 30
+Total Issues Found: 41
 
 === ISSUES BY TYPE ===
 
@@ -113,6 +113,96 @@ Field: catalog_type
 Current Value: catalog_type=Scientific data repository, software.id=opendatasoft
 Suggested Action: Update catalog_type to one of: 'Geoportal', 'Open data portal' to match software.id
 
+[COVERAGE_NORMALIZATION]
+Count: 2
+Priority: IMPORTANT
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'FR', 'name': 'France'}, 'level': 30, 'subregion': {'id': 'FR-NAQ', 'name': 'Nouvelle-Aquitaine'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'FR', 'name': 'France'}, 'level': 30, 'subregion': {'id': 'FR-GES', 'name': 'Grand-Est'}}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_LANGS]
+Count: 2
+Priority: MEDIUM
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 2
+Priority: LOW
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
 [PLACEHOLDER_TITLE]
 Count: 2
 Priority: MEDIUM
@@ -132,8 +222,15 @@ Current Value: cartes.gouv.fr
 Suggested Action: Replace domain/path-based title with a descriptive portal name.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
-Count: 2
+Count: 3
 Priority: MEDIUM
+
+File: FR/FR-NAQ/opendata/datalibournefr.yaml
+Record ID: datalibournefr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+Field: endpoints
+Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
 File: FR/FR-IDF/opendata/gargesdata4citizencom.yaml
 Record ID: gargesdata4citizencom
@@ -160,6 +257,17 @@ Field: endpoints
 Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMAPFISH]
+Count: 1
+Priority: MEDIUM
+
+File: FR/FR-974/geo/geosaintpierrere.yaml
+Record ID: geosaintpierrere
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMAPFISH
+Field: endpoints
+Current Value: {'software_id': 'geomapfish', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='geomapfish' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT]
 Count: 1
 Priority: MEDIUM
@@ -172,18 +280,11 @@ Current Value: {'software_id': 'icat', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='icat' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO]
-Count: 3
+Count: 2
 Priority: MEDIUM
 
 File: FR/FR-PDL/geo/geomayennefrportailaccesauxdonneesdonnees.yaml
 Record ID: geomayennefrportailaccesauxdonneesdonnees
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
-Field: endpoints
-Current Value: {'software_id': 'isigeo', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='isigeo' is marked as API-capable in software definitions
-
-File: FR/FR-NOR/geo/portailgeomanchefr.yaml
-Record ID: portailgeomanchefr
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO
 Field: endpoints
 Current Value: {'software_id': 'isigeo', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -232,6 +333,24 @@ Field: endpoints
 Current Value: {'software_id': 'mapproxy', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='mapproxy' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 2
+Priority: MEDIUM
+
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Record ID: cpie47observatoireenvironnementorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Record ID: geoportailepamafr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
 [STATUS_API_STATUS_MISMATCH]
 Count: 1
 Priority: MEDIUM
@@ -248,11 +367,42 @@ Suggested Action: Catalog is inactive but API is marked active; update api_statu
 
 API_STATUS_MISMATCH: 13 issues
 CATALOG_SOFTWARE_MISMATCH: 1 issue
+COVERAGE_NORMALIZATION: 2 issues
+MISSING_LANGS: 2 issues
+MISSING_OWNER_LINK: 2 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
 PLACEHOLDER_TITLE: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEOMAPFISH: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ICAT: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISIGEO: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 3 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPPROXY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
 STATUS_API_STATUS_MISMATCH: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: cpie47observatoireenvironnementorg
+File: FR/FR-NAQ/geo/cpie47observatoireenvironnementorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: geoportailepamafr
+File: FR/FR-GES/geo/geoportailepamafr.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

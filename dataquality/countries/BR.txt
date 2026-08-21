@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: BR
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: BR
-Total Records with Issues: 12
-Total Issues Found: 13
+Total Records with Issues: 23
+Total Issues Found: 24
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 4
+Count: 5
 Priority: IMPORTANT
 
 File: BR/BR-RJ/opendata/dadosabertosrjgovbr.yaml
@@ -30,6 +30,13 @@ Record ID: cedapdadosufrgsbr
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/Federal/geo/idesaudegovbr.yaml
+Record ID: idesaudegovbr
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: BR/BR-DF/opendata/dadosdfgovbr.yaml
@@ -130,10 +137,84 @@ Field: endpoints
 Current Value: {'software_id': 'erdasapollo', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='erdasapollo' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS]
+Count: 10
+Priority: MEDIUM
+
+File: BR/Federal/geo/plataformaalertamapbiomasorg.yaml
+Record ID: plataformaalertamapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/baciasmapbiomasorg.yaml
+Record ID: baciasmapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/plataformamonitorfogomapbiomasorg.yaml
+Record ID: plataformamonitorfogomapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/plataformacreditoruralmapbiomasorg.yaml
+Record ID: plataformacreditoruralmapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/plataformamonitormineracaomapbiomasorg.yaml
+Record ID: plataformamonitormineracaomapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/plataformabrasilmapbiomasorg.yaml
+Record ID: plataformabrasilmapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: BR/Federal/geo/plataformarecuperacaomapbiomasorg.yaml
+Record ID: plataformarecuperacaomapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: LatinAmerica/geo/plataformabosqueatlanticomapbiomasorg.yaml
+Record ID: plataformabosqueatlanticomapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: LatinAmerica/geo/plataformaamazoniamapbiomasorg.yaml
+Record ID: plataformaamazoniamapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: LatinAmerica/geo/plataformapampamapbiomasorg.yaml
+Record ID: plataformapampamapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 4 issues
+API_STATUS_MISMATCH: 5 issues
 DUPLICATE_LINK: 2 issues
 OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 1 issue
 PLACEHOLDER_TITLE: 2 issues
@@ -141,3 +222,4 @@ SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ERDASAPOLLO: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS: 10 issues

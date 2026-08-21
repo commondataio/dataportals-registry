@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESISONLINE
+================================================================================
+Generated: 2026-08-21 20:45:45
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESISONLINE
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='genesisonline' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+DE: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+wwwgenesisdestatisde: 1 issue
+wwwregionalstatistikde: 1 issue
+
+=== ISSUES ===
+
+File: DE/Federal/indicators/wwwgenesisdestatisde.yaml
+Record ID: wwwgenesisdestatisde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESISONLINE
+Field: endpoints
+Current Value: {"software_id": "genesisonline", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='genesisonline' is marked as API-capable in software definitions
+
+File: DE/Federal/indicators/wwwregionalstatistikde.yaml
+Record ID: wwwregionalstatistikde
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GENESISONLINE
+Field: endpoints
+Current Value: {"software_id": "genesisonline", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='genesisonline' is marked as API-capable in software definitions

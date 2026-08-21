@@ -1,13 +1,13 @@
 DATA QUALITY REPORT - PRIORITY: IMPORTANT
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Priority Level: IMPORTANT
-Total Issues Found: 469
+Total Issues Found: 734
 
 === ISSUES BY TYPE ===
 
 [API_STATUS_MISMATCH]
-Count: 94
+Count: 131
 
 File: SE/Federal/geo/skogsdataportalenskogsstyrelsense.yaml
 Record ID: skogsdataportalenskogsstyrelsense
@@ -15,6 +15,30 @@ Country: SE
 Issue: API_STATUS_MISMATCH
 Field: api
 Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: YE/Federal/scientific/repositoryalraziunieduye.yaml
+Record ID: repositoryalraziunieduye
+Country: YE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: SY/Federal/geo/maprojatlascom.yaml
+Record ID: maprojatlascom
+Country: SY
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=6
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: PL/Federal/geo/1mappl.yaml
+Record ID: 1mappl
+Country: PL
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: US/US-ID/scientific/dataonenorthwestknowledgenet.yaml
@@ -25,8 +49,32 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: US/US-PA/opendata/pennsylvaniademosocratacom.yaml
+Record ID: pennsylvaniademosocratacom
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: US/US-NV/scientific/dataonesensornevadaedu.yaml
 Record ID: dataonesensornevadaedu
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-NC/scientific/repositorylibncsuedu.yaml
+Record ID: repositorylibncsuedu
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-IN/scientific/cardinalscholarbsuedu.yaml
+Record ID: cardinalscholarbsuedu
 Country: US
 Issue: API_STATUS_MISMATCH
 Field: api_status
@@ -40,6 +88,14 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/Federal/scientific/datacatalogmedicinehofstraedu.yaml
+Record ID: datacatalogmedicinehofstraedu
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: US/Federal/scientific/esgfanlgov.yaml
 Record ID: esgfanlgov
@@ -79,6 +135,86 @@ Country: US
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=5
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: US/US-KY/scientific/dspacenkuedu.yaml
+Record ID: dspacenkuedu
+Country: US
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-53/opendata/opendatakremengovua.yaml
+Record ID: opendatakremengovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-63/opendata/datacitykharkovua.yaml
+Record ID: datacitykharkovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-77/opendata/datacitycvua.yaml
+Record ID: datacitycvua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-12/opendata/odkrgovua.yaml
+Record ID: odkrgovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-14/opendata/datamariupolradagovua.yaml
+Record ID: datamariupolradagovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-14/opendata/odpkrmgovua.yaml
+Record ID: odpkrmgovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-32/opendata/opendatabcgovua.yaml
+Record ID: opendatabcgovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-51/opendata/opendataomrgovua.yaml
+Record ID: opendataomrgovua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: UA/UA-26/opendata/opendatadolynaifua.yaml
+Record ID: opendatadolynaifua
+Country: UA
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=inactive, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: AD/Federal/scientific/collectionsgbifad.yaml
@@ -201,6 +337,14 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
+File: IT/Federal/opendata/opendatacreagovit.yaml
+Record ID: opendatacreagovit
+Country: IT
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
 File: IT/Federal/geo/saocomputeeuracedu.yaml
 Record ID: saocomputeeuracedu
 Country: IT
@@ -241,6 +385,22 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Country: CA
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Country: CA
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
 File: CZ/Federal/opendata/datampsvcz.yaml
 Record ID: datampsvcz
 Country: CZ
@@ -260,6 +420,14 @@ Suggested Action: Update api_status to 'active' since endpoints are present
 File: TW/Federal/scientific/esgfrcecsinicaedutw.yaml
 Record ID: esgfrcecsinicaedutw
 Country: TW
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: TJ/Federal/geo/geoportaltj.yaml
+Record ID: geoportaltj
+Country: TJ
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
@@ -369,6 +537,54 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: DE/DE-NW/geo/webgiserzbistumkoelnde.yaml
+Record ID: webgiserzbistumkoelnde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=3
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-NW/geo/luftbildergeoportalruhr.yaml
+Record ID: luftbildergeoportalruhr
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-NW/geo/geoportalwuelfrathde.yaml
+Record ID: geoportalwuelfrathde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-SN/geo/nascageoinformationhtwdresdende.yaml
+Record ID: nascageoinformationhtwdresdende
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-SN/geo/markkleebergwaermeplanungonline.yaml
+Record ID: markkleebergwaermeplanungonline
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-SN/scientific/wwwhealthatlasde.yaml
+Record ID: wwwhealthatlasde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: DE/DE-HB/geo/ogctestbed19geodatacuberasdamancom.yaml
 Record ID: ogctestbed19geodatacuberasdamancom
 Country: DE
@@ -376,6 +592,46 @@ Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/DE-HE/geo/kulturbaudigitalmuseumkasselde.yaml
+Record ID: kulturbaudigitalmuseumkasselde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-NI/geo/geoportalemdende.yaml
+Record ID: geoportalemdende
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/DE-BB/geo/geoportalprenzlaude.yaml
+Record ID: geoportalprenzlaude
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=1
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/Federal/geo/webgisseeconde.yaml
+Record ID: webgisseeconde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: DE/Federal/geo/geoportalplanwerkde.yaml
+Record ID: geoportalplanwerkde
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
 File: DE/Federal/geo/dataawide.yaml
 Record ID: dataawide
@@ -399,6 +655,14 @@ Country: DE
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: DE/Federal/scientific/fairdomhuborg.yaml
+Record ID: fairdomhuborg
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: DE/Federal/scientific/esgfdwdde.yaml
@@ -425,6 +689,14 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+File: DE/Federal/scientific/seeklisymorg.yaml
+Record ID: seeklisymorg
+Country: DE
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=1
+Suggested Action: Update api_status to 'active' since endpoints are present
+
 File: DE/Federal/scientific/esgpikpotsdamde.yaml
 Record ID: esgpikpotsdamde
 Country: DE
@@ -436,6 +708,14 @@ Suggested Action: Update api_status to 'active' since endpoints are present
 File: KH/Federal/opendata/ncsdmoegovkh.yaml
 Record ID: ncsdmoegovkh
 Country: KH
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+File: GD/indicators/statsgovgd.yaml
+Record ID: statsgovgd
+Country: GD
 Issue: API_STATUS_MISMATCH
 Field: api
 Current Value: api=False, endpoints=2
@@ -471,6 +751,14 @@ Country: BR
 Issue: API_STATUS_MISMATCH
 Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=2
+Suggested Action: Update api_status to 'active' since endpoints are present
+
+File: BR/Federal/geo/idesaudegovbr.yaml
+Record ID: idesaudegovbr
+Country: BR
+Issue: API_STATUS_MISMATCH
+Field: api_status
+Current Value: api=True, api_status=uncertain, endpoints=4
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 File: BR/BR-DF/opendata/dadosdfgovbr.yaml
@@ -521,962 +809,1902 @@ Field: api_status
 Current Value: api=True, api_status=uncertain, endpoints=3
 Suggested Action: Update api_status to 'active' since endpoints are present
 
-File: ID/ID-SN/opendata/satudataluwukabgoid.yaml
-Record ID: satudataluwukabgoid
-Country: ID
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SU/opendata/opendatakarokabgoid.yaml
-Record ID: opendatakarokabgoid
-Country: ID
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SU/opendata/satudatataptenggoid.yaml
-Record ID: satudatataptenggoid
-Country: ID
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ID/ID-SS/opendata/satudatamuaraenimkabgoid.yaml
-Record ID: satudatamuaraenimkabgoid
-Country: ID
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-OCC/geo/siggardfr.yaml
-Record ID: siggardfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-OCC/geo/lizmaplegrandnarbonnecom.yaml
-Record ID: lizmaplegrandnarbonnecom
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-ARA/geo/geomeylanfr.yaml
-Record ID: geomeylanfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/opendata/datasenatfr.yaml
-Record ID: datasenatfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=2
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: FR/Federal/opendata/dataassembleenationalefr.yaml
-Record ID: dataassembleenationalefr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
-
-File: FR/Federal/geo/dcpcnwpmeteofr.yaml
-Record ID: dcpcnwpmeteofr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/esg2umrcnrmfr.yaml
-Record ID: esg2umrcnrmfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/metadonneesgbiffr.yaml
-Record ID: metadonneesgbiffr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/pndbfr.yaml
-Record ID: pndbfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/Federal/scientific/openobsmnhnfr.yaml
-Record ID: openobsmnhnfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-BFC/geo/lizmapsdis25fr.yaml
-Record ID: lizmapsdis25fr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: FR/FR-NOR/geo/atlascalvadosfr.yaml
-Record ID: atlascalvadosfr
-Country: FR
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/ES-GA/opendata/datoscorunagal.yaml
-Record ID: datoscorunagal
-Country: ES
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=3
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/Federal/scientific/datameteounicanes.yaml
-Record ID: datameteounicanes
-Country: ES
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: ES/Federal/scientific/esgfbsces.yaml
-Record ID: esgfbsces
-Country: ES
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: JP/Federal/scientific/esgfdata03diasjpnet.yaml
-Record ID: esgfdata03diasjpnet
-Country: JP
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: JP/Federal/scientific/esgfdata04diasjpnet.yaml
-Record ID: esgfdata04diasjpnet
-Country: JP
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: JP/Federal/scientific/esgfdata01diasjpnet.yaml
-Record ID: esgfdata01diasjpnet
-Country: JP
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: JP/Federal/scientific/esgfdata1diasjpnet.yaml
-Record ID: esgfdata1diasjpnet
-Country: JP
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: JP/Federal/scientific/esgfdata02diasjpnet.yaml
-Record ID: esgfdata02diasjpnet
-Country: JP
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: IE/Federal/scientific/esgfichecie.yaml
-Record ID: esgfichecie
-Country: IE
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: EU/Federal/geo/creodiasrasdamancom.yaml
-Record ID: creodiasrasdamancom
-Country: EU
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=inactive, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: EU/Federal/scientific/dataltereuropenet.yaml
-Record ID: dataltereuropenet
-Country: EU
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: Africa/scientific/collectionsafricanherbariaorg.yaml
-Record ID: collectionsafricanherbariaorg
-Country: TG
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=1
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: TH/Federal/scientific/esgdn1ruacth.yaml
-Record ID: esgdn1ruacth
-Country: TH
-Issue: API_STATUS_MISMATCH
-Field: api_status
-Current Value: api=True, api_status=uncertain, endpoints=2
-Suggested Action: Update api_status to 'active' since endpoints are present
-
-File: WS/Federal/opendata/riosamoamnregovws.yaml
-Record ID: riosamoamnregovws
-Country: WS
-Issue: API_STATUS_MISMATCH
-Field: api
-Current Value: api=False, endpoints=1
-Suggested Action: Set api=True since endpoints are present, or remove endpoints
+... and 31 more records with this issue
 
 [COVERAGE_NORMALIZATION]
-Count: 86
+Count: 149
 
 File: SK/Federal/geo/rageominvsk.yaml
 Record ID: rageominvsk
 Country: SK
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.level
-Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}}
+Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}}
 Suggested Action: Add level field to coverage location
 
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Country: SK
+File: SE/Federal/geo/minkartalantmaterietse.yaml
+Record ID: minkartalantmaterietse
+Country: SE
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}}
+Current Value: {'country': {'id': 'SE', 'name': 'Sweden'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataglendalecagov.yaml
-Record ID: dataglendalecagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataglendalecagov.yaml
-Record ID: dataglendalecagov
+File: US/US-OR/geo/mapscolincolnorus.yaml
+Record ID: mapscolincolnorus
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-OR', 'name': 'Oregon'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datachicogov.yaml
-Record ID: datachicogov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datachicogov.yaml
-Record ID: datachicogov
+File: US/US-OR/geo/gisevatourscom.yaml
+Record ID: gisevatourscom
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-OR', 'name': 'Oregon'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacccountyus.yaml
-Record ID: datacccountyus
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacccountyus.yaml
-Record ID: datacccountyus
+File: US/US-WI/geo/geospheressecwiscedu.yaml
+Record ID: geospheressecwiscedu
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-WI', 'name': 'Wisconsin'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacalpolyedu.yaml
-Record ID: datacalpolyedu
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacalpolyedu.yaml
-Record ID: datacalpolyedu
+File: US/US-PA/geo/phillytreemaporg.yaml
+Record ID: phillytreemaporg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-PA', 'name': 'Pennsylvania'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofirvineorg.yaml
-Record ID: datacityofirvineorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofirvineorg.yaml
-Record ID: datacityofirvineorg
+File: US/Other/geo/mapservermonitoringresourcesorg.yaml
+Record ID: mapservermonitoringresourcesorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofsacramentoorg.yaml
-Record ID: datacityofsacramentoorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofsacramentoorg.yaml
-Record ID: datacityofsacramentoorg
+File: US/US-OK/geo/mapviewrogerscom.yaml
+Record ID: mapviewrogerscom
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-OK', 'name': 'Oklahoma'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datasantabarcagov.yaml
-Record ID: datasantabarcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datasantabarcagov.yaml
-Record ID: datasantabarcagov
+File: US/US-CA/geo/mapserverlaketahoeinfoorg.yaml
+Record ID: mapserverlaketahoeinfoorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-CA', 'name': 'California'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataocgovcom.yaml
-Record ID: dataocgovcom
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataocgovcom.yaml
-Record ID: dataocgovcom
+File: US/Federal/geo/wwwpostholercom.yaml
+Record ID: wwwpostholercom
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datamountainviewgov.yaml
-Record ID: datamountainviewgov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datamountainviewgov.yaml
-Record ID: datamountainviewgov
+File: US/Federal/geo/mrdatausgsgov.yaml
+Record ID: mrdatausgsgov
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacarlsbadcagov.yaml
-Record ID: datacarlsbadcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacarlsbadcagov.yaml
-Record ID: datacarlsbadcagov
+File: US/US-MN/microdata/wwwidhsdataorg.yaml
+Record ID: wwwidhsdataorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datafresnocountycagov.yaml
-Record ID: datafresnocountycagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datafresnocountycagov.yaml
-Record ID: datafresnocountycagov
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataimperialcountyorg.yaml
-Record ID: dataimperialcountyorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataimperialcountyorg.yaml
-Record ID: dataimperialcountyorg
+File: US/US-MN/microdata/pmaipumsorg.yaml
+Record ID: pmaipumsorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataanaheimnet.yaml
-Record ID: dataanaheimnet
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataanaheimnet.yaml
-Record ID: dataanaheimnet
+File: US/US-MN/microdata/micsipumsorg.yaml
+Record ID: micsipumsorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datadmvcagov.yaml
-Record ID: datadmvcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datadmvcagov.yaml
-Record ID: datadmvcagov
+File: US/US-MN/geo/formsmmcdorg.yaml
+Record ID: formsmmcdorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-MN', 'name': 'Minnesota'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datasantaclaritacom.yaml
-Record ID: datasantaclaritacom
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datasantaclaritacom.yaml
-Record ID: datasantaclaritacom
+File: US/US-MN/geo/ihgisipumsorg.yaml
+Record ID: ihgisipumsorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataontariocagov.yaml
-Record ID: dataontariocagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataontariocagov.yaml
-Record ID: dataontariocagov
+File: US/US-MN/geo/wwwdnrstatemnus.yaml
+Record ID: wwwdnrstatemnus
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-MN', 'name': 'Minnesota'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofsanrafaelorg.yaml
-Record ID: datacityofsanrafaelorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofsanrafaelorg.yaml
-Record ID: datacityofsanrafaelorg
+File: US/US-MI/geo/spatialmtriorg.yaml
+Record ID: spatialmtriorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-MI', 'name': 'Michigan'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datatorrancecagov.yaml
-Record ID: datatorrancecagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datatorrancecagov.yaml
-Record ID: datatorrancecagov
+File: US/US-MI/geo/greatlakesremotesensingorg.yaml
+Record ID: greatlakesremotesensingorg
 Country: US
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'US', 'name': 'United States'}, 'level': 30, 'subregion': {'id': 'US-MI', 'name': 'Michigan'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datatoaksorg.yaml
-Record ID: datatoaksorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datatoaksorg.yaml
-Record ID: datatoaksorg
-Country: US
+File: BB/Federal/indicators/wwwcentralbankorgbb.yaml
+Record ID: wwwcentralbankorgbb
+Country: BB
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datakerncountycom.yaml
-Record ID: datakerncountycom
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datakerncountycom.yaml
-Record ID: datakerncountycom
-Country: US
+File: BB/Federal/indicators/statsgovbb.yaml
+Record ID: statsgovbb
+Country: BB
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datasantaclaragov.yaml
-Record ID: datasantaclaragov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datasantaclaragov.yaml
-Record ID: datasantaclaragov
-Country: US
+File: BB/Federal/geo/geoportalbdslsdepthubarcgiscom.yaml
+Record ID: geoportalbdslsdepthubarcgiscom
+Country: BB
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'BB', 'name': 'Barbados'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacaltranscagov.yaml
-Record ID: datacaltranscagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacaltranscagov.yaml
-Record ID: datacaltranscagov
-Country: US
+File: NZ/Federal/geo/mapsscinfoorgnz.yaml
+Record ID: mapsscinfoorgnz
+Country: NZ
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'NZ', 'name': 'New Zealand'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
-Record ID: datahuntingtonbeachcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
-Record ID: datahuntingtonbeachcagov
-Country: US
+File: BJ/Federal/geo/inondationgouvbj.yaml
+Record ID: inondationgouvbj
+Country: BJ
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'BJ', 'name': 'Benin'}, 'level': 20}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofsantamariaorg.yaml
-Record ID: datacityofsantamariaorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofsantamariaorg.yaml
-Record ID: datacityofsantamariaorg
-Country: US
+File: CN/CN-JL/opendata/wwwliaoyuangovcn.yaml
+Record ID: wwwliaoyuangovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-JL', 'name': 'Jilin Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataabagcagov.yaml
-Record ID: dataabagcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataabagcagov.yaml
-Record ID: dataabagcagov
-Country: US
+File: CN/CN-JX/opendata/wwwncgovcn.yaml
+Record ID: wwwncgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-JX', 'name': 'Jiangxi Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datasunnyvalecagov.yaml
-Record ID: datasunnyvalecagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datasunnyvalecagov.yaml
-Record ID: datasunnyvalecagov
-Country: US
+File: CN/CN-JX/opendata/wwwyingtangovcn.yaml
+Record ID: wwwyingtangovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-JX', 'name': 'Jiangxi Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datareddinggov.yaml
-Record ID: datareddinggov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datareddinggov.yaml
-Record ID: datareddinggov
-Country: US
+File: CN/CN-JX/opendata/wwwjiujianggovcn.yaml
+Record ID: wwwjiujianggovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-JX', 'name': 'Jiangxi Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datasrcityorg.yaml
-Record ID: datasrcityorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datasrcityorg.yaml
-Record ID: datasrcityorg
-Country: US
+File: CN/CN-HA/opendata/wwwhebigovcn.yaml
+Record ID: wwwhebigovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HA', 'name': 'Henan Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datatularecountycagov.yaml
-Record ID: datatularecountycagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datatularecountycagov.yaml
-Record ID: datatularecountycagov
-Country: US
+File: CN/CN-NX/opendata/wwwnxzwgovcn.yaml
+Record ID: wwwnxzwgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-NX', 'name': 'Ningxia Huizu Zizhiqu'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofdavisorg.yaml
-Record ID: datacityofdavisorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofdavisorg.yaml
-Record ID: datacityofdavisorg
-Country: US
+File: CN/CN-NM/opendata/fgwwuhaigovcn.yaml
+Record ID: fgwwuhaigovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-NM', 'name': 'Nei Mongol Zizhiqu'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityoffullertoncom.yaml
-Record ID: datacityoffullertoncom
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityoffullertoncom.yaml
-Record ID: datacityoffullertoncom
-Country: US
+File: CN/CN-NM/opendata/opennmgdataorgcn.yaml
+Record ID: opennmgdataorgcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-NM', 'name': 'Nei Mongol Zizhiqu'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataucopedu.yaml
-Record ID: dataucopedu
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataucopedu.yaml
-Record ID: dataucopedu
-Country: US
+File: CN/CN-NM/opendata/wwwalsgovcn.yaml
+Record ID: wwwalsgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-NM', 'name': 'Nei Mongol Zizhiqu'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacountyofventuraorg.yaml
-Record ID: datacountyofventuraorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacountyofventuraorg.yaml
-Record ID: datacountyofventuraorg
-Country: US
+File: CN/CN-HN/opendata/nyncjhnloudigovcn.yaml
+Record ID: nyncjhnloudigovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HN', 'name': 'Hunan Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/databayareametrogov.yaml
-Record ID: databayareametrogov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/databayareametrogov.yaml
-Record ID: databayareametrogov
-Country: US
+File: CN/CN-HN/opendata/wwwyzcitygovcn.yaml
+Record ID: wwwyzcitygovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HN', 'name': 'Hunan Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataarbcagov.yaml
-Record ID: dataarbcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataarbcagov.yaml
-Record ID: dataarbcagov
-Country: US
+File: CN/CN-HN/opendata/wwwxiangtangovcn.yaml
+Record ID: wwwxiangtangovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HN', 'name': 'Hunan Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacaloescagov.yaml
-Record ID: datacaloescagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacaloescagov.yaml
-Record ID: datacaloescagov
-Country: US
+File: CN/CN-AH/opendata/wwwtlgovcn.yaml
+Record ID: wwwtlgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-AH', 'name': 'Anhui Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datafresnogov.yaml
-Record ID: datafresnogov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datafresnogov.yaml
-Record ID: datafresnogov
-Country: US
+File: CN/CN-AH/opendata/wwwmasgovcn.yaml
+Record ID: wwwmasgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-AH', 'name': 'Anhui Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
-Record ID: dataonehealthcaliforniagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
-Record ID: dataonehealthcaliforniagov
-Country: US
+File: CN/CN-YN/opendata/wwwztgovcn.yaml
+Record ID: wwwztgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-YN', 'name': 'Yunnan Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/databurbankcagov.yaml
-Record ID: databurbankcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/databurbankcagov.yaml
-Record ID: databurbankcagov
-Country: US
+File: CN/CN-GS/opendata/wwwjcsgovcn.yaml
+Record ID: wwwjcsgovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-GS', 'name': 'Gansu Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/dataucdavisedu.yaml
-Record ID: dataucdavisedu
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/dataucdavisedu.yaml
-Record ID: dataucdavisedu
-Country: US
+File: CN/CN-GS/opendata/wwwpinglianggovcn.yaml
+Record ID: wwwpinglianggovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-GS', 'name': 'Gansu Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacdphcagov.yaml
-Record ID: datacdphcagov
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacdphcagov.yaml
-Record ID: datacdphcagov
-Country: US
+File: CN/CN-HL/opendata/wwwshuangyashangovcn.yaml
+Record ID: wwwshuangyashangovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HL', 'name': 'Heilongjiang Sheng'}}
 Suggested Action: Add macroregion information to coverage location
 
-File: US/Federal/opendata/datacityofpetalumaorg.yaml
-Record ID: datacityofpetalumaorg
-Country: US
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.level
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
-Suggested Action: Add level field to coverage location
-
-File: US/Federal/opendata/datacityofpetalumaorg.yaml
-Record ID: datacityofpetalumaorg
-Country: US
+File: CN/CN-HE/opendata/wwwhengshuigovcn.yaml
+Record ID: wwwhengshuigovcn
+Country: CN
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'US', 'name': 'United States'}}
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HE', 'name': 'Hebei Sheng'}}
 Suggested Action: Add macroregion information to coverage location
+
+File: CN/CN-HE/opendata/hebdatahebyungovcn.yaml
+Record ID: hebdatahebyungovcn
+Country: CN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HE', 'name': 'Hebei Sheng'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CN/CN-HB/opendata/wwwxiangyanggovcn.yaml
+Record ID: wwwxiangyanggovcn
+Country: CN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HB', 'name': 'Hubei Sheng'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CN/CN-HB/opendata/wwwjingzhougovcn.yaml
+Record ID: wwwjingzhougovcn
+Country: CN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HB', 'name': 'Hubei Sheng'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CN/CN-HB/opendata/wwwhggovcn.yaml
+Record ID: wwwhggovcn
+Country: CN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HB', 'name': 'Hubei Sheng'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CN/CN-HB/opendata/wwwxiaogangovcn.yaml
+Record ID: wwwxiaogangovcn
+Country: CN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CN', 'name': 'China'}, 'level': 30, 'subregion': {'id': 'CN-HB', 'name': 'Hubei Sheng'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Country: IN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IN', 'name': 'India'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Country: IN
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IN', 'name': 'India'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CH/Federal/geo/bfumapserverch.yaml
+Record ID: bfumapserverch
+Country: CH
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CH', 'name': 'Switzerland'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CH/Federal/metadata/fdpdccsibswiss.yaml
+Record ID: fdpdccsibswiss
+Country: CH
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CH', 'name': 'Switzerland'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CH/CH-FR/geo/mapgeovillefribourgch.yaml
+Record ID: mapgeovillefribourgch
+Country: CH
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CH', 'name': 'Switzerland'}, 'level': 30, 'subregion': {'id': 'CH-FR', 'name': 'Fribourg'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: IT/Federal/geo/mapserverovingvit.yaml
+Record ID: mapserverovingvit
+Country: IT
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IT', 'name': 'Italy'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/CA-QC/geo/sssmedaminenextgiscom.yaml
+Record ID: sssmedaminenextgiscom
+Country: CA
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 30, 'subregion': {'id': 'CA-QC', 'name': 'Quebec'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/CA-QC/geo/zonesinondablesmrnfgouvqcca.yaml
+Record ID: zonesinondablesmrnfgouvqcca
+Country: CA
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 30, 'subregion': {'id': 'CA-QC', 'name': 'Quebec'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/wwwsimplemapprnet.yaml
+Record ID: wwwsimplemapprnet
+Country: CA
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/geoweathergcca.yaml
+Record ID: geoweathergcca
+Country: CA
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CA/Federal/geo/geoweathergccageometclimate.yaml
+Record ID: geoweathergccageometclimate
+Country: CA
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CA', 'name': 'Canada'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CZ/Federal/geo/mapserverczechglobecz.yaml
+Record ID: mapserverczechglobecz
+Country: CZ
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CZ', 'name': 'Czech Republic'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: CZ/Federal/metadata/fdpgdicloudeinfracz.yaml
+Record ID: fdpgdicloudeinfracz
+Country: CZ
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'CZ', 'name': 'Czech Republic'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/RU-SA/geo/942312552.yaml
+Record ID: 942312552
+Country: RU
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-SA', 'name': 'Saha, Respublika'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/Federal/geo/9123819084.yaml
+Record ID: 9123819084
+Country: RU
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/Federal/geo/maprgoru.yaml
+Record ID: maprgoru
+Country: RU
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
+Record ID: dkbiznextgiscom
+Country: RU
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-KDA', 'name': 'Krasnodarskij kraj'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: RO/Federal/geo/mapcimecro.yaml
+Record ID: mapcimecro
+Country: RO
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RO', 'name': 'Romania'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: AR/AR-C/geo/mapabuenosairesgobar.yaml
+Record ID: mapabuenosairesgobar
+Country: AR
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'AR', 'name': 'Argentina'}, 'level': 30, 'subregion': {'id': 'AR-C', 'name': 'Ciudad Autónoma de Buenos Aires'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: HR/Federal/metadata/gdicroatianodeorg.yaml
+Record ID: gdicroatianodeorg
+Country: HR
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'HR', 'name': 'Croatia'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Country: HU
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'HU', 'name': 'Hungary'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdplumcnl.yaml
+Record ID: fdplumcnl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdperasmusmcnl.yaml
+Record ID: fdperasmusmcnl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/bbmrifdpsejprdsemlableidennl.yaml
+Record ID: bbmrifdpsejprdsemlableidennl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdphealthdatanl.yaml
+Record ID: fdphealthdatanl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/wp13fdpsejprdsemlableidennl.yaml
+Record ID: wp13fdpsejprdsemlableidennl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/foisfdpeemcsutwentenl.yaml
+Record ID: foisfdpeemcsutwentenl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/orphanetfdpsejprdsemlableidennl.yaml
+Record ID: orphanetfdpsejprdsemlableidennl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/imtfdpsejprdsemlableidennl.yaml
+Record ID: imtfdpsejprdsemlableidennl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdplovdnl.yaml
+Record ID: fdplovdnl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdpradboudumcnl.yaml
+Record ID: fdpradboudumcnl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/diamondstnonl.yaml
+Record ID: diamondstnonl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdpduchennedatafoundationorg.yaml
+Record ID: fdpduchennedatafoundationorg
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/fdpmixnl.yaml
+Record ID: fdpmixnl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/patientregistriesfdpsejprdsemlableidennl.yaml
+Record ID: patientregistriesfdpsejprdsemlableidennl
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: NL/Federal/metadata/dppworldduchenneorg.yaml
+Record ID: dppworldduchenneorg
+Country: NL
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'NL', 'name': 'Netherlands'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: KZ/Federal/geo/gissmartforestkz.yaml
+Record ID: gissmartforestkz
+Country: KZ
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'KZ', 'name': 'Kazakhstan'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: AT/Federal/geo/ffrmhangwasserat.yaml
+Record ID: ffrmhangwasserat
+Country: AT
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'AT', 'name': 'Austria'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MX/MX-PUE/geo/sigempimplanpueblagobmx.yaml
+Record ID: sigempimplanpueblagobmx
+Country: MX
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MX', 'name': 'Mexico'}, 'level': 30, 'subregion': {'id': 'MX-PUE', 'name': 'Puebla'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: MX/MX-CAM/geo/champotoninfocamgobmx.yaml
+Record ID: champotoninfocamgobmx
+Country: MX
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MX', 'name': 'Mexico'}, 'level': 30, 'subregion': {'id': 'MX-CAM', 'name': 'Campeche'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-RP/geo/mapclientlgbrlpde.yaml
+Record ID: mapclientlgbrlpde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-RP', 'name': 'Rheinland-Pfalz'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-RP/geo/servicegeoportaltrierde.yaml
+Record ID: servicegeoportaltrierde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-RP', 'name': 'Rheinland-Pfalz'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-RP/geo/gdawasserrlpumweltde.yaml
+Record ID: gdawasserrlpumweltde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-RP', 'name': 'Rheinland-Pfalz'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-RP/geo/map1naturschutzrlpde.yaml
+Record ID: map1naturschutzrlpde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-RP', 'name': 'Rheinland-Pfalz'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-BW/geo/wwwgismannheimde.yaml
+Record ID: wwwgismannheimde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-BW', 'name': 'Baden-Württemberg'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-BW/geo/mapslgrbbwde.yaml
+Record ID: mapslgrbbwde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-BW', 'name': 'Baden-Württemberg'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-BW/geo/isonglgrbbwde.yaml
+Record ID: isonglgrbbwde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-BW', 'name': 'Baden-Württemberg'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/DE-BW/geo/bergbaulgrbbwde.yaml
+Record ID: bergbaulgrbbwde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 30, 'subregion': {'id': 'DE-BW', 'name': 'Baden-Württemberg'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/Federal/geo/wwwimisbfsde.yaml
+Record ID: wwwimisbfsde
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: DE/Federal/geo/bauinforrhemingcloud.yaml
+Record ID: bauinforrhemingcloud
+Country: DE
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'DE', 'name': 'Germany'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/indicators/statisticsmaldivesgovmv.yaml
+Record ID: statisticsmaldivesgovmv
+Country: MV
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+... and 49 more records with this issue
 
 [DUPLICATE_LINK]
+Count: 174
+
+File: SY/geo/maprojatlascom.yaml
+Record ID: maprojatlascom
+Country: SY
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://map.rojatlas.com', 'record_ids': ['maprojatlascom', 'maprojatlascom'], 'preferred_keeper': 'maprojatlascom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['maprojatlascom', 'maprojatlascom']. Keep this entry and merge/delete the others.
+
+File: SY/Federal/geo/maprojatlascom.yaml
+Record ID: maprojatlascom
+Country: SY
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://map.rojatlas.com', 'record_ids': ['maprojatlascom', 'maprojatlascom'], 'preferred_keeper': 'maprojatlascom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'maprojatlascom' (https://map.rojatlas.com). Merge or delete the other duplicate(s).
+
+File: US/US-OH/geo/gishubgimsoh29opendataarcgiscom.yaml
+Record ID: gishubgimsoh29opendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gishub-gimsoh29.opendata.arcgis.com/', 'record_ids': ['gishubgimsoh29opendataarcgiscom', 'gishubgimsoh29opendataarcgiscom'], 'preferred_keeper': 'gishubgimsoh29opendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gishubgimsoh29opendataarcgiscom', 'gishubgimsoh29opendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/gishubgimsoh29opendataarcgiscom.yaml
+Record ID: gishubgimsoh29opendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gishub-gimsoh29.opendata.arcgis.com/', 'record_ids': ['gishubgimsoh29opendataarcgiscom', 'gishubgimsoh29opendataarcgiscom'], 'preferred_keeper': 'gishubgimsoh29opendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gishubgimsoh29opendataarcgiscom' (https://gishub-gimsoh29.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-OH/geo/bitecentralfcahubarcgiscom.yaml
+Record ID: bitecentralfcahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://bite-central-fca.hub.arcgis.com/', 'record_ids': ['bitecentralfcahubarcgiscom', 'bitecentralfcahubarcgiscom'], 'preferred_keeper': 'bitecentralfcahubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['bitecentralfcahubarcgiscom', 'bitecentralfcahubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/bitecentralfcahubarcgiscom.yaml
+Record ID: bitecentralfcahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://bite-central-fca.hub.arcgis.com/', 'record_ids': ['bitecentralfcahubarcgiscom', 'bitecentralfcahubarcgiscom'], 'preferred_keeper': 'bitecentralfcahubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'bitecentralfcahubarcgiscom' (https://bite-central-fca.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-ID/geo/dataiplanopendataarcgiscom.yaml
+Record ID: dataiplanopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-iplan.opendata.arcgis.com/', 'record_ids': ['dataiplanopendataarcgiscom', 'dataiplanopendataarcgiscom'], 'preferred_keeper': 'dataiplanopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['dataiplanopendataarcgiscom', 'dataiplanopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/dataiplanopendataarcgiscom.yaml
+Record ID: dataiplanopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-iplan.opendata.arcgis.com/', 'record_ids': ['dataiplanopendataarcgiscom', 'dataiplanopendataarcgiscom'], 'preferred_keeper': 'dataiplanopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'dataiplanopendataarcgiscom' (https://data-iplan.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-ID/geo/insideidahoorg.yaml
+Record ID: insideidahoorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://insideidaho.org/arcgis/rest/services', 'record_ids': ['insideidahoorg', 'insideidahoorg'], 'preferred_keeper': 'insideidahoorg', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'insideidahoorg' (https://insideidaho.org/arcgis/rest/services). Merge or delete the other duplicate(s).
+
+File: US/Federal/geo/insideidahoorg.yaml
+Record ID: insideidahoorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://insideidaho.org/arcgis/rest/services', 'record_ids': ['insideidahoorg', 'insideidahoorg'], 'preferred_keeper': 'insideidahoorg', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['insideidahoorg', 'insideidahoorg']. Keep this entry and merge/delete the others.
+
+File: US/US-IL/geo/gispeoriagovorg.yaml
+Record ID: gispeoriagovorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis.peoriagov.org/copgis/arcgis/rest/services', 'record_ids': ['gispeoriagovorg', 'gispeoriagovorg'], 'preferred_keeper': 'gispeoriagovorg', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gispeoriagovorg' (https://gis.peoriagov.org/copgis/arcgis/rest/services). Merge or delete the other duplicate(s).
+
+File: US/Federal/geo/gispeoriagovorg.yaml
+Record ID: gispeoriagovorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis.peoriagov.org/copgis/arcgis/rest/services', 'record_ids': ['gispeoriagovorg', 'gispeoriagovorg'], 'preferred_keeper': 'gispeoriagovorg', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gispeoriagovorg', 'gispeoriagovorg']. Keep this entry and merge/delete the others.
+
+File: US/US-WI/geo/geodiscoveryuwmedu.yaml
+Record ID: geodiscoveryuwmedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geodiscovery.uwm.edu', 'record_ids': ['geodiscoveryuwmedu', 'geodiscoveryuwmedu'], 'preferred_keeper': 'geodiscoveryuwmedu', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['geodiscoveryuwmedu', 'geodiscoveryuwmedu']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/geodiscoveryuwmedu.yaml
+Record ID: geodiscoveryuwmedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://geodiscovery.uwm.edu', 'record_ids': ['geodiscoveryuwmedu', 'geodiscoveryuwmedu'], 'preferred_keeper': 'geodiscoveryuwmedu', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'geodiscoveryuwmedu' (https://geodiscovery.uwm.edu). Merge or delete the other duplicate(s).
+
+File: US/US-WI/geo/opendatacclidopendataarcgiscom.yaml
+Record ID: opendatacclidopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://opendata-cclid.opendata.arcgis.com/', 'record_ids': ['opendatacclidopendataarcgiscom', 'opendatacclidopendataarcgiscom'], 'preferred_keeper': 'opendatacclidopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['opendatacclidopendataarcgiscom', 'opendatacclidopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/opendatacclidopendataarcgiscom.yaml
+Record ID: opendatacclidopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://opendata-cclid.opendata.arcgis.com/', 'record_ids': ['opendatacclidopendataarcgiscom', 'opendatacclidopendataarcgiscom'], 'preferred_keeper': 'opendatacclidopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'opendatacclidopendataarcgiscom' (https://opendata-cclid.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-TN/geo/sgigrasslandiabetaapsugishubarcgiscom.yaml
+Record ID: sgigrasslandiabetaapsugishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sgi-grasslandia-beta-apsu-gis.hub.arcgis.com/', 'record_ids': ['sgigrasslandiabetaapsugishubarcgiscom', 'sgigrasslandiabetaapsugishubarcgiscom'], 'preferred_keeper': 'sgigrasslandiabetaapsugishubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['sgigrasslandiabetaapsugishubarcgiscom', 'sgigrasslandiabetaapsugishubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/sgigrasslandiabetaapsugishubarcgiscom.yaml
+Record ID: sgigrasslandiabetaapsugishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sgi-grasslandia-beta-apsu-gis.hub.arcgis.com/', 'record_ids': ['sgigrasslandiabetaapsugishubarcgiscom', 'sgigrasslandiabetaapsugishubarcgiscom'], 'preferred_keeper': 'sgigrasslandiabetaapsugishubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'sgigrasslandiabetaapsugishubarcgiscom' (https://sgi-grasslandia-beta-apsu-gis.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-TN/geo/nehsummer2022workshoptgahubarcgiscom.yaml
+Record ID: nehsummer2022workshoptgahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://neh-summer-2022-workshop-tga.hub.arcgis.com/', 'record_ids': ['nehsummer2022workshoptgahubarcgiscom', 'nehsummer2022workshoptgahubarcgiscom'], 'preferred_keeper': 'nehsummer2022workshoptgahubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['nehsummer2022workshoptgahubarcgiscom', 'nehsummer2022workshoptgahubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/nehsummer2022workshoptgahubarcgiscom.yaml
+Record ID: nehsummer2022workshoptgahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://neh-summer-2022-workshop-tga.hub.arcgis.com/', 'record_ids': ['nehsummer2022workshoptgahubarcgiscom', 'nehsummer2022workshoptgahubarcgiscom'], 'preferred_keeper': 'nehsummer2022workshoptgahubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'nehsummer2022workshoptgahubarcgiscom' (https://neh-summer-2022-workshop-tga.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-TN/geo/utcgisigtlabhubarcgiscom.yaml
+Record ID: utcgisigtlabhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://utcgis-igtlab.hub.arcgis.com/', 'record_ids': ['utcgisigtlabhubarcgiscom', 'utcgisigtlabhubarcgiscom'], 'preferred_keeper': 'utcgisigtlabhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['utcgisigtlabhubarcgiscom', 'utcgisigtlabhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/utcgisigtlabhubarcgiscom.yaml
+Record ID: utcgisigtlabhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://utcgis-igtlab.hub.arcgis.com/', 'record_ids': ['utcgisigtlabhubarcgiscom', 'utcgisigtlabhubarcgiscom'], 'preferred_keeper': 'utcgisigtlabhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'utcgisigtlabhubarcgiscom' (https://utcgis-igtlab.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-TN/geo/dataetsuopendataarcgiscom.yaml
+Record ID: dataetsuopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-etsu.opendata.arcgis.com/', 'record_ids': ['dataetsuopendataarcgiscom', 'dataetsuopendataarcgiscom'], 'preferred_keeper': 'dataetsuopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['dataetsuopendataarcgiscom', 'dataetsuopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/dataetsuopendataarcgiscom.yaml
+Record ID: dataetsuopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-etsu.opendata.arcgis.com/', 'record_ids': ['dataetsuopendataarcgiscom', 'dataetsuopendataarcgiscom'], 'preferred_keeper': 'dataetsuopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'dataetsuopendataarcgiscom' (https://data-etsu.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-WA/geo/broadbandwacommercehubarcgiscom.yaml
+Record ID: broadbandwacommercehubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://broadband-wacommerce.hub.arcgis.com/', 'record_ids': ['broadbandwacommercehubarcgiscom', 'broadbandwacommercehubarcgiscom'], 'preferred_keeper': 'broadbandwacommercehubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['broadbandwacommercehubarcgiscom', 'broadbandwacommercehubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/broadbandwacommercehubarcgiscom.yaml
+Record ID: broadbandwacommercehubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://broadband-wacommerce.hub.arcgis.com/', 'record_ids': ['broadbandwacommercehubarcgiscom', 'broadbandwacommercehubarcgiscom'], 'preferred_keeper': 'broadbandwacommercehubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'broadbandwacommercehubarcgiscom' (https://broadband-wacommerce.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-WA/geo/datahomempthubarcgiscom.yaml
+Record ID: datahomempthubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://datahome-mpt.hub.arcgis.com/', 'record_ids': ['datahomempthubarcgiscom', 'datahomempthubarcgiscom'], 'preferred_keeper': 'datahomempthubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['datahomempthubarcgiscom', 'datahomempthubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/datahomempthubarcgiscom.yaml
+Record ID: datahomempthubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://datahome-mpt.hub.arcgis.com/', 'record_ids': ['datahomempthubarcgiscom', 'datahomempthubarcgiscom'], 'preferred_keeper': 'datahomempthubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'datahomempthubarcgiscom' (https://datahome-mpt.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/US-WA/geo/chgis1mercergovorg.yaml
+Record ID: chgis1mercergovorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://chgis1.mercergov.org/arcgis/rest/services', 'record_ids': ['chgis1mercergovorg', 'chgis1mercergovorg'], 'preferred_keeper': 'chgis1mercergovorg', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'chgis1mercergovorg' (https://chgis1.mercergov.org/arcgis/rest/services). Merge or delete the other duplicate(s).
+
+File: US/Federal/geo/chgis1mercergovorg.yaml
+Record ID: chgis1mercergovorg
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://chgis1.mercergov.org/arcgis/rest/services', 'record_ids': ['chgis1mercergovorg', 'chgis1mercergovorg'], 'preferred_keeper': 'chgis1mercergovorg', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['chgis1mercergovorg', 'chgis1mercergovorg']. Keep this entry and merge/delete the others.
+
+File: US/US-PA/geo/spcgisspchubarcgiscom.yaml
+Record ID: spcgisspchubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spcgis-spc.hub.arcgis.com/', 'record_ids': ['spcgisspchubarcgiscom', 'spcgisspchubarcgiscom'], 'preferred_keeper': 'spcgisspchubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['spcgisspchubarcgiscom', 'spcgisspchubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/Other/geo/spcgisspchubarcgiscom.yaml
+Record ID: spcgisspchubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spcgis-spc.hub.arcgis.com/', 'record_ids': ['spcgisspchubarcgiscom', 'spcgisspchubarcgiscom'], 'preferred_keeper': 'spcgisspchubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'spcgisspchubarcgiscom' (https://spcgis-spc.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/datadcpwopendataarcgiscom.yaml
+Record ID: datadcpwopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-dcpw.opendata.arcgis.com/', 'record_ids': ['datadcpwopendataarcgiscom', 'datadcpwopendataarcgiscom'], 'preferred_keeper': 'datadcpwopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['datadcpwopendataarcgiscom', 'datadcpwopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/datadcpwopendataarcgiscom.yaml
+Record ID: datadcpwopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-dcpw.opendata.arcgis.com/', 'record_ids': ['datadcpwopendataarcgiscom', 'datadcpwopendataarcgiscom'], 'preferred_keeper': 'datadcpwopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'datadcpwopendataarcgiscom' (https://data-dcpw.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/dataisdhopendataarcgiscom.yaml
+Record ID: dataisdhopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-isdh.opendata.arcgis.com/', 'record_ids': ['dataisdhopendataarcgiscom', 'dataisdhopendataarcgiscom'], 'preferred_keeper': 'dataisdhopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['dataisdhopendataarcgiscom', 'dataisdhopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-IN/geo/dataisdhopendataarcgiscom.yaml
+Record ID: dataisdhopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-isdh.opendata.arcgis.com/', 'record_ids': ['dataisdhopendataarcgiscom', 'dataisdhopendataarcgiscom'], 'preferred_keeper': 'dataisdhopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'dataisdhopendataarcgiscom' (https://data-isdh.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/mappingosithubarcgiscom.yaml
+Record ID: mappingosithubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapping-osit.hub.arcgis.com/', 'record_ids': ['mappingosithubarcgiscom', 'mappingosithubarcgiscom'], 'preferred_keeper': 'mappingosithubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['mappingosithubarcgiscom', 'mappingosithubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-NV/geo/mappingosithubarcgiscom.yaml
+Record ID: mappingosithubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mapping-osit.hub.arcgis.com/', 'record_ids': ['mappingosithubarcgiscom', 'mappingosithubarcgiscom'], 'preferred_keeper': 'mappingosithubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'mappingosithubarcgiscom' (https://mapping-osit.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/gisdataccgisopendataarcgiscom.yaml
+Record ID: gisdataccgisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gisdata-cc-gis.opendata.arcgis.com/', 'record_ids': ['gisdataccgisopendataarcgiscom', 'gisdataccgisopendataarcgiscom'], 'preferred_keeper': 'gisdataccgisopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gisdataccgisopendataarcgiscom', 'gisdataccgisopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-NC/geo/gisdataccgisopendataarcgiscom.yaml
+Record ID: gisdataccgisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gisdata-cc-gis.opendata.arcgis.com/', 'record_ids': ['gisdataccgisopendataarcgiscom', 'gisdataccgisopendataarcgiscom'], 'preferred_keeper': 'gisdataccgisopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gisdataccgisopendataarcgiscom' (https://gisdata-cc-gis.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/spatialsmithcollegeopendataarcgiscom.yaml
+Record ID: spatialsmithcollegeopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spatial-smithcollege.opendata.arcgis.com/', 'record_ids': ['spatialsmithcollegeopendataarcgiscom', 'spatialsmithcollegeopendataarcgiscom'], 'preferred_keeper': 'spatialsmithcollegeopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['spatialsmithcollegeopendataarcgiscom', 'spatialsmithcollegeopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MA/geo/spatialsmithcollegeopendataarcgiscom.yaml
+Record ID: spatialsmithcollegeopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spatial-smithcollege.opendata.arcgis.com/', 'record_ids': ['spatialsmithcollegeopendataarcgiscom', 'spatialsmithcollegeopendataarcgiscom'], 'preferred_keeper': 'spatialsmithcollegeopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'spatialsmithcollegeopendataarcgiscom' (https://spatial-smithcollege.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/hubpcghubarcgiscom.yaml
+Record ID: hubpcghubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hub-pcg.hub.arcgis.com/', 'record_ids': ['hubpcghubarcgiscom', 'hubpcghubarcgiscom'], 'preferred_keeper': 'hubpcghubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['hubpcghubarcgiscom', 'hubpcghubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/hubpcghubarcgiscom.yaml
+Record ID: hubpcghubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hub-pcg.hub.arcgis.com/', 'record_ids': ['hubpcghubarcgiscom', 'hubpcghubarcgiscom'], 'preferred_keeper': 'hubpcghubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'hubpcghubarcgiscom' (https://hub-pcg.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/cghubdevcggisopendataarcgiscom.yaml
+Record ID: cghubdevcggisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cg-hubdev-cggis.opendata.arcgis.com/', 'record_ids': ['cghubdevcggisopendataarcgiscom', 'cghubdevcggisopendataarcgiscom'], 'preferred_keeper': 'cghubdevcggisopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['cghubdevcggisopendataarcgiscom', 'cghubdevcggisopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-FL/geo/cghubdevcggisopendataarcgiscom.yaml
+Record ID: cghubdevcggisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cg-hubdev-cggis.opendata.arcgis.com/', 'record_ids': ['cghubdevcggisopendataarcgiscom', 'cghubdevcggisopendataarcgiscom'], 'preferred_keeper': 'cghubdevcggisopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'cghubdevcggisopendataarcgiscom' (https://cg-hubdev-cggis.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/datalanderopendataarcgiscom.yaml
+Record ID: datalanderopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-lander.opendata.arcgis.com/', 'record_ids': ['datalanderopendataarcgiscom', 'datalanderopendataarcgiscom'], 'preferred_keeper': 'datalanderopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['datalanderopendataarcgiscom', 'datalanderopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-WY/geo/datalanderopendataarcgiscom.yaml
+Record ID: datalanderopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-lander.opendata.arcgis.com/', 'record_ids': ['datalanderopendataarcgiscom', 'datalanderopendataarcgiscom'], 'preferred_keeper': 'datalanderopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'datalanderopendataarcgiscom' (https://data-lander.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/opendataportalpcghubarcgiscom.yaml
+Record ID: opendataportalpcghubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://open-data-portal-pcg.hub.arcgis.com/', 'record_ids': ['opendataportalpcghubarcgiscom', 'opendataportalpcghubarcgiscom'], 'preferred_keeper': 'opendataportalpcghubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['opendataportalpcghubarcgiscom', 'opendataportalpcghubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/opendataportalpcghubarcgiscom.yaml
+Record ID: opendataportalpcghubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://open-data-portal-pcg.hub.arcgis.com/', 'record_ids': ['opendataportalpcghubarcgiscom', 'opendataportalpcghubarcgiscom'], 'preferred_keeper': 'opendataportalpcghubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'opendataportalpcghubarcgiscom' (https://open-data-portal-pcg.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/redistrictingcsjhubarcgiscom.yaml
+Record ID: redistrictingcsjhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://redistricting-csj.hub.arcgis.com/', 'record_ids': ['redistrictingcsjhubarcgiscom', 'redistrictingcsjhubarcgiscom'], 'preferred_keeper': 'redistrictingcsjhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['redistrictingcsjhubarcgiscom', 'redistrictingcsjhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-CA/geo/redistrictingcsjhubarcgiscom.yaml
+Record ID: redistrictingcsjhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://redistricting-csj.hub.arcgis.com/', 'record_ids': ['redistrictingcsjhubarcgiscom', 'redistrictingcsjhubarcgiscom'], 'preferred_keeper': 'redistrictingcsjhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'redistrictingcsjhubarcgiscom' (https://redistricting-csj.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/datageorgiadcaopendataarcgiscom.yaml
+Record ID: datageorgiadcaopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-georgia-dca.opendata.arcgis.com/', 'record_ids': ['datageorgiadcaopendataarcgiscom', 'datageorgiadcaopendataarcgiscom'], 'preferred_keeper': 'datageorgiadcaopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['datageorgiadcaopendataarcgiscom', 'datageorgiadcaopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-GA/geo/datageorgiadcaopendataarcgiscom.yaml
+Record ID: datageorgiadcaopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-georgia-dca.opendata.arcgis.com/', 'record_ids': ['datageorgiadcaopendataarcgiscom', 'datageorgiadcaopendataarcgiscom'], 'preferred_keeper': 'datageorgiadcaopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'datageorgiadcaopendataarcgiscom' (https://data-georgia-dca.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/californiaparcelupdateagishubarcgiscom.yaml
+Record ID: californiaparcelupdateagishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://california-parcel-update-agis.hub.arcgis.com/', 'record_ids': ['californiaparcelupdateagishubarcgiscom', 'californiaparcelupdateagishubarcgiscom'], 'preferred_keeper': 'californiaparcelupdateagishubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['californiaparcelupdateagishubarcgiscom', 'californiaparcelupdateagishubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-CA/geo/californiaparcelupdateagishubarcgiscom.yaml
+Record ID: californiaparcelupdateagishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://california-parcel-update-agis.hub.arcgis.com/', 'record_ids': ['californiaparcelupdateagishubarcgiscom', 'californiaparcelupdateagishubarcgiscom'], 'preferred_keeper': 'californiaparcelupdateagishubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'californiaparcelupdateagishubarcgiscom' (https://california-parcel-update-agis.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/gisdatacosmoopendataarcgiscom.yaml
+Record ID: gisdatacosmoopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gisdata-cosmo.opendata.arcgis.com/', 'record_ids': ['gisdatacosmoopendataarcgiscom', 'gisdatacosmoopendataarcgiscom'], 'preferred_keeper': 'gisdatacosmoopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gisdatacosmoopendataarcgiscom', 'gisdatacosmoopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MO/geo/gisdatacosmoopendataarcgiscom.yaml
+Record ID: gisdatacosmoopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gisdata-cosmo.opendata.arcgis.com/', 'record_ids': ['gisdatacosmoopendataarcgiscom', 'gisdatacosmoopendataarcgiscom'], 'preferred_keeper': 'gisdatacosmoopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gisdatacosmoopendataarcgiscom' (https://gisdata-cosmo.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/oceancslcopendataarcgiscom.yaml
+Record ID: oceancslcopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://ocean-cslc.opendata.arcgis.com/', 'record_ids': ['oceancslcopendataarcgiscom', 'oceancslcopendataarcgiscom'], 'preferred_keeper': 'oceancslcopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['oceancslcopendataarcgiscom', 'oceancslcopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-CA/geo/oceancslcopendataarcgiscom.yaml
+Record ID: oceancslcopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://ocean-cslc.opendata.arcgis.com/', 'record_ids': ['oceancslcopendataarcgiscom', 'oceancslcopendataarcgiscom'], 'preferred_keeper': 'oceancslcopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'oceancslcopendataarcgiscom' (https://ocean-cslc.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/mngsumnopendataarcgiscom.yaml
+Record ID: mngsumnopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mngs-umn.opendata.arcgis.com/', 'record_ids': ['mngsumnopendataarcgiscom', 'mngsumnopendataarcgiscom'], 'preferred_keeper': 'mngsumnopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['mngsumnopendataarcgiscom', 'mngsumnopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/mngsumnopendataarcgiscom.yaml
+Record ID: mngsumnopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://mngs-umn.opendata.arcgis.com/', 'record_ids': ['mngsumnopendataarcgiscom', 'mngsumnopendataarcgiscom'], 'preferred_keeper': 'mngsumnopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'mngsumnopendataarcgiscom' (https://mngs-umn.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/hglharvardedu.yaml
+Record ID: hglharvardedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hgl.harvard.edu', 'record_ids': ['hglharvardedu', 'hglharvardedu'], 'preferred_keeper': 'hglharvardedu', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['hglharvardedu', 'hglharvardedu']. Keep this entry and merge/delete the others.
+
+File: US/US-MA/geo/hglharvardedu.yaml
+Record ID: hglharvardedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hgl.harvard.edu', 'record_ids': ['hglharvardedu', 'hglharvardedu'], 'preferred_keeper': 'hglharvardedu', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'hglharvardedu' (https://hgl.harvard.edu). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/cghubdev2cggisopendataarcgiscom.yaml
+Record ID: cghubdev2cggisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cg-hubdev2-cggis.opendata.arcgis.com/', 'record_ids': ['cghubdev2cggisopendataarcgiscom', 'cghubdev2cggisopendataarcgiscom'], 'preferred_keeper': 'cghubdev2cggisopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['cghubdev2cggisopendataarcgiscom', 'cghubdev2cggisopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-FL/geo/cghubdev2cggisopendataarcgiscom.yaml
+Record ID: cghubdev2cggisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cg-hubdev2-cggis.opendata.arcgis.com/', 'record_ids': ['cghubdev2cggisopendataarcgiscom', 'cghubdev2cggisopendataarcgiscom'], 'preferred_keeper': 'cghubdev2cggisopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'cghubdev2cggisopendataarcgiscom' (https://cg-hubdev2-cggis.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/dataexplorergsueconhubarcgiscom.yaml
+Record ID: dataexplorergsueconhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-explorer-gsuecon.hub.arcgis.com/', 'record_ids': ['dataexplorergsueconhubarcgiscom', 'dataexplorergsueconhubarcgiscom'], 'preferred_keeper': 'dataexplorergsueconhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['dataexplorergsueconhubarcgiscom', 'dataexplorergsueconhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-GA/geo/dataexplorergsueconhubarcgiscom.yaml
+Record ID: dataexplorergsueconhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://data-explorer-gsuecon.hub.arcgis.com/', 'record_ids': ['dataexplorergsueconhubarcgiscom', 'dataexplorergsueconhubarcgiscom'], 'preferred_keeper': 'dataexplorergsueconhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'dataexplorergsueconhubarcgiscom' (https://data-explorer-gsuecon.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/rcdataregisopendataarcgiscom.yaml
+Record ID: rcdataregisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://rcdata-regis.opendata.arcgis.com/', 'record_ids': ['rcdataregisopendataarcgiscom', 'rcdataregisopendataarcgiscom'], 'preferred_keeper': 'rcdataregisopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['rcdataregisopendataarcgiscom', 'rcdataregisopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-CA/geo/rcdataregisopendataarcgiscom.yaml
+Record ID: rcdataregisopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://rcdata-regis.opendata.arcgis.com/', 'record_ids': ['rcdataregisopendataarcgiscom', 'rcdataregisopendataarcgiscom'], 'preferred_keeper': 'rcdataregisopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'rcdataregisopendataarcgiscom' (https://rcdata-regis.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/hubcwccmhubarcgiscom.yaml
+Record ID: hubcwccmhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hub-cwccm.hub.arcgis.com/', 'record_ids': ['hubcwccmhubarcgiscom', 'hubcwccmhubarcgiscom'], 'preferred_keeper': 'hubcwccmhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['hubcwccmhubarcgiscom', 'hubcwccmhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/hubcwccmhubarcgiscom.yaml
+Record ID: hubcwccmhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hub-cwccm.hub.arcgis.com/', 'record_ids': ['hubcwccmhubarcgiscom', 'hubcwccmhubarcgiscom'], 'preferred_keeper': 'hubcwccmhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'hubcwccmhubarcgiscom' (https://hub-cwccm.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/outercapeismcoastalstudieshubarcgiscom.yaml
+Record ID: outercapeismcoastalstudieshubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://outercape-ism-coastalstudies.hub.arcgis.com/', 'record_ids': ['outercapeismcoastalstudieshubarcgiscom', 'outercapeismcoastalstudieshubarcgiscom'], 'preferred_keeper': 'outercapeismcoastalstudieshubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['outercapeismcoastalstudieshubarcgiscom', 'outercapeismcoastalstudieshubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MA/geo/outercapeismcoastalstudieshubarcgiscom.yaml
+Record ID: outercapeismcoastalstudieshubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://outercape-ism-coastalstudies.hub.arcgis.com/', 'record_ids': ['outercapeismcoastalstudieshubarcgiscom', 'outercapeismcoastalstudieshubarcgiscom'], 'preferred_keeper': 'outercapeismcoastalstudieshubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'outercapeismcoastalstudieshubarcgiscom' (https://outercape-ism-coastalstudies.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/kgsgisdataandmapskuhubarcgiscom.yaml
+Record ID: kgsgisdataandmapskuhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://kgs-gis-data-and-maps-ku.hub.arcgis.com/', 'record_ids': ['kgsgisdataandmapskuhubarcgiscom', 'kgsgisdataandmapskuhubarcgiscom'], 'preferred_keeper': 'kgsgisdataandmapskuhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['kgsgisdataandmapskuhubarcgiscom', 'kgsgisdataandmapskuhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-KS/geo/kgsgisdataandmapskuhubarcgiscom.yaml
+Record ID: kgsgisdataandmapskuhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://kgs-gis-data-and-maps-ku.hub.arcgis.com/', 'record_ids': ['kgsgisdataandmapskuhubarcgiscom', 'kgsgisdataandmapskuhubarcgiscom'], 'preferred_keeper': 'kgsgisdataandmapskuhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'kgsgisdataandmapskuhubarcgiscom' (https://kgs-gis-data-and-maps-ku.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/gishubkilgorehubarcgiscom.yaml
+Record ID: gishubkilgorehubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gishub-kilgore.hub.arcgis.com/', 'record_ids': ['gishubkilgorehubarcgiscom', 'gishubkilgorehubarcgiscom'], 'preferred_keeper': 'gishubkilgorehubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gishubkilgorehubarcgiscom', 'gishubkilgorehubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-TX/geo/gishubkilgorehubarcgiscom.yaml
+Record ID: gishubkilgorehubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gishub-kilgore.hub.arcgis.com/', 'record_ids': ['gishubkilgorehubarcgiscom', 'gishubkilgorehubarcgiscom'], 'preferred_keeper': 'gishubkilgorehubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gishubkilgorehubarcgiscom' (https://gishub-kilgore.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/opendatapottcountyhubarcgiscom.yaml
+Record ID: opendatapottcountyhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://open-data-pottcounty.hub.arcgis.com/', 'record_ids': ['opendatapottcountyhubarcgiscom', 'opendatapottcountyhubarcgiscom'], 'preferred_keeper': 'opendatapottcountyhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['opendatapottcountyhubarcgiscom', 'opendatapottcountyhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-IA/geo/opendatapottcountyhubarcgiscom.yaml
+Record ID: opendatapottcountyhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://open-data-pottcounty.hub.arcgis.com/', 'record_ids': ['opendatapottcountyhubarcgiscom', 'opendatapottcountyhubarcgiscom'], 'preferred_keeper': 'opendatapottcountyhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'opendatapottcountyhubarcgiscom' (https://open-data-pottcounty.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/ticketsal811opendataarcgiscom.yaml
+Record ID: ticketsal811opendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tickets-al811.opendata.arcgis.com/', 'record_ids': ['ticketsal811opendataarcgiscom', 'ticketsal811opendataarcgiscom'], 'preferred_keeper': 'ticketsal811opendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['ticketsal811opendataarcgiscom', 'ticketsal811opendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-AL/geo/ticketsal811opendataarcgiscom.yaml
+Record ID: ticketsal811opendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://tickets-al811.opendata.arcgis.com/', 'record_ids': ['ticketsal811opendataarcgiscom', 'ticketsal811opendataarcgiscom'], 'preferred_keeper': 'ticketsal811opendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'ticketsal811opendataarcgiscom' (https://tickets-al811.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/gisshareddataccgiscoophubarcgiscom.yaml
+Record ID: gisshareddataccgiscoophubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis-shared-data-ccgiscoop.hub.arcgis.com/', 'record_ids': ['gisshareddataccgiscoophubarcgiscom', 'gisshareddataccgiscoophubarcgiscom'], 'preferred_keeper': 'gisshareddataccgiscoophubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gisshareddataccgiscoophubarcgiscom', 'gisshareddataccgiscoophubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-WY/geo/gisshareddataccgiscoophubarcgiscom.yaml
+Record ID: gisshareddataccgiscoophubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis-shared-data-ccgiscoop.hub.arcgis.com/', 'record_ids': ['gisshareddataccgiscoophubarcgiscom', 'gisshareddataccgiscoophubarcgiscom'], 'preferred_keeper': 'gisshareddataccgiscoophubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gisshareddataccgiscoophubarcgiscom' (https://gis-shared-data-ccgiscoop.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/covid19usflibraryhubarcgiscom.yaml
+Record ID: covid19usflibraryhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://covid19-usflibrary.hub.arcgis.com/', 'record_ids': ['covid19usflibraryhubarcgiscom', 'covid19usflibraryhubarcgiscom'], 'preferred_keeper': 'covid19usflibraryhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['covid19usflibraryhubarcgiscom', 'covid19usflibraryhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-FL/geo/covid19usflibraryhubarcgiscom.yaml
+Record ID: covid19usflibraryhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://covid19-usflibrary.hub.arcgis.com/', 'record_ids': ['covid19usflibraryhubarcgiscom', 'covid19usflibraryhubarcgiscom'], 'preferred_keeper': 'covid19usflibraryhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'covid19usflibraryhubarcgiscom' (https://covid19-usflibrary.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/lfscdatavcuhubarcgiscom.yaml
+Record ID: lfscdatavcuhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://lfscdata-vcu.hub.arcgis.com/', 'record_ids': ['lfscdatavcuhubarcgiscom', 'lfscdatavcuhubarcgiscom'], 'preferred_keeper': 'lfscdatavcuhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['lfscdatavcuhubarcgiscom', 'lfscdatavcuhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-VA/geo/lfscdatavcuhubarcgiscom.yaml
+Record ID: lfscdatavcuhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://lfscdata-vcu.hub.arcgis.com/', 'record_ids': ['lfscdatavcuhubarcgiscom', 'lfscdatavcuhubarcgiscom'], 'preferred_keeper': 'lfscdatavcuhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'lfscdatavcuhubarcgiscom' (https://lfscdata-vcu.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/hubtipsnhedgishubarcgiscom.yaml
+Record ID: hubtipsnhedgishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hubtips-nhedgis.hub.arcgis.com/', 'record_ids': ['hubtipsnhedgishubarcgiscom', 'hubtipsnhedgishubarcgiscom'], 'preferred_keeper': 'hubtipsnhedgishubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['hubtipsnhedgishubarcgiscom', 'hubtipsnhedgishubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-NH/geo/hubtipsnhedgishubarcgiscom.yaml
+Record ID: hubtipsnhedgishubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://hubtips-nhedgis.hub.arcgis.com/', 'record_ids': ['hubtipsnhedgishubarcgiscom', 'hubtipsnhedgishubarcgiscom'], 'preferred_keeper': 'hubtipsnhedgishubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'hubtipsnhedgishubarcgiscom' (https://hubtips-nhedgis.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/cosfgiscosfgahubarcgiscom.yaml
+Record ID: cosfgiscosfgahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cosf-gis-cosfga.hub.arcgis.com/', 'record_ids': ['cosfgiscosfgahubarcgiscom', 'cosfgiscosfgahubarcgiscom'], 'preferred_keeper': 'cosfgiscosfgahubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['cosfgiscosfgahubarcgiscom', 'cosfgiscosfgahubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-GA/geo/cosfgiscosfgahubarcgiscom.yaml
+Record ID: cosfgiscosfgahubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://cosf-gis-cosfga.hub.arcgis.com/', 'record_ids': ['cosfgiscosfgahubarcgiscom', 'cosfgiscosfgahubarcgiscom'], 'preferred_keeper': 'cosfgiscosfgahubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'cosfgiscosfgahubarcgiscom' (https://cosf-gis-cosfga.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/sdghubtemplatewcitestumnhubarcgiscom.yaml
+Record ID: sdghubtemplatewcitestumnhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sdg-hub-template-wci-test-umn.hub.arcgis.com/', 'record_ids': ['sdghubtemplatewcitestumnhubarcgiscom', 'sdghubtemplatewcitestumnhubarcgiscom'], 'preferred_keeper': 'sdghubtemplatewcitestumnhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['sdghubtemplatewcitestumnhubarcgiscom', 'sdghubtemplatewcitestumnhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/geo/sdghubtemplatewcitestumnhubarcgiscom.yaml
+Record ID: sdghubtemplatewcitestumnhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://sdg-hub-template-wci-test-umn.hub.arcgis.com/', 'record_ids': ['sdghubtemplatewcitestumnhubarcgiscom', 'sdghubtemplatewcitestumnhubarcgiscom'], 'preferred_keeper': 'sdghubtemplatewcitestumnhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'sdghubtemplatewcitestumnhubarcgiscom' (https://sdg-hub-template-wci-test-umn.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/greportalgmuedu.yaml
+Record ID: greportalgmuedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://greportal.gmu.edu', 'record_ids': ['greportalgmuedu', 'greportalgmuedu'], 'preferred_keeper': 'greportalgmuedu', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['greportalgmuedu', 'greportalgmuedu']. Keep this entry and merge/delete the others.
+
+File: US/US-VA/geo/greportalgmuedu.yaml
+Record ID: greportalgmuedu
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://greportal.gmu.edu', 'record_ids': ['greportalgmuedu', 'greportalgmuedu'], 'preferred_keeper': 'greportalgmuedu', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'greportalgmuedu' (https://greportal.gmu.edu). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/spatialdiscoveryucsbopendataarcgiscom.yaml
+Record ID: spatialdiscoveryucsbopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spatialdiscovery-ucsb.opendata.arcgis.com/', 'record_ids': ['spatialdiscoveryucsbopendataarcgiscom', 'spatialdiscoveryucsbopendataarcgiscom'], 'preferred_keeper': 'spatialdiscoveryucsbopendataarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['spatialdiscoveryucsbopendataarcgiscom', 'spatialdiscoveryucsbopendataarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-CA/geo/spatialdiscoveryucsbopendataarcgiscom.yaml
+Record ID: spatialdiscoveryucsbopendataarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://spatialdiscovery-ucsb.opendata.arcgis.com/', 'record_ids': ['spatialdiscoveryucsbopendataarcgiscom', 'spatialdiscoveryucsbopendataarcgiscom'], 'preferred_keeper': 'spatialdiscoveryucsbopendataarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'spatialdiscoveryucsbopendataarcgiscom' (https://spatialdiscovery-ucsb.opendata.arcgis.com/). Merge or delete the other duplicate(s).
+
+File: US/Other/geo/ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom.yaml
+Record ID: ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://rural-utility-business-advisory-hub-site-1-dcced.hub.arcgis.com/', 'record_ids': ['ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom', 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom'], 'preferred_keeper': 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom', 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom']. Keep this entry and merge/delete the others.
+
+File: US/US-AK/geo/ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom.yaml
+Record ID: ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom
+Country: US
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://rural-utility-business-advisory-hub-site-1-dcced.hub.arcgis.com/', 'record_ids': ['ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom', 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom'], 'preferred_keeper': 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'ruralutilitybusinessadvisoryhubsite1dccedhubarcgiscom' (https://rural-utility-business-advisory-hub-site-1-dcced.hub.arcgis.com/). Merge or delete the other duplicate(s).
+
+... and 74 more records with this issue
+
+[INCONSISTENT_LICENSE]
 Count: 2
 
-File: BR/Federal/scientific/iptsibbrgovbrpeldipt.yaml
-Record ID: iptsibbrgovbrpeldipt
-Country: BR
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://ipt.sibbr.gov.br/peld', 'record_ids': ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld'], 'preferred_keeper': 'iptsibbrgovbrpeld', 'is_preferred_keeper': False}
-Suggested Action: Preferred keeper is 'iptsibbrgovbrpeld' (https://ipt.sibbr.gov.br/peld). Merge or delete the other duplicate(s).
+File: CA/Federal/indicators/wwwcmhcschlgcca.yaml
+Record ID: wwwcmhcschlgcca
+Country: CA
+Issue: INCONSISTENT_LICENSE
+Field: rights.license_url
+Current Value: {'license_name': 'CMHC Licence Agreement for the Use of Data', 'license_url': None}
+Suggested Action: Add license_url to complement license_name
 
-File: BR/Federal/scientific/iptsibbrgovbrpeld.yaml
-Record ID: iptsibbrgovbrpeld
-Country: BR
-Issue: DUPLICATE_LINK
-Field: link
-Current Value: {'link': 'https://ipt.sibbr.gov.br/peld', 'record_ids': ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld'], 'preferred_keeper': 'iptsibbrgovbrpeld', 'is_preferred_keeper': True}
-Suggested Action: This record is the preferred keeper for link duplicates among ['iptsibbrgovbrpeldipt', 'iptsibbrgovbrpeld']. Keep this entry and merge/delete the others.
+File: UY/UY-DU/geo/duraznogvsigonlinecom.yaml
+Record ID: duraznogvsigonlinecom
+Country: UY
+Issue: INCONSISTENT_LICENSE
+Field: rights.license_url
+Current Value: {'license_name': 'Open Data License (per dataset)', 'license_url': None}
+Suggested Action: Add license_url to complement license_name
+
+[MISSING_API_STATUS]
+Count: 11
+
+File: US/US-CA/scientific/datacencoosorg.yaml
+Record ID: datacencoosorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-CA/scientific/portalsccoosorg.yaml
+Record ID: portalsccoosorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-CA/scientific/oahcaloosorg.yaml
+Record ID: oahcaloosorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/mbonioosus.yaml
+Record ID: mbonioosus
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/sensorsioosus.yaml
+Record ID: sensorsioosus
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/Federal/scientific/soundcoopportalaxdsco.yaml
+Record ID: soundcoopportalaxdsco
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-AK/geo/feederginaalaskaedu.yaml
+Record ID: feederginaalaskaedu
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-AK/scientific/akaquaportalaxdsco.yaml
+Record ID: akaquaportalaxdsco
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-AK/scientific/adacportalaxdsco.yaml
+Record ID: adacportalaxdsco
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-AK/scientific/maricultureportalaoosorg.yaml
+Record ID: maricultureportalaoosorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
+
+File: US/US-AK/scientific/portalaoosorg.yaml
+Record ID: portalaoosorg
+Country: US
+Issue: MISSING_API_STATUS
+Field: api_status
+Current Value: None
+Suggested Action: Set api_status to 'active', 'inactive', or 'uncertain'
 
 [MISSING_ENDPOINTS]
-Count: 28
+Count: 85
+
+File: SL/Federal/indicators/dhismohsgovsl.yaml
+Record ID: dhismohsgovsl
+Country: SL
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: SK/Federal/geo/mapovyserver1cgcsk.yaml
+Record ID: mapovyserver1cgcsk
+Country: SK
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: ZM/Federal/indicators/dhis2mohgovzm.yaml
+Record ID: dhis2mohgovzm
+Country: ZM
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: UG/Federal/indicators/hmishealthgoug.yaml
+Record ID: hmishealthgoug
+Country: UG
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-OH/geo/mapstorecmparksnet.yaml
+Record ID: mapstorecmparksnet
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-WA/scientific/cedarwwuedu.yaml
+Record ID: cedarwwuedu
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-IA/scientific/mesonetagroniastateedu.yaml
+Record ID: mesonetagroniastateedu
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-CA/geo/tilesfgov.yaml
+Record ID: tilesfgov
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-CO/scientific/digitalcollectionscuanschutzedu.yaml
+Record ID: digitalcollectionscuanschutzedu
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-CO/scientific/digitalcommonsduedu.yaml
+Record ID: digitalcommonsduedu
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: US/US-MO/opendata/appsindepmoorg.yaml
+Record ID: appsindepmoorg
+Country: US
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: UA/Federal/opendata/dataradagovua.yaml
+Record ID: dataradagovua
+Country: UA
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: UA/Federal/opendata/spendinggovua.yaml
+Record ID: spendinggovua
+Country: UA
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: UA/Federal/geo/nsdigovua.yaml
+Record ID: nsdigovua
+Country: UA
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: GH/Federal/indicators/dhimschimghorg.yaml
+Record ID: dhimschimghorg
+Country: GH
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: NG/Federal/indicators/asceducationgovng.yaml
+Record ID: asceducationgovng
+Country: NG
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: NG/Federal/indicators/dhis2nigeriaorgng.yaml
+Record ID: dhis2nigeriaorgng
+Country: NG
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KE/Federal/indicators/hiskenyaorg.yaml
+Record ID: hiskenyaorg
+Country: KE
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 File: NZ/NZ-AUK/api/devportalatgovtnz.yaml
 Record ID: devportalatgovtnz
 Country: NZ
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: NZ/NZ-MWT/geo/datawhanganuigovtnz.yaml
+Record ID: datawhanganuigovtnz
+Country: NZ
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: BD/Federal/indicators/centraldhismohfwgovbd.yaml
+Record ID: centraldhismohfwgovbd
+Country: BD
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: BJ/Federal/indicators/snigsgouvbj.yaml
+Record ID: snigsgouvbj
+Country: BJ
 Issue: MISSING_ENDPOINTS
 Field: endpoints
 Current Value: []
@@ -1522,6 +2750,22 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: CH/CH-ZH/geo/mapsddsc2zurichairportcom.yaml
+Record ID: mapsddsc2zurichairportcom
+Country: CH
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: CF/Federal/indicators/snissantegouvcf.yaml
+Record ID: snissantegouvcf
+Country: CF
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: World/indicators/comtradeplusunorg.yaml
 Record ID: comtradeplusunorg
 Country: World
@@ -1530,8 +2774,24 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: TW/TW-TAO/opendata/datatycggovtw.yaml
+Record ID: datatycggovtw
+Country: TW
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: TW/TW-CYI/opendata/datachiayigovtw.yaml
 Record ID: datachiayigovtw
+Country: TW
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/TW-TXG/opendata/opendatataichunggovtw.yaml
+Record ID: opendatataichunggovtw
 Country: TW
 Issue: MISSING_ENDPOINTS
 Field: endpoints
@@ -1586,6 +2846,46 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: TD/Federal/indicators/sissantegouvtd.yaml
+Record ID: sissantegouvtd
+Country: TD
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: SS/Federal/indicators/southsudanhisorg.yaml
+Record ID: southsudanhisorg
+Country: SS
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: VE/Federal/api/apisegenapngobve.yaml
+Record ID: apisegenapngobve
+Country: VE
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: SO/Federal/indicators/hmismohgovso.yaml
+Record ID: hmismohgovso
+Country: SO
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: PS/Federal/indicators/hmismohps.yaml
+Record ID: hmismohps
+Country: PS
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: ZA/Federal/geo/wwwcdngiportalcoza.yaml
 Record ID: wwwcdngiportalcoza
 Country: ZA
@@ -1618,8 +2918,136 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: KR/KR-11/opendata/datageumcheongokr.yaml
+Record ID: datageumcheongokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datajungnanggokr.yaml
+Record ID: datajungnanggokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datasdmgokr.yaml
+Record ID: datasdmgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datadongjakgokr.yaml
+Record ID: datadongjakgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datasbgokr.yaml
+Record ID: datasbgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datagangbukgokr.yaml
+Record ID: datagangbukgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datagwanakgokr.yaml
+Record ID: datagwanakgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datagangseoseoulkr.yaml
+Record ID: datagangseoseoulkr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: KR/KR-11/opendata/datasongpaseoulkr.yaml
 Record ID: datasongpaseoulkr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/dataseochogokr.yaml
+Record ID: dataseochogokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datadobonggokr.yaml
+Record ID: datadobonggokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datajungguseoulkr.yaml
+Record ID: datajungguseoulkr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/dataddmgokr.yaml
+Record ID: dataddmgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datajongnogokr.yaml
+Record ID: datajongnogokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/datamapogokr.yaml
+Record ID: datamapogokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/dataepgokr.yaml
+Record ID: dataepgokr
+Country: KR
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: KR/KR-11/opendata/dataydpgokr.yaml
+Record ID: dataydpgokr
 Country: KR
 Issue: MISSING_ENDPOINTS
 Field: endpoints
@@ -1658,8 +3086,32 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: MW/Federal/indicators/dhis2healthgovmw.yaml
+Record ID: dhis2healthgovmw
+Country: MW
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: DJ/Federal/indicators/snisdhis2gouvdj.yaml
+Record ID: snisdhis2gouvdj
+Country: DJ
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: GB/Federal/scientific/icatdiamondacuk.yaml
 Record ID: icatdiamondacuk
+Country: GB
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: GB/Federal/scientific/parasitewormbaseorg.yaml
+Record ID: parasitewormbaseorg
 Country: GB
 Issue: MISSING_ENDPOINTS
 Field: endpoints
@@ -1669,6 +3121,14 @@ Suggested Action: Add API endpoints based on software type and portal structure
 File: AU/Federal/geo/mapfindandconnectgovau.yaml
 Record ID: mapfindandconnectgovau
 Country: AU
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: AT/AT-9/geo/mapsaustrocontrolat.yaml
+Record ID: mapsaustrocontrolat
+Country: AT
 Issue: MISSING_ENDPOINTS
 Field: endpoints
 Current Value: []
@@ -1690,6 +3150,30 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+File: MX/MX-VER/geo/mapasmartinezdelatorregobmx.yaml
+Record ID: mapasmartinezdelatorregobmx
+Country: MX
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: DE/Federal/search/registrydataladorg.yaml
+Record ID: registrydataladorg
+Country: DE
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: MV/Federal/indicators/databasemmagovmv.yaml
+Record ID: databasemmagovmv
+Country: MV
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 File: ES/Federal/scientific/datacellses.yaml
 Record ID: datacellses
 Country: ES
@@ -1698,686 +3182,40 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
-[MISSING_OWNER_NAME]
-Count: 42
-
-File: US/Federal/opendata/dataglendalecagov.yaml
-Record ID: dataglendalecagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datachicogov.yaml
-Record ID: datachicogov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacccountyus.yaml
-Record ID: datacccountyus
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacalpolyedu.yaml
-Record ID: datacalpolyedu
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofirvineorg.yaml
-Record ID: datacityofirvineorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofsacramentoorg.yaml
-Record ID: datacityofsacramentoorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datasantabarcagov.yaml
-Record ID: datasantabarcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataocgovcom.yaml
-Record ID: dataocgovcom
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datamountainviewgov.yaml
-Record ID: datamountainviewgov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacarlsbadcagov.yaml
-Record ID: datacarlsbadcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datafresnocountycagov.yaml
-Record ID: datafresnocountycagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataimperialcountyorg.yaml
-Record ID: dataimperialcountyorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataanaheimnet.yaml
-Record ID: dataanaheimnet
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datadmvcagov.yaml
-Record ID: datadmvcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datasantaclaritacom.yaml
-Record ID: datasantaclaritacom
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataontariocagov.yaml
-Record ID: dataontariocagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofsanrafaelorg.yaml
-Record ID: datacityofsanrafaelorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datatorrancecagov.yaml
-Record ID: datatorrancecagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datatoaksorg.yaml
-Record ID: datatoaksorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datakerncountycom.yaml
-Record ID: datakerncountycom
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datasantaclaragov.yaml
-Record ID: datasantaclaragov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacaltranscagov.yaml
-Record ID: datacaltranscagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
-Record ID: datahuntingtonbeachcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofsantamariaorg.yaml
-Record ID: datacityofsantamariaorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataabagcagov.yaml
-Record ID: dataabagcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datasunnyvalecagov.yaml
-Record ID: datasunnyvalecagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datareddinggov.yaml
-Record ID: datareddinggov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datasrcityorg.yaml
-Record ID: datasrcityorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datatularecountycagov.yaml
-Record ID: datatularecountycagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofdavisorg.yaml
-Record ID: datacityofdavisorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityoffullertoncom.yaml
-Record ID: datacityoffullertoncom
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataucopedu.yaml
-Record ID: dataucopedu
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacountyofventuraorg.yaml
-Record ID: datacountyofventuraorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/databayareametrogov.yaml
-Record ID: databayareametrogov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataarbcagov.yaml
-Record ID: dataarbcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacaloescagov.yaml
-Record ID: datacaloescagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datafresnogov.yaml
-Record ID: datafresnogov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
-Record ID: dataonehealthcaliforniagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/databurbankcagov.yaml
-Record ID: databurbankcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/dataucdavisedu.yaml
-Record ID: dataucdavisedu
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacdphcagov.yaml
-Record ID: datacdphcagov
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-File: US/Federal/opendata/datacityofpetalumaorg.yaml
-Record ID: datacityofpetalumaorg
-Country: US
-Issue: MISSING_OWNER_NAME
-Field: owner.name
-Current Value: 
-Suggested Action: Add owner organization name
-
-[MISSING_OWNER_TYPE]
-Count: 42
-
-File: US/Federal/opendata/dataglendalecagov.yaml
-Record ID: dataglendalecagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datachicogov.yaml
-Record ID: datachicogov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacccountyus.yaml
-Record ID: datacccountyus
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacalpolyedu.yaml
-Record ID: datacalpolyedu
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofirvineorg.yaml
-Record ID: datacityofirvineorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofsacramentoorg.yaml
-Record ID: datacityofsacramentoorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datasantabarcagov.yaml
-Record ID: datasantabarcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataocgovcom.yaml
-Record ID: dataocgovcom
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datamountainviewgov.yaml
-Record ID: datamountainviewgov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacarlsbadcagov.yaml
-Record ID: datacarlsbadcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datafresnocountycagov.yaml
-Record ID: datafresnocountycagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataimperialcountyorg.yaml
-Record ID: dataimperialcountyorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataanaheimnet.yaml
-Record ID: dataanaheimnet
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datadmvcagov.yaml
-Record ID: datadmvcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datasantaclaritacom.yaml
-Record ID: datasantaclaritacom
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataontariocagov.yaml
-Record ID: dataontariocagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofsanrafaelorg.yaml
-Record ID: datacityofsanrafaelorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datatorrancecagov.yaml
-Record ID: datatorrancecagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datatoaksorg.yaml
-Record ID: datatoaksorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datakerncountycom.yaml
-Record ID: datakerncountycom
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datasantaclaragov.yaml
-Record ID: datasantaclaragov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacaltranscagov.yaml
-Record ID: datacaltranscagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datahuntingtonbeachcagov.yaml
-Record ID: datahuntingtonbeachcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofsantamariaorg.yaml
-Record ID: datacityofsantamariaorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataabagcagov.yaml
-Record ID: dataabagcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datasunnyvalecagov.yaml
-Record ID: datasunnyvalecagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datareddinggov.yaml
-Record ID: datareddinggov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datasrcityorg.yaml
-Record ID: datasrcityorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datatularecountycagov.yaml
-Record ID: datatularecountycagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofdavisorg.yaml
-Record ID: datacityofdavisorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityoffullertoncom.yaml
-Record ID: datacityoffullertoncom
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataucopedu.yaml
-Record ID: dataucopedu
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacountyofventuraorg.yaml
-Record ID: datacountyofventuraorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/databayareametrogov.yaml
-Record ID: databayareametrogov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataarbcagov.yaml
-Record ID: dataarbcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacaloescagov.yaml
-Record ID: datacaloescagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datafresnogov.yaml
-Record ID: datafresnogov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataonehealthcaliforniagov.yaml
-Record ID: dataonehealthcaliforniagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/databurbankcagov.yaml
-Record ID: databurbankcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/dataucdavisedu.yaml
-Record ID: dataucdavisedu
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacdphcagov.yaml
-Record ID: datacdphcagov
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
-
-File: US/Federal/opendata/datacityofpetalumaorg.yaml
-Record ID: datacityofpetalumaorg
-Country: US
-Issue: MISSING_OWNER_TYPE
-Field: owner.type
-Current Value: Unknown
-Suggested Action: Add owner organization type (e.g., Academy, Government, etc.)
+File: ET/Federal/indicators/dhismohgovet.yaml
+Record ID: dhismohgovet
+Country: ET
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TZ/Federal/indicators/dhismohgotz.yaml
+Record ID: dhismohgotz
+Country: TZ
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TZ/Federal/indicators/hmisportalmohgotz.yaml
+Record ID: hmisportalmohgotz
+Country: TZ
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: RW/Federal/indicators/hmismohgovrw.yaml
+Record ID: hmismohgovrw
+Country: RW
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [OWNER_LOCATION_SUBREGION_REQUIRED]
-Count: 170
+Count: 175
 
 File: PL/PL-04/geo/lipnogeoportal2pl.yaml
 Record ID: lipnogeoportal2pl
@@ -3179,7 +4017,7 @@ Field: owner.location
 Current Value: {'country': {'id': 'PL', 'name': 'Poland'}, 'level': 40, 'subregion': {'id': 'PL-06', 'name': 'Lubelskie'}}
 Suggested Action: For Regional government and Local government owners, set owner.location.level to 30 and include owner.location.subregion with id and name.
 
-... and 70 more records with this issue
+... and 75 more records with this issue
 
 [OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH]
 Count: 5
@@ -3224,64 +4062,120 @@ Field: owner.location.subregion
 Current Value: {'owner_subregion_id': 'DE-HB', 'file_admin_dir': 'Federal', 'file_path': 'EU/Federal/geo/copernicubeeu.yaml'}
 Suggested Action: Move this record from EU/Federal/ to DE/DE-HB/geo/ under data/entities (owner country DE), or remove owner.location.subregion if the record is truly federal.
 
+[SUBREGION_INVALID_ISO3166_2]
+Count: 2
+
+File: LV/LV-081/geo/sigulda2tergislv.yaml
+Record ID: sigulda2tergislv
+Country: LV
+Issue: SUBREGION_INVALID_ISO3166_2
+Field: owner.location.subregion
+Current Value: {'subregion_id': 'LV-081'}
+Suggested Action: Subregion code 'LV-081' is not a valid ISO3166-2 code. Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). Reference: data/reference/subregions/ISO3166-2.CSV
+
+File: LV/LV-081/geo/sigulda2tergislv.yaml
+Record ID: sigulda2tergislv
+Country: LV
+Issue: SUBREGION_INVALID_ISO3166_2
+Field: coverage[0].location.subregion
+Current Value: {'subregion_id': 'LV-081'}
+Suggested Action: Subregion code 'LV-081' is not a valid ISO3166-2 code. Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). Reference: data/reference/subregions/ISO3166-2.CSV
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-API_STATUS_MISMATCH: 94 issues
-COVERAGE_NORMALIZATION: 86 issues
-DUPLICATE_LINK: 2 issues
-MISSING_ENDPOINTS: 28 issues
-MISSING_OWNER_NAME: 42 issues
-MISSING_OWNER_TYPE: 42 issues
-OWNER_LOCATION_SUBREGION_REQUIRED: 170 issues
+API_STATUS_MISMATCH: 131 issues
+COVERAGE_NORMALIZATION: 149 issues
+DUPLICATE_LINK: 174 issues
+INCONSISTENT_LICENSE: 2 issues
+MISSING_API_STATUS: 11 issues
+MISSING_ENDPOINTS: 85 issues
+OWNER_LOCATION_SUBREGION_REQUIRED: 175 issues
 OWNER_SUBREGION_FEDERAL_DIRECTORY_MISMATCH: 5 issues
+SUBREGION_INVALID_ISO3166_2: 2 issues
 
 === SUMMARY BY COUNTRY ===
 
 AD: 1 issue
-AT: 1 issue
+AR: 1 issue
+AT: 3 issues
 AU: 3 issues
+BB: 3 issues
+BD: 1 issue
 BE: 1 issue
 BF: 1 issue
-BR: 7 issues
-CH: 1 issue
-CN: 5 issues
+BJ: 2 issues
+BR: 8 issues
+CA: 8 issues
+CF: 1 issue
+CH: 5 issues
+CL: 1 issue
+CN: 29 issues
 CO: 1 issue
-CZ: 1 issue
-DE: 9 issues
+CZ: 3 issues
+DE: 33 issues
+DJ: 1 issue
 DK: 1 issue
 EE: 3 issues
-ES: 4 issues
-EU: 2 issues
+ES: 13 issues
+ET: 1 issue
+EU: 32 issues
 FI: 1 issue
-FR: 13 issues
-GB: 1 issue
+FR: 15 issues
+GB: 2 issues
+GD: 1 issue
+GH: 1 issue
 GR: 1 issue
-ID: 8 issues
-IE: 1 issue
-IN: 1 issue
-IT: 10 issues
+HR: 1 issue
+HU: 1 issue
+ID: 9 issues
+IE: 3 issues
+IN: 3 issues
+IS: 2 issues
+IT: 12 issues
 JO: 1 issue
-JP: 5 issues
+JP: 6 issues
+KE: 1 issue
 KH: 1 issue
-KR: 10 issues
+KR: 26 issues
+KZ: 1 issue
 LK: 1 issue
-LV: 1 issue
-MX: 1 issue
+LV: 3 issues
+MV: 7 issues
+MW: 1 issue
+MX: 4 issues
+NG: 2 issues
+NL: 15 issues
 NP: 2 issues
-NZ: 1 issue
-PL: 166 issues
+NZ: 3 issues
+PL: 167 issues
+PS: 1 issue
 PT: 3 issues
+RO: 1 issue
 RS: 1 issue
-SE: 1 issue
+RU: 5 issues
+RW: 1 issue
+SE: 2 issues
 SG: 1 issue
 SK: 2 issues
+SL: 1 issue
+SO: 2 issues
+SS: 1 issue
+SY: 3 issues
+TD: 1 issue
 TG: 1 issue
 TH: 1 issue
+TJ: 1 issue
 TR: 1 issue
-TW: 9 issues
-TZ: 1 issue
-US: 177 issues
+TW: 11 issues
+TZ: 3 issues
+UA: 22 issues
+UG: 1 issue
+US: 209 issues
+UY: 1 issue
+VE: 1 issue
 WS: 1 issue
-World: 1 issue
+World: 2 issues
+YE: 1 issue
 ZA: 3 issues
+ZM: 1 issue

@@ -1,11 +1,44 @@
 DATA QUALITY REPORT - COUNTRY: PL
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: PL
-Total Records with Issues: 167
-Total Issues Found: 167
+Total Records with Issues: 168
+Total Issues Found: 170
 
 === ISSUES BY TYPE ===
+
+[API_STATUS_MISMATCH]
+Count: 1
+Priority: IMPORTANT
+
+File: PL/Federal/geo/1mappl.yaml
+Record ID: 1mappl
+Issue: API_STATUS_MISMATCH
+Field: api
+Current Value: api=False, endpoints=2
+Suggested Action: Set api=True since endpoints are present, or remove endpoints
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: PL/Federal/geo/1mappl.yaml
+Record ID: 1mappl
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: PL/Federal/geo/1mappl.yaml
+Record ID: 1mappl
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
 
 [OWNER_LOCATION_SUBREGION_REQUIRED]
 Count: 166
@@ -727,5 +760,18 @@ Suggested Action: Add at least one endpoint because software.id='galaxy' is mark
 
 === SUMMARY BY ISSUE TYPE ===
 
+API_STATUS_MISMATCH: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
 OWNER_LOCATION_SUBREGION_REQUIRED: 166 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: 1mappl
+File: PL/Federal/geo/1mappl.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - API_STATUS_MISMATCH: api

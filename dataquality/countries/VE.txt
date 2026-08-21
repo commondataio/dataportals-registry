@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: VE
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: VE
-Total Records with Issues: 2
-Total Issues Found: 4
+Total Records with Issues: 6
+Total Issues Found: 9
 
 === ISSUES BY TYPE ===
 
 [COUNTRY_NAME_ID_MISMATCH]
-Count: 2
+Count: 4
 Priority: MEDIUM
 
 File: VE/Federal/microdata/redataminegobve.yaml
@@ -25,6 +25,31 @@ Field: coverage[0].location.country.name
 Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
 Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
 
+File: VE/Federal/geo/citizenproblemreporter6esrivenhubarcgiscom.yaml
+Record ID: citizenproblemreporter6esrivenhubarcgiscom
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
+Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
+
+File: VE/Federal/geo/citizenproblemreporter6esrivenhubarcgiscom.yaml
+Record ID: citizenproblemreporter6esrivenhubarcgiscom
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'VE', 'name': 'Venezuela', 'expected': 'Venezuela (Bolivarian Republic of)'}
+Suggested Action: Country code 'VE' has canonical name 'Venezuela (Bolivarian Republic of)'. Update name from 'Venezuela' to 'Venezuela (Bolivarian Republic of)' for consistency.
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: VE/Federal/api/apisegenapngobve.yaml
+Record ID: apisegenapngobve
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
 Priority: MEDIUM
@@ -35,6 +60,24 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY
 Field: endpoints
 Current Value: {'software_id': 'datalibrary', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datalibrary' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS]
+Count: 2
+Priority: MEDIUM
+
+File: VE/Federal/geo/plataformavenezuelamapbiomasorg.yaml
+Record ID: plataformavenezuelamapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
+
+File: LatinAmerica/geo/plataformaamazoniamapbiomasorg.yaml
+Record ID: plataformaamazoniamapbiomasorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS
+Field: endpoints
+Current Value: {'software_id': 'mapbiomas', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapbiomas' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
 Count: 1
@@ -50,8 +93,10 @@ Suggested Action: Add at least one endpoint because software.id='redatam' is mar
 
 === SUMMARY BY ISSUE TYPE ===
 
-COUNTRY_NAME_ID_MISMATCH: 2 issues
+COUNTRY_NAME_ID_MISMATCH: 4 issues
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPBIOMAS: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
 
 === RECORDS WITH MULTIPLE ISSUES (3+) ===

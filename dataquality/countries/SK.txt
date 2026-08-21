@@ -1,29 +1,33 @@
 DATA QUALITY REPORT - COUNTRY: SK
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: SK
-Total Records with Issues: 1
-Total Issues Found: 5
+Total Records with Issues: 2
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
 [COVERAGE_NORMALIZATION]
-Count: 2
+Count: 1
 Priority: IMPORTANT
 
 File: SK/Federal/geo/rageominvsk.yaml
 Record ID: rageominvsk
 Issue: COVERAGE_NORMALIZATION
 Field: coverage[0].location.level
-Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}}
+Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}}
 Suggested Action: Add level field to coverage location
 
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Issue: COVERAGE_NORMALIZATION
-Field: coverage[0].location.macroregion
-Current Value: {'country': {'id': 'SK', 'name': 'Slovakia'}}
-Suggested Action: Add macroregion information to coverage location
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: SK/Federal/geo/mapovyserver1cgcsk.yaml
+Record ID: mapovyserver1cgcsk
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [MISSING_LANGS]
 Count: 1
@@ -36,44 +40,9 @@ Field: langs
 Current Value: []
 Suggested Action: Add language codes based on portal content and location
 
-[MISSING_TAGS]
-Count: 1
-Priority: LOW
-
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Issue: MISSING_TAGS
-Field: tags
-Current Value: []
-Suggested Action: Extract tags from description and catalog_type
-
-[MISSING_TOPICS]
-Count: 1
-Priority: LOW
-
-File: SK/Federal/geo/rageominvsk.yaml
-Record ID: rageominvsk
-Issue: MISSING_TOPICS
-Field: topics
-Current Value: []
-Suggested Action: Add relevant topics based on catalog_type and description
-
 
 === SUMMARY BY ISSUE TYPE ===
 
-COVERAGE_NORMALIZATION: 2 issues
+COVERAGE_NORMALIZATION: 1 issue
+MISSING_ENDPOINTS: 1 issue
 MISSING_LANGS: 1 issue
-MISSING_TAGS: 1 issue
-MISSING_TOPICS: 1 issue
-
-=== RECORDS WITH MULTIPLE ISSUES (3+) ===
-
-Record ID: rageominvsk
-File: SK/Federal/geo/rageominvsk.yaml
-Issue Count: 5
-Issues:
-  - MISSING_TOPICS: topics
-  - MISSING_TAGS: tags
-  - MISSING_LANGS: langs
-  - COVERAGE_NORMALIZATION: coverage[0].location.level
-  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

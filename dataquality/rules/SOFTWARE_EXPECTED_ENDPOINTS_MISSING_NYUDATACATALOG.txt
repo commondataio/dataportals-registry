@@ -1,0 +1,35 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NYUDATACATALOG
+================================================================================
+Generated: 2026-08-21 20:45:45
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NYUDATACATALOG
+Priority: MEDIUM
+Total Issues Found: 2
+
+Rule: Identifies records using software.id='nyudatacatalog' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+US: 2 issues
+
+=== SUMMARY BY RECORD ===
+
+datacatalogmclibrarydukeedu: 1 issue
+datacataloglibrarywayneedu: 1 issue
+
+=== ISSUES ===
+
+File: US/US-NC/scientific/datacatalogmclibrarydukeedu.yaml
+Record ID: datacatalogmclibrarydukeedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NYUDATACATALOG
+Field: endpoints
+Current Value: {"software_id": "nyudatacatalog", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='nyudatacatalog' is marked as API-capable in software definitions
+
+File: US/US-MI/scientific/datacataloglibrarywayneedu.yaml
+Record ID: datacataloglibrarywayneedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NYUDATACATALOG
+Field: endpoints
+Current Value: {"software_id": "nyudatacatalog", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='nyudatacatalog' is marked as API-capable in software definitions

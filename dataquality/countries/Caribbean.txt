@@ -1,0 +1,86 @@
+DATA QUALITY REPORT - COUNTRY: Caribbean
+================================================================================
+Generated: 2026-08-21 20:45:45
+Country Code: Caribbean
+Total Records with Issues: 3
+Total Issues Found: 7
+
+=== ISSUES BY TYPE ===
+
+[MISSING_TAGS]
+Count: 3
+Priority: LOW
+
+File: Caribbean/indicators/oecsitechmissionorg.yaml
+Record ID: oecsitechmissionorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: Caribbean/indicators/wwweccbcentralbankorg.yaml
+Record ID: wwweccbcentralbankorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: Caribbean/geo/gisoecsintgeohub.yaml
+Record ID: gisoecsintgeohub
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 3
+Priority: LOW
+
+File: Caribbean/indicators/oecsitechmissionorg.yaml
+Record ID: oecsitechmissionorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: Caribbean/indicators/wwweccbcentralbankorg.yaml
+Record ID: wwweccbcentralbankorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: Caribbean/geo/gisoecsintgeohub.yaml
+Record ID: gisoecsintgeohub
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB]
+Count: 1
+Priority: MEDIUM
+
+File: Caribbean/geo/gisoecsintgeohub.yaml
+Record ID: gisoecsintgeohub
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB
+Field: endpoints
+Current Value: {'software_id': 'arcgishub', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='arcgishub' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+MISSING_TAGS: 3 issues
+MISSING_TOPICS: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gisoecsintgeohub
+File: Caribbean/geo/gisoecsintgeohub.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISHUB: endpoints

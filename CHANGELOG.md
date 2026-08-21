@@ -7,48 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.14.0] - 2026-08-21
+
+**GitHub Release**: [v1.14.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.14.0) - Published August 21, 2026
+
 ### Added
-- **570 net new catalog entries** (577 new IDs; 7 removed); registry source now **18,288** entities (**0** scheduled) across **217** country/territory folders, including a first entity root for **Grenada (GD)**.
-- **13 software definitions**; software catalog now **205** platforms: MapServer (`mapserver`), MapTiler Server (`maptilerserver`), gvSIG Online (`gvsigonline`), deegree (`deegree`), VertiGIS WebOffice (`weboffice`), GeoMedia WebMap (`geomediawebmap`), disy Cadenza (`cadenza`), FAIR Data Point (`fairdatapoint`), Idra (`idra`), CONTENTdm (`contentdm`), Omeka S (`omekas`), Fedora (`fedora`), and OPUS (`opus`).
-- **205 US catalogs**, including **143** geoportals (**90 ArcGIS Hub**, **26 ArcGIS Server**, **12 MapServer**), **32** scientific repositories (**12 Elsevier Digital Commons**, **9 Esploro**), **19** indicators catalogs, and **9 IPUMS** microdata catalogs (USA, CPS, International, DHS, NHIS, Higher Ed, MICS, PMA, Time Use).
-- **81 German catalogs**, including **16 QWC2** viewers, **12 Mapbender** geoportals, **10 OPUS** publication servers, **10 disy Cadenza** environmental geoportals, **7 VertiGIS WebOffice** city plans, **7 MapServer**, **6 deegree** xPlanBox/ISK services, and **4 Fedora** CLARIN language-resource repositories.
+- **702 net new catalog entries**; registry source now **18,420** entities (0 scheduled) across **217** country/territory folders, including a first entity root for **Grenada (GD)**.
+- **19 software definitions**; software catalog now **211** platforms: MapServer, MapTiler Server, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, FAIR Data Point, Idra, CONTENTdm, Omeka S, Fedora, OPUS, RADAR (`radar`), Symbiota (`symbiota`), DHIS2 (`dhis2`), Yoda (`yoda`), OpenAIRE (`openaire`), and IPUMS (`ipums`).
+- **20 DHIS2** national HMIS/indicator portals (Bangladesh, Benin, CAR, Djibouti, Ethiopia, Ghana, Kenya, Malawi, Nigeria, Palestine, Rwanda, Sierra Leone, Somalia, South Sudan, Chad, Tanzania, Uganda, Zambia). Retagged Nepal HMIS from `custom`.
+- **33 OpenAIRE** Explore gateways (EU university alliances and thematic hubs). Retagged 2 existing OpenAIRE gateways from `custom`.
+- **58 Symbiota** biodiversity collection portals from the [official Symbiota directory](https://symbiota.org/symbiota-portals/). Retagged Ecuador BNDB and Illinois Natural History Survey from `custom`.
+- **6 RADAR** research-data repositories (ÖAW Datathek, RADAR-BB, KonDATA, WueData, OstData, FoDaSi) and **4 Dutch Yoda** data-publication platforms (Tilburg, Leiden, VU, WUR), plus Utrecht Yoda retagged from `custom`.
+- **9 DSpace 7** institutional / research-data repositories (Kyoto KURENAI, Alicante RUA, THM data.THM, JLU Giessen JLUpub, Imperial Spiral, Toronto TSpace, University of Aruba, UMass Amherst ScholarWorks, University of Rzeszów RDB).
+- **2 IPUMS** collections (CDOH, MEPS). Retagged **12** existing IPUMS collections from `custom`; remapped **6** Albanian U-CRIS portals to `dspacecris`.
+- **205 US catalogs** in the first wave, including **143** geoportals (**90 ArcGIS Hub**, **26 ArcGIS Server**, **12 MapServer**), plus later Symbiota and IPUMS scientific/microdata additions.
+- **81 German catalogs**, including **16 QWC2** viewers, **12 Mapbender** geoportals, **10 OPUS** publication servers, **10 disy Cadenza** environmental geoportals, **7 VertiGIS WebOffice** city plans, **7 MapServer**, **6 deegree** xPlanBox/ISK services, **5 RADAR**, and **4 Fedora** CLARIN language-resource repositories.
 - **52 QWC2** geoportals (Germany, Switzerland, France, Latvia, Austria, Czechia, and others).
 - **45 MapServer** geoportals (USGS MRDATA, MSC GeoMet, Buenos Aires city map, Québec flood zones, INGV Vesuvius, CIMEC, and others).
 - **34 Ukrainian catalogs**, including **12 municipal CKAN** open data portals (Kyiv, Kharkiv, Odesa, Vinnytsia, Kryvyi Rih, Mariupol, and others).
 - **33 FAIR Data Point** metadata catalogs (Health-RI and Dutch university medical centers, Spanish research FDPs, EJP-RD / EGA / EATRIS / INFRAFRONTIER, SPHN, FAIRVASC, and the EJP-RD Virtual Platform index).
 - **25 Chinese catalogs**, including **24** municipal and provincial public-data open platforms.
-- **21 Esploro** research repositories (US campuses, RMIT, Montpellier, Weizmann, ILO, and others) and **18 InvenioRDM** repositories (CERN, IAEA NDS, CaltechAUTHORS, BAOBAB, Imperial Helix, and others).
-- Scientific coverage: **14 Elsevier Digital Commons**, **12 DSpace**, **10 Fedora**, **10 OPUS**, **6 PHAIDRA** (Vienna, USTP, Bruckner, FWF), plus UAE, Albania U-CRIS, and Georgian repositories.
-- Geoportal products: **13 Mapbender** (mostly German municipalities plus 1map.pl), **11 VertiGIS WebOffice** (Austria and Germany), **10 Cadenza**, **9 deegree**, **8 NextGIS Web**, **7 gvSIG Online** (Valencian municipalities plus Tocantins), **5 MapTiler Server**, **2 GeoMedia WebMap**.
+- **21 Esploro** research repositories and **18 InvenioRDM** repositories (CERN, IAEA NDS, CaltechAUTHORS, BAOBAB, Imperial Helix, and others).
+- Scientific coverage: **21 DSpace**, **14 Elsevier Digital Commons**, **10 Fedora**, **10 OPUS**, **6 PHAIDRA**, plus UAE, Albania U-CRIS, and Georgian repositories.
+- Geoportal products: **13 Mapbender**, **11 VertiGIS WebOffice**, **10 Cadenza**, **9 deegree**, **8 NextGIS Web**, **7 gvSIG Online**, **5 MapTiler Server**, **2 GeoMedia WebMap**.
 - Open data and indicators for Albania, Georgia, the UAE, Iceland, Maldives, Bahamas, Barbados, Syria, Tajikistan, and Caribbean OECS/ECCB.
-- Promoted the scheduled queue into entities after live checks: **80** catalogs (FAIR Data Point, MapServer, Mapbender, NextGIS Web); **8** scheduled records dropped as unverifiable or duplicate.
-- CONTENTdm software definition (`contentdm`) and two catalogs that publish research datasets: Stats NZ Digital Library long-term data series (`statsnz.contentdm.oclc.org`) and Indiana University Climate Data Indianapolis (`iuidigital.contentdm.oclc.org`).
-- Omeka S software definition (`omekas`), retagged Indiana Spatial Data Portal (`gisiuedu`) from `custom`, and added the Gouda Tijdmachine linked open data catalog (`goudatijdmachinenl`).
-- Idra Open Data Federation Platform software definition (`idra`) and **4 inactive Idra catalogs** (`idra.site`, `idra.opsilab.it`, `idra.eng.it`, `idra-sandbox.eng.it`). Retagged the existing OPSILab sandbox from `custom` to `idra` and marked it inactive.
-- MapTiler Server geoportals: San Francisco (`tile.sf.gov`), Martínez de la Torre (`mapas.martinezdelatorre.gob.mx`), EMERCOM Atlas tiles (`tiles.atlas.mchs.gov.ru`), Zurich Airport DDS (`maps.dds-c2.zurich-airport.com`), and CGC Slovakia (`mapovy-server1.cgc.sk:3651`).
-- HTTP-verified default API probes for GeoMapFish, GET SDI Portal, REDATAM, SciCat, MapStore, Open SDG, SuperMap iServer, gvSIG Online, InGrid, ERDAS APOLLO, Drupal JSON:API, ICAT OAI-PMH, CoGIS/eLiteGIS REST, GIN/Gogs `/api/v1/version`, OSF JSON:API, Samvera/Hyrax catalog JSON, Semantic MediaWiki `api.php`, Ensembl `/rest/info/ping`, PHAIDRA `/api/search/select` and `/api/oai`, MapTiler Server `/api`, MyTardis `/api/v1/`, and NYU Data Catalog schema.org JSON-LD, written onto catalog `endpoints[]` only when a GET succeeds.
-- Catalog discovery guides: Google / Censys / Shodan / FOFA search-engine recipes (`docs/discovery-search-tools.md`), per-platform queries, and agent/LLM client setup for Cursor, ChatGPT, Claude, and MCP (`docs/discovery-agent-tools.md`).
-- Discovery fingerprints and search recipes for high-volume platforms (Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box, Liferay, POMOSAM, oPortal, OGD India, Digital Commons, InstDB, WEKO3, Aristotle MDR, Fusion Registry, OBiBa Mica, and related IDs). New pages: [docs/discovery-other.md](docs/discovery-other.md), [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md).
-- Discovery recipes now cover remaining `software.id` values (Rasdaman, Open Data Cube, SciCat, Piveau, LKOD, Islandora/Samvera, and compact tables for other geo/opendata/scientific/indicator platforms). New page: [docs/enrichment.md](docs/enrichment.md) for quality-fix and legacy enrich scripts.
-- Discovery guides: full hunt recipes (Confirm / Google / Censys) for high-count platforms that were table-only: Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, NetGIS Server, cardo, GC Navi, NOL-IS, GiSoftGis, Sampaş, ActiveMap, map.apps, CoGIS, OpenGeoPortal, smart.finder SDI, GIS WebServer SE, Our Open Data, Gipuzkoa Irekia, DataPress, MODA, Haplo, Worktribe, FAIRDOM-SEEK, RAMADDA, and ICAT.
-- Harvest guides for crawling **datasets** from catalog APIs (`docs/harvest.md`): scientific IRs, open data portals, geoportals (CSW/STAC/ArcGIS), indicators/microdata, metadata catalogs (FDP/Fusion Registry), aggregators/ML/`custom`, shared protocols (`docs/harvest-protocols.md`), incremental harvests (`docs/harvest-incremental.md`), earth observation (`docs/harvest-earthdata.md`), biodiversity/genomics (`docs/harvest-biodiversity.md`), map viewers (`docs/harvest-viewers.md`), dataset identifiers (`docs/harvest-identifiers.md`), and harvest output (`docs/harvest-output.md`). Agent checklist: `docs/agents/harvest.md`. Expanded recipes for IPT, THREDDS, ERDDAP, CMS open-data shells, municipal GIS viewers, official indicator hubs (Eurostat, ECB, World Bank, WHO GHO, ILOSTAT, BIS, UNICEF), SEANOE, data.gov.my, PublishMyData, OpenML, Bitrix/SMW/Strapi, GeoPortal.rlp, Re:Earth, and remaining CMS/GIS `software.id` values.
-- Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, and CKAN ecosystem sync.
-- CLI reference now covers all `builder.py` commands; software taxonomy lists all 12 subtypes and a new-platform checklist.
-- JSON-LD/DCAT field mapping table and DuckDB column inventory on the exports page.
+- CONTENTdm software definition and two dataset catalogs (Stats NZ Digital Library, IU Climate Data Indianapolis). Omeka S (`gisiuedu` retag, Gouda Tijdmachine). Idra federation platform and **4 inactive** Idra catalogs.
+- MapTiler Server geoportals: San Francisco, Martínez de la Torre, EMERCOM Atlas tiles, Zurich Airport DDS, and CGC Slovakia.
+- HTTP-verified default API probes for GeoMapFish, GET SDI Portal, REDATAM, SciCat, MapStore, Open SDG, SuperMap iServer, gvSIG Online, InGrid, ERDAS APOLLO, Drupal JSON:API, ICAT OAI-PMH, CoGIS/eLiteGIS REST, GIN/Gogs, OSF JSON:API, Samvera/Hyrax, Semantic MediaWiki, Ensembl, PHAIDRA, MapTiler Server, MyTardis, and NYU Data Catalog, written onto `endpoints[]` only when a GET succeeds.
+- Catalog discovery guides (Google / Censys / Shodan / FOFA), per-platform queries, agent/LLM client setup, fingerprints for remaining `software.id` values, [docs/enrichment.md](docs/enrichment.md), [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md).
+- Harvest guides for crawling **datasets** from catalog APIs (`docs/harvest.md` and related pages). Agent checklist: `docs/agents/harvest.md`.
+- Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, CKAN sync, CLI, software taxonomy, and JSON-LD/DCAT export mapping.
 
 ### Changed
-- Harvest/discovery docs no longer treat unpublished `software.id` values (`radar`, `yoda`, `dhis2`, `ipums`, `openaire`, `symbiota`) as live registry IDs. Corrected the scheduled-queue count in `ai-consumers.md` (`0`, not `88`). Filled harvest indexes in `llms.txt` and `when-to-use.md`.
-- Cleared the scheduled queue (**80** promoted, **8** removed). `data/scheduled/` is now empty.
+- Harvest/discovery docs treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values. Corrected the scheduled-queue count in `ai-consumers.md`. Filled harvest indexes in `llms.txt` and `when-to-use.md`.
+- Cleared the scheduled queue (**80** promoted, **8** removed in the first wave; later **67** Symbiota/DSpace promotions). `data/scheduled/` is empty.
 - Recategorized **199** misplaced catalogs (**140** from `Unknown/`, **40** from `World/`) into country folders (largest batches: United States, United Kingdom, Japan, Canada, Germany).
-- Refreshed metadata on **179** existing catalogs.
-- Drupal software definition now matches WordPress: `has_api: Yes` and `custom_api: Yes` (JSON:API is in Drupal core). Quality-fixer `infer_endpoints` helpers probe `apidetect` URL maps over HTTP and write only endpoints that respond. They no longer construct unverified CKAN/GeoServer/`/sitemap.xml` URLs, and they skip generic `custom` catalogs.
-- Documented remaining platforms that must not get guessed API paths (`NO_STANDARD_PROBE`): Tianditu, oPortal, OGD India, Masterportal, wagmap, EWMAPA, Seoul Open Data Plaza, GENESIS-Online (POST-only), and similar instance-specific GIS.
-- Discovery docs now include search-engine (Google, Censys, Shodan, FOFA) and per-platform guides; scoped catalog hunts may use those queries. Do not add internet-wide scanners to this repository.
-- Discovery guides now include fingerprints for remaining software IDs (Rasdaman, Open Data Cube, SciCat, Piveau, LKOD, Islandora/Samvera, and compact tables for other platforms). Pipeline docs cover apidetect, liveness, quality-fix/enrichment scripts, and GitHub Pages deploy. Completed OpenSpec Genspark-wave changes were archived 21 August 2026.
-- Registry counts and indexes refreshed for current source YAML: **18,288** entities, **0** scheduled, **205** software definitions, **217** country/territory folders. Last published exports remain v1.13.0 (**17,718** / **192**) until `python scripts/builder.py build`. Updated README, getting-started, exports, DATASHEET, AGENTS.md, software taxonomy, catalog types, scheduled, query examples, architecture, when-to-use, releasing, and `llms.txt`.
-- README catalog example uses `software.{id,name}` and geographic `level` 20; CONTRIBUTING requires Python 3.9–3.12 and canonical owner types.
-- JSON Schema `location.level` description: higher numbers are more local (20 national, 30+ subnational).
-- `llms.txt` indexes the full published docs set.
+- Refreshed metadata on **270** existing catalogs (179, then 91 more for IPUMS/OpenAIRE/Yoda/DHIS2 retags and the Symbiota / RADAR / DSpace wave).
+- Drupal software definition now matches WordPress: `has_api: Yes` and `custom_api: Yes`. Quality-fixer `infer_endpoints` helpers probe `apidetect` URL maps over HTTP and write only endpoints that respond.
+- Documented platforms that must not get guessed API paths (`NO_STANDARD_PROBE`).
+- Regenerated dataset exports: **18,420** catalog records (entities); 211 software definitions; 0 scheduled.
+- Quality regression baseline refreshed after the catalog additions (`dataquality/baseline_counts.json`).
 
 ### Removed
 - **7 catalog entries** removed (placeholder or private Unknown/World geoportals: numeric hosts, `geomapmaker.online`, `geonode.hydrotechsolutions.biz`, `kmkgis.com`, `maps.dsm.city`, and `qwc2.thelabsv.org`).

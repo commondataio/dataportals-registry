@@ -1,11 +1,151 @@
 DATA QUALITY REPORT - COUNTRY: RU
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: RU
-Total Records with Issues: 15
-Total Issues Found: 15
+Total Records with Issues: 28
+Total Issues Found: 39
 
 === ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 4
+Priority: IMPORTANT
+
+File: RU/RU-SA/geo/942312552.yaml
+Record ID: 942312552
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-SA', 'name': 'Saha, Respublika'}}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/Federal/geo/9123819084.yaml
+Record ID: 9123819084
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/Federal/geo/maprgoru.yaml
+Record ID: maprgoru
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
+Record ID: dkbiznextgiscom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'subregion': {'id': 'RU-KDA', 'name': 'Krasnodarskij kraj'}}
+Suggested Action: Add macroregion information to coverage location
+
+[DUPLICATE_COVERAGE]
+Count: 1
+Priority: LOW
+
+File: RU/RU-MOW/opendata/77rosstatgovru.yaml
+Record ID: 77rosstatgovru
+Issue: DUPLICATE_COVERAGE
+Field: coverage[1]
+Current Value: {'location': {'country': {'id': 'RU', 'name': 'Russian Federation'}, 'level': 30, 'macroregion': {'id': '151', 'name': 'Eastern Europe'}, 'subregion': {'id': 'RU-MOS', 'name': "Moskovskaja oblast'"}}}
+Suggested Action: Remove duplicate coverage entry
+
+[MISSING_CONTACT_INFO]
+Count: 1
+Priority: LOW
+
+File: RU/RU-TA/geo/kazanspmgeofsmru.yaml
+Record ID: kazanspmgeofsmru
+Issue: MISSING_CONTACT_INFO
+Field: owner.link
+Current Value: None
+Suggested Action: Add a contact or support URL for the organization or portal, so users know how to request access or ask questions.
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: RU/RU-TA/geo/kazanspmgeofsmru.yaml
+Record ID: kazanspmgeofsmru
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 4
+Priority: LOW
+
+File: RU/RU-SA/geo/942312552.yaml
+Record ID: 942312552
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/Federal/geo/9123819084.yaml
+Record ID: 9123819084
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/Federal/geo/maprgoru.yaml
+Record ID: maprgoru
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
+Record ID: dkbiznextgiscom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 4
+Priority: LOW
+
+File: RU/RU-SA/geo/942312552.yaml
+Record ID: 942312552
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/Federal/geo/9123819084.yaml
+Record ID: 9123819084
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/Federal/geo/maprgoru.yaml
+Record ID: maprgoru
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
+Record ID: dkbiznextgiscom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[OWNER_LOCATION_SUBREGION_REQUIRED]
+Count: 1
+Priority: IMPORTANT
+
+File: RU/RU-MOW/opendata/77rosstatgovru.yaml
+Record ID: 77rosstatgovru
+Issue: OWNER_LOCATION_SUBREGION_REQUIRED
+Field: owner.location.subregion
+Current Value: {'file_admin_dir': 'RU-MOW', 'owner_subregion_id': None, 'file_path': 'RU/RU-MOW/opendata/77rosstatgovru.yaml'}
+Suggested Action: Record is in subregion directory 'RU-MOW' but owner.location.subregion is missing or mismatched (current: None). Add owner.location.subregion with id='RU-MOW' and name, or move the file to Federal.
 
 [PLACEHOLDER_TITLE]
 Count: 1
@@ -19,11 +159,74 @@ Current Value: ГИДРОБАЛАНС.GIS
 Suggested Action: Use a human-readable portal title instead of a URL/domain string.
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS]
-Count: 1
+Count: 10
 Priority: MEDIUM
+
+File: RU/RU-MOW/geo/caomzhigeofsmru.yaml
+Record ID: caomzhigeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-MOW/geo/saogeofsmru.yaml
+Record ID: saogeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-MOW/geo/amvdnhru.yaml
+Record ID: amvdnhru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-MOW/geo/uvaoactivemapru.yaml
+Record ID: uvaoactivemapru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-MOW/geo/caogeofsmru.yaml
+Record ID: caogeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-TA/geo/kpfugeofsmru.yaml
+Record ID: kpfugeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-TA/geo/kazanspmgeofsmru.yaml
+Record ID: kazanspmgeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
 
 File: RU/RU-TA/geo/mapkznru.yaml
 Record ID: mapkznru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-BEL/geo/belgorodgeofsmru.yaml
+Record ID: belgorodgeofsmru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
+Field: endpoints
+Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='activemapgis' is marked as API-capable in software definitions
+
+File: RU/RU-BEL/geo/niubelgugeofsmru.yaml
+Record ID: niubelgugeofsmru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS
 Field: endpoints
 Current Value: {'software_id': 'activemapgis', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -72,16 +275,16 @@ Field: endpoints
 Current Value: {'software_id': 'bitrix', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='bitrix' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COGIS]
 Count: 1
 Priority: MEDIUM
 
-File: RU/RU-NVS/geo/mapnovosibirskru.yaml
-Record ID: mapnovosibirskru
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS
+File: RU/Federal/geo/cityclouddataeastcom.yaml
+Record ID: cityclouddataeastcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COGIS
 Field: endpoints
-Current Value: {'software_id': 'elitegis', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='elitegis' is marked as API-capable in software definitions
+Current Value: {'software_id': 'cogis', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='cogis' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 1
@@ -95,11 +298,18 @@ Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count'
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE]
-Count: 1
+Count: 2
 Priority: MEDIUM
 
 File: RU/RU-RYA/geo/geogisroryazangovru.yaml
 Record ID: geogisroryazangovru
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE
+Field: endpoints
+Current Value: {'software_id': 'giswebse', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='giswebse' is marked as API-capable in software definitions
+
+File: RU/Federal/geo/emercomgisserverru.yaml
+Record ID: emercomgisserverru
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE
 Field: endpoints
 Current Value: {'software_id': 'giswebse', 'has_api': 'Yes', 'endpoints_count': 0}
@@ -117,7 +327,7 @@ Current Value: {'software_id': 'lizmap', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='lizmap' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB]
-Count: 2
+Count: 1
 Priority: MEDIUM
 
 File: RU/RU-ORE/geo/geois2orbru.yaml
@@ -127,41 +337,76 @@ Field: endpoints
 Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
 
-File: RU/Federal/geo/ngwfppdcgkipdru.yaml
-Record ID: ngwfppdcgkipdru
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB
-Field: endpoints
-Current Value: {'software_id': 'nextgisweb', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='nextgisweb' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE]
-Count: 2
+[TAG_HYGIENE]
+Count: 1
 Priority: MEDIUM
 
-File: RU/Federal/scientific/pureportalspburu.yaml
-Record ID: pureportalspburu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE
-Field: endpoints
-Current Value: {'software_id': 'pure', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pure' is marked as API-capable in software definitions
-
-File: RU/Federal/scientific/purensuru.yaml
-Record ID: purensuru
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE
-Field: endpoints
-Current Value: {'software_id': 'pure', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='pure' is marked as API-capable in software definitions
+File: RU/Federal/geo/3dgisserverru.yaml
+Record ID: 3dgisserverru
+Issue: TAG_HYGIENE
+Field: tags[4]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
 
 
 === SUMMARY BY ISSUE TYPE ===
 
+COVERAGE_NORMALIZATION: 4 issues
+DUPLICATE_COVERAGE: 1 issue
+MISSING_CONTACT_INFO: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 4 issues
+MISSING_TOPICS: 4 issues
+OWNER_LOCATION_SUBREGION_REQUIRED: 1 issue
 PLACEHOLDER_TITLE: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: 10 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARCGISSERVER: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_BITRIX: 4 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ELITEGIS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_COGIS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GISWEBSE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PURE: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NEXTGISWEB: 1 issue
+TAG_HYGIENE: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: 942312552
+File: RU/RU-SA/geo/942312552.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: 9123819084
+File: RU/Federal/geo/9123819084.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: maprgoru
+File: RU/Federal/geo/maprgoru.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: kazanspmgeofsmru
+File: RU/RU-TA/geo/kazanspmgeofsmru.yaml
+Issue Count: 3
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ACTIVEMAPGIS: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - MISSING_CONTACT_INFO: owner.link
+
+Record ID: dkbiznextgiscom
+File: RU/RU-KDA/geo/dkbiznextgiscom.yaml
+Issue Count: 3
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

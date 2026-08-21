@@ -1,19 +1,29 @@
 DATA QUALITY REPORT - RULE: STATUS_API_STATUS_MISMATCH
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Issue Type: STATUS_API_STATUS_MISMATCH
 Priority: MEDIUM
-Total Issues Found: 1
+Total Issues Found: 2
 
 === SUMMARY BY COUNTRY ===
 
 FR: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+mbgnaumichopendataarcgiscom: 1 issue
 dataenedisfr: 1 issue
 
 === ISSUES ===
+
+File: US/US-MI/geo/mbgnaumichopendataarcgiscom.yaml
+Record ID: mbgnaumichopendataarcgiscom
+Country: US
+Issue: STATUS_API_STATUS_MISMATCH
+Field: api_status
+Current Value: {"status": "inactive", "api_status": "active"}
+Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
 
 File: FR/Federal/opendata/dataenedisfr.yaml
 Record ID: dataenedisfr

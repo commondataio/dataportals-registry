@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: ZM
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: ZM
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 2
 
 === ISSUES BY TYPE ===
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: ZM/Federal/indicators/dhis2mohgovzm.yaml
+Record ID: dhis2mohgovzm
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY]
 Count: 1
@@ -21,4 +32,5 @@ Suggested Action: Add at least one endpoint because software.id='datalibrary' is
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue

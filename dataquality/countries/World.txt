@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: World
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: World
-Total Records with Issues: 25
-Total Issues Found: 26
+Total Records with Issues: 37
+Total Issues Found: 47
 
 === ISSUES BY TYPE ===
 
@@ -25,12 +25,94 @@ Field: api_status
 Current Value: api=True, api_status=inactive, endpoints=1
 Suggested Action: Update api_status to 'active' since endpoints are present
 
+[COVERAGE_NORMALIZATION]
+Count: 5
+Priority: IMPORTANT
+
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/US-MN/microdata/wwwidhsdataorg.yaml
+Record ID: wwwidhsdataorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/US-MN/microdata/pmaipumsorg.yaml
+Record ID: pmaipumsorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/US-MN/microdata/micsipumsorg.yaml
+Record ID: micsipumsorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
+Suggested Action: Add macroregion information to coverage location
+
+File: US/US-MN/geo/ihgisipumsorg.yaml
+Record ID: ihgisipumsorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'World', 'name': 'World'}, 'level': 10}
+Suggested Action: Add macroregion information to coverage location
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: IMPORTANT
+
+File: US/Federal/opendata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://international.ipums.org', 'record_ids': ['internationalipumsorg', 'internationalipumsorg'], 'preferred_keeper': 'internationalipumsorg', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['internationalipumsorg', 'internationalipumsorg']. Keep this entry and merge/delete the others.
+
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://international.ipums.org', 'record_ids': ['internationalipumsorg', 'internationalipumsorg'], 'preferred_keeper': 'internationalipumsorg', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'internationalipumsorg' (https://international.ipums.org). Merge or delete the other duplicate(s).
+
+[DUPLICATE_RECORD_ID]
+Count: 2
+Priority: CRITICAL
+
+File: US/Federal/opendata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: DUPLICATE_RECORD_ID
+Field: id
+Current Value: {'record_id': 'internationalipumsorg', 'file_paths': ['US/Federal/opendata/internationalipumsorg.yaml', 'US/US-MN/microdata/internationalipumsorg.yaml']}
+Suggested Action: Catalog id 'internationalipumsorg' appears in multiple files (US/Federal/opendata/internationalipumsorg.yaml, US/US-MN/microdata/internationalipumsorg.yaml). Keep one file and remove or rename the other.
+
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: DUPLICATE_RECORD_ID
+Field: id
+Current Value: {'record_id': 'internationalipumsorg', 'file_paths': ['US/Federal/opendata/internationalipumsorg.yaml', 'US/US-MN/microdata/internationalipumsorg.yaml']}
+Suggested Action: Catalog id 'internationalipumsorg' appears in multiple files (US/Federal/opendata/internationalipumsorg.yaml, US/US-MN/microdata/internationalipumsorg.yaml). Keep one file and remove or rename the other.
+
 [MISSING_ENDPOINTS]
-Count: 1
+Count: 2
 Priority: IMPORTANT
 
 File: World/indicators/comtradeplusunorg.yaml
 Record ID: comtradeplusunorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: DE/Federal/search/registrydataladorg.yaml
+Record ID: registrydataladorg
 Issue: MISSING_ENDPOINTS
 Field: endpoints
 Current Value: []
@@ -101,6 +183,17 @@ Field: endpoints
 Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD]
+Count: 1
+Priority: MEDIUM
+
+File: DE/Federal/scientific/datasetsdataladorg.yaml
+Record ID: datasetsdataladorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD
+Field: endpoints
+Current Value: {'software_id': 'datalad', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='datalad' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG]
 Count: 1
 Priority: MEDIUM
@@ -111,6 +204,45 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG
 Field: endpoints
 Current Value: {'software_id': 'datauniceforg', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='datauniceforg' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL]
+Count: 5
+Priority: MEDIUM
+
+File: World/opendata/datagffportalorg.yaml
+Record ID: datagffportalorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/opendata/dtmiomint.yaml
+Record ID: dtmiomint
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/opendata/dataunodcunorg.yaml
+Record ID: dataunodcunorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/opendata/ecologicaldataorg.yaml
+Record ID: ecologicaldataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
+
+File: World/opendata/dataunescaporg.yaml
+Record ID: dataunescaporg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL
+Field: endpoints
+Current Value: {'software_id': 'drupal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='drupal' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 2
@@ -129,6 +261,45 @@ Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK
 Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS]
+Count: 5
+Priority: MEDIUM
+
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Record ID: internationalipumsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
+Field: endpoints
+Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
+
+File: US/US-MN/microdata/wwwidhsdataorg.yaml
+Record ID: wwwidhsdataorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
+Field: endpoints
+Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
+
+File: US/US-MN/microdata/pmaipumsorg.yaml
+Record ID: pmaipumsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
+Field: endpoints
+Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
+
+File: US/US-MN/microdata/micsipumsorg.yaml
+Record ID: micsipumsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
+Field: endpoints
+Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
+
+File: US/US-MN/geo/ihgisipumsorg.yaml
+Record ID: ihgisipumsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS
+Field: endpoints
+Current Value: {'software_id': 'ipums', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='ipums' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP]
 Count: 1
@@ -203,17 +374,6 @@ Field: endpoints
 Current Value: {'software_id': 'redatam', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='redatam' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI]
-Count: 1
-Priority: MEDIUM
-
-File: World/indicators/apidataexplorerunescaporg.yaml
-Record ID: apidataexplorerunescaporg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI
-Field: endpoints
-Current Value: {'software_id': 'sdmxri', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='sdmxri' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE]
 Count: 2
 Priority: MEDIUM
@@ -251,8 +411,15 @@ Current Value: {'software_id': 'stattech', 'has_api': 'Yes', 'endpoints_count': 
 Suggested Action: Add at least one endpoint because software.id='stattech' is marked as API-capable in software definitions
 
 [TAG_HYGIENE]
-Count: 1
+Count: 2
 Priority: MEDIUM
+
+File: RU/Federal/geo/3dgisserverru.yaml
+Record ID: 3dgisserverru
+Issue: TAG_HYGIENE
+Field: tags[4]
+Current Value: 3D
+Suggested Action: Tag is too short (less than 3 characters), consider removing or expanding
 
 File: World/geo/3dnextgiscom.yaml
 Record ID: 3dnextgiscom
@@ -265,20 +432,38 @@ Suggested Action: Tag is too short (less than 3 characters), consider removing o
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 2 issues
-MISSING_ENDPOINTS: 1 issue
+COVERAGE_NORMALIZATION: 5 issues
+DUPLICATE_LINK: 2 issues
+DUPLICATE_RECORD_ID: 2 issues
+MISSING_ENDPOINTS: 2 issues
 PLACEHOLDER_TITLE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ARISTOTLEMDR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CARTO: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 3 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALAD: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATAUNICEFORG: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DRUPAL: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS: 5 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_LIZMAP: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MWMB: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_NESSTAR: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENDATASOFT: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OPENGEOPORTAL: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SDMXRI: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATSUITE: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_STATTECH: 2 issues
-TAG_HYGIENE: 1 issue
+TAG_HYGIENE: 2 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: internationalipumsorg
+File: US/US-MN/microdata/internationalipumsorg.yaml
+Issue Count: 6
+Issues:
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IPUMS: endpoints
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+  - DUPLICATE_RECORD_ID: id
+  - DUPLICATE_RECORD_ID: id
+  - DUPLICATE_LINK: link
+  - DUPLICATE_LINK: link

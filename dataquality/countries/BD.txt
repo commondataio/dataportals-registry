@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: BD
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: BD
 Total Records with Issues: 2
 Total Issues Found: 2
 
 === ISSUES BY TYPE ===
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: BD/Federal/indicators/centraldhismohfwgovbd.yaml
+Record ID: centraldhismohfwgovbd
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM]
 Count: 1
@@ -18,19 +29,8 @@ Field: endpoints
 Current Value: {'software_id': 'redatam', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='redatam' is marked as API-capable in software definitions
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER]
-Count: 1
-Priority: MEDIUM
-
-File: BD/geo/servernsdigovbd.yaml
-Record ID: servernsdigovbd
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER
-Field: endpoints
-Current Value: {'software_id': 'supermapiserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='supermapiserver' is marked as API-capable in software definitions
-
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_REDATAM: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SUPERMAPISERVER: 1 issue

@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: TW
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: TW
-Total Records with Issues: 10
-Total Issues Found: 10
+Total Records with Issues: 13
+Total Issues Found: 13
 
 === ISSUES BY TYPE ===
 
@@ -26,11 +26,25 @@ Current Value: api=True, api_status=uncertain, endpoints=2
 Suggested Action: Update api_status to 'active' since endpoints are present
 
 [MISSING_ENDPOINTS]
-Count: 7
+Count: 9
 Priority: IMPORTANT
+
+File: TW/TW-TAO/opendata/datatycggovtw.yaml
+Record ID: datatycggovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 File: TW/TW-CYI/opendata/datachiayigovtw.yaml
 Record ID: datachiayigovtw
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+File: TW/TW-TXG/opendata/opendatataichunggovtw.yaml
+Record ID: opendatataichunggovtw
 Issue: MISSING_ENDPOINTS
 Field: endpoints
 Current Value: []
@@ -78,6 +92,17 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA]
+Count: 1
+Priority: MEDIUM
+
+File: TW/TW-TPE/opendata/datataipei.yaml
+Record ID: datataipei
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA
+Field: endpoints
+Current Value: {'software_id': 'modaopendata', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='modaopendata' is marked as API-capable in software definitions
+
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB]
 Count: 1
 Priority: MEDIUM
@@ -93,5 +118,6 @@ Suggested Action: Add at least one endpoint because software.id='pxweb' is marke
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 2 issues
-MISSING_ENDPOINTS: 7 issues
+MISSING_ENDPOINTS: 9 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MODAOPENDATA: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_PXWEB: 1 issue

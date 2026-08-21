@@ -1,0 +1,73 @@
+DATA QUALITY REPORT - COUNTRY: IS
+================================================================================
+Generated: 2026-08-21 20:45:45
+Country Code: IS
+Total Records with Issues: 2
+Total Issues Found: 5
+
+=== ISSUES BY TYPE ===
+
+[DUPLICATE_LINK]
+Count: 2
+Priority: IMPORTANT
+
+File: IS/IS-8/geo/gishafogvatnis.yaml
+Record ID: gishafogvatnis
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis.hafogvatn.is/geoserver', 'record_ids': ['gishafogvatnis', 'gishafogvatnis'], 'preferred_keeper': 'gishafogvatnis', 'is_preferred_keeper': False}
+Suggested Action: Preferred keeper is 'gishafogvatnis' (https://gis.hafogvatn.is/geoserver). Merge or delete the other duplicate(s).
+
+File: IS/Federal/geo/gishafogvatnis.yaml
+Record ID: gishafogvatnis
+Issue: DUPLICATE_LINK
+Field: link
+Current Value: {'link': 'https://gis.hafogvatn.is/geoserver', 'record_ids': ['gishafogvatnis', 'gishafogvatnis'], 'preferred_keeper': 'gishafogvatnis', 'is_preferred_keeper': True}
+Suggested Action: This record is the preferred keeper for link duplicates among ['gishafogvatnis', 'gishafogvatnis']. Keep this entry and merge/delete the others.
+
+[DUPLICATE_RECORD_ID]
+Count: 2
+Priority: CRITICAL
+
+File: IS/IS-8/geo/gishafogvatnis.yaml
+Record ID: gishafogvatnis
+Issue: DUPLICATE_RECORD_ID
+Field: id
+Current Value: {'record_id': 'gishafogvatnis', 'file_paths': ['IS/Federal/geo/gishafogvatnis.yaml', 'IS/IS-8/geo/gishafogvatnis.yaml']}
+Suggested Action: Catalog id 'gishafogvatnis' appears in multiple files (IS/Federal/geo/gishafogvatnis.yaml, IS/IS-8/geo/gishafogvatnis.yaml). Keep one file and remove or rename the other.
+
+File: IS/Federal/geo/gishafogvatnis.yaml
+Record ID: gishafogvatnis
+Issue: DUPLICATE_RECORD_ID
+Field: id
+Current Value: {'record_id': 'gishafogvatnis', 'file_paths': ['IS/Federal/geo/gishafogvatnis.yaml', 'IS/IS-8/geo/gishafogvatnis.yaml']}
+Suggested Action: Catalog id 'gishafogvatnis' appears in multiple files (IS/Federal/geo/gishafogvatnis.yaml, IS/IS-8/geo/gishafogvatnis.yaml). Keep one file and remove or rename the other.
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI]
+Count: 1
+Priority: MEDIUM
+
+File: IS/Federal/geo/kortagluggiis.yaml
+Record ID: kortagluggiis
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI
+Field: endpoints
+Current Value: {'software_id': 'oskari', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='oskari' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+DUPLICATE_LINK: 2 issues
+DUPLICATE_RECORD_ID: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OSKARI: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: gishafogvatnis
+File: IS/IS-8/geo/gishafogvatnis.yaml
+Issue Count: 4
+Issues:
+  - DUPLICATE_RECORD_ID: id
+  - DUPLICATE_RECORD_ID: id
+  - DUPLICATE_LINK: link
+  - DUPLICATE_LINK: link

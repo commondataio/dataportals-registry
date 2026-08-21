@@ -1,0 +1,71 @@
+DATA QUALITY REPORT - COUNTRY: MV
+================================================================================
+Generated: 2026-08-21 20:45:45
+Country Code: MV
+Total Records with Issues: 6
+Total Issues Found: 7
+
+=== ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 6
+Priority: IMPORTANT
+
+File: MV/Federal/indicators/statisticsmaldivesgovmv.yaml
+Record ID: statisticsmaldivesgovmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/indicators/databasemmagovmv.yaml
+Record ID: databasemmagovmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/opendata/cdpuragovmv.yaml
+Record ID: cdpuragovmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/geo/onemapmv.yaml
+Record ID: onemapmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/geo/gishdcmv.yaml
+Record ID: gishdcmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: MV/Federal/scientific/wwwcoraldatabasegovmv.yaml
+Record ID: wwwcoraldatabasegovmv
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'MV', 'name': 'Maldives'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: MV/Federal/indicators/databasemmagovmv.yaml
+Record ID: databasemmagovmv
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+COVERAGE_NORMALIZATION: 6 issues
+MISSING_ENDPOINTS: 1 issue

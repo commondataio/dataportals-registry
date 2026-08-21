@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: LV
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: LV
-Total Records with Issues: 1
-Total Issues Found: 1
+Total Records with Issues: 2
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
 
@@ -18,7 +18,26 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
+[SUBREGION_INVALID_ISO3166_2]
+Count: 2
+Priority: IMPORTANT
+
+File: LV/LV-081/geo/sigulda2tergislv.yaml
+Record ID: sigulda2tergislv
+Issue: SUBREGION_INVALID_ISO3166_2
+Field: owner.location.subregion
+Current Value: {'subregion_id': 'LV-081'}
+Suggested Action: Subregion code 'LV-081' is not a valid ISO3166-2 code. Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). Reference: data/reference/subregions/ISO3166-2.CSV
+
+File: LV/LV-081/geo/sigulda2tergislv.yaml
+Record ID: sigulda2tergislv
+Issue: SUBREGION_INVALID_ISO3166_2
+Field: coverage[0].location.subregion
+Current Value: {'subregion_id': 'LV-081'}
+Suggested Action: Subregion code 'LV-081' is not a valid ISO3166-2 code. Use a code from the ISO 3166-2 subdivision standard (e.g. US-CA, GB-SCT). Reference: data/reference/subregions/ISO3166-2.CSV
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 MISSING_ENDPOINTS: 1 issue
+SUBREGION_INVALID_ISO3166_2: 2 issues

@@ -1,14 +1,14 @@
 DATA QUALITY REPORT - COUNTRY: CF
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: CF
-Total Records with Issues: 1
-Total Issues Found: 2
+Total Records with Issues: 2
+Total Issues Found: 5
 
 === ISSUES BY TYPE ===
 
 [COUNTRY_NAME_ID_MISMATCH]
-Count: 2
+Count: 4
 Priority: MEDIUM
 
 File: CF/indicators/caropendataforafricaorg.yaml
@@ -25,7 +25,43 @@ Field: coverage[0].location.country.name
 Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
 Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
 
+File: CF/Federal/indicators/snissantegouvcf.yaml
+Record ID: snissantegouvcf
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: owner.location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+File: CF/Federal/indicators/snissantegouvcf.yaml
+Record ID: snissantegouvcf
+Issue: COUNTRY_NAME_ID_MISMATCH
+Field: coverage[0].location.country.name
+Current Value: {'country_id': 'CF', 'name': 'Central African Republic', 'expected': 'Central African Republic (the)'}
+Suggested Action: Country code 'CF' has canonical name 'Central African Republic (the)'. Update name from 'Central African Republic' to 'Central African Republic (the)' for consistency.
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: CF/Federal/indicators/snissantegouvcf.yaml
+Record ID: snissantegouvcf
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
+
 
 === SUMMARY BY ISSUE TYPE ===
 
-COUNTRY_NAME_ID_MISMATCH: 2 issues
+COUNTRY_NAME_ID_MISMATCH: 4 issues
+MISSING_ENDPOINTS: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: snissantegouvcf
+File: CF/Federal/indicators/snissantegouvcf.yaml
+Issue Count: 3
+Issues:
+  - MISSING_ENDPOINTS: endpoints
+  - COUNTRY_NAME_ID_MISMATCH: owner.location.country.name
+  - COUNTRY_NAME_ID_MISMATCH: coverage[0].location.country.name

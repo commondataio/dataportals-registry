@@ -86,7 +86,7 @@ Exports are regenerated with `python scripts/builder.py build`. There is no per-
 - Geographic bias: see DATASHEET.md
 - Many records lack `description`, `endpoints`, or `topics`
 - Scheduled entries (when present) are unverified; as of 21 August 2026 the queue is empty (`0` files in `data/scheduled/`)
-- DuckDB/Parquet exports lag source YAML until the next `build` (v1.13.0 exports: 17,718 catalogs / 192 software)
+- DuckDB/Parquet exports match source YAML as of v1.14.0 (18,420 catalogs / 211 software)
 - `software` may be `custom` / `unknown` when the platform is undetected
 
 ## Related

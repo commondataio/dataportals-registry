@@ -1,22 +1,34 @@
 DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
 Priority: MEDIUM
-Total Issues Found: 2
+Total Issues Found: 4
 
 Rule: Identifies records using software.id='islandora' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
 
 === SUMMARY BY COUNTRY ===
 
 HR: 2 issues
+NL: 1 issue
+US: 1 issue
 
 === SUMMARY BY RECORD ===
 
+diginolelibfsuedu: 1 issue
 dabarsrcehr: 1 issue
 datafulirirbhr: 1 issue
+archivempinl: 1 issue
 
 === ISSUES ===
+
+File: US/US-FL/scientific/diginolelibfsuedu.yaml
+Record ID: diginolelibfsuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {"software_id": "islandora", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions
 
 File: HR/Federal/scientific/dabarsrcehr.yaml
 Record ID: dabarsrcehr
@@ -29,6 +41,14 @@ Suggested Action: Add at least one endpoint because software.id='islandora' is m
 File: HR/Federal/scientific/datafulirirbhr.yaml
 Record ID: datafulirirbhr
 Country: HR
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
+Field: endpoints
+Current Value: {"software_id": "islandora", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='islandora' is marked as API-capable in software definitions
+
+File: NL/Federal/scientific/archivempinl.yaml
+Record ID: archivempinl
+Country: NL
 Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ISLANDORA
 Field: endpoints
 Current Value: {"software_id": "islandora", "has_api": "Yes", "endpoints_count": 0}

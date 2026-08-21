@@ -1,9 +1,9 @@
 DATA QUALITY REPORT - COUNTRY: GR
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: GR
-Total Records with Issues: 3
-Total Issues Found: 3
+Total Records with Issues: 6
+Total Issues Found: 6
 
 === ISSUES BY TYPE ===
 
@@ -18,17 +18,6 @@ Field: api
 Current Value: api=False, endpoints=1
 Suggested Action: Set api=True since endpoints are present, or remove endpoints
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
-Count: 1
-Priority: MEDIUM
-
-File: GR/GR-A/opendata/datakavalagovgr.yaml
-Record ID: datakavalagovgr
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
-Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
-
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK]
 Count: 1
 Priority: MEDIUM
@@ -40,9 +29,41 @@ Field: endpoints
 Current Value: {'software_id': 'geonetwork', 'has_api': 'Yes', 'endpoints_count': 0}
 Suggested Action: Add at least one endpoint because software.id='geonetwork' is marked as API-capable in software definitions
 
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL]
+Count: 4
+Priority: MEDIUM
+
+File: GR/GR-I/geo/gisdpapxolgovgr.yaml
+Record ID: gisdpapxolgovgr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL
+Field: endpoints
+Current Value: {'software_id': 'getsdiportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='getsdiportal' is marked as API-capable in software definitions
+
+File: GR/GR-F/geo/gisopendatacorfugr.yaml
+Record ID: gisopendatacorfugr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL
+Field: endpoints
+Current Value: {'software_id': 'getsdiportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='getsdiportal' is marked as API-capable in software definitions
+
+File: GR/GR-M/geo/gisherakliongr.yaml
+Record ID: gisherakliongr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL
+Field: endpoints
+Current Value: {'software_id': 'getsdiportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='getsdiportal' is marked as API-capable in software definitions
+
+File: GR/GR-M/geo/gischaniagr.yaml
+Record ID: gischaniagr
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL
+Field: endpoints
+Current Value: {'software_id': 'getsdiportal', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='getsdiportal' is marked as API-capable in software definitions
+
 
 === SUMMARY BY ISSUE TYPE ===
 
 API_STATUS_MISMATCH: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GEONETWORK: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GETSDIPORTAL: 4 issues

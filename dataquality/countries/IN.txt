@@ -1,11 +1,29 @@
 DATA QUALITY REPORT - COUNTRY: IN
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: IN
-Total Records with Issues: 39
-Total Issues Found: 39
+Total Records with Issues: 40
+Total Issues Found: 50
 
 === ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 2
+Priority: IMPORTANT
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IN', 'name': 'India'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'IN', 'name': 'India'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
 
 [MISSING_ENDPOINTS]
 Count: 1
@@ -18,16 +36,95 @@ Field: endpoints
 Current Value: []
 Suggested Action: Add API endpoints based on software type and portal structure
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
-Count: 1
+[MISSING_LANGS]
+Count: 2
 Priority: MEDIUM
 
-File: IN/IN-WB/opendata/awsisakvotestorg.yaml
-Record ID: awsisakvotestorg
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 2
+Priority: LOW
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 2
+Priority: LOW
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 2
+Priority: LOW
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 2
+Priority: MEDIUM
+
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Record ID: wwwmaptellcom
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
 Field: endpoints
-Current Value: {'software_id': 'ckan', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ckan' is marked as API-capable in software definitions
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Record ID: vanagniportalfsiforestfiregovin
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OGDINDIA]
 Count: 37
@@ -295,6 +392,35 @@ Suggested Action: Add at least one endpoint because software.id='ogdindia' is ma
 
 === SUMMARY BY ISSUE TYPE ===
 
+COVERAGE_NORMALIZATION: 2 issues
 MISSING_ENDPOINTS: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
+MISSING_LANGS: 2 issues
+MISSING_OWNER_LINK: 2 issues
+MISSING_TAGS: 2 issues
+MISSING_TOPICS: 2 issues
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 2 issues
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_OGDINDIA: 37 issues
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: wwwmaptellcom
+File: IN/Federal/geo/wwwmaptellcom.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion
+
+Record ID: vanagniportalfsiforestfiregovin
+File: IN/Federal/geo/vanagniportalfsiforestfiregovin.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

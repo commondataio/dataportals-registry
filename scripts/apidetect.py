@@ -1647,6 +1647,52 @@ OPUS_URLMAP = [
 ]
 
 
+RADAR_URLMAP = [
+    {
+        "id": "oaipmh20",
+        "url": "/oai/OAIHandler?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "radar:datasets",
+        "url": "/radar/api/datasets",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "sitemap",
+        "url": "/radar/sitemap",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+
+DHIS2_URLMAP = [
+    {
+        "id": "dhis2:system-info",
+        "url": "/api/system/info",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "dhis2:dataSets",
+        "url": "/api/dataSets.json?fields=id,displayName&pageSize=1",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+
 MYCORE_URLMAP = [
     {
         "id": "mycore:objects",
@@ -2159,6 +2205,8 @@ CATALOGS_URLMAP = {
     "aleph": ALEPH_URLMAP,
     "mycore": MYCORE_URLMAP,
     "opus": OPUS_URLMAP,
+    "radar": RADAR_URLMAP,
+    "dhis2": DHIS2_URLMAP,
     "magda": MAGDA_URLMAP,
     "opendatasoft": OPENDATASOFT_URLMAP,
     "arcgishub": ARCGISHUB_URLMAP,

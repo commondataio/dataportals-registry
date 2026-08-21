@@ -1,0 +1,97 @@
+DATA QUALITY REPORT - COUNTRY: HU
+================================================================================
+Generated: 2026-08-21 20:45:45
+Country Code: HU
+Total Records with Issues: 1
+Total Issues Found: 6
+
+=== ISSUES BY TYPE ===
+
+[COVERAGE_NORMALIZATION]
+Count: 1
+Priority: IMPORTANT
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: COVERAGE_NORMALIZATION
+Field: coverage[0].location.macroregion
+Current Value: {'country': {'id': 'HU', 'name': 'Hungary'}, 'level': 20}
+Suggested Action: Add macroregion information to coverage location
+
+[MISSING_LANGS]
+Count: 1
+Priority: MEDIUM
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: MISSING_LANGS
+Field: langs
+Current Value: []
+Suggested Action: Add language codes based on portal content and location
+
+[MISSING_OWNER_LINK]
+Count: 1
+Priority: LOW
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: MISSING_OWNER_LINK
+Field: owner.link
+Current Value: None
+Suggested Action: Add owner organization website URL
+
+[MISSING_TAGS]
+Count: 1
+Priority: LOW
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: MISSING_TAGS
+Field: tags
+Current Value: []
+Suggested Action: Extract tags from description and catalog_type
+
+[MISSING_TOPICS]
+Count: 1
+Priority: LOW
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: MISSING_TOPICS
+Field: topics
+Current Value: []
+Suggested Action: Add relevant topics based on catalog_type and description
+
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
+Count: 1
+Priority: MEDIUM
+
+File: HU/Federal/geo/openbiomapsorg.yaml
+Record ID: openbiomapsorg
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
+Field: endpoints
+Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
+
+
+=== SUMMARY BY ISSUE TYPE ===
+
+COVERAGE_NORMALIZATION: 1 issue
+MISSING_LANGS: 1 issue
+MISSING_OWNER_LINK: 1 issue
+MISSING_TAGS: 1 issue
+MISSING_TOPICS: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
+
+=== RECORDS WITH MULTIPLE ISSUES (3+) ===
+
+Record ID: openbiomapsorg
+File: HU/Federal/geo/openbiomapsorg.yaml
+Issue Count: 6
+Issues:
+  - MISSING_TOPICS: topics
+  - MISSING_TAGS: tags
+  - MISSING_LANGS: langs
+  - SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: endpoints
+  - MISSING_OWNER_LINK: owner.link
+  - COVERAGE_NORMALIZATION: coverage[0].location.macroregion

@@ -1,11 +1,22 @@
 DATA QUALITY REPORT - COUNTRY: KE
 ================================================================================
-Generated: 2026-08-19 14:33:57
+Generated: 2026-08-21 20:45:45
 Country Code: KE
-Total Records with Issues: 2
-Total Issues Found: 2
+Total Records with Issues: 3
+Total Issues Found: 3
 
 === ISSUES BY TYPE ===
+
+[MISSING_ENDPOINTS]
+Count: 1
+Priority: IMPORTANT
+
+File: KE/Federal/indicators/hiskenyaorg.yaml
+Record ID: hiskenyaorg
+Issue: MISSING_ENDPOINTS
+Field: endpoints
+Current Value: []
+Suggested Action: Add API endpoints based on software type and portal structure
 
 [SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN]
 Count: 1
@@ -32,5 +43,6 @@ Suggested Action: Add at least one endpoint because software.id='datalibrary' is
 
 === SUMMARY BY ISSUE TYPE ===
 
+MISSING_ENDPOINTS: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_CKAN: 1 issue
 SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DATALIBRARY: 1 issue

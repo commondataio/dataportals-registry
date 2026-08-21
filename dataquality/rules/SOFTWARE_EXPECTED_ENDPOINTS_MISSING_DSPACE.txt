@@ -1,0 +1,44 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+================================================================================
+Generated: 2026-08-21 20:45:45
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Priority: MEDIUM
+Total Issues Found: 3
+
+Rule: Identifies records using software.id='dspace' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+US: 3 issues
+
+=== SUMMARY BY RECORD ===
+
+libraryndsuedu: 1 issue
+scholarspacemanoahawaiiedu: 1 issue
+smartechgatechedu: 1 issue
+
+=== ISSUES ===
+
+File: US/US-ND/scientific/libraryndsuedu.yaml
+Record ID: libraryndsuedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {"software_id": "dspace", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
+
+File: US/US-HI/scientific/scholarspacemanoahawaiiedu.yaml
+Record ID: scholarspacemanoahawaiiedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {"software_id": "dspace", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
+
+File: US/US-GA/scientific/smartechgatechedu.yaml
+Record ID: smartechgatechedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_DSPACE
+Field: endpoints
+Current Value: {"software_id": "dspace", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='dspace' is marked as API-capable in software definitions
