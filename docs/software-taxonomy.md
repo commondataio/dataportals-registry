@@ -77,7 +77,7 @@ Quality checks flag catalogs whose software implies endpoints that are missing (
 
 Do not create a new software id for a single catalog unless several independent installations exist or are expected.
 
-When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), or [discovery-other.md](discovery-other.md).
+When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), or [discovery-other.md](discovery-other.md). Add a harvest recipe (keep vs drop, list URL, grain) on the matching [harvest](harvest.md) page in the same change. Do not document a `software.id` in harvest/discovery as if it were live until the YAML exists in `data/software/` and `software_ids.yaml`.
 
 ## Querying software usage
 

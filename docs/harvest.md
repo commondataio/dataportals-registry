@@ -54,10 +54,12 @@ WHERE catalog_type = 'Scientific data repository'
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
     'weko3', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
-    'ipt', 'symbiota', 'thredds', 'erddap', 'radar'
+    'ipt', 'thredds', 'erddap'
   )
 LIMIT 50;
 ```
+
+Filter `software.id` only with values that exist in `data/software/` (published catalog: **205** definitions). Recipes for RADAR, Yoda, DHIS2, IPUMS, OpenAIRE, and Symbiota still apply by **hostname** — those records are often `software.id: custom` in current exports. Do not write an unpublished id onto catalog YAML.
 
 For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are JSON **strings** in DuckDB ([ai-consumers.md](ai-consumers.md)).
 

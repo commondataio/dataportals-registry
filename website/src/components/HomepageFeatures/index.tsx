@@ -86,7 +86,7 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-scientific',
         label: 'Scientific repositories',
-        description: 'Dataverse, DSpace, Digital Commons, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT.',
+        description: 'Dataverse, DSpace, Invenio, IPT, THREDDS, ERDDAP.',
       },
       {
         to: '/docs/discovery-metadata',
@@ -96,12 +96,12 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-indicators',
         label: 'Indicators and microdata',
-        description: 'PxWeb, OpenSDG, Knoema, SDMX-RI, GENESIS-Online, NADA, REDATAM, Mica.',
+        description: 'PxWeb, OpenSDG, Knoema, SDMX-RI, NADA, REDATAM, Mica.',
       },
       {
         to: '/docs/discovery-other',
         label: 'Search, ML, API, marketplaces',
-        description: 'Aggregators, ML dataset catalogs, API directories, and data markets.',
+        description: 'Idra, OpenAIRE gateways, OpenML, API directories, data markets.',
       },
     ],
   },

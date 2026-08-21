@@ -11,7 +11,9 @@ Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)).
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
 | Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `librecat`, `vufind` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `radar`, `scicat`, `dataone`, `thredds`, `erddap`, `opendap`, `ipt`, `symbiota`, `ala`, `seek`, `icat`, `instdb`, `yoda` | Little or none — still skip files, occurrences, vault collab folders, and login-only rows |
+| Dataset-native | `dataverse`, `scicat`, `dataone`, `thredds`, `erddap`, `opendap`, `ipt`, `ala`, `seek`, `icat`, `instdb` | Little or none — still skip files, occurrences, and login-only rows |
+
+RADAR, Yoda, and Symbiota recipes are below; those ids are **not** in the published software catalog — match hosts as `custom`.
 
 ## OAI-PMH fallback (any IR)
 
@@ -268,7 +270,7 @@ Each row in `info/index.json` is a dataset (`datasetID`). Drop the `allDatasets`
 
 ## Symbiota (`symbiota`)
 
-Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
+Not a published `software.id` yet. Match Symbiota hosts in exports as `custom` (or by `link`). Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
 
 ```text
 GET https://host/collections/index.php
@@ -365,6 +367,8 @@ Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, 
 
 ## RADAR (`radar`)
 
+Not a published `software.id` yet. Match RADAR hosts in exports as `custom` (or by `link`).
+
 ```text
 GET https://host/radar/api/datasets
 GET https://host/oai/OAIHandler?verb=Identify
@@ -373,6 +377,8 @@ GET https://host/oai/OAIHandler?verb=Identify
 Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar-radar).
 
 ## Yoda (`yoda`)
+
+Not a published `software.id` yet. Match Yoda hosts in exports as `custom` (or by `link`).
 
 Utrecht / SURF research-data vault on iRODS. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
 
@@ -402,7 +408,7 @@ Little publication noise. Still skip non-dataset objects.
 |----------|------|-------|
 | Dataverse | see above | `type=dataset` only |
 | SciCat (`scicat`) | `/api/v3/datasets` or `/api/v3/Datasets` | Facility datasets; may require token for full metadata — stop on `401` |
-| Yoda (`yoda`) | Public landing / DataCite | Published datasets only; skip the authenticated vault |
+| Yoda (often `custom`) | Public landing / DataCite | Published datasets only; skip the authenticated vault |
 
 Omeka S and CONTENTdm: see sections above.
 

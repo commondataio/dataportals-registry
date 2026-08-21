@@ -20,7 +20,7 @@ Do not write dataset YAML into this repository. Do not invent `uid` for datasets
 
 1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) if you have not already.
 2. Resolve catalogs from **exports** (`datasets.duckdb` / `full.parquet`). Use `endpoints[]` when present.
-3. Confirm `software.id`. If `custom`, do not guess a CKAN/DSpace filter — inspect the live API once or stop.
+3. Confirm `software.id`. If `custom`, do not guess a CKAN/DSpace filter — inspect the live API once or stop. Apply a platform recipe by **hostname** when the catalog is still `custom` (IPUMS, OpenAIRE EXPLORE, RADAR, Yoda, DHIS2, Symbiota). Do not filter exports on a `software.id` that is missing from `data/software/`.
 
 ```sql
 SELECT id, uid, name, link,
@@ -54,17 +54,12 @@ WHERE id = 'examplegov'
 | `ipt` | `/inventory/dataset` or `/rss.do` — Darwin Core archives, not occurrences |
 | `thredds` | `/thredds/catalog.xml` — recurse `catalogRef`; harvest dataset nodes |
 | `erddap` | `/erddap/info/index.json` — `datasetID` rows |
-| `symbiota` | collection list or `/collections/datasets/rsshandler.php` — not occurrences |
 | `ckan` / `dkan` / `datapress` | `package_search` (packages, not resources) |
 | `opendatasoft` | `/api/explore/v2.1/catalog/datasets` |
 | `socrata` | `/api/catalog/v1?only=datasets` |
 | `datafair` | `/data-fair/api/v1/datasets` |
 | `triplydb` | `/_api/facets/datasets` |
-| `radar` / `scicat` | Native datasets API — little extra filtering |
-| `yoda` | Public DataCite-listed datasets — not the login vault |
-| `dhis2` | `/api/dataSets.json` / indicators — not orgUnits |
-| `ipums` | Collection/sample metadata via IPUMS API — not a finished extract |
-| `openaire` | Graph/CONNECT `search/datasets` — not publications |
+| `scicat` | Native datasets API — little extra filtering |
 | `seek` | `/data_files.json` / assays — not SOP-only pages |
 | `geonetwork` | CSW `GetRecords`; keep `hierarchyLevel` dataset/series |
 | `geonode` | `/api/datasets/` (v4) or `/api/layers/` (v3) — not maps |
@@ -92,6 +87,17 @@ WHERE id = 'examplegov'
 | `idra` | Federation search only if asked; prefer source catalogs |
 | `aleph` | `/api/2/collections` — collections, not every document |
 | `gvsigonline` | Published project layers or GeoServer GetCapabilities |
+
+**By hostname** (often still `custom` in exports — do not filter DuckDB on these ids until they exist in `data/software/`):
+
+| Product | Dataset filter |
+|---------|----------------|
+| RADAR (`/radar/api/datasets`) | Dataset JSON / OAI — [harvest-scientific.md](../harvest-scientific.md#radar-radar) |
+| Yoda public landing | Published vault DOIs — not `/research/` |
+| DHIS2 | `/api/dataSets.json` / indicators — not orgUnits |
+| IPUMS (`*.ipums.org`) | Collection/sample metadata — not a finished extract |
+| OpenAIRE EXPLORE/CONNECT | Graph `search/datasets` — not publications |
+| Symbiota | `/collections/datasets/rsshandler.php` — not occurrences |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.
 

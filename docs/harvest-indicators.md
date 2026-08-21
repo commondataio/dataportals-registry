@@ -67,6 +67,8 @@ Indicator pages and IBIS-Q query modules. Harvest public **indicator** home reco
 
 ## DHIS2 (`dhis2`)
 
+Not a published `software.id` yet. Match DHIS2 hosts in exports as `custom` (or by `link`).
+
 National HMIS / public health indicator portals.
 
 ```text
@@ -88,6 +90,8 @@ GET https://host/index.php/api/catalog/search
 Page the JSON study list. Keep survey / microdata / geospatial studies. **Drop** `dtype` values that are document, video, or news when present. CSV export (`/index.php/catalog/export/csv`) is a bulk study list — still one row per study, not per file.
 
 ## IPUMS (`ipums`)
+
+Not a published `software.id` yet. Match IPUMS collection homes in exports as `custom` (or by `link`).
 
 One harvest scope per **collection** (USA, International, CPS, …). Use the IPUMS API metadata endpoints ([developer.ipums.org](https://developer.ipums.org)) with the collection name. Keep samples / datasets in that collection. **Drop** completed extract files, variable codebooks as separate catalogs, and the IPUMS marketing homepage. Do not download person-level microdata.
 

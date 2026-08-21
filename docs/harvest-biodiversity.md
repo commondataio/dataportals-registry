@@ -26,6 +26,8 @@ Each inventory/RSS item is one dataset. Prefer the IPT root on the catalog `link
 
 ## Symbiota (`symbiota`)
 
+Not a published `software.id` yet. Match Symbiota hosts in exports as `custom` (or by `link`).
+
 ```text
 GET https://host/collections/index.php
 GET https://host/collections/datasets/rsshandler.php

@@ -13,11 +13,21 @@ Aggregators search **other** catalogs (Idra, national dataset search, harvested 
 If the user explicitly wants the federation view:
 
 - **Idra** (`idra`): `/Idra/api/v1/` dataset search. Keep federated **datasets**. Record the source catalog URL when Idra provides it.
-- **OpenAIRE** (`openaire`): Graph/CONNECT **datasets** only — [harvest-opendata.md](harvest-opendata.md#openaire-openaire). Prefer source IRs.
+- **OpenAIRE** — [below](#openaire-openaire). Prefer source IRs.
 - **Aleph** (`aleph`): see [below](#aleph-aleph).
 - **custom** search engines: use their documented search API; store `source` identifiers.
 
 Do not add harvested member catalogs as new registry YAML (that is [discovery.md](discovery.md)).
+
+## OpenAIRE (`openaire`)
+
+EXPLORE / CONNECT gateways over the OpenAIRE Graph. Not a published `software.id` yet — OpenAIRE catalogs in current exports are often `custom`. Harvest by hostname.
+
+```text
+GET https://api.openaire.eu/search/datasets
+```
+
+Keep Graph **datasets** (research products typed as dataset). Drop publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids. Stop on `401`.
 
 ## Aleph (`aleph`)
 
@@ -31,6 +41,8 @@ Keep **collections** that are dataset corpora. Drop entity/document search hits 
 
 ## Machine learning catalogs
 
+OpenML, Galaxy, and similar hubs list **datasets** (or data libraries), not tasks, runs, or user spaces.
+
 ## OpenML (`openmlorg`)
 
 ```text
@@ -39,7 +51,9 @@ GET https://www.openml.org/api/v1/json/data/list/limit/100/offset/0
 
 Keep **datasets** (`data`). Drop tasks, flows, runs, and setups. Do not harvest every OpenML task as a dataset. Skip cloning openml.org if you only needed the existing registry record — harvest **contents** when the user asked.
 
-**Galaxy** (`galaxy`): public **data libraries** are the dataset catalog. Histories and workflow runs are not. Prefer [harvest-scientific.md](harvest-scientific.md) unless `catalog_type` is Machine learning catalog.
+## Galaxy (`galaxy`)
+
+Public **data libraries** are the dataset catalog. Histories and workflow runs are not. Prefer [harvest-scientific.md](harvest-scientific.md) unless `catalog_type` is Machine learning catalog.
 
 Hugging Face, Kaggle, and Papers with Code are usually **one** registered hub. Harvest their public dataset APIs if asked; do not add per-user spaces as catalogs.
 

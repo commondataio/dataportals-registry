@@ -41,15 +41,7 @@ DKAN: same CKAN-style actions when enabled; also `/api/1/search`. Confirm JSON `
 
 DataPress (`datapress`) is CKAN plus CMS — harvest `package_search`, not CMS pages. Do not also harvest the same host as `ckan`.
 
-## OpenAIRE (`openaire`)
-
-EXPLORE / CONNECT gateways over the OpenAIRE Graph.
-
-```text
-GET https://api.openaire.eu/search/datasets
-```
-
-Keep Graph **datasets** (research products typed as dataset). Drop publications, software, and org units. For a **CONNECT** community portal, use that gateway’s search/API with the community filter — do not dump the whole European graph. Prefer harvesting **source** IRs from this registry when you need publisher-level ids ([harvest-other.md](harvest-other.md)). Stop on `401`.
+OpenAIRE Graph/CONNECT gateways are **data search engines**, not open-data CMSs. Recipe: [harvest-other.md](harvest-other.md#openaire-openaire).
 
 ## OpenDataSoft (`opendatasoft`)
 

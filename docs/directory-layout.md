@@ -64,4 +64,4 @@ data/datasets/           # generated exports (do not edit)
 | `data/software/**/*.yaml` | |
 | `data/reference/**` | |
 
-New catalog files: [discovery.md](discovery.md) then [agents/contribute.md](agents/contribute.md). Levels, identifiers, endpoints: [vocabularies.md](vocabularies.md). Promote scheduled: [scheduled.md](scheduled.md).
+New catalog files: [discovery.md](discovery.md) then [agents/contribute.md](agents/contribute.md). Dataset crawl recipes (not YAML in this repo): [harvest.md](harvest.md). Levels, identifiers, endpoints: [vocabularies.md](vocabularies.md). Promote scheduled: [scheduled.md](scheduled.md).

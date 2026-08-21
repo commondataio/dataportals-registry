@@ -47,7 +47,7 @@ You MAY run documented Google / Censys / Shodan / FOFA queries when the user ask
 
 ## Software probes
 
-Set `software.id` only when a probe or page signal matches. Otherwise `custom`. Definitions: `data/software/` and [software-taxonomy.md](../software-taxonomy.md).
+Set `software.id` only when a probe or page signal matches **and** that id exists in `data/software/` (see `software_ids.yaml`). Otherwise `custom`. Fingerprints below for RADAR, Yoda, DHIS2, IPUMS, OpenAIRE, and Symbiota are for **finding hosts**; those ids are not in the published software catalog — write `custom` until the YAML definitions ship. Definitions: `data/software/` and [software-taxonomy.md](../software-taxonomy.md).
 
 | If you see | `software.id` (typical) | `catalog_type` (typical) |
 |------------|-------------------------|--------------------------|
@@ -103,12 +103,12 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
 | OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
-| `/oai/OAIHandler` + `/radar/api/datasets` (RADAR) | `radar` | Scientific data repository |
-| Public Yoda / DataCite landing (`yoda.`) | `yoda` | Scientific data repository |
-| `/api/system/info` DHIS2 | `dhis2` | Indicators catalog |
-| IPUMS collection home (`*.ipums.org`) | `ipums` | Microdata catalog (or Geoportal for NHGIS/IHGIS) |
-| OpenAIRE EXPLORE or CONNECT gateway | `openaire` | Data search engine |
-| `/collections/datasets/rsshandler.php` or “Powered by Symbiota” | `symbiota` | Scientific data repository |
+| `/oai/OAIHandler` + `/radar/api/datasets` (RADAR) | `custom` | Scientific data repository |
+| Public Yoda / DataCite landing (`yoda.`) | `custom` | Scientific data repository |
+| `/api/system/info` DHIS2 | `custom` | Indicators catalog |
+| IPUMS collection home (`*.ipums.org`) | `custom` | Microdata catalog (or Geoportal for NHGIS/IHGIS) |
+| OpenAIRE EXPLORE or CONNECT gateway | `custom` | Data search engine |
+| `/collections/datasets/rsshandler.php` or “Powered by Symbiota” | `custom` | Scientific data repository |
 | CONTENTdm `/digital/api/collections` (dataset collections only) | `contentdm` | Scientific data repository or Indicators catalog |
 | Omeka S `/api/items` JSON-LD (dataset catalogs, not exhibit-only) | `omekas` | Scientific data repository or Open data portal |
 | Fedora `/fcrepo/rest` as the public catalog (else use Hyrax/Islandora/PHAIDRA) | `fedora` | Scientific data repository |

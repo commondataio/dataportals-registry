@@ -105,9 +105,11 @@ US state public-health indicator system. Community: [Adopt IBIS](https://ibis.ut
 
 Open-source health management information system (HISP / University of Oslo). More than 70 ministries run national HMIS instances. Docs: [docs.dhis2.org](https://docs.dhis2.org). Public FlexiPortal front-ends also count when they publish indicators from a DHIS2 backend.
 
+`software.id: dhis2` is **not** in the published software catalog. Register finds as `custom` until that definition ships. Do not label a CKAN health document site DHIS2 from a tag alone.
+
 **Signals:** `/dhis-web-commons/`, `/dhis-web-dashboard/`, login chrome “DHIS 2”; REST `/api/system/info`.
 
-**Confirm:** `GET https://host/api/system/info` JSON with a `version` field, or a public portal that is documented as DHIS2. Skip staff-only logins with no public indicator catalog. Do not label a CKAN health document site `dhis2` from a tag alone.
+**Confirm:** `GET https://host/api/system/info` JSON with a `version` field, or a public portal that is documented as DHIS2. Skip staff-only logins with no public indicator catalog.
 
 | Tool | Query |
 |------|-------|
@@ -158,6 +160,8 @@ IHSN National Data Archive for survey microdata. Site: [nada.ihsn.org](https://n
 ## IPUMS (`ipums`)
 
 University of Minnesota extract platform for harmonized census and survey microdata. Collections share one API and extract engine: IPUMS USA, International, CPS, DHS, NHIS, Higher Ed, PMA, MICS, Time Use, plus geographic NHGIS and IHGIS. Developer docs: [developer.ipums.org](https://developer.ipums.org).
+
+`software.id: ipums` is **not** in the published software catalog. Register collection homes as `custom` until that definition ships.
 
 **Signals:** `*.ipums.org` or `idhsdata.org` / `nhgis.org`; extract-system UI; “IPUMS” branding.
 

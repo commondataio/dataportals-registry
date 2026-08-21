@@ -48,7 +48,7 @@ Use `--no-scheduled` to write under `data/entities/`. After adding files, run `a
 | `add-arcgishub-catalog FILENAME` | Prepared ArcGIS Hub JSONL (writes entities; `--force` to overwrite) |
 | `add-legacy` | Maintainer: ingest `UNPROCESSED` `.txt` lists |
 
-Finding catalogs: [discovery.md](discovery.md), [agents/discover.md](agents/discover.md). CKAN bulk import: [ckan-sync.md](ckan-sync.md). Promote scheduled: [scheduled.md](scheduled.md).
+Finding catalogs: [discovery.md](discovery.md), [agents/discover.md](agents/discover.md). Listing datasets inside a catalog: [harvest.md](harvest.md). CKAN bulk import: [ckan-sync.md](ckan-sync.md). Promote scheduled: [scheduled.md](scheduled.md).
 
 ## Enrichment and monitoring
 

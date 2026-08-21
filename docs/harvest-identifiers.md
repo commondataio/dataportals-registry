@@ -25,7 +25,7 @@ Order when several exist:
 3. ARK / PURL documented by the catalog
 4. Software-native id (CKAN `id` UUID, Invenio record id, ERDDAP `datasetID`, STAC collection id, CSW `fileIdentifier`, IPT dataset UUID, PxWeb table path)
 
-Use the **package/dataset** id, not a file/resource/distribution id.
+Use the **package/dataset** id, not a file/resource/distribution id. Rows for IPUMS, DHIS2, OpenAIRE, Yoda, and RADAR apply by hostname — those catalogs may still be `custom` in current exports.
 
 ## Native ids by platform (typical)
 

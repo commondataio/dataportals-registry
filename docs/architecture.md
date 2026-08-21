@@ -64,6 +64,7 @@ Out-of-scope: production query APIs and MCP servers ([dateno-api](https://github
 
 - [directory-layout.md](directory-layout.md)
 - [discovery.md](discovery.md)
+- [harvest.md](harvest.md) (dataset crawl recipes; production harvest is [reaper](https://github.com/datenoio/reaper))
 - [exports.md](exports.md)
 - [cli.md](cli.md)
 - [metadata-quality.md](metadata-quality.md)

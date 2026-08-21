@@ -93,6 +93,8 @@ Prefer GBIF’s official installation list, then fill gaps with search.
 
 Open-source biodiversity collections CMS. Official portal directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/). Docs: [docs.symbiota.org](https://docs.symbiota.org/).
 
+`software.id: symbiota` is **not** in the published software catalog. Register finds as `custom` until that definition ships.
+
 Theme-based portals (SEINet, MyCoPortal, CCH2, Ecdysis, and others) publish specimen occurrences, images, checklists, and Darwin Core datasets. Register **one catalog per portal**, not per collection or GBIF IPT mirror.
 
 **Confirm:** public collection search (`/collections/index.php` or `/portal/collections/`) and/or dataset RSS at `/collections/datasets/rsshandler.php`. Page signals include “Symbiota”, `collid=`, and “Search Collections”. Skip login-only portals and the vendor homepage.
@@ -164,6 +166,8 @@ Skip intranet-only thesis portals (Hochschulnetz / account required). Register t
 
 FIZ Karlsruhe research data repositories (RADAR Cloud and RADAR Local). Official instance notes: [About RADAR](https://radar.products.fiz-karlsruhe.de/en/radarabout/ueber-radar). re3data lists them under software **RADAR**.
 
+`software.id: radar` is **not** in the published software catalog. Register finds as `custom` until that definition ships.
+
 **Confirm:** `{base}/radar/en/home` or `{base}/radar/de/home` titled RADAR / the local brand, `{base}/oai/OAIHandler?verb=Identify`, and `{base}/radar/api/datasets` JSON with `totalHits` > 0. Prefer instances that already publish datasets.
 
 Register distinct **Local** hosts (KonDATA, WueData, Datathek, FoDaSi, OstData, RADAR-BB). Do **not** add `radar.kit.edu` or NFDI branded subdomains (`radar4chem.radar-service.eu`, `radar4culture.radar-service.eu`, `radar4memory.radar-service.eu`) — those share the already-registered Cloud catalog at `www.radar-service.eu`.
@@ -180,6 +184,8 @@ Skip the FIZ product/marketing site (`radar.products.fiz-karlsruhe.de`) and data
 ## Yoda (`yoda`)
 
 Dutch research-data management platform (Utrecht University / Yoda Consortium, often hosted by SURF) on iRODS. Docs: [utrechtuniversity.github.io/yoda](https://utrechtuniversity.github.io/yoda/). Public catalogs are institutional **publication landings** (DataCite-indexed datasets), not the authenticated vault.
+
+`software.id: yoda` is **not** in the published software catalog. Register finds as `custom` until that definition ships.
 
 **Confirm:** a public dataset landing or portal titled Yoda / Your Data for that institution. Hostnames often `public.yoda.*`, `portal.yoda.*`, or `*-landing.irods.surfsara.nl`. Skip login-only workspaces and SURF marketing pages.
 
