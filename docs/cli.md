@@ -20,7 +20,7 @@ Python **3.9–3.12**. Test layout: [tests/README.md](https://github.com/datenoi
 | `python scripts/builder.py validate-yaml --file path/to/file.yaml` | Validate one file |
 | `python scripts/builder.py validate` | Validate built `full.jsonl` against the same schema |
 | `python scripts/builder.py validate-software` | Software YAML coverage/profile checks |
-| `python scripts/builder.py assign` | Assign missing `cdi########` UIDs in entities |
+| `python scripts/builder.py assign` | Assign missing `cdi########` UIDs in entities (`--dryrun` to preview) |
 | `python scripts/builder.py assign --mode scheduled` | Assign `temp########` UIDs in scheduled |
 | `python scripts/builder.py analyze-quality` | Write `dataquality/` reports |
 | `python scripts/builder.py quality-control` | Terminal completeness metrics (`--mode full` or `catalogs`) |
@@ -29,8 +29,7 @@ Python **3.9–3.12**. Test layout: [tests/README.md](https://github.com/datenoi
 ## Adding catalogs
 
 ```bash
-python scripts/builder.py add-single \
-  --url "https://example.com/data" \
+python scripts/builder.py add-single "https://example.com/data" \
   --software ckan \
   --catalog-type "Open data portal" \
   --name "Example Data Portal" \

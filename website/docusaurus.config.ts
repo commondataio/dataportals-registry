@@ -98,6 +98,14 @@ const config: Config = {
               to: '/docs/discovery',
             },
             {
+              label: 'Search tools',
+              to: '/docs/discovery-search-tools',
+            },
+            {
+              label: 'Agents and LLM clients',
+              to: '/docs/discovery-agent-tools',
+            },
+            {
               label: 'AI consumers',
               to: '/docs/ai-consumers',
             },

@@ -65,7 +65,7 @@ If you find a bug, error, or have a suggestion:
 
 ### Adding New Catalog Entries
 
-The most common contribution is adding new data catalog entries. See [docs/discovery.md](docs/discovery.md) for how to find catalogs that are not yet in the registry, then the [Adding New Catalog Entries](#adding-new-catalog-entries) section below for how to write the YAML.
+The most common contribution is adding new data catalog entries. See [docs/discovery.md](docs/discovery.md) for how to find catalogs that are not yet in the registry (search engines: [docs/discovery-search-tools.md](docs/discovery-search-tools.md); agent/LLM setup: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md); per-platform guides under `docs/discovery-*.md`), then the [Adding New Catalog Entries](#adding-new-catalog-entries) section below for how to write the YAML.
 
 ### Improving Existing Entries
 
@@ -94,15 +94,14 @@ Contributions to the codebase are welcome:
 
 ## Adding New Catalog Entries
 
-Check [docs/discovery.md](docs/discovery.md) first so you do not add a duplicate `link`. Coding agents should use [docs/agents/discover.md](docs/agents/discover.md), then [docs/agents/contribute.md](docs/agents/contribute.md).
+Check [docs/discovery.md](docs/discovery.md) first so you do not add a duplicate `link`. Search-engine recipes: [docs/discovery-search-tools.md](docs/discovery-search-tools.md). Wiring those tools into Cursor, ChatGPT, and other agents: [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md). Coding agents should use [docs/agents/discover.md](docs/agents/discover.md), then [docs/agents/contribute.md](docs/agents/contribute.md).
 
 ### Method 1: Using the Script (Recommended for Quick Additions)
 
 The easiest way to add a new catalog entry is using the `add_single` command:
 
 ```bash
-python scripts/builder.py add-single \
-  --url "https://example.com/data" \
+python scripts/builder.py add-single "https://example.com/data" \
   --software "ckan" \
   --catalog-type "Open data portal" \
   --name "Example Data Portal" \
@@ -111,7 +110,7 @@ python scripts/builder.py add-single \
 ```
 
 **Parameters:**
-- `--url` (required): The URL of the data catalog
+- `URL` (required, positional): The URL of the data catalog
 - `--software`: Software/platform ID (e.g., "ckan", "dkan", "arcgishub")
 - `--catalog-type`: Type of catalog (see catalog types below)
 - `--name`: Display name of the catalog

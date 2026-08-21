@@ -34,11 +34,6 @@ const sections: DocSection[] = [
         description: 'Source YAML, validation, enrichment, and exports.',
       },
       {
-        to: '/docs/discovery',
-        label: 'Discover catalogs',
-        description: 'Find portals not yet in the registry, then add them.',
-      },
-      {
         to: '/docs/directory-layout',
         label: 'Directory layout',
         description: 'Country, type, and filename conventions.',
@@ -57,6 +52,46 @@ const sections: DocSection[] = [
         to: '/docs/releasing',
         label: 'Releases',
         description: 'Tag, changelog, and GitHub release checklist.',
+      },
+    ],
+  },
+  {
+    title: 'Discovery',
+    items: [
+      {
+        to: '/docs/discovery',
+        label: 'Discover catalogs',
+        description: 'Find portals not yet in the registry, then add them.',
+      },
+      {
+        to: '/docs/discovery-search-tools',
+        label: 'Search engines',
+        description: 'Google, Censys, Shodan, FOFA, URLScan, and crt.sh recipes.',
+      },
+      {
+        to: '/docs/discovery-agent-tools',
+        label: 'Agents and LLM clients',
+        description: 'Configure Cursor, ChatGPT, Claude, MCP, and search APIs.',
+      },
+      {
+        to: '/docs/discovery-opendata',
+        label: 'Open data portals',
+        description: 'CKAN, OpenDataSoft, Socrata, uData, Magda, and related CMS.',
+      },
+      {
+        to: '/docs/discovery-geoportals',
+        label: 'Geoportals',
+        description: 'GeoNetwork, GeoNode, GeoServer, ArcGIS, STAC, and SDI software.',
+      },
+      {
+        to: '/docs/discovery-scientific',
+        label: 'Scientific repositories',
+        description: 'Dataverse, DSpace, Invenio, EPrints, IPT, THREDDS, ERDDAP.',
+      },
+      {
+        to: '/docs/discovery-indicators',
+        label: 'Indicators and microdata',
+        description: 'PxWeb, OpenSDG, NADA, NESSTAR, REDATAM, and related catalogs.',
       },
     ],
   },

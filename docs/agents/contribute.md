@@ -22,8 +22,7 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
 - Prefer CLI:
 
   ```bash
-  python scripts/builder.py add-single \
-    --url "https://example.com/data" \
+  python scripts/builder.py add-single "https://example.com/data" \
     --software ckan \
     --catalog-type "Open data portal" \
     --name "Example Data Portal" \
@@ -32,7 +31,7 @@ Platform-neutral workflow for adding or editing catalog YAML. Full human guide: 
   ```
 
 - Filename / `id`: lowercase letters and digits only
-- Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, `coverage`
+- Required fields: `id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, plus `coverage` (enforced by the `MISSING_COVERAGE` quality rule rather than the schema)
 - **Do not** invent `uid`. Run `python scripts/builder.py assign`
 - `owner.type` from `data/reference/owner_types.yaml`
 - `software.id` from `data/software/` (or `custom`)

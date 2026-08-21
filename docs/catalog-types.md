@@ -31,4 +31,4 @@ Controlled list: `data/reference/catalog_types.yaml` and `data/schemes/catalog.j
 
 If a site is both a geoportal and an open data portal, pick the **primary** user-facing product (map/CSW → geo; dataset catalog → opendata).
 
-Finding catalogs that are not in the registry yet: [discovery.md](discovery.md).
+Finding catalogs that are not in the registry yet: [discovery.md](discovery.md). Platform-specific search queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-indicators.md](discovery-indicators.md).

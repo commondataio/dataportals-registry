@@ -1,0 +1,15 @@
+---
+description: Discover catalogs not yet in the registry; configure Google, Censys, Shodan, and LLM clients (Cursor, ChatGPT, Claude).
+alwaysApply: false
+---
+
+# Catalog discovery with search tools and agents
+
+When the user asks to find catalogs that are **not yet in this registry**, or to configure Google / Censys / Shodan / ChatGPT / Cursor for that work:
+
+1. Duplicate-check **exports** (`data/datasets/datasets.duckdb` or `full.parquet`), not `data/entities/**/*.yaml`.
+2. Follow [docs/agents/discover.md](docs/agents/discover.md).
+3. Use query recipes in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the platform guides (`docs/discovery-opendata.md`, `discovery-geoportals.md`, `discovery-scientific.md`, `discovery-indicators.md`).
+4. Client setup (Cursor MCP, ChatGPT Custom GPT, Censys OAuth, API keys): [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md).
+5. Scope to a country, city, TLD, or `software.id`. Do not write scanners. Stop on `401`/`403`.
+6. Add verified finds with `python scripts/builder.py add-single URL --scheduled`, then `assign` and `validate-yaml --id {id}`.

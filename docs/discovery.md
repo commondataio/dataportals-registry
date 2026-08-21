@@ -11,6 +11,17 @@ This page is for the second job: locating real catalog installations in the wild
 
 The registry records **catalogs** (portals, geoportals, repositories, and similar infrastructure). It does not store the datasets inside those catalogs.
 
+## Guides
+
+| Guide | Use when |
+|-------|----------|
+| [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
+| [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
+| [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub |
+| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, and related SDI software |
+| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, Pure |
+| [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, NADA, NESSTAR, REDATAM, Colectica |
+
 ## Before you search
 
 1. Confirm the candidate is a catalog: it lists or serves datasets, maps, indicators, or metadata — not a news site, a single spreadsheet, or a login-only intranet.
@@ -35,7 +46,7 @@ Also search `data/scheduled/` if that directory is not empty. Do not walk every 
 - Local government: city/region sites, `opendata.` subdomains, ArcGIS Hub sites
 - Research: institutional repositories, Dataverse, DSpace, GBIF IPT, re3data-listed repos
 
-Search with the local language (`datos abiertos`, `données ouvertes`, `offene daten`, `dados abertos`, `开放数据`) plus the country or city name. Restrict with `site:.gov`, `site:.gob.*`, or the national government TLD.
+Search with the local language (`datos abiertos`, `données ouvertes`, `offene daten`, `dados abertos`, `开放数据`) plus the country or city name. Restrict with `site:.gov`, `site:.gob.*`, or the national government TLD. Operators, Censys/Shodan queries, and other indexes: [discovery-search-tools.md](discovery-search-tools.md). Per-platform queries: the guides above.
 
 ## Existing lists (start here)
 
@@ -77,6 +88,9 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Sampaş WebGIS | `/KentrehberiApp/Index` | Page title contains `SAMPAŞ WEBGIS` |
 | GiSoftGis | `/GiSoftGis/#/cityguidepublic` | Angular SPA; `gi-ajax-loading-indicator`; meta “Kent Rehberi Uygulaması” |
 | BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
+| VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at/{TENANT}/` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
+| disy Cadenza | `/cadenza/`, `/public/`, `/pages/map/`, `/fachauswertungweb/` | `cadenza`/`disy` in HTML; Cadenza Web or Workbooks UI; guest login plus theme/workbook navigator |
+| GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/`, `/portalsigcba/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
 | ArcGIS Server | `/rest/services`, `/arcgis/rest/services` | `/rest/info?f=pjson` |
 | ArcGIS Hub | `/api/search/v1`, portal sharing REST | `/api/search/v1` |
 | Dataverse | `/api/dataverses`, `/api/info/version` | `/api/info/version` |
@@ -112,6 +126,8 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - Sampaş WebGIS: `/KentrehberiApp/Index` (title `SAMPAŞ WEBGIS`)
 - GiSoftGis: `/GiSoftGis/` (city-guide hash `#/cityguidepublic`)
 - BelsisIMS: `/Projects/{NAME}/Pages/KRH.aspx` on an `ims.` host
+- VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
+- disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 
 **Scientific**
@@ -137,13 +153,13 @@ Drop `--dryrun` only when you intend to write YAML. Prefer `--action insert` so 
 | Tool | Use |
 |------|-----|
 | `python scripts/sync_ckan_ecosystem.py --dry-run` | CKAN sites from ecosystem.ckan.org; then sync without `--dry-run` into `data/scheduled/` |
-| `python scripts/builder.py add-single --url … --scheduled` | Create one YAML from a verified URL |
+| `python scripts/builder.py add-single URL --scheduled` | Create one YAML from a verified URL |
 | `python scripts/apidetect.py detect-single {id}` | Probe known API paths on an existing record |
 | `python scripts/re3data_enrichment.py enrich --dry-run` | Fill `_re3data` when a re3data identifier is present |
 
 CKAN sync details: [ckan-sync.md](ckan-sync.md). Re3Data: [re3data.md](re3data.md).
 
-Do not write internet-wide scanners in this repository. Targeted GETs against candidate hosts, plus vendor/government lists, are enough.
+Do not write internet-wide scanners in this repository. Vendor/government lists, documented search-engine queries, and targeted GETs against candidate hosts are enough. How to query Google, Censys, and similar indexes: [discovery-search-tools.md](discovery-search-tools.md).
 
 ## Verify before adding
 
@@ -163,6 +179,9 @@ Do not write internet-wide scanners in this repository. Targeted GETs against ca
 
 ## Related
 
+- [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA, URLScan, crt.sh
+- [discovery-agent-tools.md](discovery-agent-tools.md) — Cursor, ChatGPT, Claude, MCP, and API setup
+- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-indicators.md](discovery-indicators.md)
 - [agents/discover.md](agents/discover.md) — agent checklist
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find
 - [catalog-types.md](catalog-types.md)

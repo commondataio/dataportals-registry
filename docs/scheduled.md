@@ -29,6 +29,6 @@ After promotion, place regional/local catalogs in a subregion folder (`US-CA/`, 
 3. Filename must match `id`.
 4. Run `assign` then `validate-yaml --id {id}`.
 
-`validate-yaml` checks `data/entities/` only. Rebuild exports after a batch: `python scripts/builder.py build`.
+Without options, `validate-yaml` validates `data/entities/` only; `--id` also searches `data/scheduled/`. Rebuild exports after a batch: `python scripts/builder.py build`.
 
 Duplicates: `python scripts/remove_scheduled_duplicates.py`.

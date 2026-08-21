@@ -1,6 +1,6 @@
 # Agent guide: discovering catalogs
 
-Find catalog installations that are **not yet in this registry**, then hand off to [contribute.md](contribute.md). Human narrative: [discovery.md](../discovery.md).
+Find catalog installations that are **not yet in this registry**, then hand off to [contribute.md](contribute.md). Human narrative: [discovery.md](../discovery.md). Search-engine and per-platform queries: [discovery-search-tools.md](../discovery-search-tools.md).
 
 This is **not** the query workflow. To look up existing records, use [query.md](query.md).
 
@@ -40,10 +40,10 @@ Match on hostname, not display name. `id` is not a URL.
    python scripts/sync_ckan_ecosystem.py --dry-run
    ```
 
-3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs.
+3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [indicators](../discovery-indicators.md)).
 4. **Endpoint probes** on the candidate host only (table below). GET, short timeout, public URLs.
 
-Do not run internet-wide scanners, Shodan/Censys sweeps, or recursive crawls unless the user explicitly asks and the scope is a named set of hosts.
+You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, or TLD. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
 
 ## Software probes
 
@@ -57,10 +57,14 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
 | `/api/layers/` | `geonode` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
+| `/gvsigonline/` titled gvSIG Online (`select_public_project`) | `gvsigonline` | Geoportal |
 | `/keos/` city guide plus `/Netgis7` titled NetGIS Server 7 | `netgisserver` | Geoportal |
 | `/KentrehberiApp/` titled SAMPAŞ WEBGIS | `sampaswebgis` | Geoportal |
 | `/GiSoftGis/` Angular city guide (`gi-ajax-loading-indicator`) | `gisoftgis` | Geoportal |
 | `ims.*/Projects/*/Pages/KRH.aspx` (BelsisIMS KRH) | `belsisims` | Geoportal |
+| `/synserver` titled VertiGIS WebOffice (`weboffice_packed.css`, core/flex client) | `weboffice` | Geoportal |
+| `/cadenza/`, Cadenza Web/Workbooks (`disy`, guest login, workbook navigator) | `cadenza` | Geoportal |
+| Geospatial Portal UI (`Version:`/`Licensed to:`, `Intergraph.WebSolutions`, `$GP.`) e.g. `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `geomediawebmap` | Geoportal |
 | `/rest/info?f=pjson` ArcGIS Server | `arcgisserver` | Geoportal |
 | ArcGIS Hub search API / hub site | `arcgishub` | Geoportal or Open data portal (primary UI) |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
@@ -94,7 +98,7 @@ python scripts/apidetect.py detect-single {id} --dryrun
 
 ## After a valid find
 
-1. `python scripts/builder.py add-single --url … --scheduled` (preferred) or write YAML per [contribute.md](contribute.md).
+1. `python scripts/builder.py add-single URL --scheduled` (preferred) or write YAML per [contribute.md](contribute.md).
 2. `python scripts/builder.py assign`
 3. `python scripts/builder.py validate-yaml --id {id}`
 4. Cite `id` + `link` in the reply. List skipped duplicates with their existing `id`.
@@ -110,6 +114,9 @@ python scripts/apidetect.py detect-single {id} --dryrun
 ## Related
 
 - [discovery.md](../discovery.md)
+- [discovery-search-tools.md](../discovery-search-tools.md)
+- [discovery-agent-tools.md](../discovery-agent-tools.md)
+- [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-indicators.md](../discovery-indicators.md)
 - [contribute.md](contribute.md)
 - [query.md](query.md)
 - [cli.md](../cli.md)

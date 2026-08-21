@@ -83,4 +83,4 @@ ORDER BY n DESC
 LIMIT 20;
 ```
 
-Matching a live site to a `software.id`: [discovery.md](discovery.md).
+Matching a live site to a `software.id`: [discovery.md](discovery.md). Per-platform Google and Censys queries: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-indicators.md](discovery-indicators.md).

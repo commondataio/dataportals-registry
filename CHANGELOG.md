@@ -8,11 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Catalog discovery guides: Google / Censys / Shodan / FOFA search-engine recipes (`docs/discovery-search-tools.md`), per-platform queries, and agent/LLM client setup for Cursor, ChatGPT, Claude, and MCP (`docs/discovery-agent-tools.md`).
 - Published docs for quality issue codes, vocabularies, scheduled promotion, releases, Re3Data enrichment, and CKAN ecosystem sync.
 - CLI reference now covers all `builder.py` commands; software taxonomy lists all 12 subtypes and a new-platform checklist.
 - JSON-LD/DCAT field mapping table and DuckDB column inventory on the exports page.
 
 ### Changed
+- Discovery docs now include search-engine (Google, Censys, Shodan, FOFA) and per-platform guides; scoped catalog hunts may use those queries. Do not add internet-wide scanners to this repository.
 - README catalog example uses `software.{id,name}` and geographic `level` 20; CONTRIBUTING requires Python 3.9–3.12 and canonical owner types.
 - JSON Schema `location.level` description: higher numbers are more local (20 national, 30+ subnational).
 - `llms.txt` indexes the full published docs set.

@@ -15,7 +15,7 @@ Each catalog is one YAML document validated against `data/schemes/catalog.json` 
 | `status` | string | `active`, `inactive`, `scheduled`, or `deprecated` |
 | `software` | object | `{id, name}` — `id` should exist under `data/software/` |
 | `owner` | object | `{name, type, location.country.{id,name}}` |
-| `coverage` | list | At least one `{location.country.{id,name}}` |
+| `coverage` | list | At least one `{location.country.{id,name}}` — enforced by the `MISSING_COVERAGE` quality rule (IMPORTANT), not by the Cerberus schema |
 
 ## Recommended fields
 

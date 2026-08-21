@@ -73,6 +73,8 @@ https://github.com/datenoio/dataportals-registry
 | Pipeline diagram | [architecture.md](architecture.md) |
 | CLI | [cli.md](cli.md) |
 | Find catalogs not yet registered | [discovery.md](discovery.md) |
+| Google, Censys, and other search tools | [discovery-search-tools.md](discovery-search-tools.md) |
+| Configure search tools in Cursor / ChatGPT | [discovery-agent-tools.md](discovery-agent-tools.md) |
 | Field reference | [data-model.md](data-model.md) |
 | Vocabularies (levels, identifiers, endpoints) | [vocabularies.md](vocabularies.md) |
 | Catalog types | [catalog-types.md](catalog-types.md) |

@@ -8,7 +8,7 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 
 | Code | Fix |
 |------|-----|
-| `MISSING_REQUIRED_FIELD` | Add the required schema field (`id`, `uid`, `name`, `link`, `catalog_type`, `access_mode`, `status`, `software`, `owner`, `coverage`) |
+| `MISSING_REQUIRED_FIELD` | Add the core schema field (`id`, `uid`, `name`, `link`, `catalog_type`, `status`, `software`, `owner`). Missing `access_mode` and `coverage` are reported separately as `MISSING_ACCESS_MODE` / `MISSING_COVERAGE`. |
 | `INVALID_URL` | Set `link` to a valid `http`/`https` URL |
 | `INVALID_OWNER_URL` | Fix `owner.link` |
 | `INVALID_ENDPOINT_URL` | Fix `endpoints[].url` |
@@ -89,6 +89,23 @@ Integrity-track CRITICAL and IMPORTANT counts must not grow (`dataquality/baseli
 | `DUPLICATE_COVERAGE` | Remove repeated coverage entries |
 | `MISSING_CONTACT_INFO` | Add contact when the catalog publishes it |
 | `TOPIC_SCHEMA_VIOLATION` | Fix `topics` shape (`type`, `id`, `name`) |
+
+## Software definition issues
+
+`python scripts/builder.py validate-software` emits its own codes for `data/software/` records (they are not part of `analyze-quality` priorities):
+
+| Code | Fix |
+|------|-----|
+| `SOFTWARE_SUBTYPE_MISSING` | Set a `subtype` from the allowed list |
+| `SOFTWARE_SUBTYPE_INVALID` | Use a `subtype` from `data/schemes/software.json` |
+| `SOFTWARE_SUBTYPE_CATEGORY_MISMATCH` | Pick a subtype compatible with `category` |
+| `SOFTWARE_VERSION_FORMAT` | Use a valid `version` string |
+| `SOFTWARE_INVALID_URL` | Fix `website` / `documentation_url` / `repository_url` |
+| `SOFTWARE_INVALID_DATE` / `SOFTWARE_INVALID_DATETIME` | Fix date-formatted fields |
+| `SOFTWARE_INVALID_PLUGINS` / `SOFTWARE_INVALID_PLUGIN_ITEM` / `SOFTWARE_PLUGIN_MISSING_NAME` | Fix the `plugins` list shape |
+| `SOFTWARE_INVALID_CAPABILITIES` / `SOFTWARE_INVALID_CAPABILITY_ITEM` | Fix the `capabilities` list shape |
+| `SOFTWARE_INVALID_EXPORT_FORMATS` / `SOFTWARE_INVALID_EXPORT_FORMAT_ITEM` | Fix the `export_formats` list shape |
+| `SOFTWARE_INVALID_LICENSE` / `SOFTWARE_LICENSE_MISSING_TYPE` | Give `license` a valid `type` |
 
 ## Related
 
