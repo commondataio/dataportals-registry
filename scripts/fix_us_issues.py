@@ -260,30 +260,10 @@ def infer_owner_name(record: dict) -> str | None:
 
 
 def infer_endpoints(record: dict) -> list[dict]:
-    software_id = ((record.get("software", {}) or {}).get("id", "") or "").lower()
-    link = record.get("link", "")
-    base = get_base_url(link)
-    if not base:
-        return []
+    """HTTP-verified harvest endpoints from apidetect URL maps."""
+    from endpoints_infer import infer_endpoints as verified
 
-    endpoints: list[dict] = []
-    if software_id in {"ckan", "dkan"}:
-        endpoints.append(
-            {"type": "ckan:api", "url": f"{base}/api/3/action/package_list", "version": "3.0"}
-        )
-    elif software_id == "arcgisserver":
-        endpoints.append({"type": "arcgis:rest:info", "url": f"{base}/arcgis/rest/info?f=pjson"})
-        endpoints.append({"type": "arcgis:rest:services", "url": f"{base}/arcgis/rest/services?f=pjson"})
-    elif software_id == "dspace":
-        endpoints.append({"type": "dspace:rest", "url": f"{base}/server/api"})
-    elif software_id == "galaxy":
-        endpoints.append({"type": "galaxy:api", "url": f"{base}/api/version"})
-    elif software_id == "geoblacklight":
-        endpoints.append({"type": "geoblacklight:catalog", "url": f"{base}/catalog.json"})
-
-    if not endpoints:
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    return endpoints
+    return verified(record)
 
 
 def fix_missing_content_types(record: dict) -> bool:

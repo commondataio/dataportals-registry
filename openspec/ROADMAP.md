@@ -4,27 +4,17 @@ Source: [dev/docs/genspark_report_20260616.md](../dev/docs/genspark_report_20260
 
 This document maps audit recommendations to OpenSpec change proposals. Implementation follows [openspec/AGENTS.md](AGENTS.md).
 
-**Status (August 2026):** Waves 1–4 are implemented in the tree. Change folders still live under `openspec/changes/` until a maintainer runs `openspec archive <change-id> --yes`. Do not open duplicate proposals for the same capability.
+**Status (21 August 2026):** Completed Genspark-wave changes were archived under `openspec/changes/archive/2026-08-21-*`. Three folders remain active because their task lists are not fully checked.
 
-Deferred on purpose: production HTTP API / MCP (other repositories), per-record license, `_re3data` rename, AI description backfill, embeddings.
+Deferred on purpose: production HTTP API / MCP (other repositories), per-record license, `_re3data` rename, AI description backfill, embeddings, Zenodo DOI.
 
-## Existing OpenSpec Changes (do not duplicate)
+## Remaining active changes
 
-| Change ID | Status | Genspark overlap | Notes |
-|-----------|--------|------------------|-------|
-| `add-schema-allowed-values` | Implemented; archive pending | Enum validation for `catalog_type`, `status`, `access_mode` | Schema `allowed` lists are in `catalog.json`. Tasks 2.1–2.2 are ongoing validation, not a new change. |
-| `update-apidetect-reliability` | Implemented; archive pending | Endpoint detection reliability | Orthogonal to liveness; see [docs/apidetect.md](../docs/apidetect.md) |
-| `add-ckan-ecosystem-sync` | Implemented; archive pending | Catalog discovery automation | See [docs/ckan-sync.md](../docs/ckan-sync.md) |
-| `refactor-quality-reporting-pipeline` | Implemented; archive pending | Quality reporter aggregation | Remaining task is pytest cleanup in unrelated files |
-| `update-subregion-reference-source` | Implemented; archive pending | ISO-3166-2 reference | |
-| `add-normalized-url-quality-checks` | Implemented; archive pending | Duplicate URL detection | |
-| `add-regression-guard-for-quality-counts` | Implemented; archive pending | CI quality baseline | |
-| `add-liveness-monitoring-workflow` | Implemented; archive pending | Weekly HTTP liveness | See [docs/liveness.md](../docs/liveness.md) |
-| `add-agent-facing-data-contract` | Implemented; archive pending | llms.txt, DATASHEET, SECURITY.md | Zenodo DOI still not minted |
-| `add-json-schema-and-linked-data-mapping` | Implemented; archive pending | JSON Schema + JSON-LD | |
-| `add-docusaurus-documentation-site` | Implemented; archive pending | GitHub Pages docs | See [docs/releasing.md](../docs/releasing.md) |
-| `add-owner-type-and-path-consistency-rules` | Implemented; archive pending | Owner type vocabulary | |
-| `recalibrate-endpoint-quality-priorities` | Implemented; archive pending | Endpoint issue priorities | |
+| Change ID | Status | Notes |
+|-----------|--------|-------|
+| `add-schema-allowed-values` | 3/5 tasks | Schema `allowed` lists exist; verification tasks 2.1–2.2 still open |
+| `refactor-quality-reporting-pipeline` | 10/11 tasks | Remaining pytest cleanup in unrelated tests |
+| `add-normalized-url-quality-checks` | 10/12 tasks | Duplicate URL detection; finish leftover tasks before archive |
 
 ## Genspark → OpenSpec Mapping
 
@@ -102,12 +92,12 @@ Every change in this backlog MUST satisfy:
 
 ## Change Index
 
-| Change ID | Capability | Design doc |
-|-----------|------------|------------|
-| [refactor-quality-reporting-pipeline](changes/refactor-quality-reporting-pipeline/proposal.md) | `data-quality-reporting` | No |
-| [update-subregion-reference-source](changes/update-subregion-reference-source/proposal.md) | `subregion-validation` | Yes |
-| [add-normalized-url-quality-checks](changes/add-normalized-url-quality-checks/proposal.md) | `url-quality-checks` | No |
-| [add-regression-guard-for-quality-counts](changes/add-regression-guard-for-quality-counts/proposal.md) | `quality-regression-guard` | No |
-| [add-liveness-monitoring-workflow](changes/add-liveness-monitoring-workflow/proposal.md) | `catalog-liveness` | Yes |
-| [add-agent-facing-data-contract](changes/add-agent-facing-data-contract/proposal.md) | `agent-documentation` | No |
-| [add-json-schema-and-linked-data-mapping](changes/add-json-schema-and-linked-data-mapping/proposal.md) | `catalog-interoperability` | Yes |
+Active (not archived):
+
+| Change ID | Capability |
+|-----------|------------|
+| [refactor-quality-reporting-pipeline](changes/refactor-quality-reporting-pipeline/proposal.md) | `data-quality-reporting` |
+| [add-normalized-url-quality-checks](changes/add-normalized-url-quality-checks/proposal.md) | `url-quality-checks` |
+| [add-schema-allowed-values](changes/add-schema-allowed-values/proposal.md) | schema enums |
+
+Archived 21 August 2026 under `openspec/changes/archive/2026-08-21-*`. Current specs: `openspec/specs/`.

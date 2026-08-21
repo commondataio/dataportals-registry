@@ -178,6 +178,11 @@ const sections: DocSection[] = [
           label: 'URL liveness',
           description: 'Weekly link probes; report-only JSONL artifact.',
         },
+        {
+          to: '/docs/enrichment',
+          label: 'Enrichment and quality fixes',
+          description: 'Quality-fix scripts, infer_endpoints, and legacy enrich CLIs.',
+        },
       ],
     },
     {

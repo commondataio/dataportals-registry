@@ -6,6 +6,7 @@ from io import BytesIO
 import typer
 from typing import Optional
 from typing_extensions import Annotated
+import re
 import requests
 from urllib.parse import urljoin
 import datetime
@@ -1133,6 +1134,10 @@ GEOSERVER_URLMAP = [
     },
 ]
 
+# When the catalog link already includes /geoserver, probe WMS/WFS only.
+# The full map is 34 paths and doubles against the origin, which hangs on dead hosts.
+GEOSERVER_FAST_URLMAP = GEOSERVER_URLMAP[:5]
+
 MAPPROXY_URLMAP = [
     {
         "id": "wms111",
@@ -1623,6 +1628,24 @@ ERDDAP_URLMAP = [
         "prefetch": False,
     },
 ]
+
+OPUS_URLMAP = [
+    {
+        "id": "oaipmh20",
+        "url": "/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "rss",
+        "url": "/rss/index/index/searchtype/latest",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+]
+
 
 MYCORE_URLMAP = [
     {
@@ -2135,6 +2158,7 @@ CATALOGS_URLMAP = {
     "koordinates": KOORDINATES_URLMAP,
     "aleph": ALEPH_URLMAP,
     "mycore": MYCORE_URLMAP,
+    "opus": OPUS_URLMAP,
     "magda": MAGDA_URLMAP,
     "opendatasoft": OPENDATASOFT_URLMAP,
     "arcgishub": ARCGISHUB_URLMAP,
@@ -2178,6 +2202,16 @@ def geoserver_url_cleanup_func(url):
     if len(url) >= 4 and url.endswith("/web"):
         url = url[:-4]
     return url
+
+
+def geoserver_root_url(url):
+    """Return the /geoserver root when present, otherwise the cleaned URL."""
+    url = geoserver_url_cleanup_func(url)
+    lower = url.lower()
+    idx = lower.rfind("/geoserver")
+    if idx == -1:
+        return url
+    return url[: idx + len("/geoserver")]
 
 
 def arcgisserver_url_cleanup_func(url):
@@ -2227,10 +2261,67 @@ def mapbender_url_cleanup_func(url):
     return url
 
 
+def geomapfish_url_cleanup_func(url):
+    url = url.rstrip("/")
+    for marker in ("/theme/", "/wsgi/", "/static-ngeo/"):
+        if marker in url:
+            return url.split(marker, 1)[0].rstrip("/")
+    return url
+
+
+def getsdiportal_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if url.endswith("/geoserver") or "/geoserver/" in url:
+        return geoserver_url_cleanup_func(url)
+    return url
+
+
+def redatam_url_cleanup_func(url):
+    parsed = urlparse(url)
+    if "rpwebengine.exe" in (parsed.path or "").lower():
+        return f"{parsed.scheme}://{parsed.netloc}"
+    return url.rstrip("/")
+
+
+def supermapiserver_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if url.lower().endswith("/iserver"):
+        return url
+    if "/iserver/" in url.lower():
+        idx = url.lower().rfind("/iserver")
+        return url[: idx + len("/iserver")]
+    return url
+
+
+def cogis_url_cleanup_func(url):
+    """Strip CoGIS portal and eLiteGIS REST suffixes down to the site root."""
+    url = url.rstrip("/")
+    lower = url.lower()
+    for marker in ("/elitegis/rest/services", "/portal/catalog", "/cogis"):
+        idx = lower.find(marker)
+        if idx != -1:
+            return url[:idx].rstrip("/")
+    return url
+
+
+def nextgisweb_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if "/resource/" in url:
+        return url.split("/resource/", 1)[0].rstrip("/")
+    return url
+
+
 def nesstar_url_cleanup_func(url):
     url = url.rstrip("/")
     if url.endswith("/webview"):
         return url[: -len("/webview")]
+    return url
+
+
+def opus_url_cleanup_func(url):
+    url = url.rstrip("/")
+    if url.lower().endswith("/home"):
+        return url[: -len("/home")]
     return url
 
 
@@ -2244,7 +2335,54 @@ URL_CLEANUP_MAP = {
     "lizmap": lizmap_url_cleanup_func,
     "mapbender": mapbender_url_cleanup_func,
     "nesstar": nesstar_url_cleanup_func,
+    "opus": opus_url_cleanup_func,
+    "geomapfish": geomapfish_url_cleanup_func,
+    "getsdiportal": getsdiportal_url_cleanup_func,
+    "redatam": redatam_url_cleanup_func,
+    "nextgisweb": nextgisweb_url_cleanup_func,
+    "supermapiserver": supermapiserver_url_cleanup_func,
+    "cogis": cogis_url_cleanup_func,
+    "elitegis": cogis_url_cleanup_func,
 }
+
+
+OPENSDG_REMOTE_DATA_RE = re.compile(
+    r"remoteDataBaseUrl\s*:\s*['\"]([^'\"]+)['\"]"
+)
+
+
+def opensdg_parse_remote_data_base_url(html, site_url):
+    """Return the Open SDG data-repo base from homepage JS, or None."""
+    if not html:
+        return None
+    match = OPENSDG_REMOTE_DATA_RE.search(html)
+    if not match:
+        return None
+    raw = match.group(1).strip()
+    if not raw or raw in {".", "/", "./"}:
+        return None
+    if raw.startswith("http://") or raw.startswith("https://"):
+        return raw.rstrip("/")
+    return urljoin(site_url.rstrip("/") + "/", raw).rstrip("/")
+
+
+def opensdg_remote_data_base_url(site_url, session=None, timeout=DEFAULT_TIMEOUT):
+    """Fetch an Open SDG homepage and read opensdg.remoteDataBaseUrl."""
+    logger = logging.getLogger(__name__)
+    getter = session.get if session is not None else requests.get
+    try:
+        response = getter(
+            site_url,
+            verify=False,
+            headers={"User-Agent": USER_AGENT},
+            timeout=(timeout, timeout),
+        )
+    except (requests.exceptions.Timeout, requests.exceptions.SSLError, ConnectionError, TooManyRedirects):
+        logger.info("Open SDG homepage unavailable for %s", site_url)
+        return None
+    if getattr(response, "status_code", None) != 200:
+        return None
+    return opensdg_parse_remote_data_base_url(response.text, site_url)
 
 
 def api_identifier(
@@ -2255,6 +2393,12 @@ def api_identifier(
     results = []
     found = []
     s = requests.Session()
+    original_url = website_url
+    if software_id in {"scicat", "gin"}:
+        host = urlparse(website_url).netloc.split(":")[0].lower()
+        if host.startswith("doi."):
+            logger.info("Skipping %s DOI landing host %s", software_id, host)
+            return []
     #
     if software_id in URL_CLEANUP_MAP:
         website_url = URL_CLEANUP_MAP[software_id](website_url)
@@ -2263,16 +2407,53 @@ def api_identifier(
     
     # For GeoServer, try multiple base URL variations to handle non-standard paths
     base_urls = [website_url]
+    geoserver_fast = False
     if software_id == "geoserver":
         parsed = urlparse(website_url)
-        # If URL doesn't end with /geoserver, try adding it
-        if not website_url.endswith("/geoserver") and "/geoserver" not in parsed.path:
-            base_urls.append(website_url + "/geoserver")
-        # If URL ends with /geoserver, also try without it
-        if website_url.endswith("/geoserver"):
-            base_urls.append(website_url.removesuffix("/geoserver"))
+        if "/geoserver" in (parsed.path or "").lower():
+            gs_root = geoserver_root_url(website_url)
+            base_urls = [gs_root]
+            geoserver_fast = True
+        else:
+            # If URL doesn't end with /geoserver, try adding it
+            if not website_url.endswith("/geoserver"):
+                base_urls.append(website_url + "/geoserver")
+    if software_id in (
+        "mapstore",
+        "getsdiportal",
+        "giswebse",
+        "gvsigonline",
+        "erdasapollo",
+        "cogis",
+    ):
+        parsed = urlparse(website_url)
+        origin = f"{parsed.scheme}://{parsed.netloc}"
+        if origin.rstrip("/") != website_url.rstrip("/"):
+            base_urls.append(origin)
+    if software_id == "oskari":
+        if "/oskari" not in (urlparse(website_url).path or "").lower():
+            base_urls.append(website_url.rstrip("/") + "/oskari")
+    if software_id == "opensdg":
+        remote = opensdg_remote_data_base_url(
+            original_url, session=s, timeout=timeout
+        )
+        if remote and remote.rstrip("/") not in [item.rstrip("/") for item in base_urls]:
+            base_urls.append(remote)
     
     umap = url_map.copy()
+    if geoserver_fast and not deep:
+        umap = GEOSERVER_FAST_URLMAP.copy()
+    if software_id == "redatam" and "rpwebengine.exe" in original_url.lower():
+        umap = [
+            {
+                "id": "redatam",
+                "url": "",
+                "use_original_url": True,
+                "expected_mime": HTML_MIMETYPES,
+                "is_json": False,
+                "version": None,
+            }
+        ] + umap
     if software_id != "custom" and deep:
         umap.extend(CUSTOM_URLMAP)
     
@@ -2282,7 +2463,14 @@ def api_identifier(
     for base_url in base_urls:
         for item in umap:
             try:
-                request_url = base_url + item["url"]
+                if item.get("absolute_url"):
+                    request_url = item["absolute_url"]
+                else:
+                    request_url = (
+                        original_url
+                        if item.get("use_original_url")
+                        else base_url + item["url"]
+                    )
                 # Skip if we've already tried this URL
                 if request_url in tried_urls:
                     continue
@@ -2411,6 +2599,17 @@ def api_identifier(
             if "urlpat" in item.keys():
                 api["url_pattern"] = item["urlpat"]
             found.append(api)
+    if software_id == "nyudatacatalog":
+        for item in analyze_root(original_url):
+            if item.get("type") != "schemaorg:datacatalog":
+                continue
+            if any(
+                existing.get("type") == item.get("type")
+                and existing.get("url") == item.get("url")
+                for existing in found
+            ):
+                continue
+            found.append(item)
     if deep:
         logger.info("Going deep")
         for func in DEEP_SEARCH_FUNCTIONS:
@@ -2419,6 +2618,30 @@ def api_identifier(
                 found.extend(extracted)
     logger.info("Failures: %s", results)
     return found
+
+
+def infer_endpoints_verified(record, timeout=DEFAULT_TIMEOUT):
+    """Return HTTP-verified harvest endpoints for a catalog record.
+
+    Quality-fix scripts used to construct CKAN/GeoServer/sitemap URLs without a
+    GET check. Only software in CATALOGS_URLMAP is probed. The generic `custom`
+    map (sitemap/data.json) is skipped so quality fixers do not crawl every
+    unclassified catalog. Unknown platforms return an empty list instead of an
+    unverified /sitemap.xml fallback.
+    """
+    software = record.get("software") or {}
+    software_id = (software.get("id") or "").strip()
+    link = (record.get("link") or "").strip()
+    if (
+        not link
+        or software_id not in CATALOGS_URLMAP
+        or software_id == "custom"
+    ):
+        return []
+    try:
+        return api_identifier(link.rstrip("/"), software_id, timeout=timeout)
+    except Exception:
+        return []
 
 
 def __detect_one(
@@ -2493,7 +2716,14 @@ def _load_record(filepath):
 
 def _save_record(filepath, record):
     with open(filepath, "w", encoding="utf8") as f:
-        f.write(yaml.safe_dump(record, allow_unicode=True))
+        yaml.dump(
+            record,
+            f,
+            Dumper=Dumper,
+            allow_unicode=True,
+            default_flow_style=False,
+            sort_keys=False,
+        )
 
 
 def _detect_record(

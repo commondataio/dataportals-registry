@@ -2,7 +2,7 @@
 
 Unverified catalogs live under `data/scheduled/` with `status: scheduled` and `uid` values like `temp########`. They are included in `full.jsonl` / `full.parquet` / DuckDB, not in `catalogs.jsonl`.
 
-As of 21 August 2026 the queue holds **88** records, mostly FAIR Data Point (`fairdatapoint`) metadata catalogs and MapServer (`mapserver`) geoportals, plus Mapbender and NextGIS Web finds. After a release the queue may be empty.
+As of 21 August 2026 the queue is empty (the FAIR Data Point, MapServer, Mapbender, and NextGIS Web batch was promoted to entities). After a discovery pass the queue may hold unverified finds again.
 
 Prefer `--scheduled` when adding finds you have not fully reviewed: [discovery.md](discovery.md), [agents/contribute.md](agents/contribute.md).
 

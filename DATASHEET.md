@@ -20,7 +20,7 @@ Each record describes one data catalog or repository: name, URL, owner, geograph
 
 ### How many instances?
 
-Approximately **18,208** verified entity YAML records (21 August 2026), plus **88** scheduled records pending review. Last published exports (v1.13.0) still list **17,718** catalogs until the next `python scripts/builder.py build`. Export counts are listed in [README.md](README.md#data-exports).
+Approximately **18,288** verified entity YAML records (21 August 2026). The scheduled queue is empty. Last published exports (v1.13.0) still list **17,718** catalogs until the next `python scripts/builder.py build`. Export counts are listed in [README.md](README.md#data-exports).
 
 ### What data does each instance consist of?
 

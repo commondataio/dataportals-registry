@@ -336,3 +336,91 @@ class TestSoftwareSubtypeValidation:
         record["subtype"] = "scientific_repository_platform"
         issues = validate_software_profile(record)
         assert any(i["issue_type"] == "SOFTWARE_SUBTYPE_CATEGORY_MISMATCH" for i in issues)
+
+
+class TestAddSingleEntryForceBehavior:
+    """Force flag semantics: existing files are skipped unless force is set."""
+
+    def _prepare(self, temp_dir, monkeypatch):
+        import builder
+
+        datasets_dir = os.path.join(temp_dir, "datasets")
+        scheduled_dir = os.path.join(temp_dir, "scheduled")
+        entries_dir = os.path.join(temp_dir, "entities")
+        os.makedirs(datasets_dir, exist_ok=True)
+        os.makedirs(scheduled_dir, exist_ok=True)
+        os.makedirs(entries_dir, exist_ok=True)
+
+        with open(os.path.join(datasets_dir, "software.jsonl"), "w", encoding="utf8") as f:
+            f.write('{"id": "ckan", "name": "CKAN"}\n')
+
+        monkeypatch.setattr(builder, "DATASETS_DIR", datasets_dir)
+        monkeypatch.setattr(builder, "SCHEDULED_DIR", scheduled_dir)
+        monkeypatch.setattr(builder, "ROOT_DIR", entries_dir)
+
+        calls = []
+
+        def _fake_detect_single(uniqid, dryrun=False, mode="entries", **kwargs):
+            calls.append((uniqid, dryrun, mode))
+
+        monkeypatch.setitem(
+            sys.modules, "apidetect", types.SimpleNamespace(detect_single=_fake_detect_single)
+        )
+        return builder, os.path.join(scheduled_dir, "US", "opendata", "catalogexampleorg.yaml"), calls
+
+    def test_existing_file_is_skipped_without_force(self, temp_dir, monkeypatch):
+        builder, path, calls = self._prepare(temp_dir, monkeypatch)
+        builder._add_single_entry(
+            url="https://catalog.example.org", software="ckan", country="US", preloaded=[]
+        )
+        assert os.path.exists(path)
+        with open(path, "w", encoding="utf8") as f:
+            f.write("sentinel: true\n")
+
+        builder._add_single_entry(
+            url="https://catalog.example.org", software="ckan", country="US", preloaded=[]
+        )
+
+        with open(path, encoding="utf8") as f:
+            assert f.read() == "sentinel: true\n"
+        assert calls == [("catalogexampleorg", False, "scheduled")]
+
+    def test_existing_file_is_overwritten_with_force(self, temp_dir, monkeypatch):
+        builder, path, calls = self._prepare(temp_dir, monkeypatch)
+        builder._add_single_entry(
+            url="https://catalog.example.org", software="ckan", country="US", preloaded=[]
+        )
+        assert len(calls) == 1
+
+        builder._add_single_entry(
+            url="https://catalog.example.org",
+            software="ckan",
+            country="US",
+            force=True,
+            preloaded=[],
+        )
+
+        with open(path, encoding="utf8") as f:
+            assert "sentinel" not in f.read()
+        assert len(calls) == 2
+
+
+class TestAssignDryrun:
+    """assign_by_dir dryrun mode must not touch files."""
+
+    def test_dryrun_does_not_write(self, temp_dir):
+        import builder
+
+        entries_dir = os.path.join(temp_dir, "entities")
+        os.makedirs(entries_dir, exist_ok=True)
+        path = os.path.join(entries_dir, "sample.yaml")
+        with open(path, "w", encoding="utf8") as f:
+            f.write("id: sample\nname: Sample\n")
+
+        builder.assign_by_dir("cdi", entries_dir, dryrun=True)
+        with open(path, encoding="utf8") as f:
+            assert "uid" not in yaml.safe_load(f)
+
+        builder.assign_by_dir("cdi", entries_dir, dryrun=False)
+        with open(path, encoding="utf8") as f:
+            assert yaml.safe_load(f)["uid"].startswith("cdi")

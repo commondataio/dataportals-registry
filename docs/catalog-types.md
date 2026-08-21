@@ -30,7 +30,8 @@ Controlled list: `data/reference/catalog_types.yaml` and `data/schemes/catalog.j
 - Sites that only search other catalogs → **Data search engine** (aggregators score lower on [trust-score.md](trust-score.md); Idra federations use `software.id: idra`)
 - FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser → **Metadata catalog**
 - OpenML-style ML dataset catalogs → **Machine learning catalog** when that is the primary product ([discovery-other.md](discovery-other.md))
-- CONTENTdm / Omeka S → scientific (or indicators/opendata) **only** when the public product is a dataset catalog, not an exhibit-only collection
+- HTML tables / GitHub lists of files → **Datasets list**
+- Broad IRs that are not Dataverse/DSpace/Invenio → **General research repository** (or Scientific if that is the primary product)
 
 If a site is both a geoportal and an open data portal, pick the **primary** user-facing product (map/CSW → geo; dataset catalog → opendata).
 

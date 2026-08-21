@@ -198,49 +198,10 @@ def generate_title(record: dict) -> str:
 
 
 def infer_endpoints(record: dict) -> list[dict]:
-    software_id = ((record.get("software", {}) or {}).get("id", "") or "").lower()
-    link = record.get("link", "")
-    base = get_base_url(link)
-    if not base:
-        return []
+    """HTTP-verified harvest endpoints from apidetect URL maps."""
+    from endpoints_infer import infer_endpoints as verified
 
-    endpoints: list[dict] = []
-
-    if software_id in {"ckan", "dkan"}:
-        endpoints.append({"type": "ckan:package-list", "url": f"{base}/api/3/action/package_list", "version": "3"})
-    elif software_id == "arcgisserver":
-        endpoints.append({"type": "arcgis:rest:services", "url": f"{base}/rest/services?f=pjson"})
-    elif software_id == "geoserver":
-        endpoints.append(
-            {
-                "type": "wms130",
-                "url": f"{base}/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
-                "version": "1.3.0",
-            }
-        )
-    elif software_id == "geonetwork":
-        if "/geonetwork" in (record.get("link", "") or ""):
-            endpoints.append({"type": "geonetwork:api:records", "url": f"{base}/srv/api/records"})
-        else:
-            endpoints.append({"type": "geonetwork:api:records", "url": f"{base}/geonetwork/srv/api/records"})
-    elif software_id == "galaxy":
-        endpoints.append({"type": "galaxy:api", "url": f"{base}/api"})
-    elif software_id == "lizmap":
-        endpoints.append({"type": "lizmap:service", "url": f"{base}/index.php/lizmap/service/"})
-    elif software_id == "eurostat":
-        endpoints.append({"type": "eurostat:json", "url": f"{base}/api/dissemination/statistics/1.0/data"})
-    elif software_id == "sdmxri":
-        endpoints.append({"type": "sdmxri:dataflow", "url": f"{base}/SDMX-WS/rest/dataflow"})
-    elif software_id == "ecb":
-        endpoints.append({"type": "sdmx:data", "url": f"{base}/service/data"})
-    elif software_id == "fusionregistry":
-        endpoints.append({"type": "fusionregistry:rest", "url": f"{base}/FusionRegistry/ws/rest"})
-    elif software_id == "obibamica":
-        endpoints.append({"type": "mica:api", "url": f"{base}/api"})
-
-    if not endpoints:
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    return endpoints
+    return verified(record)
 
 
 def fix_owner_location_subregion_required(record: dict, file_path: str, subregion_names: dict[str, str]) -> bool:

@@ -70,3 +70,20 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00000566
+endpoints:
+- type: ckan
+  url: https://datos.madrid.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://datos.madrid.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://datos.madrid.es/api/3/action/package_list
+  version: '3'
+- type: dcat:ttl
+  url: https://datos.madrid.es/catalog.ttl
+- type: dcat:xml
+  url: https://datos.madrid.es/catalog.xml
+- type: dcat:jsonld
+  url: https://datos.madrid.es/catalog.jsonld
+api: true

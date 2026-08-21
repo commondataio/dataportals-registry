@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-ST
+      name: Sachsen-Anhalt
+description: Saxony-Anhalt xPlanBox cloud portal providing public deegree-based XPlanung
+  WMS and WFS services for land-use and spatial planning data.
+endpoints:
+- type: wms130
+  url: https://st.xplanboxcloud.dataport.de/xplan-wms/services/wms?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://st.xplanboxcloud.dataport.de/xplansyn-wfs/services/xplansynwfs?service=WFS&request=GetCapabilities
+  version: 2.0.0
+id: stxplanboxclouddataportde
+langs:
+- id: DE
+  name: German
+link: https://st.xplanboxcloud.dataport.de/
+name: xPlanBox Sachsen-Anhalt
+owner:
+  link: https://www.lvermgeo.sachsen-anhalt.de
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: DE-ST
+      name: Sachsen-Anhalt
+  name: Landesamt für Vermessung und Geoinformation Sachsen-Anhalt
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Germany
+- XPlanung
+- deegree
+- geodata
+- planning
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025685

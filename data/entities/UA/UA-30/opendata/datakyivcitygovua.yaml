@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-30
+      name: Kyiv
+description: Official CKAN open data portal of Kyiv City State Administration.
+endpoints:
+- type: ckan
+  url: https://data.kyivcity.gov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.kyivcity.gov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.kyivcity.gov.ua/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://data.kyivcity.gov.ua/api/3/action/status_show
+  version: '3'
+id: datakyivcitygovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://data.kyivcity.gov.ua
+name: Портал даних Києва
+owner:
+  link: https://kyivcity.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-30
+      name: Kyiv
+  name: Kyiv City State Administration
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- Kyiv
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00025492

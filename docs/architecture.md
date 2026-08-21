@@ -71,3 +71,4 @@ Out-of-scope: production query APIs and MCP servers ([dateno-api](https://github
 - [ckan-sync.md](ckan-sync.md)
 - [apidetect.md](apidetect.md)
 - [liveness.md](liveness.md)
+- [enrichment.md](enrichment.md)

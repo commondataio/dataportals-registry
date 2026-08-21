@@ -28,7 +28,7 @@ Typical subtypes:
 | `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Mapbender |
 | `microdata_catalog_platform` | NADA, NESSTAR, REDATAM |
 | `indicators_data_platform` | PxWeb, OpenSDG, Knoema |
-| `metadata_registry_platform` | FAIR Data Point, Aristotle MDR |
+| `metadata_registry_platform` | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints |
 | `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |

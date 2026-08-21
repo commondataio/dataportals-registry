@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -67,3 +67,13 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00022597
+endpoints:
+- type: oaipmh20
+  url: https://repositorio.uspdigital.usp.br/oai/request?verb=Identify
+  version: '2.0'
+- type: rss
+  url: https://repositorio.uspdigital.usp.br/feed/rss_2.0/site
+  version: '2.0'
+- type: atom
+  url: https://repositorio.uspdigital.usp.br/feed/atom_1.0/site
+  version: '1.0'

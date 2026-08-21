@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -66,3 +66,15 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00024072
+endpoints:
+- type: dspace
+  url: https://soar.suny.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://soar.suny.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://soar.suny.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://soar.suny.edu/sitemap_index.xml

@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: inactive
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-53
+      name: Poltavska oblast
+description: Municipal CKAN portal of Kremenchuk. Host timed out in August 2026.
+endpoints:
+- type: ckan
+  url: https://opendata.kremen.gov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://opendata.kremen.gov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://opendata.kremen.gov.ua/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://opendata.kremen.gov.ua/api/3/action/status_show
+  version: '3'
+id: opendatakremengovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://opendata.kremen.gov.ua
+name: Портал відкритих даних Кременчука
+owner:
+  link: https://kremen.gov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-53
+      name: Poltavska oblast
+  name: Kremenchuk City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: inactive
+tags:
+- government
+- open data
+- CKAN
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00025490

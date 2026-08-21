@@ -329,6 +329,83 @@ Biodiversity occurrence catalogs (ALA and national living-atlas forks). Site: [a
 | Google | `"Atlas of Living Australia" OR "Living Atlas" (occurrences OR biocache)` |
 | Censys | `web.endpoints.http.body: "biocache"` |
 
+## SciCat (`scicat`)
+
+Metadata catalogue for photon/neutron facilities. Docs: [scicatproject.github.io](https://scicatproject.github.io).
+
+**Signals:** SciCat Angular UI; `/api/v3/` or dataset DOI landing pages (PSI, ESS, MAX IV).
+
+**Confirm:** GET the public dataset search. One record per facility catalogue.
+
+| Tool | Query |
+|------|-------|
+| Google | `"SciCat" (dataset OR catalogue) (ESS OR PSI OR "MAX IV") -site:github.com` |
+| Censys | `web.endpoints.http.body: "scicat"` |
+
+## Axiom Data Science Portal (`axiomportal`)
+
+IOOS-style ocean observing explorer (Axiom). Distinct from ERDDAP/THREDDS backends.
+
+**Signals:** Axiom portal chrome; sensor time series; compiled data views.
+
+**Confirm:** GET the public portal home. Do not also register the bundled ERDDAP as a second catalog unless it is a separate public product.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Axiom" ("Data Science" OR IOOS) portal` |
+| Censys | `web.endpoints.http.body: "axiomdatascience"` |
+
+## OntoPortal (`ontoportal`)
+
+Ontology repositories (BioPortal-style). Site: [ontoportal.org](https://ontoportal.org).
+
+**Confirm:** GET the public ontology browser / REST. One record per public OntoPortal appliance.
+
+| Tool | Query |
+|------|-------|
+| Google | `"OntoPortal" OR "BioPortal" (ontology repository) -site:bioontology.org` |
+| Censys | `web.endpoints.http.body: "ontoportal"` |
+
+## Islandora (`islandora`) and Samvera (`samvera`)
+
+Public **repository UI** on Fedora. Prefer these IDs over `fedora` when Drupal-Islandora or Samvera/Hyrax is what users see. Hyrax already has its own section — use `hyrax` when that is the branded UI; `samvera` when the site is Samvera without Hyrax branding.
+
+**Confirm (Islandora):** Drupal + Fedora repository with an Islandora collection browser (not a generic Drupal site).
+
+**Confirm (Samvera):** Samvera / Hyrax collection UI; `/catalog` JSON.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Islandora" (repository OR collections) -site:github.com` |
+| Google | `"Samvera" OR "Hyrax" (repository OR "research data") -site:samvera.org` |
+
+## Other scientific platforms
+
+| `software.id` | Signals | Typical query |
+|---------------|---------|---------------|
+| `haplo` | Haplo repository / CRIS | `"Haplo" (repository OR "research outputs")` |
+| `worktribe` | Worktribe research hub | `"Worktribe" (repository OR "research data")` |
+| `seek` | FAIRDOM-SEEK, WorkflowHub | `"FAIRDOM-SEEK" OR WorkflowHub` |
+| `ramadda` | RAMADDA repository | `"RAMADDA" (repository OR catalog)` |
+| `nyudatacatalog` | NYU Data Catalog forks | `"NYU Data Catalog" OR "data-catalog" medical library` |
+| `icat` | ICAT facility catalog | `"ICAT" (facility OR "data catalog") -site:icatproject.org` |
+| `ensembl` | Ensembl genome browsers | `site:ensembl.org` taxon portals only (do not clone www) |
+| `datalad` | DataLad catalogs / GIN-like | `"DataLad" (catalog OR datasets)` |
+| `hubzero` | HUBzero scientific gateway | `"HUBzero" (resources OR database)` |
+| `linkahead` | LinkAhead / CaosDB | `"LinkAhead" OR CaosDB repository` |
+| `vufind` | VuFind **data/repo discovery** | `"VuFind" (research data OR datasets)` |
+| `mytardis` | MyTardis | `"MyTardis" (data OR repository)` |
+| `librecat` | LibreCat | `"LibreCat" repository` |
+| `gin` | G-Node gin (gogs+git-annex) | `site:gin.g-node.org` or `"GIN" g-node` |
+| `gbifplatform` | GBIF.org itself | do not re-add; use `ipt` for publisher IPTs |
+| `converis` | Clarivate Converis CRIS | `"Converis" (research OR repository)` |
+| `aodn` | AODN Portal | `"AODN" portal` |
+| `osf` | OSF institutions | `site:osf.io` **institution** catalogs only |
+| `ifremercatalog` | SEANOE | `"SEANOE" IFREMER` |
+| `pydap` | PyDAP OPeNDAP | `"PyDAP" OPeNDAP` (else use `opendap`) |
+| `djehuty` | 4TU Djehuty | `"Djehuty" (repository OR 4TU)` |
+| `dlibra` | dLibra digital library **with datasets** | `"dLibra" (dane OR dataset)` |
+
 ## Generic scientific probes
 
 On a **named** university or lab host:

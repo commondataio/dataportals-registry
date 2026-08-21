@@ -138,32 +138,10 @@ def generate_title(record: dict) -> str:
 
 
 def infer_endpoints(record: dict) -> list[dict]:
-    """Infer endpoints from software and link."""
-    software_id = ((record.get("software", {}) or {}).get("id", "") or "").lower()
-    link = record.get("link", "")
-    base = get_base_url(link)
-    if not base:
-        return []
+    """HTTP-verified harvest endpoints from apidetect URL maps."""
+    from endpoints_infer import infer_endpoints as verified
 
-    endpoints: list[dict] = []
-    if software_id == "geoserver":
-        endpoints.extend([
-            {"type": "wms130", "url": f"{base}/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities", "version": "1.3.0"},
-            {"type": "wfs200", "url": f"{base}/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities", "version": "2.0.0"},
-            {"type": "wcs111", "url": f"{base}/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"},
-        ])
-    elif software_id in {"ckan", "dkan"}:
-        endpoints.append({"type": "ckan:api", "url": f"{base}/api/3/action/package_list", "version": "3.0"})
-    elif software_id in {"arcgishub", "arcgisserver"} or "arcgis" in (link or "").lower():
-        endpoints.extend([
-            {"type": "dcatap201", "url": f"{base}/api/feed/dcat-ap/2.0.1.json"},
-            {"type": "dcatus11", "url": f"{base}/api/feed/dcat-us/1.1.json"},
-            {"type": "rss", "url": f"{base}/api/feed/rss/2.0"},
-            {"type": "ogcrecordsapi", "url": f"{base}/api/search/v1"},
-        ])
-    if not endpoints:
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    return endpoints
+    return verified(record)
 
 
 def fix_owner_location_subregion_required(record: dict) -> bool:

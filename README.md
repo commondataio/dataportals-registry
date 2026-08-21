@@ -97,8 +97,8 @@ Last published snapshot (**v1.13.0**, 2026-08-20):
 
 Current source YAML (2026-08-21, not yet rebuilt into exports):
 
-- `data/entities/`: **18,208** catalog records
-- `data/scheduled/`: **88** unverified records (mostly FAIR Data Point and MapServer)
+- `data/entities/`: **18,288** catalog records
+- `data/scheduled/`: **0** unverified records
 - `data/software/`: **205** platform definitions
 - **217** country/territory folders
 
@@ -114,7 +114,7 @@ How to find catalogs **already in this registry**:
 - One YAML per catalog; filename is the catalog `id`.
 
 **By catalog type**  
-- Under each country (or `scheduled/`), type folders: `opendata/`, `geo/`, `scientific/`, `microdata/`, `indicators/`, `ml/`, `search/`, `api/`, `marketplace/`, `other/`.
+- Under each country (or `scheduled/`), type folders: `opendata/`, `geo/`, `scientific/`, `microdata/`, `indicators/`, `ml/`, `search/`, `api/`, `marketplace/`, `metadata/`, `other/`.
 
 **By software taxonomy**  
 - Software definitions in `data/software/` include:

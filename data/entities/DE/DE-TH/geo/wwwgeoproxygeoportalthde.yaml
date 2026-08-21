@@ -1,0 +1,90 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-TH
+      name: Thüringen
+description: Central OGC services hub of Geodateninfrastruktur Thüringen (GDI-Th),
+  providing public WMS, WFS and WAS endpoints powered by deegree.
+endpoints:
+- type: wms111
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1
+  version: 1.1.1
+- type: wms130
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.3.0
+  version: 1.3.0
+- type: wfs100
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=1.0.0
+  version: 1.0.0
+- type: wfs110
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=1.1.0
+  version: 1.1.0
+- type: wfs200
+  url: https://www.geoproxy.geoportal-th.de/geoproxy/services?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0
+  version: 2.0.0
+id: wwwgeoproxygeoportalthde
+langs:
+- id: DE
+  name: German
+link: https://www.geoproxy.geoportal-th.de/geoproxy/
+name: Geoproxy Thüringen
+owner:
+  link: https://www.geoportal-th.de
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: DE-TH
+      name: Thüringen
+  name: Freistaat Thüringen / GDI-Th
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Germany
+- Thüringen
+- deegree
+- geodata
+- geospatial
+- inspire
+- ogc
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00025553

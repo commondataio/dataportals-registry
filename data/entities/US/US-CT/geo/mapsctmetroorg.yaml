@@ -1,0 +1,77 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-CT
+      name: Connecticut
+description: Connecticut Metropolitan Council of Governments ArcGIS REST services
+  directory for regional and municipal GIS layers.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.ctmetro.org/server/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.ctmetro.org/server/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.ctmetro.org/server/services?wsdl
+id: mapsctmetroorg
+langs:
+- id: EN
+  name: English
+link: https://maps.ctmetro.org/server/rest/services
+name: MetroCOG GIS REST Services
+owner:
+  link: https://ctmetro.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-CT
+      name: Connecticut
+  name: Connecticut Metropolitan Council of Governments
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- MetroCOG
+- Connecticut
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00012978

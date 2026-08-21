@@ -39,7 +39,7 @@ python scripts/builder.py analyze-quality
 | Integrity | `INVALID_*`, `DUPLICATE_*`, `MISSING_ENDPOINTS` when `api: true`, path/country mismatches | Hard fail if CRITICAL/IMPORTANT counts grow |
 | Enrichment | missing topics/tags, short description, expected software endpoints | Warning only by default |
 
-Integrity-track CRITICAL and IMPORTANT counts must not grow. Full code list: [quality-rules.md](quality-rules.md). Vocabularies: [vocabularies.md](vocabularies.md).
+Maintainer notes: [devdocs/quality-fix-workflow.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/quality-fix-workflow.md). Script map: [enrichment.md](enrichment.md). Issue codes: [quality-rules.md](quality-rules.md). Vocabularies: [vocabularies.md](vocabularies.md).
 
 ## Fix workflow
 
@@ -55,5 +55,3 @@ python scripts/update_quality_baseline.py   # only after an intentional baseline
 Agent-driven loop: `python scripts/generate_cursor_commands.py` then the generated prompts, or `python scripts/builder.py fix` if `cursor-agent` is installed.
 
 Liveness probes (`scripts/check_liveness.py`, weekly workflow) write `dataquality/liveness_report.jsonl`. They do not update YAML `status`.
-
-Maintainer notes: [devdocs/quality-fix-workflow.md](https://github.com/datenoio/dataportals-registry/blob/main/devdocs/quality-fix-workflow.md).

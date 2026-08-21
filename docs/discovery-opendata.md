@@ -303,6 +303,60 @@ Use these IDs only when the **public product is a dataset catalog** (DKAN-like D
 | Google | `"powered by Drupal" ("open data" OR datasets) inurl:/data` |
 | Google | `"open data" WordPress (CKAN OR dataset) -site:wordpress.org` |
 
+## Piveau (`piveau`)
+
+DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.piveau.de). Powers several European public-sector portals (including patterns used by data.europa.eu).
+
+**Signals:** Piveau / DCAT-AP; Sparql or Hub-UI; `piveau` in HTML or API paths.
+
+**Confirm:** GET the public catalog and a DCAT/search API. Do not re-add data.europa.eu if it is already registered.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Piveau" (DCAT-AP OR "open data") -site:github.com -site:piveau.de` |
+| Censys | `web.endpoints.http.body: "piveau"` |
+
+## LKOD (`lkod`)
+
+Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. Site: [lkod.cz](https://lkod.cz).
+
+**Confirm:** GET the municipal/local catalog (Next.js LKOD UI), not the national NKOD record twice.
+
+| Tool | Query |
+|------|-------|
+| Google | `"LKOD" OR "lokální katalog otevřených dat" site:.cz` |
+| Censys | `web.endpoints.http.body: "lkod"` |
+
+## Aleph (`aleph`)
+
+OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://aleph.occrp.org). Often `catalog_type: Data search engine` or Open data portal depending on whether it hosts datasets or searches collections.
+
+**Confirm:** GET a public Aleph instance. Skip login-only investigations.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Aleph" OCCRP (datasets OR documents) -site:occrp.org` |
+| Censys | `web.endpoints.http.body: "aleph"` |
+
+## Other open-data platforms
+
+| `software.id` | Signals | Typical query |
+|---------------|---------|---------------|
+| `ouropendata` | Japanese CMS, `/assets/cms/public.css`, numeric dataset HTML | `"Our Open Data" オープンデータ` |
+| `gipuzkoairekia` | Gipuzkoa Irekia tenants, DCAT | `site:gipuzkoairekia.eus` or `"Gipuzkoa Irekia"` |
+| `modaopendata` | Taiwan MODA Nuxt frontend, data.gov.tw family | `"data.gov.tw" OR "moda" opendata` (do not re-add national) |
+| `datapress` | CKAN + CMS (DataPress) | `"DataPress" "open data"` |
+| `bitrix` | 1C-Bitrix **dataset catalog only** | `"Битрикс" открытые данные` (skip ordinary CMS) |
+| `jdop` | Japanese JDOP | `"JDOP" オープンデータ` |
+| `publishmydata` | Linked-data publisher | `"PublishMyData" OR publishmydata` |
+| `opendatareg` | OpenData.reg / regional IT | `"opendata.reg"` |
+| `datagovmy` | Malaysia data.gov.my stack | `site:data.gov.my` (tenant catalogs only) |
+| `copernicuscds` | Copernicus Climate/Atmosphere Data Store | `"Climate Data Store" Copernicus` (do not clone CDS) |
+| `tablion` | Aristotle Tablion portal | `"Tablion" "data portal"` |
+| `strapi` | Headless CMS **with a public dataset API** | `"Strapi" ("open data" OR datasets)` |
+| `smw` | Semantic MediaWiki data catalog | `"Semantic MediaWiki" (dataset OR catalog)` |
+| `d4science` | D4Science VRE / catalog | `"D4Science" (catalog OR "open data")` |
+
 ## Generic open-data URL patterns
 
 Try these on a **named** government or city host only (not as an internet-wide scan):

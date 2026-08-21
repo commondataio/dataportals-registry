@@ -1,0 +1,86 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+- dataset
+coverage:
+- location:
+    country:
+      id: TV
+      name: Tuvalu
+    level: 20
+    macroregion:
+      id: '061'
+      name: Polynesia
+description: Official statistics website of the Tuvalu Central Statistics Division.
+  Publishes national statistical releases, indicator tables, and a searchable documents
+  library covering population, economy, CPI, trade, CRVS, and related topics.
+id: statsgovtv
+langs:
+- id: EN
+  name: English
+link: https://stats.gov.tv/
+name: Tuvalu Central Statistics Division
+owner:
+  link: https://stats.gov.tv/
+  location:
+    country:
+      id: TV
+      name: Tuvalu
+    level: 20
+  name: Tuvalu Central Statistics Division
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: wordpress
+  name: WordPress
+status: active
+tags:
+- statistics
+- government
+- official statistics
+- Tuvalu
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+- id: Economy
+  name: Economy
+  type: iso19115
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00025548
+endpoints:
+- type: rest
+  url: https://stats.gov.tv/wp-json/
+- type: rest:posts
+  url: https://stats.gov.tv/wp-json/wp/v2/posts
+  version: '2'

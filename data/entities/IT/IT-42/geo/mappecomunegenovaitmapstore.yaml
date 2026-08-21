@@ -74,3 +74,27 @@ topics:
   name: Structure
   type: iso19115
 uid: cdi00024562
+endpoints:
+- type: mapstore:config
+  url: https://mappe.comune.genova.it/MapStore2/configs/localConfig.json
+- type: wms111
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wms130
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities
+  version: 1.0.0
+- type: wfs110
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities
+  version: 1.1.0
+- type: wfs200
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities
+  version: 2.0.0
+- type: wcs111
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities
+  version: 1.1.1
+- type: wcs201
+  url: https://mappe.comune.genova.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities
+  version: 2.0.1

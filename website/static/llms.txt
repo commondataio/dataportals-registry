@@ -26,8 +26,8 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 21 August 2026: **18,208** files in **217** country/territory folders.
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**88** as of 21 August 2026)
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 21 August 2026: **18,288** files in **217** country/territory folders.
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** as of 21 August 2026)
 - `data/software/`: software/platform definitions (**205** YAML files; last published `software.jsonl` still has 192 until the next build)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
@@ -67,6 +67,7 @@ python scripts/check_liveness.py --sample 10
 - [docs/ckan-sync.md](docs/ckan-sync.md): CKAN ecosystem sync
 - [docs/apidetect.md](docs/apidetect.md): fill `endpoints[]` for known `software.id` maps
 - [docs/liveness.md](docs/liveness.md): weekly `link` probes (`dataquality/liveness_report.jsonl`)
+- [docs/enrichment.md](docs/enrichment.md): quality-fix scripts and legacy enrich CLIs
 - [docs/architecture.md](docs/architecture.md), [docs/directory-layout.md](docs/directory-layout.md)
 - [docs/releasing.md](docs/releasing.md): GitHub release checklist and docs GitHub Pages deploy
 - Tests: [tests/README.md](tests/README.md)

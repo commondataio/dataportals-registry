@@ -56,6 +56,20 @@ SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat S
 | `sdmxri` | SDMX-RI / NSI web | `"SDMX-RI" OR "NSI Web Service"` |
 | `ibisph` | US state public-health indicators | `"IBIS-PH" OR "IBIS PH" health indicators` |
 | `statsuite` | see above | |
+| `stattech` | SIS-CC .Stat technology / SDMX APIs | `"Stat Technology" OR "SIS-CC" SDMX` |
+| `oracleapex` | Oracle APEX **indicator apps** | `"Oracle APEX" (statistika OR indicators)` (skip generic APEX sites) |
+| `datavavt` | Data VAVT economic indicators | `"data.vavt.ru"` |
+| `superset` | Apache Superset **public indicator dashboards** | `"Apache Superset" (open data OR indicators)` |
+| `ibmcognos` | Cognos **public stat portals** | `"Cognos" (statistics OR open data)` |
+| `bicontour` | BI Contour dashboards | `"Contour BI" OR "BI Contour" portal` |
+| `whoint` | WHO data hub | do not re-add who.int; add only distinct regional hubs |
+| `eurostat` | Eurostat | do not re-add the EU hub |
+| `ecb` | ECB Data Portal | do not re-add data.ecb.europa.eu |
+| `dataworldbankorg` | World Bank Data | do not re-add data.worldbank.org |
+| `datauniceforg` | UNICEF data | do not re-add data.unicef.org |
+| `ilostat` | ILOSTAT | do not re-add ilostat.ilo.org |
+| `databisorg` | BIS Data Portal | do not re-add data.bis.org |
+| `datainsight` | Veritas Data Insight **as a public catalog** | rare; skip enterprise-only |
 
 National statistical office homepages often link “database”, “statbank”, “PC-Axis”, “SDMX”. Follow those links rather than guessing software from the NSO CMS.
 
@@ -117,6 +131,14 @@ Epidemiological / population-health study catalog (OBiBa). Often paired with Opa
 | Google | `"Mica" OBiBa (studies OR catalog) -site:github.com` |
 | Censys | `web.endpoints.http.body: "obiba"` |
 | Censys | `web.endpoints.http.body: "Mica"` |
+
+## Survey Solutions (`surveysolutions`)
+
+World Bank survey suite. Register only a **public Data Browser** of microdata, not a data-collection server.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Survey Solutions" ("data browser" OR microdata) -site:mysurvey.solutions` |
 
 ## Generic statistics-office patterns
 

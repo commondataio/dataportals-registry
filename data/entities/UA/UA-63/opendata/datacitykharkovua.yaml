@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: inactive
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 30
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+    subregion:
+      id: UA-63
+      name: Kharkivska oblast
+description: Municipal CKAN portal of Kharkiv. Officially paused under martial law.
+endpoints:
+- type: ckan
+  url: https://data.city.kharkov.ua/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.city.kharkov.ua/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.city.kharkov.ua/api/3/action/package_list
+  version: '3'
+- type: ckan:status-show
+  url: https://data.city.kharkov.ua/api/3/action/status_show
+  version: '3'
+id: datacitykharkovua
+langs:
+- id: UK
+  name: Ukrainian
+link: https://data.city.kharkov.ua
+name: Портал відкритих даних Харкова
+owner:
+  link: https://www.city.kharkov.ua
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: UA-63
+      name: Kharkivska oblast
+  name: Kharkiv City Council
+  type: Local government
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: inactive
+tags:
+- government
+- open data
+- CKAN
+- Ukraine
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+uid: cdi00025495

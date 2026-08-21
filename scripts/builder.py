@@ -572,7 +572,7 @@ def stats(output="country_software.csv"):
     typer.echo("Wrote %s" % (output))
 
 
-def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR):
+def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR, dryrun=False):
     max_num = 0
     n = 0
     for root, dirs, files in tqdm.tqdm(os.walk(dirpath)):
@@ -606,18 +606,23 @@ def assign_by_dir(prefix="cdi", dirpath=ROOT_DIR):
                     record["uid"],
                     os.path.basename(filename).split(".", 1)[0],
                 )
+                if dryrun:
+                    continue
                 f = open(filepath, "w", encoding="utf8")
                 f.write(yaml.safe_dump(record, allow_unicode=True))
                 f.close()
 
 
 @app.command()
-def assign(dryrun=False, mode="entries"):
+def assign(
+    dryrun: bool = typer.Option(False, "--dryrun", help="Log the UIDs that would be written without touching files"),
+    mode="entries",
+):
     """Assign unique identifier to each data catalog entry"""
     if mode == "entries":
-        assign_by_dir("cdi", ROOT_DIR)
+        assign_by_dir("cdi", ROOT_DIR, dryrun=dryrun)
     else:
-        assign_by_dir("temp", SCHEDULED_DIR)
+        assign_by_dir("temp", SCHEDULED_DIR, dryrun=dryrun)
 
 
 @app.command()
@@ -915,7 +920,7 @@ def _add_single_entry(
     if not os.path.exists(subdir_dir):
         os.mkdir(subdir_dir)
     filename = os.path.join(subdir_dir, record_id + ".yaml")
-    if os.path.exists(filename) and force:
+    if os.path.exists(filename) and not force:
         logger.info("Already processed and force not set")
     else:
         f = open(filename, "w", encoding="utf8")
@@ -942,8 +947,8 @@ def add_single(
     owner_name=None,
     owner_link=None,
     owner_type=None,
-    force=False,
-    scheduled=True,
+    force: bool = typer.Option(False, "--force/--no-force", help="Overwrite an existing YAML file"),
+    scheduled: bool = typer.Option(True, "--scheduled/--no-scheduled", help="Write under data/scheduled/ (default) or data/entities/"),
 ):
     """Adds data catalog to the scheduled list"""
 
@@ -954,6 +959,7 @@ def add_single(
     _add_single_entry(
         url,
         software,
+        catalog_type=catalog_type,
         name=name,
         description=description,
         lang=lang,
@@ -1049,7 +1055,10 @@ def add_socrata_catalog(filename):
 
 
 @app.command()
-def add_arcgishub_catalog(filename, force=False):
+def add_arcgishub_catalog(
+    filename,
+    force: bool = typer.Option(False, "--force/--no-force", help="Overwrite existing YAML files"),
+):
     """Adds ArcGIS Hub prepared data catalogs list"""
     full_data = load_jsonl(os.path.join(DATASETS_DIR, "full.jsonl"))
     full_list = []

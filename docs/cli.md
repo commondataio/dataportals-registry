@@ -61,7 +61,7 @@ python scripts/calculate_trust_scores.py --dry-run
 python scripts/promote_scheduled.py --dry-run
 ```
 
-Re3Data: [re3data.md](re3data.md). Endpoint maps: [apidetect.md](apidetect.md) (`detect-software`, `detect-country`; dry-run first). URL reachability: [liveness.md](liveness.md) (weekly workflow, report-only JSONL; does not change YAML `status`). Probe APIs only after a catalog YAML exists.
+Re3Data: [re3data.md](re3data.md). Endpoint maps: [apidetect.md](apidetect.md) (`detect-software`, `detect-country`; dry-run first). URL reachability: [liveness.md](liveness.md) (weekly workflow, report-only JSONL; does not change YAML `status`). Quality-fix and legacy enrich scripts: [enrichment.md](enrichment.md). Probe APIs only after a catalog YAML exists.
 
 ## Quality helpers
 

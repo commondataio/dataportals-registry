@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -63,3 +63,15 @@ topics:
   name: Education, culture and sport
   type: eudatatheme
 uid: cdi00024360
+endpoints:
+- type: dspace
+  url: https://scholarworks.gsu.edu/server/api
+  version: '7'
+- type: dspace:objects
+  url: https://scholarworks.gsu.edu/server/api/discover/search/objects
+  version: '7'
+- type: oaipmh20
+  url: https://scholarworks.gsu.edu/oai/request?verb=Identify
+  version: '2.0'
+- type: sitemap
+  url: https://scholarworks.gsu.edu/sitemap_index.xml

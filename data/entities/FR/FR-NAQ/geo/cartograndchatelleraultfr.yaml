@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -78,3 +78,15 @@ topics:
   name: Imagery / Base Maps / Earth Cover
   type: iso19115
 uid: cdi00024791
+endpoints:
+- type: geomapfish:themes
+  url: https://carto.grand-chatellerault.fr/themes
+- type: wms130
+  url: https://carto.grand-chatellerault.fr/mapserv_proxy?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://carto.grand-chatellerault.fr/mapserv_proxy?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+  version: 2.0.0
+- type: wmts100
+  url: https://carto.grand-chatellerault.fr/tiles/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0

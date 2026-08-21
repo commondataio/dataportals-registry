@@ -1,0 +1,53 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: MV
+      name: Maldives
+    level: 20
+description: Official national portal for geospatial, mapping, and land information
+  of the Maldives (NGIS). Managed by the Geomatics Department.
+endpoints:
+- type: arcgis:rest:info
+  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services?f=pjson
+- type: arcgis:rest:services
+  url: https://services7.arcgis.com/yvCbn3q8PPtPLZIM/arcgis/rest/services/island_20240509/FeatureServer
+id: onemapmv
+langs:
+- id: EN
+  name: English
+link: https://onemap.mv/
+name: OneMap - National Map & Island Registry of Maldives
+owner:
+  link: https://www.geomatics.gov.mv
+  location:
+    country:
+      id: MV
+      name: Maldives
+    level: 20
+  name: Geomatics Department, Ministry of Finance and Planning
+  type: Central government
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- geospatial
+- islands
+- NGIS
+- Maldives
+topics:
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025646

@@ -1,0 +1,72 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-VA
+      name: Virginia
+description: Virginia Department of Transportation ArcGIS Server providing REST map
+  services and GIS layers for statewide transportation data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://vdotgisportal.vdot.virginia.gov/env/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://vdotgisportal.vdot.virginia.gov/env/rest/services?f=pjson
+id: vdotgisportalvdotvirginiagov
+langs:
+- id: EN
+  name: English
+link: https://vdotgisportal.vdot.virginia.gov/env/rest/services
+name: VDOT GIS Portal ArcGIS Server
+owner:
+  link: https://www.vdot.virginia.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-VA
+      name: Virginia
+  name: Virginia Department of Transportation
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- transportation
+- Virginia
+topics:
+- id: TRAN
+  name: Transport
+  type: eudatatheme
+- id: Transportation
+  name: Transportation
+  type: iso19115
+uid: cdi00025420

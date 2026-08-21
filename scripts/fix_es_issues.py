@@ -173,35 +173,10 @@ def generate_title(record: dict) -> str:
 
 
 def infer_endpoints(record: dict) -> list[dict]:
-    software_id = ((record.get("software", {}) or {}).get("id", "") or "").lower()
-    link = record.get("link", "")
-    base = get_base_url(link)
-    if not base:
-        return []
+    """HTTP-verified harvest endpoints from apidetect URL maps."""
+    from endpoints_infer import infer_endpoints as verified
 
-    endpoints: list[dict] = []
-    if software_id in {"ckan", "dkan"}:
-        endpoints.append(
-            {"type": "ckan:api", "url": f"{base}/api/3/action/package_list", "version": "3.0"}
-        )
-    elif software_id == "arcgisserver":
-        endpoints.append({"type": "arcgis:rest:info", "url": f"{base}/arcgis/rest/info?f=pjson"})
-        endpoints.append({"type": "arcgis:rest:services", "url": f"{base}/arcgis/rest/services?f=pjson"})
-    elif software_id == "dspace":
-        endpoints.append({"type": "dspace:rest", "url": f"{base}/server/api"})
-    elif software_id == "galaxy":
-        endpoints.append({"type": "galaxy:api", "url": f"{base}/api/version"})
-    elif software_id == "geoblacklight":
-        endpoints.append({"type": "geoblacklight:catalog", "url": f"{base}/catalog.json"})
-    elif software_id == "geonetwork":
-        endpoints.append({"type": "geonetwork:api:records", "url": f"{base}/geonetwork/srv/api/records"})
-    elif software_id == "geoserver":
-        endpoints.append({"type": "ogc:wms", "url": f"{base}/geoserver/wms"})
-        endpoints.append({"type": "ogc:wfs", "url": f"{base}/geoserver/wfs"})
-
-    if not endpoints:
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    return endpoints
+    return verified(record)
 
 
 def is_placeholder_title(name: str) -> bool:

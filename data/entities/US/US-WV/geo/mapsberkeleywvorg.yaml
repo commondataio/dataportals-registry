@@ -1,0 +1,79 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-WV
+      name: West Virginia
+description: ArcGIS REST services for Berkeley County, West Virginia geospatial data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.berkeleywv.org/bclive/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.berkeleywv.org/bclive/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.berkeleywv.org/arcgis/services?wsdl
+id: mapsberkeleywvorg
+langs:
+- id: EN
+  name: English
+link: https://maps.berkeleywv.org/bclive/arcgis/rest/services
+name: Berkeley County GIS
+owner:
+  link: https://www.berkeleywv.org
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-WV
+      name: West Virginia
+  name: Berkeley County, West Virginia
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: inapplicable
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- Berkeley County
+- West Virginia
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00012560

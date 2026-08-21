@@ -1,0 +1,69 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: US-TX
+      name: Texas
+description: ArcGIS REST services for the Texas Department of Transportation.
+endpoints:
+- type: arcgis:rest:info
+  url: https://maps.txdot.gov/arcgis/rest/services/info?f=pjson
+- type: arcgis:rest:services
+  url: https://maps.txdot.gov/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://maps.txdot.gov/arcgis/services?wsdl
+id: mapstxdotgov
+langs:
+- id: EN
+  name: English
+link: https://maps.txdot.gov/arcgis/rest/services
+name: TxDOT GIS REST Services
+owner:
+  link: https://www.txdot.gov
+  location:
+    country:
+      id: US
+      name: United States
+    level: 30
+    subregion:
+      id: US-TX
+      name: Texas
+  name: Texas Department of Transportation
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- REST
+- GIS
+- State
+topics:
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00012966

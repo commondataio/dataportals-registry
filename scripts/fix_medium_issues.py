@@ -12,6 +12,8 @@ import yaml
 from pathlib import Path
 from urllib.parse import urlparse
 
+from endpoints_infer import infer_endpoints
+
 # Base directories
 BASE_DIR = Path(__file__).parent.parent
 ENTITIES_DIR = BASE_DIR / "data" / "entities"
@@ -145,80 +147,6 @@ def generate_description(record):
         return f"Data portal: {name}."
     else:
         return "Data portal providing datasets and services."
-
-def infer_endpoints(record):
-    """Try to infer common endpoints based on software and link"""
-    endpoints = []
-    link = record.get("link", "")
-    software = record.get("software", {})
-    software_id = software.get("id", "") if isinstance(software, dict) else ""
-    
-    if not link:
-        return endpoints
-    
-    try:
-        parsed = urlparse(link)
-        base_url = f"{parsed.scheme}://{parsed.netloc}"
-        path = parsed.path.rstrip('/')
-        
-        # Common endpoint patterns by software
-        if software_id == "ckan":
-            endpoints.extend([
-                {"type": "ckan:api", "url": f"{base_url}/api/3/action/package_list", "version": "3.0"},
-                {"type": "sitemap", "url": f"{base_url}/sitemap.xml"},
-            ])
-        elif software_id == "arcgishub" or "arcgis" in link.lower():
-            endpoints.extend([
-                {"type": "dcatap201", "url": f"{base_url}/api/feed/dcat-ap/2.0.1.json"},
-                {"type": "dcatus11", "url": f"{base_url}/api/feed/dcat-us/1.1.json"},
-                {"type": "rss", "url": f"{base_url}/api/feed/rss/2.0"},
-                {"type": "ogcrecordsapi", "url": f"{base_url}/api/search/v1"},
-                {"type": "sitemap", "url": f"{base_url}/sitemap.xml"},
-            ])
-        elif software_id == "geoserver":
-            endpoints.extend([
-                # Standard GeoServer paths
-                {"type": "wms130", "url": f"{base_url}/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities", "version": "1.3.0"},
-                {"type": "wfs200", "url": f"{base_url}/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities", "version": "2.0.0"},
-                {"type": "wcs111", "url": f"{base_url}/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"},
-                # Non-standard GeoServer paths (e.g., /geo/wms instead of /ows)
-                {"type": "wms130", "url": f"{base_url}/geoserver/geo/wms?service=WMS&version=1.3.0&request=GetCapabilities", "version": "1.3.0"},
-                {"type": "wfs200", "url": f"{base_url}/geoserver/geo/wfs?service=WFS&version=2.0.0&request=GetCapabilities", "version": "2.0.0"},
-                {"type": "wcs111", "url": f"{base_url}/geoserver/geo/wms?service=WCS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"},
-            ])
-        elif software_id == "arcgisserver":
-            endpoints.extend([
-                {"type": "arcgis:rest:info", "url": f"{base_url}/arcgis/rest/info?f=pjson"},
-                {"type": "arcgis:rest:services", "url": f"{base_url}/arcgis/rest/services?f=pjson"},
-            ])
-        elif software_id == "dataverse":
-            endpoints.extend([
-                {"type": "dataverseapi", "url": f"{base_url}/api/search"},
-                {"type": "oaipmh20", "url": f"{base_url}/oai?verb=Identify", "version": "2.0"},
-            ])
-        elif software_id == "opendatasoft":
-            endpoints.extend([
-                {"type": "opendatasoft:api", "url": f"{base_url}/api/v2/catalog/datasets"},
-            ])
-        elif software_id == "socrata":
-            endpoints.extend([
-                {"type": "socrata:api", "url": f"{base_url}/api/views"},
-            ])
-        elif software_id == "knoema":
-            endpoints.extend([
-                {"type": "knoema:search", "url": f"{base_url}/api/1.0/search", "version": "1.0"},
-                {"type": "sdmx:datastructure", "url": f"{base_url}/api/1.0/sdmx", "version": "2.0"},
-                {"type": "opensearch", "url": f"{base_url}/OpenSearch.xml"},
-            ])
-        
-        # Always try sitemap
-        if not any(e.get("type") == "sitemap" for e in endpoints):
-            endpoints.append({"type": "sitemap", "url": f"{base_url}/sitemap.xml"})
-    
-    except Exception:
-        pass
-    
-    return endpoints
 
 def fix_description(record, file_path):
     """Fix MISSING_DESCRIPTION"""

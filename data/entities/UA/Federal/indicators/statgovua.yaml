@@ -1,0 +1,67 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Indicators catalog
+content_types:
+- indicator
+coverage:
+- location:
+    country: &id001
+      id: UA
+      name: Ukraine
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Official statistics portal of the State Statistics Service of Ukraine,
+  with Dataset Explorer and SDMX API.
+endpoints:
+- type: sdmx:dataflows
+  url: https://stat.gov.ua/sdmx/workspaces/default:integration/registry/sdmx/3.0/structure/dataflow/all/all/latest?detail=allstubs
+id: statgovua
+langs:
+- id: UK
+  name: Ukrainian
+- id: EN
+  name: English
+link: https://stat.gov.ua
+name: Ukrstat Data Bank
+owner:
+  link: https://stat.gov.ua
+  location:
+    country: *id001
+    level: 20
+  name: State Statistics Service of Ukraine
+  type: Central government
+properties:
+  has_doi: false
+  is_national: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: custom
+  name: Custom software
+status: active
+tags:
+- statistics
+- government
+- SDMX
+- Ukraine
+- indicators
+topics:
+- id: SOCI
+  name: Population and society
+  type: eudatatheme
+- id: ECON
+  name: Economy and finance
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00025510

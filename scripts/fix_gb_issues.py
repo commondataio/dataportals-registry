@@ -191,42 +191,10 @@ def is_placeholder_title(name: str) -> bool:
 
 
 def infer_endpoints(record: dict) -> list[dict]:
-    software_id = ((record.get("software", {}) or {}).get("id", "") or "").lower()
-    link = record.get("link", "")
-    base = get_base_url(link)
-    if not base:
-        return []
+    """HTTP-verified harvest endpoints from apidetect URL maps."""
+    from endpoints_infer import infer_endpoints as verified
 
-    endpoints: list[dict] = []
-    if software_id == "arcgisserver":
-        endpoints.append({"type": "arcgis:rest:info", "url": f"{base}/arcgis/rest/info?f=pjson"})
-        endpoints.append({"type": "arcgis:rest:services", "url": f"{base}/arcgis/rest/services?f=pjson"})
-    elif software_id == "geoserver":
-        endpoints.append({"type": "wms111", "url": f"{base}/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities", "version": "1.1.1"})
-        endpoints.append({"type": "wfs110", "url": f"{base}/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities", "version": "1.1.0"})
-    elif software_id == "geonetwork":
-        endpoints.append({"type": "geonetwork:api:records", "url": f"{base}/geonetwork/srv/api/records"})
-        endpoints.append({"type": "csw202", "url": f"{base}/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetCapabilities", "version": "2.0.2"})
-    elif software_id == "figshare":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap/siteindex.xml"})
-    elif software_id == "ckan":
-        endpoints.append({"type": "ckan:api", "url": f"{base}/api/3/action/package_list", "version": "3.0"})
-    elif software_id == "nesstar":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    elif software_id == "haplo":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    elif software_id == "ipt":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    elif software_id == "invenio":
-        endpoints.append({"type": "oaipmh20", "url": f"{base}/oai2d?verb=Identify", "version": "2.0"})
-    elif software_id == "obibamica":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    elif software_id == "strapi":
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-
-    if not endpoints:
-        endpoints.append({"type": "sitemap", "url": f"{base}/sitemap.xml"})
-    return endpoints
+    return verified(record)
 
 
 def fix_software_expected_endpoints_missing(record: dict) -> bool:

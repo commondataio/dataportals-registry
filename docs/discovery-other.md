@@ -63,6 +63,26 @@ Use `custom` unless the vendor already has a software definition. Do not scrape 
 |------|-------|
 | Google | `"data marketplace" OR "data shop" (datasets OR geospatial)` plus a country name |
 
+## Datasets lists (`other/` with type Datasets list)
+
+Simple pages that list datasets without a full portal CMS (spreadsheet catalogs, HTML tables, GitHub data lists). Usually `software.id: custom`.
+
+**Confirm:** a reusable list of multiple datasets with links or files. Skip a single CSV or a blog post.
+
+| Tool | Query |
+|------|-------|
+| Google | `"list of datasets" OR "data inventory" (government OR open)` plus a country or city |
+
+## General research repositories
+
+Broad institutional research repos that are not clearly Dataverse/DSpace/Invenio. Prefer a named `software.id` from [discovery-scientific.md](discovery-scientific.md) (including Islandora, Samvera, Haplo, Worktribe). If none match, `custom` and `catalog_type: General research repository` or Scientific data repository per the **primary** UI.
+
+## Custom software (`custom`)
+
+About one catalog in eight has no shared product ID. Use `custom` when two independent fingerprints do not match a `data/software/` definition. Hunt with the generic URL patterns in the type guides, not a software name.
+
+Do not invent a new `software.id` for a one-off.
+
 ## Related
 
 - [discovery.md](discovery.md)

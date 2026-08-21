@@ -20,7 +20,7 @@ Use dataportals-registry when you need **stable metadata about data catalogs** �
 ## Quick decision guide
 
 1. “Is there an open data portal for city X / country Y?”  
-   Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) (search engines: [discovery-search-tools.md](discovery-search-tools.md); platforms: [opendata](discovery-opendata.md), [geoportals](discovery-geoportals.md), [scientific](discovery-scientific.md), [metadata](discovery-metadata.md), [indicators](discovery-indicators.md)) before adding a record.
+   Use this registry: filter `catalog_type` and `coverage`. If nothing matches, follow [discovery.md](discovery.md) (search engines: [discovery-search-tools.md](discovery-search-tools.md); platforms: [opendata](discovery-opendata.md), [geoportals](discovery-geoportals.md), [scientific](discovery-scientific.md), [metadata](discovery-metadata.md), [indicators](discovery-indicators.md), [other types](discovery-other.md)) before adding a record.
 
 2. “Which catalogs run CKAN / GeoNetwork / Dataverse?”  
    Use this registry: filter `software.id` in DuckDB / Parquet ([query-examples.md](query-examples.md)).

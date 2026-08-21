@@ -1,0 +1,76 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: DE
+      name: Germany
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+description: XPlanung infrastructure node of Landkreis Elbe-Elster providing public
+  deegree-based WMS and WFS for land-use planning data.
+endpoints:
+- type: wms130
+  url: https://xplanung.lkee.de/xplan-wms-neu/services/wms?service=WMS&request=GetCapabilities
+  version: 1.3.0
+- type: wfs200
+  url: https://xplanung.lkee.de/xplansyn-wfs/services/xplansynwfs?service=WFS&request=GetCapabilities
+  version: 2.0.0
+id: xplanunglkeede
+langs:
+- id: DE
+  name: German
+link: https://xplanung.lkee.de/
+name: XPlanung ISK Landkreis Elbe-Elster
+owner:
+  link: https://www.lkee.de
+  location:
+    country: *id001
+    level: 30
+    subregion:
+      id: DE-BB
+      name: Brandenburg
+  name: Landkreis Elbe-Elster
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Germany
+- XPlanung
+- deegree
+- geodata
+- planning
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00025676

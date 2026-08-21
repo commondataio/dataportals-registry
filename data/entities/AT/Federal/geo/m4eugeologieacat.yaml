@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: AT
+      name: Austria
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoSphere Austria Minerals4EU deegree services providing public WFS access
+  to mineral occurrences and commodities in Austria.
+endpoints:
+- type: wfs200
+  url: https://m4eu.geologie.ac.at/m4eu/services/wfs?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0
+  version: 2.0.0
+id: m4eugeologieacat
+langs:
+- id: DE
+  name: German
+- id: EN
+  name: English
+link: https://m4eu.geologie.ac.at/m4eu/
+name: Minerals4EU Austria (GeoSphere Austria)
+owner:
+  link: https://www.geologie.ac.at
+  location:
+    country: *id001
+    level: 20
+  name: GeoSphere Austria
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Austria
+- INSPIRE
+- deegree
+- geodata
+- minerals
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00025671

@@ -1,6 +1,6 @@
 access_mode:
 - open
-api_status: uncertain
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -56,3 +56,22 @@ topics:
   name: Regions and cities
   type: eudatatheme
 uid: cdi00020568
+endpoints:
+- type: ckan
+  url: https://data.kavala.gov.gr/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://data.kavala.gov.gr/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://data.kavala.gov.gr/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://data.kavala.gov.gr/catalog.n3
+- type: dcat:ttl
+  url: https://data.kavala.gov.gr/catalog.ttl
+- type: dcat:xml
+  url: https://data.kavala.gov.gr/catalog.xml
+- type: dcat:jsonld
+  url: https://data.kavala.gov.gr/catalog.jsonld
+api: true

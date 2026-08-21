@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -61,3 +61,10 @@ topics:
 uid: cdi00004325
 description: Geoportal. managed by The Federal Service for State Registration, Cadastre
   and Cartography (Rosreestr). powered by NextGIS Web. accessible at ngw.fppd.cgkipd.ru.
+endpoints:
+- type: nextgisweb:api
+  url: https://ngw.fppd.cgkipd.ru/api/resource/
+- type: nextgisweb:pkg-version
+  url: https://ngw.fppd.cgkipd.ru/api/component/pyramid/pkg_version
+- type: nextgisweb:routes
+  url: https://ngw.fppd.cgkipd.ru/api/component/pyramid/route

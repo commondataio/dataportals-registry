@@ -461,19 +461,118 @@ Cloud geospatial data platform. Hosts: `*.koordinates.com` plus custom governmen
 | Google | `"Powered by Koordinates" OR "koordinates" "open data"` |
 | crt.sh | `%.koordinates.com` |
 
-## Other high-volume regional GIS
+## IRI Data Library (`datalibrary`)
 
-Use the same accept/reject rules. Search the product title with the country TLD; do not invent extra probes.
+Climate / maproom portals (IRI Columbia and meteorological services). Site: [iridl.ldeo.columbia.edu](https://iridl.ldeo.columbia.edu).
 
-| `software.id` | Typical signals | Notes |
-|---------------|-----------------|-------|
-| `gcnavi` | `geocloud.jp/webgis/` (org subdomain), GC Navi / GeoCloud | Japanese local-government WebGIS (Informatix) |
-| `nolis` | `maps.nol-is.de`, `static.nol-is.de`, NOL-IS | German municipal WebGIS |
-| `cardo` | `/net3/public/`, cardo.Map | IDU IT public-sector geoportals |
-| `netgisserver` | `/keos/`, `/Netgis7`, title `NetGIS Server 7` | Turkish municipal |
-| `sampaswebgis` | `/KentrehberiApp/Index`, title `SAMPAŞ WEBGIS` | Turkish municipal |
-| `gisoftgis` | `/GiSoftGis/#/cityguidepublic` | Turkish city guide SPA |
-| `belsisims` | `ims.*/Projects/*/Pages/KRH.aspx` | Do not confuse with Netcad Netigma |
+**Signals:** Data Library / maproom; gridded download; IRI-style dataset URLs.
+
+**Confirm:** GET a public maproom or dataset browser. One record per public library, not per maproom view.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Data Library" (maproom OR IRI) (climate OR geospatial) -site:columbia.edu` |
+| Censys | `web.endpoints.http.body: "maproom"` |
+
+## Rasdaman (`rasdaman`)
+
+Array database with OGC WCS/WMS/WCPS. Site: [rasdaman.com](https://rasdaman.com). Register the **public service/catalog UI**, not a silent WCS behind another geoportal.
+
+**Confirm:** GetCapabilities or WCPS endpoint that names rasdaman.
+
+| Tool | Query |
+|------|-------|
+| Google | `"rasdaman" (WCS OR WCPS OR petascope) -site:github.com -site:rasdaman.com` |
+| Censys | `web.endpoints.http.body: "rasdaman"` |
+
+## Open Data Cube (`opendatacube`)
+
+Earth-observation data cube. Site: [opendatacube.org](https://www.opendatacube.org). Often paired with STAC or `datacubews` (OWS). Prefer STAC/`stacserver` if that is the public catalog; use `opendatacube` when the cube explorer is the product.
+
+**Confirm:** GET the explorer or ODC-indexed catalog UI.
+
+| Tool | Query |
+|------|-------|
+| Google | `"Open Data Cube" (explorer OR datacube) -site:opendatacube.org -site:github.com` |
+| Censys | `web.endpoints.http.body: "opendatacube"` |
+
+## PopGIS (`popgis`)
+
+Pacific Community (SPC) population / census GIS. Site: [spc.int PopGIS](https://www.spc.int/our-work/geospatial/popgis).
+
+**Confirm:** GET the public map/layer catalog for a country or territory node.
+
+| Tool | Query |
+|------|-------|
+| Google | `"PopGIS" (census OR geospatial) (Pacific OR SPC)` |
+| Censys | `web.endpoints.http.body: "PopGIS"` |
+
+## ncWMS (`ncwms`)
+
+WMS for NetCDF / multidimensional environmental data. Docs: [ncwms](https://reading-escience-centre.github.io/ncwms/). Register when ncWMS is the public map catalog, not a layer inside THREDDS.
+
+**Confirm:** WMS GetCapabilities mentioning ncWMS / Godiva.
+
+| Tool | Query |
+|------|-------|
+| Google | `"ncWMS" OR Godiva (WMS OR NetCDF) -site:github.com` |
+| Censys | `web.endpoints.http.body: "ncWMS"` |
+
+## MangoMap (`mangomap`)
+
+Hosted map galleries. Tenants on `mangomap.com`. Site: [mangomap.com](https://mangomap.com).
+
+**Confirm:** GET the organization portal. One record per tenant, not per map.
+
+| Tool | Query |
+|------|-------|
+| Google | `site:mangomap.com` |
+| crt.sh | `%.mangomap.com` |
+
+## Other geoportal platforms
+
+Search the product title with the country TLD. One record per public catalog UI.
+
+| `software.id` | Signals / confirm | Typical query |
+|---------------|-------------------|---------------|
+| `gcnavi` | `geocloud.jp/webgis/`, GC Navi | `"GC Navi" OR geocloud.jp webgis` |
+| `nolis` | `maps.nol-is.de`, NOL-IS | `"NOL-IS" Geoportal site:.de` |
+| `cardo` | `/net3/public/`, cardo.Map | `"cardo.Map" OR inurl:/net3/public/` |
+| `netgisserver` | `/keos/`, `/Netgis7` | `intitle:"NetGIS Server 7"` |
+| `sampaswebgis` | `/KentrehberiApp/Index` | `"SAMPAŞ WEBGIS"` |
+| `gisoftgis` | `/GiSoftGis/#/cityguidepublic` | `inurl:/GiSoftGis/` |
+| `belsisims` | `ims.*/Projects/*/Pages/KRH.aspx` | `KRH.aspx Belsis` |
+| `activemapgis` | Gradoservice ActiveMap | `"ActiveMap" GIS Gradoservice` |
+| `orbismap` | ORBISMap Russian GIS | `"ORBISMap" геопортал` |
+| `opengeoportal` | OpenGeoPortal federated search | `"OpenGeoPortal" OR "Open Geoportal"` |
+| `geonomics` | Vue/Mapbox, geonomix.kz | `"Geonomics" OR geonomix геопортал` |
+| `cogis` | Data East CoGIS Portal | `"CoGIS" (портал OR geoportal)` |
+| `elitegis` | ArcGIS-compatible REST (Atemiko) | `"eLiteGIS" OR elitegis REST` |
+| `smartfindersdi` | con terra smart.finder SDI | `"smart.finder SDI" OR smartfinder` |
+| `mapapps` | `/mapapps/`, con terra | `inurl:/mapapps/` |
+| `giswebse` | GIS WebServer SE | `"GIS WebServer SE"` |
+| `ingrid` | German InGrid CSW/OpenSearch | `"InGrid" (CSW OR Geoportal) site:.de` |
+| `metagis` | MetaGIS (SE) | `"MetaGIS" geoportal site:.se` |
+| `isigeo` | IsiGéo / Geomatika | `"IsiGéo" OR Isigeo géoportail` |
+| `gis4smart` | GIS4Smart municipal | `"GIS4Smart" geoportal` |
+| `geoportalrlp` | Rhineland-Palatinate stack | `geoportal.rlp.de` (do not re-add known nodes) |
+| `copernicusdhus` | Copernicus DHuS | `"DHuS" Copernicus (catalogue OR odata)` |
+| `popgis` | see above | |
+| `ncwms` | see above | |
+| `mangomap` | see above | |
+| `opendatacube` | see above | |
+| `datacubews` | ODC OWS WMS/WCS | `"datacube-ows" OR "datacube_ows"` |
+| `supermapiserver` | SuperMap iServer REST | `"SuperMap iServer" rest` |
+| `supermapiportal` | SuperMap iPortal | `"SuperMap iPortal"` |
+| `reearth` | Re:Earth / PLATEAU VIEW | `"Re:Earth" OR "PLATEAU VIEW"` |
+| `gpatlas` | GP Atlas | `"GP Atlas" GIS` |
+| `geometa` | GeoMeta catalog | `"GeoMeta" geoportal` |
+| `carto` | CARTO Builder / cloud maps | `site:carto.com` government tenants only |
+| `mfgeoadmin3` | swisstopo geoadmin3 forks | `"geoadmin3" OR mf-geoadmin3` |
+| `datumgis` | DATUM GIS | `"DATUM GIS" геопортал` |
+| `evergis` | EverGIS / ЭверГИС | `"EverGIS" OR "ЭверГИС"` |
+| `ingeo` | InGeo / ГИС ИнГео | `"ИнГео" GIS` |
+| `farvatergisogd` | Farvater GIS OGD | `"Farvater" ГИСОГД` |
 
 ## Generic geospatial probes
 

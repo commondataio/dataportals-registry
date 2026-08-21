@@ -1,0 +1,66 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: HU
+      name: Hungary
+    level: 20
+    macroregion:
+      id: '151'
+      name: Eastern Europe
+description: Mining and Geological Survey of Hungary Minerals4EU/MIN4EU deegree WFS
+  providing public access to INSPIRE mineral resource features.
+endpoints:
+- type: wfs200
+  url: http://m4eu.geoservices.hu/m4eu/services/m4eu_v2020.8?service=WFS&request=GetCapabilities&version=2.0.0
+  version: 2.0.0
+id: m4eugeoserviceshu
+langs:
+- id: HU
+  name: Hungarian
+- id: EN
+  name: English
+link: http://m4eu.geoservices.hu/m4eu/
+name: MIN4EU Hungary (MBFSZ)
+owner:
+  link: https://mbfsz.gov.hu
+  location:
+    country: *id001
+    level: 20
+  name: Mining and Geological Survey of Hungary (MBFSZ)
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: unknown
+  tos_url: null
+software:
+  id: deegree
+  name: deegree
+status: active
+tags:
+- GIS
+- Hungary
+- INSPIRE
+- deegree
+- geodata
+- minerals
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Geoscientific Information
+  name: Geoscientific Information
+  type: iso19115
+uid: cdi00025669

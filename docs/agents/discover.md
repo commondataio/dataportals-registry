@@ -90,6 +90,10 @@ Set `software.id` only when a probe or page signal matches. Otherwise `custom`. 
 | WEKO3 institutional repository | `weko3` | Scientific data repository |
 | OPeNDAP / Hyrax directory (not THREDDS-only) | `opendap` | Scientific data repository |
 | OBiBa Mica study catalog | `obibamica` | Microdata catalog |
+| SciCat facility dataset catalogue | `scicat` | Scientific data repository |
+| Piveau DCAT-AP catalog UI | `piveau` | Open data portal |
+| `/mapapps/` con terra | `mapapps` | Geoportal |
+| Islandora collection browser (Drupal+Fedora) | `islandora` | Scientific data repository |
 | `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
 | OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
 | OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |

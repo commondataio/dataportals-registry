@@ -50,7 +50,7 @@ Thank you for your interest in contributing to the dataportals-registry project!
 - `tests/` - Test files
 - `docs/` - Published documentation (source for the Docusaurus site)
 - `website/` - Docusaurus project deployed to GitHub Pages
-- `devdocs/` - Working notes and analysis tools (not published on the docs site)
+- `dev/docs/` and `devdocs/` — working notes (not the GitHub Pages site)
 
 ## Ways to Contribute
 
@@ -438,7 +438,7 @@ If you need help or have questions:
 
 1. Check existing [Issues](https://github.com/datenoio/dataportals-registry/issues)
 2. Check the [README.md](README.md) and the [documentation site](https://datenoio.github.io/dataportals-registry/)
-3. Check [docs/](docs/) (published) and `devdocs/README.md` (working notes)
+3. Check [docs/](docs/) (published) and `devdocs/` / `dev/docs/` (working notes)
 4. Open a new issue with your question
 
 ## License

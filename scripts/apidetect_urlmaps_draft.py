@@ -19,6 +19,7 @@ Confidence tiers:
 JSON_MIMETYPES = ["application/json", "text/json"]
 XML_MIMETYPES = ["application/xml", "text/xml"]
 HTML_MIMETYPES = ["text/html"]
+PLAIN_MIMETYPES = ["text/plain"]
 
 # ---------------------------------------------------------------------------
 # Tier A – high-confidence probes
@@ -161,7 +162,7 @@ ARISTOTLEMDR_URLMAP = [
     {
         "id": "aristotlemdr:api",
         "url": "/api/v4/",
-        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES,
+        "expected_mime": JSON_MIMETYPES,
         "is_json": False,
         "version": "4",
     },
@@ -756,17 +757,6 @@ CONVERIS_URLMAP = [
 
 DATALAD_URLMAP = []  # git/annex only – see NO_STANDARD_PROBE
 
-SMW_URLMAP = [
-    # Semantic MediaWiki – action API
-    {
-        "id": "smw:ask",
-        "url": "/api.php?action=askargs&format=json&conditions=[[Category:+]]&printouts=Category&parameters=limit=1",
-        "expected_mime": JSON_MIMETYPES,
-        "is_json": True,
-        "version": None,
-    },
-]
-
 SURVEYSOLUTIONS_URLMAP = [
     {
         "id": "surveysolutions:api",
@@ -776,6 +766,456 @@ SURVEYSOLUTIONS_URLMAP = [
         "version": "1",
     },
 ]
+
+OGC_XML_MIMETYPES = XML_MIMETYPES + [
+    "application/vnd.ogc.wms_xml",
+    "application/vnd.ogc.wfs_xml",
+    "application/vnd.ogc.se_xml",
+]
+
+GEOMAPFISH_URLMAP = [
+    # https://camptocamp.github.io/c2cgeoportal/master/
+    {
+        "id": "geomapfish:themes",
+        "url": "/themes",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "wms111",
+        "url": "/mapserv_proxy?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms130",
+        "url": "/mapserv_proxy?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wfs200",
+        "url": "/mapserv_proxy?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+    {
+        "id": "wmts100",
+        "url": "/tiles/1.0.0/WMTSCapabilities.xml",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0.0",
+    },
+]
+
+GETSDIPORTAL_URLMAP = [
+    {
+        "id": "wms111",
+        "url": "/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wms130",
+        "url": "/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wfs100",
+        "url": "/geoserver/ows?service=WFS&version=1.0.0&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.0.0",
+    },
+    {
+        "id": "wfs110",
+        "url": "/geoserver/ows?service=WFS&version=1.1.0&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.0",
+    },
+    {
+        "id": "wfs200",
+        "url": "/geoserver/ows?service=WFS&version=2.0.0&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.0",
+    },
+    {
+        "id": "wcs111",
+        "url": "/geoserver/ows?service=WCS&version=1.1.1&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+    {
+        "id": "wcs201",
+        "url": "/geoserver/ows?service=WCS&version=2.0.1&request=GetCapabilities",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.1",
+    },
+]
+
+REDATAM_URLMAP = [
+    {
+        "id": "redatam",
+        "url": "/redbin/RpWebEngine.exe/Portal",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "redatam",
+        "url": "/RpWebEngine.exe/Portal",
+        "expected_mime": HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+SCICAT_URLMAP = [
+    {
+        "id": "customapi",
+        "url": "/api/v3/datasets",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3",
+    },
+    {
+        "id": "customapi",
+        "url": "/api/v3/Datasets",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "3",
+    },
+]
+
+# MapStore2 often sits next to GeoServer; GeoStore REST is on the viewer path.
+MAPSTORE_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES + ["application/octet-stream"]
+MAPSTORE_URLMAP = GETSDIPORTAL_URLMAP + [
+    {
+        "id": "mapstore:geostore",
+        "url": "/rest/geostore/misc/categories/",
+        "expected_mime": XML_MIMETYPES + JSON_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "mapstore:config",
+        "url": "/configs/localConfig.json",
+        "expected_mime": MAPSTORE_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+# Open SDG publishes indicator JSON at documented, language-prefixed paths:
+# https://open-sdg.readthedocs.io/en/latest/faq/
+OPENSDG_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES + ["application/octet-stream"]
+OPENSDG_URLMAP = [
+    {
+        "id": "opensdg:data",
+        "url": "/data/1-1-1.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:data",
+        "url": "/en/data/1-1-1.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:data",
+        "url": "/sdg-data/en/data/1-1-1.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:data",
+        "url": "/data/1-2-1.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:data",
+        "url": "/en/data/1-2-1.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "opensdg:reporting",
+        "url": "/data/reporting.json",
+        "expected_mime": OPENSDG_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+TERRIA_URLMAP = [
+    {
+        "id": "terria:config",
+        "url": "/config.json",
+        "expected_mime": JSON_MIMETYPES + PLAIN_MIMETYPES + ["application/octet-stream"],
+        "is_json": True,
+        "version": None,
+    },
+]
+
+SEEK_URLMAP = [
+    {
+        "id": "customapi",
+        "url": "/api",
+        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+SUPERMAPISERVER_URLMAP = [
+    {
+        "id": "supermap:services",
+        "url": "/services.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "supermap:services",
+        "url": "/iserver/services.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+GVSIGONLINE_URLMAP = GETSDIPORTAL_URLMAP
+
+INGRID_URLMAP = [
+    {
+        "id": "csw202",
+        "url": "/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
+    {
+        "id": "csw202",
+        "url": "/interface/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0.2",
+    },
+]
+
+ERDASAPOLLO_URLMAP = [
+    {
+        "id": "wms130",
+        "url": "/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.3.0",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.3.0",
+    },
+    {
+        "id": "wms111",
+        "url": "/erdas-iws/ogc/wms/?service=WMS&request=GetCapabilities&version=1.1.1",
+        "expected_mime": OGC_XML_MIMETYPES,
+        "is_json": False,
+        "version": "1.1.1",
+    },
+]
+
+DRUPAL_JSONAPI_MIMETYPES = JSON_MIMETYPES + ["application/vnd.api+json"]
+DRUPAL_URLMAP = [
+    {
+        "id": "drupal:jsonapi",
+        "url": "/jsonapi",
+        "accept": "application/vnd.api+json, application/json",
+        "expected_mime": DRUPAL_JSONAPI_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+ICAT_URLMAP = [
+    {
+        "id": "oaipmh20",
+        "url": "/oaipmh/request?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "icat:datagateway-api",
+        "url": "/datagateway-api",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+COGIS_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES
+COGIS_URLMAP = [
+    {
+        "id": "arcgis:rest:services",
+        "url": "/elitegis/rest/services?f=pjson",
+        "accept": "application/json",
+        "expected_mime": COGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgis:rest:services",
+        "url": "/arcgis3/rest/services?f=pjson",
+        "accept": "application/json",
+        "expected_mime": COGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgis:rest:services",
+        "url": "/arcgisserver/rest/services?f=pjson",
+        "accept": "application/json",
+        "expected_mime": COGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+GIN_URLMAP = [
+    {
+        "id": "gogs:api",
+        "url": "/api/v1/version",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+OSF_JSONAPI_MIMETYPES = JSON_MIMETYPES + ["application/vnd.api+json"]
+OSF_URLMAP = [
+    {
+        "id": "osf:api",
+        "url": "/v2/",
+        "absolute_url": "https://api.osf.io/v2/",
+        "expected_mime": OSF_JSONAPI_MIMETYPES,
+        "is_json": True,
+        "version": "2",
+    },
+]
+
+SAMVERA_URLMAP = [
+    {
+        "id": "hyrax:catalog",
+        "url": "/catalog.json",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "hyrax:catalog",
+        "url": "/catalog",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+SMW_URLMAP = [
+    {
+        "id": "mediawiki:api",
+        "url": "/w/api.php?action=query&meta=siteinfo&format=json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "mediawiki:api",
+        "url": "/api.php?action=query&meta=siteinfo&format=json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "smw:ask",
+        "url": "/api.php?action=askargs&format=json&conditions=[[Category:+]]&printouts=Category&parameters=limit=1",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+ENSEMBL_URLMAP = [
+    {
+        "id": "rest",
+        "url": "/rest/info/ping",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+PHAIDRA_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES
+PHAIDRA_URLMAP = [
+    {
+        "id": "rest",
+        "url": "/api/search/select",
+        "expected_mime": PHAIDRA_JSON_MIMETYPES + XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/api/oai?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+    {
+        "id": "openapi",
+        "url": "/api/openapi/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+MAPTILERSERVER_URLMAP = [
+    {
+        "id": "openapi",
+        "url": "/api",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+MYTARDIS_URLMAP = [
+    {
+        "id": "rest",
+        "url": "/api/v1/",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "1",
+    },
+]
+
+NYUDATACATALOG_URLMAP = []  # schema.org DataCatalog JSON-LD on the homepage
 
 # ---------------------------------------------------------------------------
 # Proposed CATALOGS_URLMAP additions (merge into apidetect.py)
@@ -797,6 +1237,31 @@ DRAFT_CATALOGS_URLMAP = {
     "gbifplatform": GBIFPLATFORM_URLMAP,
     "openmlorg": OPENMLORG_URLMAP,
     "dspacecris": DSPACECRIS_URLMAP,
+    "geomapfish": GEOMAPFISH_URLMAP,
+    "getsdiportal": GETSDIPORTAL_URLMAP,
+    "redatam": REDATAM_URLMAP,
+    "scicat": SCICAT_URLMAP,
+    "mapstore": MAPSTORE_URLMAP,
+    "opensdg": OPENSDG_URLMAP,
+    "terria": TERRIA_URLMAP,
+    "seek": SEEK_URLMAP,
+    "supermapiserver": SUPERMAPISERVER_URLMAP,
+    "gvsigonline": GVSIGONLINE_URLMAP,
+    "ingrid": INGRID_URLMAP,
+    "erdasapollo": ERDASAPOLLO_URLMAP,
+    "drupal": DRUPAL_URLMAP,
+    "icat": ICAT_URLMAP,
+    "cogis": COGIS_URLMAP,
+    "elitegis": COGIS_URLMAP,
+    "gin": GIN_URLMAP,
+    "osf": OSF_URLMAP,
+    "samvera": SAMVERA_URLMAP,
+    "smw": SMW_URLMAP,
+    "ensembl": ENSEMBL_URLMAP,
+    "phaidra": PHAIDRA_URLMAP,
+    "maptilerserver": MAPTILERSERVER_URLMAP,
+    "mytardis": MYTARDIS_URLMAP,
+    "nyudatacatalog": NYUDATACATALOG_URLMAP,
     # Tier B
     "lizmap": LIZMAP_URLMAP,
     "mapbender": MAPBENDER_URLMAP,
@@ -825,13 +1290,17 @@ DRAFT_CATALOGS_URLMAP = {
     "bitrix": BITRIX_URLMAP,
     "converis": CONVERIS_URLMAP,
     "surveysolutions": SURVEYSOLUTIONS_URLMAP,
-    "smw": SMW_URLMAP,
 }
 
-# Software with has_api=Yes but NO draft URLMAP (see devdocs note)
+# Software reviewed for auto-fill: do not invent relative API paths.
+# Entries that now have a URLMAP were removed from this list.
 NO_STANDARD_PROBE = {
     "activemapgis": "Proprietary GIS; no documented public REST on portal URL.",
     "aodn": "AODN portal search API path varies (/portal/search/api).",
+    "axiomportal": "Axiom Data Science portals; instance-specific ERDDAP/API hosts.",
+    "cadenza": "disy Cadenza; JSF workbook paths, no stable anonymous catalog API.",
+    "cardo": "cardo GIS viewers; no shared REST path on the portal URL.",
+    "copernicuscds": "CDS retrieve API needs a personal access token, not on catalog link.",
     "d4science": "VRE platform; API behind auth, no stable relative path.",
     "datacubews": "Datacube OWS only; link often points at OWS not STAC root.",
     "datafair": "Data Fair/Koumoul; instance-specific API paths.",
@@ -844,28 +1313,40 @@ NO_STANDARD_PROBE = {
     "dataworldbankorg": "API on api.worldbank.org not catalog link.",
     "datalad": "DataLad/git annex – no HTTP API on portal link; git-only.",
     "dlibra": "dLibra OAI/REST varies by install; no single path.",
-    "elitegis": "ArcGIS-compatible /elitegis/rest/services (see arcgisserver).",
-    "erdasapollo": "ERDAS APOLLO proprietary services.",
+    "ewmapa": "geoportal2.pl HTML viewers; WMS often 403 and path is instance-specific.",
+    "fedora": "Fedora LDP/OAI is behind a public UI; leftover links are not Fedora roots.",
+    "gcnavi": "GC Navi municipal viewers; no documented catalog API on the viewer URL.",
+    "genesisonline": "GENESIS-Online web services are POST-only (Destatis as of mid-2025).",
+    "geonomics": "Kazakh municipal GIS; no shared REST path.",
+    "geomediawebmap": "Hexagon GeoMedia WebMap; no standard relative catalog API.",
     "geoportalrlp": "Custom geoportal CMS; sitemap only in records.",
-    "icat": "ICAT REST at /icat/api/v1 but path prefix varies.",
+    "gisoftgis": "GISoft GIS viewers; no documented public REST on portal URL.",
     "ilostat": "ILOSTAT bulk download; no API on www host.",
     "instdb": "Institutional CRIS; generic /api per site.",
-    "lizmap": "Listed in draft – high path variance.",
-    "mapbender": "Listed in draft – admin API needs JWT.",
-    "mytardis": "MyTardis REST at /api/v1/ but auth required.",
-    "obibamica": "Listed in draft.",
+    "jdop": "Zhejiang JDOP portals; no documented anonymous default API path.",
+    "mangomap": "MangoMap hosted maps; no shared catalog API on /maps URLs.",
+    "mapapps": "con terra map.apps; OWS service names are instance-specific.",
+    "mapbiomas": "MapBiomas country platforms; no shared catalog API on plataforma URLs.",
+    "mapserver": "MapServer CGI/OWS path is instance-specific (not a generic /geomet).",
+    "masterportal": "Masterportal config/service JSON names are instance-specific.",
+    "modaopendata": "Taiwan MODA OpenAPI swagger path is not present on all city portals.",
+    "netgisserver": "NetCAD KEOS/NetGIS; no documented public REST on /keos URLs.",
+    "nolis": "NOL-IS municipal viewers; no documented catalog API on the viewer URL.",
+    "ogdindia": "OGD Platform India dataset APIs require a registered API key.",
     "omegapsir": "Omega-PSIR Seam pages; no REST catalog.",
     "opendatacube": "STAC under explorer path – use stacserver rules.",
     "opengeoportal": "Legacy OGP; OAI and Solr paths vary.",
+    "oportal": "Inspur oPortal; no verified anonymous default API on /oportal URLs.",
     "oracleapex": "APEX apps; no standard API on portal URL.",
-    "pomosam": "Slovak eGov CMS; sitemap only in 64 records.",
+    "pomosam": "Slovak eGov CMS; sitemap only, no public API documentation found.",
     "pydap": "PyDAP server root; overlap with opendap/thredds.",
-    "samvera": "Samvera/Hyrax family – use hyrax rules.",
-    "smartfindersdi": "Custom SDI portals; sitemap only.",
-    "smw": "Semantic MediaWiki ask API – /api.php?action=askargs.",
-    "stacserver": "Listed in draft.",
-    "supermapiserver": "SuperMap iServer REST at /iserver/services but path varies.",
+    "reearth": "Re:Earth/PLATEAU VIEW; 3D viewer, no catalog harvest API on the viewer URL.",
+    "seoulopendataplaza": "Open API developer space requires a key; sitemaps only on some tenants.",
+    "seue": "Catalan seu-e.cat HTML transparency pages, not a machine catalog API.",
+    "smartfindersdi": "Custom SDI portals; CSW path varies, sitemap only on most records.",
     "superstar": "Space-Time Research SuperSTAR; desktop/server product.",
+    "tianditu": "Tianditu viewers; no documented anonymous catalog API on provincial hosts.",
+    "wagmap": "わが街ガイド HTML geoportals; /opendata/ is HTML, not a harvest API.",
+    "weboffice": "VertiGIS WebOffice; no standard relative catalog API on the viewer URL.",
     "whoint": "WHO website; not a data API on link.",
-    "pomosam": "No public API documentation found.",
 }
