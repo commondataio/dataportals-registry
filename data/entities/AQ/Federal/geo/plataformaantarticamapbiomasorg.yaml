@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,13 @@ coverage:
       name: Antarctica
 description: MapBiomas Antarctica platform of land-cover maps for ice-free areas of
   Antarctica, produced using the MapBiomas network methods.
+endpoints:
+- type: customapi
+  url: https://plataforma.mapbiomas.org/api/v1/antarctica/themes?tenantId=mapbiomas
+  version: '1'
+- type: customapi
+  url: https://plataforma.mapbiomas.org/api/v1/antarctica/themes/subthemes?tenantId=mapbiomas
+  version: '1'
 id: plataformaantarticamapbiomasorg
 langs:
 - id: EN
@@ -53,6 +60,7 @@ tags:
 - satellite
 - MapBiomas
 - Antarctica
+- has_api
 topics:
 - id: ENVI
   name: Environment

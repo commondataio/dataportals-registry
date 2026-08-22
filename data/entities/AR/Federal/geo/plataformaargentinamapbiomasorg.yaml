@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
       name: South America
 description: MapBiomas Argentina platform of annual land-cover and land-use maps for
   Argentina, produced from Landsat imagery using the shared MapBiomas network methods.
+endpoints:
+- type: wms130
+  url: https://shared-geoserver.mapbiomas.org/geoserver/mapbiomas-argentina/wms?service=WMS&version=1.3.0&request=GetCapabilities
+  version: 1.3.0
 id: plataformaargentinamapbiomasorg
 langs:
 - id: ES

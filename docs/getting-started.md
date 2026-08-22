@@ -2,7 +2,7 @@
 
 dataportals-registry is a **reference-data registry** of open data portals, geoportals, scientific repositories, and related data infrastructure. Source records are YAML; consumers should prefer the exported datasets. High-volume platforms include CKAN, GeoNetwork, Dataverse, ArcGIS, **openEO**, **mviewer**, and **DHIS2** — full map: [software-index.md](software-index.md). Code is MIT; data and documentation are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Record counts (published snapshot vs current source): [exports.md](exports.md#record-counts).
+Latest snapshot (v1.15.0, 22 August 2026): **19,140** verified catalog entities, **17** scheduled records, and **223** software definitions across **217** country/territory folders. Published JSONL, Parquet, and DuckDB exports match this count. Record-count contract: [exports.md](exports.md#record-counts).
 
 ## Fastest path (analytics)
 

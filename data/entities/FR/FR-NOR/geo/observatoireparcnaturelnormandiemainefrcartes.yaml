@@ -1,0 +1,65 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-NOR
+      name: Normandie
+description: mviewer of the Parc naturel régional / Géoparc Normandie-Maine territory.
+endpoints:
+- type: mviewer:config
+  url: https://observatoire.parc-naturel-normandie-maine.fr/carteetdonnees/apps/carte-generale.xml
+- type: mviewer:config
+  url: https://observatoire.parc-naturel-normandie-maine.fr/apps/carte-generale.xml
+id: observatoireparcnaturelnormandiemainefrcartes
+langs:
+- id: FR
+  name: French
+link: https://observatoire.parc-naturel-normandie-maine.fr/carteetdonnees/?config=apps/carte-generale.xml
+name: Parc naturel régional Normandie-Maine
+owner:
+  link: https://www.parc-naturel-normandie-maine.fr
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Parc naturel régional Normandie-Maine
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00026757

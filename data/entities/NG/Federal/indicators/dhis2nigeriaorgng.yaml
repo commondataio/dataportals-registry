@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -17,6 +17,9 @@ coverage:
       name: Western Africa
 description: National DHIS2 HMIS of the Federal Ministry of Health, Nigeria. Login
   is required to query routine health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://dhis2nigeria.org.ng/dhis
 id: dhis2nigeriaorgng
 langs:
 - id: EN

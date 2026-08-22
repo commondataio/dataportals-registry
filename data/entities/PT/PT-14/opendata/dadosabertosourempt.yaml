@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-14
+      name: Santarém
+description: CKAN open data portal of the Municipality of Ourém, harvested by the
+  national dados.gov.pt catalog.
+endpoints:
+- type: ckan
+  url: https://dadosabertos.ourem.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dadosabertos.ourem.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dadosabertos.ourem.pt/api/3/action/package_list
+  version: '3'
+id: dadosabertosourempt
+langs:
+- id: PT
+  name: Portugal
+link: https://dadosabertos.ourem.pt
+name: Dados Abertos CM Ourém
+owner:
+  link: https://www.ourem.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-14
+      name: Santarém
+  name: Município de Ourém
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00026053

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -18,6 +18,9 @@ description: No actual metadata extraction was performed from the provided URL (
   as only the URL was given and no metadata content or structure was retrieved or
   parsed. For compliance with the request, no catalog-level metadata could be extracted
   directly from the URL alone.
+endpoints:
+- type: vufind:catalog
+  url: http://ri.uacj.mx
 id: riuacjmx
 langs:
 - id: ES

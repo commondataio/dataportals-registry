@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: General research repository
 content_types:
 - dataset
@@ -18,6 +18,12 @@ coverage:
 description: Original PHAIDRA instance of the University of Vienna for long-term archiving
   of research data, publications, and cultural heritage. The public API is behind
   a bot wall, so a live dataset count could not be confirmed.
+endpoints:
+- type: oaipmh20
+  url: https://phaidra.univie.ac.at/api/oai?verb=Identify
+  version: '2.0'
+- type: rest
+  url: https://phaidra.univie.ac.at/api/search/select
 id: phaidraunivieacat
 identifiers:
 - id: re3data
@@ -58,6 +64,7 @@ software:
 status: active
 tags:
 - scientific
+- has_api
 - institutional repository
 - research data
 - open access

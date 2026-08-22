@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,15 @@ coverage:
       id: AR-C
       name: Ciudad Autónoma de Buenos Aires
 description: Interactive city map powered by MapServer with transit and thematic layers.
+endpoints:
+- type: wms111
+  url: https://servicios.usig.buenosaires.gob.ar/mapcache/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wmts100
+  url: https://servicios.usig.buenosaires.gob.ar/mapcache/wmts/1.0.0/WMTSCapabilities.xml
+  version: 1.0.0
+- type: custom_api
+  url: https://epok.buenosaires.gob.ar/mapainteractivoba/layers
 id: mapabuenosairesgobar
 langs:
 - id: ES
@@ -41,7 +50,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Buenos Aires
+- Argentina
 topics:
 - id: TRAN
   name: Transport

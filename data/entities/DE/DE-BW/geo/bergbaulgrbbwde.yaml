@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: DE-BW
       name: Baden-Württemberg
 description: Baden-Württemberg mining spatial information system (RISBinBW) on MapServer.
+endpoints:
+- type: wms130
+  url: https://services.lgrb-bw.de/cgi-bin/mapserv.fcgi?map=/local/source/WWW/serverbase/umn/map/DEV/lgrb_topo_neu.map&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: bergbaulgrbbwde
 langs:
 - id: DE
@@ -41,7 +45,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- mining
+- Baden-Württemberg
+- Germany
 topics:
 - id: ENVI
   name: Environment

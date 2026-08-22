@@ -20,7 +20,7 @@ Each record describes one data catalog or repository: name, URL, owner, geograph
 
 ### How many instances?
 
-Approximately **18,420** verified entity YAML records (v1.14.0, 21 August 2026). The scheduled queue is empty. Export counts are listed in [README.md](README.md#data-exports).
+Approximately **19,140** verified entity YAML records (v1.15.0, 22 August 2026), plus **17** scheduled records. Export counts are listed in [README.md](README.md#data-exports).
 
 ### What data does each instance consist of?
 
@@ -72,6 +72,8 @@ Yes. Schema validation, software normalization, subregion ISO 3166-2 checks, URL
 ### Geographic coverage bias
 
 Coverage is **uneven by country**. United States records are heavily over-represented (~31% of entity records), followed by France, Spain, United Kingdom, Canada, and Germany. Many countries have sparse or no coverage.
+
+Type mix is **geoportal-heavy**: about **57%** of export rows are `catalog_type: Geoportal` (ArcGIS Server and ArcGIS Hub are the largest `software.id` values). About **15%** of catalogs use `software.id: custom` (no shared platform recipe). Scientific repositories and open-data portals are smaller slices than the page count of those guides might suggest.
 
 ### Metadata completeness
 

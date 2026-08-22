@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       id: '151'
       name: Eastern Europe
 description: Cartographic access to Romania national cultural heritage; MapServer.
+endpoints:
+- type: mapserver:catalog
+  url: https://map.cimec.ro/
 id: mapcimecro
 langs:
 - id: RO
@@ -35,7 +38,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- cultural heritage
+- Romania
 topics:
 - id: EDUC
   name: Education, culture and sport

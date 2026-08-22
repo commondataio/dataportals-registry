@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: BR
+      name: Brazil
+    level: 20
+    macroregion:
+      id: '005'
+      name: South America
+description: QGIS Server catalog of thematic map projects published by UEPG GETE (Grupo
+  de Estudos Territoriais), with a public project list and per-project WMS services
+  covering Brazilian territory, environment, and planning themes.
+endpoints:
+- type: wms130
+  url: https://memoriasdigitais.uepg.br/wms/FLORIANOPOLIS?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wms130
+  url: https://memoriasdigitais.uepg.br/wms/PLANO_DIRETOR_CERRO_AZUL_PR_1?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wfs100
+  url: https://memoriasdigitais.uepg.br/wms/FLORIANOPOLIS?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: 1.0.0
+id: memoriasdigitaisuepgbr
+langs:
+- id: PT
+  name: Portuguese
+link: https://memoriasdigitais.uepg.br/
+name: UEPG GETE Projetos QGIS Server
+owner:
+  link: https://www.uepg.br/
+  location:
+    country:
+      id: BR
+      name: Brazil
+    level: 30
+    subregion:
+      id: BR-PR
+      name: Paraná
+  name: Universidade Estadual de Ponta Grossa
+  type: Academy
+software:
+  id: qgisserver
+  name: QGIS Server
+status: active
+tags:
+- geospatial
+- academic
+- QGIS Server
+- Paraná
+- Brazil
+topics:
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Environment
+  name: Environment
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00026718

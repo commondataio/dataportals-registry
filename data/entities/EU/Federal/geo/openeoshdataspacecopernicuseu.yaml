@@ -1,0 +1,59 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Synchronous Sentinel Hub openEO backend on the Copernicus Data Space
+  Ecosystem, exposing Sentinel collections for standardized process-graph processing.
+endpoints:
+- type: stacserverapi
+  url: https://openeosh.dataspace.copernicus.eu/1.2/collections
+- type: openeo:processes
+  url: https://openeosh.dataspace.copernicus.eu/1.2/processes
+id: openeoshdataspacecopernicuseu
+langs:
+- id: EN
+  name: English
+link: https://openeosh.dataspace.copernicus.eu/1.2
+name: Sentinel Hub openEO (Copernicus Data Space Ecosystem)
+owner:
+  link: https://dataspace.copernicus.eu/
+  location:
+    country: *id001
+    level: 20
+  name: European Commission / Copernicus
+  type: Other
+software:
+  id: openeo
+  name: openEO
+status: active
+tags:
+- geospatial
+- has_api
+- STAC
+- openEO
+- Earth Observation
+- Sentinel Hub
+topics:
+- id: earth_observation
+  name: Earth observation
+  type: general
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: general
+uid: cdi00026716

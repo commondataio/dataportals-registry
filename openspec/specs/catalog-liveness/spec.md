@@ -1,7 +1,7 @@
 # catalog-liveness Specification
 
 ## Purpose
-TBD - created by archiving change add-liveness-monitoring-workflow. Update Purpose after archive.
+Scheduled HTTP probes of catalog `link` URLs, written to `dataquality/liveness_report.jsonl`.
 ## Requirements
 ### Requirement: Scheduled URL Liveness Probing
 The project MUST provide a script to probe catalog URL reachability.

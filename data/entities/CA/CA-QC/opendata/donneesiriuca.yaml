@@ -1,0 +1,70 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    macroregion:
+      id: '021'
+      name: Northern America
+    subregion:
+      id: CA-QC
+      name: Quebec
+description: CKAN catalog operated by the Institut de la résilience et de l'innovation
+  urbaine, publishing datasets from Quebec municipalities, researchers, and partners.
+id: donneesiriuca
+langs:
+- id: EN
+  name: English
+- id: FR
+  name: French
+link: https://donnees.iriu.ca
+name: IRIU Federated Data Hub
+owner:
+  link: https://iriu.ca
+  location:
+    country:
+      id: CA
+      name: Canada
+    level: 30
+    subregion:
+      id: CA-QC
+      name: Quebec
+  name: Institut de la résilience et de l'innovation urbaine
+  type: Civil society
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- geospatial
+- open data
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+uid: cdi00026094
+endpoints:
+- type: ckan
+  url: https://donnees.iriu.ca/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://donnees.iriu.ca/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://donnees.iriu.ca/api/3/action/package_list
+  version: '3'

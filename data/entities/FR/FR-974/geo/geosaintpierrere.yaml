@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,12 @@ coverage:
       name: La Réunion
 description: Official GeoMapFish geoportal of the City of Saint-Pierre (Réunion),
   providing interactive maps of municipal geodata.
+endpoints:
+- type: geomapfish:themes
+  url: https://geo.saintpierre.re/themes
+- type: wmts100
+  url: https://geo.saintpierre.re/tiles/1.0.0/WMTSCapabilities.xml
+  version: '1.0.0'
 id: geosaintpierrere
 langs:
 - id: FR

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
       name: Minnesota
 description: Public map viewer of the Minnesota Metropolitan Mosquito Control District;
   MapServer WMS.
+endpoints:
+- type: wms130
+  url: https://arcgis.metc.state.mn.us/arcgis/rest/services/BaseLayer/BasemapWM/MapServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: formsmmcdorg
 langs:
 - id: EN
@@ -42,7 +46,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- public health
+- Minnesota
+- United States
 topics:
 - id: HEAL
   name: Health

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-MN
       name: Minnesota
 description: Minnesota recreation opportunities map; MapServer and MapCache.
+endpoints:
+- type: mapserver:catalog
+  url: https://www.dnr.state.mn.us/maps/compass.html
 id: wwwdnrstatemnus
 langs:
 - id: EN
@@ -41,7 +44,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- recreation
+- Minnesota
+- United States
 topics:
 - id: EDUC
   name: Education, culture and sport

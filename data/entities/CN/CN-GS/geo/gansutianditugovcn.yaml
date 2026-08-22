@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
       name: Gansu Sheng
 description: Provincial geographic information public service platform (Map World
   / Tianditu) of Gansu.
+endpoints:
+- type: wmts100
+  url: https://gansu.tianditu.gov.cn/fmserver/service/img_c_2020tdtlz/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetCapabilities
+  version: 1.0.0
 id: gansutianditugovcn
 langs:
 - id: ZH

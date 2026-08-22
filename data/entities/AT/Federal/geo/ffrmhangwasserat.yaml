@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,7 +15,19 @@ coverage:
     macroregion:
       id: '155'
       name: Western Europe
-description: Flash flood risk map (FFRM) geoportal.
+description: Flash flood risk map (FFRM) for Upper Austria from the EU SWITCH-ON
+  project. The viewer publishes WMS layers for maximum inundation depth and
+  potential flood damage from intense rainfall.
+endpoints:
+- type: wms130
+  url: https://wms.hangwasser.at/cgi-bin/qgis_mapserv.fcgi?map=/home/qgis/projects/FFRM.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: 1.3.0
+- type: wms111
+  url: https://wms.hangwasser.at/cgi-bin/qgis_mapserv.fcgi?map=/home/qgis/projects/FFRM.qgs&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
+  version: 1.1.1
+- type: wfs110
+  url: https://wms.hangwasser.at/cgi-bin/qgis_mapserv.fcgi?map=/home/qgis/projects/FFRM.qgs&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities
+  version: 1.1.0
 id: ffrmhangwasserat
 langs:
 - id: DE
@@ -32,10 +44,16 @@ owner:
   name: Hangwasser / FFRM
   type: Business
 software:
-  id: mapserver
-  name: MapServer
+  id: qgisserver
+  name: QGIS Server
 status: active
-tags: []
+tags:
+- geospatial
+- commercial
+- has_api
+- QGIS Server
+- flood
+- Austria
 topics:
 - id: ENVI
   name: Environment

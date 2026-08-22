@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,9 @@ coverage:
 description: National DHIS2 Education Management Information System of the Federal
   Ministry of Education for the Annual School Census. Login is required to query education
   indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://asc.education.gov.ng/dhis
 id: asceducationgovng
 langs:
 - id: EN

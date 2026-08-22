@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -22,7 +22,7 @@ id: redatamorgbinatg
 langs:
 - id: EN
   name: English
-link: https://redatam.org/binatg/RpWebEngine.exe/Portal?BASE=ATGPHC2011&lang=ENG
+link: https://prod.redatam.org/binatg/RpWebEngine.exe/Portal?BASE=ATGPHC2011&lang=ENG
 name: Antigua and Barbuda REDATAM Census
 owner:
   link: https://statistics.gov.ag
@@ -65,3 +65,8 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00022007
+endpoints:
+- type: redatam
+  url: https://prod.redatam.org/binatg/RpWebEngine.exe/Portal?BASE=ATGPHC2011&lang=ENG
+- type: redatam
+  url: https://prod.redatam.org/binatg/RpWebEngine.exe/Portal

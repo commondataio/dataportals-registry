@@ -8,6 +8,7 @@ from builder import (
     check_owner_type_values,
     check_path_country_consistency,
     check_software_expected_endpoints,
+    check_title_quality,
     check_urls,
     choose_duplicate_keeper,
     get_priority_level,
@@ -32,8 +33,20 @@ def test_link_serves_as_api_endpoint_arcgis():
     assert link_serves_as_api_endpoint(
         "arcgisserver", "https://gis.example.gov/server/rest/services/Base/MapServer"
     )
+    assert link_serves_as_api_endpoint(
+        "arcgisserver", "https://gis.example.gov/arcgis/services"
+    )
     assert not link_serves_as_api_endpoint(
         "arcgisserver", "https://gis.example.gov/opendata"
+    )
+
+
+def test_link_serves_as_api_endpoint_mapserver_cgi():
+    assert link_serves_as_api_endpoint(
+        "mapserver", "https://maps.example.gov/cgi-bin/mapserv"
+    )
+    assert not link_serves_as_api_endpoint(
+        "mapserver", "https://maps.example.gov/viewer"
     )
 
 
@@ -216,6 +229,33 @@ def test_duplicate_coverage_flags_repeated_national_entry():
         issue for issue in (result or []) if issue["issue_type"] == "DUPLICATE_COVERAGE"
     ]
     assert len(duplicate_issues) == 1
+
+
+def test_title_quality_iso_footnote_does_not_raise():
+    """ISO 3166 names like 'Congo (the) [h]' must not crash urlparse."""
+    record = {
+        "name": "Congo (the) \u200a [h] - WIS 2.0 in a box",
+        "link": "https://wis.dirmet.cg",
+    }
+    assert check_title_quality(record) is None
+
+
+def test_title_quality_accepts_human_readable_name():
+    record = {
+        "name": "Congo - WIS 2.0 in a box",
+        "link": "https://wis.dirmet.cg",
+    }
+    assert check_title_quality(record) is None
+
+
+def test_title_quality_flags_bare_domain():
+    record = {
+        "name": "wis.dirmet.cg",
+        "link": "https://wis.dirmet.cg",
+    }
+    issues = check_title_quality(record)
+    assert issues
+    assert all(i["issue_type"] == "PLACEHOLDER_TITLE" for i in issues)
 
 
 def test_duplicate_coverage_allows_multi_country():

@@ -1,7 +1,7 @@
 # subregion-validation Specification
 
 ## Purpose
-TBD - created by archiving change update-subregion-reference-source. Update Purpose after archive.
+Validate `owner` and `coverage` subregion codes against a complete ISO 3166-2 reference file.
 ## Requirements
 ### Requirement: Authoritative ISO 3166-2 Reference Data
 The registry MUST validate subregion codes against a complete ISO 3166-2 reference dataset.

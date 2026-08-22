@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,15 @@ coverage:
       name: Heilongjiang Sheng
 description: Provincial geographic information public service platform (Map World
   / Tianditu) of Heilongjiang.
+endpoints:
+- type: supermapiportal:web
+  url: https://heilongjiang.tianditu.gov.cn/iportal/web.rjson
+- type: supermapiportal:maps
+  url: https://heilongjiang.tianditu.gov.cn/iportal/web/maps.json
+- type: supermapiportal:services
+  url: https://heilongjiang.tianditu.gov.cn/iportal/web/services.json
+- type: supermapiportal:datas
+  url: https://heilongjiang.tianditu.gov.cn/iportal/web/datas.json
 id: heilongjiangtianditugovcn
 langs:
 - id: ZH

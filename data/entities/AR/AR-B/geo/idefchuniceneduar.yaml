@@ -15,6 +15,18 @@ coverage:
       name: Buenos Aires
 description: Infraestructura de Datos Espaciales de la Facultad de Ciencias Humanas
   (FCH), Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN).
+endpoints:
+- type: geonetwork:query
+  url: https://geoserver.fch.unicen.edu.ar/geonetwork/srv/eng/q
+- type: csw202
+  url: https://geoserver.fch.unicen.edu.ar/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://geoserver.fch.unicen.edu.ar/geonetwork/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://geoserver.fch.unicen.edu.ar/geonetwork/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
 id: idefchuniceneduar
 langs:
 - id: ES
@@ -53,7 +65,8 @@ tags:
 - GIS
 - academic
 - geospatial
-api_status: uncertain
+api: true
+api_status: active
 content_types:
 - dataset
 - map_layer

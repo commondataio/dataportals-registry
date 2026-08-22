@@ -87,15 +87,15 @@ Do not hand-edit `data/datasets/`.
 
 ## Data exports
 
-Last published snapshot (**v1.14.0**, 2026-08-21):
+Last published snapshot (**v1.15.0**, 2026-08-22):
 
-- `data/datasets/catalogs.jsonl` (+ `.zst`): **18,420** catalog records
-- `data/datasets/software.jsonl` (+ `.zst`): **211** software/platform definitions
-- `data/datasets/scheduled.jsonl` (+ `.zst`): 0 scheduled sources to crawl
-- `data/datasets/full.jsonl` (+ `.zst`): **18,420** combined entities + scheduled records
+- `data/datasets/catalogs.jsonl` (+ `.zst`): **19,140** catalog records
+- `data/datasets/software.jsonl` (+ `.zst`): **223** software/platform definitions
+- `data/datasets/scheduled.jsonl` (+ `.zst`): **17** scheduled sources to crawl
+- `data/datasets/full.jsonl` (+ `.zst`): **19,157** combined entities + scheduled records
 - `data/datasets/full.parquet`, `data/datasets/datasets.duckdb`: analytics-friendly exports
 
-Source YAML matches this snapshot: **18,420** entities, **0** scheduled, **211** platform definitions, **217** country/territory folders.
+Source YAML matches this snapshot: **19,140** entities, **17** scheduled, **223** platform definitions, **217** country/territory folders.
 
 Run `python scripts/builder.py build` to refresh JSONL, Parquet, and DuckDB to match source. All `.zst` files can be decompressed with `unzstd file.zst` (zstd). Filter by catalog type or software in DuckDB rather than looking for pre-sliced dumps.
 

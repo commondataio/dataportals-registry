@@ -1,67 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: AU
 ================================================================================
-Generated: 2026-08-21 21:44:57
+Generated: 2026-08-22 19:39:25
 Country Code: AU
-Total Records with Issues: 5
-Total Issues Found: 5
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF]
 Count: 1
 Priority: MEDIUM
 
-File: AU/Federal/scientific/seedbankalaorgau.yaml
-Record ID: seedbankalaorgau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA
+File: AU/Federal/scientific/esgfnciorgaumetagrid.yaml
+Record ID: esgfnciorgaumetagrid
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF
 Field: endpoints
-Current Value: {'software_id': 'ala', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='ala' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA]
-Count: 2
-Priority: MEDIUM
-
-File: AU/AU-QLD/scientific/espacelibraryuqeduau.yaml
-Record ID: espacelibraryuqeduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA
-Field: endpoints
-Current Value: {'software_id': 'fedora', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fedora' is marked as API-capable in software definitions
-
-File: AU/AU-ACT/scientific/datacommonsanueduau.yaml
-Record ID: datacommonsanueduau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA
-Field: endpoints
-Current Value: {'software_id': 'fedora', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='fedora' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA]
-Count: 1
-Priority: MEDIUM
-
-File: AU/AU-VIC/geo/mapfindandconnectgovau.yaml
-Record ID: mapfindandconnectgovau
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA
-Field: endpoints
-Current Value: {'software_id': 'terria', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='terria' is marked as API-capable in software definitions
-
-[STATUS_API_STATUS_MISMATCH]
-Count: 1
-Priority: MEDIUM
-
-File: AU/Federal/geo/nationalmapgovau.yaml
-Record ID: nationalmapgovau
-Issue: STATUS_API_STATUS_MISMATCH
-Field: api_status
-Current Value: {'status': 'inactive', 'api_status': 'active'}
-Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+Current Value: {'software_id': 'esgf', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='esgf' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ALA: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_FEDORA: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_TERRIA: 1 issue
-STATUS_API_STATUS_MISMATCH: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF: 1 issue

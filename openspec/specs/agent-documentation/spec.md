@@ -1,7 +1,7 @@
 # agent-documentation Specification
 
 ## Purpose
-TBD - created by archiving change add-agent-facing-data-contract. Update Purpose after archive.
+Root `llms.txt`, `DATASHEET.md`, `CITATION.cff`, and `SECURITY.md` so LLM agents and researchers can find consumption contracts, citation, and disclosure paths.
 ## Requirements
 ### Requirement: LLM Agent Index File
 The repository MUST provide an `llms.txt` file at the root for agent discovery.

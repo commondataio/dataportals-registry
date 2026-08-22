@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -19,6 +19,9 @@ description: Interactive statistical database of the Bangko Sentral ng Pilipinas
   indicators, including the balance of payments, external trade, international reserves,
   exchange rates, monetary and banking accounts, prices, and related surveys. Built
   on the PC-Axis / PX-Web 2007 engine.
+endpoints:
+- type: pxweb:catalog
+  url: https://www.bsp.gov.ph/PXWeb2007/Dialog/statfile1.asp
 id: wwwbspgovph
 langs:
 - id: EN

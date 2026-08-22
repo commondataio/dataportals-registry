@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: FR-NAQ
       name: Nouvelle-Aquitaine
 description: Lot-et-Garonne orchid observatory map (CPIE 47).
+endpoints:
+- type: wms130
+  url: https://qgis-carto.observatoire-environnement.org/cgi-bin/qgis_mapserv.fcgi?map=/var/www/lizmap_projets/orchidees47/wms_orchidees47.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: cpie47observatoireenvironnementorg
 langs:
 - id: FR
@@ -38,10 +42,16 @@ owner:
   name: CPIE 47 / Observatoire de l'environnement
   type: Civil society
 software:
-  id: mapserver
-  name: MapServer
+  id: qgisserver
+  name: QGIS Server
 status: active
-tags: []
+tags:
+- geospatial
+- civil society
+- QGIS Server
+- biodiversity
+- Nouvelle-Aquitaine
+- France
 topics:
 - id: ENVI
   name: Environment

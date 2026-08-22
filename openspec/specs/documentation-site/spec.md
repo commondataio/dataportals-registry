@@ -1,7 +1,7 @@
 # documentation-site Specification
 
 ## Purpose
-TBD - created by archiving change add-docusaurus-documentation-site. Update Purpose after archive.
+Publish internals documentation from `docs/` via Docusaurus on GitHub Pages, keeping `devdocs/` as working notes only.
 ## Requirements
 ### Requirement: Published documentation source
 The repository MUST keep human- and agent-facing internals documentation as Markdown under `docs/`, separate from working notes in `devdocs/`.

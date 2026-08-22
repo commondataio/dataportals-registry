@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: '155'
       name: Western Europe
 description: FAIR Data Point of Erasmus University Medical Center.
+endpoints:
+- type: dcat:ttl
+  url: https://fdp.erasmusmc.nl
 id: fdperasmusmcnl
 langs:
 - id: EN
@@ -34,7 +37,12 @@ software:
   id: fairdatapoint
   name: FAIR Data Point
 status: active
-tags: []
+tags:
+- metadata
+- FAIR
+- academic
+- health
+- Netherlands
 topics:
 - id: HEAL
   name: Health

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -33,6 +33,9 @@ description: Geodata catalog of GIS Daten AG for the cantons of Obwalden and Nid
   Metadata are captured in the GM03 standard of KOGIS and published via geocat.ch.
   The catalog lists Geobasisdaten under federal and cantonal law, including responsible
   bodies and contact persons.
+endpoints:
+- type: geonetwork:catalog
+  url: https://www.gis-daten.ch/geodaten/geodatenkatalog/
 id: wwwgisdatench
 langs:
 - id: DE

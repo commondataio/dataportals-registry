@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
 description: Public inventory of digitally reconstructed neurons. Each cell record
   is a downloadable morphology dataset with metadata on species, brain region, and
   archive source.
+endpoints:
+- type: fedora:catalog
+  url: https://neuromorpho.org/
 id: neuromorphoorg
 identifiers:
 - id: re3data
@@ -26,7 +29,7 @@ langs:
 - id: EN
   name: English
 link: https://neuromorpho.org/
-name: NeuroMorpho.Org
+name: NeuroMorpho Neuron Morphology Repository
 owner:
   link: https://www.gmu.edu
   location:

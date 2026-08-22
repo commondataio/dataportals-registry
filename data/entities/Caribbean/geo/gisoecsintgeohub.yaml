@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
 description: OECS ArcGIS Hub geospatial repository for exploring, visualizing, and
   downloading geospatial content supporting decision making in OECS member states,
   including Dominica.
+endpoints:
+- type: arcgis:portals:self
+  url: https://gis.oecs.int/portal/sharing/rest/portals/self?f=pjson
 id: gisoecsintgeohub
 langs:
 - id: EN
@@ -37,7 +40,11 @@ software:
   id: arcgishub
   name: ArcGIS Hub
 status: active
-tags: []
+tags:
+- geospatial
+- international
+- ArcGIS Hub
+- Caribbean
 topics:
 - id: INTR
   name: International issues

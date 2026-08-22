@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: '034'
       name: Southern Asia
 description: India forest fire geo-portal with MapServer WMS.
+endpoints:
+- type: wms130
+  url: https://vanagniportal.fsiforestfire.gov.in/cgi-bin/mapserv.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: vanagniportalfsiforestfiregovin
 langs:
 - id: EN
@@ -35,7 +39,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- forest fire
+- forest
+- India
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

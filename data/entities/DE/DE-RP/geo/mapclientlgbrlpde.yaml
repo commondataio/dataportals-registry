@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: DE-RP
       name: Rheinland-Pfalz
 description: Rhineland-Palatinate geological survey map client (MapServer).
+endpoints:
+- type: wms130
+  url: https://mapserver.lgb-rlp.de/cgi-bin/back_standard?&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: mapclientlgbrlpde
 langs:
 - id: DE
@@ -41,7 +45,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- geology
+- Rheinland-Pfalz
+- Germany
 topics:
 - id: ENVI
   name: Environment

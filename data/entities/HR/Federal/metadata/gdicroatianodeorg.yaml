@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: '039'
       name: Southern Europe
 description: Croatian node FAIR Data Point of the European Genomic Data Infrastructure.
+endpoints:
+- type: dcat:ttl
+  url: https://gdi-croatia-node.org
 id: gdicroatianodeorg
 langs:
 - id: EN
@@ -34,7 +37,12 @@ software:
   id: fairdatapoint
   name: FAIR Data Point
 status: active
-tags: []
+tags:
+- metadata
+- FAIR
+- international
+- genomics
+- Croatia
 topics:
 - id: HEAL
   name: Health

@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,9 @@ coverage:
 description: National DHIS2 instance of the Directorate General of Health Services
   for aggregated health-facility reporting (upazila level and above). Login is required
   to query routine health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://centraldhis.mohfw.gov.bd
 id: centraldhismohfwgovbd
 langs:
 - id: BN

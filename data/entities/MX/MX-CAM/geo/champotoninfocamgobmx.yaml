@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
       name: Campeche
 description: Municipal spatial registry (SARE) for Champotón, Campeche; MapServer
   WMS.
+endpoints:
+- type: wms130
+  url: http://champoton.infocam.gob.mx/cgi-bin/mapserv?map=/var/www/sedeco/capas/zonas_permitidas.map&layers=giros_permitidos&giros_seleccion=clasificar&permitidos=&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: champotoninfocamgobmx
 langs:
 - id: ES
@@ -42,7 +46,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Campeche
+- Mexico
 topics:
 - id: Location
   name: Location

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Antalya
 description: Public KEOS city-guide map of Alanya municipality, backed by NetGIS Server
   7.2.
+endpoints:
+- type: netgisserver:runxml
+  url: https://keos.alanya.bel.tr/Keos/handlers/runXMLHandler.ashx
 id: keosalanyabeltr
 langs:
 - id: TR

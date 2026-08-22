@@ -1,8 +1,8 @@
 access_mode:
 - open
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -19,6 +19,9 @@ coverage:
 description: Official SuperWEB2 table builder of Statistics South Africa. Users build
   custom tables from census and survey indicators. Registration is required for full
   access.
+endpoints:
+- type: superstar:catalog
+  url: https://superweb.statssa.gov.za/webapi/jsf/login.xhtml
 id: superwebstatssagovza
 langs:
 - id: EN

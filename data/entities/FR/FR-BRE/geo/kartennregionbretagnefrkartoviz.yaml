@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-BRE
+      name: Bretagne
+description: Région Bretagne thematic map viewer (Kartenn / mviewer) for regional
+  geospatial layers.
+endpoints:
+- type: mviewer:catalog
+  url: https://kartenn.region-bretagne.fr/kartoviz/
+id: kartennregionbretagnefrkartoviz
+langs:
+- id: FR
+  name: French
+link: https://kartenn.region-bretagne.fr/kartoviz/
+name: Kartenn
+owner:
+  link: https://www.bretagne.bzh
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Région Bretagne
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00026736

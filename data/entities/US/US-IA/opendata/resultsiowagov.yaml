@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - indicator
@@ -21,6 +21,9 @@ coverage:
 description: State of Iowa Enterprise Strategic Dashboards. Government performance
   and transparency portal with Iowa Data (Public), Iowa Checkbook, and policies. Managed
   by the Office of the Governor, Department of Management.
+endpoints:
+- type: socrata:search
+  url: https://results.iowa.gov/api/catalog/v1?only=datasets&limit=1
 id: resultsiowagov
 langs:
 - id: EN

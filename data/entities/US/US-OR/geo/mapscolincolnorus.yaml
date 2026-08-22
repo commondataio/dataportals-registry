@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-OR
       name: Oregon
 description: County GIS interactive maps; MapServer and GeoMoose.
+endpoints:
+- type: masterportal:config
+  url: https://maps.co.lincoln.or.us/config.js
 id: mapscolincolnorus
 langs:
 - id: EN
@@ -41,7 +44,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Oregon
+- United States
 topics:
 - id: Location
   name: Location

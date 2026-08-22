@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,13 @@ coverage:
       id: '151'
       name: Eastern Europe
 description: Forest landscape information system maps from CzechGlobe (MapServer).
+endpoints:
+- type: wms130
+  url: https://mapserver.czechglobe.cz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
+- type: wms130
+  url: https://mapserver.czechglobe.cz/geoserver-biomapa/data/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
 id: mapserverczechglobecz
 langs:
 - id: CS
@@ -35,7 +42,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- academic
+- MapServer
+- forest
+- Czech Republic
 topics:
 - id: AGRI
   name: Agriculture, fisheries, forestry and food

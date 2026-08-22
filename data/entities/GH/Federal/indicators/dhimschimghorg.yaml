@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -17,6 +17,9 @@ coverage:
       name: Western Africa
 description: National DHIS2 DHIMS2 instance operated by the Centre for Health Information
   Management, Ghana Health Service. Login is required to query routine health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://dhims.chimgh.org/dhims
 id: dhimschimghorg
 langs:
 - id: EN

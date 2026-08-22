@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
 description: Institutional repository collecting, preserving, and providing open access
   to research and scholarship from Louisiana State University, including research
   data collections, theses, and publications.
+endpoints:
+- type: oaipmh20
+  url: https://repository.lsu.edu/do/oai/?verb=Identify
+  version: '2.0'
 id: repositorylsuedu
 langs:
 - id: EN

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Microdata catalog
 content_types:
 - microdata
@@ -21,7 +21,7 @@ id: redataminegobve
 langs:
 - id: ES
   name: Spanish
-link: http://www.redatam.ine.gob.ve/Censo2011/
+link: http://redatam.ine.gob.ve/Censo2011/
 name: Venezuela INE REDATAM Censos
 owner:
   link: http://www.ine.gob.ve
@@ -64,3 +64,8 @@ topics:
   name: Society
   type: iso19115
 uid: cdi00023335
+endpoints:
+- type: redatam
+  url: http://redatam.ine.gob.ve/vencgibin/RpWebEngine.exe/PortalAction?MODE=MAIN&BASE=CPV2011&MAIN=WebServerMain.inl
+- type: redatam
+  url: http://redatam.ine.gob.ve/vencgibin/RpWebEngine.exe/InlPage

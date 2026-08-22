@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -22,6 +22,9 @@ description: PLACE (Position-based Library Archive Coordinate Explorer) is a Uni
   of New Hampshire geospatial search interface for discovering and downloading digital
   map collections, air photos, and related spatial data. It is an OpenGeoPortal-compatible
   catalog built with Solr for federated OGP search.
+endpoints:
+- type: opengeoportal:catalog
+  url: https://place.unh.edu/
 id: placeunhedu
 langs:
 - id: EN

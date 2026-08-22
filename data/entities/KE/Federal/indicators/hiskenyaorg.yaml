@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,9 @@ coverage:
 description: National DHIS2 instance of the Kenya Ministry of Health for aggregate
   health-facility reporting and analysis. Login is required to query routine HMIS
   indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://hiskenya.org
 id: hiskenyaorg
 langs:
 - id: EN

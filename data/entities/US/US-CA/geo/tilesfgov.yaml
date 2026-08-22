@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Northern America
 description: Public MapTiler Server catalog of map styles and tilesets operated by
   the City and County of San Francisco.
+endpoints:
+- type: maptilerserver:catalog
+  url: https://tile.sf.gov
 id: tilesfgov
 langs:
 - id: EN

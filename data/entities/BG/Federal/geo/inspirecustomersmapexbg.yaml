@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 catalog_type: Geoportal
 coverage:
 - location:
@@ -11,6 +12,9 @@ coverage:
       id: '151'
       name: 'Eastern Europe '
 description: National portal for spatial data (INSPIRE). Managed by Mapex.
+endpoints:
+- type: geonetwork:catalog
+  url: https://inspire.customers.mapex.bg/
 id: inspirecustomersmapexbg
 langs:
 - id: BG
@@ -48,7 +52,7 @@ topics:
   name: Location
   type: iso19115
 uid: cdi00021744
-api_status: uncertain
+api_status: active
 content_types:
 - dataset
 - map_layer

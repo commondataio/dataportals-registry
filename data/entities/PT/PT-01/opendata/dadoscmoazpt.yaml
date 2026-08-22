@@ -1,0 +1,75 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: PT-01
+      name: Aveiro
+description: CKAN open data portal of the Municipality of Oliveira de Azeméis, listed
+  as a harvest source on dados.gov.pt.
+endpoints:
+- type: ckan
+  url: https://dados.cm-oaz.pt/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://dados.cm-oaz.pt/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://dados.cm-oaz.pt/api/3/action/package_list
+  version: '3'
+id: dadoscmoazpt
+langs:
+- id: PT
+  name: Portugal
+link: https://dados.cm-oaz.pt
+name: Dados Abertos Oliveira de Azeméis
+owner:
+  link: https://www.cm-oaz.pt
+  location:
+    country:
+      id: PT
+      name: Portugal
+    level: 30
+    subregion:
+      id: PT-01
+      name: Aveiro
+  name: Câmara Municipal de Oliveira de Azeméis
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- municipality
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+uid: cdi00026050

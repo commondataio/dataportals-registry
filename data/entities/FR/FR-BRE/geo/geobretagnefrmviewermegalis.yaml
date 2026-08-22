@@ -1,0 +1,63 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-BRE
+      name: Bretagne
+description: mviewer application showing usage of Mégalis Bretagne digital services.
+endpoints:
+- type: mviewer:config
+  url: https://geobretagne.fr/apps/megalis-services/config.xml
+id: geobretagnefrmviewermegalis
+langs:
+- id: FR
+  name: French
+link: https://geobretagne.fr/mviewer/?config=/apps/megalis-services/config.xml
+name: Usages des services numériques Mégalis Bretagne
+owner:
+  link: https://www.megalis.bretagne.bzh
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: Mégalis Bretagne
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+uid: cdi00026731

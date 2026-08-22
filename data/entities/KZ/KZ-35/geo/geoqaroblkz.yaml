@@ -1,5 +1,6 @@
 access_mode:
 - open
+api: true
 api_status: active
 catalog_type: Geoportal
 content_types:
@@ -19,6 +20,10 @@ coverage:
       name: Karagandinskaja oblast'
 description: Website for geospatial data catalog in Qarobl (Kazakhstan). Details not
   provided in search results.
+endpoints:
+- type: wms130
+  url: https://geo.qarobl.kz/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
 id: geoqaroblkz
 langs:
 - id: RU

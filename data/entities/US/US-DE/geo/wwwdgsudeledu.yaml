@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Catalog of digital datasets released by the Delaware Geological Survey,
   including geologic maps, groundwater and water-quality data, elevation and coastal
   inundation products, and other GIS and tabular earth-science data for Delaware.
+endpoints:
+- type: drupal:catalog
+  url: https://www.dgs.udel.edu/data
 id: wwwdgsudeledu
 langs:
 - id: EN
@@ -43,7 +46,7 @@ properties:
   has_doi: false
 rights:
   license_id: null
-  license_name: null
+  license_name: Delaware Geological Survey Terms of Use
   license_url: https://www.dgs.udel.edu/about-this-site
   privacy_policy_url: null
   rights_type: global

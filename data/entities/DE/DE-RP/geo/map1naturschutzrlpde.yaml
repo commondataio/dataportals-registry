@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: DE-RP
       name: Rheinland-Pfalz
 description: Environmental information WebGIS with MapServer OGC services.
+endpoints:
+- type: mapserver:catalog
+  url: http://map1.naturschutz.rlp.de/
 id: map1naturschutzrlpde
 langs:
 - id: DE
@@ -41,7 +44,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- environment
+- Rheinland-Pfalz
+- Germany
 topics:
 - id: ENVI
   name: Environment

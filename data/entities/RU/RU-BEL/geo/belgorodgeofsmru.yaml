@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +20,11 @@ coverage:
       name: Belgorodskaja oblast'
 description: ActiveMap GIS geoportal of the Belgorod city administration, providing
   map layers, objects, and task management for municipal territory monitoring.
+endpoints:
+- type: activemapgis:groups
+  url: https://belgorod.geofsm.ru/groups/withLayers
+- type: activemapgis:layers
+  url: https://belgorod.geofsm.ru/layers
 id: belgorodgeofsmru
 langs:
 - id: RU

@@ -1,7 +1,7 @@
 # quality-regression-guard Specification
 
 ## Purpose
-TBD - created by archiving change recalibrate-endpoint-quality-priorities. Update Purpose after archive.
+CI fails when integrity CRITICAL/IMPORTANT counts grow above baseline; enrichment-only growth is reported, not a hard failure.
 ## Requirements
 ### Requirement: Integrity-Focused Regression Guard
 CI MUST fail on growth in integrity issue counts and MUST NOT treat enrichment backlog growth as a hard failure by default.

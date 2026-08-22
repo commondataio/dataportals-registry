@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-PA
       name: Pennsylvania
 description: Public tree inventory map for Philadelphia; MapServer backend.
+endpoints:
+- type: mapserver:catalog
+  url: https://phillytreemap.org/
 id: phillytreemaporg
 langs:
 - id: EN
@@ -41,7 +44,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- trees
+- Pennsylvania
+- United States
 topics:
 - id: ENVI
   name: Environment

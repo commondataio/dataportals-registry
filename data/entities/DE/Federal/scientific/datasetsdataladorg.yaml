@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: World
 description: Public collection of DataLad datasets provided by the DataLad project,
   presented as a browsable tree of Git repositories and submodules.
+endpoints:
+- type: datalad:dataset
+  url: https://datasets.datalad.org/.datalad/config
 id: datasetsdataladorg
 langs:
 - id: EN

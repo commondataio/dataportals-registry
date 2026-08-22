@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: EU
+      name: European Union
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: GeoRhena mviewer application for renewable-energy installations on the
+  Upper Rhine.
+endpoints:
+- type: mviewer:config
+  url: https://geoportal.georhena.eu/mviewer/apps/energies_renouvelables_DE.xml
+- type: mviewer:config
+  url: https://geoportal.georhena.eu/apps/energies_renouvelables_DE.xml
+id: geoportalgeorhenaeumviewer
+langs:
+- id: FR
+  name: French
+- id: DE
+  name: German
+link: https://geoportal.georhena.eu/mviewer/?config=apps/energies_renouvelables_DE.xml
+name: GeoRhena énergies renouvelables
+owner:
+  link: https://geoportal.georhena.eu/
+  location:
+    country: *id001
+    level: 20
+  name: GeoRhena
+  type: International
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: ENER
+  name: Energy
+  type: eudatatheme
+- id: Environment
+  name: Environment
+  type: iso19115
+uid: cdi00026763

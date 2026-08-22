@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Open data portal
 content_types:
 - dataset
@@ -16,6 +17,16 @@ coverage:
 description: En este espacio publicamos información del Consejo de forma accesible
   y promovemos mecanismos de participación. Los invitamos a construir en conjunto
   una justicia más cercana, abierta y eficiente.
+endpoints:
+- type: ckan
+  url: https://mc.consejomagistratura.gob.ar/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://mc.consejomagistratura.gob.ar/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://mc.consejomagistratura.gob.ar/api/3/action/package_list
+  version: '3'
 id: mcconsejomagistraturagobar
 uid: cdi00020605
 langs:

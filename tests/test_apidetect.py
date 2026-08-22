@@ -309,6 +309,7 @@ def test_catalogs_urlmap_includes_draft_software():
       "terria",
       "seek",
       "supermapiserver",
+      "mapgisigserver",
       "gvsigonline",
       "ingrid",
       "erdasapollo",
@@ -712,6 +713,38 @@ def test_api_identifier_supermap_services_json(monkeypatch):
     )
 
 
+def test_mapgisigserver_url_cleanup_keeps_igs_root():
+    cleaned = apidetect.mapgisigserver_url_cleanup_func(
+        "https://gis.example.gov:6163/igs/rest/mrcs/docs"
+    )
+    assert cleaned == "https://gis.example.gov:6163/igs"
+
+
+def test_api_identifier_mapgis_docs_json(monkeypatch):
+    class _MapGisSession:
+        def get(self, url, **kwargs):
+            if url.endswith("/igs/rest/mrcs/docs?f=json") or url.endswith(
+                "/rest/mrcs/docs?f=json"
+            ):
+                return _DummyResponse(content=b'["WorldMap","CityMap"]')
+            return _DummyResponse(status_code=404, headers={"Content-Type": "text/html"})
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404)
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _MapGisSession())
+
+    found = apidetect.api_identifier(
+        "https://gis.example.gov:6163/igs/", "mapgisigserver"
+    )
+
+    assert any(item["type"] == "mapgis:docs" for item in found)
+    assert any(
+        item["url"] == "https://gis.example.gov:6163/igs/rest/mrcs/docs?f=json"
+        for item in found
+    )
+
+
 def test_api_identifier_gvsigonline_uses_origin_geoserver(monkeypatch):
     class _GvSigSession:
         def get(self, url, **kwargs):
@@ -1054,7 +1087,6 @@ def test_no_standard_probe_skip_list_is_not_in_urlmap():
     from apidetect_urlmaps_draft import NO_STANDARD_PROBE
 
     skip = (
-        "tianditu",
         "oportal",
         "ogdindia",
         "masterportal",
@@ -1068,3 +1100,48 @@ def test_no_standard_probe_skip_list_is_not_in_urlmap():
     for sid in skip:
         assert sid in NO_STANDARD_PROBE
         assert sid not in apidetect.CATALOGS_URLMAP
+
+
+def test_tianditu_urlmap_is_registered():
+    assert "tianditu" in apidetect.CATALOGS_URLMAP
+    urls = [item["url"] for item in apidetect.CATALOGS_URLMAP["tianditu"]]
+    assert "/iserver/services.json" in urls
+    assert "/iportal/web/services.json" in urls
+    assert "/arcgis/rest/services?f=pjson" in urls
+
+
+def test_tianditu_url_cleanup_strips_html():
+    assert (
+        apidetect.tianditu_url_cleanup_func(
+            "https://hunan.example.gov.cn/TDTHN/portal/homePage.html"
+        )
+        == "https://hunan.example.gov.cn/TDTHN/portal"
+    )
+
+
+def test_api_identifier_tianditu_uses_origin(monkeypatch):
+    class _TdtSession:
+        def get(self, url, **kwargs):
+            if url == "https://henan.example.gov.cn/iserver/services.json":
+                return _DummyResponse(
+                    content=b'[{"componentType":"com.supermap.services.components.impl.MapImpl"}]',
+                    headers={"Content-Type": "application/json"},
+                )
+            return _DummyResponse(
+                status_code=404, headers={"Content-Type": "text/html"}, content=b""
+            )
+
+        def post(self, *args, **kwargs):
+            return _DummyResponse(status_code=404, content=b"")
+
+    monkeypatch.setattr(apidetect.requests, "Session", lambda: _TdtSession())
+
+    found = apidetect.api_identifier(
+        "https://henan.example.gov.cn/jiaozuo/", "tianditu"
+    )
+
+    assert any(item["type"] == "supermap:services" for item in found)
+    assert any(
+        item["url"] == "https://henan.example.gov.cn/iserver/services.json"
+        for item in found
+    )

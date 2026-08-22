@@ -7,7 +7,7 @@ pip install -r requirements.txt
 python scripts/builder.py --help
 ```
 
-Python **3.9–3.12**. Test layout: [tests/README.md](https://github.com/datenoio/dataportals-registry/blob/main/tests/README.md).
+Python **3.10–3.12**. Test layout: [tests/README.md](https://github.com/datenoio/dataportals-registry/blob/main/tests/README.md).
 
 ## Essential commands
 
@@ -96,4 +96,4 @@ pytest -m unit
 pytest --no-cov
 ```
 
-CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest on Python 3.9–3.12, and the quality regression guard.
+CI (`.github/workflows/tests.yml`) runs `validate-yaml`, pytest on Python 3.10–3.12, and the quality regression guard.

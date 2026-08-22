@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,12 +21,15 @@ coverage:
 description: Public forest geoportal of North Rhine-Westphalia. Interactive map.apps
   application with around 200 layers on forest cover, ecology, management, nature
   conservation, recreation, and climate-adapted reforestation.
+endpoints:
+- type: masterportal:config
+  url: https://www.waldinfo.nrw.de/waldinfo2/config.js
 id: wwwwaldinfonrwde
 langs:
 - id: DE
   name: German
 link: https://www.waldinfo.nrw.de/waldinfo2/
-name: Waldinfo.NRW
+name: North Rhine-Westphalia Forest Information Geoportal
 owner:
   link: https://www.wald-und-holz.nrw.de
   location:

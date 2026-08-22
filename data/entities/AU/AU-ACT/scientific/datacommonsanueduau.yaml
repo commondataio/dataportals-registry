@@ -1,8 +1,8 @@
 access_mode:
 - open
 - limited
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -19,6 +19,10 @@ description: Institutional repository for research data created by Australian Na
   University researchers across a wide range of disciplines. The university collects,
   maintains, preserves and disseminates ANU research datasets, with optional embargoes
   and DOI assignment for citation.
+endpoints:
+- type: oaipmh20
+  url: https://datacommons.anu.edu.au/oaiprovider/?verb=Identify
+  version: '2.0'
 id: datacommonsanueduau
 identifiers:
 - id: re3data

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: EU
       name: European Union
 description: GeORG geological map viewer for the Upper Rhine Graben; MapServer.
+endpoints:
+- type: wms130
+  url: https://services.lgrb-bw.de/cgi-bin/mapserv.fcgi?map=/local/source/WWW/serverbase/umn/map/DEV/lgrb_topographie.map&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: mapsgeopotenzialeeu
 langs:
 - id: DE
@@ -35,7 +39,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- international
+- MapServer
+- geology
+- European Union
 topics:
 - id: ENVI
   name: Environment

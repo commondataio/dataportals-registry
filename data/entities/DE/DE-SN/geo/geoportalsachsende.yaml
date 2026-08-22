@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Central access point to the spatial data infrastructure of the Free State
   of Saxony (GDI Sachsen). Combines catalog search with a map.apps Geoviewer (Sachsenatlas)
   for official geobasis data, thematic maps, and open geodata downloads.
+endpoints:
+- type: mapapps:catalog
+  url: https://geoportal.sachsen.de/
 id: geoportalsachsende
 langs:
 - id: DE

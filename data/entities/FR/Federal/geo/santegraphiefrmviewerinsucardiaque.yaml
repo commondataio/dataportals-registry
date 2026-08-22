@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Santégraphie mviewer application on heart-failure care supply in Île-de-France.
+endpoints:
+- type: mviewer:config
+  url: https://santegraphie.fr/mviewer/apps/OFFRE_INSU_CARDIAQUE.xml
+- type: mviewer:config
+  url: https://santegraphie.fr/apps/OFFRE_INSU_CARDIAQUE.xml
+id: santegraphiefrmviewerinsucardiaque
+langs:
+- id: FR
+  name: French
+link: https://santegraphie.fr/mviewer/?config=apps/OFFRE_INSU_CARDIAQUE.xml
+name: Santégraphie offre de santé insuffisance cardiaque
+owner:
+  link: https://www.iledefrance.ars.sante.fr
+  location:
+    country: *id001
+    level: 20
+  name: ARS Île-de-France
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00026748

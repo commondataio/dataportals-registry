@@ -1,0 +1,89 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 30
+    macroregion:
+      id: '145'
+      name: Western Asia
+    subregion:
+      id: SA-03
+      name: Al Madīnah al Munawwarah
+description: ArcGIS REST services catalog of Madinah Municipality, publishing map
+  layers for approved plans, neighborhoods, municipal boundaries, and related geospatial
+  datasets for Al Madinah Region.
+endpoints:
+- type: arcgis:rest:info
+  url: https://geomed.amana-md.gov.sa/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://geomed.amana-md.gov.sa/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://geomed.amana-md.gov.sa/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://geomed.amana-md.gov.sa/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://geomed.amana-md.gov.sa/arcgis/rest/services?f=geositemap
+- type: arcgis:kmz
+  url: https://geomed.amana-md.gov.sa/arcgis/rest/services?f=kmz
+id: geomedamanamdgova
+langs:
+- id: AR
+  name: Arabic
+link: https://geomed.amana-md.gov.sa/arcgis/rest/services
+name: Madinah Municipality ArcGIS Server
+owner:
+  link: https://www.amana-md.gov.sa
+  location:
+    country:
+      id: SA
+      name: Saudi Arabia
+    level: 30
+    subregion:
+      id: SA-03
+      name: Al Madīnah al Munawwarah
+  name: Madinah Municipality
+  type: Regional government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: arcgisserver
+  name: ArcGIS Server
+status: active
+tags:
+- ArcGIS
+- GIS
+- government
+- Madinah
+topics:
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Planning / Cadastre
+  name: Planning / Cadastre
+  type: iso19115
+uid: cdi00026059

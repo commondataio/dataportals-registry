@@ -1,0 +1,55 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+================================================================================
+Generated: 2026-08-22 19:39:25
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+Priority: MEDIUM
+Total Issues Found: 4
+
+Rule: Identifies records using software.id='massbank' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+DE: 2 issues
+JP: 1 issue
+US: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+monafiehnlabucdavisedu: 1 issue
+msbiipbhallede: 1 issue
+massbankeu: 1 issue
+massbankjp: 1 issue
+
+=== ISSUES ===
+
+File: US/Federal/scientific/monafiehnlabucdavisedu.yaml
+Record ID: monafiehnlabucdavisedu
+Country: US
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+Field: endpoints
+Current Value: {"software_id": "massbank", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='massbank' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/msbiipbhallede.yaml
+Record ID: msbiipbhallede
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+Field: endpoints
+Current Value: {"software_id": "massbank", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='massbank' is marked as API-capable in software definitions
+
+File: DE/Federal/scientific/massbankeu.yaml
+Record ID: massbankeu
+Country: DE
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+Field: endpoints
+Current Value: {"software_id": "massbank", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='massbank' is marked as API-capable in software definitions
+
+File: JP/Federal/scientific/massbankjp.yaml
+Record ID: massbankjp
+Country: JP
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MASSBANK
+Field: endpoints
+Current Value: {"software_id": "massbank", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='massbank' is marked as API-capable in software definitions

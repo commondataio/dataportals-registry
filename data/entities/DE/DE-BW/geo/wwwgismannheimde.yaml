@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: DE-BW
       name: Baden-Württemberg
 description: City of Mannheim geoportal powered by MapServer.
+endpoints:
+- type: mapserver:catalog
+  url: https://www.gis-mannheim.de/
 id: wwwgismannheimde
 langs:
 - id: DE
@@ -41,7 +44,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Baden-Württemberg
+- Germany
 topics:
 - id: Location
   name: Location

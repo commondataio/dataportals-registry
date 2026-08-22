@@ -1,86 +1,24 @@
 DATA QUALITY REPORT - COUNTRY: SE
 ================================================================================
-Generated: 2026-08-21 21:44:57
+Generated: 2026-08-22 19:39:25
 Country Code: SE
-Total Records with Issues: 7
-Total Issues Found: 7
+Total Records with Issues: 1
+Total Issues Found: 1
 
 === ISSUES BY TYPE ===
 
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE]
-Count: 2
-Priority: MEDIUM
-
-File: SE/SE-O/opendata/wwwvgregionse.yaml
-Record ID: wwwvgregionse
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
-Field: endpoints
-Current Value: {'software_id': 'entryscape', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
-
-File: SE/Federal/opendata/oppnadatanaturvardsverketse.yaml
-Record ID: oppnadatanaturvardsverketse
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE
-Field: endpoints
-Current Value: {'software_id': 'entryscape', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='entryscape' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY]
+[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF]
 Count: 1
 Priority: MEDIUM
 
-File: SE/Federal/scientific/usegalaxyse.yaml
-Record ID: usegalaxyse
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY
+File: SE/Federal/scientific/esgdn1nscliusecog.yaml
+Record ID: esgdn1nscliusecog
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF
 Field: endpoints
-Current Value: {'software_id': 'galaxy', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='galaxy' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER]
-Count: 1
-Priority: MEDIUM
-
-File: SE/Federal/geo/minkartalantmaterietse.yaml
-Record ID: minkartalantmaterietse
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER
-Field: endpoints
-Current Value: {'software_id': 'mapserver', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='mapserver' is marked as API-capable in software definitions
-
-[SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SCICAT]
-Count: 2
-Priority: MEDIUM
-
-File: SE/Federal/scientific/doiesseu.yaml
-Record ID: doiesseu
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SCICAT
-Field: endpoints
-Current Value: {'software_id': 'scicat', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='scicat' is marked as API-capable in software definitions
-
-File: SE/Federal/scientific/doimaxivluse.yaml
-Record ID: doimaxivluse
-Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SCICAT
-Field: endpoints
-Current Value: {'software_id': 'scicat', 'has_api': 'Yes', 'endpoints_count': 0}
-Suggested Action: Add at least one endpoint because software.id='scicat' is marked as API-capable in software definitions
-
-[STATUS_API_STATUS_MISMATCH]
-Count: 1
-Priority: MEDIUM
-
-File: SE/Federal/geo/skogsdataportalenskogsstyrelsense.yaml
-Record ID: skogsdataportalenskogsstyrelsense
-Issue: STATUS_API_STATUS_MISMATCH
-Field: api_status
-Current Value: {'status': 'inactive', 'api_status': 'active'}
-Suggested Action: Catalog is inactive but API is marked active; update api_status or catalog status to keep them consistent.
+Current Value: {'software_id': 'esgf', 'has_api': 'Yes', 'endpoints_count': 0}
+Suggested Action: Add at least one endpoint because software.id='esgf' is marked as API-capable in software definitions
 
 
 === SUMMARY BY ISSUE TYPE ===
 
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ENTRYSCAPE: 2 issues
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_GALAXY: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_MAPSERVER: 1 issue
-SOFTWARE_EXPECTED_ENDPOINTS_MISSING_SCICAT: 2 issues
-STATUS_API_STATUS_MISMATCH: 1 issue
+SOFTWARE_EXPECTED_ENDPOINTS_MISSING_ESGF: 1 issue

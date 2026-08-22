@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       id: '021'
       name: Northern America
 description: PNAMP Monitoring Resources geospatial MapServer.
+endpoints:
+- type: mapserver:catalog
+  url: https://mapserver.monitoringresources.org/
 id: mapservermonitoringresourcesorg
 langs:
 - id: EN
@@ -35,7 +38,11 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- community
+- MapServer
+- United States
 topics:
 - id: ENVI
   name: Environment

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       id: '011'
       name: Western Africa
 description: Cotonou flood-risk geoportal of the Government of Benin.
+endpoints:
+- type: csw202
+  url: https://inondation.gouv.bj/catalogue/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: '2.0.2'
 id: inondationgouvbj
 langs:
 - id: FR
@@ -35,7 +39,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- flood
+- Benin
 topics:
 - id: ENVI
   name: Environment

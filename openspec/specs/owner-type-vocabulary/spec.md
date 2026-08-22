@@ -1,7 +1,7 @@
 # owner-type-vocabulary Specification
 
 ## Purpose
-TBD - created by archiving change add-owner-type-and-path-consistency-rules. Update Purpose after archive.
+Canonical `owner.type` values and synonym maps so quality checks can flag unknown owner types.
 ## Requirements
 ### Requirement: Canonical Owner Type Vocabulary
 The registry MUST maintain a reference vocabulary of canonical `owner.type` values and recognized synonyms.

@@ -7,14 +7,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Drop Python 3.9; supported and CI-tested versions are **3.10–3.12**. Remove the `pyorc<0.11` pin that existed only for 3.9 wheels.
+
+## [1.15.0] - 2026-08-22
+
+**GitHub Release**: [v1.15.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.15.0) - Published August 22, 2026
+
 ### Added
+- **720 net new catalog entries** (809 new IDs; 89 removed after v1.14.0); registry source now **19,140** entities (**17** scheduled) across **217** country/territory folders.
 - **12 software definitions**; software catalog now **223** platforms: mviewer (`mviewer`), Geocortex Essentials (`geocortex`), Isogeo (`isogeo`), QGIS Server (`qgisserver`), openEO (`openeo`), MapGIS IGServer (`mapgisigserver`), Breedbase (`breedbase`), Tripal (`tripal`), VEuPathDB (`veupathdb`), MassBank (`massbank`), ioChem-BD (`iochembd`), and ESGF (`esgf`).
-- Generated [software-index.md](docs/software-index.md); split geoportal and scientific discovery/harvest mega-pages; discovery fingerprints and harvest recipes for the new platforms.
+- **471 scientific repositories**, including domain coverage for bioinformatics and genomics, chemistry, materials and engineering, astronomy, linguistics, agriculture, and biodiversity (NCBI/EMBL-EBI, NASA/ESA, CLARIN, USDA, NIST, and related hosts).
+- Crop, pathogen, chemistry, and climate databases on new shared-product IDs: **19 Tripal** (CottonGen, SoyBase, GDR, TreeGenes, PeanutBase, Citrus, CarrotOmics, PulseDB, Vaccinium, SpinachBase, i5k Workspace, CorkOakDB, Kiwifruit, LiceBase, and others), **15 VEuPathDB** organism and project sites (PlasmoDB, FungiDB, VectorBase, AmoebaDB, CryptoDB, ToxoDB, ClinEpiDB, MicrobiomeDB, OrthoMCL, and others; TriTrypDB retagged from `custom`), **8 ESGF** Metagrid/CoG portals (LLNL, ORNL, NERSC, DKRZ, CEDA, NCI, IPSL, LIU; Earth System Grid Federation retagged from `custom`), **6 Breedbase** (CassavaBase, MusaBase, YamBase, SweetPotatoBase, Triticeae Toolbox, Sol Genomics Network), **5 ioChem-BD** Browse nodes (ICIQ hub, Girona, Toronto Matter Lab, Jagiellonian; BSC node retagged from `custom`), and **4 MassBank** instances (Europe, IPB Halle, Japan, MoNA).
+- **220 US catalogs**, including **190** scientific repositories, **12** geoportals, and **11** machine-learning catalogs (TCIA, Civitai, UCI KDD, MLCommons, DrivenData, Open Graph Benchmark, EvalAI, Foundry, TDC, PMLB, Wolfram Neural Net Repository).
+- **90 World catalogs**, including **33** UN / IGO indicators portals (WHO, FAO AQUASTAT/FRA/EMPRES-i, UNAIDS, UNDP HDR, UN-Water SDG 6, WTO, ITC Trade Map/MacMap, WITS, UIS, UN Tourism, WFP HungerMap, and others).
+- **80 German catalogs**, including **62** scientific repositories, plus IOER Monitor, SMARD, SurvStat@RKI, Thru.de, IPB MassBank, and the FAIRagro Search Hub.
+- **66 French catalogs**, including **42** geoportals (**31 mviewer**, **9 Isogeo** OpenCatalogs) and the ESGF IPSL CoG node.
+- **74 UK catalogs**, including **55** scientific repositories, **8 MetadataWorks Metadata Browser** (`mwmb`) catalogues (SDR UK, Genomics England, HASP, Research Data Scotland, Nottingham City Data Connector, and NHS SDE catalogues for London, East Midlands, and Kent/Medway/Sussex), plus Cefas, UK EPB, National Library of Scotland Data Foundry, Scottish Parliament open data, and the ESGF CEDA Metagrid.
+- **36 Canadian catalogs**, including **24** geoportals (**14 ArcGIS Hub**, **6 Geocortex** provincial and municipal viewers, plus Manitoba Land Initiative, PEI GIS, and a Shawinigan Isogeo OpenCatalog) and the Toronto Matter Lab ioChem-BD node.
+- **27 machine-learning catalogs**, including Zindi, AIcrowd, SIGNATE, Grand Challenge, CodaLab/Codabench, and **7 Chinese** platforms (Baidu AI Studio, BAAI, OpenXLab, DataFountain, HeyWhale, OpenI, WiseModel).
+- **59 indicators catalogs**, including African regional systems (ECOWAS, SADC, AfCFTA, BCEAO, BEAC, African Trade Observatory), Latin American trade observatories (ALADI, MERCOSUR, SIECA, Pacific Alliance), ASEAN Energy Database System, and EU Access2Markets / TARIC / Easy Comext.
+- Geoportal products: **34 mviewer** (Brittany, Rennes Métropole, Géo2France, Santégraphie, GeoRhena, and Slovak regions), **15 Geocortex** (Canada, Australia, US), **10 Isogeo** OpenCatalogs (French départements plus Shawinigan), **3 openEO** backends, **2 QGIS Server** catalogs, plus **17 Romanian** municipal GIS viewers and **7 Saudi** municipal/regional geoportals.
+- **17 Irish catalogs** (CKAN open data, ArcGIS Hub county geoportals, Oireachtas and EPA APIs) and **13 Portuguese** municipal geoportals and CKAN sites.
+- **17 scheduled** polar / Arctic / Greenland catalogs pending live promotion (SIOS, NunaGIS, Asiaq, PGC FRIDGE, GTN-G, WGMS, and related hosts).
+- Discovery fingerprints and harvest recipes for mviewer, Isogeo, Geocortex, QGIS Server, openEO, and MapGIS IGServer (`docs/discovery-geoportals.md`, `docs/harvest-geoportals.md`, `docs/harvest-earthdata.md`, `docs/agents/discover.md`).
 
 ### Changed
-- Discovery and harvest guides treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values (no longer `custom` placeholders).
-- Documentation navigability and harvest depth: unique `{#id}` headings (CI fails on combined software H2s, stale auto-slug links, and a stale index file); custom/host-collision/STAC/DSpace/Drupal playbooks; agent indexes link the software index; harvest-output recipe schema (not a reaper contract); CI test `tests/test_docs_software_coverage.py`. Record-count contract: [exports.md](docs/exports.md#record-counts). Docusaurus `markdown.format: detect` so `{#id}` anchors build on GitHub Pages.
+- Recategorized Embrapa GeoInfo (`geoinfodadosembrapabr`) from open data to geoportal.
+- Discovery and harvest guides treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values (no longer `custom` placeholders), and index mviewer, Isogeo, Geocortex, QGIS Server, openEO, MapGIS IGServer, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, and ESGF in the same recipes.
+- Documentation navigability and harvest depth: generated [software-index.md](docs/software-index.md) (including an `apidetect` column); split geoportal and scientific discovery mega-pages; split scientific harvest into IRs ([harvest-scientific.md](docs/harvest-scientific.md)) vs domain stacks ([harvest-scientific-domain.md](docs/harvest-scientific-domain.md)); unique `{#id}` headings (CI fails on combined software H2s, stale auto-slug links, and a stale index file); custom/host-collision/STAC/DSpace/Drupal playbooks; agent indexes link the software index instead of pasting every probe; harvest-output recipe schema (not a reaper contract); CI test `tests/test_docs_software_coverage.py`. Record-count contract: [exports.md](docs/exports.md#record-counts).
+- Retagged **25** existing catalogs onto new or corrected software IDs, including **7** openEO backends from `stacserver`, **4** Isogeo OpenCatalogs from IsiGéo (`isigeo`), **3** QGIS Server sites from MapServer, plus ESGF, ioChem-BD, and VEuPathDB retags from `custom`.
 - IsiGéo (`isigeo`) software description now distinguishes it from Isogeo (`isogeo`), the French GIS metadata SaaS.
+- Refreshed metadata on **871** existing catalogs; HTTP-verified endpoints and `api: true` written onto **716** records. Marked **10** catalogs inactive and **1** deprecated.
+- Regenerated dataset exports: **19,140** catalog records (entities); **223** software definitions; **17** scheduled (**19,157** in `full.jsonl`). Quality regression baseline refreshed after the catalog additions.
+
+### Fixed
+- Quality regression after the v1.14.0 catalog imports: completed owner, coverage, and API metadata so integrity CRITICAL/IMPORTANT counts are back to zero, and refreshed `dataquality/baseline_counts.json`.
+
+### Removed
+- **89 catalog entries** removed after v1.14.0 as duplicate recategorized records (mostly US Federal/Other geoportals and ArcGIS Hub copies, plus Ukraine, Iceland, Syria, Brazil IPT, and World placeholders).
 
 ## [1.14.0] - 2026-08-21
 

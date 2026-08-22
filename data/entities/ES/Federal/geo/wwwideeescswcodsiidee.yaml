@@ -1,0 +1,96 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+    macroregion:
+      id: 039
+      name: Southern Europe
+description: Official Catalogue of INSPIRE Data and Services of Spain (CODSI). GeoNetwork
+  catalog of INSPIRE-compliant datasets and network services used for European Commission
+  harvesting. Distinct from the IDEE geoportal landing page and from the broader IDEE
+  GeoNetwork catalog.
+endpoints:
+- type: geonetwork:query
+  url: https://www.idee.es/csw-codsi-idee/srv/eng/q
+- type: openapi
+  url: https://www.idee.es/csw-codsi-idee/srv/v2/api-docs
+  version: '2'
+- type: csw202
+  url: https://www.idee.es/csw-codsi-idee/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+  version: 2.0.2
+- type: opensearch
+  url: https://www.idee.es/csw-codsi-idee/srv/eng/portal.opensearch
+  version: '1.0'
+- type: oaipmh20
+  url: https://www.idee.es/csw-codsi-idee/srv/eng/oaipmh?verb=Identify
+  version: '2.0'
+- type: geonetwork:site
+  url: https://www.idee.es/csw-codsi-idee/srv/api/site
+id: wwwideeescswcodsiidee
+langs:
+- id: ES
+  name: Spanish
+- id: EN
+  name: English
+link: https://www.idee.es/csw-codsi-idee/srv/spa/catalog.search
+name: Catálogo Oficial de Datos y Servicios INSPIRE (CODSI)
+owner:
+  link: https://www.cnig.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 20
+  name: Centro Nacional de Información Geográfica
+  type: Central government
+properties:
+  has_doi: true
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: granular
+  tos_url: null
+software:
+  id: geonetwork
+  name: GeoNetwork
+status: active
+tags:
+- INSPIRE
+- Spain
+- geonetwork
+- geoportal
+- geospatial
+- government
+- metadata
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: ENVI
+  name: Environment
+  type: eudatatheme
+- id: REGI
+  name: Regions and cities
+  type: eudatatheme
+- id: Location
+  name: Location
+  type: iso19115
+- id: Boundaries
+  name: Boundaries
+  type: iso19115
+- id: Imagery / Base Maps / Earth Cover
+  name: Imagery / Base Maps / Earth Cover
+  type: iso19115
+uid: cdi00026174

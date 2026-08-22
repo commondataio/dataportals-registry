@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: '155'
       name: Western Europe
 description: EJP-RD FAIR Data Point for the Orphanet catalogue of registries.
+endpoints:
+- type: dcat:ttl
+  url: https://orphanet.fdps.ejprd.semlab-leiden.nl
 id: orphanetfdpsejprdsemlableidennl
 langs:
 - id: EN
@@ -34,7 +37,12 @@ software:
   id: fairdatapoint
   name: FAIR Data Point
 status: active
-tags: []
+tags:
+- metadata
+- FAIR
+- international
+- rare diseases
+- Netherlands
 topics:
 - id: HEAL
   name: Health

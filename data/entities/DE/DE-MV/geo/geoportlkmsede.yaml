@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,10 @@ coverage:
       name: Mecklenburg-Vorpommern
 description: Masterportal geoportal of Landkreis Mecklenburgische Seenplatte providing public
   map access to district geodata.
+endpoints:
+- type: wms130
+  url: https://geoport-lk-mse.de/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
 id: geoportlkmsede
 langs:
 - id: DE

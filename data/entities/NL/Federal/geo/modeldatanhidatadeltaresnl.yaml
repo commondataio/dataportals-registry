@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,6 +18,9 @@ coverage:
 description: Geoportal providing datasets related to hydrological model data as part
   of the Netherlands Hydrological Instrument (NHI) for groundwater and surface water
   modeling in the Netherlands.
+endpoints:
+- type: geoserver:catalog
+  url: https://modeldata-nhi-data.deltares.nl
 id: modeldatanhidatadeltaresnl
 langs:
 - id: NL

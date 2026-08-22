@@ -1,0 +1,74 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Open data portal
+content_types:
+- dataset
+coverage:
+- location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    macroregion:
+      id: 039
+      name: Southern Europe
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+description: Portal de Datos en Abierto del Proyecto YODA (Your Open DAta) at Universidad
+  Politécnica de Madrid.
+endpoints:
+- type: ckan
+  url: https://portal-yoda.dit.upm.es/api/3
+  version: '3'
+- type: ckan:package-search
+  url: https://portal-yoda.dit.upm.es/api/3/action/package_search
+  version: '3'
+- type: ckan:package-list
+  url: https://portal-yoda.dit.upm.es/api/3/action/package_list
+  version: '3'
+- type: dcat:n3
+  url: https://portal-yoda.dit.upm.es/catalog.n3
+- type: dcat:ttl
+  url: https://portal-yoda.dit.upm.es/catalog.ttl
+- type: dcat:xml
+  url: https://portal-yoda.dit.upm.es/catalog.xml
+- type: dcat:jsonld
+  url: https://portal-yoda.dit.upm.es/catalog.jsonld
+id: portalyodaditupmes
+langs:
+- id: ES
+  name: Spanish
+link: https://portal-yoda.dit.upm.es
+name: YODA - Your Open DAta
+owner:
+  link: https://www.upm.es
+  location:
+    country:
+      id: ES
+      name: Spain
+    level: 30
+    subregion:
+      id: ES-MD
+      name: Madrid, Comunidad de
+  name: Universidad Politécnica de Madrid
+  type: Academy
+software:
+  id: ckan
+  name: CKAN
+status: active
+tags:
+- government
+- has_api
+- open data
+- academic
+topics:
+- id: EDUC
+  name: Education, culture and sport
+  type: eudatatheme
+- id: TECH
+  name: Science and technology
+  type: eudatatheme
+uid: cdi00026765

@@ -1,0 +1,61 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 20
+    macroregion:
+      id: '155'
+      name: Western Europe
+description: Santégraphie mviewer application on health in territorial planning (Urbadiag).
+endpoints:
+- type: mviewer:config
+  url: https://santegraphie.fr/mviewer/apps/urbadiag_v2.xml
+- type: mviewer:config
+  url: https://santegraphie.fr/apps/urbadiag_v2.xml
+id: santegraphiefrmviewerurbadiag
+langs:
+- id: FR
+  name: French
+link: https://santegraphie.fr/mviewer/?config=apps/urbadiag_v2.xml
+name: Santégraphie Urbadiag
+owner:
+  link: https://www.iledefrance.ars.sante.fr
+  location:
+    country: *id001
+    level: 20
+  name: ARS Île-de-France
+  type: Central government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: HEAL
+  name: Health
+  type: eudatatheme
+- id: Health
+  name: Health
+  type: iso19115
+uid: cdi00026747

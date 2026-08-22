@@ -1,0 +1,26 @@
+DATA QUALITY REPORT - RULE: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IOCHEMBD
+================================================================================
+Generated: 2026-08-22 19:39:25
+Issue Type: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IOCHEMBD
+Priority: MEDIUM
+Total Issues Found: 1
+
+Rule: Identifies records using software.id='iochembd' (API-capable per software definitions) that have no endpoints listed. Add at least one API endpoint for discovery and integration.
+
+=== SUMMARY BY COUNTRY ===
+
+ES: 1 issue
+
+=== SUMMARY BY RECORD ===
+
+iochembdorg: 1 issue
+
+=== ISSUES ===
+
+File: ES/Federal/scientific/iochembdorg.yaml
+Record ID: iochembdorg
+Country: ES
+Issue: SOFTWARE_EXPECTED_ENDPOINTS_MISSING_IOCHEMBD
+Field: endpoints
+Current Value: {"software_id": "iochembd", "has_api": "Yes", "endpoints_count": 0}
+Suggested Action: Add at least one endpoint because software.id='iochembd' is marked as API-capable in software definitions

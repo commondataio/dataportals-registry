@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Nordrhein-Westfalen
 description: Masterportal open-data map viewer of the City of Hamm providing public access
   to municipal geodata published as open data.
+endpoints:
+- type: arcgis:rest:info
+  url: https://www.hamm.de/arcgis/rest/info?f=pjson
 id: hammde
 langs:
 - id: DE

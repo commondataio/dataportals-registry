@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       name: Western Europe
 description: National Health-RI FAIR Data Point for Dutch health and life-science
   metadata.
+endpoints:
+- type: dcat:ttl
+  url: https://fdp.healthdata.nl
 id: fdphealthdatanl
 langs:
 - id: EN
@@ -35,7 +38,11 @@ software:
   id: fairdatapoint
   name: FAIR Data Point
 status: active
-tags: []
+tags:
+- metadata
+- FAIR
+- health
+- Netherlands
 topics:
 - id: HEAL
   name: Health

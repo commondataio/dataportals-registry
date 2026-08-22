@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Metadata catalog
 content_types:
 - dataset
@@ -15,6 +15,9 @@ coverage:
       id: EU
       name: European Union
 description: FAIR Data Point of the INFRAFRONTIER mouse genetics research infrastructure.
+endpoints:
+- type: dcat:ttl
+  url: http://fdp.infrafrontier.eu
 id: fdpinfrafrontiereu
 langs:
 - id: EN
@@ -34,7 +37,12 @@ software:
   id: fairdatapoint
   name: FAIR Data Point
 status: active
-tags: []
+tags:
+- metadata
+- FAIR
+- international
+- life sciences
+- European Union
 topics:
 - id: HEAL
   name: Health

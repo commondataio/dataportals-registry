@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: World
 description: Catalog hosted by ISciences, accessible via GeoNetwork interface, providing
   geospatial datasets and services.
+endpoints:
+- type: geonetwork:catalog
+  url: http://geoserver.isciences.com:8080/geonetwork/srv/en/main.home
 id: geoserverisciencescom
 langs:
 - id: EN

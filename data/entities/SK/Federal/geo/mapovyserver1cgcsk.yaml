@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Eastern Europe
 description: Public MapTiler Server instance operated by C.G.C., a.s., listing map
   styles and tilesets on port 3651.
+endpoints:
+- type: maptilerserver:catalog
+  url: https://mapovy-server1.cgc.sk:3651/
 id: mapovyserver1cgcsk
 langs:
 - id: SK

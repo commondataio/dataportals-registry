@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: CA-QC
       name: Quebec
 description: Quebec flood-prone areas geoportal; MapServer WMS backend.
+endpoints:
+- type: mapserver:catalog
+  url: https://zonesinondables.mrnf.gouv.qc.ca/
 id: zonesinondablesmrnfgouvqcca
 langs:
 - id: FR
@@ -41,7 +44,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- flood
+- Quebec
+- Canada
 topics:
 - id: ENVI
   name: Environment

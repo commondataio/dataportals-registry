@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       id: '039'
       name: Southern Europe
 description: INGV Vesuvius Observatory MapServer for volcanic geospatial data.
+endpoints:
+- type: mapserver:catalog
+  url: https://mapserver.ov.ingv.it/
 id: mapserverovingvit
 langs:
 - id: IT
@@ -35,7 +38,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- academic
+- MapServer
+- volcanology
+- Italy
 topics:
 - id: ENVI
   name: Environment

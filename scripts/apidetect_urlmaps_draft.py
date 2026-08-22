@@ -1002,6 +1002,82 @@ SUPERMAPISERVER_URLMAP = [
     },
 ]
 
+# MapGIS IGServer (.NET often :6163, Java often :8089). IGS 1.0 catalog is
+# /igs/rest/mrcs/docs; IGS 2.0 lists services at /igs/rest/services.
+MAPGIS_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES
+MAPGISIGSERVER_URLMAP = [
+    {
+        "id": "mapgis:docs",
+        "url": "/rest/mrcs/docs?f=json",
+        "expected_mime": MAPGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "mapgis:docs",
+        "url": "/igs/rest/mrcs/docs?f=json",
+        "expected_mime": MAPGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "mapgis:services",
+        "url": "/rest/services?f=json",
+        "expected_mime": MAPGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "mapgis:services",
+        "url": "/igs/rest/services?f=json",
+        "expected_mime": MAPGIS_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+# Provincial 天地图 nodes sit on SuperMap iServer/iPortal or ArcGIS Server.
+# Viewer paths (/map, /jiaozuo/, *.html) are stripped to origin in apidetect.
+# Do not probe national t0.tianditu.gov.cn tiles or token-gated JS APIs here.
+TIANDITU_JSON_MIMETYPES = JSON_MIMETYPES + PLAIN_MIMETYPES
+TIANDITU_URLMAP = [
+    {
+        "id": "supermap:services",
+        "url": "/iserver/services.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "supermapiportal:services",
+        "url": "/iportal/web/services.json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgis:rest:services",
+        "url": "/arcgis/rest/services?f=pjson",
+        "expected_mime": TIANDITU_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgis:rest:info",
+        "url": "/arcgis/rest/info?f=pjson",
+        "expected_mime": TIANDITU_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "arcgis:rest:services",
+        "url": "/OneMapServer/rest/services?f=pjson",
+        "expected_mime": TIANDITU_JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
 GVSIGONLINE_URLMAP = GETSDIPORTAL_URLMAP
 
 INGRID_URLMAP = [
@@ -1217,6 +1293,87 @@ MYTARDIS_URLMAP = [
 
 NYUDATACATALOG_URLMAP = []  # schema.org DataCatalog JSON-LD on the homepage
 
+BREEDBASE_URLMAP = [
+    {
+        "id": "brapi:serverinfo",
+        "url": "/brapi/v2/serverinfo",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "2",
+    },
+    {
+        "id": "brapi:studies",
+        "url": "/brapi/v2/studies?page=0&pageSize=1",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "2",
+    },
+]
+
+TRIPAL_URLMAP = [
+    {
+        "id": "tripal:webservices",
+        "url": "/web-services/",
+        "expected_mime": HTML_MIMETYPES + JSON_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+VEUPATHDB_URLMAP = [
+    {
+        "id": "veupathdb:webservices",
+        "url": "/webservices/",
+        "expected_mime": HTML_MIMETYPES + JSON_MIMETYPES + XML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+MASSBANK_URLMAP = [
+    {
+        "id": "massbank:api",
+        "url": "/MassBank/api/records",
+        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+    {
+        "id": "mona:spectra",
+        "url": "/rest/spectra",
+        "expected_mime": JSON_MIMETYPES + HTML_MIMETYPES,
+        "is_json": False,
+        "version": None,
+    },
+]
+
+IOCHEMBD_URLMAP = [
+    {
+        "id": "dspace:items",
+        "url": "/rest/items",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": "6",
+    },
+    {
+        "id": "oaipmh20",
+        "url": "/oai/request?verb=Identify",
+        "expected_mime": XML_MIMETYPES,
+        "is_json": False,
+        "version": "2.0",
+    },
+]
+
+ESGF_URLMAP = [
+    {
+        "id": "esgf:search",
+        "url": "/esg-search/search?format=application%2Fsolr%2Bjson&limit=0",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
 # ---------------------------------------------------------------------------
 # Proposed CATALOGS_URLMAP additions (merge into apidetect.py)
 # ---------------------------------------------------------------------------
@@ -1246,6 +1403,8 @@ DRAFT_CATALOGS_URLMAP = {
     "terria": TERRIA_URLMAP,
     "seek": SEEK_URLMAP,
     "supermapiserver": SUPERMAPISERVER_URLMAP,
+    "mapgisigserver": MAPGISIGSERVER_URLMAP,
+    "tianditu": TIANDITU_URLMAP,
     "gvsigonline": GVSIGONLINE_URLMAP,
     "ingrid": INGRID_URLMAP,
     "erdasapollo": ERDASAPOLLO_URLMAP,
@@ -1290,6 +1449,12 @@ DRAFT_CATALOGS_URLMAP = {
     "bitrix": BITRIX_URLMAP,
     "converis": CONVERIS_URLMAP,
     "surveysolutions": SURVEYSOLUTIONS_URLMAP,
+    "breedbase": BREEDBASE_URLMAP,
+    "tripal": TRIPAL_URLMAP,
+    "veupathdb": VEUPATHDB_URLMAP,
+    "massbank": MASSBANK_URLMAP,
+    "iochembd": IOCHEMBD_URLMAP,
+    "esgf": ESGF_URLMAP,
 }
 
 # Software reviewed for auto-fill: do not invent relative API paths.
@@ -1345,8 +1510,8 @@ NO_STANDARD_PROBE = {
     "seue": "Catalan seu-e.cat HTML transparency pages, not a machine catalog API.",
     "smartfindersdi": "Custom SDI portals; CSW path varies, sitemap only on most records.",
     "superstar": "Space-Time Research SuperSTAR; desktop/server product.",
-    "tianditu": "Tianditu viewers; no documented anonymous catalog API on provincial hosts.",
     "wagmap": "わが街ガイド HTML geoportals; /opendata/ is HTML, not a harvest API.",
     "weboffice": "VertiGIS WebOffice; no standard relative catalog API on the viewer URL.",
+    "geocortex": "Geocortex Essentials REST Sites Directory; path is instance-specific (often /Geocortex/Essentials/REST/sites).",
     "whoint": "WHO website; not a data API on link.",
 }

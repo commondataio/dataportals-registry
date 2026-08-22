@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Scientific data repository
 content_types:
 - dataset
@@ -16,6 +16,10 @@ coverage:
       name: Western Europe
 description: CLARIN-D language resource repository at Saarland University. Public
   Fedora 3 catalog of corpora and language tools for text and speech research.
+endpoints:
+- type: oaipmh20
+  url: https://fedora.clarin-d.uni-saarland.de/oaiprovider/?verb=Identify
+  version: '2.0'
 id: fedoraclarindunisaarlandde
 identifiers:
 - id: re3data

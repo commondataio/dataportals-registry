@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-WI
       name: Wisconsin
 description: Near-realtime GOES-16 ABI imagery via MapServer and MapCache.
+endpoints:
+- type: mapserver:catalog
+  url: https://geosphere.ssec.wisc.edu
 id: geospheressecwiscedu
 langs:
 - id: EN
@@ -41,7 +44,14 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- academic
+- MapServer
+- remote sensing
+- imagery
+- Wisconsin
+- United States
 topics:
 - id: ENVI
   name: Environment

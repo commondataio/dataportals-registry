@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Municipal spatial data infrastructure of Corfu. GET SDI Portal over
   GeoServer and GeoNetwork with INSPIRE-compliant view, download, and catalogue
   services.
+endpoints:
+- type: getsdiportal:catalog
+  url: https://gis.opendatacorfu.gr/
 id: gisopendatacorfugr
 langs:
 - id: EL

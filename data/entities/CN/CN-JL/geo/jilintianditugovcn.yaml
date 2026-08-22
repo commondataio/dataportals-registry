@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,19 @@ coverage:
       name: Jilin Sheng
 description: Provincial geographic information public service platform (Map World
   / Tianditu) of Jilin.
+endpoints:
+- type: arcgis:rest:info
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/info?f=pjson
+- type: arcgis:rest:services
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/services?f=pjson
+- type: arcgis:soap
+  url: https://jilin.tianditu.gov.cn/arcgis/services?wsdl
+- type: arcgis:sitemap
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/services?f=sitemap
+- type: arcgis:geositemap
+  url: https://jilin.tianditu.gov.cn/arcgis/rest/services?f=geositemap
+- type: tianditu:citynode
+  url: https://jilin.tianditu.gov.cn/api/cityNode/queryByTree.json
 id: jilintianditugovcn
 langs:
 - id: ZH

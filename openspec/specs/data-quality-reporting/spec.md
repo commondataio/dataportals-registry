@@ -1,7 +1,7 @@
 # data-quality-reporting Specification
 
 ## Purpose
-TBD - created by archiving change recalibrate-endpoint-quality-priorities. Update Purpose after archive.
+Quality reports separate integrity issues from enrichment debt so CI can fail on coherence regressions without blocking endpoint backlog.
 ## Requirements
 ### Requirement: Integrity Versus Enrichment Priority Tracks
 The quality pipeline MUST distinguish integrity issues from enrichment-debt issues when assigning priority.

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Bayern
 description: Masterportal geoportal of the City of Regensburg providing public map access
   to municipal geodata including the city map, planning, and cadastre.
+endpoints:
+- type: masterportal:config
+  url: https://geoportal.regensburg.de/geoportal/Basic/config.js
 id: geoportalregensburgde
 langs:
 - id: DE

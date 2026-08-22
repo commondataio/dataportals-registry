@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Çanakkale
 description: Public KEOS city-guide map of Gelibolu municipality on NetGIS Server
   7.
+endpoints:
+- type: netgisserver:runxml
+  url: https://keos.gelibolu.bel.tr/Keos/handlers/runXMLHandler.ashx
 id: keosgelibolubeltr
 langs:
 - id: TR

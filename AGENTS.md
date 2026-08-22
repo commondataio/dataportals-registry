@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-Published GitHub snapshot **v1.14.0** (21 August 2026): **18,420** catalogs, **211** software, **0** scheduled. Current source YAML (22 August 2026): **19,131** entities, **17** scheduled, **223** software definitions, **217** country/territory folders. Working-tree exports may lag until `python scripts/builder.py build`. Counts: [docs/exports.md](docs/exports.md#record-counts).
+As of 22 August 2026 (v1.15.0), source YAML contains **19,140** verified catalog entries across **217** country/territory folders, **17** scheduled records, and **223** software definitions. Published exports match: **19,140** catalogs and **223** software IDs.
 
 ### Scope Boundary (Important)
 
@@ -55,7 +55,7 @@ API and MCP delivery surfaces are maintained in separate repositories. Do not pr
 
 | Component | Technology |
 |-----------|------------|
-| **Language** | Python 3.9-3.12 |
+| **Language** | Python 3.10-3.12 |
 | **Data Storage** | YAML files (individual catalog entries) |
 | **Export Formats** | JSONL, Parquet, DuckDB |
 | **Compression** | zstandard (zstd) |

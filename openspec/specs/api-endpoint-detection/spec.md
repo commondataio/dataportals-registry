@@ -1,7 +1,7 @@
 # api-endpoint-detection Specification
 
 ## Purpose
-TBD - created by archiving change update-apidetect-reliability. Update Purpose after archive.
+Deterministic `apidetect` probes fill `endpoints[]` for known `software.id` URL maps without duplicate or crash-on-bad-JSON results.
 ## Requirements
 ### Requirement: Deterministic Endpoint Discovery
 The API endpoint detection workflow MUST return deterministic endpoint candidates without duplicate entries introduced by control-flow artifacts.

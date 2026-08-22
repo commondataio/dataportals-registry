@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,10 @@ coverage:
       id: ID-SU
       name: Sumatera Utara
 description: North Sumatra industry and trade WebGIS powered by MapServer.
+endpoints:
+- type: wms130
+  url: http://webgisperindag.sumutprov.go.id/cgi-bin/mapserv?map=/var/map/disperin.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: webgisperindagsumutprovgoid
 langs:
 - id: ID
@@ -41,7 +45,14 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- industry
+- trade
+- Sumatera Utara
+- Indonesia
 topics:
 - id: ECON
   name: Economy and finance

@@ -1,7 +1,7 @@
 # path-consistency-checks Specification
 
 ## Purpose
-TBD - created by archiving change add-owner-type-and-path-consistency-rules. Update Purpose after archive.
+YAML path country (and related) folders must match owner/coverage metadata, with documented multinational allowlists.
 ## Requirements
 ### Requirement: Path Country Consistency Check
 `analyze-quality` MUST verify that the country directory in the file path is consistent with owner/coverage country metadata, subject to documented allowlists.

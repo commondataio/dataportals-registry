@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       id: '021'
       name: Northern America
 description: Hiking maps and overlays via MapServer WMS/WFS.
+endpoints:
+- type: mapserver:catalog
+  url: https://www.postholer.com/
 id: wwwpostholercom
 langs:
 - id: EN
@@ -35,7 +38,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- commercial
+- MapServer
+- hiking
+- United States
 topics:
 - id: EDUC
   name: Education, culture and sport

@@ -1,0 +1,64 @@
+access_mode:
+- open
+api: true
+api_status: active
+catalog_type: Geoportal
+content_types:
+- dataset
+- map_layer
+coverage:
+- location:
+    country: &id001
+      id: FR
+      name: France
+    level: 30
+    macroregion:
+      id: '155'
+      name: Western Europe
+    subregion: &id002
+      id: FR-29
+      name: Finistère
+description: mviewer application of the Finistère departmental fire and rescue service
+  (SDIS 29).
+endpoints:
+- type: mviewer:config
+  url: https://geobretagne.fr/pub/sdis29/apps/sdis29.xml
+id: geobretagnefrmviewersdis29
+langs:
+- id: FR
+  name: French
+link: https://geobretagne.fr/mviewer/?config=/pub/sdis29/apps/sdis29.xml
+name: SDIS 29 cartographic viewer
+owner:
+  link: https://www.sdis29.fr
+  location:
+    country: *id001
+    level: 30
+    subregion: *id002
+  name: SDIS du Finistère
+  type: Local government
+properties:
+  has_doi: false
+rights:
+  license_id: null
+  license_name: null
+  license_url: null
+  privacy_policy_url: null
+  rights_type: global
+  tos_url: null
+software:
+  id: mviewer
+  name: mviewer
+status: active
+tags:
+- geospatial
+- mviewer
+- geoportal
+topics:
+- id: GOVE
+  name: Government and public sector
+  type: eudatatheme
+- id: Society
+  name: Society
+  type: iso19115
+uid: cdi00026740

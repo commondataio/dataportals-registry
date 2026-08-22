@@ -1,7 +1,7 @@
 # catalog-interoperability Specification
 
 ## Purpose
-TBD - created by archiving change add-json-schema-and-linked-data-mapping. Update Purpose after archive.
+Publish JSON Schema and JSON-LD mappings so external tools can validate catalog records without Cerberus.
 ## Requirements
 ### Requirement: JSON Schema Publication
 The project MUST publish a JSON Schema Draft 2020-12 description of the catalog data model.

@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -18,6 +18,9 @@ coverage:
 description: National Health Management Information System of Nepal, operated on DHIS2
   by the Department of Health Services. Login is required to query facility-level
   health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://hmis.gov.np
 id: hmisgovnp
 langs:
 - id: NE

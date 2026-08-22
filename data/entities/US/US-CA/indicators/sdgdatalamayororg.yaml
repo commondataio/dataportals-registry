@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - dataset
@@ -19,6 +19,11 @@ coverage:
       name: California
 description: Data catalog providing City of Los Angeles statistics for global and
   localized Sustainable Development Goal indicators.
+endpoints:
+- type: opensdg:data
+  url: https://data.sdg.lacity.gov/sdg-database/data/1-1-1.json
+- type: opensdg:data
+  url: https://data.sdg.lacity.gov/sdg-database/data/1-2-1.json
 id: sdgdatalamayororg
 langs:
 - id: EN

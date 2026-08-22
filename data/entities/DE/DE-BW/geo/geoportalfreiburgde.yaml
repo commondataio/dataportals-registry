@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -20,6 +20,9 @@ coverage:
       name: Baden-Württemberg
 description: Masterportal geoportal (FreiGIS) of Freiburg im Breisgau providing public map
   access to municipal geodata. Complements the city's GeoNetwork catalog.
+endpoints:
+- type: masterportal:config
+  url: https://geoportal.freiburg.de/freigis/config.js
 id: geoportalfreiburgde
 langs:
 - id: DE

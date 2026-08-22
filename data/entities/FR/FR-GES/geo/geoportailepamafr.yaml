@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: FR-GES
       name: Grand-Est
 description: Meuse basin public development authority geoportal (MapServer).
+endpoints:
+- type: mapserver:catalog
+  url: https://geoportail.epama.fr/
 id: geoportailepamafr
 langs:
 - id: FR
@@ -41,7 +44,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Grand-Est
+- France
 topics:
 - id: Location
   name: Location

@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,10 @@ coverage:
       name: South America
 description: MapBiomas Recovery Monitor of areas with legal or committed native-vegetation
   restoration obligations in Brazil, from 1985 to the present.
+endpoints:
+- type: geoserver:wms
+  url: https://plataforma.recuperacao.mapbiomas.org/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities
+  version: '1.3.0'
 id: plataformarecuperacaomapbiomasorg
 langs:
 - id: PT

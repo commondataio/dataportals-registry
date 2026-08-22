@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-MI
       name: Michigan
 description: MapServer WMS of satellite-derived Great Lakes water quality products.
+endpoints:
+- type: mapserver:catalog
+  url: https://greatlakesremotesensing.org/
 id: greatlakesremotesensingorg
 langs:
 - id: EN
@@ -41,7 +44,14 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- academic
+- MapServer
+- water
+- remote sensing
+- Michigan
+- United States
 topics:
 - id: ENVI
   name: Environment

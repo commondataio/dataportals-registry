@@ -1,6 +1,7 @@
 access_mode:
 - open
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -15,6 +16,9 @@ coverage:
       id: '143'
       name: Central Asia
 description: There is no full ArcGIS rest service, instead proxy used. https://aisgzk.kz/aisgzk/Proxy/aisgzkTopo2/MapServer
+endpoints:
+- type: arcgis:rest:services
+  url: https://aisgzk.kz/arcgis/rest/services?f=pjson
 id: aisgzkkz
 langs:
 - id: RU

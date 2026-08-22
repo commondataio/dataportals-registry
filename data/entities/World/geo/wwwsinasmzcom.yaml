@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -25,6 +25,10 @@ description: Geoportal of the Sistema Nacional de Águas e Saneamento (SINAS) pr
   and related environmental datasets. The platform supports data discovery, visualization,
   and download capabilities for researchers, policymakers, and water sector professionals
   working on water and sanitation projects in Mozambique.
+endpoints:
+- type: wms130
+  url: https://www.sinasmz.com/lizmap/lizmap/www/index.php/lizmap/service/?repository=00publicoview&project=001_geral_consulta&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: wwwsinasmzcom
 identifiers:
 - id: url

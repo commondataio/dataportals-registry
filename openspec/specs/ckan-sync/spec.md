@@ -1,7 +1,7 @@
 # ckan-sync Specification
 
 ## Purpose
-TBD - created by archiving change add-ckan-ecosystem-sync. Update Purpose after archive.
+Fetch CKAN sites from ecosystem.ckan.org, skip duplicates, and add verified finds to scheduled or entities.
 ## Requirements
 ### Requirement: CKAN Ecosystem Dataset Fetching
 

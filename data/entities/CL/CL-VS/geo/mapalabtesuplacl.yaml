@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -18,7 +18,12 @@ coverage:
     subregion:
       id: CL-VS
       name: Valparaíso
-description: University of Playa Ancha LabTES community technology map; MapServer.
+description: University of Playa Ancha LabTES community technology map published
+  with QGIS Server.
+endpoints:
+- type: wms130
+  url: https://mapa.labtes-upla.cl/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+  version: '1.3.0'
 id: mapalabtesuplacl
 langs:
 - id: ES
@@ -38,10 +43,15 @@ owner:
   name: Universidad de Playa Ancha
   type: Academy
 software:
-  id: mapserver
-  name: MapServer
+  id: qgisserver
+  name: QGIS Server
 status: active
-tags: []
+tags:
+- geospatial
+- academic
+- QGIS Server
+- Valparaíso
+- Chile
 topics:
 - id: Location
   name: Location

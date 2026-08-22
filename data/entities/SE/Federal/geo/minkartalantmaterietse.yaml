@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -16,6 +16,9 @@ coverage:
       id: '154'
       name: Northern Europe
 description: Swedish topographic maps and orthophotos; MapServer WMS/WCS.
+endpoints:
+- type: mapserver:catalog
+  url: https://minkarta.lantmateriet.se/
 id: minkartalantmaterietse
 langs:
 - id: SV
@@ -35,7 +38,13 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- imagery
+- topography
+- Sweden
 topics:
 - id: Imagery / Base Maps / Earth Cover
   name: Imagery / Base Maps / Earth Cover

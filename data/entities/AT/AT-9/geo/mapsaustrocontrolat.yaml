@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: inactive
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -17,6 +17,9 @@ coverage:
       name: Western Europe
 description: Public MapStore geoportal of Austro Control for interactive aeronautical
   maps and airspace information (SDI PUBLIC).
+endpoints:
+- type: mapstore:config
+  url: https://maps.austrocontrol.at/mapstore/configs/localConfig.json
 id: mapsaustrocontrolat
 langs:
 - id: DE
@@ -53,6 +56,7 @@ status: active
 tags:
 - geospatial
 - geoportal
+- has_api
 - MapStore
 - aviation
 - aeronautical

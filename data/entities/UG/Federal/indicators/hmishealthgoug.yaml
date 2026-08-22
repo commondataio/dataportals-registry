@@ -1,7 +1,7 @@
 access_mode:
 - restricted
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Indicators catalog
 content_types:
 - indicator
@@ -17,6 +17,9 @@ coverage:
       name: Eastern Africa
 description: National DHIS2 HMIS of the Uganda Ministry of Health. Login is required
   to query facility-level health indicators.
+endpoints:
+- type: dhis2:catalog
+  url: https://hmis.health.go.ug
 id: hmishealthgoug
 langs:
 - id: EN

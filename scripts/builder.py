@@ -1361,7 +1361,8 @@ def link_serves_as_api_endpoint(software_id, link):
     """Return True when the catalog link itself is already an API/service URL.
 
     For platforms like GeoServer and ArcGIS Server, many registry entries point
-    `link` at the service root (e.g. .../geoserver, .../arcgis/rest/services).
+    `link` at the service root (e.g. .../geoserver, .../arcgis/rest/services,
+    .../arcgis/services). MapServer CGI URLs (.../mapserv) are the same.
     In those cases a separate `endpoints` list is redundant for discovery.
     """
     if not software_id or not isinstance(link, str) or not link.strip():
@@ -1379,10 +1380,15 @@ def link_serves_as_api_endpoint(software_id, link):
         return (
             "/rest/services" in path
             or "/arcgis/rest" in path
+            or "/arcgis/services" in path
             or path.endswith("/mapserver")
             or path.endswith("/featureserver")
             or path.endswith("/imageserver")
         )
+    if sid == "mapserver":
+        return "mapserv" in path
+    if sid == "geocortex":
+        return "/rest/sites" in path or "/ess/rest" in path
     return False
 
 
@@ -2870,10 +2876,21 @@ def check_title_quality(record):
             }
         )
 
-    # Title that looks like a bare URL/domain or domain+path
-    title_as_url = title if "://" in title else f"https://{title}"
-    parsed_title = urlparse(title_as_url)
-    if parsed_title.netloc and "." in parsed_title.netloc and " " not in title:
+    # Title that looks like a bare URL/domain or domain+path.
+    # urlparse treats [...] as an IPv6 literal, so ISO footnote names like
+    # "Congo (the) [h]" must not abort quality analysis.
+    parsed_title = None
+    try:
+        title_as_url = title if "://" in title else f"https://{title}"
+        parsed_title = urlparse(title_as_url)
+    except ValueError:
+        parsed_title = None
+    if (
+        parsed_title
+        and parsed_title.netloc
+        and "." in parsed_title.netloc
+        and " " not in title
+    ):
         issues.append(
             {
                 "issue_type": "PLACEHOLDER_TITLE",

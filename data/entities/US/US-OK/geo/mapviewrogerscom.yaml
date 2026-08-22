@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -19,6 +19,9 @@ coverage:
       id: US-OK
       name: Oklahoma
 description: Parcel query and mapping application powered by MapServer.
+endpoints:
+- type: mapserver:catalog
+  url: http://mapview-rogers.com/
 id: mapviewrogerscom
 langs:
 - id: EN
@@ -41,7 +44,12 @@ software:
   id: mapserver
   name: MapServer
 status: active
-tags: []
+tags:
+- geospatial
+- government
+- MapServer
+- Oklahoma
+- United States
 topics:
 - id: REGI
   name: Regions and cities

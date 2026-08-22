@@ -1,7 +1,7 @@
 access_mode:
 - open
-api: false
-api_status: uncertain
+api: true
+api_status: active
 catalog_type: Geoportal
 content_types:
 - dataset
@@ -21,6 +21,9 @@ coverage:
 description: Masterportal map viewer of the City of Munich providing public access to official
   city maps, addresses, aerial imagery, and thematic geodata. Complements the GeoServer and
   GeoNetwork endpoints already in the registry.
+endpoints:
+- type: masterportal:config
+  url: https://geoportal.muenchen.de/portal/master/config.js
 id: geoportalmuenchendeportal
 langs:
 - id: DE
