@@ -368,8 +368,8 @@ Match `www` vs bare host, `http` vs `https`, and `/data` vs `/`. `DUPLICATE_LINK
 
 - [discovery.md](discovery.md) — overview and accept/reject rules
 - [discovery-opendata.md](discovery-opendata.md)
-- [discovery-geoportals.md](discovery-geoportals.md)
-- [discovery-scientific.md](discovery-scientific.md)
+- [discovery-geoportals.md](discovery-geoportals.md) ([SDI](discovery-geoportals-sdi.md), [viewers](discovery-geoportals-viewers.md))
+- [discovery-scientific.md](discovery-scientific.md) ([domain](discovery-scientific-domain.md))
 - [discovery-metadata.md](discovery-metadata.md)
 - [discovery-indicators.md](discovery-indicators.md)
 - [agents/discover.md](agents/discover.md)

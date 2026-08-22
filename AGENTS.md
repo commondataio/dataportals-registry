@@ -38,7 +38,7 @@ The registry collects and maintains structured metadata about:
 - Metadata catalogs
 - Other data infrastructure
 
-As of 21 August 2026 (v1.14.0), source YAML contains **18,420** verified catalog entries across **217** country/territory folders, **0** scheduled records, and **211** software definitions. Published exports match: **18,420** catalogs and **211** software IDs.
+Published GitHub snapshot **v1.14.0** (21 August 2026): **18,420** catalogs, **211** software, **0** scheduled. Current source YAML (22 August 2026): **19,131** entities, **17** scheduled, **223** software definitions, **217** country/territory folders. Working-tree exports may lag until `python scripts/builder.py build`. Counts: [docs/exports.md](docs/exports.md#record-counts).
 
 ### Scope Boundary (Important)
 
@@ -523,7 +523,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 1. Duplicate-check exports (`data/datasets/datasets.duckdb` or `full.parquet`), not a full YAML walk
 2. Follow [docs/agents/discover.md](docs/agents/discover.md) (human narrative: [docs/discovery.md](docs/discovery.md))
-3. Prefer vendor/government lists, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`)
+3. Prefer vendor/government lists, then documented search queries in [docs/discovery-search-tools.md](docs/discovery-search-tools.md) and the per-platform guides (`docs/discovery-opendata.md`, `docs/discovery-geoportals.md`, `docs/discovery-scientific.md`, `docs/discovery-metadata.md`, `docs/discovery-indicators.md`, `docs/discovery-other.md`). Software ID map: [docs/software-index.md](docs/software-index.md).
 4. Configure Cursor / ChatGPT / Censys MCP using [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md) when the hunt needs those tools
 5. Probe only candidate hosts with targeted GETs; do not write internet-wide scanners
 6. Add verified finds with `add-single --scheduled`, then the contribute checklist below
@@ -532,7 +532,7 @@ See `openspec/AGENTS.md` for full OpenSpec instructions.
 
 1. Resolve the catalog from exports (`endpoints[]`, `software.id`) — [docs/agents/query.md](docs/agents/query.md)
 2. Follow [docs/agents/harvest.md](docs/agents/harvest.md) (human: [docs/harvest.md](docs/harvest.md))
-3. Scientific IRs mix publications and data — apply type filters in [docs/harvest-scientific.md](docs/harvest-scientific.md)
+3. Scientific IRs mix publications and data — apply type filters in [docs/harvest-scientific.md](docs/harvest-scientific.md). Domain stacks (IPT, THREDDS, Breedbase, ESGF): [docs/harvest-scientific-domain.md](docs/harvest-scientific-domain.md)
 4. Open data: packages not resources — [docs/harvest-opendata.md](docs/harvest-opendata.md). Geo: CSW/STAC/layers not tiles — [docs/harvest-geoportals.md](docs/harvest-geoportals.md). Indicators: tables/dataflows/studies — [docs/harvest-indicators.md](docs/harvest-indicators.md). Metadata: DCAT/SDMX structure — [docs/harvest-metadata.md](docs/harvest-metadata.md). Aggregators/ML/`custom` — [docs/harvest-other.md](docs/harvest-other.md). Shared protocols — [docs/harvest-protocols.md](docs/harvest-protocols.md). Incremental — [docs/harvest-incremental.md](docs/harvest-incremental.md). Identifiers — [docs/harvest-identifiers.md](docs/harvest-identifiers.md). Output — [docs/harvest-output.md](docs/harvest-output.md). EO — [docs/harvest-earthdata.md](docs/harvest-earthdata.md). Biodiversity — [docs/harvest-biodiversity.md](docs/harvest-biodiversity.md). Viewers — [docs/harvest-viewers.md](docs/harvest-viewers.md)
 5. Do not write dataset YAML into this repository; do not implement a crawler here
 

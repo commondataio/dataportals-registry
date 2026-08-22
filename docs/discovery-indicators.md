@@ -4,7 +4,7 @@ How to find **indicators catalogs** (`catalog_type: Indicators catalog`) and **m
 
 Statistical offices, central banks, SDG reporting sites, and survey archives are the usual owners. Search the agency name plus the local word for “statistics” / “indicators” / “microdata”, then confirm the platform. High-count stacks with their own recipes: PxWeb, OpenSDG, .Stat Suite, Knoema (portal homes only), SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS.
 
-## PxWeb (`pxweb`)
+## PxWeb (`pxweb`) {#pxweb}
 
 PC-Axis web tables, widely used by Nordic and other NSOs. Examples: [SCB PxWeb examples](https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/pxweb-examples/).
 
@@ -21,7 +21,7 @@ PC-Axis web tables, widely used by Nordic and other NSOs. Examples: [SCB PxWeb e
 
 **False positives:** documentation for PX files, desktop PC-Axis, a single `.px` download page. Need the **table tree** UI or `/api/v1/`.
 
-## OpenSDG (`opensdg`)
+## OpenSDG (`opensdg`) {#opensdg}
 
 Static SDG reporting sites (often GitHub Pages). Community: [open-sdg.org/community](https://open-sdg.org/community).
 
@@ -36,7 +36,7 @@ Static SDG reporting sites (often GitHub Pages). Community: [open-sdg.org/commun
 
 Start from the community list; use Google for national translations (`indicadores ODS`, `indicateurs ODD`).
 
-## .Stat Suite (`statsuite`)
+## .Stat Suite (`statsuite`) {#statsuite}
 
 SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat Suite” / Data Explorer.
 
@@ -46,7 +46,7 @@ SIS-CC / OECD .Stat. **Confirm:** `/api/search` or SDMX endpoints; UI “.Stat S
 | Google | `inurl:/nsi OR "DotStat" SDMX` |
 | Censys | `web.endpoints.http.body: ".Stat"` |
 
-## Knoema (`knoema`)
+## Knoema (`knoema`) {#knoema}
 
 Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema.com). Ministries and banks often run a branded hub on a `knoema.com` subdomain or a custom domain.
 
@@ -61,7 +61,7 @@ Commercial indicator portals and country hubs. Site: [knoema.com](https://knoema
 | Censys | `web.names: "knoema.com"` |
 | crt.sh | `%.knoema.com` |
 
-## SDMX-RI (`sdmxri`)
+## SDMX-RI (`sdmxri`) {#sdmxri}
 
 Eurostat SDMX Reference Infrastructure (NSI web service). Site: [sdmx.org](https://sdmx.org/?page_id=4666).
 
@@ -74,7 +74,7 @@ Eurostat SDMX Reference Infrastructure (NSI web service). Site: [sdmx.org](https
 | Google | `"SDMX-RI" OR "NSI Web Service" OR NSIStdV20Service` |
 | Censys | `web.endpoints.http.body: "NSIWebService"` |
 
-## GENESIS-Online (`genesisonline`)
+## GENESIS-Online (`genesisonline`) {#genesisonline}
 
 Destatis / Länder statistical database. Example: [www-genesis.destatis.de](https://www-genesis.destatis.de). Table retrieval is often **POST-only** — do not invent GET API paths.
 
@@ -88,7 +88,7 @@ Destatis / Länder statistical database. Example: [www-genesis.destatis.de](http
 | Google | `inurl:/genesis/online` |
 | Censys | `web.endpoints.http.body: "GENESIS-Online"` |
 
-## IBIS-PH (`ibisph`)
+## IBIS-PH (`ibisph`) {#ibisph}
 
 US state public-health indicator system. Community: [Adopt IBIS](https://ibis.utah.gov/ibisph-view/resource/AdoptIBIS.html).
 
@@ -101,11 +101,9 @@ US state public-health indicator system. Community: [Adopt IBIS](https://ibis.ut
 | Google | `"IBIS-PH" OR "IBIS PH" (indicators OR "public health") site:.gov` |
 | Censys | `web.endpoints.http.body: "ibisph"` |
 
-## DHIS2 (`dhis2`)
+## DHIS2 (`dhis2`) {#dhis2}
 
-Open-source health management information system (HISP / University of Oslo). More than 70 ministries run national HMIS instances. Docs: [docs.dhis2.org](https://docs.dhis2.org). Public FlexiPortal front-ends also count when they publish indicators from a DHIS2 backend.
-
-`software.id: dhis2` is **not** in the published software catalog. Register finds as `custom` until that definition ships. Do not label a CKAN health document site DHIS2 from a tag alone.
+Open-source health management information system (HISP / University of Oslo). More than 70 ministries run national HMIS instances. Docs: [docs.dhis2.org](https://docs.dhis2.org). Public FlexiPortal front-ends also count when they publish indicators from a DHIS2 backend. Use `software.id: dhis2`. Do not label a CKAN health document site DHIS2 from a tag alone.
 
 **Signals:** `/dhis-web-commons/`, `/dhis-web-dashboard/`, login chrome “DHIS 2”; REST `/api/system/info`.
 
@@ -141,7 +139,7 @@ Open-source health management information system (HISP / University of Oslo). Mo
 
 National statistical office homepages often link “database”, “statbank”, “PC-Axis”, “SDMX”. Follow those links rather than guessing software from the NSO CMS.
 
-## NADA (`nada`)
+## NADA (`nada`) {#nada}
 
 IHSN National Data Archive for survey microdata. Site: [nada.ihsn.org](https://nada.ihsn.org). UI: study catalog, often `/index.php/catalog`.
 
@@ -157,13 +155,11 @@ IHSN National Data Archive for survey microdata. Site: [nada.ihsn.org](https://n
 
 **False positives:** nada.ihsn.org itself (the software site), WordPress blogs named NADA. Need a **study list** with DDI-style metadata.
 
-## IPUMS (`ipums`)
+## IPUMS (`ipums`) {#ipums}
 
 University of Minnesota extract platform for harmonized census and survey microdata. Collections share one API and extract engine: IPUMS USA, International, CPS, DHS, NHIS, Higher Ed, PMA, MICS, Time Use, plus geographic NHGIS and IHGIS. Developer docs: [developer.ipums.org](https://developer.ipums.org).
 
-`software.id: ipums` is **not** in the published software catalog. Register collection homes as `custom` until that definition ships.
-
-**Signals:** `*.ipums.org` or `idhsdata.org` / `nhgis.org`; extract-system UI; “IPUMS” branding.
+**Signals:** `*.ipums.org` or `idhsdata.org` / `nhgis.org`; extract-system UI; “IPUMS” branding. Use `software.id: ipums`.
 
 **Confirm:** GET the **collection home** (variable/sample selector), not a completed extract download. One registry record per public collection. Do not add every extract or variable page.
 
@@ -173,7 +169,7 @@ University of Minnesota extract platform for harmonized census and survey microd
 | Google | `site:ipums.org (USA OR International OR CPS OR NHIS)` |
 | Censys | `web.names: "ipums.org"` |
 
-## NESSTAR (`nesstar`)
+## NESSTAR (`nesstar`) {#nesstar}
 
 Older microdata publisher. Many instances are inactive; still record working public catalogs.
 
@@ -183,7 +179,7 @@ Older microdata publisher. Many instances are inactive; still record working pub
 | Google | `inurl:/webview nesstar` |
 | Censys | `web.endpoints.http.body: "Nesstar"` |
 
-## REDATAM (`redatam`)
+## REDATAM (`redatam`) {#redatam}
 
 ECLAC census/survey online processing. Site: [redatam.org](https://www.redatam.org).
 
@@ -193,7 +189,7 @@ ECLAC census/survey online processing. Site: [redatam.org](https://www.redatam.o
 | Google | `inurl:redatam OR "Redatam Web Server"` |
 | Censys | `web.endpoints.http.body: "REDATAM"` |
 
-## Colectica (`colectica`)
+## Colectica (`colectica`) {#colectica}
 
 DDI metadata catalogs / portals.
 
@@ -202,7 +198,7 @@ DDI metadata catalogs / portals.
 | Google | `"Colectica" (portal OR repository OR DDI)` |
 | Censys | `web.endpoints.http.body: "Colectica"` |
 
-## OBiBa Mica (`obibamica`)
+## OBiBa Mica (`obibamica`) {#obibamica}
 
 Epidemiological / population-health study catalog (OBiBa). Often paired with Opal; register the **public Mica** discovery UI.
 
@@ -216,7 +212,7 @@ Epidemiological / population-health study catalog (OBiBa). Often paired with Opa
 | Censys | `web.endpoints.http.body: "obiba"` |
 | Censys | `web.endpoints.http.body: "Mica"` |
 
-## Survey Solutions (`surveysolutions`)
+## Survey Solutions (`surveysolutions`) {#surveysolutions}
 
 World Bank survey suite. Register only a **public Data Browser** of microdata, not a data-collection server.
 

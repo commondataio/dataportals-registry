@@ -40,83 +40,34 @@ Match on hostname, not display name. `id` is not a URL.
    python scripts/sync_ckan_ecosystem.py --dry-run
    ```
 
-3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)).
+3. **Targeted search** the user asked for (one country, one software, one city). Use local-language open-data terms and government TLDs. Query recipes: [discovery-search-tools.md](../discovery-search-tools.md) and the platform guides ([opendata](../discovery-opendata.md), [geoportals](../discovery-geoportals.md), [scientific](../discovery-scientific.md), [metadata](../discovery-metadata.md), [indicators](../discovery-indicators.md)). Software ID → page: [software-index.md](../software-index.md).
 4. **Endpoint probes** on the candidate host only (table below). GET, short timeout, public URLs.
 
 You MAY run documented Google / Censys / Shodan / FOFA queries when the user asked to discover catalogs and the scope is a country, software, city, or TLD. Do not write internet-wide scanners, recursive crawlers, or unscoped sweeps in this repository. Still duplicate-check exports before probing live hosts.
 
 ## Software probes
 
-Set `software.id` only when a probe or page signal matches **and** that id exists in `data/software/` (see `software_ids.yaml`). Otherwise `custom`. Fingerprints below for RADAR, Yoda, DHIS2, IPUMS, OpenAIRE, and Symbiota are for **finding hosts**; those ids are not in the published software catalog — write `custom` until the YAML definitions ship. Definitions: `data/software/` and [software-taxonomy.md](../software-taxonomy.md).
+Set `software.id` only when a probe or page signal matches **and** that id exists in `data/software/` (see `software_ids.yaml`). Otherwise `custom`. Full map of IDs to fingerprints: [software-index.md](../software-index.md). Definitions: [software-taxonomy.md](../software-taxonomy.md).
 
-| If you see | `software.id` (typical) | `catalog_type` (typical) |
-|------------|-------------------------|--------------------------|
-| `/api/3/action/package_list` or `status_show` | `ckan` | Open data portal |
+Do not paste long GET recipes here — open the index row, then the discovery heading.
+
+| If you see | `software.id` | Typical type |
+|------------|---------------|--------------|
+| `/api/3/action/status_show` | `ckan` | Open data portal |
 | `/api/explore/v2.1/catalog/datasets` | `opendatasoft` | Open data portal |
 | `/api/views` (SODA) | `socrata` | Open data portal |
 | `/srv/eng/csw` or `/srv/api` | `geonetwork` | Geoportal |
-| `/api/layers/` | `geonode` | Geoportal |
 | `/geoserver/ows` GetCapabilities | `geoserver` | Geoportal |
-| `/cgi-bin/mapserv` WMS GetCapabilities mentions MapServer | `mapserver` | Geoportal |
-| `/application/` Mapbender viewer | `mapbender` | Geoportal |
-| `/gvsigonline/` titled gvSIG Online (`select_public_project`) | `gvsigonline` | Geoportal |
-| deegree GetCapabilities / CSW / ogcapi | `deegree` | Geoportal |
-| `/keos/` city guide plus `/Netgis7` titled NetGIS Server 7 | `netgisserver` | Geoportal |
-| `/KentrehberiApp/` titled SAMPAŞ WEBGIS | `sampaswebgis` | Geoportal |
-| `/GiSoftGis/` Angular city guide (`gi-ajax-loading-indicator`) | `gisoftgis` | Geoportal |
-| `ims.*/Projects/*/Pages/KRH.aspx` (BelsisIMS KRH) | `belsisims` | Geoportal |
-| `/synserver` titled VertiGIS WebOffice (`weboffice_packed.css`, core/flex client) | `weboffice` | Geoportal |
-| Title `MapTiler Server`, `/admin`, `/api/maps/{id}/style.json` (often port 3650) | `maptilerserver` | Geoportal |
-| `/cadenza/`, Cadenza Web/Workbooks (`disy`, guest login, workbook navigator) | `cadenza` | Geoportal |
-| Geospatial Portal UI (`Version:`/`Licensed to:`, `Intergraph.WebSolutions`, `$GP.`) e.g. `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `geomediawebmap` | Geoportal |
-| `/rest/info?f=pjson` ArcGIS Server | `arcgisserver` | Geoportal |
-| ArcGIS Hub search API / hub site | `arcgishub` | Geoportal or Open data portal (primary UI) |
-| `/IdraPortal/` or `/Idra/api/v1/` | `idra` | Data search engine |
-| FAIR Data Point RDF DCAT (`fdp-client`, Turtle/JSON-LD at `/`) | `fairdatapoint` | Metadata catalog |
-| Aristotle MDR public registry / data elements | `aristotlemdr` | Metadata catalog |
-| Fusion Registry SDMX structural metadata | `fusionregistry` | Metadata catalog |
-| MetadataWorks Metadata Browser | `mwmb` | Metadata catalog |
-| `www2.wagmap.jp` / わが街ガイド / GeoAccessJS | `wagmap` | Geoportal |
-| `geoportal2.pl` / EWMAPA / GEOBID | `ewmapa` | Geoportal |
-| GeoMapFish `ngeo` / `/themes` | `geomapfish` | Geoportal |
-| 天地图 / Tianditu node | `tianditu` | Geoportal |
-| Masterportal / LGV viewer | `masterportal` | Geoportal |
-| wis2box / WIS2 node | `wis20box` | Geoportal |
-| `/oportal/` Inspur catalog | `oportal` | Open data portal |
-| `data.gov.in` OGD tenant | `ogdindia` | Open data portal |
-| Liferay RISP / datos abiertos listing (not a CMS homepage) | `liferay` | Open data portal |
-| Digital Commons / bepress IR | `elsevierdigitalcommons` | Scientific data repository |
-| InstDB / FairStack node | `instdb` | Scientific data repository |
-| WEKO3 institutional repository | `weko3` | Scientific data repository |
-| OPeNDAP / Hyrax directory (not THREDDS-only) | `opendap` | Scientific data repository |
-| OBiBa Mica study catalog | `obibamica` | Microdata catalog |
-| SciCat facility dataset catalogue | `scicat` | Scientific data repository |
-| Piveau DCAT-AP catalog UI | `piveau` | Open data portal |
-| `/mapapps/` con terra | `mapapps` | Geoportal |
-| `geocloud.jp/webgis/` GC Navi | `gcnavi` | Geoportal |
-| `/net3/public/` cardo.Map | `cardo` | Geoportal |
-| CoGIS Portal | `cogis` | Geoportal |
-| `/assets/cms/public.css` Our Open Data | `ouropendata` | Open data portal |
-| Knoema branded hub (portal home only) | `knoema` | Indicators catalog |
-| `"FAIRDOM-SEEK"` / WorkflowHub | `seek` | Scientific data repository |
-| Islandora collection browser (Drupal+Fedora) | `islandora` | Scientific data repository |
-| `/api/info/version` Dataverse | `dataverse` | Scientific data repository |
-| OAI-PMH `Identify` + DSpace UI | `dspace` | Scientific data repository |
-| OPUS 4 `/oai?verb=Identify` | `opus` | Scientific data repository |
-| `/oai/OAIHandler` + `/radar/api/datasets` (RADAR) | `custom` | Scientific data repository |
-| Public Yoda / DataCite landing (`yoda.`) | `custom` | Scientific data repository |
-| `/api/system/info` DHIS2 | `custom` | Indicators catalog |
-| IPUMS collection home (`*.ipums.org`) | `custom` | Microdata catalog (or Geoportal for NHGIS/IHGIS) |
-| OpenAIRE EXPLORE or CONNECT gateway | `custom` | Data search engine |
-| `/collections/datasets/rsshandler.php` or “Powered by Symbiota” | `custom` | Scientific data repository |
-| CONTENTdm `/digital/api/collections` (dataset collections only) | `contentdm` | Scientific data repository or Indicators catalog |
-| Omeka S `/api/items` JSON-LD (dataset catalogs, not exhibit-only) | `omekas` | Scientific data repository or Open data portal |
-| Fedora `/fcrepo/rest` as the public catalog (else use Hyrax/Islandora/PHAIDRA) | `fedora` | Scientific data repository |
-| PHAIDRA `/api/oai` or `/api/search/select` | `phaidra` | Scientific data repository |
-| Esploro research-outputs portal (`esploro.exlibrisgroup.com`) | `esploro` | Scientific data repository |
-| `/api/v1/` PxWeb | `pxweb` | Indicators catalog |
+| ArcGIS Hub search / `opendata.arcgis.com` | `arcgishub` | Geoportal or Open data portal |
+| `/arcgis/rest/info?f=pjson` | `arcgisserver` | Geoportal |
+| STAC `/collections` JSON | `stacserver` | Geoportal |
+| `/api/info/version` | `dataverse` | Scientific data repository |
+| DSpace `/server/api` or `/xmlui` | `dspace` | Scientific data repository |
+| `/api/records?size=1` InvenioRDM | `inveniordm` | Scientific data repository |
+| `/api/v1/` PxWeb tables | `pxweb` | Indicators catalog |
+| Two fingerprints fail | `custom` | Primary UI type |
 
-Types: [catalog-types.md](../catalog-types.md). If a site is both a map viewer and a dataset portal, pick the **primary** product.
+Same-host collision (GeoNetwork+GeoServer, viewer+QGIS Server): [discovery.md](../discovery.md#one-catalog-per-public-product). Types: [catalog-types.md](../catalog-types.md).
 
 After a YAML file exists, optional endpoint fill:
 
@@ -164,6 +115,7 @@ See [apidetect.md](../apidetect.md). Do not run `apidetect_urlmaps_draft.py` as 
 - [discovery-search-tools.md](../discovery-search-tools.md)
 - [discovery-agent-tools.md](../discovery-agent-tools.md)
 - [discovery-opendata.md](../discovery-opendata.md) / [discovery-geoportals.md](../discovery-geoportals.md) / [discovery-scientific.md](../discovery-scientific.md) / [discovery-metadata.md](../discovery-metadata.md) / [discovery-indicators.md](../discovery-indicators.md) / [discovery-other.md](../discovery-other.md)
+- [software-index.md](../software-index.md)
 - [apidetect.md](../apidetect.md) / [liveness.md](../liveness.md)
 - [contribute.md](contribute.md)
 - [query.md](query.md)

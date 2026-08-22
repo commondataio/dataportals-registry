@@ -14,9 +14,17 @@ Generated artifacts live in `data/datasets/`. Rebuild with `python scripts/build
 | `datasets.duckdb` | Tables `catalogs` and `software` |
 | `catalogs.jsonld` | Optional; `build --jsonld` |
 
-Last published snapshot (v1.14.0, 21 August 2026): **18,420** catalog records, **211** software definitions.
+## Record counts
 
-Current source YAML matches that snapshot: **18,420** entities, **0** scheduled, **211** software definitions.
+Do not mix these three numbers. Exports lag YAML until `python scripts/builder.py build`.
+
+| Layer | Date | Catalogs | Scheduled | Software | Countries |
+|-------|------|----------|-----------|----------|-----------|
+| **Published GitHub snapshot** | v1.14.0, 21 August 2026 | **18,420** | **0** | **211** | **217** |
+| **Working-tree exports** | last `build` in this tree | **19,093** (`catalogs.jsonl`) | **17** | **223** | **217** |
+| **Current source YAML** | 22 August 2026 | **19,131** (`data/entities/`) | **17** (`data/scheduled/`) | **223** | **217** |
+
+Source YAML is ahead of the last rebuild by 38 entity files. Full.jsonl = entities + scheduled (**19,110** after that rebuild). Canonical software IDs: `data/reference/software_ids.yaml`.
 
 Filter by catalog type or software in DuckDB / Parquet (see [query-examples.md](query-examples.md)); there are no pre-sliced `bytype/` or `bysoftware/` dumps.
 

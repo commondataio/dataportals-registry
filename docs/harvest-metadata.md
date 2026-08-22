@@ -15,7 +15,7 @@ Overview: [harvest.md](harvest.md). Finding installations: [discovery-metadata.m
 
 If the live product is CKAN, GeoNetwork, or Dataverse, use those harvest guides instead of this page.
 
-## FAIR Data Point (`fairdatapoint`)
+## FAIR Data Point (`fairdatapoint`) {#fairdatapoint}
 
 FDP is RDF DCAT. Start at the catalog root with RDF Accept headers.
 
@@ -30,7 +30,7 @@ HTML `fdp-client` alone is not a harvest. Swagger `/swagger-ui` documents the AP
 
 Docs: [docs.fairdatapoint.org](https://docs.fairdatapoint.org). Public index: [home.fairdatapoint.org](https://home.fairdatapoint.org) (do not re-harvest the index as if it were every child FDP).
 
-## Aristotle MDR (`aristotlemdr`)
+## Aristotle MDR (`aristotlemdr`) {#aristotlemdr}
 
 ```text
 GET https://host/api/v4/
@@ -44,7 +44,7 @@ This is a **metadata registry** (object classes, data elements, value domains). 
 
 Skip login-only stewardship UIs.
 
-## Fusion Registry (`fusionregistry`)
+## Fusion Registry (`fusionregistry`) {#fusionregistry}
 
 SDMX structural metadata.
 
@@ -55,13 +55,13 @@ GET https://host/ws/rest
 
 List **dataflows** as the harvest grain for “datasets”. Harvest DSDs/codelists only when the job is a structure crawl. Do not confuse this with PxWeb/.Stat **observation** APIs ([harvest-indicators.md](harvest-indicators.md)).
 
-## Metadata Browser (`mwmb`)
+## Metadata Browser (`mwmb`) {#mwmb}
 
 Public MetadataWorks UI. There may be no stable open list API. Harvest the public dataset/standard listing if a JSON/search endpoint exists in `endpoints[]`. Skip terminology-only pages when the user asked for datasets. One deployment = one catalog harvest scope.
 
 ## DCAT without an FDP
 
-Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat-and-datajson). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, or `mwmb`.
+Many open-data sites expose `/catalog.xml`, `/data.json`, or DCAT-AP. That harvest belongs with [harvest-opendata.md](harvest-opendata.md) (`dcat:Dataset` only). Protocol details: [harvest-protocols.md](harvest-protocols.md#dcat). Use this page when `software.id` is `fairdatapoint`, `aristotlemdr`, `fusionregistry`, or `mwmb`.
 
 ## Related
 

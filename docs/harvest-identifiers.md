@@ -25,7 +25,7 @@ Order when several exist:
 3. ARK / PURL documented by the catalog
 4. Software-native id (CKAN `id` UUID, Invenio record id, ERDDAP `datasetID`, STAC collection id, CSW `fileIdentifier`, IPT dataset UUID, PxWeb table path)
 
-Use the **package/dataset** id, not a file/resource/distribution id. Rows for IPUMS, DHIS2, OpenAIRE, Yoda, and RADAR apply by hostname — those catalogs may still be `custom` in current exports.
+Use the **package/dataset** id, not a file/resource/distribution id. `ipums`, `dhis2`, `openaire`, `yoda`, and `radar` are published `software.id` values — filter exports on those ids.
 
 ## Native ids by platform (typical)
 
@@ -39,6 +39,10 @@ Use the **package/dataset** id, not a file/resource/distribution id. Rows for IP
 | `inveniordm` | Record id / DOI | File key |
 | `geonetwork` | ISO `fileIdentifier` | Thumbnail URL |
 | `stacserver` | Collection `id` | Item `id` (unless item grain) |
+| `openeo` | Collection `id` | Process id, job id |
+| `qgisserver` / `mapserver` | WMS layer name | GetMap URL |
+| `mviewer` | Config layer id | Tile URL |
+| `isogeo` | Metadata record id | Workgroup id |
 | `arcgisserver` | Service URL + name | Extent query |
 | `erddap` | `datasetID` | Table row |
 | `ipt` | Dataset UUID / key | Occurrence id |
@@ -49,6 +53,11 @@ Use the **package/dataset** id, not a file/resource/distribution id. Rows for IP
 | `openaire` | Graph dataset product id / DOI | Publication id |
 | `yoda` | Vault dataset DOI | iRODS path in `/research/` |
 | `radar` | RADAR dataset id / DOI | Landing-page URL only |
+| `geocortex` | Essentials site id | Html5Viewer tile URL |
+| `mapgisigserver` | Map document / service name | `/igs/manager` |
+| `breedbase` | study / trial id | plot or marker-call id |
+| `esgf` | `dataset_id` / `master_id` | file id |
+| `symbiota` | dataset RSS id / `collid` | occurrence id |
 
 Normalize DOI to `10.prefix/suffix` (lowercase). Strip `https://doi.org/` and `doi:`. Handles: keep the handle string, not only the UI URL.
 

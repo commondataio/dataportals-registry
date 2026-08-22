@@ -46,8 +46,23 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'discovery-geoportals-sdi',
+          label: 'Geoportals — SDI platforms',
+        },
+        {
+          type: 'doc',
+          id: 'discovery-geoportals-viewers',
+          label: 'Geoportals — viewers',
+        },
+        {
+          type: 'doc',
           id: 'discovery-scientific',
           label: 'Scientific repositories',
+        },
+        {
+          type: 'doc',
+          id: 'discovery-scientific-domain',
+          label: 'Scientific — domain repositories',
         },
         {
           type: 'doc',
@@ -79,6 +94,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'harvest-scientific',
           label: 'Scientific repositories',
+        },
+        {
+          type: 'doc',
+          id: 'harvest-scientific-domain',
+          label: 'Scientific — domain repositories',
         },
         {
           type: 'doc',
@@ -150,6 +170,7 @@ const sidebars: SidebarsConfig = {
         'data-model',
         'catalog-types',
         'software-taxonomy',
+        'software-index',
         'vocabularies',
         'exports',
         'metadata-quality',

@@ -34,6 +34,9 @@ Do not invent `cdi########` ids for datasets.
 | PxWeb | No standard “since” — re-walk tables; diff table ids |
 | SDMX dataflow list | Re-list `/dataflow`; diff ids. Do not incremental-page observation cubes |
 | World Bank / GHO indicators | Re-list indicator APIs; diff indicator ids |
+| openEO | Re-list `/collections`; diff collection ids. Do not incremental-page `/jobs` |
+| Breedbase BrAPI | Re-list `/brapi/v2/studies` (and trials); diff study ids |
+| ESGF esg-search | `from`/`to` on Solr when documented; else re-query and diff `dataset_id` |
 
 If the API has **no** date filter, harvest identifiers only (cheap list), then GET metadata for ids not in your store. Do not re-download every observation cube.
 

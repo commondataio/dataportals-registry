@@ -24,16 +24,16 @@ Typical subtypes:
 | `subtype` | Use for |
 |-----------|---------|
 | `data_portal_platform` | Self-hosted open-data CMS (CKAN, DKAN, uData, Idra) |
-| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA |
-| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Mapbender |
-| `microdata_catalog_platform` | NADA, NESSTAR, REDATAM |
-| `indicators_data_platform` | PxWeb, OpenSDG, Knoema |
+| `scientific_repository_platform` | Dataverse, DSpace, Invenio, Figshare, OPUS, Omeka S, Fedora, Esploro, PHAIDRA, RADAR, Yoda |
+| `geospatial_catalog_platform` | GeoNetwork, GeoNode, ArcGIS Hub, gvSIG Online, VertiGIS WebOffice, Geocortex Essentials, GeoMedia WebMap, disy Cadenza, Mapbender, mviewer |
+| `microdata_catalog_platform` | NADA, NESSTAR, REDATAM, IPUMS |
+| `indicators_data_platform` | PxWeb, OpenSDG, Knoema, DHIS2 |
 | `metadata_registry_platform` | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
-| `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints |
-| `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman |
+| `protocol_or_api_server` | STAC, THREDDS, OPeNDAP, SPARQL endpoints, openEO |
+| `geospatial_service_middleware` | GeoServer, MapServer, MapTiler Server, deegree, rasdaman, QGIS Server, SuperMap iServer, MapGIS IGServer |
 | `cms_or_app_framework` | WordPress, Drupal, Liferay used as a catalog |
-| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub |
-| `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat) |
+| `managed_saas_service` | Socrata, OpenDataSoft, CONTENTdm, vendor-hosted Hub, Isogeo, OpenAIRE |
+| `domain_data_infrastructure` | Domain-specific stacks (GBIF IPT, SciCat, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, Symbiota) |
 | `general_software` | Catch-all, including `custom` |
 
 Human-readable category notes: `data/software/types.yaml`. Allowed list: `data/schemes/software.json`.
@@ -77,7 +77,7 @@ Quality checks flag catalogs whose software implies endpoints that are missing (
 
 Do not create a new software id for a single catalog unless several independent installations exist or are expected.
 
-When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md), [discovery-scientific.md](discovery-scientific.md), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), or [discovery-other.md](discovery-other.md). Add a harvest recipe (keep vs drop, list URL, grain) on the matching [harvest](harvest.md) page in the same change. Do not document a `software.id` in harvest/discovery as if it were live until the YAML exists in `data/software/` and `software_ids.yaml`.
+When the product is a discovery target (shared platform with live installations), add fingerprints and search queries to the matching guide: [discovery-opendata.md](discovery-opendata.md), [discovery-geoportals.md](discovery-geoportals.md) ([SDI](discovery-geoportals-sdi.md), [viewers](discovery-geoportals-viewers.md)), [discovery-scientific.md](discovery-scientific.md) ([domain](discovery-scientific-domain.md)), [discovery-metadata.md](discovery-metadata.md), [discovery-indicators.md](discovery-indicators.md), or [discovery-other.md](discovery-other.md). Add a harvest recipe (keep vs drop, list URL, grain) on the matching [harvest](harvest.md) page in the same change. Prefer a `## Name (\`id\`) {#id}` heading so [software-index.md](software-index.md) can link it. Regenerate the index with `python scripts/docs_software_coverage.py`. Do not document a `software.id` in harvest/discovery as if it were live until the YAML exists in `data/software/` and `software_ids.yaml`. CI fails if a published software ID is missing from those guides (`tests/test_docs_software_coverage.py`).
 
 ## Querying software usage
 

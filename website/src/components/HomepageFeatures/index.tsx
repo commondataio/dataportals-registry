@@ -81,12 +81,27 @@ const sections: DocSection[] = [
       {
         to: '/docs/discovery-geoportals',
         label: 'Geoportals',
-        description: 'GeoNetwork, ArcGIS, Wagmap, NetGIS, cardo, GC Navi, map.apps, CoGIS.',
+        description: 'Overview, then SDI stacks and regional viewers.',
+      },
+      {
+        to: '/docs/discovery-geoportals-sdi',
+        label: 'Geoportals — SDI',
+        description: 'GeoNetwork, ArcGIS, STAC, openEO, Lizmap, QGIS Server, mviewer.',
+      },
+      {
+        to: '/docs/discovery-geoportals-viewers',
+        label: 'Geoportals — viewers',
+        description: 'Wagmap, EWMAPA, Tianditu, Masterportal, GeoMapFish, MapGIS.',
       },
       {
         to: '/docs/discovery-scientific',
         label: 'Scientific repositories',
-        description: 'Dataverse, DSpace, Invenio, IPT, THREDDS, ERDDAP.',
+        description: 'Dataverse, DSpace, Invenio, and other institutional IRs.',
+      },
+      {
+        to: '/docs/discovery-scientific-domain',
+        label: 'Scientific — domain',
+        description: 'IPT, THREDDS, ERDDAP, Breedbase, Tripal, MassBank, ESGF.',
       },
       {
         to: '/docs/discovery-metadata',
@@ -117,6 +132,11 @@ const sections: DocSection[] = [
         to: '/docs/harvest-scientific',
         label: 'Scientific repository APIs',
         description: 'DSpace, Invenio, EPrints, Pure, Esploro, and mixed IRs.',
+      },
+      {
+        to: '/docs/harvest-scientific-domain',
+        label: 'Domain scientific APIs',
+        description: 'IPT, THREDDS, Breedbase, Tripal, VEuPathDB, MassBank, ESGF.',
       },
       {
         to: '/docs/harvest-opendata',
@@ -202,6 +222,11 @@ const sections: DocSection[] = [
         to: '/docs/software-taxonomy',
         label: 'Software taxonomy',
         description: 'Platform IDs, categories, and subtypes.',
+      },
+      {
+        to: '/docs/software-index',
+        label: 'Software index',
+        description: 'Every software.id linked to discovery and harvest recipes.',
       },
       {
         to: '/docs/vocabularies',

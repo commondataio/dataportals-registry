@@ -2,6 +2,8 @@
 
 After you apply a [type](harvest.md) or [protocol](harvest-protocols.md) filter, emit **one record per kept dataset** plus a short skip report. Identifier rules: [harvest-identifiers.md](harvest-identifiers.md). Incremental checkpoints: [harvest-incremental.md](harvest-incremental.md).
 
+This page is an **agent recipe**. It is not the production harvest-record schema used by [reaper](https://github.com/datenoio/reaper). Downstream harvesters MAY use the shape below; they MUST NOT treat it as a runtime contract of this registry.
+
 Do not write this JSON into `data/entities/`. Store it in your index or harvest DB.
 
 ## Record shape
@@ -22,6 +24,33 @@ Do not write this JSON into `data/entities/`. Store it in your index or harvest 
 ```
 
 `catalog_uid` is this registry’s catalog id. `native_id` is required. `persistent_id` is DOI/handle/ARK when present. Omit empty fields rather than inventing values.
+
+## JSON Schema (recipe)
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://datenoio.github.io/dataportals-registry/harvest-record.schema.json",
+  "title": "Harvest dataset record (agent recipe)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["catalog_uid", "catalog_id", "software_id", "native_id"],
+  "properties": {
+    "catalog_uid": { "type": "string", "pattern": "^(cdi|temp)[0-9]{8}$" },
+    "catalog_id": { "type": "string" },
+    "catalog_link": { "type": "string", "format": "uri" },
+    "software_id": { "type": "string" },
+    "native_id": { "type": "string", "minLength": 1 },
+    "persistent_id": { "type": "string" },
+    "landing_url": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "type_filter": { "type": "string" },
+    "modified": { "type": "string" }
+  }
+}
+```
+
+This schema is documentation-only. It is not published under `data/schemes/` and is not validated in CI.
 
 ## Skip report
 

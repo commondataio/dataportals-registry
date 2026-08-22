@@ -14,7 +14,7 @@ Overview: [harvest.md](harvest.md). Finding portals: [discovery-scientific.md](d
 | GBIF **dataset** (`api.gbif.org`) | Occurrence search; publisher orgs as datasets |
 | Ensembl **species / genome database** | Every gene, variation, or REST ping |
 
-## GBIF IPT (`ipt`)
+## GBIF IPT (`ipt`) {#ipt}
 
 ```text
 GET https://host/inventory/dataset
@@ -24,9 +24,9 @@ GET https://host/dcat
 
 Each inventory/RSS item is one dataset. Prefer the IPT root on the catalog `link`. Skip harvesting gbif.org when you only needed publisher IPTs already in the registry.
 
-## Symbiota (`symbiota`)
+## Symbiota (`symbiota`) {#symbiota}
 
-Not a published `software.id` yet. Match Symbiota hosts in exports as `custom` (or by `link`).
+Filter exports on `software.id = 'symbiota'`.
 
 ```text
 GET https://host/collections/index.php
@@ -35,7 +35,7 @@ GET https://host/collections/datasets/rsshandler.php
 
 **Keep** Darwin Core datasets (RSS). Collection-level harvest only if the user wants one record per `collid`. One portal = one harvest scope. Login-only: stop. Directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
 
-## Atlas of Living Australia (`ala`)
+## Atlas of Living Australia (`ala`) {#ala}
 
 ```text
 GET https://host/ws/registry/collections
@@ -43,7 +43,7 @@ GET https://host/ws/registry/collections
 
 Harvest **collections** (data resources). Species autocomplete and occurrence search are not dataset lists. Same pattern on other Living Atlases.
 
-## GBIF platform (`gbifplatform`)
+## GBIF platform (`gbifplatform`) {#gbifplatform}
 
 ```text
 GET https://api.gbif.org/v1/dataset?limit=100&offset=0
@@ -51,7 +51,7 @@ GET https://api.gbif.org/v1/dataset?limit=100&offset=0
 
 Use this only when the registry record **is** GBIF (or a national GBIF portal whose API is GBIF). Filter with `publishingCountry` / `publishingOrg` when the catalog is a country node. Prefer harvesting member **IPTs** from this registry for publisher-level ids. Do not page `/v1/occurrence/search`.
 
-## Ensembl (`ensembl`)
+## Ensembl (`ensembl`) {#ensembl}
 
 ```text
 GET https://host/info/ping
@@ -60,7 +60,7 @@ GET https://host/info/species
 
 REST base is often `https://rest.ensembl.org` or `https://host/rest`. Harvest **species / assembly** databases on that taxon portal (Fungi, Protists, Metazoa, …). Do not harvest every gene. Do not clone `ensembl.org` if you only needed an existing registry row.
 
-## SEANOE / IFREMER Catalog (`ifremercatalog`)
+## SEANOE / IFREMER Catalog (`ifremercatalog`) {#ifremercatalog}
 
 Marine-science dataset repository (seanoe.org). Prefer `endpoints[]` (OAI-PMH Identify is already recorded).
 
@@ -78,14 +78,18 @@ Keep **datasets** (DataCite/OAI type Dataset). Drop publications mixed into the 
 | `ipt`, `symbiota`, `ala` | sections above | occurrences |
 | `gbifplatform` | GBIF dataset API with a country/org filter | occurrence API |
 | `ensembl` | species list on that portal | gene endpoints |
+| `breedbase` | BrAPI trials/studies | plots, samples, marker calls |
+| `tripal` | analyses / downloadable datasets | gene pages, BLAST hits |
+| `veupathdb` | experiment / isolate / genome datasets | gene records, strategy rows |
 | `ifremercatalog` | SEANOE OAI/dataset list | publication mix; file-level NetCDF |
 
-Institutional IRs that also hold Darwin Core: use [harvest-scientific.md](harvest-scientific.md) type filters, not occurrence APIs.
+Institutional IRs that also hold Darwin Core: use [harvest-scientific.md](harvest-scientific.md) type filters, not occurrence APIs. Domain harvest recipes: [harvest-scientific-domain.md](harvest-scientific-domain.md).
 
 ## Related
 
 - [harvest.md](harvest.md)
 - [harvest-scientific.md](harvest-scientific.md)
+- [harvest-scientific-domain.md](harvest-scientific-domain.md)
 - [harvest-earthdata.md](harvest-earthdata.md)
 - [harvest-protocols.md](harvest-protocols.md)
 - [harvest-identifiers.md](harvest-identifiers.md)

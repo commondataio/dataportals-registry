@@ -1311,6 +1311,36 @@ PYGEOAPI_URLMAP = [
     },
 ]
 
+OPENEO_URLMAP = [
+    {
+        "id": "stacserverapi",
+        "url": "/collections",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+    {
+        "id": "openeo:processes",
+        "url": "/processes",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
+ISOGEO_URLMAP = [
+    {
+        "id": "openapi",
+        "url": "/api",
+        "accept": "application/json",
+        "expected_mime": JSON_MIMETYPES,
+        "is_json": True,
+        "version": None,
+    },
+]
+
 PYCSW30_URLMAP = [
     {
         "id": "ogcrecords",
@@ -2216,6 +2246,8 @@ CATALOGS_URLMAP = {
     "esrigeo": ESRIGEO_URLMAP,
     "geoblacklight": BLACKLIGHT_URLMAP,
     "pygeoapi": PYGEOAPI_URLMAP,
+    "openeo": OPENEO_URLMAP,
+    "isogeo": ISOGEO_URLMAP,
     "thredds": THREDDS_URLMAP,
     "erddap": ERDDAP_URLMAP,
     "mapproxy": MAPPROXY_URLMAP,
@@ -2331,6 +2363,18 @@ def redatam_url_cleanup_func(url):
     return url.rstrip("/")
 
 
+def tianditu_url_cleanup_func(url):
+    """Drop viewer HTML filenames; keep directory prefixes for city/portal nodes."""
+    url = url.rstrip("/")
+    parsed = urlparse(url)
+    path = parsed.path or ""
+    last = path.rsplit("/", 1)[-1]
+    if last and "." in last:
+        path = path.rsplit("/", 1)[0]
+        return f"{parsed.scheme}://{parsed.netloc}{path}".rstrip("/")
+    return url
+
+
 def supermapiserver_url_cleanup_func(url):
     url = url.rstrip("/")
     if url.lower().endswith("/iserver"):
@@ -2338,6 +2382,18 @@ def supermapiserver_url_cleanup_func(url):
     if "/iserver/" in url.lower():
         idx = url.lower().rfind("/iserver")
         return url[: idx + len("/iserver")]
+    return url
+
+
+def mapgisigserver_url_cleanup_func(url):
+    """Keep /igs when present so REST probes attach under the IGServer app."""
+    url = url.rstrip("/")
+    lower = url.lower()
+    if lower.endswith("/igs"):
+        return url
+    if "/igs/" in lower:
+        idx = lower.rfind("/igs")
+        return url[: idx + len("/igs")]
     return url
 
 
@@ -2389,6 +2445,8 @@ URL_CLEANUP_MAP = {
     "redatam": redatam_url_cleanup_func,
     "nextgisweb": nextgisweb_url_cleanup_func,
     "supermapiserver": supermapiserver_url_cleanup_func,
+    "mapgisigserver": mapgisigserver_url_cleanup_func,
+    "tianditu": tianditu_url_cleanup_func,
     "cogis": cogis_url_cleanup_func,
     "elitegis": cogis_url_cleanup_func,
 }
@@ -2473,6 +2531,7 @@ def api_identifier(
         "gvsigonline",
         "erdasapollo",
         "cogis",
+        "tianditu",
     ):
         parsed = urlparse(website_url)
         origin = f"{parsed.scheme}://{parsed.netloc}"

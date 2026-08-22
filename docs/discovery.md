@@ -19,8 +19,8 @@ The registry records **catalogs** (portals, geoportals, repositories, and simila
 | [Search engines and internet maps](discovery-search-tools.md) | Google, Censys, Shodan, FOFA, URLScan, crt.sh, and similar tools |
 | [Agents, Cursor, ChatGPT](discovery-agent-tools.md) | Configure MCP, APIs, Custom GPTs, and LLM clients to use those tools |
 | [Open data portals](discovery-opendata.md) | CKAN, DKAN, OpenDataSoft, Socrata, uData, Magda, JKAN, Junar, EntryScape, ArcGIS Hub, Idra, Liferay, POMOSAM, oPortal, OGD India, data eye, Piveau, Our Open Data, DataPress |
-| [Geoportals](discovery-geoportals.md) | GeoNetwork, GeoNode, GeoServer, ArcGIS, Lizmap, STAC, MapStore, QWC2, Mapbender, MapTiler Server, MapServer, gvSIG Online, deegree, VertiGIS WebOffice, GeoMedia WebMap, disy Cadenza, Wagmap, EWMAPA, GeoMapFish, Tianditu, Masterportal, WIS2 Box, NetGIS, cardo, GC Navi, NOL-IS, map.apps, CoGIS |
-| [Scientific repositories](discovery-scientific.md) | Dataverse, DSpace, Invenio, EPrints, Hyrax, IPT, THREDDS, ERDDAP, OPUS, RADAR, Yoda, CONTENTdm, Omeka S, Fedora, PHAIDRA, Esploro, Pure, Digital Commons, InstDB, WEKO3, OPeNDAP, DataONE, Galaxy, Haplo, FAIRDOM-SEEK, RAMADDA, ICAT, Symbiota |
+| [Geoportals](discovery-geoportals.md) | Overview; SDI stacks: [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md); viewers: [discovery-geoportals-viewers.md](discovery-geoportals-viewers.md) |
+| [Scientific repositories](discovery-scientific.md) | Institutional IRs; domain repos: [discovery-scientific-domain.md](discovery-scientific-domain.md) |
 | [Metadata catalogs](discovery-metadata.md) | FAIR Data Point, Aristotle MDR, Fusion Registry, Metadata Browser |
 | [Indicators and microdata](discovery-indicators.md) | PxWeb, OpenSDG, .Stat Suite, Knoema, SDMX-RI, GENESIS-Online, IBIS-PH, DHIS2, NADA, NESSTAR, REDATAM, Colectica, OBiBa Mica, IPUMS |
 | [Search, ML, API, marketplaces](discovery-other.md) | Data search engines (Idra, OpenAIRE), ML catalogs, API directories, data marketplaces |
@@ -51,7 +51,7 @@ Also search `data/scheduled/` if that directory is not empty. Do not walk every 
 
 Search with the local language (`datos abiertos`, `données ouvertes`, `offene daten`, `dados abertos`, `开放数据`) plus the country or city name. Restrict with `site:.gov`, `site:.gob.*`, or the national government TLD. Operators, Censys/Shodan queries, and other indexes: [discovery-search-tools.md](discovery-search-tools.md). Per-platform queries: the guides above.
 
-## Existing lists (start here)
+## Existing lists (start here) {#existing-lists-start-here}
 
 Many platforms publish installation galleries. Cross-check each URL against the registry before adding it. The README [data sources](https://github.com/datenoio/dataportals-registry/blob/main/README.md#data-sources) list is the full inventory; high-yield sources:
 
@@ -77,11 +77,14 @@ Many platforms publish installation galleries. Cross-check each URL against the 
 | [Yoda](https://www.uu.nl/en/research/yoda) | Dutch university research-data vaults |
 | [OpenAIRE CONNECT](https://connect.openaire.eu/) | National and community research gateways |
 | [IPUMS](https://www.ipums.org) | Harmonized census and survey microdata collections |
+| [Symbiota portals](https://symbiota.org/symbiota-portals/) | Biodiversity collection CMS portals |
+| [openEO](https://openeo.org) | EO cloud-processing backends |
+| [Breedbase](https://breedbase.org) | Crop breeding information systems |
 | [ROAR](http://roar.eprints.org) | Open-access repositories |
 
 Vendor “customers” and “community” pages are useful but noisy: skip demos, marketing sites, and expired domains.
 
-## Identify the software
+## Identify the software {#identify-the-software}
 
 Choose `software.id` from `data/software/` (or `custom` if unknown). See [software-taxonomy.md](software-taxonomy.md) and [catalog-types.md](catalog-types.md).
 
@@ -96,6 +99,10 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | GeoServer | `/geoserver/ows`, `/geoserver/rest` | WMS `GetCapabilities` |
 | MapTiler Server | Title `MapTiler Server`, `/admin`, port 3650 | `/api/maps/{id}/style.json` (e.g. `streets`) |
 | MapServer | `/cgi-bin/mapserv`, WMS GetCapabilities mentions MapServer | WMS `GetCapabilities` |
+| QGIS Server | `qgis_mapserv.fcgi`, GetCapabilities mentions QGIS Server | WMS `GetCapabilities` |
+| mviewer | `mviewer` JS, `/apps/*.xml` config | Viewer URL plus public layer/theme config |
+| Isogeo | OpenCatalog `/api` OpenAPI (not IsiGéo) | `/api` or public OpenCatalog home |
+| openEO | landing `api_version` + `/collections` + `/processes` | `/.well-known/openeo` or API root |
 | Mapbender | `/application/`, Mapbender viewer | HTML or title mentions Mapbender |
 | gvSIG Online | `/gvsigonline/`, `select_public_project` | Page title or footer `gvSIG Online` |
 | deegree | `/deegree-webservices`, CSW/WMS XML mentions deegree | OGC `GetCapabilities` |
@@ -124,6 +131,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | ICAT | facility data catalog | Public search or documented REST/OAI |
 | BelsisIMS KRH | `ims.*/Projects/*/Pages/KRH.aspx` | ASP.NET KRH city-guide; do not confuse with Netcad Netigma |
 | VertiGIS WebOffice | `/synserver`, `/WebOffice/synserver`, `wo-hosting.vertigis.com`, `map.geoportal.at` | Page title `VertiGIS WebOffice`; `weboffice_packed.css`; core/flex/mobile clients |
+| Geocortex Essentials | `/Geocortex/Essentials/REST/sites`, `/Html5Viewer/`, `*.geocortex.com` | Title `Geocortex Essentials Sites Directory` or `Geocortex Viewer for HTML5`; licensed Geocortex footer |
 | GeoMedia WebMap / Geospatial Portal | `/geoportal01/`, `/cdngiportal/`, `/msip/Full.aspx`, `/Online_Mapping/` | `Version:` + `Licensed to:`; `Intergraph.WebSolutions` / `$GP.`; title may be Geospatial Portal or GeoMedia WebMap Publisher Portal |
 | disy Cadenza | `/cadenza/`, `/public/`, `/pages/map/`, `/fachauswertungweb/` | `cadenza`/`disy` in HTML; Cadenza Web or Workbooks UI; guest login plus theme/workbook navigator |
 | ArcGIS Server | `/rest/services`, `/arcgis/rest/services` | `/rest/info?f=pjson` |
@@ -137,6 +145,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | EWMAPA | `*.geoportal2.pl`, GEOBID | Public municipal SIP |
 | GeoMapFish | `ngeo` / `gmf-`, `/themes` JSON | Theme API plus map UI |
 | Tianditu | 天地图 / `tianditu` | Public province or city node |
+| MapGIS IGServer | `/igs/rest/mrcs/docs`, `/igs/rest/services` | IGS REST catalog; not ArcGIS on a `mapgis.*` host |
 | Masterportal | Masterportal config / LGV viewer | Public layer tree |
 | WIS2 Box | `wis2box`, pygeoapi | OGC API or discovery UI |
 | Liferay (open data only) | RISP / datos abiertos module | Dataset listing, not a CMS homepage |
@@ -151,6 +160,7 @@ Choose `software.id` from `data/software/` (or `custom` if unknown). See [softwa
 | Invenio / Zenodo-like | `/api/records` | `/api/records?size=1` |
 | OPUS | `/oai?verb=Identify`, OPUS 4 UI | repository-root `/oai?verb=Identify` |
 | RADAR | `/radar/de/home`, `/oai/OAIHandler`, `/radar/api/datasets` | OAI `Identify` and datasets JSON with `totalHits` |
+| Symbiota | `/collections/datasets/rsshandler.php`, “Powered by Symbiota” | Collection search and/or dataset RSS |
 | CONTENTdm | `*.contentdm.oclc.org`, `/digital/api/collections` | that path and/or `/oai/oai.php?verb=Identify` |
 | Omeka S | `/api` JSON-LD, `/api/items` | `/api/items` |
 | Fedora Repository | `/fcrepo/rest` or `/rest` | Fedora version headers; prefer Hyrax/Islandora/PHAIDRA if that is the public UI |
@@ -187,6 +197,10 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - GeoNetwork: `/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities`
 - GeoServer: `/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities`
 - MapServer: `/cgi-bin/mapserv?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+- QGIS Server: `/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+- mviewer: `/apps/` config XML (often `default.xml`)
+- Isogeo: `/api` OpenAPI on an OpenCatalog host
+- openEO: `/.well-known/openeo` or `/openeo/` landing JSON
 - gvSIG Online: `/gvsigonline/`
 - NetGIS Server: `/Netgis7` (version title) and `/keos/` (public KEOS viewer)
 - Sampaş WebGIS: `/KentrehberiApp/Index` (title `SAMPAŞ WEBGIS`)
@@ -196,9 +210,11 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 - GC Navi: tenant on `geocloud.jp/webgis/`
 - map.apps: `/mapapps/`
 - VertiGIS WebOffice: `/synserver` or `/WebOffice/synserver` (title `VertiGIS WebOffice`)
+- Geocortex Essentials: `/Geocortex/Essentials/REST/sites?f=pjson` or `/Html5Viewer/` (title `Geocortex Essentials Sites Directory` / `Geocortex Viewer for HTML5`)
 - disy Cadenza: `/cadenza/` or `/pages/map/default/index.xhtml` (Cadenza Web / Workbooks)
 - ArcGIS: `/arcgis/rest/services?f=pjson`
 - GeoMapFish: `/themes`
+- MapGIS IGServer: `/igs/rest/mrcs/docs?f=json` or `/igs/rest/services?f=json`
 - Wagmap: `https://www2.wagmap.jp/` plus tenant path
 - WIS2 Box / pygeoapi: OGC API landing page
 
@@ -206,6 +222,10 @@ Only request public URLs. Use a short timeout. Stop on `401`/`403` — do not at
 
 - OAI-PMH: `/oai/request?verb=Identify` or `/oai?verb=Identify`
 - Dataverse: `/api/info/version`
+- RADAR: `/radar/api/datasets` and `/oai/OAIHandler?verb=Identify`
+- Symbiota: `/collections/datasets/rsshandler.php`
+- Breedbase: `/brapi/v2/serverinfo`
+- ESGF: `/esg-search/search`
 - CONTENTdm: `/digital/api/collections`
 - Omeka S: `/api/items`
 - FAIR Data Point: catalog root with `Accept: text/turtle`
@@ -240,6 +260,22 @@ CKAN sync details: [ckan-sync.md](ckan-sync.md). Re3Data: [re3data.md](re3data.m
 
 Do not write internet-wide scanners in this repository. Vendor/government lists, documented search-engine queries, and targeted GETs against candidate hosts are enough. How to query Google, Censys, and similar indexes: [discovery-search-tools.md](discovery-search-tools.md).
 
+## One catalog per public product {#one-catalog-per-public-product}
+
+The same hostname often runs several GIS products. Register **one YAML per public catalog UI**, not per backend.
+
+| You see | Keep | Do not also add |
+|---------|------|-----------------|
+| GeoNetwork (or CSW) + GeoServer `/geoserver` | The **catalog** (GeoNetwork / CSW) | A second GeoServer record for the same layer list |
+| Lizmap, QWC2, or mviewer + QGIS Server / MapServer | The **viewer** (`lizmap` / `qwc2` / `mviewer`) | `qgisserver` or `mapserver` on that host |
+| ArcGIS Hub + ArcGIS Server REST on the same org | Hub if it is the public catalog; Server if REST is the product | Both for the same layer set |
+| STAC API + STAC Browser | `stacserver` when the API is public | `stacbrowser` on the same origin |
+| openEO + STAC on one API | `openeo` | A second `stacserver` row |
+| MapGIS `/igs/rest/` on a host named `mapgis.*` | `mapgisigserver` | `arcgisserver` unless the path is `/arcgis/rest/` |
+| GET SDI / GeoMapFish / CoGIS wrapping GeoServer | The **portal** software | Bundled GeoServer |
+
+Duplicate-check `link` **and** the service origin before `add-single`. Harvest follows the same grain: [harvest-geoportals.md](harvest-geoportals.md#one-catalog-per-host).
+
 ## Verify before adding
 
 1. Open the homepage. Confirm it is a catalog (search, dataset list, map layers, or metadata records).
@@ -260,7 +296,8 @@ Do not write internet-wide scanners in this repository. Vendor/government lists,
 
 - [discovery-search-tools.md](discovery-search-tools.md) — Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [discovery-agent-tools.md](discovery-agent-tools.md) — Cursor, ChatGPT, Claude, MCP, and API setup
-- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) / [discovery-scientific.md](discovery-scientific.md) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md) / [discovery-other.md](discovery-other.md)
+- [discovery-opendata.md](discovery-opendata.md) / [discovery-geoportals.md](discovery-geoportals.md) ([SDI](discovery-geoportals-sdi.md), [viewers](discovery-geoportals-viewers.md)) / [discovery-scientific.md](discovery-scientific.md) ([domain](discovery-scientific-domain.md)) / [discovery-metadata.md](discovery-metadata.md) / [discovery-indicators.md](discovery-indicators.md) / [discovery-other.md](discovery-other.md)
+- [software-index.md](software-index.md) — every `software.id` → recipe
 - [apidetect.md](apidetect.md) / [liveness.md](liveness.md)
 - [agents/discover.md](agents/discover.md) — agent checklist
 - [agents/contribute.md](agents/contribute.md) — write YAML after a find

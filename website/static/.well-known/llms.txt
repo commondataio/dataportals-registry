@@ -8,13 +8,14 @@
 - [docs/getting-started.md](docs/getting-started.md): DuckDB / Parquet / YAML entry points
 - [docs/when-to-use.md](docs/when-to-use.md): scope and related Dateno repositories
 - [docs/ai-consumers.md](docs/ai-consumers.md): consumption contract, join keys, DuckDB JSON-string gotchas
-- [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md), [docs/software-taxonomy.md](docs/software-taxonomy.md)
+- [docs/data-model.md](docs/data-model.md), [docs/vocabularies.md](docs/vocabularies.md), [docs/catalog-types.md](docs/catalog-types.md), [docs/software-taxonomy.md](docs/software-taxonomy.md), [docs/software-index.md](docs/software-index.md)
 - [docs/exports.md](docs/exports.md), [docs/query-examples.md](docs/query-examples.md), [docs/cli.md](docs/cli.md)
 - [docs/discovery.md](docs/discovery.md): find catalogs not yet in the registry (human)
-- [docs/harvest.md](docs/harvest.md): crawl datasets from catalog APIs; filter datasets from publications in scientific IRs ([harvest-scientific.md](docs/harvest-scientific.md), [harvest-opendata.md](docs/harvest-opendata.md), [harvest-geoportals.md](docs/harvest-geoportals.md), [harvest-indicators.md](docs/harvest-indicators.md), [harvest-metadata.md](docs/harvest-metadata.md), [harvest-other.md](docs/harvest-other.md), [harvest-protocols.md](docs/harvest-protocols.md), [harvest-incremental.md](docs/harvest-incremental.md), [harvest-earthdata.md](docs/harvest-earthdata.md), [harvest-biodiversity.md](docs/harvest-biodiversity.md), [harvest-viewers.md](docs/harvest-viewers.md), [harvest-identifiers.md](docs/harvest-identifiers.md), [harvest-output.md](docs/harvest-output.md))
+- [docs/software-index.md](docs/software-index.md): every `software.id` → discovery/harvest recipe
+- [docs/harvest.md](docs/harvest.md): crawl datasets from catalog APIs; filter datasets from publications in scientific IRs ([harvest-scientific.md](docs/harvest-scientific.md) ([domain](docs/harvest-scientific-domain.md)), [harvest-opendata.md](docs/harvest-opendata.md), [harvest-geoportals.md](docs/harvest-geoportals.md), [harvest-indicators.md](docs/harvest-indicators.md), [harvest-metadata.md](docs/harvest-metadata.md), [harvest-other.md](docs/harvest-other.md), [harvest-protocols.md](docs/harvest-protocols.md), [harvest-incremental.md](docs/harvest-incremental.md), [harvest-earthdata.md](docs/harvest-earthdata.md), [harvest-biodiversity.md](docs/harvest-biodiversity.md), [harvest-viewers.md](docs/harvest-viewers.md), [harvest-identifiers.md](docs/harvest-identifiers.md), [harvest-output.md](docs/harvest-output.md))
 - [docs/discovery-search-tools.md](docs/discovery-search-tools.md): Google, Censys, Shodan, FOFA, URLScan, crt.sh
 - [docs/discovery-agent-tools.md](docs/discovery-agent-tools.md): configure Cursor, ChatGPT, Claude, MCP, and search APIs for discovery
-- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md), [docs/discovery-scientific.md](docs/discovery-scientific.md), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md), [docs/discovery-other.md](docs/discovery-other.md): per-platform discovery queries
+- [docs/discovery-opendata.md](docs/discovery-opendata.md), [docs/discovery-geoportals.md](docs/discovery-geoportals.md) ([SDI](docs/discovery-geoportals-sdi.md), [viewers](docs/discovery-geoportals-viewers.md)), [docs/discovery-scientific.md](docs/discovery-scientific.md) ([domain](docs/discovery-scientific-domain.md)), [docs/discovery-metadata.md](docs/discovery-metadata.md), [docs/discovery-indicators.md](docs/discovery-indicators.md), [docs/discovery-other.md](docs/discovery-other.md): per-platform discovery queries
 - [docs/apidetect.md](docs/apidetect.md), [docs/liveness.md](docs/liveness.md): endpoint probes and URL reachability
 - [docs/agents/query.md](docs/agents/query.md), [docs/agents/discover.md](docs/agents/discover.md), [docs/agents/harvest.md](docs/agents/harvest.md), [docs/agents/contribute.md](docs/agents/contribute.md), [docs/agents/openspec-quickstart.md](docs/agents/openspec-quickstart.md)
 - [AGENTS.md](AGENTS.md): project scope, schema, CLI commands, contribution workflow for AI assistants
@@ -27,9 +28,9 @@
 
 ## Data layout
 
-- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Source count 21 August 2026 (v1.14.0): **18,420** files in **217** country/territory folders.
-- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**0** as of 21 August 2026)
-- `data/software/`: software/platform definitions (**211** YAML files; published `software.jsonl` has 211)
+- `data/entities/`: verified catalog records (one YAML per catalog, organized by country and catalog type). Counts: [docs/exports.md](docs/exports.md#record-counts) — published snapshot v1.14.0 **18,420**; current source YAML **19,131** in **217** country/territory folders (22 August 2026).
+- `data/scheduled/`: unverified records pending promotion — [docs/scheduled.md](docs/scheduled.md) (**17** as of 22 August 2026)
+- `data/software/`: software/platform definitions (**223** YAML files; published v1.14.0 `software.jsonl` has 211; working-tree export has 223)
 - `data/schemes/catalog.json`: Cerberus validation schema (CI source of truth)
 - `data/schemes/catalog.schema.json`: JSON Schema with descriptions for external tooling
 - `data/schemes/catalog.context.jsonld`: DCAT/schema.org JSON-LD mappings

@@ -2,7 +2,7 @@
 
 Unverified catalogs live under `data/scheduled/` with `status: scheduled` and `uid` values like `temp########`. They are included in `full.jsonl` / `full.parquet` / DuckDB, not in `catalogs.jsonl`.
 
-As of 21 August 2026 the queue is empty (the FAIR Data Point, MapServer, Mapbender, and NextGIS Web batch was promoted to entities). After a discovery pass the queue may hold unverified finds again.
+Current queue size is in [exports.md](exports.md#record-counts) (**17** as of 22 August 2026 — mostly polar / Arctic / Greenland catalogs pending live promotion). After a discovery pass the queue grows; after `promote_scheduled.py` it shrinks.
 
 Prefer `--scheduled` when adding finds you have not fully reviewed: [discovery.md](discovery.md), [agents/contribute.md](agents/contribute.md).
 

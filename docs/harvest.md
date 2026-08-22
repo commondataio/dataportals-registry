@@ -17,20 +17,21 @@ Coding agents: [agents/harvest.md](agents/harvest.md). Production harvesting for
 | Guide | Use when |
 |-------|----------|
 | [Scientific repositories](harvest-scientific.md) | DSpace, Invenio, EPrints, Pure, Esploro, and other IRs that mix **publications, theses, software, and datasets** |
+| [Domain scientific repositories](harvest-scientific-domain.md) | IPT, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF |
 | [Open data portals](harvest-opendata.md) | CKAN, OpenDataSoft, Socrata, and similar — packages vs resources |
-| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API — layers vs services vs tiles |
-| [Indicators and microdata](harvest-indicators.md) | PxWeb tables, SDMX dataflows, OpenSDG indicators, NADA studies |
+| [Geoportals](harvest-geoportals.md) | GeoNetwork CSW, GeoNode, ArcGIS, STAC, OGC API, mviewer, Isogeo, Geocortex, QGIS Server — layers vs services vs tiles |
+| [Indicators and microdata](harvest-indicators.md) | PxWeb tables, SDMX dataflows, OpenSDG indicators, NADA studies, DHIS2, IPUMS |
 | [Metadata catalogs](harvest-metadata.md) | FAIR Data Point DCAT, Aristotle MDR, Fusion Registry structure |
-| [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenML, API directories, marketplaces, `custom` |
+| [Search, ML, API, marketplaces](harvest-other.md) | Aggregators, OpenAIRE, OpenML, API directories, marketplaces, `custom` |
 | [Protocols](harvest-protocols.md) | OAI-PMH, CSW, DCAT, STAC, SDMX, OGC, ArcGIS REST — grain that is shared across products |
 | [Incremental harvests](harvest-incremental.md) | `from=`, `metadata_modified`, STAC `datetime`, checkpoints |
-| [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus |
-| [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species |
-| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, MapProxy — layers not tiles |
+| [Earth observation](harvest-earthdata.md) | THREDDS, ERDDAP, STAC collections, Open Data Cube, Copernicus, openEO, ESGF |
+| [Biodiversity and genomics](harvest-biodiversity.md) | IPT, Symbiota, ALA, GBIF datasets, Ensembl species, Breedbase, Tripal, VEuPathDB |
+| [Map viewers](harvest-viewers.md) | QWC2, Masterportal, Lizmap, mviewer, MapProxy — layers not tiles |
 | [Dataset identifiers](harvest-identifiers.md) | Native id + catalog `uid`; DOI/handle; do not mint `cdi########` for datasets |
 | [Harvest output](harvest-output.md) | JSON record shape, skip counts, empty-harvest checklist |
 
-**Pick a guide:** mixed IR → scientific. CKAN/Socrata-like → opendata. CSW/STAC/ArcGIS catalog → geoportals. Map UI only → viewers. Gridded EO → earthdata. IPT/Symbiota/GBIF → biodiversity. Tables/dataflows → indicators. FDP/MDR → metadata. `from=` / checkpoints → incremental. Shared OAI/CSW/DCAT grain → protocols. Aggregators/ML/`custom` → other. JSON records / empty results → output.
+**Pick a guide:** mixed IR → scientific. CKAN/Socrata-like → opendata. CSW/STAC/ArcGIS catalog → geoportals. Map UI only → viewers. Gridded EO → earthdata. IPT/Symbiota/GBIF/Breedbase → biodiversity. Tables/dataflows → indicators. FDP/MDR → metadata. `from=` / checkpoints → incremental. Shared OAI/CSW/DCAT grain → protocols. Aggregators/ML/`custom` → other. JSON records / empty results → output.
 
 Do not apply IR publication filters to WMS or PxWeb. Do not treat CSW **service** records or STAC **items** as datasets unless that is the catalog grain.
 
@@ -54,12 +55,13 @@ WHERE catalog_type = 'Scientific data repository'
     'dspace', 'dspacecris', 'invenio', 'inveniordm', 'eprints',
     'hyrax', 'pure', 'esploro', 'opus', 'elsevierdigitalcommons',
     'weko3', 'phaidra', 'figshare', 'haplo', 'worktribe', 'mycore',
-    'ipt', 'thredds', 'erddap'
+    'ipt', 'thredds', 'erddap', 'radar', 'yoda', 'symbiota',
+    'breedbase', 'tripal', 'veupathdb', 'massbank', 'iochembd', 'esgf'
   )
 LIMIT 50;
 ```
 
-Filter `software.id` only with values that exist in `data/software/` (published catalog: **205** definitions). Recipes for RADAR, Yoda, DHIS2, IPUMS, OpenAIRE, and Symbiota still apply by **hostname** — those records are often `software.id: custom` in current exports. Do not write an unpublished id onto catalog YAML.
+Filter `software.id` only with values that exist in `data/software/` (currently **223** definitions, including `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota`). Do not invent an id that is missing from `software_ids.yaml`.
 
 For open data or geo, change `catalog_type` and the `software.id` list (`ckan`, `geonetwork`, `stacserver`, …). Nested `software` / `endpoints` are JSON **strings** in DuckDB ([ai-consumers.md](ai-consumers.md)).
 
@@ -71,7 +73,7 @@ If you page `/api/records` or OAI `ListRecords` with no type filter, most hits a
 
 **Prefer server-side filters** (search `q=`, facet, OAI `setSpec`). Client-side `dc:type` matching is the fallback when the API has no type parameter. Vocabularies differ per campus — always `ListSets` / inspect one sample record before a full crawl.
 
-## Keep vs drop (shared vocabulary)
+## Keep vs drop (shared vocabulary) {#keep-vs-drop-shared-vocabulary}
 
 Keep a record when its type is clearly research **data** (including data papers only if they deposit data files — prefer the dataset record).
 
@@ -107,6 +109,7 @@ Software/code and models are not datasets unless the catalog types them as data.
 ## Related
 
 - [harvest-scientific.md](harvest-scientific.md)
+- [harvest-scientific-domain.md](harvest-scientific-domain.md)
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)
 - [harvest-indicators.md](harvest-indicators.md)

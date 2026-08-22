@@ -1,6 +1,6 @@
 # Agent guide: harvesting datasets from catalogs
 
-List **datasets inside** registered catalogs via their public APIs. Human narrative: [harvest.md](../harvest.md). Per type: [scientific](../harvest-scientific.md), [opendata](../harvest-opendata.md), [geoportals](../harvest-geoportals.md), [indicators](../harvest-indicators.md), [metadata](../harvest-metadata.md), [other](../harvest-other.md). Shared protocols: [harvest-protocols.md](../harvest-protocols.md). Incremental: [harvest-incremental.md](../harvest-incremental.md). Identifiers: [harvest-identifiers.md](../harvest-identifiers.md). EO: [harvest-earthdata.md](../harvest-earthdata.md). Biodiversity: [harvest-biodiversity.md](../harvest-biodiversity.md). Viewers: [harvest-viewers.md](../harvest-viewers.md). Output: [harvest-output.md](../harvest-output.md).
+List **datasets inside** registered catalogs via their public APIs. Human narrative: [harvest.md](../harvest.md). Per type: [scientific IRs](../harvest-scientific.md), [domain scientific](../harvest-scientific-domain.md), [opendata](../harvest-opendata.md), [geoportals](../harvest-geoportals.md), [indicators](../harvest-indicators.md), [metadata](../harvest-metadata.md), [other](../harvest-other.md). Shared protocols: [harvest-protocols.md](../harvest-protocols.md). Incremental: [harvest-incremental.md](../harvest-incremental.md). Identifiers: [harvest-identifiers.md](../harvest-identifiers.md). EO: [harvest-earthdata.md](../harvest-earthdata.md). Biodiversity: [harvest-biodiversity.md](../harvest-biodiversity.md). Viewers: [harvest-viewers.md](../harvest-viewers.md). Output: [harvest-output.md](../harvest-output.md).
 
 This is **not** catalog discovery ([discover.md](discover.md)) and **not** registry query ([query.md](query.md)).
 
@@ -20,7 +20,7 @@ Do not write dataset YAML into this repository. Do not invent `uid` for datasets
 
 1. Read [llms.txt](https://github.com/datenoio/dataportals-registry/blob/main/llms.txt) if you have not already.
 2. Resolve catalogs from **exports** (`datasets.duckdb` / `full.parquet`). Use `endpoints[]` when present.
-3. Confirm `software.id`. If `custom`, do not guess a CKAN/DSpace filter — inspect the live API once or stop. Apply a platform recipe by **hostname** when the catalog is still `custom` (IPUMS, OpenAIRE EXPLORE, RADAR, Yoda, DHIS2, Symbiota). Do not filter exports on a `software.id` that is missing from `data/software/`.
+3. Confirm `software.id`. If `custom`, do not guess a CKAN/DSpace filter — inspect the live API once or stop. Do not filter exports on a `software.id` that is missing from `data/software/`.
 
 ```sql
 SELECT id, uid, name, link,
@@ -42,62 +42,21 @@ WHERE id = 'examplegov'
 
 ## Platform shortcuts
 
-| If `software.id` is | Dataset filter |
-|---------------------|----------------|
+Open the harvest heading from [software-index.md](../software-index.md). Do not invent filters for `custom`.
+
+| If `software.id` is | Dataset filter (then follow the harvest page) |
+|---------------------|-----------------------------------------------|
 | `dataverse` | `/api/search?q=*&type=dataset` |
-| `dspace` / `dspacecris` | `/server/api/discover/search/objects?dsoType=ITEM&f.entityType=Dataset,equals` (or `dc.type` / OAI set) |
+| `dspace` / `dspacecris` | `f.entityType=Dataset` or OAI `ListSets` |
 | `invenio` / `inveniordm` | `/api/records?q=metadata.resource_type.type:dataset` |
-| `eprints` | OAI or `/cgi/exportview/type/dataset/JSON/dataset.js` |
-| `hyrax` | `/catalog.json?f[human_readable_type_sim][]=Dataset` |
-| `opus` | OAI set `doc-type:researchdata` |
-| `pure` | `/sitemap/datasets.xml` or `/en/datasets/` — not `/publications/` |
-| `ipt` | `/inventory/dataset` or `/rss.do` — Darwin Core archives, not occurrences |
-| `thredds` | `/thredds/catalog.xml` — recurse `catalogRef`; harvest dataset nodes |
-| `erddap` | `/erddap/info/index.json` — `datasetID` rows |
-| `ckan` / `dkan` / `datapress` | `package_search` (packages, not resources) |
+| `ckan` / `dkan` | `package_search` (packages, not resources) |
 | `opendatasoft` | `/api/explore/v2.1/catalog/datasets` |
 | `socrata` | `/api/catalog/v1?only=datasets` |
-| `datafair` | `/data-fair/api/v1/datasets` |
-| `triplydb` | `/_api/facets/datasets` |
-| `scicat` | Native datasets API — little extra filtering |
-| `seek` | `/data_files.json` / assays — not SOP-only pages |
-| `geonetwork` | CSW `GetRecords`; keep `hierarchyLevel` dataset/series |
-| `geonode` | `/api/datasets/` (v4) or `/api/layers/` (v3) — not maps |
+| `geonetwork` | CSW `GetRecords`; `hierarchyLevel` dataset/series |
 | `stacserver` | `/collections` (items only if that is the grain) |
-| `arcgisserver` | `/arcgis/rest/services?f=pjson` — Feature/Map/Image, not GPServer |
-| `pygeoapi` / `wis20box` | `/collections?f=json` |
-| `lizmap` / `qwc2` / `mapserver` | WMS GetCapabilities layers |
-| `geomapfish` | `/themes` JSON layers |
-| `oskari` | `GetMapLayers` action |
-| `esrigeo` | `/rest/metadata/search` or CSW |
-| `masterportal` / `mapstore` / `terria` | Theme/catalog JSON layers — not tiles ([harvest-viewers.md](../harvest-viewers.md)) |
-| `pxweb` | Walk `/api/v1/` — tables (`type: t`), not folders |
-| `eurostat` / `ecb` / `ilostat` | SDMX **dataflow** list (`eurostat` dissemination API, `data-api.ecb.europa.eu`, `sdmx.ilo.org`) — not observation `/data` |
-| `dataworldbankorg` | `/v2/indicator` — not country time-series queries |
-| `whoint` | GHO `Indicator` list — not observation rows |
-| `databisorg` | `stats.bis.org` SDMX `/dataflow` — not POST `/api/v0/search` |
-| `datauniceforg` | `sdmx.data.unicef.org` dataflows — not country profiles |
-| `datagovmy` | Catalogue **ids** from the UI/docs — `/data-catalogue?id=` is observations, not a list |
-| `opensdg` | Indicator JSON under `/data/` |
-| `nada` | `/index.php/api/catalog/search` — studies, not videos |
-| `ifremercatalog` | SEANOE OAI `ListRecords` — datasets, not every file |
-| `fairdatapoint` | RDF catalog root; follow `dcat:dataset` |
-| `fusionregistry` | SDMX dataflows, not every codelist |
-| `openmlorg` | OpenML `data/list` — not tasks/runs |
-| `idra` | Federation search only if asked; prefer source catalogs |
-| `aleph` | `/api/2/collections` — collections, not every document |
-| `gvsigonline` | Published project layers or GeoServer GetCapabilities |
-
-**By hostname** (often still `custom` in exports — do not filter DuckDB on these ids until they exist in `data/software/`):
-
-| Product | Dataset filter |
-|---------|----------------|
-| RADAR (`/radar/api/datasets`) | Dataset JSON / OAI — [harvest-scientific.md](../harvest-scientific.md#radar-radar) |
-| Yoda public landing | Published vault DOIs — not `/research/` |
-| DHIS2 | `/api/dataSets.json` / indicators — not orgUnits |
-| IPUMS (`*.ipums.org`) | Collection/sample metadata — not a finished extract |
-| OpenAIRE EXPLORE/CONNECT | Graph `search/datasets` — not publications |
-| Symbiota | `/collections/datasets/rsshandler.php` — not occurrences |
+| `arcgisserver` | `/arcgis/rest/services?f=pjson` — not GPServer |
+| `pxweb` | `/api/v1/` tables (`type: t`), not folders |
+| `custom` | [harvest-other.md](../harvest-other.md#custom) decision tree |
 
 If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets` / facets before concluding the catalog has no data. Local labels include Forschungsdaten, Research Data, and numeric WEKO3 item types.
 
@@ -119,6 +78,7 @@ If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets
 
 - [harvest.md](../harvest.md)
 - [harvest-scientific.md](../harvest-scientific.md)
+- [harvest-scientific-domain.md](../harvest-scientific-domain.md)
 - [harvest-opendata.md](../harvest-opendata.md)
 - [harvest-geoportals.md](../harvest-geoportals.md)
 - [harvest-indicators.md](../harvest-indicators.md)
@@ -131,6 +91,7 @@ If the filter returns zero hits, inspect **one** unfiltered sample and `ListSets
 - [harvest-viewers.md](../harvest-viewers.md)
 - [harvest-identifiers.md](../harvest-identifiers.md)
 - [harvest-output.md](../harvest-output.md)
+- [software-index.md](../software-index.md)
 - [apidetect.md](../apidetect.md)
 - [query.md](query.md)
 - [discover.md](discover.md)

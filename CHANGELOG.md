@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **12 software definitions**; software catalog now **223** platforms: mviewer (`mviewer`), Geocortex Essentials (`geocortex`), Isogeo (`isogeo`), QGIS Server (`qgisserver`), openEO (`openeo`), MapGIS IGServer (`mapgisigserver`), Breedbase (`breedbase`), Tripal (`tripal`), VEuPathDB (`veupathdb`), MassBank (`massbank`), ioChem-BD (`iochembd`), and ESGF (`esgf`).
+- Generated [software-index.md](docs/software-index.md); split geoportal and scientific discovery/harvest mega-pages; discovery fingerprints and harvest recipes for the new platforms.
+
+### Changed
+- Discovery and harvest guides treat `radar`, `yoda`, `dhis2`, `ipums`, `openaire`, and `symbiota` as published `software.id` values (no longer `custom` placeholders).
+- Documentation navigability and harvest depth: unique `{#id}` headings (CI fails on combined software H2s, stale auto-slug links, and a stale index file); custom/host-collision/STAC/DSpace/Drupal playbooks; agent indexes link the software index; harvest-output recipe schema (not a reaper contract); CI test `tests/test_docs_software_coverage.py`. Record-count contract: [exports.md](docs/exports.md#record-counts). Docusaurus `markdown.format: detect` so `{#id}` anchors build on GitHub Pages.
+- IsiGéo (`isigeo`) software description now distinguishes it from Isogeo (`isogeo`), the French GIS metadata SaaS.
+
 ## [1.14.0] - 2026-08-21
 
 **GitHub Release**: [v1.14.0](https://github.com/datenoio/dataportals-registry/releases/tag/v1.14.0) - Published August 21, 2026

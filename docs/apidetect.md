@@ -40,9 +40,9 @@ Maps exist for the IDs in `CATALOGS_URLMAP` (built-in plus draft merge). High-tr
 | Area | `software.id` |
 |------|----------------|
 | Open data | `ckan`, `dkan`, `opendatasoft`, `socrata`, `udata`, `magda`, `jkan`, `junar`, `entryscape`, `drupal`, `wordpress`, `triplydb` |
-| Geo | `geonetwork`, `geonode`, `geoserver`, `arcgishub`, `arcgisserver`, `pycsw`, `pygeoapi`, `mapproxy`, `qwc2`, `mapstore`, `lizmap`, `mapbender`, `geomapfish`, `getsdiportal`, `terria`, `gvsigonline`, `erdasapollo`, `wis20box`, `koordinates`, `nextgisweb` |
-| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare` |
-| Indicators / microdata | `pxweb`, `opensdg`, `statsuite`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema` |
+| Geo | `geonetwork`, `geonode`, `geoserver`, `arcgishub`, `arcgisserver`, `pycsw`, `pygeoapi`, `mapproxy`, `qwc2`, `mapstore`, `lizmap`, `mapbender`, `geomapfish`, `getsdiportal`, `terria`, `gvsigonline`, `erdasapollo`, `wis20box`, `koordinates`, `nextgisweb`, `tianditu`, `openeo`, `isogeo`, `mapgisigserver` |
+| Scientific | `dataverse`, `dspace`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `opus`, `esploro`, `pure`, `weko3`, `elsevierdigitalcommons`, `opendap`, `thredds`, `erddap`, `ipt`, `galaxy`, `ala`, `figshare`, `radar`, `breedbase`, `tripal`, `veupathdb`, `massbank`, `iochembd`, `esgf` |
+| Indicators / microdata | `pxweb`, `opensdg`, `statsuite`, `sdmxri`, `nada`, `nesstar`, `redatam`, `colectica`, `obibamica`, `knoema`, `dhis2` |
 | Metadata | `fusionregistry`, `aristotlemdr`, `mwmb` |
 
 If `detect-single` reports no map for the ID, stop. Do not copy URLs from a different platform.

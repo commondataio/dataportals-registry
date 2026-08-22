@@ -4,7 +4,7 @@ How to find **metadata catalog** installations (`catalog_type: Metadata catalog`
 
 These sites publish **catalog/dataset metadata** (often RDF / DCAT or SDMX structural metadata), not a full open-data CMS and not a research-data file store. If the public product is CKAN, Dataverse, or GeoNetwork, use those `software.id` values and types instead.
 
-## FAIR Data Point (`fairdatapoint`)
+## FAIR Data Point (`fairdatapoint`) {#fairdatapoint}
 
 Open-source REST API and web client for FAIR metadata as RDF (DCAT + the [FAIR Data Point specification](https://specs.fairdatapoint.org/)). Docs: [docs.fairdatapoint.org](https://docs.fairdatapoint.org). Index of public points: [home.fairdatapoint.org](https://home.fairdatapoint.org).
 
@@ -22,7 +22,7 @@ Open-source REST API and web client for FAIR metadata as RDF (DCAT + the [FAIR D
 
 Start from the public index, then fill gaps with search. Skip points that require login for any catalog listing. Register the FDP root, not a single dataset IRI. Do not duplicate the index (`home.fairdatapoint.org`) if it is already in the registry.
 
-## Aristotle Metadata Registry (`aristotlemdr`)
+## Aristotle Metadata Registry (`aristotlemdr`) {#aristotlemdr}
 
 Open-source metadata registry for models and controlled vocabularies. Site: [aristotlemetadata.com](https://www.aristotlemetadata.com) (product branding varies by deployment).
 
@@ -35,7 +35,7 @@ Open-source metadata registry for models and controlled vocabularies. Site: [ari
 | Google | `"Aristotle" ("Metadata Registry" OR MDR) (vocabulary OR "data element") -site:github.com` |
 | Censys | `web.endpoints.http.body: "Aristotle"` |
 
-## Fusion Metadata Registry (`fusionregistry`)
+## Fusion Metadata Registry (`fusionregistry`) {#fusionregistry}
 
 SDMX-native structural metadata registry (code lists, DSDs, REST). Often branded Fusion Registry / FMR.
 
@@ -49,7 +49,7 @@ SDMX-native structural metadata registry (code lists, DSDs, REST). Often branded
 | Google | `inurl:/sdmx/v2/ "Fusion"` |
 | Censys | `web.endpoints.http.body: "Fusion Registry"` |
 
-## Metadata Browser (`mwmb`)
+## Metadata Browser (`mwmb`) {#mwmb}
 
 MetadataWorks catalog UI for datasets, standards, and terminologies. Site: [metadataworks.ai](https://metadataworks.ai/metadata-browser).
 

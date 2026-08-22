@@ -1,6 +1,6 @@
 # Harvesting by protocol
 
-Many catalogs share a **protocol**, not a product UI. Use this page when `endpoints[]` lists CSW, OAI-PMH, DCAT, STAC, SDMX, OGC, or ArcGIS REST and you need the harvest grain. Software-specific filters: [harvest-scientific.md](harvest-scientific.md), [harvest-opendata.md](harvest-opendata.md), [harvest-geoportals.md](harvest-geoportals.md), [harvest-indicators.md](harvest-indicators.md), [harvest-metadata.md](harvest-metadata.md).
+Many catalogs share a **protocol**, not a product UI. Use this page when `endpoints[]` lists CSW, OAI-PMH, DCAT, STAC, SDMX, OGC, or ArcGIS REST and you need the harvest grain. Software-specific filters: [harvest-scientific.md](harvest-scientific.md), [harvest-scientific-domain.md](harvest-scientific-domain.md), [harvest-opendata.md](harvest-opendata.md), [harvest-geoportals.md](harvest-geoportals.md), [harvest-indicators.md](harvest-indicators.md), [harvest-metadata.md](harvest-metadata.md).
 
 GET public URLs only. Stop on `401`/`403`. Do not write dataset YAML into this repository.
 
@@ -19,7 +19,7 @@ GET public URLs only. Stop on `401`/`403`. Do not write dataset YAML into this r
 | CKAN Action | `package_search` **package** | Resource rows, harvest sources |
 | SPARQL | Named **dataset** / graph the catalog documents | Every triple |
 
-## OAI-PMH
+## OAI-PMH {#oai-pmh}
 
 1. `verb=Identify`
 2. `verb=ListSets` — pick dataset / ResearchData / `doc-type:researchdata` sets when they exist
@@ -31,7 +31,7 @@ Common Identify paths: `/oai`, `/oai/request`, `/cgi/oai2`, `/oai2d`, `/ws/oai`,
 
 Incremental: `from=` / `until=` (ISO date). Do not page `ListIdentifiers` titles as datasets.
 
-## CSW (OGC Catalog Service)
+## CSW (OGC Catalog Service) {#csw}
 
 ```text
 GET https://host/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
@@ -40,9 +40,9 @@ GET https://host/geonetwork/srv/eng/csw?service=CSW&version=2.0.2&request=GetRec
 
 Page with `startPosition` / `nextRecord`. Keep ISO `hierarchyLevel` `dataset` or `series`. Drop `service` unless you index services separately.
 
-Same pattern on GeoNode `/catalogue/csw`, pycsw `/csw`, Esri Geoportal `/csw`, deegree, Micka, smart.finder. Full GeoNetwork notes: [harvest-geoportals.md](harvest-geoportals.md#geonetwork-geonetwork-and-openwis-openwis).
+Same pattern on GeoNode `/catalogue/csw`, pycsw `/csw`, Esri Geoportal `/csw`, deegree, Micka, smart.finder. Full GeoNetwork notes: [harvest-geoportals.md](harvest-geoportals.md#geonetwork).
 
-## DCAT and data.json
+## DCAT and data.json {#dcat}
 
 ```text
 GET https://host/data.json
@@ -61,7 +61,7 @@ GET https://host/
 GET https://host/collections
 ```
 
-Default: each **collection** is a dataset. Follow `links` `rel=next`. `/search` is a query API, not a dump — always set `limit` and follow next links. Items are granules; harvest them only when the catalog’s product is item-level. [harvest-geoportals.md](harvest-geoportals.md#stac-stacserver-stacbrowser).
+Default: each **collection** is a dataset. Follow `links` `rel=next`. `/search` is a query API, not a dump — always set `limit` and follow next links. Items are granules; harvest them only when the catalog’s product is item-level. [harvest-geoportals.md](harvest-geoportals.md#stacserver).
 
 ## SDMX
 
@@ -93,7 +93,7 @@ Each collection is a dataset. Same grain as STAC collections. WIS2 Box usually w
 GET https://host/arcgis/rest/services?f=pjson
 ```
 
-Walk folders. Keep `FeatureServer`, `MapServer`, `ImageServer`. Drop `GPServer`, geocode, print, geometry, NA. Hub sites: DCAT or `/api/search/v1` with data item types ([harvest-geoportals.md](harvest-geoportals.md#arcgis-server-arcgisserver)).
+Walk folders. Keep `FeatureServer`, `MapServer`, `ImageServer`. Drop `GPServer`, geocode, print, geometry, NA. Hub sites: DCAT or `/api/search/v1` with data item types ([harvest-geoportals.md](harvest-geoportals.md#arcgisserver)).
 
 ## CKAN Action API
 
@@ -101,7 +101,7 @@ Walk folders. Keep `FeatureServer`, `MapServer`, `ImageServer`. Drop `GPServer`,
 GET https://host/api/3/action/package_search?q=&rows=100&start=0
 ```
 
-Packages, not resources. Optional `fq=dataset_type:dataset`. [harvest-opendata.md](harvest-opendata.md#ckan-ckan-and-dkan-dkan).
+Packages, not resources. Optional `fq=dataset_type:dataset`. [harvest-opendata.md](harvest-opendata.md#ckan).
 
 ## SPARQL / linked data
 
@@ -111,6 +111,7 @@ Harvest the catalog’s **dataset list** (TriplyDB `/_api/facets/datasets`, a Vo
 
 - [harvest.md](harvest.md)
 - [harvest-scientific.md](harvest-scientific.md)
+- [harvest-scientific-domain.md](harvest-scientific-domain.md)
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)
 - [harvest-indicators.md](harvest-indicators.md)

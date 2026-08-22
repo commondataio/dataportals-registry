@@ -4,7 +4,7 @@ How to find **open data portal** installations (`catalog_type: Open data portal`
 
 Set `software.id` from `data/software/` only when a probe or page signal matches. Otherwise `custom`. After YAML exists: `python scripts/apidetect.py detect-single {id} --dryrun` (replace `{id}` with the catalog id).
 
-## CKAN (`ckan`)
+## CKAN (`ckan`) {#ckan}
 
 Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosystem.ckan.org/dataset/ckan-sites-metadata) (automated: `python scripts/sync_ckan_ecosystem.py --dry-run`) and [Datashades](https://datashades.info/).
 
@@ -26,7 +26,7 @@ Most common self-hosted open-data CMS. Gallery: [CKAN ecosystem](https://ecosyst
 
 **Paths:** `/dataset`, `/organization`, `/api/3`, `/data.json`, `/catalog.xml`. Some installs live under `/data` or `/opendata` — probe `https://host/data/api/3/action/status_show` as well.
 
-## DKAN (`dkan`)
+## DKAN (`dkan`) {#dkan}
 
 Drupal-based portal with a CKAN-compatible Action API plus DKAN’s own `/api/1/` routes. Community: [getdkan.org/community](https://getdkan.org/community).
 
@@ -41,7 +41,7 @@ Drupal-based portal with a CKAN-compatible Action API plus DKAN’s own `/api/1/
 
 Do not label a site `dkan` from the CKAN API alone — that is usually `ckan`.
 
-## OpenDataSoft (`opendatasoft`)
+## OpenDataSoft (`opendatasoft`) {#opendatasoft}
 
 SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or use a custom domain with `/explore`.
 
@@ -58,7 +58,7 @@ SaaS and self-hosted Explore portals. Many hosts end in `*.opendatasoft.com` or 
 
 **False positives:** the vendor homepage, academy, and blog. Register the **portal** (`{org}.opendatasoft.com` or the city’s custom domain), not `www.opendatasoft.com`. List: [Open Data Inception](https://data.opendatasoft.com/explore/dataset/open-data-sources%40public/information/).
 
-## Socrata (`socrata`)
+## Socrata (`socrata`) {#socrata}
 
 Tyler / Socrata Open Data. UI often `/browse` or `/datasets`. SODA API under `/api/views`. Network: [opendatanetwork.com](https://www.opendatanetwork.com/search?q=).
 
@@ -74,7 +74,7 @@ Tyler / Socrata Open Data. UI often `/browse` or `/datasets`. SODA API under `/a
 
 Skip `soda.demo.socrata.com` and Tyler marketing sites. Prefer the city’s production domain.
 
-## uData (`udata`)
+## uData (`udata`) {#udata}
 
 French-origin portal (data.gouv.fr lineage). Dataset UI `/datasets/`. API `/api/1/datasets/`.
 
@@ -89,7 +89,7 @@ French-origin portal (data.gouv.fr lineage). Dataset UI `/datasets/`. API `/api/
 
 Local clones exist outside France. Do not assume every `/api/1/datasets` is uData — check the JSON shape.
 
-## Magda (`magda`)
+## Magda (`magda`) {#magda}
 
 Search-centric catalog (data.gov.au and derivatives). API `/api/v0/search/datasets` or `/search/api/v0/search/datasets`.
 
@@ -101,7 +101,7 @@ Search-centric catalog (data.gov.au and derivatives). API `/api/v0/search/datase
 | Google | `inurl:/search/api/v0/search/datasets` |
 | Censys | `web.endpoints.http.body: "magda"` |
 
-## JKAN (`jkan`)
+## JKAN (`jkan`) {#jkan}
 
 Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `/datasets`.
 
@@ -114,7 +114,7 @@ Jekyll + CKAN-like static portal. Often GitHub Pages. Datasets as Markdown in `/
 
 Skip the [jkan.io](https://jkan.io) project site unless it is a real catalog instance.
 
-## Junar (`junar`)
+## Junar (`junar`) {#junar}
 
 SaaS open-data CMS used in Latin America. Customer list: [junar.com/customers](https://junar.com/customers/). Often `/data.json`.
 
@@ -123,7 +123,7 @@ SaaS open-data CMS used in Latin America. Customer list: [junar.com/customers](h
 | Google | `"powered by Junar" OR "junar" "datos abiertos"` |
 | Censys | `web.endpoints.http.body: "Junar"` |
 
-## EntryScape (`entryscape`)
+## EntryScape (`entryscape`) {#entryscape}
 
 DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/customers](https://entryscape.com/en/customers/). UI may be Blocks/Catalog; API under `/store/`.
 
@@ -133,9 +133,9 @@ DCAT-AP catalogs, especially Sweden and Nordics. Customers: [entryscape.com/en/c
 | Google | `inurl:/store "entryscape"` |
 | Censys | `web.endpoints.http.body: "EntryScape"` |
 
-## ArcGIS Hub as an open-data site (`arcgishub`)
+## ArcGIS Hub as an open-data site (`arcgishub`) {#arcgishub}
 
-Many Hub sites are **open data** first (dataset search, DCAT) rather than a map viewer. If the primary UI is a dataset catalog, use `catalog_type: Open data portal` and `software.id: arcgishub`. If it is a GIS hub / map gallery, use **Geoportal** — see [discovery-geoportals.md](discovery-geoportals.md#arcgis-hub-arcgishub).
+Many Hub sites are **open data** first (dataset search, DCAT) rather than a map viewer. If the primary UI is a dataset catalog, use `catalog_type: Open data portal` and `software.id: arcgishub`. If it is a GIS hub / map gallery, use **Geoportal** — see [discovery-geoportals-sdi.md](discovery-geoportals-sdi.md#arcgishub).
 
 **Confirm:** `/api/search/v1` or `/api/feed/dcat-us/1.1.json`. Hosts often `*.hub.arcgis.com` or `opendata.arcgis.com`.
 
@@ -147,7 +147,7 @@ inurl:hub.arcgis.com
 
 crt.sh: `%.hub.arcgis.com`. Gallery: [hub.arcgis.com](https://hub.arcgis.com/).
 
-## Idra (`idra`)
+## Idra (`idra`) {#idra}
 
 Open Data Federation Platform (FIWARE / Engineering Ingegneria Informatica). It harvests CKAN, DKAN, Socrata, OpenDataSoft, NGSI, and DCAT-AP sources into one search UI. Docs: [idra.readthedocs.io](https://idra.readthedocs.io). Source: [OPSILab/Idra](https://github.com/OPSILab/Idra).
 
@@ -166,7 +166,7 @@ Typical `catalog_type` is **Data search engine** (folder `search/`), not Open da
 
 Do not register harvested source catalogs a second time as Idra. Duplicate-check the underlying CKAN/Socrata/OpenDataSoft `link` as well.
 
-## Liferay (`liferay`)
+## Liferay (`liferay`) {#liferay}
 
 Digital experience CMS. **Only** register when a public Open Data / RISP dataset listing exists (common on Spanish provincial sites), not a generic Liferay intranet.
 
@@ -180,7 +180,7 @@ Digital experience CMS. **Only** register when a public Open Data / RISP dataset
 | Google | `inurl:/web/guest/ "datos abiertos"` |
 | Censys | `web.endpoints.http.body: "Liferay"` |
 
-## POMOSAM (`pomosam`)
+## POMOSAM (`pomosam`) {#pomosam}
 
 CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (contracts, invoices, orders, public datasets). Vendor: [pomosam.sk](http://www.pomosam.sk).
 
@@ -193,7 +193,7 @@ CORA GEO municipal eGovernment / open-data publisher used by Slovak cities (cont
 | Google | `"POMOSAM" OR "CG eGOV" (otvorené OR zverejňovanie) site:.sk` |
 | Censys | `web.endpoints.http.body: "POMOSAM"` |
 
-## oPortal (`oportal`)
+## oPortal (`oportal`) {#oportal}
 
 Inspur Chinese government open-data product. Deployments share `/oportal/` catalogs, a developer center, and an application gallery.
 
@@ -207,7 +207,7 @@ Inspur Chinese government open-data product. Deployments share `/oportal/` catal
 | Google | `"浪潮" 开放数据 oportal` |
 | Censys | `web.endpoints.http.body: "/oportal/"` |
 
-## OGD Platform India (`ogdindia`)
+## OGD Platform India (`ogdindia`) {#ogdindia}
 
 NIC SaaS on data.gov.in for ministries and states. Site: [data.gov.in](https://data.gov.in).
 
@@ -221,7 +221,7 @@ NIC SaaS on data.gov.in for ministries and states. Site: [data.gov.in](https://d
 | Google | `"OGD Platform" OR "Open Government Data" site:.gov.in` |
 | crt.sh | `%.data.gov.in` |
 
-## data eye (`dataeye`)
+## data eye (`dataeye`) {#dataeye}
 
 Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://dataeye.jp). Some tenants expose a CKAN-compatible metadata API.
 
@@ -233,7 +233,7 @@ Japanese municipal open-data SaaS (Data Cradle). Site: [dataeye.jp](https://data
 | Google | `"data eye" オープンデータ (市 OR 県)` |
 | crt.sh | `%.dataeye.jp` |
 
-## Seoul Open Data Plaza (`seoulopendataplaza`)
+## Seoul Open Data Plaza (`seoulopendataplaza`) {#seoulopendataplaza}
 
 Shared catalog used by Seoul Metropolitan Government district (`gu`) portals. Titles of the form 열린 데이터 광장; `/openinf/` JSP pages.
 
@@ -245,7 +245,7 @@ Shared catalog used by Seoul Metropolitan Government district (`gu`) portals. Ti
 | Google | `inurl:/openinf/ seoul` |
 | Censys | `web.endpoints.http.body: "openinf"` |
 
-## Data Fair (`datafair`)
+## Data Fair (`datafair`) {#datafair}
 
 Koumoul open-source data portals. Docs: [data-fair.github.io](https://data-fair.github.io/3/en/).
 
@@ -258,7 +258,7 @@ Koumoul open-source data portals. Docs: [data-fair.github.io](https://data-fair.
 | Google | `"Data Fair" (Koumoul OR datasets) -site:github.com` |
 | Censys | `web.endpoints.http.body: "data-fair"` |
 
-## Datawheel (`datawheel`)
+## Datawheel (`datawheel`) {#datawheel}
 
 Datawheel-hosted open-data / economic-complexity portals. Site: [datawheel.us](https://datawheel.us).
 
@@ -269,7 +269,7 @@ Datawheel-hosted open-data / economic-complexity portals. Site: [datawheel.us](h
 | Google | `"Datawheel" (open data OR "data portal") -site:datawheel.us` |
 | Censys | `web.endpoints.http.body: "datawheel"` |
 
-## SEU-e (`seue`)
+## SEU-e (`seue`) {#seue}
 
 Consorci AOC electronic office / transparency / open-data service for Catalan administrations. Hosts under `seu-e.cat`.
 
@@ -280,7 +280,7 @@ Consorci AOC electronic office / transparency / open-data service for Catalan ad
 | Google | `site:seu-e.cat (dades OR datasets OR "dades obertes")` |
 | crt.sh | `%.seu-e.cat` |
 
-## TriplyDB (`triplydb`)
+## TriplyDB (`triplydb`) {#triplydb}
 
 Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https://triplydb.com).
 
@@ -292,18 +292,25 @@ Linked-data / knowledge-graph publishing with SPARQL. Site: [triplydb.com](https
 | Google | `"TriplyDB" (SPARQL OR datasets) -site:triplydb.com` |
 | crt.sh | `%.triplydb.com` |
 
-## Drupal (`drupal`) and WordPress (`wordpress`)
+## Drupal (`drupal`) {#drupal}
 
-Use these IDs only when the **public product is a dataset catalog** (DKAN-like Drupal open data, WordPress dataset plugins, CKAN-theme WP sites). Do not register ordinary CMS homepages.
+Use `drupal` only when the **public product is a dataset catalog** (open-data nodes, JSON:API dataset bundle). Do not register ordinary CMS homepages. If the site is DKAN, use `dkan`.
 
-**Confirm:** a queryable dataset list or harvestable API (`/jsonapi` for Drupal, a dataset plugin or CKAN proxy for WordPress). If the site is DKAN, use `dkan` instead of `drupal`.
+**Confirm:** `/jsonapi/node/dataset` (or the site’s dataset bundle) or a public `data.json`.
 
 | Tool | Query |
 |------|-------|
 | Google | `"powered by Drupal" ("open data" OR datasets) inurl:/data` |
+
+## WordPress (`wordpress`) {#wordpress}
+
+Use `wordpress` only for a **datasets** custom post type or CKAN-theme WP catalog. Ordinary WordPress homepages are out of scope.
+
+| Tool | Query |
+|------|-------|
 | Google | `"open data" WordPress (CKAN OR dataset) -site:wordpress.org` |
 
-## Piveau (`piveau`)
+## Piveau (`piveau`) {#piveau}
 
 DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.piveau.de). Powers several European public-sector portals (including patterns used by data.europa.eu).
 
@@ -316,7 +323,7 @@ DCAT-AP microservice catalog (Fraunhofer FOKUS). Site: [piveau.de](https://www.p
 | Google | `"Piveau" (DCAT-AP OR "open data") -site:github.com -site:piveau.de` |
 | Censys | `web.endpoints.http.body: "piveau"` |
 
-## LKOD (`lkod`)
+## LKOD (`lkod`) {#lkod}
 
 Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. Site: [lkod.cz](https://lkod.cz).
 
@@ -327,7 +334,7 @@ Czech local DCAT-AP-CZ catalogs (Golemio / Operátor ICT). Harvests into NKOD. S
 | Google | `"LKOD" OR "lokální katalog otevřených dat" site:.cz` |
 | Censys | `web.endpoints.http.body: "lkod"` |
 
-## Aleph (`aleph`)
+## Aleph (`aleph`) {#aleph}
 
 OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://aleph.occrp.org). Often `catalog_type: Data search engine` or Open data portal depending on whether it hosts datasets or searches collections.
 
@@ -338,7 +345,7 @@ OCCRP investigative document/dataset search. Site: [aleph.occrp.org](https://ale
 | Google | `"Aleph" OCCRP (datasets OR documents) -site:occrp.org` |
 | Censys | `web.endpoints.http.body: "aleph"` |
 
-## Our Open Data (`ouropendata`)
+## Our Open Data (`ouropendata`) {#ouropendata}
 
 Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). Shared assets: `/assets/cms/public.css`, numeric `/dataset/` HTML pages, plus an application market and idea box.
 
@@ -349,7 +356,7 @@ Japanese prefecture/city open-data CMS (Tokushima, Kagawa, Aomori, and others). 
 | Google | `"Our Open Data" オープンデータ OR inurl:/assets/cms/public.css` |
 | Censys | `web.endpoints.http.body: "assets/cms/public.css"` |
 
-## Gipuzkoa Irekia (`gipuzkoairekia`)
+## Gipuzkoa Irekia (`gipuzkoairekia`) {#gipuzkoairekia}
 
 Shared open-government / open-data platform for Gipuzkoa municipalities. Hub: [gipuzkoairekia.eus](https://www.gipuzkoairekia.eus).
 
@@ -361,7 +368,7 @@ Shared open-government / open-data platform for Gipuzkoa municipalities. Hub: [g
 | Google | `"Gipuzkoa Irekia" (opendata OR "datos abiertos")` |
 | Censys | `web.names: "gipuzkoairekia.eus"` |
 
-## DataPress (`datapress`)
+## DataPress (`datapress`) {#datapress}
 
 Managed CKAN plus CMS. Site: [datapress.com](https://datapress.com). Prefer `datapress` when the public product is branded DataPress; otherwise `ckan` if only the CKAN API is visible.
 
@@ -372,7 +379,7 @@ Managed CKAN plus CMS. Site: [datapress.com](https://datapress.com). Prefer `dat
 | Google | `"DataPress" ("open data" OR CKAN)` |
 | Censys | `web.endpoints.http.body: "datapress"` |
 
-## MODA Open Data Platform (`modaopendata`)
+## MODA Open Data Platform (`modaopendata`) {#modaopendata}
 
 Taiwan Nuxt/Vue open-data frontend (national data.gov.tw family plus local clones). Source: moda-gov-tw/opendata-frontend.
 

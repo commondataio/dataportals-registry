@@ -8,9 +8,9 @@ These types are uncommon compared with open data, geo, and scientific repositori
 
 Sites whose **primary** product is search across other catalogs (aggregators). They score lower on [trust-score.md](trust-score.md).
 
-**Idra** (`idra`) is a shared Open Data Federation Platform — fingerprints live in [discovery-opendata.md](discovery-opendata.md#idra-idra). Typical `catalog_type` is **Data search engine**, not Open data portal.
+**Idra** (`idra`) is a shared Open Data Federation Platform — fingerprints live in [discovery-opendata.md](discovery-opendata.md#idra). Typical `catalog_type` is **Data search engine**, not Open data portal.
 
-**OpenAIRE** is the other high-volume shared search stack: EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`netherlands.openaire.eu`, Canada.EXPLORE, and similar). Docs: [graph.openaire.eu/docs](https://graph.openaire.eu/docs/). `software.id: openaire` is **not** in the published software catalog — register gateways as `custom` until that definition ships.
+**OpenAIRE** (`openaire`) is the other high-volume shared search stack: EXPLORE is the global Graph UI; CONNECT hosts national and community gateways (`netherlands.openaire.eu`, Canada.EXPLORE, and similar). Docs: [graph.openaire.eu/docs](https://graph.openaire.eu/docs/).
 
 **Confirm OpenAIRE:** the UI searches the OpenAIRE Graph (publications, datasets, software, organisations). Register EXPLORE once and each distinct **national/community gateway**. Do not add a single research-product landing page.
 
@@ -43,6 +43,8 @@ Shared software that sometimes maps here:
 | `galaxy` | Public Galaxy with data libraries | See [discovery-scientific.md](discovery-scientific.md). Prefer Scientific unless ML datasets are the primary product. |
 
 Hugging Face, Kaggle, Papers with Code, and similar **global** hubs are usually already in the registry as single catalogs — do not add per-user spaces or per-dataset pages.
+
+Regional challenge platforms (Zindi, AIcrowd, SIGNATE, Grand Challenge, CodaLab/Codabench, and national Chinese hubs such as Baidu AI Studio, BAAI, OpenXLab) are typically `software.id: custom`. Register **one catalog per hub**, not per competition or dataset.
 
 | Tool | Query |
 |------|-------|
@@ -87,11 +89,19 @@ Simple pages that list datasets without a full portal CMS (spreadsheet catalogs,
 
 Broad institutional research repos that are not clearly Dataverse/DSpace/Invenio. Prefer a named `software.id` from [discovery-scientific.md](discovery-scientific.md) (including Islandora, Samvera, Haplo, Worktribe). If none match, `custom` and `catalog_type: General research repository` or Scientific data repository per the **primary** UI.
 
-## Custom software (`custom`)
+## Custom software (`custom`) {#custom}
 
 About one catalog in eight has no shared product ID. Use `custom` when two independent fingerprints do not match a `data/software/` definition. Hunt with the generic URL patterns in the type guides, not a software name.
 
-Do not invent a new `software.id` for a one-off.
+**Decision tree**
+
+1. Run the probe table in [discovery.md](discovery.md#identify-the-software) (plus the type guide for the primary UI).
+2. If two signals match a named ID, use that ID — do not leave `custom`.
+3. If the host is a viewer wrapping GeoServer/QGIS Server, register the **viewer** ([one catalog per public product](discovery.md#one-catalog-per-public-product)).
+4. If nothing matches: `custom`, `api: false` unless you found a public list (`data.json`, DCAT, OAI, CSW, STAC).
+5. Do not invent a new `software.id` for a one-off. Propose a software YAML only when several independent installations share a product ([software-taxonomy.md](software-taxonomy.md)).
+
+Harvest: [harvest-other.md](harvest-other.md#custom).
 
 ## Related
 

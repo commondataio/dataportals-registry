@@ -126,6 +126,85 @@ LIMIT 50;
 
 API recipes and dataset-vs-publication filters: [harvest.md](harvest.md).
 
+## Catalogs with recorded endpoints
+
+Nested `endpoints` is a JSON string. A non-empty array means at least one probed API URL:
+
+```sql
+SELECT id, name, json_extract_string(software, '$.id') AS software_id, endpoints
+FROM catalogs
+WHERE endpoints IS NOT NULL
+  AND endpoints NOT IN ('', '[]', 'null')
+ORDER BY name
+LIMIT 50;
+```
+
+## Owner type
+
+```sql
+SELECT json_extract_string(owner, '$.type') AS owner_type, count(*) AS n
+FROM catalogs
+GROUP BY 1
+ORDER BY n DESC;
+```
+
+```sql
+SELECT id, name, link
+FROM catalogs
+WHERE json_extract_string(owner, '$.type') = 'Central government'
+  AND status = 'active'
+LIMIT 50;
+```
+
+Canonical values: [vocabularies.md](vocabularies.md).
+
+## Scheduled and inactive
+
+`data/datasets/catalogs.jsonl` is verified entities. Scheduled rows are in `full.jsonl` / `full.parquet` / `datasets.duckdb` table `catalogs` only after a build that includes scheduled — prefer `full.parquet` if counts look short.
+
+```sql
+SELECT id, name, link, status
+FROM catalogs
+WHERE status = 'scheduled';
+```
+
+```sql
+SELECT id, name, link, catalog_type
+FROM catalogs
+WHERE status = 'inactive'
+ORDER BY name
+LIMIT 50;
+```
+
+## Catalogs without a public API flag
+
+```sql
+SELECT id, name, json_extract_string(software, '$.id') AS software_id
+FROM catalogs
+WHERE api = false
+  AND status = 'active'
+ORDER BY name
+LIMIT 50;
+```
+
+`api: false` means no recorded public API — not that the site is empty.
+
+## Join catalogs to software definitions
+
+```sql
+SELECT
+  c.id,
+  c.name,
+  json_extract_string(c.software, '$.id') AS software_id,
+  s.name AS software_name,
+  s.category
+FROM catalogs c
+LEFT JOIN software s
+  ON json_extract_string(c.software, '$.id') = s.id
+WHERE json_extract_string(c.software, '$.id') = 'geonetwork'
+LIMIT 20;
+```
+
 ## JSONL without DuckDB
 
 ```python

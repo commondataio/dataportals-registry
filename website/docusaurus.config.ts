@@ -27,6 +27,8 @@ const config: Config = {
 
   markdown: {
     mermaid: true,
+    // `.md` files use `{#id}` heading anchors; MDX treats `{` as JSX.
+    format: 'detect',
   },
   themes: ['@docusaurus/theme-mermaid'],
 

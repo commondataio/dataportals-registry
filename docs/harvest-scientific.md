@@ -1,19 +1,24 @@
 # Harvesting datasets from scientific repositories
 
-Institutional repositories and CRIS portals mix **publications, theses, software, and research data**. Harvest the public API, then **filter to datasets**. Overview and keep/drop vocabulary: [harvest.md](harvest.md). Finding installations: [discovery-scientific.md](discovery-scientific.md).
+Institutional repositories and CRIS portals mix **publications, theses, software, and research data**. Harvest the public API, then **filter to datasets**. Overview and keep/drop vocabulary: [harvest.md](harvest.md). Finding installations: [discovery-scientific.md](discovery-scientific.md). Domain stacks: [discovery-scientific-domain.md](discovery-scientific-domain.md).
 
 Replace `https://host` with the catalog `link` origin (no trailing slash unless the path needs it). GET only. Stop on `401`/`403`.
 
 Use `endpoints[]` from the registry when present ([apidetect.md](apidetect.md)). Paths below are the defaults those maps probe.
+
+| Page | Use when |
+|------|----------|
+| This page | Institutional repositories and CRIS (Dataverse, DSpace, Invenio, EPrints, Pure, RADAR, Yoda, …) |
+| [Domain repositories](harvest-scientific-domain.md) | IPT, Symbiota, THREDDS, ERDDAP, Breedbase, Tripal, VEuPathDB, MassBank, ioChem-BD, ESGF, ALA, SciCat-adjacent stacks |
+
+All `software.id` values: [software-index.md](software-index.md).
 
 ## Mixed vs dataset-native
 
 | Class | `software.id` (typical) | Filter needed? |
 |-------|-------------------------|----------------|
 | Mixed IR / CRIS | `dspace`, `dspacecris`, `invenio`, `inveniordm`, `eprints`, `hyrax`, `samvera`, `islandora`, `opus`, `mycore`, `phaidra`, `weko3`, `pure`, `esploro`, `elsevierdigitalcommons`, `figshare`, `haplo`, `worktribe`, `omegapsir`, `librecat`, `vufind` | **Yes** — publications dominate |
-| Dataset-native | `dataverse`, `scicat`, `dataone`, `thredds`, `erddap`, `opendap`, `ipt`, `ala`, `seek`, `icat`, `instdb` | Little or none — still skip files, occurrences, and login-only rows |
-
-RADAR, Yoda, and Symbiota recipes are below; those ids are **not** in the published software catalog — match hosts as `custom`.
+| Dataset-native | `dataverse`, `radar`, `yoda`, `instdb` on this page; IPT/THREDDS/Breedbase/ESGF and similar on [harvest-scientific-domain.md](harvest-scientific-domain.md) | Little or none — still skip files, occurrences, and login-only rows |
 
 ## OAI-PMH fallback (any IR)
 
@@ -28,7 +33,7 @@ Common Identify paths: `/oai?verb=Identify`, `/oai/request?verb=Identify`, `/cgi
 
 Do not treat `ListIdentifiers` titles as datasets. Do not harvest `metadataPrefix=marc21` as a substitute for type.
 
-## Dataverse (`dataverse`)
+## Dataverse (`dataverse`) {#dataverse}
 
 Native search already distinguishes objects. Prefer **datasets**, not files or sub-dataverses.
 
@@ -46,13 +51,15 @@ Page with `start`. `total_count` is in the JSON envelope.
 
 Docs: [guides.dataverse.org](https://guides.dataverse.org).
 
-## DSpace 7+ (`dspace`) and DSpace-CRIS (`dspacecris`)
+## DSpace 7+ (`dspace`) {#dspace}
 
 DSpace items are publications, theses, and datasets in one index.
 
 **Unfiltered (do not use as the crawl):** `/server/api/discover/search/objects`
 
-**Filter to dataset entities** (DSpace-CRIS / configurable entities):
+**Worked example A — DSpace 7 entity type**
+
+Filter to dataset entities (DSpace-CRIS / configurable entities):
 
 ```text
 GET https://host/server/api/discover/search/objects?dsoType=ITEM&f.entityType=Dataset,equals&size=100&page=0
@@ -72,15 +79,35 @@ GET https://host/server/api/discover/search/objects?dsoType=ITEM&query=dc.type:D
 
 Try `Forschungsdaten`, `Research Data`, and `Dataset` — values are local.
 
-**DSpace 6:** `/rest/items` has no reliable type filter. Use OAI `ListSets` + `ListRecords`, or skip 6.x hosts without a dataset collection.
+**Worked example B — classic OAI ListSets (`dc.type`)**
+
+DSpace 6 and 7 fallback when REST has no entity type:
+
+```text
+GET https://host/oai/request?verb=Identify
+GET https://host/oai/request?verb=ListSets
+GET https://host/oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_123456789_4
+```
+
+Keep `setSpec` values whose name is dataset / research data / Forschungsdaten. Ignore `com_` community sets that are the whole repository. Then `ListRecords` with that `set`. If no dataset set exists, harvest `oai_dc` and keep records whose `dc:type` matches the [keep list](harvest.md#keep-vs-drop-shared-vocabulary).
+
+**DSpace 6 REST:** `/rest/items` has no reliable type filter. Prefer OAI as above, or skip 6.x hosts without a dataset collection.
 
 **Drop:** `dsoType=COMMUNITY` / `COLLECTION`, researcher `Person` / `OrgUnit` / `Project` (CRIS), bitstream URLs.
 
-## Invenio and InvenioRDM (`invenio`, `inveniordm`)
+## DSpace-CRIS (`dspacecris`) {#dspacecris}
+
+Same REST/OAI as [DSpace](#dspace). Prefer `f.entityType=Dataset,equals` (or the campus ResearchData entity). Drop CRIS `Person`, `OrgUnit`, and `Project` objects.
+
+## Invenio (`invenio`) {#invenio}
+
+Classic Invenio (not RDM). `/api/records` returns **all** record types. Filter to datasets the same way as [InvenioRDM](#inveniordm), then confirm the UI is not InvenioRDM-branded.
+
+**Drop:** `publication`, `presentation`, `poster`, `image`, `video`, `lesson`, `other`. `software` is not a dataset. OAI is often `/oai2d`.
+
+## InvenioRDM (`inveniordm`) {#inveniordm}
 
 `/api/records` returns **all** record types (publication, dataset, software, poster, …).
-
-**InvenioRDM / Zenodo-like:**
 
 ```text
 GET https://host/api/records?q=metadata.resource_type.type:dataset&size=100&page=1
@@ -101,7 +128,7 @@ OAI is often `/oai2d`. Skip zenodo.org if you only need institutional instances 
 
 Docs: [inveniordm.docs.cern.ch](https://inveniordm.docs.cern.ch).
 
-## EPrints (`eprints`)
+## EPrints (`eprints`) {#eprints}
 
 Every eprint has a `type` (`article`, `thesis`, `dataset`, `monograph`, …).
 
@@ -124,7 +151,7 @@ If there is no dataset set, ListRecords and keep `dc:type` = `dataset` / `Datase
 
 **Drop:** `article`, `thesis`, `book`, `conference_item`, `exhibition`, `performance`.
 
-## Hyrax / Samvera (`hyrax`, `samvera`)
+## Hyrax (`hyrax`) {#hyrax}
 
 Blacklight JSON catalog. Work types include GenericWork, Dataset, Etd, Image, FileSet.
 
@@ -134,9 +161,13 @@ GET https://host/catalog.json?f[human_readable_type_sim][]=Dataset&per_page=100&
 
 If that facet is empty, try `f[resource_type_sim][]=Dataset` or `f[has_model_ssim][]=Dataset`. FileSets are files, not datasets.
 
-Islandora (`islandora`) is Drupal+Fedora: harvest the public JSON:API or Solr only when a **dataset** content model / collection exists. Prefer Islandora over raw `fedora` `/fcrepo/rest`.
+## Samvera (`samvera`) {#samvera}
 
-## OPUS (`opus`)
+Same Blacklight harvest as [Hyrax](#hyrax) when the UI is Samvera without Hyrax branding.
+
+Islandora (`islandora`) is Drupal+Fedora: harvest the public JSON:API or Solr only when a **dataset** content model / collection exists. Prefer Islandora over raw `fedora` `/fcrepo/rest`. See [Islandora](#islandora).
+
+## OPUS (`opus`) {#opus}
 
 German IRs. The dataset document type is usually `researchdata` / `ResearchData`.
 
@@ -152,7 +183,7 @@ GET https://host/oai?verb=ListRecords&metadataPrefix=oai_dc&set=doc-type:researc
 
 Solr UI often supports a doctype facet (`doctypefq=researchdata`). Thesis-only OPUS hosts have no dataset set — skip them for a data crawl (they can still be valid **catalog** records).
 
-## MyCoRe (`mycore`)
+## MyCoRe (`mycore`) {#mycore}
 
 ```text
 GET https://host/api/v2/objects
@@ -161,7 +192,7 @@ GET https://host/servlets/OAIDataProvider?verb=ListSets
 
 Classification values are local (`mir_types`, `state`). Filter to data/Forschungsdaten classes after reading one object and `ListSets`. Unfiltered `/api/v2/objects` is the whole IR.
 
-## PHAIDRA (`phaidra`)
+## PHAIDRA (`phaidra`) {#phaidra}
 
 ```text
 GET https://host/api/search/select?q=*:*&rows=0
@@ -170,7 +201,7 @@ GET https://host/api/oai?verb=Identify
 
 Add a type constraint once you see stored fields (often `cmodel`, `dc_type`, or `object_type`). Example patterns to try: `cmodel:*Dataset*`, `dc_type:dataset`. Drop image/book/thesis cmodels.
 
-## WEKO3 (`weko3`)
+## WEKO3 (`weko3`) {#weko3}
 
 Item **type IDs are per instance**. The registry probe uses `type=` on `/api/records/` — that integer is **not** portable.
 
@@ -180,7 +211,7 @@ Item **type IDs are per instance**. The registry probe uses `type=` on `/api/rec
 
 Without a resolved type id, you will ingest articles and reports.
 
-## Elsevier Pure (`pure`)
+## Elsevier Pure (`pure`) {#pure}
 
 The public **portal** lists `/en/datasets/` (locale prefix varies: `/de/datasets/`, `/da/datasets/`). Publications live under `/publications/` and `/persons/`.
 
@@ -197,7 +228,7 @@ Pure Web Services (`/ws/api/datasets`) often need an API key. If you get `401`, 
 
 **Drop:** `/publications/`, activities, prizes, student theses unless typed as datasets.
 
-## Esploro (`esploro`)
+## Esploro (`esploro`) {#esploro}
 
 Research outputs include datasets as one resource type.
 
@@ -207,13 +238,13 @@ Otherwise use the public research search with a **datasets** facet (UI labels: D
 
 **Drop:** articles, books, conference papers, ETDs in the same index.
 
-## Elsevier Digital Commons (`elsevierdigitalcommons`)
+## Elsevier Digital Commons (`elsevierdigitalcommons`) {#elsevierdigitalcommons}
 
 Collections mix articles and data series. OAI: `/do/oai/?verb=ListSets`. Harvest only sets whose names are data/datasets/statistics — not the whole IR.
 
 Sitemap `/sitemap/index` can list every series; still skip photograph and journal series.
 
-## Figshare (`figshare`)
+## Figshare (`figshare`) {#figshare}
 
 Institutional Figshare (not every figshare.com article). Item types are numeric.
 
@@ -226,177 +257,94 @@ Institutional Figshare (not every figshare.com article). Item types are numeric.
 
 GraphQL/search endpoints vary by tenant. Prefer the institution’s public API or sitemap entries under `/articles/dataset/`. Do not crawl `figshare.com/articles` globally.
 
-## Haplo (`haplo`) and Worktribe (`worktribe`)
+## Haplo (`haplo`) {#haplo}
 
-Output types include publications and datasets. Use the public catalog/OAI (`/oaiprovider?verb=Identify` on Worktribe) and keep records typed as dataset / research data. Skip grant and HR objects. Skip haplo.com / worktribe.com marketing hosts.
+Output types include publications and datasets. Use the public catalog/OAI and keep records typed as dataset / research data. Skip grant and HR objects. Skip haplo.com marketing hosts.
 
-## Omega-PSIR (`omegapsir`)
+## Worktribe (`worktribe`) {#worktribe}
+
+Public catalog/OAI (`/oaiprovider?verb=Identify`). Keep dataset / research data. Skip grant/HR objects and worktribe.com marketing.
+
+## Omega-PSIR (`omegapsir`) {#omegapsir}
 
 CRIS with separate publications vs data modules when configured. Prefer URLs/APIs under a datasets/research-data listing. A global publication search is the wrong crawl.
 
-## VuFind / LibreCat (`vufind`, `librecat`)
+## VuFind (`vufind`) {#vufind}
 
-Discovery layers over mixed IRs. Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. Unfiltered VuFind search is the library catalog, not a data catalog.
+Discovery layer over mixed IRs. Add a format/type facet (`format:Dataset`, `document_type:dataset`) **before** paging. Unfiltered VuFind search is the library catalog, not a data catalog.
 
-## GBIF IPT (`ipt`)
+## LibreCat (`librecat`) {#librecat}
 
-Biodiversity publishing toolkit. Each Darwin Core archive is one dataset.
+Same facet-first harvest as [VuFind](#vufind) when the public UI is LibreCat.
 
-```text
-GET https://host/inventory/dataset
-GET https://host/rss.do
-GET https://host/dcat
-```
-
-Keep inventory/RSS **datasets**. Do not harvest occurrence rows. Full grain: [harvest-biodiversity.md](harvest-biodiversity.md). Skip gbif.org itself if you only needed publisher IPTs already in the registry. Prefer the IPT root from the catalog `link`.
-
-## THREDDS (`thredds`)
-
-```text
-GET https://host/thredds/catalog.xml
-GET https://host/thredds/catalog.html
-```
-
-The catalog XML is a **tree**. Recurse `catalogRef`; harvest `dataset` elements that have an ID or OPeNDAP/WMS service — not every nested directory. Do not treat NetCDF files inside a datasetScan as separate catalog records unless they are independently cited. Prefer THREDDS over `opendap` when both exist on the same TDS. Earth-observation grain: [harvest-earthdata.md](harvest-earthdata.md).
-
-## ERDDAP (`erddap`)
-
-```text
-GET https://host/erddap/info/index.json
-GET https://host/erddap/index.json
-```
-
-Each row in `info/index.json` is a dataset (`datasetID`). Drop the `allDatasets` helper table if present. Grid vs table datasets are both in scope.
-
-## Symbiota (`symbiota`)
-
-Not a published `software.id` yet. Match Symbiota hosts in exports as `custom` (or by `link`). Biodiversity collections CMS. Official directory: [symbiota.org/symbiota-portals](https://symbiota.org/symbiota-portals/).
-
-```text
-GET https://host/collections/index.php
-GET https://host/collections/datasets/rsshandler.php
-```
-
-**Keep:** published Darwin Core **datasets** (RSS) and, if the user wants collection-level catalogs, one record per public collection (`collid`). **Drop:** individual occurrences, images, and checklists as datasets. One portal = one harvest scope (not per collection unless asked). Login-only portals: stop. Detail: [harvest-biodiversity.md](harvest-biodiversity.md#symbiota-symbiota).
-
-## InstDB (`instdb`)
+## InstDB (`instdb`) {#instdb}
 
 FairStack institutional research-data nodes. Harvest the public dataset/API list on the node (`/api` when present). Skip fairstack.cn marketing and per-file URLs.
 
-## Atlas of Living Australia (`ala`)
-
-Living Atlases stack.
-
-```text
-GET https://host/ws/registry/collections
-```
-
-Harvest **collections** (data resources), not `/ws/occurrences/search` hits (those are occurrence records). Species autocomplete is not a dataset list.
-
-## DataONE (`dataone`)
-
-Harvest the **member node** dataset search (`formatType=DATA` when supported). Do not crawl CN-wide duplicates of nodes already in this registry unless the user asked for the coordinating-node view.
-
-## OPeNDAP (`opendap`)
-
-Hyrax/OPeNDAP directory or `catalog.xml`. Harvest dataset nodes in the catalog, not every `.nc` URL. If the same host is THREDDS or ERDDAP, use those IDs and recipes instead.
-
-## Axiom portal (`axiomportal`)
-
-Axiom Data Science catalogs often sit in front of ERDDAP. Harvest the portal dataset list or the ERDDAP `info/index.json` on that host. Do not scrape map tiles.
-
-## OntoPortal (`ontoportal`)
-
-```text
-GET https://host/ontologies
-```
-
-This is an **ontology** catalog (BioPortal-style), not research-data files. Harvest ontology ids only when the user wants vocabularies. Do not treat `/search` term hits as datasets.
-
-## RAMADDA (`ramadda`)
-
-Folder/entry repository. Harvest **entry** types that are data collections, not every file under a folder. Skip a single file URL as the crawl seed.
-
-## Galaxy (`galaxy`)
-
-Public **data libraries** are the dataset catalog. Histories, workflows, and job outputs are not. Stop on `401` for user workspaces.
-
-## NYU Data Catalog (`nyudatacatalog`)
+## NYU Data Catalog (`nyudatacatalog`) {#nyudatacatalog}
 
 Medical-library dataset catalog (schema.org DataCatalog JSON-LD on listing pages). Harvest **Dataset** objects from JSON-LD or the public search listing. Drop expert/person pages. Drupal JSON:API only if a dataset bundle exists.
 
-## DataLad (`datalad`) and GIN (`gin`)
+## DataLad (`datalad`) {#datalad}
 
-DataLad: harvest the published **catalog** dataset list (`catalog.json` or the catalog site’s dataset pages), not git-annex keys. GIN: Gogs `/api/v1/repos/search` — each **repository** can be a dataset; do not harvest git objects. Stop on `401`.
+Harvest the published **catalog** dataset list (`catalog.json` or the catalog site’s dataset pages), not git-annex keys.
 
-## HUBzero (`hubzero`)
+## GIN (`gin`) {#gin}
+
+Gogs `/api/v1/repos/search` — each **repository** can be a dataset; do not harvest git objects. Stop on `401`.
+
+## HUBzero (`hubzero`) {#hubzero}
 
 Scientific gateway. Harvest public **resources** typed as datasets/databases. Drop tools, tickets, and login-only groups.
 
-## LinkAhead (`linkahead`)
+## LinkAhead (`linkahead`) {#linkahead}
 
 CaosDB REST (`/api/v1/`). Query Record types that are datasets/collections. Drop files and properties as extra datasets.
 
-## Fedora (`fedora`) and Islandora (`islandora`)
+## Fedora (`fedora`) {#fedora}
 
-Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA recipes on the same host. Islandora: Solr/REST with a Dataset content model — not every Drupal node.
+Use Fedora LDP `/fcrepo/rest` (or `/rest`) **only** when Fedora is the public catalog. Prefer Hyrax/Islandora/PHAIDRA recipes on the same host.
 
-## CONTENTdm (`contentdm`) and Omeka S (`omekas`)
+## Islandora (`islandora`) {#islandora}
 
-Only when the site was accepted as a **dataset** catalog ([discovery-scientific.md](discovery-scientific.md)). CONTENTdm: `/digital/api/collections` plus OAI; keep statistical/climate collections, skip photo exhibits. Omeka S: `/api/items` filtered to Dataset / DataCatalog classes; skip exhibit images.
+Drupal+Fedora. Harvest Solr/REST with a Dataset content model — not every Drupal node. Prefer Islandora over raw [Fedora](#fedora).
 
-## MyTardis (`mytardis`)
+## CONTENTdm (`contentdm`) {#contentdm}
 
-```text
-GET https://host/api/v1/dataset/
-```
+Only when the site was accepted as a **dataset** catalog ([discovery-scientific.md](discovery-scientific.md)). `/digital/api/collections` plus OAI; keep statistical/climate collections, skip photo exhibits.
 
-TastyPie `dataset` objects. Drop `datafile` rows when a parent dataset exists. Stop on `401`.
+## Omeka S (`omekas`) {#omekas}
 
-## OSF (`osf`)
+Only when accepted as a dataset catalog. `/api/items` filtered to Dataset / DataCatalog classes; skip exhibit images.
+
+## OSF (`osf`) {#osf}
 
 Harvest **institution** or named project catalogs only (`https://api.osf.io/v2/`). Keep nodes/registrations that are data. Do not crawl all of osf.io. Stop on `401`.
 
-## Converis (`converis`)
+## Converis (`converis`) {#converis}
 
 Clarivate CRIS. Same publication-vs-data problem as Pure: harvest **datasets**, not publications or persons. Public OAI/listing if present; stop on `/ws` keys.
 
-## Djehuty (`djehuty`)
+## Djehuty (`djehuty`) {#djehuty}
 
 4TU.ResearchData stack. Harvest the public dataset search (Invenio-like `resource_type` filter when exposed).
 
-## RADAR (`radar`)
+## RADAR (`radar`) {#radar}
 
-Not a published `software.id` yet. Match RADAR hosts in exports as `custom` (or by `link`).
+FIZ Karlsruhe research data repositories (RADAR Cloud and RADAR Local). Filter exports on `software.id = 'radar'`.
 
 ```text
 GET https://host/radar/api/datasets
 GET https://host/oai/OAIHandler?verb=Identify
 ```
 
-Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar-radar).
+Already datasets (`totalHits` in the JSON). Page the API; keep dataset ids/DOIs. Skip a single `/radar/de/dataset/` landing page as a seed and the FIZ marketing site. OAI is a fallback. Discovery: [discovery-scientific.md](discovery-scientific.md#radar).
 
-## Yoda (`yoda`)
+## Yoda (`yoda`) {#yoda}
 
-Not a published `software.id` yet. Match Yoda hosts in exports as `custom` (or by `link`).
+Utrecht / SURF research-data vault on iRODS. Filter exports on `software.id = 'yoda'`. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
 
-Utrecht / SURF research-data vault on iRODS. Harvest **published** vault datasets (DataCite DOI landing pages or the public catalog API in `endpoints[]`). Drop `/research/` collaboration collections and iRODS tickets. Stop on `401`. Do not list every file in a vault package.
-
-## FAIRDOM-SEEK (`seek`)
-
-```text
-GET https://host/data_files.json
-GET https://host/assays.json
-GET https://host/api
-```
-
-Keep **data files** / assays / studies that deposit data. Drop SOP-only pages, documents, and presentations. WorkflowHub uses the same stack — still keep data assets, not every CWL workflow, unless the user asked for workflows. Skip seek4science.org marketing.
-
-## ICAT (`icat`)
-
-Facility catalog (REST and/or OAI in `endpoints[]`). Harvest **datasets** / investigations that are data. Skip icatproject.org itself and login-only metadata. Stop on `401`.
-
-## dLibra (`dlibra`)
+## dLibra (`dlibra`) {#dlibra}
 
 Polish digital library. Use OAI-PMH with a dataset / dane `set` or `dc:type` filter ([harvest-protocols.md](harvest-protocols.md#oai-pmh)). Skip manuscript/photo libraries that were never accepted as dataset catalogs.
 
@@ -406,11 +354,12 @@ Little publication noise. Still skip non-dataset objects.
 
 | Platform | List | Notes |
 |----------|------|-------|
-| Dataverse | see above | `type=dataset` only |
-| SciCat (`scicat`) | `/api/v3/datasets` or `/api/v3/Datasets` | Facility datasets; may require token for full metadata — stop on `401` |
-| Yoda (often `custom`) | Public landing / DataCite | Published datasets only; skip the authenticated vault |
+| Dataverse | [above](#dataverse) | `type=dataset` only |
+| SciCat (`scicat`) | [harvest-earthdata.md](harvest-earthdata.md#scicat) | Facility datasets; stop on `401` |
+| RADAR (`radar`) | [above](#radar) | Already datasets; skip marketing and single landings |
+| Yoda (`yoda`) | [above](#yoda) | Published datasets only; skip the authenticated vault |
 
-Omeka S and CONTENTdm: see sections above.
+Domain stacks (IPT, THREDDS, Breedbase, ESGF, …): [harvest-scientific-domain.md](harvest-scientific-domain.md). Omeka S and CONTENTdm: sections above.
 
 ## Pagination checklist
 
@@ -424,6 +373,7 @@ Omeka S and CONTENTdm: see sections above.
 - [harvest.md](harvest.md)
 - [harvest-opendata.md](harvest-opendata.md)
 - [harvest-geoportals.md](harvest-geoportals.md)
+- [harvest-scientific-domain.md](harvest-scientific-domain.md)
 - [discovery-scientific.md](discovery-scientific.md)
 - [harvest-protocols.md](harvest-protocols.md)
 - [harvest-biodiversity.md](harvest-biodiversity.md)
