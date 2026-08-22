@@ -63,10 +63,8 @@ def load_software_ids() -> list[str]:
 
 
 def load_apidetect_ids() -> set[str]:
-    keys: set[str] = set()
-    for name in ("apidetect.py", "apidetect_urlmaps_draft.py"):
-        text = (REPO_ROOT / "scripts" / name).read_text(encoding="utf-8")
-        keys.update(URLMAP_KEY_RE.findall(text))
+    text = (REPO_ROOT / "scripts" / "apidetect.py").read_text(encoding="utf-8")
+    keys = set(URLMAP_KEY_RE.findall(text))
     keys.discard("custom")
     return keys
 
